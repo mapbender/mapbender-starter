@@ -34,7 +34,7 @@ parameters:
     #sensio_framework_extra.converter.doctrine.class: "Mapbender\Component\CustomDoctrineParamConverter"
     applications:
         mapbender_user:
-            title: Mapbender User Demo Map: Europe
+            title: "Mapbender User Demo Map: Europe"
             description: "Fullscreen style, Simple map showing WMS use."
             published: true
             #roles: [ROLE_USER]
@@ -116,7 +116,8 @@ parameters:
                     zoombar:
                         class: Mapbender\CoreBundle\Element\ZoomBar
                         target: map
-                        position: ['1em', '4em']
+                        position: ['0', '0']
+                        components: ["pan", "history","zoom_box", "zoom_max","zoom_slieder"]
                     map:
                         title: Main Map
                         class: Mapbender\CoreBundle\Element\Map
@@ -162,7 +163,7 @@ parameters:
                             map: map
                             coordinatesdisplay: coordinates
         mapbender_user2:
-            title: Mapbender Base Style Demo Map Version 2: Germany
+            title: "Mapbender Base Style Demo Map Version 2: Germany"
             description: "Base style colored with expanding mapframe"
             published: true
             #roles: [ROLE_USER]
@@ -251,7 +252,8 @@ parameters:
                     zoombar:
                         class: Mapbender\CoreBundle\Element\ZoomBar
                         target: map
-                        position: ['1em', '4em']
+                        position: ['0', '0']
+                        components: ["pan", "history","zoom_box", "zoom_max","zoom_slieder"]
                     map:
                         title: Main Map
                         class: Mapbender\CoreBundle\Element\Map
@@ -298,7 +300,7 @@ parameters:
                             map: map
                             coordinatesdisplay: coordinates
         mapbender_user3:
-            title: Mapbender Base Style Demo Version 3: Bonn
+            title: "Mapbender Base Style Demo Version 3: Bonn"
             description: "Base style 3 with colored mapframes with fixed size"
             published: true
             #roles: [ROLE_USER]
@@ -412,7 +414,8 @@ parameters:
                     zoombar:
                         class: Mapbender\CoreBundle\Element\ZoomBar
                         target: map
-                        position: ['1em', '4em']
+                        position: ['0', '0']
+                        components: ["pan", "history","zoom_box", "zoom_max","zoom_slieder"]
                     toc:
                         title: Table of Contents
                         tooltip: Table of Contents
