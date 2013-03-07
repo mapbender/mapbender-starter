@@ -159,9 +159,8 @@ parameters:
                         title: SRS Selector
                         tooltip: SRS Selector
                         label: false
-                        targets:
-                            map: map
-                            coordinatesdisplay: coordinates
+                        target: map
+                        
         mapbender_user2:
             title: "Mapbender Base Style Demo Map Version 2: Germany"
             description: "Base style colored with expanding mapframe"
@@ -296,9 +295,8 @@ parameters:
                         title: SRS Selector
                         tooltip: SRS Selector
                         label: false
-                        targets:
-                            map: map
-                            coordinatesdisplay: coordinates
+                        target: map
+                        
         mapbender_user3:
             title: "Mapbender Base Style Demo Version 3: Bonn"
             description: "Base style 3 with colored mapframes with fixed size"
@@ -496,6 +494,4 @@ parameters:
                         title: SRS Selector
                         tooltip: SRS Selector
                         label: false
-                        targets:
-                            map: map
-                            coordinatesdisplay: coordinates
+                        target: map
