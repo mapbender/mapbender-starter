@@ -116,7 +116,7 @@ parameters:
                     zoombar:
                         class: Mapbender\CoreBundle\Element\ZoomBar
                         target: map
-                        position: ['0', '0']
+                        position: [20, 20]
                         components: ["pan", "history","zoom_box", "zoom_max","zoom_slieder"]
                     map:
                         title: Main Map
@@ -130,8 +130,17 @@ parameters:
                         scales: [25000000, 10000000,5000000,1000000,500000]
                         maxResolution: 'auto'
                         otherSrs: ["EPSG:25832","EPSG:25833"]
-                        overview:
-                            layerset: overview
+                    overview:
+                        title: Overview
+                        class: Mapbender\CoreBundle\Element\Overview
+                        tooltip: 'Overview'
+                        target: map
+                        layerset: overview
+                        width: 200
+                        height: 100
+                        position: 'right-top'
+                        maximized: true
+                        fixed: false
                     toc:
                         title: Table of Contents
                         tooltip: Table of Contents
@@ -251,7 +260,7 @@ parameters:
                     zoombar:
                         class: Mapbender\CoreBundle\Element\ZoomBar
                         target: map
-                        position: ['0', '0']
+                        position: [20, 20]
                         components: ["pan", "history","zoom_box", "zoom_max","zoom_slieder"]
                     map:
                         title: Main Map
@@ -265,9 +274,17 @@ parameters:
                             max: [-4.9,39.6,25.1,61.6]
                         scales: [25000000, 10000000,5000000,1000000,500000,250000,100000,50000,25000,10000,2500,1000,500,100]
                         maxResolution: 'auto'
-                        overview:
-                           div: overviewMap
-                           layerset: overview
+                    overview:
+                        title: Overview
+                        class: Mapbender\CoreBundle\Element\Overview
+                        tooltip: 'Overview'
+                        target: map
+                        layerset: overview
+                        width: 200
+                        height: 100
+                        position: 'right-top'
+                        maximized: true
+                        fixed: false
                     toc:
                         title: Table of Contents
                         tooltip: Table of Contents
@@ -406,13 +423,21 @@ parameters:
                             max: [302500,5584100,412700,5663800]
                         scales: [1000000,500000,250000,100000,50000,25000,10000,2500,1000,500,100]
                         maxResolution: 'auto'
-                        overview:
-                           div: overviewMap
-                           layerset: overview
+                    overview:
+                        title: Overview
+                        class: Mapbender\CoreBundle\Element\Overview
+                        tooltip: 'Overview'
+                        target: map
+                        layerset: overview
+                        width: 200
+                        height: 100
+                        position: 'right-top'
+                        maximized: true
+                        fixed: false
                     zoombar:
                         class: Mapbender\CoreBundle\Element\ZoomBar
                         target: map
-                        position: ['0', '0']
+                        position: [20, 20]
                         components: ["pan", "history","zoom_box", "zoom_max","zoom_slieder"]
                     toc:
                         title: Table of Contents
