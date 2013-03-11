@@ -116,7 +116,8 @@ parameters:
                     zoombar:
                         class: Mapbender\CoreBundle\Element\ZoomBar
                         target: map
-                        position: [20, 20]
+                        anchor: 'left-top'
+                        position: ['20px', '20px']
                         components: ["pan", "history","zoom_box", "zoom_max","zoom_slieder"]
                     map:
                         title: Main Map
@@ -138,7 +139,8 @@ parameters:
                         layerset: overview
                         width: 200
                         height: 100
-                        position: 'right-top'
+                        anchor: 'right-top'
+                        position: ['0px', '0px']
                         maximized: true
                         fixed: false
                     toc:
@@ -149,10 +151,19 @@ parameters:
                         autoOpen: false
                     copyright:
                         class: Mapbender\CoreBundle\Element\Copyright
+                        anchor: 'left-bottom'
+                        position: ['0px', '0px']
                         copyrigh_text: '© Mapbender3 2012'
                         dialog_link: Terms of use
                         dialog_content: 'Terms of use (Content)'
                         dialog_title: 'Terms of use'
+                    scalebar:
+                        class: Mapbender\CoreBundle\Element\ScaleBar
+                        target: map
+                        anchor: 'right-bottom'
+                        position: ['10px', '10px']
+                        maxWidth: 200
+                        units: ['km', 'ml']
                 footer:
                     coordinates:
                         class: Mapbender\CoreBundle\Element\CoordinatesDisplay
@@ -260,7 +271,8 @@ parameters:
                     zoombar:
                         class: Mapbender\CoreBundle\Element\ZoomBar
                         target: map
-                        position: [20, 20]
+                        anchor: 'left-top'
+                        position: ['20px', '20px']
                         components: ["pan", "history","zoom_box", "zoom_max","zoom_slieder"]
                     map:
                         title: Main Map
@@ -282,7 +294,8 @@ parameters:
                         layerset: overview
                         width: 200
                         height: 100
-                        position: 'right-top'
+                        anchor: 'right-top'
+                        position: ['0px', '0px']
                         maximized: true
                         fixed: false
                     toc:
@@ -293,10 +306,19 @@ parameters:
                         autoOpen: false
                     copyright:
                         class: Mapbender\CoreBundle\Element\Copyright
+                        anchor: 'left-bottom'
+                        position: ['0px', '0px']
                         copyrigh_text: '© Mapbender3, 2012'
                         dialog_link: Terms of use
                         dialog_content: 'Terms of use (Content)'
                         dialog_title: 'Terms of use'
+                    scalebar:
+                        class: Mapbender\CoreBundle\Element\ScaleBar
+                        target: map
+                        anchor: 'right-bottom'
+                        position: ['10px', '10px']
+                        maxWidth: 200
+                        units: ['km', 'ml']
                 footer:
                     coordinates:
                         class: Mapbender\CoreBundle\Element\CoordinatesDisplay
@@ -431,13 +453,15 @@ parameters:
                         layerset: overview
                         width: 200
                         height: 100
-                        position: 'right-top'
+                        anchor: 'right-top'
+                        position: ['0px', '0px']
                         maximized: true
                         fixed: false
                     zoombar:
                         class: Mapbender\CoreBundle\Element\ZoomBar
                         target: map
-                        position: [20, 20]
+                        anchor: 'left-top'
+                        position: ['20px', '20px']
                         components: ["pan", "history","zoom_box", "zoom_max","zoom_slieder"]
                     toc:
                         title: Table of Contents
@@ -447,10 +471,19 @@ parameters:
                         autoOpen: false
                     copyright:
                         class: Mapbender\CoreBundle\Element\Copyright
+                        anchor: 'left-bottom'
+                        position: ['0px', '0px']
                         copyrigh_text: '© Mapbender3 2012'
                         dialog_link: Terms of use
                         dialog_content: 'Terms of use (Content)'
                         dialog_title: 'Terms of use'
+                    scalebar:
+                        class: Mapbender\CoreBundle\Element\ScaleBar
+                        target: map
+                        anchor: 'right-bottom'
+                        position: ['10px', '10px']
+                        maxWidth: 200
+                        units: ['km', 'ml']
                     printclient:
                         class: Mapbender\CoreBundle\Element\PrintClient
                         target: map
