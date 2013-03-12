@@ -437,6 +437,7 @@ parameters:
                         title: Main Map
                         class: Mapbender\CoreBundle\Element\Map
                         layerset: main
+                        dpi: 72
                         srs: EPSG:25832
                         otherSrs: ["EPSG:4326","EPSG:25833"]
                         units: m
