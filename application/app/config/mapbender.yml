@@ -118,7 +118,7 @@ parameters:
                         target: map
                         anchor: 'left-top'
                         position: ['20px', '20px']
-                        components: ["pan", "history","zoom_box", "zoom_max","zoom_slieder"]
+                        components: ["pan", "history","zoom_box", "zoom_max","zoom_slider"]
                     map:
                         title: Main Map
                         class: Mapbender\CoreBundle\Element\Map
@@ -273,7 +273,7 @@ parameters:
                         target: map
                         anchor: 'left-top'
                         position: ['20px', '20px']
-                        components: ["pan", "history","zoom_box", "zoom_max","zoom_slieder"]
+                        components: ["pan", "history","zoom_box", "zoom_max","zoom_slider"]
                     map:
                         title: Main Map
                         class: Mapbender\CoreBundle\Element\Map
@@ -463,7 +463,7 @@ parameters:
                         target: map
                         anchor: 'left-top'
                         position: ['20px', '20px']
-                        components: ["pan", "history","zoom_box", "zoom_max","zoom_slieder"]
+                        components: ["pan", "history","zoom_box", "zoom_max","zoom_slider"]
                     toc:
                         title: Table of Contents
                         tooltip: Table of Contents
