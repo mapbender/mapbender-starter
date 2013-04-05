@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# sudo is not part of the debian base install
+
+# only do this if the www-data user is available
+# otherwise we'd have a dependency on apache, no?
+
+/usr/share/@@deb.name@@/app/console cache:clear
+mv /usr/share/@@deb.name@@/app/db/demo.sqlite /var/lib/@@deb.name@@/@@deb.name@@.sqlite
+
+chown -R root:www-data /var/cache/@@deb.name@@
+chmod -R g+w /var/cache/@@deb.name@@
+
+chown -R root:www-data /var/log/@@deb.name@@
+chmod -R g+w /var/log/@@deb.name@@
+
+chown -R root:www-data /var/lib/@@deb.name@@
+chmod -R g+w /var/lib/@@deb.name@@

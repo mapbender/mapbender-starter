@@ -1,0 +1,2 @@
+#!/bin/sh
+rm -fr /var/cache/@@deb.name@@

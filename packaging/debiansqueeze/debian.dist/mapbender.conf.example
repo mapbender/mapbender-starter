@@ -1,0 +1,14 @@
+Alias /mapbender3 /usr/share/@@deb.name@@/web/
+<Directory /usr/share/@@deb.name@@/web/ >
+        Options Indexes +FollowSymLinks -Includes MultiViews
+        AllowOverride All
+        DirectoryIndex app.php
+        RewriteEngine On
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteBase /mapbender3
+        RewriteRule ^(.*)$ app.php/$1 [PT,L,QSA]
+
+        Order allow,deny
+        Allow from all
+</Directory>
