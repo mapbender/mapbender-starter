@@ -7,6 +7,6 @@ Build-Depends: debhelper (>= 7.3.8)
 
 Package: @@deb.name@@
 Architecture: all
-Depends:  php5 (>= 5.3), php5-intl, php5-pgsql, php5-sqlite
+Depends: httpd, php5 (>= 5.3), php5-intl, php5-pgsql, php5-sqlite
 Description: @@deb.shortdescription@@
   @@deb.description@@
