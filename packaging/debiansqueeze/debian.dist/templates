@@ -1,5 +1,0 @@
-Template: mwkel-klaerschlamm/dbhost
-Type: text
-Default: localhost
-Description: Database Host
-

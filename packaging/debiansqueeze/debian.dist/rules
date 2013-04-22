@@ -6,6 +6,17 @@ PKGNAME=@@deb.name@@
 	dh $@
 
 override_dh_auto_install:
+	mkdir -p $$(pwd)/debian/$(PKGNAME)/var/log/$(PKGNAME)/
+	mkdir -p $$(pwd)/debian/$(PKGNAME)/var/cache/$(PKGNAME)/
+	mkdir -p $$(pwd)/debian/$(PKGNAME)/var/lib/$(PKGNAME)/
 	mkdir -p $$(pwd)/debian/$(PKGNAME)/usr/share/$(PKGNAME)/
 	cp -r app mapbender documentation owsproxy fom src vendor web $$(pwd)/debian/$(PKGNAME)/usr/share/$(PKGNAME)/
-
+	rm $$(pwd)/debian/$(PKGNAME)/usr/share/$(PKGNAME)/app/config/parameters.yml
+	# dh_install doesn't do renaming
+	mkdir -p $$(pwd)/debian/$(PKGNAME)/etc/$(PKGNAME)
+	cp app/config/parameters.yml.dist $$(pwd)/debian/$(PKGNAME)/etc/$(PKGNAME)/$(PKGNAME).yml.dist
+	cp app/config/parameters.yml.dist $$(pwd)/debian/$(PKGNAME)/etc/$(PKGNAME)/$(PKGNAME).yml
+	sed -i 's,database_path.*,database_path: /var/lib/$(PKGNAME)/$(PKGNAME).sqlite,g'\
+		$$(pwd)/debian/$(PKGNAME)/etc/$(PKGNAME)/$(PKGNAME).yml
+	ln -s /etc/$(PKGNAME)/$(PKGNAME).yml $$(pwd)/debian/$(PKGNAME)/usr/share/$(PKGNAME)/app/config/parameters.yml
+	dh_installexamples $$(pwd)/debian/mapbender.conf.example

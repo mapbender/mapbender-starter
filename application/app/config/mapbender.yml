@@ -411,6 +411,15 @@ parameters:
                         label: true
                         target: printclient
                         action: open
+                    gpsposition:
+                        title: GPS-Position
+                        tooltip: GPS-Position
+                        class: Mapbender\CoreBundle\Element\GpsPosition
+                        icon: gpsposition
+                        label: true
+                        target: map                  
+                        autoStart: false
+                        refreshinterval: 5000
                     legend:
                         title: Legend
                         tooltip: Legend
@@ -432,7 +441,7 @@ parameters:
                         units: m
                         extents:
                             start: [361000,5619270,371150,5625960]
-                            max: [302500,5584100,412700,5663800]
+                            max: [302500,5584100,412700,5863800]
                         scales: [1000000,500000,250000,100000,50000,25000,10000,2500,1000,500,100]
                         maxResolution: 'auto'
                     overview:
