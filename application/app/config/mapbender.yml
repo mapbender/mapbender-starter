@@ -46,8 +46,8 @@ parameters:
                         title: Mapbender Users
                         url: http://wms.wheregroup.com/cgi-bin/mapserv?map=/data/umn/mapbender_user/mapbender_user.map
                         layers:
-                            - { name: Mapbender_User,    title : User,  visible: true }
-                            - { name: Mapbender_Names,   title : Name,   visible: true, queryable: true }
+                            - { name: Mapbender_User,    title : User, visible: true }
+                            - { name: Mapbender_Names,   title : Name, visible: true, queryable: true }
                         info_format: text/html
                         baselayer: false
                         visible: true
@@ -61,7 +61,7 @@ parameters:
                         title: Open Street Map
                         url: http://osm.omniscale.net/proxy/service?
                         layers:
-                            - { name: osm, title: Open Street Map WMS Omniscale }
+                            - { name: osm, title: Open Street Map WMS Omniscale, visible: true }
                         tiled: false
                         visible: true
                         baselayer: false
@@ -71,7 +71,7 @@ parameters:
                         title: Open Street Map
                         url: http://osm.omniscale.net/proxy/service?
                         layers:
-                            - { name: osm, title: Open Street Map WMS }
+                            - { name: osm, title: Open Street Map WMS, visible: true }
                         tiled: false
                         visible: true
                         baselayer: true
@@ -191,8 +191,8 @@ parameters:
                         title: Mapbender Users
                         url: http://wms.wheregroup.com/cgi-bin/mapserv?map=/data/umn/mapbender_user/mapbender_user.map
                         layers:
-                            - { name: Mapbender_User,    title : User,  visible: true }
-                            - { name: Mapbender_Names,   title : Name,   visible: true, queryable: true }
+                            - { name: Mapbender_User,    title : User, visible: true }
+                            - { name: Mapbender_Names,   title : Name, visible: true, queryable: true }
                         info_format: text/html
                         baselayer: false
                         visible: true
@@ -206,7 +206,7 @@ parameters:
                         title: Open Street Map
                         url: http://osm.omniscale.net/proxy/service?
                         layers:
-                            - { name: osm, title: Open Street Map WMS Omniscale}
+                            - { name: osm, title: Open Street Map WMS Omniscale, visible: true}
                         tiled: false
                         visible: true
                         baselayer: false
@@ -216,7 +216,7 @@ parameters:
                         title: Open Street Map
                         url: http://osm.omniscale.net/proxy/service?
                         layers:
-                            - { name: osm, title: Open Street Map WMS }
+                            - { name: osm, title: Open Street Map WMS, visible: true }
                         tiled: false
                         visible: true
                         baselayer: true
@@ -343,8 +343,8 @@ parameters:
                         title: Mapbender Users
                         url: http://wms.wheregroup.com/cgi-bin/mapserv?map=/data/umn/mapbender_user/mapbender_user.map
                         layers:
-                            - { name: Mapbender_User,    title : User,  visible: true }
-                            - { name: Mapbender_Names,   title : Name,   visible: true, queryable: true }
+                            - { name: Mapbender_User,    title : User, visible: true }
+                            - { name: Mapbender_Names,   title : Name, visible: true, queryable: true }
                         info_format: text/html
                         baselayer: false
                         visible: true
@@ -358,7 +358,7 @@ parameters:
                         title: Open Street Map
                         url: http://osm.omniscale.net/proxy/service?
                         layers:
-                            - { name: osm, title: Open Street Map WMS Omniscale}
+                            - { name: osm, title: Open Street Map WMS Omniscale, visible: true}
                         tiled: false
                         visible: true
                         baselayer: false
@@ -368,7 +368,7 @@ parameters:
                         title: Open Street Map
                         url: http://osm.omniscale.net/proxy/service?
                         layers:
-                            - { name: osm, title: Open Street Map WMS }
+                            - { name: osm, title: Open Street Map WMS, visible: true }
                         tiled: false
                         visible: true
                         baselayer: true
