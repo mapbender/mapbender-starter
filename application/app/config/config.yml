@@ -5,7 +5,7 @@ imports:
 
 framework:
     #esi:             ~
-    #translator:      { fallback: %locale% }
+    translator:      { fallback: %locale% }
     secret:          %secret%
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -75,6 +75,7 @@ fom_manager:
 # FOM User Configuration
 fom_user:
     selfregister: true
+    reset_password: true
     max_registration_time: 1
     max_reset_time: 1
     mail_from_address: wizard@oz.net
@@ -82,6 +83,20 @@ fom_user:
     profile_entity: FOM\UserBundle\Entity\BasicProfile
     profile_formtype: FOM\UserBundle\Form\Type\BasicProfileType
     profile_template: FOMUserBundle:User:basic_profile.html.twig
+
+# OWSProxy Configuration
+ows_proxy3_core:
+    logging: true
+    obfuscate_client_ip: true
+
+#    proxy:
+#        host: localhost
+#        port: 8888
+#        user: user
+#        password: password
+#        noproxy:
+#            - host_a
+#            - host_b
 
 # Mapbender Configuration
 mapbender_core: ~

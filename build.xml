@@ -25,7 +25,7 @@
     <property name="project.changelog" value="" />
     <property name="project.maintainer" value=""/>
 
-    <property name="buildroot" value="/tmp/jenkins/${package}/"></property>
+    <property name="buildroot" value="/tmp/phing_build/${package}/"></property>
 
     <!--
         Task specific properties
@@ -59,11 +59,14 @@
             </fileset>
         </copy>
         <mkdir dir="artefacts" />
+        <!--
         <tar destfile="artefacts/${package}-${version.full}.tar.gz" compression="gzip">
             <fileset dir="${buildroot}">
                 <include name="${package}-${version.full}/**" />
             </fileset>
         </tar>
+        -->
+        <exec command="tar czf artefacts/${package}-${version.full}.tar.gz -C ${buildroot} ${package}-${version.full}" passthru="true" />
         <delete dir="${buildroot}" />
     </target>
 
@@ -106,7 +109,7 @@
                     <token key="patch.cachedir" value="/var/cache/${package}/prod" />
                     <token key="patch.logdir" value="/var/log/${package}" />
                     <token key="patch.datadir" value="/usr/share/${package}" />
-                    <token key="patch.conffilepath" value="/etc/${package}/${package}.ini" />
+                    <token key="patch.conffilepath" value="/etc/${package}/${package}.yml" />
                 </replacetokens>
             </filterchain>
         </copy>
@@ -218,9 +221,15 @@
         <exec command="php composer.phar install" dir="application" passthru="true"/>
     </target>
 
-    <target name="prepare" depends="deps,doc,unittest">
+    <target name="prepare" depends="deps,doc">
         <exec command="application/app/console assets:install application/web/" />
         <exec command="application/app/console assetic:dump --env=prod --no-debug" />
+        <exec command="application/app/console doctrine:database:drop --force" />
+        <exec command="application/app/console doctrine:database:create" />
+        <exec command="application/app/console doctrine:schema:create" />
+        <exec command="application/app/console init:acl" />
+        <exec command="application/app/console fom:user:resetroot --username=root --password=root --email=root@example.com --silent " />
+        <exec command="application/app/console doctrine:fixtures:load --fixtures=./application/mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append" />
     </target>
 
     <target name="clean">
@@ -238,9 +247,11 @@
     </target>
     
     <target name="unittest" depends="lint">
-        <exec command="phpunit -c application/app --process-isolation" passthru="true" checkreturn="false" /> 
+        <!-- <echo>Unitests are disabled</echo> -->
+        <exec command="phpunit -c application/app --process-isolation" passthru="true" checkreturn="false" />
         <!--
             this doesn't do enough of what I want to do
+        -->
         <phpunit bootstrap="application/app/bootstrap.php.cache" haltonfailure="true" >
             <formatter type="plain" usefile="false" />
             <batchtest>
@@ -250,7 +261,6 @@
                 </fileset>
             </batchtest>
         </phpunit>
-            -->
     </target>
     
     <target name="test" depends="unittest">
@@ -277,4 +287,11 @@
     <target name="submoduleupdate">
         <exec command="git submodule foreach 'git pull || :'" />
     </target>
+
+    <target name="update" >
+        <exec command="git pull" checkreturn="true" passthru="true" />
+        <exec command="git submodule update --init --recursive" checkreturn="true" passthru="true" />
+        <phing target="deps" />
+    </target>
 </project>
+
