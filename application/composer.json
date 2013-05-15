@@ -22,8 +22,9 @@
         "friendsofsymfony/jsrouting-bundle": "dev-master",
         "kriswallsmith/buzz": "dev-master",
 
-        "mopa/bootstrap-bundle": "dev-master",
-        "doctrine/doctrine-fixtures-bundle": "dev-master"
+        "mopa/bootstrap-bundle": "2.1.*@dev",
+        "doctrine/doctrine-fixtures-bundle": "dev-master",
+        "toooni/fpdf": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [
