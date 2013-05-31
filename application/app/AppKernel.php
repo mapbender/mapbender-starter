@@ -28,6 +28,7 @@ class AppKernel extends Kernel
             // FoM bundles
             new FOM\ManagerBundle\FOMManagerBundle(),
             new FOM\UserBundle\FOMUserBundle(),
+            new FOM\CoreBundle\FOMCoreBundle(),
 
             // Mapbender3 bundles
             new Mapbender\CoreBundle\MapbenderCoreBundle(),
