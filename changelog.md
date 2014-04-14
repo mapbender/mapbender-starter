@@ -1,10 +1,13 @@
-# Changelog    
+# Changelog  
+* added spanish translation (thanks to Mario Torres)
 
 ## Release History
-
 * **v3.0.3.2** - 2014-04-04
     - Added HttpBasicAuthListener to WMS loading for for safely setting the auth header
     - WMSProxy passes auth challenges (HTTP 401) down to client
+    - fixed fullscreen alternative Template
+    - SearchRouter reset results in map
+    - https://github.com/mapbender/mapbender/issues?milestone=14
 
 * **v3.0.3.1** - 2014-03-20
     - Disabled WMS validation as it renders many services unusable.
