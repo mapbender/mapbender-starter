@@ -223,6 +223,7 @@
     </target>
 
     <target name="prepare" depends="deps,doc">
+        <delete dir="application/web/assets/.dev-cache"/>
         <exec command="application/app/console assets:install application/web/" />
         <exec command="application/app/console assetic:dump --env=dev" />
         <exec command="application/app/console mapbender:assets:dump --env=prod" />

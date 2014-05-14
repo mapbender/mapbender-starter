@@ -6,6 +6,7 @@
 */web/doc
 */web/uploads
 */web/assets/*.trans
+application/web/assets/.dev-cache
 extra/
 */app/config/parameters.yml
 */app/bootstrap.php.cache

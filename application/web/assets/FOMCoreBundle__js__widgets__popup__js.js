@@ -36,25 +36,6 @@
  *     - ajaxFailed content
  */
 var Mapbender = (function($, Mapbender) {
-
-    // Figure which CSS transition end event we need to listen to
-    var transitionEvent = (function() {
-        var t;
-        var el = document.createElement('fakeelement');
-        var transitions = {
-          'transition':'transitionend',
-          'OTransition':'oTransitionEnd',
-          'MozTransition':'transitionend',
-          'WebkitTransition':'webkitTransitionEnd'
-        };
-
-        for(t in transitions){
-            if( el.style[t] !== undefined ){
-                return transitions[t];
-            }
-        }
-    })();
-
     var counter = 0;
 
     /**
@@ -226,9 +207,7 @@ var Mapbender = (function($, Mapbender) {
                 selfElement.addClass("show");
             }, 100);
 
-            selfElement.one(transitionEvent, function(){
-                selfElement.trigger('openend');
-            });
+            selfElement.trigger('openend');
         },
 
         /**
@@ -239,13 +218,7 @@ var Mapbender = (function($, Mapbender) {
 
             selfElement.trigger('close');
             selfElement.removeClass("show");
-            if(transitionEvent) {
-                selfElement.one(transitionEvent, function(){
-                    selfElement.detach();
-                });
-            } else {
-                selfElement.detach();
-            }
+            selfElement.detach();
             if(this.options.destroyOnClose) {
                 this.destroy();
             }
