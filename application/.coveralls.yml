@@ -1,0 +1,3 @@
+coverage_clover: ../testresults/clover.xml
+json_path: ../testresults/coveralls.json
+src_dir: mapbender/src/
