@@ -5,7 +5,8 @@
         "psr-0": { "": "src/" }
     },
     "require-dev": {
-        "satooshi/php-coveralls": "dev-master"
+        "satooshi/php-coveralls": "dev-master",
+        "phpunit/phpunit-selenium": ">=1.2"
     },
     "require": {
         "php": ">=5.3.3",
