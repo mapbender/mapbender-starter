@@ -14,11 +14,12 @@
     bootstrap                   = "bootstrap.php.cache" >
 
     <testsuites>
-        <testsuite name="Project Test Suite">
+        <testsuite name="Project">
             <directory>../src/*/*Bundle/Tests</directory>
-            <directory>../src/*/Bundle/*Bundle/Tests</directory>
+        </testsuite>
+        <testsuite name="Mapbender">
             <directory>../mapbender/src/*/*Bundle/Tests</directory>
-            <directory>../mapbender/src/*/Bundle/*Bundle/Tests</directory>
+            <directory>../fom/src/*/*Bundle/Tests</directory>
         </testsuite>
     </testsuites>
 
@@ -37,21 +38,12 @@
             <exclude>
                 <directory>../src/*/*Bundle/Resources</directory>
                 <directory>../src/*/*Bundle/Tests</directory>
-                <directory>../src/*/Bundle/*Bundle/Resources</directory>
-                <directory>../src/*/Bundle/*Bundle/Tests</directory>
                 <directory>../mapbender/src/*/*Bundle/Resources</directory>
                 <directory>../mapbender/src/*/*Bundle/Tests</directory>
-                <directory>../mapbender/src/*/Bundle/*Bundle/Resources</directory>
-                <directory>../mapbender/src/*/Bundle/*Bundle/Tests</directory>
-                <file>../mapbender/src/Mapbender/Example.php</file>
                 <directory>../owsproxy/src/*/*Bundle/Resources</directory>
                 <directory>../owsproxy/src/*/*Bundle/Tests</directory>
-                <directory>../owsproxy/src/*/Bundle/*Bundle/Resources</directory>
-                <directory>../owsproxy/src/*/Bundle/*Bundle/Tests</directory>
                 <directory>../fom/src/*/*Bundle/Resources</directory>
                 <directory>../fom/src/*/*Bundle/Tests</directory>
-                <directory>../fom/src/*/Bundle/*Bundle/Resources</directory>
-                <directory>../fom/src/*/Bundle/*Bundle/Tests</directory>
             </exclude>
         </whitelist>
     </filter>
