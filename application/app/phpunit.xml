@@ -11,7 +11,7 @@
     processIsolation            = "false"
     stopOnFailure               = "false"
     syntaxCheck                 = "false"
-    bootstrap                   = "bootstrap.php.cache" >
+    bootstrap                   = "bootstrap.test.php.cache" >
 
     <testsuites>
         <testsuite name="Project">
@@ -23,11 +23,11 @@
         </testsuite>
     </testsuites>
 
-    <!--
     <php>
-        <server name="KERNEL_DIR" value="/path/to/your/app/" />
+        <const name="TEST_WEB_SERVER_HOST" value="localhost" />
+        <const name="TEST_WEB_SERVER_PORT" value="8000" />
+        <const name="TEST_WEB_SERVER_DOCROOT" value="../web" />
     </php>
-    -->
 
     <filter>
         <whitelist>
