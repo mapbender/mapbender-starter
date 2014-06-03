@@ -18,3 +18,5 @@ extra/
 *.deb
 local.properties
 /nbproject/private/
+testresults
+application/bin/*
