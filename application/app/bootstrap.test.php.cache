@@ -4,7 +4,7 @@ require_once __DIR__ . '/bootstrap.php.cache';
 
 // Command that starts the built-in web server
 $command = sprintf(
-    'php -S %s:%d -t %s >/dev/null 2>&1 & echo $!',
+    'php -S %s:%d -t %s >/tmp/weblog 2>&1 & echo $!',
     TEST_WEB_SERVER_HOST,
     TEST_WEB_SERVER_PORT,
     TEST_WEB_SERVER_DOCROOT
