@@ -26,7 +26,7 @@
     <php>
         <const name="TEST_WEB_SERVER_HOST" value="localhost" />
         <const name="TEST_WEB_SERVER_PORT" value="8000" />
-        <const name="TEST_WEB_SERVER_DOCROOT" value="../web" />
+        <const name="TEST_WEB_SERVER_DOCROOT" value="web" />
     </php>
 
     <filter>
