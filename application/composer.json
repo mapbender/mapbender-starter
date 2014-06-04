@@ -6,7 +6,9 @@
     },
     "require-dev": {
         "satooshi/php-coveralls": "dev-master",
-        "phpunit/phpunit-selenium": ">=1.2"
+        "phpunit/phpunit-selenium": ">=1.2",
+        "facebook/webdriver": "dev-master",
+        "phpunit/phpunit": "4.0.*"
     },
     "require": {
         "php": ">=5.3.3",
