@@ -48,10 +48,4 @@
         </whitelist>
     </filter>
 
-    <logging>
-        <log type="coverage-html"   target="../../testresults/coverage" charset="UTF-8" />
-        <log type="coverage-clover" target="../../testresults/clover.xml" charset="UTF-8" />
-        <log type="junit"           target="../../testresults/junit.xml" logIncompleteSkipped="false" />
-    </logging>
-
 </phpunit>
