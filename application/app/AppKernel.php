@@ -41,12 +41,7 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
         );
 
-        // dev and ALL test environments get some extra sugar...
-        $isDevKernel = false;
-        if('dev' == $this->getEnvironment() || strpos($this->getEnvironment(), 'test') == 0) {
-            $isDevKernel = true;
-        }
-        if ($isDevKernel) {
+        if (in_array($this->getEnvironment(), array('dev', 'test'))) {
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
