@@ -1,5 +1,10 @@
 # Changelog  
-* added spanish translation (thanks to Mario Torres)
+* **v3.0.4.0** - Work in progress
+    - Added spanish translation (thanks to Mario Torres)
+    - Added custom buffer/ratio for gridded layers (requires DB update)
+    - Added element for generic HTML
+    - Added custom CSS editor for applications (requires DB update)
+
 
 ## Release History
 * **v3.0.3.2** - 2014-04-04
