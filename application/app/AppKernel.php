@@ -46,6 +46,7 @@ class AppKernel extends Kernel
         if('dev' == $this->getEnvironment() || strpos($this->getEnvironment(), 'test') == 0) {
             $isDevKernel = true;
         }
+
         if ($isDevKernel) {
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
