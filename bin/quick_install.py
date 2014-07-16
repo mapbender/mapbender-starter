@@ -46,7 +46,7 @@ INSTALL_CMDS = (
         '--password={password} --silent', '{dir}/application'),
     ('app/console doctrine:fixtures:load '
         '--fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/'
-        '--append', '{dir}/application'),
+        ' --append', '{dir}/application'),
 )
 
 
