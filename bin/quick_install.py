@@ -16,15 +16,15 @@ https://raw.githubusercontent.com/mapbender/mapbender-starter/develop/bin/quick_
 
 - Install develop branch into mapbender3_develop
 
-    curl http://bit.ly/1tQvo5i | python
+    curl -sSL http://bit.ly/1tQvo5i | python
 
 - Install foo branch into /tmp/bar
 
-    curl http://bit.ly/1tQvo5i | python - --dir=/tmp/bar foo
+    curl -sSL http://bit.ly/1tQvo5i | python - --dir=/tmp/bar foo
 
 - Install develop branch, but use admin <admin@example.com> with password admin
 
-    curl http://bit.ly/1tQvo5i | python - --username=admin --useremail=admin@example.com --userpassword=admin
+    curl -sSL http://bit.ly/1tQvo5i | python - --username=admin --useremail=admin@example.com --userpassword=admin
 """
 
 import argparse
