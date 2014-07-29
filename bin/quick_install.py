@@ -24,7 +24,7 @@ https://raw.githubusercontent.com/mapbender/mapbender-starter/develop/bin/quick_
 
 - Install develop branch, but use admin <admin@example.com> with password admin
 
-    curl -sSL http://bit.ly/1tQvo5i | python - --username=admin --useremail=admin@example.com --userpassword=admin
+    curl -sSL http://bit.ly/1tQvo5i | python - --username=admin --email=admin@example.com --password=admin
 """
 
 import argparse
