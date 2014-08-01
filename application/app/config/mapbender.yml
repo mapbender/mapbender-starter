@@ -7,6 +7,7 @@ parameters:
     applications:
         mapbender_user:
             title: Mapbender Demo Map
+            screenshot: 'mapbender_user.png'
             description: "Fullscreen style, Simple map showing WMS use."
             published: true
             template:  Mapbender\CoreBundle\Template\Fullscreen
@@ -311,6 +312,7 @@ parameters:
                         click: http://www.openstreetmap.org/copyright
         mapbender_user_basic:
             title: Mapbender Demo Map basic
+            screenshot: 'mapbender_user_basic.png'
             description: "Fullscreen style, simple buttons, simple map showing WMS use."
             published: true
             template:  Mapbender\CoreBundle\Template\Fullscreen
