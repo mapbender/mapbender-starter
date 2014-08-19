@@ -1,5 +1,11 @@
 # Changelog  
 * **v3.0.4.0** - Work in progress
+    - Added parameter group for element BaseSourceSwitcher
+    - Added accordion container for SidePane
+    - Upgrade to Symfony 2.3
+    - fixed validate WMS GetCapabilities document
+    - fixed layer sorting at backend
+    - fixed application copy 
     - Added spanish translation (thanks to Mario Torres)
     - Added custom buffer/ratio for gridded layers (requires DB update)
     - Added element for generic HTML
