@@ -28,15 +28,15 @@ parameters:
                         opacity: 85
                     osm:
                         class: Mapbender\WmsBundle\Entity\WmsInstance
-                        title: Mapbender OSM
+                        title: OSM Demo
                         url: http://osm-demo.wheregroup.com/service
                         layers:
-                            30: { name: osm,    title : OSM-Demo WhereGroup,  visible: true }
+                            30: { name: osm,    title : Germany OSM Demo WhereGroup,  visible: true }
                         info_format: text/html
                         visible: true
                         format: image/png
                         transparent: true
-                        tiled: false
+                        tiled: true
                         opacity: 100
                 overview:
                     osm_overview:
@@ -44,7 +44,7 @@ parameters:
                         title: OSM Demo
                         url: http://osm-demo.wheregroup.com/service
                         layers:
-                            40: { name: osm,    title : OSM-Demo WhereGroup,  visible: true }
+                            40: { name: osm,    title : Germany OSM Demo WhereGroup,  visible: true }
                         tiled: false
                         format: image/png
                         transparent: true
@@ -176,7 +176,7 @@ parameters:
                         class: Mapbender\CoreBundle\Element\FeatureInfo
                         title: FeatureInfo
                         target: map
-                        deactivateOnClose: true
+                        deactivateOnClose: false
                     wmsloader:
                         title: WMS Loader
                         class: Mapbender\WmsBundle\Element\WmsLoader
@@ -237,7 +237,7 @@ parameters:
                         autoOpen: false
                         titleMaxLength: 20
                         showBaseSource: true
-                        layerRemove: true
+                        layerRemove: false
                         menu: []
                     overview:
                         title: Overview
@@ -275,7 +275,7 @@ parameters:
                         titleMaxLength: 20
                         showBaseSource: true
                         layerRemove: true
-                        menu: [opacity,zoomtolayer]
+                        menu: [opacity,zoomtolayer,metadata]
                 footer:
                     activityindicator:
                         class: Mapbender\CoreBundle\Element\ActivityIndicator
@@ -463,7 +463,7 @@ parameters:
                         class: Mapbender\CoreBundle\Element\FeatureInfo
                         title: FeatureInfo
                         target: map
-                        deactivateOnClose: true
+                        deactivateOnClose: false
                     wmsloader:
                         title: WMS Loader
                         class: Mapbender\WmsBundle\Element\WmsLoader
