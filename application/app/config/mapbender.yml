@@ -336,20 +336,20 @@ parameters:
                         title: OSM Demo
                         url: http://osm-demo.wheregroup.com/service
                         layers:
-                            30: { name: osm,    title : OSM-Demo WhereGroup,  visible: true }
+                            30: { name: osm,    title : Germany OSM Demo WhereGroup,  visible: true }
                         info_format: text/html
                         visible: true
                         format: image/png
                         transparent: true
-                        tiled: false
+                        tiled: true
                         opacity: 100
                 overview:
                     osm_overview:
                         class: Mapbender\WmsBundle\Entity\WmsInstance
-                        title: Mapbender OSM
+                        title: OSM Demo
                         url: http://osm-demo.wheregroup.com/service
                         layers:
-                            40: { name: osm,    title : OSM-Demo WhereGroup,  visible: true }
+                            40: { name: osm,    title : Germany OSM Demo WhereGroup,  visible: true }
                         tiled: false
                         format: image/png
                         transparent: true
