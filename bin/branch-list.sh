@@ -21,6 +21,12 @@ branches[FOM]='develop'
 dirs[OWSPROXY]='application/owsproxy'
 branches[OWSPROXY]='develop'
 
+if [ $# -eq 1 ]; then
+    branches[MAPBENDER STARTER]=$1
+    branches[MAPBENDER]=$1
+    branches[FOM]=$1
+    branches[OWSPROXY]=$1
+fi
 
 function list_branches {
     printf "\n${bold}${underline}$1${nounderline}${normal} \n"
