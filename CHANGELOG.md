@@ -1,16 +1,17 @@
-# Changelog  
-* **v3.0.4.0** - Work in progress
+# Changelog
+* **v3.0.4.0**
+    - Switched to MIT license
     - Added parameter group for element BaseSourceSwitcher
     - Added accordion container for SidePane
     - Upgrade to Symfony 2.3
     - fixed validate WMS GetCapabilities document
     - fixed layer sorting at backend
-    - fixed application copy 
+    - fixed application copy
     - Added spanish translation (thanks to Mario Torres)
     - Added custom buffer/ratio for gridded layers (requires DB update)
     - Added element for generic HTML
     - Added custom CSS editor for applications (requires DB update)
-
+    - See CHANGELOGs in the submodules for details
 
 ## Release History
 * **v3.0.3.2** - 2014-04-04
