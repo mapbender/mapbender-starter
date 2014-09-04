@@ -1,5 +1,6 @@
 # Changelog
 * **v3.0.4.0**
+    - Switched to MIT license
     - Added parameter group for element BaseSourceSwitcher
     - Added accordion container for SidePane
     - Upgrade to Symfony 2.3
