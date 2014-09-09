@@ -1,7 +1,7 @@
 # Changelog
-* **v3.0.4.0**
+* **v3.0.4.0** - 2014-09-11 planned work in progress
     - Switched to MIT license
-    - Added parameter group for element BaseSourceSwitcher
+    - Added parameter group for element BaseSourceSwitcher to be able to create a menu bar with groupname as title of the menu
     - Added accordion container for SidePane
     - Upgrade to Symfony 2.3
     - fixed validate WMS GetCapabilities document
@@ -11,9 +11,51 @@
     - Added custom buffer/ratio for gridded layers (requires DB update)
     - Added element for generic HTML
     - Added custom CSS editor for applications (requires DB update)
-    - See CHANGELOGs in the submodules for details
+    - fixed element saving bug
+    - use degrees as unit fallback when none are provided by SRS definition
+    - added screenshot management to application editing
+    - enhanced CSS URL rewrite to be more dynamic depending on apps URL rewriting
+    - patched OpenLayers with unreleased upstream fixes
+    - enhanced GPS position element (remove marker on disable, position averaging)
+    - properly remove proxy from WMS URLs before printing
+    - display WMS metadata valdiation results
+    - fixed application copy bugs
+    - region properties added (normal/tabs/accordion)
+    - patched OpenLayers 2.13 with fixes for proper IE8-10 behavior
+    - prevent unsaved element forms to be closed accidentally
+    - added CSS editing to application editing
+    - added generic HTML element
+    - Codemirror updated
+    - workaround weird fileinfo behavior during print
+    - added scalebar to print
+    - enhanced SimpleSearch preprocessing with regex and sensible Solr defaults
+    - travis-ci.org integration for automated testing
+    - SearchRouter enhancements (z-index, results counter)
+    - GPS position can make the map follow it's position
+    - More WMS metadata validation, handling and displaying
+    - FeatureInfo can have custom data handlers
+    - configurable buffer/ratio property for WMS instances
+    - print using layer opacity
+    - SearchRouter feature styles can be configured
+    - SearchRouter: autocomplete enhancements, feature garbage collection, more configration options
+    - responsive application templates
+    - added session entity
+    - delete ACL with delete
+    - region properties (tabs/accordion)
+    - fixed application copy bugs
+    - popups can prevent close when unsaved data
+    - dynamic user profile insertion
+    - enhanced autocomplete with query term preprocessing
+    - fixed popup focus behavior
+    - travis-ci.org integration for automated tests
+    - external user/group providers can be configured instead of FOM
+    - Enhanced exception handling
+    - Fix cURL behavior when closing connections
+    - Added user-agent "OWSproxy3"
+    - Added request/response logging
+    - Oracle support for logging
+    - https://github.com/mapbender/mapbender/milestones/3.0.4.0
 
-## Release History
 * **v3.0.3.2** - 2014-04-04
     - Added HttpBasicAuthListener to WMS loading for for safely setting the auth header
     - WMSProxy passes auth challenges (HTTP 401) down to client
