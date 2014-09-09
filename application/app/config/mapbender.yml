@@ -310,6 +310,11 @@ parameters:
                         class: Mapbender\CoreBundle\Element\Button
                         label: true
                         click: http://www.openstreetmap.org/copyright
+                    HTML:
+                        title: HTML
+                        class: Mapbender\CoreBundle\Element\HTMLElement
+                        content: '<div style="color: #6FB536; font-weight:bold" >powered by Mapbender</div>'
+                        classes: html-element-inline                        
         mapbender_user_basic:
             title: Mapbender Demo Map basic
             screenshot: 'mapbender_user_basic.png'
@@ -567,3 +572,8 @@ parameters:
                         class: Mapbender\CoreBundle\Element\Button
                         label: true
                         click: http://www.openstreetmap.org/copyright
+                    HTML:
+                        title: HTML
+                        class: Mapbender\CoreBundle\Element\HTMLElement
+                        content: '<div style="color: #6FB536; font-weight:bold" >powered by Mapbender</div>'
+                        classes: html-element-inline                        
