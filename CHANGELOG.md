@@ -1,5 +1,8 @@
 # Changelog
-* **v3.0.4.0** - 2014-09-11 planned work in progress
+* **v3.0.x.x** - 201x-xx-xx
+
+#Release
+* **v3.0.4.0** - 2014-09-12
     - Switched to MIT license
     - Added parameter group for element BaseSourceSwitcher to be able to create a menu bar with groupname as title of the menu
     - Added accordion container for SidePane
@@ -54,6 +57,7 @@
     - Added user-agent "OWSproxy3"
     - Added request/response logging
     - Oracle support for logging
+    - import/export of applications/sources
     - https://github.com/mapbender/mapbender/milestones/3.0.4.0
 
 * **v3.0.3.2** - 2014-04-04
