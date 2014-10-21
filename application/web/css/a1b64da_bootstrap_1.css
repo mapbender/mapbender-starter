@@ -457,7 +457,7 @@
 //.btn,
 .form-control
 {
-  behavior: url('../../bundles/mapbendercore/regional/vendor/bootstrap/vendor/PIE.1.0.0.htc');
+  behavior: url('../bundles/mapbendercore/regional/vendor/bootstrap/vendor/PIE.1.0.0.htc');
 }
 
 
@@ -465,7 +465,7 @@
   border-radius: 0px;
   background-color: #424242;
   color: #fff;
-  behavior: url('../../bundles/mapbendercore/regional/vendor/bootstrap/vendor/PIE.1.0.0.htc');
+  behavior: url('../bundles/mapbendercore/regional/vendor/bootstrap/vendor/PIE.1.0.0.htc');
   padding: 0px;
   width: 36px;
   height: 36px;
