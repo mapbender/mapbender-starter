@@ -11,6 +11,10 @@ parameters:
             description: "Fullscreen style, Simple map showing WMS use."
             published: true
             template:  Mapbender\CoreBundle\Template\Fullscreen
+            regionProperties: 
+                -
+                    name: sidepane
+                    properties: {"name": "accordion", "label": "mb.manager.template.region.accordion.label"}
             layersets:
                 main:
                     mapbender_users:
