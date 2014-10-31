@@ -5,6 +5,12 @@
 */web/bundles
 */web/doc
 */web/uploads
+
+application/web/xmlschemas/*
+!application/web/xmlschemas/http___www_opengis_net*
+!application/web/xmlschemas/http___www_w3_org*
+!application/web/xmlschemas/WMT_MS_Capabilities_http___www_opengis_net*
+
 !*/web/uploads/mapbender_user
 !*/web/uploads/mapbender_user_basic
 */web/assets/*.trans
