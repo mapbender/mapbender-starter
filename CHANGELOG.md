@@ -1,5 +1,22 @@
 # Changelog
-* **v3.0.x.x** - 201x-xx-xx
+* **v3.0.4.1** - 2015-01-23
+    - option 'removelayer' added into layertree menu
+    - parameter 'layerRemove' removed from layertree configuration
+    - container accordion structure changed
+    - import / export from applications added (without acls)
+    - display layer metadata
+    - Frontend: Sidepane Accordeon Legend is displayed without horizontal Scrollbar
+    - Backend: WMS Instanz configuration - contextmenu for layers shows wrong ID (only instance ID)
+    - Frontend: Legend - displays WMS Information although the checkbox Show
+    - Frontend: Layertree - contextmenu zoomlayer does not use the layer extent
+    - Backend: Add Source with user/password - informations is added to field originUrl not to fields user and password
+    - app/console mapbender:generate:element fixed errors
+    - bug visiblelayers fixed
+    - WMS with authentication saves in table mb_wms_wmssource username and password
+    - no metadata for applications coming from mapbender.yml definition (no entry in context menu)
+    - copy an application via button on application fixed
+    - print template resize northarrow, overview added
+    - improved screenshot for application handling
 
 #Release
 * **v3.0.4.0** - 2014-09-12
