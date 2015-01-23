@@ -1,4 +1,7 @@
 # Changelog
+* **v3.0.x.x** - 201x-xx-xx
+
+#Release
 * **v3.0.4.1** - 2015-01-23
     - option 'removelayer' added into layertree menu
     - parameter 'layerRemove' removed from layertree configuration
@@ -17,8 +20,8 @@
     - copy an application via button on application fixed
     - print template resize northarrow, overview added
     - improved screenshot for application handling
+    - https://github.com/mapbender/mapbender/milestones/3.0.4.1
 
-#Release
 * **v3.0.4.0** - 2014-09-12
     - Switched to MIT license
     - Added parameter group for element BaseSourceSwitcher to be able to create a menu bar with groupname as title of the menu
