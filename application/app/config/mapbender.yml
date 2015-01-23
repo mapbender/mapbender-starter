@@ -196,7 +196,7 @@ parameters:
                         class: Mapbender\CoreBundle\Element\PrintClient
                         target: map
                         autoOpen: false
-                        file_prefix: mapbender3
+                        file_prefix: mapbender3.pdf
                         templates:
                             - { template: a4portrait, label: A4 Portrait, format: a4}
                             - { template: a4landscape, label: A4 Landscape, format: a4}
