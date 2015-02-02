@@ -37,7 +37,8 @@ assetic:
     ruby: %ruby_path%
     filters:
         cssrewrite: ~
-        sass: ~
+        sass:
+            bin: "%kernel.root_dir%/../bin/sassc"
         compass:
             bin: %compass_path%
             no_line_comments: true
