@@ -38,6 +38,7 @@ assetic:
     filters:
         cssrewrite: ~
         sass:
+            # SASS comipler path
             bin: "%kernel.root_dir%/../bin/sassc"
         compass:
             bin: %compass_path%
