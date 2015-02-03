@@ -5,6 +5,20 @@ services:
 
 parameters:
     applications:
+        # Backoffice app definition
+        manager:
+            title: Mapbender Administration
+            template:  Mapbender\ManagerBundle\Template\ManagerTemplate
+            excludeFromList: true
+            published: true
+
+        # Login app definition
+        mb3-login:
+            title: Mapbender Login
+            template:  Mapbender\ManagerBundle\Template\LoginTemplate
+            excludeFromList: true
+            published: true
+
         mapbender_user:
             title: Mapbender Demo Map
             screenshot: 'mapbender_user.png'
