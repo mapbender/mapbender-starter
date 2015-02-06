@@ -40,12 +40,12 @@ assetic:
         sass:
             # SASS comipler path
             bin: "%kernel.root_dir%/../bin/sassc"
-        compass:
-            bin: %compass_path%
-            no_line_comments: true
-            style: compressed
-            load_paths:
-                 - "%kernel.root_dir%/../mapbender/src/Mapbender/CoreBundle/Resources/public/sass"
+#        compass:
+#            bin: %compass_path%
+#            no_line_comments: true
+#            style: compressed
+#            load_paths:
+#                 - "%kernel.root_dir%/../mapbender/src/Mapbender/CoreBundle/Resources/public/sass"
 
 # Doctrine Configuration
 doctrine:
@@ -105,6 +105,6 @@ ows_proxy3_core:
 #            - host_a
 #            - host_b
 
-# Mapbender Configuration
-mapbender_core:
-    sass_assets: false
+## Mapbender Configuration
+#mapbender_core:
+#    sass_assets: false
