@@ -23,7 +23,6 @@ assetic:
     use_controller: %sass_assets%
     filters:
         cssrewrite: ~
-        sass: ~
         compass:
             style: compressed
             load_paths:

@@ -28,3 +28,5 @@ local.properties
 /nbproject/private/
 testresults
 application/bin/*
+!application/bin/sassc
+!application/bin/sassc.exe

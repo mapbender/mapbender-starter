@@ -33,17 +33,19 @@ twig:
 # Assetic Configuration
 assetic:
     debug:          %kernel.debug%
-    use_controller: false
+    use_controller: true
     ruby: %ruby_path%
     filters:
         cssrewrite: ~
-        sass: ~
-        compass:
-            bin: %compass_path%
-            no_line_comments: true
-            style: compressed
-            load_paths:
-                 - "%kernel.root_dir%/../mapbender/src/Mapbender/CoreBundle/Resources/public/sass"
+        sass:
+            # SASS comipler path
+            bin: "%kernel.root_dir%/../bin/sassc"
+#        compass:
+#            bin: %compass_path%
+#            no_line_comments: true
+#            style: compressed
+#            load_paths:
+#                 - "%kernel.root_dir%/../mapbender/src/Mapbender/CoreBundle/Resources/public/sass"
 
 # Doctrine Configuration
 doctrine:
@@ -103,6 +105,6 @@ ows_proxy3_core:
 #            - host_a
 #            - host_b
 
-# Mapbender Configuration
-mapbender_core:
-    sass_assets: false
+## Mapbender Configuration
+#mapbender_core:
+#    sass_assets: false
