@@ -32,9 +32,8 @@ twig:
 
 # Assetic Configuration
 assetic:
-    debug:          %kernel.debug%
+    debug: %kernel.debug%
     use_controller: true
-    ruby: %ruby_path%
     filters:
         cssrewrite: ~
         sass: ~
@@ -97,6 +96,5 @@ ows_proxy3_core:
 #            - host_a
 #            - host_b
 
-## Mapbender Configuration
-#mapbender_core:
-#    sass_assets: false
+# Mapbender Configuration
+mapbender_core: ~
