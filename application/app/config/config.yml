@@ -37,15 +37,7 @@ assetic:
     ruby: %ruby_path%
     filters:
         cssrewrite: ~
-        sass:
-            # SASS comipler path
-            bin: "%kernel.root_dir%/../bin/sassc"
-#        compass:
-#            bin: %compass_path%
-#            no_line_comments: true
-#            style: compressed
-#            load_paths:
-#                 - "%kernel.root_dir%/../mapbender/src/Mapbender/CoreBundle/Resources/public/sass"
+        sass: ~
 
 # Doctrine Configuration
 doctrine:
