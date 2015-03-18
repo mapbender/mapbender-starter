@@ -583,3 +583,187 @@ parameters:
                         class: Mapbender\CoreBundle\Element\HTMLElement
                         content: '<div style="color: #6FB536; font-weight:bold" >powered by Mapbender</div>'
                         classes: html-element-inline                        
+        digitest:
+            title: Digitest
+            screenshot: 'mapbender_user.png'
+            description: "Testumgebung Digitalisierung"
+            published: true
+            template:  Mapbender\CoreBundle\Template\Fullscreen
+            regionProperties: 
+                -
+                    name: sidepane
+                    properties: {"name": "accordion", "label": "mb.manager.template.region.accordion.label"}
+            layersets:
+                main:
+                    mapbender_users:
+                        class: Mapbender\WmsBundle\Entity\WmsInstance
+                        title: Mapbender Users
+                        url: http://wms.wheregroup.com/cgi-bin/mapbender_user.xml
+                        layers:
+                            10: { name: Mapbender_User,    title : User, visible: true, legendurl: http://wms.wheregroup.com/cgi-bin/mapbender_user.xml?REQUEST=GetLegendGraphic&VERSION=1.1.1&SERVICE=WMS&Layer=Mapbender_User&FORMAT=image/png }
+                            22: { name: Mapbender_Names,   title : Name, visible: true, queryable: true}
+                        info_format: text/html
+                        visible: true
+                        format: image/png
+                        transparent: true
+                        tiled: false
+                        opacity: 85
+                    osm:
+                        class: Mapbender\WmsBundle\Entity\WmsInstance
+                        title: OSM Demo
+                        url: http://osm-demo.wheregroup.com/service
+                        layers:
+                            30: { name: osm,    title : Germany OSM Demo WhereGroup,  visible: true }
+                        info_format: text/html
+                        visible: true
+                        format: image/png
+                        transparent: true
+                        tiled: true
+                        opacity: 100
+                overview:
+                    osm_overview:
+                        class: Mapbender\WmsBundle\Entity\WmsInstance
+                        title: OSM Demo
+                        url: http://osm-demo.wheregroup.com/service
+                        layers:
+                            40: { name: osm,    title : Germany OSM Demo WhereGroup,  visible: true }
+                        tiled: false
+                        format: image/png
+                        transparent: true
+                        visible: true
+                        opacity: 100
+            elements:
+                toolbar:
+                    layertree-button:
+                        title: Layertree
+                        tooltip: Layertree
+                        class: Mapbender\CoreBundle\Element\Button
+                        label: true
+                        icon: icon-layer-tree
+                        target: layertreedialog
+                        action: open
+                    legend-button:
+                        title: Legend
+                        tooltip: Legend
+                        class: Mapbender\CoreBundle\Element\Button
+                        target: legend
+                        icon: icon-legend
+                        action: open
+                content:
+                    map:
+                        title: Main Map
+                        class: Mapbender\CoreBundle\Element\Map
+                        layersets: [main]
+                        srs: EPSG:25832
+                        units: m
+                        extents:
+                            start: [361000,5619000,371150,5625000]
+                            max: [-500000,4350000,1600000,6850000]
+                        scales: [5000000,1000000,500000,100000,50000,25000,10000,7500,5000,2500,1000,500]
+                        maxResolution: 'auto'
+                        otherSrs: ["EPSG:25833","EPSG:31466","EPSG:31467","EPSG:900913","EPSG:4326"]
+                    zoombar:
+                        class: Mapbender\CoreBundle\Element\ZoomBar
+                        target: map
+                        components: ["pan","history","zoom_box","zoom_max","zoom_slider"]
+                        position: [15em, 3em]
+                        stepsize: 50
+                        stepbypixel: true
+                        anchor: right-top
+                        position: [200,40]
+                        draggable: false
+                    legend:
+                        class: Mapbender\CoreBundle\Element\Legend
+                        target: map
+                        title: Legend
+                        elementType: dialog
+                        autoOpen: false
+                        displayType: list
+                        hideEmptyLayers: true
+                        noLegend: "No legend available"
+                        generateLegendGraphic: false
+                        showWmsTitle: true
+                        showLayerTitle: true
+                        showGroupedLayerTitle: true
+                    scalebar:
+                        class: Mapbender\CoreBundle\Element\ScaleBar
+                        target: map
+                        anchor: 'left-bottom'
+                        position: ['10px', '10px']
+                        maxWidth: 200
+                        units: ['km']
+                    layertreedialog:
+                        title: Layertree
+                        class: Mapbender\CoreBundle\Element\Layertree
+                        target: map
+                        type: dialog
+                        displaytype: tree
+                        useAccordion: false
+                        autoOpen: false
+                        titleMaxLength: 20
+                        showBaseSource: true
+                        layerRemove: false
+                        menu: []
+                    overview:
+                        title: Overview
+                        class: Mapbender\CoreBundle\Element\Overview
+                        tooltip: 'Overview'
+                        target: map
+                        layerset: overview
+                        width: 200
+                        height: 100
+                        anchor: 'right-bottom'
+                        position: ['0px', '0px']
+                        maximized: true
+                        fixed: false
+                sidepane:
+                    digitizer:
+                        class: Mapbender\DigitizerBundle\Element\Digitizer
+                        title: Digitalisierung
+                        target: map
+                        schemes:
+                            table1:
+                                label: Tabelle 1
+                                datainstance: 
+                                    #connection: ...
+                                    #table: 
+                                toolset:
+                                    - {type: edit} 
+                                    - {type: drawPoint} 
+                                    - {type: remove} 
+                                twigTemplate: 
+                                    
+                            table2:
+                                label: Tabelle 2
+                                toolset:
+                                    - {type: drawCircle, icon: drawRectangle} 
+                                    - {type: edit} 
+                                    - {type: remove} 
+                footer:
+                    activityindicator:
+                        class: Mapbender\CoreBundle\Element\ActivityIndicator
+                        title: Activity Indicator
+                        activityClass: mb-activity
+                        ajaxActivityClass: mb-activity-ajax
+                        tileActivityClass: mb-activity-tile
+                    coordinates:
+                        class: Mapbender\CoreBundle\Element\CoordinatesDisplay
+                        title: Coordinates Display
+                        tooltip: Coordinates Display
+                        target: map
+                        label: false
+                        empty:  "x: - y: -"
+                        prefix: "x: "
+                        separator:  " y: "
+                    srs:
+                        class: Mapbender\CoreBundle\Element\SrsSelector
+                        title: SRS Selector
+                        tooltip: SRS Selector
+                        label: false
+                        target: map
+                    scaleselector:
+                        class: Mapbender\CoreBundle\Element\ScaleSelector
+                        title: Scale Selector
+                        tooltip: Scale Selector
+                        label: false
+                        target: map
