@@ -4,6 +4,10 @@ services:
     arguments: [ "@service_container" ]
 
 parameters:
+    featureTypes:
+        addresses:
+            connection: geom
+            table: platz
     applications:
         mapbender_user:
             title: Mapbender Demo Map
