@@ -11,8 +11,8 @@ parameters:
             uniqueId: nummer
             geomField: geom
             fields: [bezirk,name]
-            srid: 31467
-            originSrid: 31467
+#            srid: 31467
+#            originSrid: 31467
 
         addresses:
             connection: geom
@@ -20,7 +20,7 @@ parameters:
             uniqueId: id
             geomField: geom
             fields: [buchungsblattbezirk,nummer,buchungsblatt,gemarkung]
-            srid: 31467
+#            srid: 31467
 
 
 
