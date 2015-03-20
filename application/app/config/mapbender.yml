@@ -4,6 +4,11 @@ services:
     arguments: [ "@service_container" ]
 
 parameters:
+    featureTypes:
+        tabelle1:
+            connection: default
+            table: test
+            geomType: point
     applications:
         mapbender_user:
             title: Mapbender Demo Map
@@ -723,22 +728,28 @@ parameters:
                         target: map
                         schemes:
                             table1:
-                                label: Tabelle 1
-                                datainstance: 
-                                    #connection: ...
-                                    #table: 
-                                toolset:
-                                    - {type: edit} 
-                                    - {type: drawPoint} 
-                                    - {type: remove} 
-                                twigTemplate: 
-                                    
+                                label: Tabelle mit Punkten
+                                featureType: tabelle1
+                                # temp
+                                connection: digi
+                                table: verkehr.ausstattung
+                                geomColumn: the_geom
+                                srid: 31466
+                                geomType: point
+                                # field definition
+                                fields: ss
                             table2:
-                                label: Tabelle 2
-                                toolset:
-                                    - {type: drawCircle, icon: drawRectangle} 
-                                    - {type: edit} 
-                                    - {type: remove} 
+                                label: Tabelle mit Linien
+                                featureType: tabelle2
+                                #temp geomtype
+                                geomType: line
+                                fields: ss
+                            table3:
+                                label: Tabelle mit Polygonen
+                                featureType: tabelle2
+                                #temp geomtype
+                                geomType: polygon
+                                fields: ss
                 footer:
                     activityindicator:
                         class: Mapbender\CoreBundle\Element\ActivityIndicator
