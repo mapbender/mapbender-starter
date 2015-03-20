@@ -32,8 +32,8 @@
         "doctrine/doctrine-fixtures-bundle": "dev-master",
         "toooni/fpdf": "dev-master",
         "arsgeografica/signing": "1.1.*",
-        // "igosuki/compass-mixins": "dev-master",
-        "imag/ldap-bundle":  "dev-master"
+        "imag/ldap-bundle":  "dev-master",
+        "phayes/geophp": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [
@@ -57,18 +57,4 @@
         "symfony-app-dir": "app",
         "symfony-web-dir": "web"
     }
-//  ,"repositories": [
-//    {
-//      "type": "package",
-//      "package": {
-//        "name": "igosuki/compass-mixins",
-//        "version": "dev-master",
-//        "source": {
-//          "url": "http://github.com/Igosuki/compass-mixins.git",
-//          "type": "git",
-//          "reference": "master"
-//        }
-//      }
-//    }
-//  ]
 }
