@@ -5,10 +5,25 @@ services:
 
 parameters:
     featureTypes:
-        tabelle1:
-            connection: default
-            table: test
-            geomType: point
+        ortsteile:
+            connection: geom
+            table: ortsteile_copy
+            uniqueId: nummer
+            geomField: geom
+            fields: [bezirk,name]
+#            srid: 31467
+#            originSrid: 31467
+
+        addresses:
+            connection: geom
+            table: flurstueck
+            uniqueId: id
+            geomField: geom
+            fields: [buchungsblattbezirk,nummer,buchungsblatt,gemarkung]
+#            srid: 31467
+
+
+
     applications:
         mapbender_user:
             title: Mapbender Demo Map

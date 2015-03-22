@@ -32,7 +32,8 @@
         "doctrine/doctrine-fixtures-bundle": "dev-master",
         "toooni/fpdf": "dev-master",
         "arsgeografica/signing": "1.1.*",
-        "imag/ldap-bundle":  "dev-master"
+        "imag/ldap-bundle":  "dev-master",
+        "phayes/geophp": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [

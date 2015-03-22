@@ -6,6 +6,7 @@
 */web/doc
 */web/uploads
 
+
 application/web/xmlschemas/*
 !application/web/xmlschemas/http___www_opengis_net*
 !application/web/xmlschemas/http___www_w3_org*
@@ -30,3 +31,6 @@ testresults
 application/bin/*
 !application/bin/sassc
 !application/bin/sassc.exe
+
+# IDEA Project Files
+.idea/
