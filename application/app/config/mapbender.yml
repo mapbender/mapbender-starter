@@ -744,7 +744,7 @@ parameters:
                         schemes:
                             table1:
                                 label: Tabelle mit Punkten
-                                featureType: tabelle1
+                                featureType: ortsteile
                                 # temp
                                 connection: digi
                                 table: verkehr.ausstattung
@@ -754,6 +754,7 @@ parameters:
                                 # field definition
                                 fields: ss
                             table2:
+                                featureType: ortsteile
                                 label: Tabelle mit Linien
                                 featureType: tabelle2
                                 #temp geomtype
@@ -761,7 +762,7 @@ parameters:
                                 fields: ss
                             table3:
                                 label: Tabelle mit Polygonen
-                                featureType: tabelle2
+                                featureType: ortsteile
                                 #temp geomtype
                                 geomType: polygon
                                 fields: ss
