@@ -749,7 +749,7 @@ parameters:
                                 connection: digi
                                 table: verkehr.ausstattung
                                 geomColumn: the_geom
-                                srid: 31466
+#                                srid: 31466
                                 geomType: point
                                 # field definition
                                 fields: ss
