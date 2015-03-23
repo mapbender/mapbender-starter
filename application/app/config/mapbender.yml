@@ -8,7 +8,7 @@ parameters:
         ortsteile:
             connection: geom
             table: ortsteile_copy
-            uniqueId: nummer
+            uniqueId: id
             geomField: geom
             fields: [bezirk,name]
 #            srid: 31467
