@@ -145,7 +145,7 @@ parameters:
                     map:
                         title: Main Map
                         class: Mapbender\CoreBundle\Element\Map
-                        layerset: main
+                        layersets: [main]
                         srs: EPSG:25832
                         units: m
                         extents:
@@ -438,7 +438,7 @@ parameters:
                     map:
                         title: Main Map
                         class: Mapbender\CoreBundle\Element\Map
-                        layerset: main
+                        layersets: [main]
                         srs: EPSG:25832
                         units: m
                         extents:

@@ -83,18 +83,16 @@ fom_user:
 
 # OWSProxy Configuration
 ows_proxy3_core:
-    logging: true
-    obfuscate_client_ip: true
+    logging: %ows_proxy3_logging%
+    obfuscate_client_ip: %ows_proxy3_obfuscate_client_ip%
     proxy:
-#        host: localhost
-#        port: 8888
-        connecttimeout: 60
-        timeout: 90
-#        user: user
-#        password: password
-#        noproxy:
-#            - host_a
-#            - host_b
+        host: %ows_proxy3_host%
+        port: %ows_proxy3_port%
+        connecttimeout: %ows_proxy3_connecttimeout%
+        timeout: %ows_proxy3_timeout%
+        user: %ows_proxy3_user%
+        password: %ows_proxy3_password%
+        noproxy: %ows_proxy3_noproxy%
 
 # Mapbender Configuration
 mapbender_core: ~
