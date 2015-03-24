@@ -5,25 +5,14 @@ services:
 
 parameters:
     featureTypes:
-        ortsteile:
-            connection: geom
-            table: ortsteile_copy
-            uniqueId: id
-            geomField: geom
-            fields: [bezirk,name]
-#            srid: 31467
-#            originSrid: 31467
-
-        addresses:
-            connection: geom
-            table: flurstueck
-            uniqueId: id
-            geomField: geom
-            fields: [buchungsblattbezirk,nummer,buchungsblatt,gemarkung]
-#            srid: 31467
-
-
-
+        ausstattung:
+            connection: digi
+            table: verkehr.ausstattung
+            uniqueId: oid
+            geomType: point
+            geomField: the_geom
+            srid: 31466
+            fields: [ausst_bem,ausst_jahr]
     applications:
         mapbender_user:
             title: Mapbender Demo Map
@@ -743,29 +732,17 @@ parameters:
                         target: map
                         schemes:
                             table1:
-                                label: Tabelle mit Punkten
-                                featureType: ortsteile
-                                # temp
-                                connection: digi
-                                table: verkehr.ausstattung
-                                geomColumn: the_geom
-#                                srid: 31466
+                                label: Ausstattung
+                                featureType: ausstattung
                                 geomType: point
-                                # field definition
-                                fields: ss
                             table2:
-                                featureType: ortsteile
                                 label: Tabelle mit Linien
-                                featureType: tabelle2
-                                #temp geomtype
+                                featureType: ausstattung
                                 geomType: line
-                                fields: ss
                             table3:
                                 label: Tabelle mit Polygonen
-                                featureType: ortsteile
-                                #temp geomtype
+                                featureType: ausstattung
                                 geomType: polygon
-                                fields: ss
                 footer:
                     activityindicator:
                         class: Mapbender\CoreBundle\Element\ActivityIndicator
