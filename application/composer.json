@@ -32,7 +32,9 @@
         "doctrine/doctrine-fixtures-bundle": "dev-master",
         "toooni/fpdf": "dev-master",
         "arsgeografica/signing": "1.1.*",
-        "imag/ldap-bundle":  "dev-master"
+        "imag/ldap-bundle":  "dev-master",
+        "eslider/sasscb":  "dev-master",
+        "gedmo/doctrine-extensions": "~2.3"
     },
     "scripts": {
         "post-install-cmd": [
@@ -55,5 +57,19 @@
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web"
+    },
+  "repositories": [
+    {
+      "type": "package",
+      "package": {
+        "name": "eslider/sasscb",
+        "version":"dev-master",
+        "source": {
+          "url": "https://github.com/eSlider/sassc-binaries.git",
+          "type": "git",
+          "reference":"develop"
+        }
+      }
     }
+  ]
 }
