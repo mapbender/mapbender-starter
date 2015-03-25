@@ -54,14 +54,14 @@ doctrine:
                 logging: false
                 profiling: false
 
-            geom:
-                driver:   %database_geom_driver%
-                host:     %database_geom_host%
-                port:     %database_geom_port%
-                dbname:   %database_geom_name%
-                path:     %database_geom_path%
-                user:     %database_geom_user%
-                password: %database_geom_password%
+            digi:
+                driver:   %database_digi_driver%
+                host:     %database_digi_host%
+                port:     %database_digi_port%
+                dbname:   %database_digi_name%
+                path:     %database_digi_path%
+                user:     %database_digi_user%
+                password: %database_digi_password%
                 charset:  UTF8
                 logging: false
                 profiling: false

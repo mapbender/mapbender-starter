@@ -13,6 +13,14 @@ parameters:
             geomField: the_geom
             srid: 31466
             fields: [ausst_bem,ausst_jahr]
+        ausstattung2:
+            connection: digi
+            table: verkehr.ausstattung
+            uniqueId: oid
+            geomType: polygon
+            geomField: the_geom
+            srid: 31466
+            fields: [ausst_bem,ausst_jahr]
     applications:
         mapbender_user:
             title: Mapbender Demo Map
