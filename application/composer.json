@@ -33,7 +33,8 @@
         "toooni/fpdf": "dev-master",
         "arsgeografica/signing": "1.1.*",
         "imag/ldap-bundle":  "dev-master",
-        "phayes/geophp": "dev-master"
+        "phayes/geophp": "dev-master",
+        "bmatzner/underscore-bundle": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [
