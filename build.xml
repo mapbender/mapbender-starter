@@ -224,9 +224,7 @@
 
     <target name="prepare" depends="deps,doc">
         <delete dir="application/web/assets/.dev-cache"/>
-        <exec command="application/app/console assets:install application/web/" />
-        <exec command="application/app/console assetic:dump --env=dev" />
-        <exec command="application/app/console mapbender:assets:dump --env=prod" />
+        <exec command="application/app/console assets:install --symlink --relative application/web/" />
         <exec command="application/app/console doctrine:database:drop --force" />
         <exec command="application/app/console doctrine:database:create" />
         <exec command="application/app/console doctrine:schema:create" />
@@ -290,11 +288,13 @@
 
 
     <target name="submoduleupdate">
+        <exec command="git submodule sync" checkreturn="true" passthru="true" />
         <exec command="git submodule foreach 'git pull || :'" />
     </target>
 
     <target name="update" >
         <exec command="git pull" checkreturn="true" passthru="true" />
+        <exec command="git submodule sync" checkreturn="true" passthru="true" />
         <exec command="git submodule update --init --recursive" checkreturn="true" passthru="true" />
         <phing target="deps" />
     </target>
