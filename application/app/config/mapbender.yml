@@ -8,11 +8,11 @@ parameters:
         ausstattung:
             connection: digi
             table: verkehr.ausstattung
-            uniqueId: oid
+            uniqueId: ausst_id
             geomType: point
             geomField: the_geom
             srid: 31466
-            fields: [ausst_bem,ausst_jahr]
+            fields: [ausst_id,ausst_bem,ausst_jahr]
         ausstattung2:
             connection: digi
             table: verkehr.ausstattung
@@ -741,16 +741,33 @@ parameters:
                         schemes:
                             table1:
                                 label: Ausstattung
-                                featureType: ausstattung
+                                featureType: 
+                                    connection: digi
+                                    table: verkehr.ausstattung
+                                    uniqueId: ausst_id
+                                    geomType: point
+                                    geomField: the_geom
+                                    srid: 31466
+                                    fields: [ausst_id,ausst_bem,ausst_jahr]
                                 geomType: point
+                                tableFields:
+                                    ausst_id:
+                                        label: Id
+                                    ausst_bem:
+                                        label: Bemerkung
                             table2:
                                 label: Tabelle mit Linien
                                 featureType: ausstattung
                                 geomType: line
-                            table3:
-                                label: Tabelle mit Polygonen
-                                featureType: ausstattung
-                                geomType: polygon
+                                tableFields:
+                                    ausst_id:
+                                        label: Id
+                                    ausst_bem:
+                                        label: Bemerkung
+#                            table3:
+#                                label: Tabelle mit Polygonen
+#                                featureType: ausstattung
+#                                geomType: polygon
                 footer:
                     activityindicator:
                         class: Mapbender\CoreBundle\Element\ActivityIndicator
