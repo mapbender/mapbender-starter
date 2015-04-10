@@ -740,34 +740,80 @@ parameters:
                         target: map
                         schemes:
                             table1:
-                                label: Ausstattung
+                                label: Tabelle mit Punkten
                                 featureType: 
+#                                    connection: digi
+#                                    table: verkehr.ausstattung
+#                                    uniqueId: oid
+#                                    geomType: point
+#                                    geomField: the_geom
+#                                    srid: 31466
+#                                    fields: [ausst_id,ausst_bem,ausst_jahr]
                                     connection: digi
-                                    table: verkehr.ausstattung
-                                    uniqueId: ausst_id
+                                    table: punkte
+                                    uniqueId: id
                                     geomType: point
-                                    geomField: the_geom
-                                    srid: 31466
-                                    fields: [ausst_id,ausst_bem,ausst_jahr]
-                                geomType: point
+                                    geomField: geom
+                                    srid: 25832
+                                    fields: [titel,bemerkung,feld1,feld2]
                                 tableFields:
-                                    ausst_id:
+                                    id:
                                         label: Id
-                                    ausst_bem:
-                                        label: Bemerkung
+                                    titel:
+                                        label: Titel
+                                formItems:
+                                    - type: form
+                                      items:
+                                          - type: input
+                                            text: Titel
+                                            name: titel
+                                          - type: input
+                                            text: Bemerkung
+                                            name: bemerkung
+#                                formItems:
+#                                     - type: tabs
+#                                       items:
+#                                           - type: form
+#                                             title: Tab 1
+#                                             items:
+#                                                 - type: input
+#                                                   text: Bemerkung
+#                                                   name: ausst_bem
+#                                                   placeholder: deine Bemerkung
+#                                                 - type: input
+#                                                   text: Pflanzjahr
+#                                                   name: ausst_jahr
+#
+#                                           - type: form
+#                                             title: Tab 2
+#                                             items:
+#                                                 - type: input
+#                                                   text: ausst_id
+#                                                   name: ausst_id
                             table2:
                                 label: Tabelle mit Linien
-                                featureType: ausstattung
-                                geomType: line
+                                featureType: 
+                                    connection: digi
+                                    table: linien
+                                    uniqueId: id
+                                    geomType: line
+                                    geomField: geom
+                                    srid: 25832
+                                    fields: [id,titel,bemerkung,feld1,feld2]
                                 tableFields:
-                                    ausst_id:
+                                    id:
                                         label: Id
-                                    ausst_bem:
-                                        label: Bemerkung
-#                            table3:
-#                                label: Tabelle mit Polygonen
-#                                featureType: ausstattung
-#                                geomType: polygon
+                                    titel:
+                                        label: Titel
+                                formItems:
+                                    - type: form
+                                      items:
+                                          - type: input
+                                            text: Titel
+                                            name: titel
+                                          - type: input
+                                            text: Bemerkung
+                                            name: bemerkung
                 footer:
                     activityindicator:
                         class: Mapbender\CoreBundle\Element\ActivityIndicator
