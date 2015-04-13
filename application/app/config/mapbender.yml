@@ -739,23 +739,63 @@ parameters:
                         title: Digitalisierung
                         target: map
                         schemes:
+                            ausstattung:
+                                label: Ausstattung
+                                featureType: 
+                                    connection: digi
+                                    table: verkehr.ausstattung
+                                    uniqueId: oid
+                                    geomType: point
+                                    geomField: the_geom
+                                    srid: 31466
+                                    fields: [ausst_id,ausst_bem,ausst_jahr,totholz,pilzbefall,ausst_merkmal_1,schadensmerkmal_id]
+                                openFormAfterEdit: true
+                                tableFields:
+                                    oid:
+                                        label: Id
+                                    ausst_bem:
+                                        label: Bemerkung
+                                formItems:
+                                     - type: tabs
+                                       items:
+                                           - type: form
+                                             title: Kontrolle
+                                             items:
+                                                 - type: select
+                                                   text: Schadensmerkmal
+                                                   name: schadensmerkmal_id
+                                                   options:  ['klein','mittel', 'groß']
+                                                 - type: input
+                                                   text: Bemerkung
+                                                   name: ausst_bem
+                                                 - type: input
+                                                   text: Pflanzjahr
+                                                   name: ausst_jahr
+                                                 - type:  checkbox
+                                                   name:  totholz
+                                                   value: false
+                                                   text: Totholz
+                                                 - type:  checkbox
+                                                   name:  pilzbefall
+                                                   value: false
+                                                   text: Pilzbefall
+                                           - type: form
+                                             title: Stammdaten
+                                             items:
+                                                 - type: input
+                                                   text: Pflanzgröße
+                                                   name: ausst_merkmal_1
+                                                   
                             table1:
                                 label: Tabelle mit Punkten
                                 featureType: 
-#                                    connection: digi
-#                                    table: verkehr.ausstattung
-#                                    uniqueId: oid
-#                                    geomType: point
-#                                    geomField: the_geom
-#                                    srid: 31466
-#                                    fields: [ausst_id,ausst_bem,ausst_jahr]
-                                    connection: digi
+                                    connection: digi2
                                     table: punkte
                                     uniqueId: id
                                     geomType: point
                                     geomField: geom
                                     srid: 25832
-                                    fields: [titel,bemerkung,feld1,feld2]
+                                    fields: [id,titel,bemerkung,feld1,feld2]
                                 tableFields:
                                     id:
                                         label: Id
@@ -770,30 +810,10 @@ parameters:
                                           - type: input
                                             text: Bemerkung
                                             name: bemerkung
-#                                formItems:
-#                                     - type: tabs
-#                                       items:
-#                                           - type: form
-#                                             title: Tab 1
-#                                             items:
-#                                                 - type: input
-#                                                   text: Bemerkung
-#                                                   name: ausst_bem
-#                                                   placeholder: deine Bemerkung
-#                                                 - type: input
-#                                                   text: Pflanzjahr
-#                                                   name: ausst_jahr
-#
-#                                           - type: form
-#                                             title: Tab 2
-#                                             items:
-#                                                 - type: input
-#                                                   text: ausst_id
-#                                                   name: ausst_id
                             table2:
                                 label: Tabelle mit Linien
                                 featureType: 
-                                    connection: digi
+                                    connection: digi2
                                     table: linien
                                     uniqueId: id
                                     geomType: line
