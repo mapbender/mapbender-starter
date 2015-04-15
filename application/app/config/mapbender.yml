@@ -1111,10 +1111,9 @@ parameters:
                                            - type: form
                                              title: Kontrolle
                                              items:
-                                                 - type: textArea
+                                                 - type: input
                                                    text: Info
                                                    name: info
-                                                   rows: 4
                                                  - type: select
                                                    text: Baumart
                                                    name: a_id
