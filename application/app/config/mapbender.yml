@@ -1360,7 +1360,7 @@ parameters:
                                                    name: info
                                            - type: form
                                              title: Pflege
-                                             items:
+                                             children:
                                                  - type: select
                                                    text: Vitalität
                                                    name: schadensmerkmal_id
@@ -1425,7 +1425,7 @@ parameters:
                                                        3: 3 - Erledigung ohne Zeitvorgabe
                                            - type: form
                                              title: Stammdaten
-                                             items:
+                                             children:
                                                  - type: select
                                                    text: Beetsicherung
                                                    name: beetsicherung_id
@@ -1503,7 +1503,7 @@ parameters:
                                         label: Titel
                                 formItems:
                                     - type: form
-                                      items:
+                                      children:
                                           - type: input
                                             text: Titel
                                             name: titel
@@ -1527,7 +1527,7 @@ parameters:
                                         label: Titel
                                 formItems:
                                     - type: form
-                                      items:
+                                      children:
                                           - type: input
                                             text: Titel
                                             name: titel
