@@ -1051,7 +1051,8 @@ parameters:
                                     geomType: point
                                     geomField: the_geom
                                     srid: 31466
-                                    fields: 
+                                    uploadPath: /data/wesseling/
+                                    fields:
                                         - ausst_id
                                         - obj_id
                                         - ug_id
@@ -1111,9 +1112,6 @@ parameters:
                                            - type: form
                                              title: Kontrolle
                                              items:
-                                                 - type: input
-                                                   text: Info
-                                                   name: info
                                                  - type: select
                                                    text: Baumart
                                                    name: a_id
@@ -1339,22 +1337,27 @@ parameters:
                                                        2001: 2001
                                                  - type: select
                                                    text: Untergrund
+                                                   sql: SELECT ug_id, ug_bez  FROM verkehr.untergrund
+                                                   connection: digi
                                                    name: ug_id
-                                                   options:
-                                                       8: Betonbaumscheibe
-                                                       4: Bodendecker
-                                                       9: Gußeiserne Baumscheibe
-                                                       11: Kies
-                                                       7: Ãko-Pflaster
-                                                       2: Oberboden
-                                                       5: Rasen
-                                                       6: Rasengittersteine
-                                                       3: Rindenmulch
-                                                       10: Tennendecke
-                                                       1: UNBEKANNT
+#                                                   options:
+#                                                       8: Betonbaumscheibe
+#                                                       4: Bodendecker
+#                                                       9: Gußeiserne Baumscheibe
+#                                                       11: Kies
+#                                                       7: Ãko-Pflaster
+#                                                       2: Oberboden
+#                                                       5: Rasen
+#                                                       6: Rasengittersteine
+#                                                       3: Rindenmulch
+#                                                       10: Tennendecke
+#                                                       1: UNBEKANNT
                                                  - type: input
                                                    text: Pflanzgröße (STU)
                                                    name: ausst_merkmal_1
+                                                 - type: textArea
+                                                   text: Info
+                                                   name: info
                                            - type: form
                                              title: Pflege
                                              items:
@@ -1479,7 +1482,8 @@ parameters:
                                                  - type: input
                                                    text: Baumscheibe Größe
                                                    name: ausst_merkmal_2
-                                                 - type: input
+                                                 - type: file
+                                                   formats: ['jpg', 'png']
                                                    text: Bild
                                                    name: bild
                             table1:
