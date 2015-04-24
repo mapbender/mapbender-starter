@@ -31,7 +31,7 @@ parameters:
             geomType: point
             geomField: the_geom
             srid: 31466
-            sqlFilter: ausst_zustand = 1 AND kontrollintervall_stufe = 'A'
+            filter: ausst_zustand = 1 AND kontrollintervall_stufe = 'A'
             uploadPath: /data/wesseling/
 
     applications:
@@ -1103,11 +1103,8 @@ parameters:
                                                          title: Zustand
                                                          name: ausst_zustand
                                                          css: {width: 70%}
-                                                         options:
-                                                             1: vorhanden
-                                                             0: entfernt - Neupflanzung
-                                                             2: entfernt - Standort aufgeben
-
+                                                         connection: digi
+                                                         sql: SELECT ausst_zustand_id, ausst_zustand_text FROM verkehr.ausstattung_zustand
 
                                                  - type: select
                                                    title: Kontrollintervall Stufe
