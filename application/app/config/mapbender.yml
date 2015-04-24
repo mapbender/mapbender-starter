@@ -769,12 +769,12 @@ parameters:
                                         label: Bemerkung
                                 formItems:
                                      - type: tabs
-                                       items:
+                                       children:
                                            - type: form
                                              title: Kontrolle
-                                             items:
+                                             children:
                                                  - type: select
-                                                   text: Schadensmerkmal
+                                                   title: Schadensmerkmal
                                                    name: schadensmerkmal_id
                                                    options: { 10: klein, 20: mittel, 30: groß }
 #                                                   options:
@@ -782,24 +782,24 @@ parameters:
 #                                                       20: mittel
 #                                                       30: groß
                                                  - type: input
-                                                   text: Bemerkung
+                                                   title: Bemerkung
                                                    name: ausst_bem
                                                  - type: input
-                                                   text: Pflanzjahr
+                                                   title: Pflanzjahr
                                                    name: ausst_jahr
                                                  - type:  checkbox
                                                    name:  totholz
                                                    value: false
-                                                   text: Totholz
+                                                   title: Totholz
                                                  - type:  checkbox
                                                    name:  pilzbefall
                                                    value: false
-                                                   text: Pilzbefall
+                                                   title: Pilzbefall
                                            - type: form
                                              title: Stammdaten
-                                             items:
+                                             children:
                                                  - type: input
-                                                   text: Pflanzgröße
+                                                   title: Pflanzgröße
                                                    name: ausst_merkmal_1
                                                    
                             table1:
@@ -819,12 +819,12 @@ parameters:
                                         label: Titel
                                 formItems:
                                     - type: form
-                                      items:
+                                      children:
                                           - type: input
-                                            text: Titel
+                                            title: Titel
                                             name: titel
                                           - type: input
-                                            text: Bemerkung
+                                            title: Bemerkung
                                             name: bemerkung
                             table2:
                                 label: Tabelle mit Linien
@@ -843,12 +843,12 @@ parameters:
                                         label: Titel
                                 formItems:
                                     - type: form
-                                      items:
+                                      children:
                                           - type: input
-                                            text: Titel
+                                            title: Titel
                                             name: titel
                                           - type: input
-                                            text: Bemerkung
+                                            title: Bemerkung
                                             name: bemerkung
                 footer:
                     activityindicator:
@@ -1108,195 +1108,44 @@ parameters:
                                         label: Info
                                 formItems:
                                      - type: tabs
-                                       items:
+                                       children:
                                            - type: form
                                              title: Kontrolle
-                                             items:
+                                             children:
+
                                                  - type: select
-                                                   text: Baumart
+                                                   title: Baumart
                                                    name: a_id
-                                                   options:
-                                                       1: ACER CAMPESTRE(FELDAHORN)
-                                                       2: ACER CAMPESTRE 'ELSRIK'(FELD-AHORN)
-                                                       3: ACER PLATANOIDES(SPITZ-AHORN)
-                                                       4: ACER PLAT. 'COLUMNARE'(SPITZ-AHORN)
-                                                       5: ACER PLAT. 'EMERALD QUEEN'(SPITZ-AHORN)
-                                                       6: ACER PLAT. 'FAASSEN'S BLACK'(SCHWARZ-AHORN)
-                                                       7: ACER PLAT. 'GLOBUSUM'(KUGEL-AHORN)
-                                                       8: ACER PLAT. 'SCHWEDLERI'(BLUT-AHORN)
-                                                       9: ACER PLAT. 'SUMMERSHADE'(SPITZ-AHORN)
-                                                       10: ACER PSEUDOPLATANUS(BERG-AHORN)
-                                                       11: ACER PSEUDO. 'ERECTUM'(BERG-AHORN)
-                                                       12: ACER PSEUDO. 'ROTTERDAMM'(BERG-AHORN)
-                                                       13: ACER SACCHARINUM(SILBER-AHORN)
-                                                       14: ACER SACCH. 'PYRAMIDALIS'(SILBER-AHORN)
-                                                       15: ACER SACCH. 'WIERI'(SILBER-AHORN)
-                                                       16: AESCULUS CARNEA(ROTE ROßKASTANIE)
-                                                       17: AESCULUS CARNEA 'BRIOTII'(ROTE ROßKASTANIE)
-                                                       18: AESCULUS HIPPOCASTANUM(ROßKASTANIE)
-                                                       19: AESCULUS HIPPO. 'BAUMANNII'(ROßKASTANIE)
-                                                       20: AILANTHUS ALTISSIMA(GÃTTERBAUM)
-                                                       21: ALNUS CORDATA(ERLE)
-                                                       22: ALNUS GLUTINOSA(ROT-ERLE)
-                                                       23: ALNUS INCANA(GRAU-ERLE)
-                                                       24: BETULA PENDULA(SAND-BIRKE)
-                                                       25: BETULA(BIRKE)
-                                                       26: CARPINUS BETULUS(HAINBUCHE)
-                                                       27: CARPINUS BET. 'FASTIGIATA'(SÃULEN-HAINBUCHE)
-                                                       28: CATALPA BIGNOIDES(TROMPETENBAUM)
-                                                       29: CORYLUS COLURNA(BAUMHASEL)
-                                                       30: CRATAEGUS 'CARRIEREI'(APFEL-DORN)
-                                                       31: CRATAEGUS COCCINEA(SCHARLACH-DORN)
-                                                       32: CRATAEGUS CRUS-GALLI(HAHNEN-DORN)
-                                                       33: CRATAEGUS 'PAUL'S SCARLET'(ROT-DORN)
-                                                       34: CRATAEGUS MONOGYNA(WEIß-DORN)
-                                                       35: CRATAEGUS MONOGYNA 'STRICTA'(SÃULEN-WEIßDORN)
-                                                       36: CRATAEGUS 'TOPA'(DORN)
-                                                       37: FAGUS SILVATICA(ROT-BUCHE)
-                                                       38: FAGUS SIV. 'ATROPUNICEA'(VEREDELTE BLUT-BUCHE)
-                                                       39: FAGUS SIV. PURPUREA(BLUT-BUCHE)
-                                                       40: FRAXINUS ANG. 'RAYWOOD'(ESCHE)
-                                                       41: FRAXINUS EXELSIOR(ESCHE)
-                                                       42: FRAXINUS EX. 'ALTHENA'(ESCHE)
-                                                       43: FRAXINUS EX. 'ATLAS'(ESCHE)
-                                                       44: FRAXINUS EX. 'DIVERSIFOLIA'(EINBLÃTTRIGE ESCHE)
-                                                       45: FRAXINUS EX. 'GEESINK'(ESCHE)
-                                                       46: FRAXINUS EX. 'GLOBUSUM'(KUGEL-ESCHE)
-                                                       47: FRAXINUS EX. 'WESTHOF'S GLORI.(ESCHE)
-                                                       48: FRAXINUS ORNUS(BLUMEN-ESCHE)
-                                                       49: FRAXINUS ORNUS 'ROTTERDAM'(BLUMEN-ESCHE)
-                                                       50: GLEDITSIA TRIACANTHOS(GLEDITSCHIE)
-                                                       51: GLEDITSIA TR. 'INERMIS'(GLEDITSCHIE)
-                                                       52: GLEDITSIA TR. 'SHADEMASTER'(GLEDITSCHIE)
-                                                       53: GLEDITSIA TR. 'SKYLINE'(GLEDITSCHIE)
-                                                       54: LIQUIDAMBAR STYRACIFLUA(AMBERBAUM)
-                                                       55: LIRIODENDRON TULIPIFERA(TULPENBAUM)
-                                                       56: MAGNOLIA KOBUS(MAGNOLIE)
-                                                       57: MALUS FLORIBUNDA(ZIERAPFEL)
-                                                       58: MALUS JOHN DOWNIE(ZIERAPFEL)
-                                                       59: MALUS TSCHONOSKY(ZIERAPFEL)
-                                                       60: PAULOWNIA TOMENTOSA(BLAUGLOCKENBAUM)
-                                                       61: PLATANUS ACERIFOLIA(PLATANE)
-                                                       62: POPULUS ALBA 'NIVEA'(PAPPEL)
-                                                       63: POPULUS BALSAMIFERA(BALSAM-PAPPEL)
-                                                       64: POPULUS BEROLINENIS(LORBEER-PAPPEL)
-                                                       65: POPULUS CANESCENS(GRAU-PAPPEL)
-                                                       66: POPULUS NIGRA 'ITALICA'(SÃULEN-PAPPEL)
-                                                       67: POPULUS SIMONII(BIRKEN-PAPPEL)
-                                                       68: POPULUS SIM. 'FASTIGIATA'(SÃULEN-BIRKEN-PAPPEL)
-                                                       69: POPULUS TREMULA(ZITTER-PAPPEL)
-                                                       70: PRUNUS AVIUM(VOGEL-KIRSCHE)
-                                                       71: PRUNUS AVIUM 'PLENA'(VOGEL-KIRSCHE)
-                                                       72: PRUNUS CERASIFERA 'NIGRA'(BLUT-PFLAUME)
-                                                       73: PRUNUS PADUS(TRAUBEN-KIRSCHE)
-                                                       74: PRUNUS SEROTINA(SPÃTE TRAUBEN-KIRSCHE)
-                                                       75: PRUNUS 'AMANOGAWA'(ZIERKIRSCHE)
-                                                       76: PRUNUS 'KANZAN'(ZIERKIRSCHE)
-                                                       77: PRUNUS SCHMITTII(ZIERKIRSCHE)
-                                                       78: PRUNUS SCHNEE(ZIERKIRSCHE)
-                                                       79: PRUNUS SPIRE(ZIERKIRSCHE)
-                                                       80: PTEROCARYA FRAXINIFOLIA(FLÃGELNUß)
-                                                       81: PYRUS CALLERYANA 'CHANTICLEER'(WILDBIRNE)
-                                                       82: PYRUS CANESCENS(WILDBIRNE)
-                                                       83: PYRUS CAUCASICA(WILDBIRNE)
-                                                       84: PYRUS COMMUNIS(WILDBIRNE)
-                                                       85: PYRUS COMMUNIS 'BEECH HILL'(WILDBIRNE)
-                                                       86: QUERCUS PALUSTRIS(SUMPF-EICHE)
-                                                       87: QUERCUS PETRAEA(TRAUBEN-EICHE)
-                                                       88: QUERCUS 'PSEUDOTURNERI(WINTERGRÃNE EICHE)
-                                                       89: QUERCUS ROBUR(STIEL-EICHE)
-                                                       90: QUERCUS ROBUR 'FASTIGIATA'(SÃULEN-EICHE)
-                                                       91: QUERCUS RUBRA(ROT-EICHE)
-                                                       92: ROBINIA PSEUDOACACIA(SCHEINAKAZIE)
-                                                       93: ROBINIA 'UMBRACULIFERA'(KUGEL-AKAZIE)
-                                                       94: SALIX ALBA(SILBER-WEIDE)
-                                                       95: SALIX ALBA 'TRISTIS'(TRAUER-WEIDE)
-                                                       96: SOPHORA JAPONICA(SCHNURBAUM)
-                                                       97: SORBUS AMERICANA(EBERESCHE)
-                                                       98: SORBUS ARIA 'LUTESCENS'(MEHLBEERE)
-                                                       99: SORBUS ARIA 'MAGNIFICA'(MEHLBEERE)
-                                                       100: SORBUS ARIA 'MAJESTICA'(MEHLBEERE)
-                                                       101: SORBUS AUCUPARIA(VOGELBEERE)
-                                                       102: SORBUS AUC. 'FASTIGIATA'(SÃULEN-VOGELBEERE)
-                                                       103: SORBUS AUC. EDULIS(EßBARE EBERESCHE)
-                                                       104: SORBUS AUC. 'ROSSICA MAJOR'(VOGELBEERE)
-                                                       105: SORBUS AUC. 'SHEEWATER'(VOGELBEERE)
-                                                       106: SORBUS DOMESTICA(SPEIERLING)
-                                                       107: SORBUS HYR. 'GIBBSII'(VOGELBEERE)
-                                                       108: SORBUS INTERMEDIA(OXALBEERE)
-                                                       109: SORBUS THUR. 'FASTIGIATA'(SÃULEN-EBERESCHE)
-                                                       110: SORBUS TORMINALIS(ELSBEERE)
-                                                       111: TILIA AMERICANA 'NOVA'(LINDE)
-                                                       112: TILIA CORDATA(WINTER-LINDE)
-                                                       113: TILIA CORDATA 'ERECTA'(WINTER-LINDE)
-                                                       114: TILIA CORDATA 'RANCHO'(WINTER-LINDE)
-                                                       115: TILIA EUCHLORA(KRIM-LINDE)
-                                                       116: TILIA 'GLENLEVEN'(LINDE)
-                                                       117: TILIA 'GREENSPIRE'(STADT-LINDE)
-                                                       118: TILIA INTERMEDIA(LINDE)
-                                                       119: TILIA 'PALLIDA'(KAISER-LINDE)
-                                                       120: TILIA PLATYPHYLLOS(SOMMER-LINDE)
-                                                       121: TILIA TOMENTOSA(SILBER-LINDE)
-                                                       122: TILIA TOMENTOSA 'BARBANT'(SILBER-LINDE)
-                                                       123: ULMUS GLABRA(BERG-ULME)
-                                                       124: unbekannt(unbekannt)
-                                                       125: Prunus serrulata Shirofugen(Zierkirsche)
-                                                       126: Betula utilis(Himalayabirke)
-                                                       127: Cercis siliquastrum(judasbaum)
-                                                       128: Ginkgo biloba(Gingko)
-                                                       129: Gleditsia triacanthos Sunburst(gold Akazie)
-                                                       130: Acer rubrum(Ahorn)
-                                                       131: Prunus ser. Accolade(zierkirsche)
-                                                       132: Amelanchier arborea Robin Hill(Felsenbirne )
-                                                       133: Prunus fruticosa Globosa(Kugelsteppenkirsche)
-                                                       134: Pinus leucodermis(Schlangenhautkiefer)
-                                                       135: Pinus nigra(Schwarzkiefer)
-                                                       136: Robinia Pseudoacacia Fastigiata(Säulen Rubinie)
-                                                       137: Prunus subhirtela Fukubana(winterblühende Kirsche)
-                                                       138: Juglans regia(Walnuss)
-                                                       139: Salix matsudana 'Tortusa'(Korkenzieher-Weide)
-                                                       140: Prunus 'unbekante Sorte'(Zierkirche 'unbekannte Sorte')
-                                                       141: Thuja occidentalis(Lebensbaum)
-                                                       142: Sambucus nigra(Holunder)
-                                                       143: Picea abies(Rot-Fichte)
-                                                       144: Picea omorika(Serbische Fichte)
-                                                       145: Taxus baccata(Eibe)
-                                                       146: Corylus avellana 'Contorta'(Korkenzieher-Weide)
-                                                       147: Acer negundo(Eschen-Ahorn)
-                                                       148: Cedrus atlantica 'Glauca'(Blau-Zeder)
-                                                       149: Malus 'unbekannte Sorte'(Apfelbaum x )
-                                                       150: Salix Hybride(Hybridweide)
-                                                       161: Larix decidua(Lärche)
-                                                       162: Larix decidua(Lärche)
-                                                       163: Larix decidua(Lärche)
-                                                       168: Salix caprea(Sel-Weide)
-                                                       169: Quercus cerris(Zerr- Eiche)
-                                                       170: Sequoiadendron giganteum(Mammutbaum)
-                                                       171: Pinus sylvestris(Waldkiefer)
-                                                       172: Abies alba(Weiß-Tanne)
-                                                       173: Castanea sativa(Edelkastanie)
-                                                       174: Castanea sativa(Esskastanie)
-                                                       175: Tilia europaea pallida(Keiserlinde)
-                                                       176: Nootkatensis Pendula(Nutka-Zypresse)
-                                                       177: Frangula alnus(Faulbaum)
-                                                       178: Prunus lusitanica(Schmalblättrige Lorbeerkirsche)
-                                                       182: aaa(aaa)
-                                                       183: Mischwald(Mischwald)
-                                                       184: Tsuga canadensis(Hemlocktanne)
-                                                       185: Tilia mongolica(Mongolische
+                                                   connection: digi
+                                                   sql: SELECT a_id, a_lat_bez || ' (' || a_deu_bez || ')' FROM "verkehr"."artikel" ORDER BY a_lat_bez ASC
+
                                                  - type: input
-                                                   text: Standort Bemerkung
+                                                   title: Standort Bemerkung
                                                    mandatory: true
                                                    name: bemerkungen_standort
+
+                                                 - type: breakLine
+
+                                                 - type: fieldSet
+                                                   breakLine: true
+                                                   children:
+                                                       - type: date
+                                                         title: Letzte Kontrolle
+                                                         name: letzte_kontrolle_datum
+                                                         css: {width: 30%}
+
+                                                       - type: select
+                                                         title: Zustand
+                                                         name: ausst_zustand
+                                                         css: {width: 70%}
+                                                         options:
+                                                             1: vorhanden
+                                                             0: entfernt - Neupflanzung
+                                                             2: entfernt - Standort aufgeben
+
+
                                                  - type: select
-                                                   text: Zustand
-                                                   name: ausst_zustand
-                                                   options:
-                                                       1: vorhanden
-                                                       0: entfernt - Neupflanzung
-                                                       2: entfernt - Standort aufgeben
-                                                 - type: select
-                                                   text: Kontrollintervall Stufe
+                                                   title: Kontrollintervall Stufe
                                                    name: kontrollintervall_stufe
                                                    options:
                                                        A: A - Problembäume mit umfangreichen Schäden - halbjährlich
@@ -1304,120 +1153,103 @@ parameters:
                                                        C: C - Bäume (ab 15. Jahr nach Pflanzung) überwiegend ohne Schäden - 2 Jahre
                                                        D: D - Jungbäume (bis 15. Jahr nach Pflanzung - Pflegekontrolle
                                                        E: E - Bäume, die aufgrund besonderer Umstände, zu einem bestimmten Zeitpunkt kontrolliert werden müssen - anlassbezogen
-                                                 - type: input
-                                                   text: Datum letzte Kontrolle
-                                                   name: letzte_kontrolle_datum
-                                                 - type: input
-                                                   text: Bestandsaufnahme Bemerkung
+
+
+
+                                                 - type: textArea
+                                                   title: Bestandsaufnahme Bemerkung
                                                    # Check if input is a number
                                                    mandatory: /^[0-9]+$/
                                                    mandatoryText: Bitte die Zahl Eingeben!
                                                    #mandatory: true #/[a-z]{3}/g
                                                    name: letzte_kontrolle_bestandsaufnahme_bemerkung
-                                                 - type: select
-                                                   text: Pflanzjahr
-                                                   name: ausst_jahr
-                                                   options:
-                                                       2015: 2015
-                                                       2015: 2015
-                                                       2015: 2015
-                                                       2014: 2014
-                                                       2013: 2013
-                                                       2012: 2012
-                                                       2011: 2011
-                                                       2010: 2010
-                                                       2009: 2009
-                                                       2008: 2008
-                                                       2007: 2007
-                                                       2006: 2006
-                                                       2005: 2005
-                                                       2004: 2004
-                                                       2003: 2003
-                                                       2002: 2002
-                                                       2001: 2001
-                                                 - type: select
-                                                   text: Untergrund
-                                                   sql: SELECT ug_id, ug_bez  FROM verkehr.untergrund
-                                                   connection: digi
-                                                   name: ug_id
-#                                                   options:
-#                                                       8: Betonbaumscheibe
-#                                                       4: Bodendecker
-#                                                       9: Gußeiserne Baumscheibe
-#                                                       11: Kies
-#                                                       7: Ãko-Pflaster
-#                                                       2: Oberboden
-#                                                       5: Rasen
-#                                                       6: Rasengittersteine
-#                                                       3: Rindenmulch
-#                                                       10: Tennendecke
-#                                                       1: UNBEKANNT
-                                                 - type: input
-                                                   text: Pflanzgröße (STU)
-                                                   name: ausst_merkmal_1
+
+                                                 - type: fieldSet
+                                                   children:
+                                                       - type: date
+                                                         title: Pflanzjahr
+                                                         name: ausst_jahr
+                                                         dateFormat: yy
+                                                         css: {width: 30%}
+
+                                                       - type: select
+                                                         title: Untergrund
+                                                         name: ug_id
+                                                         sql: SELECT ug_id, ug_bez  FROM verkehr.untergrund
+                                                         connection: digi
+                                                         css: {width: 35%}
+
+                                                       - type: input
+                                                         title: Pflanzgröße (STU)
+                                                         name: ausst_merkmal_1
+                                                         css: {width: 35%}
+
                                                  - type: textArea
-                                                   text: Info
+                                                   title: Info
                                                    name: info
                                            - type: form
                                              title: Pflege
                                              children:
-                                                 - type: select
-                                                   text: Vitalität
-                                                   name: schadensmerkmal_id
-                                                   options:
-                                                       8: Betonbaumscheibe
-                                                       0: ohne Schadensmerkmal
-                                                       1: schwach geschädigt
-                                                       2: mittelstark geschädigt
-                                                       3: stark geschädigt
-                                                       4: abgestorben
-                                                 - type: checkbox
-                                                   text: Totholz
-                                                   name: totholz
-                                                   value: Totholz
-                                                   checked: false
-                                                 - type: checkbox
-                                                   text: Lichtraumprofil
-                                                   name: lichtraumprofil
-                                                   value: Lichtraumprofil
-                                                   checked: false
-                                                 - type: checkbox
-                                                   text: Pilzbefall
-                                                   name: pilzbefall
-                                                   value: Pilzbefall
-                                                   checked: false
-                                                 - type: checkbox
-                                                   text: Insektenbefall
-                                                   name: insektenbefall
-                                                   value: Insektenbefall
-                                                   checked: false
-                                                 - type: checkbox
-                                                   text: Beschädigung am Stamm
-                                                   name: beschaedigung_stamm
-                                                   value: Beschädigung am Stamm
-                                                   checked: false
-                                                 - type: checkbox
-                                                   text: Beschädigung an der Wurzel
-                                                   name: beschaedigung_wurzel
-                                                   value: Beschädigung an der Wurzel
-                                                   checked: false
-                                                 - type: select
-                                                   text: Resultat
-                                                   name: letzte_kontrolle_resultat
-                                                   options:
-                                                       entfernen / fällen: entfernen / fällen
-                                                       keine Maßnahme: keine Maßnahme
-                                                       externe Prüfung durchführen: externe Prüfung durchführen
-                                                       Standsicherheitsprüfung: Standsicherheitsprüfung
-                                                       Pflegemaßnahme: Pflegemaßnahme                                  
-                                                 - type: input
-                                                   text: Resultat Bemerkung
+                                                 - type: fieldSet
+                                                   children:
+                                                       - type: select
+                                                         title: Vitalität
+                                                         name: schadensmerkmal_id
+                                                         options:
+                                                             8: Betonbaumscheibe
+                                                             0: ohne Schadensmerkmal
+                                                             1: schwach geschädigt
+                                                             2: mittelstark geschädigt
+                                                             3: stark geschädigt
+                                                             4: abgestorben
+                                                         css: {width: 50%}
+                                                       - type: select
+                                                         title: Resultat
+                                                         name: letzte_kontrolle_resultat
+                                                         options:
+                                                             entfernen / fällen: entfernen / fällen
+                                                             keine Maßnahme: keine Maßnahme
+                                                             externe Prüfung durchführen: externe Prüfung durchführen
+                                                             Standsicherheitsprüfung: Standsicherheitsprüfung
+                                                             Pflegemaßnahme: Pflegemaßnahme
+                                                         css: {width: 50%}
+                                                 - type: breakLine
+                                                 - type: fieldSet
+                                                   children:
+                                                       - type: checkbox
+                                                         title: Totholz
+                                                         name: totholz
+                                                         value: Totholz
+                                                       - type: checkbox
+                                                         title: Lichtraumprofil
+                                                         name: lichtraumprofil
+                                                         value: Lichtraumprofil
+                                                       - type: checkbox
+                                                         title: Pilzbefall
+                                                         name: pilzbefall
+                                                         value: Pilzbefall
+                                                       - type: checkbox
+                                                         title: Insektenbefall
+                                                         name: insektenbefall
+                                                         value: Insektenbefall
+                                                       - type: checkbox
+                                                         title: Beschädigung am Stamm
+                                                         name: beschaedigung_stamm
+                                                         value: Beschädigung am Stamm
+                                                       - type: checkbox
+                                                         title: Beschädigung an der Wurzel
+                                                         name: beschaedigung_wurzel
+                                                         value: Beschädigung an der
+
+                                                 - type: breakLine
+                                                 - type: textArea
+                                                   title: Resultat Bemerkung
                                                    name: letzte_kontrolle_resultat_bemerkung
                                                  - type: input
-                                                   text: Bewirtschaftung
+                                                   title: Bewirtschaftung
                                                    name: bewirtschaftung
                                                  - type: select
-                                                   text: Maßnahme Dringlichkeit
+                                                   title: Maßnahme Dringlichkeit
                                                    name: dringlichkeit_massnahme
                                                    options:
                                                        1: 1 - Erledigung innerhalb von 14 Tagen
@@ -1427,7 +1259,7 @@ parameters:
                                              title: Stammdaten
                                              children:
                                                  - type: select
-                                                   text: Beetsicherung
+                                                   title: Beetsicherung
                                                    name: beetsicherung_id
                                                    options:
                                                        1: keine Angabe                                   
@@ -1436,55 +1268,23 @@ parameters:
                                                        4: Holzpoller                                   
                                                        5: Findling
                                                  - type: select
-                                                   text: Bilanzkonto
+                                                   title: Bilanzkonto
                                                    name: bilanzkonto_id
-                                                   options:
-                                                       220010: Ackerland Berzdorf (220010)
-                                                       220020: Ackerland Keldenich (220020)
-                                                       220030: Ackerland Urfeld (220030)
-                                                       220040: Ackerland Wesseling (220040)
-                                                       390000: Betriebsgebäude (390000)
-                                                       990000: EBW - Betriebsgebäude (990000)
-                                                       210000: öffentl.Grünflächen allgemein (210000)
-                                                       210010: öffentl.Grünflächen Berzdorf (210010)
-                                                       210020: öffentl.Grünflächen Keldenich (210020)
-                                                       210030: öffentl.Grünflächen Urfeld (210030)
-                                                       210040: öffentl.Grünflächen Wesseling (210040)
-                                                       210500: Friedhöfe (210500)
-                                                       410000: Infrastruktur allgemein (410000)
-                                                       410010: Infrastruktur Berzdorf (410010)
-                                                       410020: Infrastruktur Keldenich (410020)
-                                                       410040: Infrastruktur Wesseling (410040)
-                                                       410030: Inftrastruktur Urfeld (410030)
-                                                       310000: Kindertageseinrichtungen (310000)
-                                                       905100: Kindertageseinrichtungen (SV) (905100)
-                                                       904210: Kultur - Betriebsgebäude (904210)
-                                                       904220: Kultur - Wohnungen (904220)
-                                                       210015: priv.Grünflächen Berzdorf (210015)
-                                                       210025: priv.Grünflächen Keldenich (210025)
-                                                       210035: priv.Grünflächen Urfeld (210035)
-                                                       210045: priv.Grünflächen Wesseling (210045)
-                                                       320000: Schule (320000)
-                                                       240010: sonst.Grundstücke Berzdorf (240010)
-                                                       240020: sonst.Grundstücke Keldenich (240020)
-                                                       240030: sonst.Grundstücke Urfeld (240030)
-                                                       240040: sonst.Grundstücke Wesseling (240040)
-                                                       210100: Spielplätze (210100)
-                                                       904110: Sport - Mehrzweckhalle (904110)
-                                                       904130: Sport - Schwimmbad (904130)
-                                                       904120: Sport - Sportplatz (904120)
-                                                       950000: SWW - Betriebsgebäude (950000)
-                                                       906700: Wald- und Parkanlagen (906700)
-                                                       330000: Wohnungen (330000)
-                                                 - type: input
-                                                   text: Preis
-                                                   name: ausst_preis
-                                                 - type: input
-                                                   text: Baumscheibe Größe
-                                                   name: ausst_merkmal_2
+                                                   sql: SELECT bilanzkonto, produkt || ' (' || bilanzkonto || ')'  FROM verkehr.bilanzkonto ORDER BY produkt ASC
+                                                   connection: digi
+                                                 - type: fieldSet
+                                                   children:
+                                                       - type: input
+                                                         title: Preis
+                                                         name: ausst_preis
+                                                         css: {width: 40%}
+                                                       - type: input
+                                                         title: Baumscheibe Größe
+                                                         name: ausst_merkmal_2
+                                                         css: {width: 60%}
                                                  - type: file
                                                    formats: ['jpg', 'png']
-                                                   text: Bild
+                                                   title: Bild
                                                    name: bild
                             table1:
                                 label: Tabelle mit Punkten
@@ -1505,10 +1305,10 @@ parameters:
                                     - type: form
                                       children:
                                           - type: input
-                                            text: Titel
+                                            title: Titel
                                             name: titel
                                           - type: input
-                                            text: Bemerkung
+                                            title: Bemerkung
                                             name: bemerkung
                             table2:
                                 label: Tabelle mit Linien
@@ -1529,10 +1329,10 @@ parameters:
                                     - type: form
                                       children:
                                           - type: input
-                                            text: Titel
+                                            title: Titel
                                             name: titel
                                           - type: input
-                                            text: Bemerkung
+                                            title: Bemerkung
                                             name: bemerkung
                 footer:
                     activityindicator:
