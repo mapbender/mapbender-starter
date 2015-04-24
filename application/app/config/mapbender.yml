@@ -5,6 +5,7 @@ services:
 
 parameters:
     featureTypes:
+
         ausstattung:
             connection: digi
             table: verkehr.ausstattung
@@ -12,7 +13,8 @@ parameters:
             geomType: point
             geomField: the_geom
             srid: 31466
-            fields: [ausst_id,ausst_bem,ausst_jahr]
+            #fields: [ausst_id,ausst_bem,ausst_jahr]
+
         ausstattung2:
             connection: digi
             table: verkehr.ausstattung
@@ -21,17 +23,27 @@ parameters:
             geomField: the_geom
             srid: 31466
             fields: [ausst_bem,ausst_jahr]
+
+        baumkataster:
+            connection: digi
+            table: verkehr.ausstattung
+            uniqueId: ausst_id
+            geomType: point
+            geomField: the_geom
+            srid: 31466
+            sqlFilter: ausst_zustand = 1 AND kontrollintervall_stufe = 'A'
+            uploadPath: /data/wesseling/
+
     applications:
         mapbender_user:
             title: Mapbender Demo Map
-            screenshot: 'mapbender_user.png'
-            description: "Fullscreen style, Simple map showing WMS use."
+            screenshot: mapbender_user.png
+            description: Fullscreen style, Simple map showing WMS use.
             published: true
             template:  Mapbender\CoreBundle\Template\Fullscreen
             regionProperties: 
-                -
-                    name: sidepane
-                    properties: {"name": "accordion", "label": "mb.manager.template.region.accordion.label"}
+                - name: sidepane
+                  properties: {name: accordion, label: mb.manager.template.region.accordion.label}
             layersets:
                 main:
                     mapbender_users:
@@ -1044,60 +1056,13 @@ parameters:
                         schemes:
                             ausstattung:
                                 label: Baumkataster
-                                featureType: 
-                                    connection: digi
-                                    table: verkehr.ausstattung
-                                    uniqueId: ausst_id
-                                    geomType: point
-                                    geomField: the_geom
-                                    srid: 31466
-                                    uploadPath: /data/wesseling/
-                                    fields:
-                                        - ausst_id
-                                        - obj_id
-                                        - ug_id
-                                        - a_id
-                                        - ausst_jahr
-                                        - ausst_preis
-                                        - ausst_bem
-                                        - kontrolle
-                                        - ausst_zustand
-                                        - ausst_merkmal_1
-                                        - ausst_merkmal_2
-                                        - z_id
-                                        - status_id
-                                        - bild
-                                        - detail
-                                        - bilanzkonto_id
-                                        - beetsicherung_id
-                                        - habitus_id
-                                        - frequenz_id
-                                        - schadensmerkmal_id
-                                        - erfassungsdatum
-                                        - bemerkungen_standort
-                                        - letzte_kontrolle_datum
-                                        - letzte_kontrolle_bestandsaufnahme
-                                        - letzte_kontrolle_bestandsaufnahme_bemerkung
-                                        - letzte_kontrolle_resultat
-                                        - letzte_kontrolle_resultat_bemerkung
-                                        - totholz
-                                        - lichtraumprofil
-                                        - pilzbefall
-                                        - insektenbefall
-                                        - beschaedigung_stamm
-                                        - beschaedigung_wurzel
-                                        - info
-                                        - bearbeiter
-                                        - bewirtschaftung
-                                        - kontrollintervall_stufe
-                                        - dringlichkeit_massnahme
-                                        - naechste_kontrolle_datum
+                                featureType: baumkataster
                                 openFormAfterEdit: true
                                 popup: 
-                                    # Options description: 
+                                    # Options description:
                                     # http://api.jqueryui.com/dialog/
                                     title: Baumkataster
-                                    height: 400
+#                                    height: 607px
                                     width: 500
                                     # modal: true
                                     # position: {at: "left+20px",  my: "left top-460px"}
@@ -1214,28 +1179,35 @@ parameters:
                                                              Pflegemaßnahme: Pflegemaßnahme
                                                          css: {width: 50%}
                                                  - type: breakLine
+
                                                  - type: fieldSet
                                                    children:
+
                                                        - type: checkbox
                                                          title: Totholz
                                                          name: totholz
                                                          value: Totholz
+
                                                        - type: checkbox
                                                          title: Lichtraumprofil
                                                          name: lichtraumprofil
                                                          value: Lichtraumprofil
+
                                                        - type: checkbox
                                                          title: Pilzbefall
                                                          name: pilzbefall
                                                          value: Pilzbefall
+
                                                        - type: checkbox
                                                          title: Insektenbefall
                                                          name: insektenbefall
                                                          value: Insektenbefall
+
                                                        - type: checkbox
                                                          title: Beschädigung am Stamm
                                                          name: beschaedigung_stamm
                                                          value: Beschädigung am Stamm
+
                                                        - type: checkbox
                                                          title: Beschädigung an der Wurzel
                                                          name: beschaedigung_wurzel
