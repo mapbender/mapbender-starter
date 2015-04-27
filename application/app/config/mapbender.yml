@@ -1088,21 +1088,21 @@ parameters:
                                                    title: Standort Bemerkung
                                                    mandatory: true
                                                    name: bemerkungen_standort
+                                                   mandatoryText: Bitte geben sie die Bemerkung ein!
 
                                                  - type: breakLine
 
                                                  - type: fieldSet
-                                                   breakLine: true
                                                    children:
                                                        - type: date
                                                          title: Letzte Kontrolle
                                                          name: letzte_kontrolle_datum
-                                                         css: {width: 30%}
+                                                         css: {width: 25%}
 
                                                        - type: select
                                                          title: Zustand
                                                          name: ausst_zustand
-                                                         css: {width: 70%}
+                                                         css: {width: 75%}
                                                          connection: digi
                                                          sql: SELECT ausst_zustand_id, ausst_zustand_text FROM verkehr.ausstattung_zustand
 
