@@ -1255,54 +1255,54 @@ parameters:
                                                    formats: ['jpg', 'png']
                                                    title: Bild
                                                    name: bild
-                            table1:
-                                label: Tabelle mit Punkten
-                                featureType: 
-                                    connection: digi2
-                                    table: punkte
-                                    uniqueId: id
-                                    geomType: point
-                                    geomField: geom
-                                    srid: 25832
-                                    fields: [id,titel,bemerkung,feld1,feld2]
-                                tableFields:
-                                    id:
-                                        label: Id
-                                    titel:
-                                        label: Titel
-                                formItems:
-                                    - type: form
-                                      children:
-                                          - type: input
-                                            title: Titel
-                                            name: titel
-                                          - type: input
-                                            title: Bemerkung
-                                            name: bemerkung
-                            table2:
-                                label: Tabelle mit Linien
-                                featureType: 
-                                    connection: digi2
-                                    table: linien
-                                    uniqueId: id
-                                    geomType: line
-                                    geomField: geom
-                                    srid: 25832
-                                    fields: [id,titel,bemerkung,feld1,feld2]
-                                tableFields:
-                                    id:
-                                        label: Id
-                                    titel:
-                                        label: Titel
-                                formItems:
-                                    - type: form
-                                      children:
-                                          - type: input
-                                            title: Titel
-                                            name: titel
-                                          - type: input
-                                            title: Bemerkung
-                                            name: bemerkung
+#                            table1:
+#                                label: Tabelle mit Punkten
+#                                featureType:
+#                                    connection: digi2
+#                                    table: punkte
+#                                    uniqueId: id
+#                                    geomType: point
+#                                    geomField: geom
+#                                    srid: 25832
+#                                    fields: [id,titel,bemerkung,feld1,feld2]
+#                                tableFields:
+#                                    id:
+#                                        label: Id
+#                                    titel:
+#                                        label: Titel
+#                                formItems:
+#                                    - type: form
+#                                      children:
+#                                          - type: input
+#                                            title: Titel
+#                                            name: titel
+#                                          - type: input
+#                                            title: Bemerkung
+#                                            name: bemerkung
+#                            table2:
+#                                label: Tabelle mit Linien
+#                                featureType:
+#                                    connection: digi2
+#                                    table: linien
+#                                    uniqueId: id
+#                                    geomType: line
+#                                    geomField: geom
+#                                    srid: 25832
+#                                    fields: [id,titel,bemerkung,feld1,feld2]
+#                                tableFields:
+#                                    id:
+#                                        label: Id
+#                                    titel:
+#                                        label: Titel
+#                                formItems:
+#                                    - type: form
+#                                      children:
+#                                          - type: input
+#                                            title: Titel
+#                                            name: titel
+#                                          - type: input
+#                                            title: Bemerkung
+#                                            name: bemerkung
                 footer:
                     activityindicator:
                         class: Mapbender\CoreBundle\Element\ActivityIndicator
