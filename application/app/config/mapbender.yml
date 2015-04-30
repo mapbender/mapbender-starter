@@ -1121,9 +1121,10 @@ parameters:
                                                  - type: textArea
                                                    title: Bestandsaufnahme Bemerkung
                                                    # Check if input is a number
-                                                   mandatory: /^[0-9]+$/
-                                                   mandatoryText: Bitte die Zahl Eingeben!
+#                                                   mandatory: /^[0-9]+$/
+#                                                   mandatoryText: Bitte die Zahl Eingeben!
                                                    #mandatory: true #/[a-z]{3}/g
+                                                   mandatory: true
                                                    name: letzte_kontrolle_bestandsaufnahme_bemerkung
 
                                                  - type: fieldSet
