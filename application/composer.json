@@ -37,7 +37,8 @@
         "viscreation/vis-ui.js": "dev-master",
         "bmatzner/underscore-bundle": "dev-master",
         "igosuki/compass-mixins": "*",
-        "eslider/sasscb": "*"
+        "eslider/sasscb": "*",
+        "fontfacekit/open-sans": "*"
     },
     "scripts": {
         "post-install-cmd": [
@@ -109,8 +110,30 @@
                 "type": "component",
                 "version": "0.12.6",
                 "dist": {
-                    "url": "https://github.com/Igosuki/compass-mixins/archive/v0.12.6.zip",
+                    "url": "http://github.com/Igosuki/compass-mixins/archive/v0.12.6.zip",
                     "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "fontfacekit/open-sans",
+                "type": "component",
+                "version": "1.4.0",
+                "dist": {
+                    "url": "http://github.com/FontFaceKit/open-sans/archive/1.4.0.zip",
+                    "type": "zip"
+                },
+                "extra": {
+                    "component": {
+                        "styles": [
+                            "*.css"
+                        ],
+                        "files": [
+                            "fonts/*/*"
+                        ]
+                    }
                 }
             }
         }
