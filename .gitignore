@@ -34,3 +34,6 @@ application/bin/*
 
 # IDEA Project Files
 .idea/
+
+# Composer asset components
+application/web/components/

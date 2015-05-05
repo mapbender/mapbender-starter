@@ -34,6 +34,7 @@
         "arsgeografica/signing": "1.1.*",
         "imag/ldap-bundle":  "dev-master",
         "phayes/geophp": "dev-master",
+        "viscreation/vis-ui.js": "dev-master",
         "bmatzner/underscore-bundle": "dev-master"
     },
     "scripts": {
@@ -51,12 +52,53 @@
         ]
     },
     "config": {
-        "bin-dir": "bin"
+        "bin-dir": "bin",
+        "component-dir": "web/components",
+        "component-baseurl": "/components"
     },
     "minimum-stability": "stable",
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
         "symfony-assets-install": "symlink"
-    }
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "components/placeholdersjs",
+                "type": "component",
+                "version": "4.0.1",
+                "dist": {
+                    "url": "http://github.com/jamesallardice/Placeholders.js/archive/v4.0.1.zip",
+                    "type": "zip"
+                },
+                "extra": {
+                    "component": {
+                        "scripts": [
+                            "dist/placeholders.min.js",
+                            "dist/placeholders.jquery.min.js"
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "components/jquerydialogextendjs",
+                "type": "component",
+                "version": "2.0.4",
+                "dist": {
+                    "url": "http://github.com/ROMB/jquery-dialogextend/archive/2.0.4.zip",
+                    "type": "zip"
+                },
+                "extra": {
+                    "component": {
+                        "scripts": ["build/*.min.js"]
+                    }
+                }
+            }
+        }
+    ]
 }
