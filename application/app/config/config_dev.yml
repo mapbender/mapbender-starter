@@ -19,15 +19,14 @@ monolog:
             type:  firephp
             level: info
 
-assetic:
-    use_controller: %sass_assets%
-    filters:
-        cssrewrite: ~
-        sass: ~
-        compass:
-            style: compressed
-            load_paths:
-                 - "%kernel.root_dir%/../mapbender/src/Mapbender/CoreBundle/Resources/public/sass"
+#assetic:
+#    use_controller: %sass_assets%
+#    filters:
+#        cssrewrite: ~
+#        compass:
+#            style: compressed
+#            load_paths:
+#                 - "%kernel.root_dir%/../mapbender/src/Mapbender/CoreBundle/Resources/public/sass"
 
-mapbender_core:
-    sass_assets: %sass_assets%
+#mapbender_core:
+#    sass_assets: %sass_assets%

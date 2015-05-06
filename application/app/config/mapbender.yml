@@ -61,14 +61,14 @@ parameters:
                         tooltip: Layertree
                         class: Mapbender\CoreBundle\Element\Button
                         label: true
-                        icon: iconLayertree
+                        icon: icon-layer-tree
                         target: layertreedialog
                         action: open
                     fi-button:
                         title: Feature Info
                         tooltip: Feature Info
                         class: Mapbender\CoreBundle\Element\Button
-                        icon: iconInfoActive
+                        icon: icon-feature-info
                         label: true
                         target: featureinfo
                         deactivate: deactivate
@@ -86,7 +86,7 @@ parameters:
                         tooltip: Image Export
                         class: Mapbender\CoreBundle\Element\Button
                         label: true
-                        icon: iconImageExport
+                        icon: icon-image-export
                         target: imageexport
                         action: open
                     legend-button:
@@ -94,7 +94,7 @@ parameters:
                         tooltip: Legend
                         class: Mapbender\CoreBundle\Element\Button
                         target: legend
-                        icon: iconLegend
+                        icon: icon-legend
                         action: open
                     wmsloader-button:
                         title: WMS Loader
@@ -114,7 +114,7 @@ parameters:
                         title: Line Ruler
                         tooltip: Line Ruler
                         class: Mapbender\CoreBundle\Element\Button
-                        icon: iconAreaRuler
+                        icon: icon-line-ruler
                         label: true
                         target: lineruler
                         deactivate: deactivate
@@ -123,7 +123,7 @@ parameters:
                         title: Area Ruler
                         tooltip: Area Ruler
                         class: Mapbender\CoreBundle\Element\Button
-                        icon: iconAreaRuler
+                        icon: icon-area-ruler
                         label: true
                         target: arearuler
                         deactivate: deactivate
@@ -132,6 +132,7 @@ parameters:
                         title: About
                         tooltip: About
                         label: true
+                        icon: icon-about
                         class: Mapbender\CoreBundle\Element\AboutDialog
                     poiButton:
                         title: POI
@@ -144,7 +145,7 @@ parameters:
                     map:
                         title: Main Map
                         class: Mapbender\CoreBundle\Element\Map
-                        layerset: main
+                        layersets: [main]
                         srs: EPSG:25832
                         units: m
                         extents:
@@ -370,14 +371,14 @@ parameters:
                         tooltip: Layertree
                         class: Mapbender\CoreBundle\Element\Button
                         label: false
-                        icon: iconLayertree
+                        icon: icon-layer-tree
                         target: layertreedialog
                         action: open
                     fi-button:
                         title: Feature Info
                         tooltip: Feature Info
                         class: Mapbender\CoreBundle\Element\Button
-                        icon: iconInfoActive
+                        icon: icon-feature-info
                         label: false
                         target: featureinfo
                         deactivate: deactivate
@@ -396,7 +397,7 @@ parameters:
                         class: Mapbender\CoreBundle\Element\Button
                         label: false
                         target: legend
-                        icon: iconLegend
+                        icon: icon-legend
                         action: open
                     wmsloader-button:
                         title: WMS Loader
@@ -417,26 +418,27 @@ parameters:
                         title: Line Ruler
                         tooltip: Line Ruler
                         class: Mapbender\CoreBundle\Element\Button
-                        icon: iconAreaRuler
+                        icon: icon-line-ruler
                         label: false
                         target: lineruler
                     arearulerButton:
                         title: Area Ruler
                         tooltip: Area Ruler
                         class: Mapbender\CoreBundle\Element\Button
-                        icon: iconAreaRuler
+                        icon: icon-area-ruler
                         label: false
                         target: arearuler
                     about:
                         title: About
                         tooltip: About
+                        icon: icon-about
                         label: false
                         class: Mapbender\CoreBundle\Element\AboutDialog
                 content:
                     map:
                         title: Main Map
                         class: Mapbender\CoreBundle\Element\Map
-                        layerset: main
+                        layersets: [main]
                         srs: EPSG:25832
                         units: m
                         extents:

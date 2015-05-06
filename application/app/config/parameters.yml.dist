@@ -26,8 +26,13 @@ parameters:
     cookie_secure: false
     cookie_lifetime: 3600
 
-    # activate sass_assets and define the compass_path, ruby_path, if you want to work with compass and edit sass files
-    # if not leave sass_assets: false
-    sass_assets: false
-    compass_path: ~
-    ruby_path: ~
+# OWSProxy Configuration
+    ows_proxy3_logging: false
+    ows_proxy3_obfuscate_client_ip: true
+    ows_proxy3_host: ~
+    ows_proxy3_port: ~
+    ows_proxy3_connecttimeout: 60
+    ows_proxy3_timeout: 90
+    ows_proxy3_user: ~
+    ows_proxy3_password: ~
+    ows_proxy3_noproxy: ~
