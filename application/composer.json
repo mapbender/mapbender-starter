@@ -33,6 +33,12 @@
         "toooni/fpdf": "dev-master",
         "arsgeografica/signing": "1.1.*",
         "imag/ldap-bundle":  "dev-master"
+        "phayes/geophp": "dev-master",
+        "viscreation/vis-ui.js": "dev-master",
+        "bmatzner/underscore-bundle": "dev-master",
+        "igosuki/compass-mixins": "*",
+        "eslider/sasscb": "*",
+        "fontfacekit/open-sans": "*"
     },
     "scripts": {
         "post-install-cmd": [
@@ -49,11 +55,87 @@
         ]
     },
     "config": {
-        "bin-dir": "bin"
+        "bin-dir": "bin",
+        "component-dir": "web/components",
+        "component-baseurl": "/components"
     },
     "minimum-stability": "stable",
     "extra": {
         "symfony-app-dir": "app",
-        "symfony-web-dir": "web"
-    }
+        "symfony-web-dir": "web",
+        "symfony-assets-install": "symlink"
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "components/placeholdersjs",
+                "type": "component",
+                "version": "4.0.1",
+                "dist": {
+                    "url": "http://github.com/jamesallardice/Placeholders.js/archive/v4.0.1.zip",
+                    "type": "zip"
+                },
+                "extra": {
+                    "component": {
+                        "scripts": [
+                            "dist/placeholders.min.js",
+                            "dist/placeholders.jquery.min.js"
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "components/jquerydialogextendjs",
+                "type": "component",
+                "version": "2.0.4",
+                "dist": {
+                    "url": "http://github.com/ROMB/jquery-dialogextend/archive/2.0.4.zip",
+                    "type": "zip"
+                },
+                "extra": {
+                    "component": {
+                        "scripts": ["build/*.min.js"]
+                    }
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "igosuki/compass-mixins",
+                "type": "component",
+                "version": "0.12.6",
+                "dist": {
+                    "url": "http://github.com/Igosuki/compass-mixins/archive/v0.12.6.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "fontfacekit/open-sans",
+                "type": "component",
+                "version": "1.4.0",
+                "dist": {
+                    "url": "http://github.com/FontFaceKit/open-sans/archive/1.4.0.zip",
+                    "type": "zip"
+                },
+                "extra": {
+                    "component": {
+                        "styles": [
+                            "*.css"
+                        ],
+                        "files": [
+                            "fonts/*/*"
+                        ]
+                    }
+                }
+            }
+        }
+    ]
 }
