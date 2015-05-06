@@ -1,12 +1,12 @@
 [submodule "application/mapbender"]
 	path = application/mapbender
-	url = http://github.com/mapbender/mapbender.git
+	url = https://github.com/mapbender/mapbender.git
 [submodule "documentation/_exts"]
 	path = documentation/_exts
-	url = http://github.com/fabpot/sphinx-php.git
+	url = https://github.com/fabpot/sphinx-php.git
 [submodule "application/fom"]
 	path = application/fom
-	url = http://github.com/mapbender/fom.git
+	url = https://github.com/mapbender/fom.git
 [submodule "application/owsproxy"]
 	path = application/owsproxy
-	url = http://github.com/mapbender/owsproxy3.git
+	url = https://github.com/mapbender/owsproxy3.git
