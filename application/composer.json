@@ -32,7 +32,6 @@
         "doctrine/doctrine-fixtures-bundle": "dev-master",
         "toooni/fpdf": "dev-master",
         "arsgeografica/signing": "1.1.*",
-        "imag/ldap-bundle":  "dev-master",
         "phayes/geophp": "dev-master",
         "viscreation/vis-ui.js": "dev-master",
         "bmatzner/underscore-bundle": "dev-master",
@@ -40,6 +39,9 @@
         "fontfacekit/open-sans": "*",
         "eslider/sasscb":  "dev-master",
         "gedmo/doctrine-extensions": "~2.3"
+    },
+    "suggest": {
+        "imag/ldap-bundle":  "dev-master"
     },
     "scripts": {
         "post-install-cmd": [
