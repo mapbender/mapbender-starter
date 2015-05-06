@@ -38,7 +38,8 @@
         "bmatzner/underscore-bundle": "dev-master",
         "igosuki/compass-mixins": "*",
         "eslider/sasscb": "*",
-        "fontfacekit/open-sans": "*"
+        "fontfacekit/open-sans": "*",
+        "mapbender/icons": "*"
     },
     "scripts": {
         "post-install-cmd": [
