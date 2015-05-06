@@ -1,7 +1,7 @@
 <?php
 
-use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
+use Symfony\Component\HttpKernel\Kernel;
 
 class AppKernel extends Kernel
 {
@@ -23,9 +23,6 @@ class AppKernel extends Kernel
 
             // Extra bundles required by Mapbender3/OWSProxy3
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
-
-            // JavaScript extra bundles
-            new Bmatzner\UnderscoreBundle\BmatznerUnderscoreBundle(),
 
             // FoM bundles
             new FOM\CoreBundle\FOMCoreBundle(),
