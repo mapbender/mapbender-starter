@@ -37,7 +37,6 @@
         "viscreation/vis-ui.js": "dev-master",
         "bmatzner/underscore-bundle": "dev-master",
         "igosuki/compass-mixins": "*",
-        "eslider/sasscb": "*",
         "fontfacekit/open-sans": "*",
         "eslider/sasscb":  "dev-master",
         "gedmo/doctrine-extensions": "~2.3"
