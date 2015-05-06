@@ -4,6 +4,9 @@
     "autoload": {
         "psr-0": { "": "src/" }
     },
+    "provide": {
+        "ext-ldap": "*"
+    },
     "require-dev": {
         "satooshi/php-coveralls": "dev-master",
         "phpunit/phpunit-selenium": ">=1.2",
@@ -38,9 +41,7 @@
         "igosuki/compass-mixins": "*",
         "fontfacekit/open-sans": "*",
         "eslider/sasscb":  "dev-master",
-        "gedmo/doctrine-extensions": "~2.3"
-    },
-    "suggest": {
+        "gedmo/doctrine-extensions": "~2.3",
         "imag/ldap-bundle":  "dev-master"
     },
     "scripts": {
