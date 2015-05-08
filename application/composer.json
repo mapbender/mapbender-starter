@@ -26,7 +26,6 @@
         "sensio/framework-extra-bundle": "2.3.*",
         "sensio/generator-bundle": "2.3.*",
         "incenteev/composer-parameter-handler": "~2.0",
-
         "jms/security-extra-bundle": "1.5.*",
         "jms/di-extra-bundle": "1.4.*",
 
@@ -37,12 +36,13 @@
         "arsgeografica/signing": "1.1.*",
         "phayes/geophp": "dev-master",
         "viscreation/vis-ui.js": "dev-master",
-        "bmatzner/underscore-bundle": "dev-master",
         "igosuki/compass-mixins": "*",
         "fontfacekit/open-sans": "*",
         "eslider/sasscb":  "dev-master",
         "gedmo/doctrine-extensions": "~2.3",
-        "imag/ldap-bundle":  "dev-master"
+        "imag/ldap-bundle":  "dev-master",
+        "mapbender/mapbender-icons": "dev-master",
+        "components/underscore": "1.*"
     },
     "scripts": {
         "post-install-cmd": [
