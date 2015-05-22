@@ -12,7 +12,7 @@ parameters:
     mailer_user:       ~
     mailer_password:   ~
 
-    # locale en, de, it, es, ru, nl are available
+    # locale en, de, it, es, ru, nl, pt are available
     fallback_locale:   en
     locale:            en
     secret:            ThisTokenIsNotSoSecretChangeIt
