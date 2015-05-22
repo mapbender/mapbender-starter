@@ -728,7 +728,7 @@ parameters:
 
                     featureinfo:
                         class: Mapbender\CoreBundle\Element\FeatureInfo
-                        title: FeatureInfo
+                        title: Information
                         target: map
                         type: element
                         deactivateOnClose: false
