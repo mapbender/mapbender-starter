@@ -365,6 +365,7 @@ parameters:
                         format: image/png
                         transparent: true
                         visible: true
+                        opacity: 100
             elements:
                 toolbar:
                     layertree-button:
