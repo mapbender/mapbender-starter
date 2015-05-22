@@ -42,7 +42,8 @@
         "gedmo/doctrine-extensions": "~2.3",
         "imag/ldap-bundle":  "dev-master",
         "mapbender/mapbender-icons": "dev-master",
-        "components/underscore": "1.*"
+        "components/underscore": "1.*",
+        "components/joii": "*"
     },
     "scripts": {
         "post-install-cmd": [
@@ -150,6 +151,28 @@
                     "url": "https://github.com/eSlider/sassc-binaries.git",
                     "type": "git",
                     "reference":"develop"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "components/joii",
+                "type": "component",
+                "version": "3.1.1",
+                "source": {
+                    "url": "https://github.com/haroldiedema/joii.git",
+                    "type": "git",
+                    "reference": "master"
+                },
+                "extra": {
+                    "component": {
+                        "scripts": ["dist/joii.min.js"],
+                        "files": ["dist/joii.js"]
+                    }
+                },
+                "require": {
+                    "robloach/component-installer": "*"
                 }
             }
         }
