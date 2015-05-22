@@ -750,6 +750,7 @@ parameters:
 
                     basesourceswitcher:
                         title: Change Background
+                        tooltip: Change Background
                         class: Mapbender\CoreBundle\Element\BaseSourceSwitcher
                         target: map
                         display: mobile
