@@ -240,7 +240,7 @@ parameters:
                         displaytype: tree
                         useAccordion: false
                         autoOpen: false
-                        titleMaxLength: 20
+                        titlemaxlength: 30
                         showBaseSource: true
                         layerRemove: false
                         menu: []
@@ -277,7 +277,7 @@ parameters:
                         displaytype: tree
                         useAccordion: false
                         autoOpen: false
-                        titleMaxLength: 20
+                        titlemaxlength: 30
                         showBaseSource: true
                         layerRemove: true
                         menu: [opacity,zoomtolayer,metadata]
@@ -534,7 +534,7 @@ parameters:
                         displaytype: tree
                         useAccordion: false
                         autoOpen: false
-                        titleMaxLength: 20
+                        titlemaxlength: 20
                         showBaseSource: true
                         showHeader: false
                         layerMenu: false
@@ -613,7 +613,7 @@ parameters:
                         transparent: true
                         tiled: false
                         opacity: 100
-                        basesource: false
+                        isBaseSource: false
                     osm:
                         class: Mapbender\WmsBundle\Entity\WmsInstance
                         title: OSM Demo
@@ -626,7 +626,7 @@ parameters:
                         transparent: true
                         tiled: true
                         opacity: 100
-                        basesource: true
+                        isBaseSource: true
                     osm_2:
                         class: Mapbender\WmsBundle\Entity\WmsInstance
                         title: OSM Demo (with Opacity)
@@ -639,7 +639,7 @@ parameters:
                         transparent: true
                         tiled: false
                         opacity: 30
-                        basesource: true
+                        isBaseSource: true
             elements:
                 footer:
                     # buttons parameters: action,activate,deactivate are ignored for elements at mobilePane
@@ -721,7 +721,7 @@ parameters:
                         displaytype: tree
                         useAccordion: false
                         autoOpen: false
-                        titleMaxLength: 160
+                        titlemaxlength: 100
                         showBaseSource: true
                         layerRemove: false
                         menu: []
