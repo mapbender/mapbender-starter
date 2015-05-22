@@ -593,9 +593,9 @@ parameters:
                         classes: html-element-inline
 
         mapbender_mobile:
-            title: 'Mapbender Mobile Application'
+            title: Mapbender mobile
             screenshot: 'mapbender_mobile.png'
-            description: "Mobile style, Simple map showing WMS use."
+            description: "Mapbender mobile Application"
             published: true
             template:  'Mapbender\MobileBundle\Template\Mobile'
             layersets:
@@ -612,7 +612,8 @@ parameters:
                         format: image/png
                         transparent: true
                         tiled: false
-                        opacity: 85
+                        opacity: 100
+                        basesource: false
                     osm:
                         class: Mapbender\WmsBundle\Entity\WmsInstance
                         title: OSM Demo
@@ -625,36 +626,34 @@ parameters:
                         transparent: true
                         tiled: true
                         opacity: 100
+                        basesource: true
+                    osm_2:
+                        class: Mapbender\WmsBundle\Entity\WmsInstance
+                        title: OSM Demo (with Opacity)
+                        url: http://osm-demo.wheregroup.com/service
+                        layers:
+                            30: { name: osm,    title : Germany OSM Demo WhereGroup,  visible: true }
+                        info_format: text/html
+                        visible: true
+                        format: image/png
+                        transparent: true
+                        tiled: false
+                        opacity: 30
+                        basesource: true
             elements:
                 footer:
                     # buttons parameters: action,activate,deactivate are ignored for elements at mobilePane
                     layertree-button:
-                        title: Layertree
-                        tooltip: Layertree
+                        title: Themes
+                        tooltip: Themes
                         class: Mapbender\CoreBundle\Element\Button
                         label: false
                         icon: iconLayertree
                         target: layertree
 
-                    copyright-button:
-                        title: Copyright
-                        tooltip: Copyright
-                        class: Mapbender\CoreBundle\Element\Button
-                        label: false
-                        icon: iconInfoActive
-                        target: copyright
-
-                    help-button:
-                        title: Help
-                        tooltip: Help
-                        class: Mapbender\CoreBundle\Element\Button
-                        label: false
-                        icon: iconHelp
-                        target: help
-
                     bss-button:
-                        title: 'Base Source Switcher'
-                        tooltip: 'Base Source Switcher'
+                        title: 'Change Background'
+                        tooltip: 'Change Background Map'
                         class: Mapbender\CoreBundle\Element\Button
                         icon: iconLegend
                         label: false
@@ -668,6 +667,28 @@ parameters:
                         target: map
                         action: open
                         icon: iconGps
+                        refreshinterval: '5000'
+                        average: '1'
+                        follow: false
+                        centerOnFirstPosition: true
+                        zoomToAccuracy: false
+                        zoomToAccuracyOnFirstPosition: true
+
+                    imprint-button:
+                        title: Imprint
+                        tooltip: Imprint
+                        class: Mapbender\CoreBundle\Element\Button
+                        label: false
+                        icon: iconInfoActive
+                        target: imprint
+
+                    help-button:
+                        title: Help
+                        tooltip: Help
+                        class: Mapbender\CoreBundle\Element\Button
+                        label: false
+                        icon: iconHelp
+                        target: help
 
                 content:
                     map:
@@ -693,14 +714,14 @@ parameters:
 
                 mobilePane:
                     layertree:
-                        title: Layertree
+                        title: Themes
                         class: Mapbender\CoreBundle\Element\Layertree
                         target: map
                         type: element
                         displaytype: tree
                         useAccordion: false
                         autoOpen: false
-                        titleMaxLength: 60
+                        titleMaxLength: 160
                         showBaseSource: true
                         layerRemove: false
                         menu: []
@@ -715,32 +736,32 @@ parameters:
                         printResult: false
                         displayType: tabs
 
-                    copyright:
-                        title: Copyright
+                    imprint:
+                        title: Imprint
                         class: Mapbender\CoreBundle\Element\HTMLElement
-                        content: '<div style="color: #6FB536; font-weight:bold" >powered by Mapbender</div>'
+                        content: '<div style="color: #6FB536; font-weight:bold" >powered by Mapbender. Read more about Mapbender3 at the <a href="http://mapbender3.org" target="_blank">Mapbender3 Project Page</a>.</div>'
                         classes: html-element-inline
 
                     help:
                         title: Help
                         class: Mapbender\CoreBundle\Element\HTMLElement
-                        content: '<div style="color: #6FB536; font-weight:bold" >Help help</div>'
+                        content: 'Enjoy the new Mapbender mobile Template. Please note that not all elements can be used in the mobile application. <div style="color: #6FB536; font-weight:bold">Find out more about the Mapbender mobile in the <a href="http://doc.mapbender3.org/en/book/mapbender_templates.html" target="_blank">Template Documentation</a>.</div>'
                         classes: html-element-inline
 
                     basesourceswitcher:
-                        title: Base Source Switcher
+                        title: Change Background
                         class: Mapbender\CoreBundle\Element\BaseSourceSwitcher
                         target: map
                         display: mobile
                         instancesets:
                             is1:
-                                title: "Mapbender users"
+                                title: "OSM Demo (with opacity)"
                                 cprTitle: ~
                                 cprUrl: ~
                                 group: ~
-                                instances: [mapbender_users]
+                                instances: [osm_2]
                             is2:
-                                title: "OSM"
+                                title: "OSM Demo"
                                 cprTitle: ~
                                 cprUrl: ~
                                 group: ~
