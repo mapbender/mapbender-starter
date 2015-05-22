@@ -591,12 +591,13 @@ parameters:
                         class: Mapbender\CoreBundle\Element\HTMLElement
                         content: '<div style="color: #6FB536; font-weight:bold" >powered by Mapbender</div>'
                         classes: html-element-inline
+
         mapbender_mobile:
-            title: Mapbender mobile
+            title: 'Mapbender Mobile Application'
             screenshot: 'mapbender_mobile.png'
-            description: "Mapbender mobile Application"
+            description: "Mobile style, Simple map showing WMS use."
             published: true
-            template:  Mapbender\CoreBundle\Template\Fullscreen
+            template:  'Mapbender\MobileBundle\Template\Mobile'
             layersets:
                 main:
                     mapbender_users:
@@ -624,18 +625,50 @@ parameters:
                         transparent: true
                         tiled: true
                         opacity: 100
-                overview:
-                    osm_overview:
-                        class: Mapbender\WmsBundle\Entity\WmsInstance
-                        title: OSM Demo
-                        url: http://osm-demo.wheregroup.com/service
-                        layers:
-                            40: { name: osm,    title : Germany OSM Demo WhereGroup,  visible: true }
-                        tiled: false
-                        format: image/png
-                        transparent: true
-                        visible: true
             elements:
+                footer:
+                    # buttons parameters: action,activate,deactivate are ignored for elements at mobilePane
+                    layertree-button:
+                        title: Layertree
+                        tooltip: Layertree
+                        class: Mapbender\CoreBundle\Element\Button
+                        label: false
+                        icon: iconLayertree
+                        target: layertree
+
+                    copyright-button:
+                        title: Copyright
+                        tooltip: Copyright
+                        class: Mapbender\CoreBundle\Element\Button
+                        label: false
+                        icon: iconInfoActive
+                        target: copyright
+
+                    help-button:
+                        title: Help
+                        tooltip: Help
+                        class: Mapbender\CoreBundle\Element\Button
+                        label: false
+                        icon: iconHelp
+                        target: help
+
+                    bss-button:
+                        title: 'Base Source Switcher'
+                        tooltip: 'Base Source Switcher'
+                        class: Mapbender\CoreBundle\Element\Button
+                        icon: iconLegend
+                        label: false
+                        target: basesourceswitcher
+
+                    gps-button:
+                        title: GPS
+                        tooltip: show GPS Position
+                        class: Mapbender\CoreBundle\Element\GpsPosition
+                        label: false
+                        target: map
+                        action: open
+                        icon: iconGps
+
                 content:
                     map:
                         title: Main Map
@@ -645,38 +678,70 @@ parameters:
                         units: m
                         extents:
                             start: [361000,5619000,371150,5625000]
-                            max: [251000,5400000,475000,5850000]
-                        scales: [500000,250000,125000,75000,50000,25000,10000,7500,5000,2500,1000,500]
+                            max: [-500000,4350000,1600000,6850000]
+                        scales: [5000000,1000000,500000,100000,50000,25000,10000,7500,5000,2500,1000,500]
                         maxResolution: 'auto'
                         otherSrs: ["EPSG:25833","EPSG:31466","EPSG:31467","EPSG:900913","EPSG:4326"]
                     zoombar:
                         class: Mapbender\CoreBundle\Element\ZoomBar
                         target: map
-                        components:
-                            3: zoom_max
-                            1: zoom_in_out
-                        position: [15em, 3em]
+                        components: ["zoom_in_out"]
                         stepsize: 50
                         stepbypixel: true
-                        anchor: right-top
-                        position: [200,40]
+                        anchor: left-top
                         draggable: false
+
+                mobilePane:
+                    layertree:
+                        title: Layertree
+                        class: Mapbender\CoreBundle\Element\Layertree
+                        target: map
+                        type: element
+                        displaytype: tree
+                        useAccordion: false
+                        autoOpen: false
+                        titleMaxLength: 60
+                        showBaseSource: true
+                        layerRemove: false
+                        menu: []
+
                     featureinfo:
                         class: Mapbender\CoreBundle\Element\FeatureInfo
                         title: FeatureInfo
                         target: map
+                        type: element
                         deactivateOnClose: false
-                footer:
-                    activityindicator:
-                        class: Mapbender\CoreBundle\Element\ActivityIndicator
-                        title: activityindicator
-                        activityClass: mb-activity
-                        ajaxActivityClass: mb-activity-ajax
-                        tileActivityClass: mb-activity-tile
-                    gps-button:
-                        title: GPS
-                        tooltip: show GPS Position
-                        class: Mapbender\CoreBundle\Element\GpsPosition
-                        label: false
+                        autoActivate: true
+                        printResult: false
+                        displayType: tabs
+
+                    copyright:
+                        title: Copyright
+                        class: Mapbender\CoreBundle\Element\HTMLElement
+                        content: '<div style="color: #6FB536; font-weight:bold" >powered by Mapbender</div>'
+                        classes: html-element-inline
+
+                    help:
+                        title: Help
+                        class: Mapbender\CoreBundle\Element\HTMLElement
+                        content: '<div style="color: #6FB536; font-weight:bold" >Help help</div>'
+                        classes: html-element-inline
+
+                    basesourceswitcher:
+                        title: Base Source Switcher
+                        class: Mapbender\CoreBundle\Element\BaseSourceSwitcher
                         target: map
-                        action: open
+                        display: mobile
+                        instancesets:
+                            is1:
+                                title: "Mapbender users"
+                                cprTitle: ~
+                                cprUrl: ~
+                                group: ~
+                                instances: [mapbender_users]
+                            is2:
+                                title: "OSM"
+                                cprTitle: ~
+                                cprUrl: ~
+                                group: ~
+                                instances: [osm]

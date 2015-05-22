@@ -36,6 +36,7 @@ class AppKernel extends Kernel
             new Mapbender\ManagerBundle\MapbenderManagerBundle(),
             new Mapbender\PrintBundle\MapbenderPrintBundle(),
             new Mapbender\DigitizerBundle\MapbenderDigitizerBundle(),
+            new Mapbender\MobileBundle\MapbenderMobileBundle(),
 
             // OWSProxy3 bundles
             new OwsProxy3\CoreBundle\OwsProxy3CoreBundle(),
