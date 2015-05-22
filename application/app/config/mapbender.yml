@@ -492,6 +492,9 @@ parameters:
                         defaultFormat: 'image/png'
                         defaultInfoFormat: 'text/html'
                         splitLayers: false
+                    imageexport:
+                        class: Mapbender\PrintBundle\Element\ImageExport
+                        target: map
                     printclient:
                         class: Mapbender\CoreBundle\Element\PrintClient
                         target: map
