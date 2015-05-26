@@ -196,7 +196,6 @@ parameters:
                     printclient:
                         class: Mapbender\CoreBundle\Element\PrintClient
                         target: map
-                        autoOpen: false
                         file_prefix: mapbender3.pdf
                         templates:
                             - { template: a4portrait, label: A4 Portrait, format: a4}
@@ -208,6 +207,7 @@ parameters:
                             - { dpi: 72 , label: Draft (72dpi)}
                             - { dpi: 288,  label: Document (288dpi)}
                         rotatable: true
+                        legend: true
                         optional_fields:
                             title:
                                 label: Title              # label of the optional field
@@ -499,7 +499,6 @@ parameters:
                     printclient:
                         class: Mapbender\CoreBundle\Element\PrintClient
                         target: map
-                        autoOpen: false
                         print_directly: true
                         templates:
                             - { template: a4portrait, label: A4 Portrait, format: a4}
@@ -507,6 +506,7 @@ parameters:
                             - { template: a3portrait, label: A3 Portrait, format: a3}
                             - { template: a3landscape, label: A3 Landscape, format: a3}
                         scales: [500, 1000, 5000, 10000, 25000]
+                        legend: true
                         quality_levels:
                             - { dpi: 72 , label: Draft (72dpi)}
                             - { dpi: 288,  label: Document (288dpi)}

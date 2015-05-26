@@ -14,11 +14,6 @@ mapbender_managerbundle:
 mapbender_wmsbundle:
     resource: "@MapbenderWmsBundle/Controller/"
     type: annotation
-    
-mapbender_printbundle:
-    resource: "@MapbenderPrintBundle/Controller/"
-    type: annotation
-    prefix: "/print" 
 
 fom_managerbundle:
     resource: "@FOMManagerBundle/Controller"
@@ -35,4 +30,3 @@ ows_corebundle:
 
 fos_js_routing:
     resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
-
