@@ -326,7 +326,7 @@ parameters:
             description: "Fullscreen style, simple buttons, simple map showing WMS use."
             published: true
             template:  Mapbender\CoreBundle\Template\Fullscreen
-            custom_css: ".sidePane {\r\n    width: 400px;\r\n}\r\n\r\n.toolBar {\r\n  background-color: rgba(0, 29, 122, 0.8) !important;\r\n}\r\n\r\n.toolPane {\r\n  background-color: rgba(0, 29, 122, 0.8) !important;\r\n}\r\n\r\n.pan{\r\n  background-color: rgba(0, 93, 83, 0.9);\r\n}\r\n\r\n.sidePane {\r\n  overflow: visible;\r\n  background-image: url(\"\");\r\n  background-color: #eff7e9;\r\n}\r\n\r\n.sidePane.opened {\r\n    width: 350px;\r\n}"
+            custom_css: ".toolBar {\r\n  background-color: rgba(0, 29, 122,0.9) !important;\r\n  border-bottom: solid 2px rgb(197,43,69)\r\n}\r\n\r\n.toolPane {\r\n  background-color: rgba(0, 29, 122, 0.9)!important;\r\n}\r\n\r\n.sidePane {\r\n  overflow: visible;\r\n  background:none;\r\n  background-color: #fff;\r\n}\r\n\r\n.mb-element-zoombar .pan {\r\nbackground-color: rgba(0, 29, 122, 0.9) ;\r\n    border-radius: 50%;\r\nborder: solid 1px #c0c0c0;\r\n    color: #fff;\r\n    position:relative;\r\n}\r\n\r\n.popup {\r\n   background-color: #FFFFFF;\r\nbackground-image: none;\r\n}"
             layersets:
                 main:
                     mapbender_users:
