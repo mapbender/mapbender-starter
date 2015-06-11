@@ -727,7 +727,7 @@ parameters:
                         useAccordion: false
                         autoOpen: false
                         titlemaxlength: 100
-                        showBaseSource: true
+                        showBaseSource: false
                         layerRemove: false
                         menu: []
 
