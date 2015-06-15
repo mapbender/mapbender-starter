@@ -711,7 +711,7 @@ parameters:
                     zoombar:
                         class: Mapbender\CoreBundle\Element\ZoomBar
                         target: map
-                        components: ["zoom_in_out"]
+                        components: ["zoom_in_out", "zoom_max"]
                         stepsize: 50
                         stepbypixel: true
                         anchor: left-top
