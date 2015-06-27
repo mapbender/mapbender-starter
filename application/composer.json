@@ -43,7 +43,8 @@
         "imag/ldap-bundle":  "2.3.*",
         "mapbender/mapbender-icons": "dev-master",
         "components/underscore": "1.*",
-        "components/joii": "*"
+        "components/joii": "*",
+        "mapbender/digitizer": "1.x"
     },
     "scripts": {
         "post-install-cmd": [
@@ -72,6 +73,7 @@
         "symfony-assets-install": "symlink"
     },
     "repositories": [
+        { "type": "git", "url": "https://github.com/mapbender/mapbender-digitizer.git"},
         {
             "type": "package",
             "package": {
