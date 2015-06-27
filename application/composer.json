@@ -68,6 +68,7 @@
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
+        # ATTENTION: Symlinks creating under MS Windows works only if composer runs with admin permissions 
         "symfony-assets-install": "symlink"
     },
     "repositories": [
