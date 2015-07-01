@@ -1,5 +1,7 @@
 # Changelog
-* **v3.0.5.0** - 201x-xx-xx
+
+#Release
+* **v3.0.5.0** - 2015-07-01
     - a map parameter "layerset" is renamed into "layersets" and represets a list of layersets
     - WMS Update
     - Digitize Functionality
@@ -11,10 +13,10 @@
     - advanced features for HTML element through formgenerator
     - New button collection
     - advanced behaviour of featureInfo dialog (keep styles, only open tabs for hits, width and height for FeatureInfo dialog)
-    - add prameter on start of a Mapbender3 application (change srs, poi, bbox, center)
-    - Symfony Update 2.3.27
-
-#Release
+    - add parameter on start of a Mapbender3 application (change srs, poi, bbox, center)
+    - Symfony Update 2.3.30
+    - new translations for Portuguese and Russian
+    
 * **v3.0.4.1** - 2015-01-23
     - option 'removelayer' added into layertree menu
     - parameter 'layerRemove' removed from layertree configuration
