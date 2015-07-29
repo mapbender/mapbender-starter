@@ -209,6 +209,7 @@ parameters:
                             - { dpi: 288,  label: Document (288dpi)}
                         rotatable: true
                         legend: true
+                        legend_default_behaviour: false
                         optional_fields:
                             title:
                                 label: Title              # label of the optional field
