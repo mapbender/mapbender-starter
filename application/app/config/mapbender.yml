@@ -510,6 +510,7 @@ parameters:
                             - { template: a3landscape, label: A3 Landscape, format: a3}
                         scales: [500, 1000, 5000, 10000, 25000]
                         legend: true
+                        legend_default_behaviour: false
                         quality_levels:
                             - { dpi: 72 , label: Draft (72dpi)}
                             - { dpi: 288,  label: Document (288dpi)}
