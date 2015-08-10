@@ -44,7 +44,7 @@
         "mapbender/mapbender-icons": "dev-master",
         "components/underscore": "1.x",
         "components/joii": "*",
-        "mapbender/digitizer": "1.x"
+        "mapbender/digitizer": "1.0.x"
     },
     "scripts": {
         "post-install-cmd": [
