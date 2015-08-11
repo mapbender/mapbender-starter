@@ -35,7 +35,7 @@
         "toooni/fpdf": "dev-master",
         "arsgeografica/signing": "1.1.x",
         "phayes/geophp": "1.2",
-        "viscreation/vis-ui.js": "0.0.13",
+        "viscreation/vis-ui.js": "0.0.x",
         "igosuki/compass-mixins": "*",
         "fontfacekit/open-sans": "*",
         "eslider/sasscb":  "dev-master",
@@ -73,7 +73,6 @@
         "symfony-assets-install": "symlink"
     },
     "repositories": [
-        { "type": "git", "url": "https://github.com/mapbender/mapbender-digitizer.git"},
         {
             "type": "package",
             "package": {
