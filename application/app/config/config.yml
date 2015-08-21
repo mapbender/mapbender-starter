@@ -95,6 +95,7 @@ ows_proxy3_core:
         timeout: %ows_proxy3_timeout%
         user: %ows_proxy3_user%
         password: %ows_proxy3_password%
+        checkssl: true
         noproxy: %ows_proxy3_noproxy%
 
 # Mapbender Configuration
