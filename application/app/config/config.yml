@@ -86,7 +86,7 @@ fom_user:
 
     # Allow to create user log table on the fly if the table doesn't exits.
     # Default: true
-    auto_create_log_table: true
+    auto_create_log_table: false
 
     # Time between to check login tries
     login_check_log_time: "-5 minutes"
