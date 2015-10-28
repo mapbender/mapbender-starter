@@ -19,7 +19,7 @@ parameters:
 
     fom:
         server_name:   Mapbender3
-        server_version: 3.0.5.1
+        server_version: 3.0.5.2
         server_logo:   bundles/mapbendercore/image/logo_mb3.png
 
     # framework : http://symfony.com/doc/2.1/reference/configuration/framework.html#cookie-lifetime
