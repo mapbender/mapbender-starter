@@ -7,6 +7,12 @@ The [official site](http://mapbender3.org/) contains [documentation](http://mapb
 To install Mapbender3 from this Git-repository, please read the guide of the [Git-based installation](http://doc.mapbender3.org/en/book/installation/installation_git.html) ([in German](http://doc.mapbender3.org/de/book/installation/installation_git.html)).
 
 
+## Branches
+
+The current version of Mapbender is based on the [release/3.0.5 branch](https://github.com/mapbender/mapbender-starter/tree/release/3.0.5). The master branch will reflect the changes of the [current releases](https://github.com/mapbender/mapbender-starter/releases) while the develop branch might contain new features.
+
+
+
 ## Components
 
 Our code is maintained using git and hosted at Github. We split up our code into several parts:
