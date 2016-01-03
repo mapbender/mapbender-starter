@@ -148,18 +148,6 @@
         {
             "type": "package",
             "package": {
-                "name": "eslider/sasscb",
-                "version":"dev-master",
-                "source": {
-                    "url": "https://github.com/eSlider/sassc-binaries.git",
-                    "type": "git",
-                    "reference":"develop"
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
                 "name": "components/joii",
                 "type": "component",
                 "version": "3.1.2",
