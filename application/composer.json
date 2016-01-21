@@ -43,7 +43,7 @@
         "gedmo/doctrine-extensions": "~2.3",
         "imag/ldap-bundle":  "2.3.x",
         "mapbender/mapbender-icons": "dev-master",
-        "components/jquery": "1.x",
+        "components/jquery": "1.11.2",
         "components/underscore": "1.x",
         "components/joii": "*",
         "mapbender/digitizer": "1.0.x"
