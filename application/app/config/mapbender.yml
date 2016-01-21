@@ -502,7 +502,6 @@ parameters:
                     printclient:
                         class: Mapbender\CoreBundle\Element\PrintClient
                         target: map
-                        print_directly: true
                         templates:
                             - { template: a4portrait, label: A4 Portrait}
                             - { template: a4landscape, label: A4 Landscape}
