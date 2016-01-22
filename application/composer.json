@@ -46,7 +46,7 @@
         "components/jquery": "1.11.2",
         "components/underscore": "1.x",
         "components/joii": "*",
-        "mapbender/digitizer": "1.0.x"
+        "mapbender/digitizer": "1.1.x"
     },
     "scripts": {
         "post-install-cmd": [
