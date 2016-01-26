@@ -493,12 +493,6 @@ parameters:
                         class: Mapbender\CoreBundle\Element\FeatureInfo
                         title: FeatureInfo
                         target: map
-                        deactivateOnClose: false
-                        onlyValid: true
-                    featureinfo:
-                        class: Mapbender\CoreBundle\Element\FeatureInfo
-                        title: FeatureInfo
-                        target: map
                         deactivateOnClose: true
                         onlyValid: true
                         type: dialog
