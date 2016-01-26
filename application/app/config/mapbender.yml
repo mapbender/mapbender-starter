@@ -183,6 +183,13 @@ parameters:
                         target: map
                         deactivateOnClose: false
                         onlyValid: true
+                        type: dialog
+                        displayType: tabs
+                        autoActivate: false
+                        printResult: true
+                        showOriginal: true
+                        width: 500
+                        height: 500
                     wmsloader:
                         title: WMS Loader
                         class: Mapbender\WmsBundle\Element\WmsLoader
@@ -488,6 +495,17 @@ parameters:
                         target: map
                         deactivateOnClose: false
                         onlyValid: true
+                    featureinfo:
+                        class: Mapbender\CoreBundle\Element\FeatureInfo
+                        title: FeatureInfo
+                        target: map
+                        deactivateOnClose: true
+                        onlyValid: true
+                        type: dialog
+                        displayType: tabs
+                        autoActivate: false
+                        printResult: false
+                        showOriginal: false
                     wmsloader:
                         title: WMS Loader
                         class: Mapbender\WmsBundle\Element\WmsLoader
