@@ -1,8 +1,191 @@
 # Changelog
 
-#Release
+## v3.0.5.3 - 2016-02-04
+    - Improve application manager button style
+    - Set login menu default font family
+    - Optimize default application preview images
+    - Merge export alpha layers as image
+    - Fix deactivate GPS button in Firefox
+    - Fix search router zoom to feature twice
+    - Redraw search router selected feature after zoom
+    - Fix and refactor GPS locator widget
+    - Fix deactivate gps button
+    - Improve reset form styles
+    - Fix simple search side pane styling
+    - Fix simple search admin type styles
+    - Fix set layerset name
+    - Fix  search router horizontal scroll and remove result styles
+    - Refactor search router
+    - Improve SimpleSearch element styling
+    - Fix reset password page styling
+    - Add search router horizontal scrolling
+    - Fix digitizer version
+    - Fix search router reset last results and improve styles
+    - Fix add user group with same prefix
+    - Improve poi link dialog style
+    - Disable error message fade in effect
+    - Fix composer package versions
+    - Change version number
+    - Fix search router element input label (title)
+    - Fix add group with same prefix in security tab
+    - Fix select element global listener
+    - Merge feature/3.0.5_mapbender.yml_redline
+    - Merge feature/3.0.5_mapbender.yml_featureinfog
+    - Merge pull request #17 from mapbender/feature/printtemplates
+    - Improve srs and scale selector styles
+    - Fix import/export region properties
+    - Set layer tree title max length = 40
+    - Fix composer versions to stable
+    - Fix RegionProperties entity property visibility
+    - Angepasste Templates #5530
+    - Added all parameters for element featureinfo to demo mapbender_user and mapbender_user_basic
+    - Added redline to mapbender.yml in mapbender_user
+    - Fix print element by merging https://github.com/mapbender/mapbender/pull/394
+    - Fix digitizer composer dependencies
+    - mapbender.yml removed unnecessary parameter
+    - Fix jQuery version to 1.11.2 (release 1.11.3 works not well yet)
+    - Fix jQuery version to 1.x
+    - Update submodules
+    - Fixes sass compiler fails on Linux 32-bit
+    - Merged mapbender/mapbender#390
+    - Merge pull request #13 from mapbender/hotfix/readme-5488
+    - Fix assets caching
+    - Versions readme file #5488
+    - Add note on the branches in the adjusted readme file #5488
+    - Adjusted readme file #5488
+    - Fix composer phpunit version for symfony v2.3
+    - Fix coordinates display
+    - Fix set active tab after form saving
+    - Fix import application from mapbender.yml
+    - Update composer.phar
+    - Remove global $.ajax proxy rewriting
+    - Change parameters.yml.dist version number
+    
+### Mapbender
 
-* **v3.0.5.2** - 2015-10-27
+    - Fix on/off layer visibility
+    - Improve application manager button style
+    - Improve tool and zoom bar icon opacity
+    - Set login menu default font family
+    - Shrink mapbender logo
+    - Remove console.log froim mapbender.element.gpsPosition.js
+    - Merge export alpha layers as image
+    - Fix deactivate GPS button in Firefox
+    - Fix search router zoom to feature twice
+    - Redraw search router selected feature after zoom
+    - Print: fixed legend size
+    - ImageExport: fixed opacity
+    - Fix and refactor GPS locator widget
+    - Fix deactivate gps button
+    - Fix simple search side pane styling
+    - fix featureinfo url
+    - Fix simple search admin type styles
+    - Fix set layer name
+    - Improve search router style for mobile template
+    - Disable wrap search router table header text
+    - Fix  search router horizontal scroll and remove result styles
+    - Refactor search router
+    - Improve SimpleSearch element styling
+    - Fix HTTP/HTTPS feature info requests
+    - Fix check map tileSize option
+    - Add search route horizontal scrolling
+    - Fix search router reset last results and improve styles
+    - Improve poi link dialog style
+    - Disable error message fade effect
+    - Remove TODOs.rst because becomes outdated
+    - Fix search router element input label (title)
+    - Improve scale and srs selector styles
+    - Fix import/export region properties
+    - Set layer tree title max length = 40
+    - Set protocol into featureinfo url from browser
+    - Fix RegionProperties entity property visibility
+    - Change Application $regionProperties property to protected
+    - Merge pull request #394 from mapbender/feature/print-sidepane
+    - Print: sidepane-print changed button style and behaviour
+    - Merge branch 'release/3.0.5' into feature/print-sidepane
+    - Print: bugfix type parameter
+    - Improve SearchRouter table header padding
+    - Merge branch 'release/3.0.5' into feature/print-sidepane
+    - Print: fixed sidepane usage
+    - Remove normalize.css becourse bootstrap alredy include them
+    - Remove using normalize.css because bootstrap.css already includes them
+    - Hotfix print twig template generation
+    - Fix transform a clicked feature geometry to map srs
+    - Fix result table selection checkbox  position and selected row color
+    - Add default values for SearchRouter
+    - Add with/height for SearchRouter dialog
+    - Merge pull request #393 from mapbender/hotfix/print-legend
+    - Merge pull request #384 from mapbender/feature/print-sidepane
+    - Print: added missing translations
+    - Print: added missing button label
+    - Print: fixed legend bug
+    - Print: fixed dynamic text position
+    - Merge pull request #392 from mapbender/feature/redlining-without-dialog
+    - Fix wms layer get legend from self, formate code
+    - Fix coordinates width  at bottom menu
+    - Remove CSS transition animation for map tile load
+    - Fix annotation typo
+    - Fix HTML element assets paths
+    - Fix max height for searchRouter result
+    - Merge branch 'release/3.0.5' into feature/redlining-without-dialog
+    - Fix a layer validation for an instance
+    - Fix: add only valid instances into layerset configuration
+    - Fix layertree: remove theme by missing sources
+    - Fixes sass compiler fails on Linux 32-bit #389
+    - CP#5164: GPS accuracy fix
+    - Improve assets generation and caching mechanic and fixes: #388.
+    - Improve CSS cache modification check
+    - Cache CSS for production environment
+    - PrintClient: sidepane usage
+    - Merge pull request #383 from mapbender/hotfix/application-copy-sqlite-5018
+    - Merge pull request #382 from mapbender/release/3.0.5
+    - Merge pull request #381 from mapbender/hotfix/print-optionalfields
+    - PrintClient: fixed required input fields
+    - Fix coordinatesdisplay: set default values for options
+    - Fix application copy for sqlite: add 'flush' after 'persist'
+    - Fix copy application
+    - Add check if Storage suported
+    - Fix set active tab after form saving
+    - Add translations for redlining
+    - Display type 'element' for a redlining element
+    - Fix show/hide redlining
+    - Fix import application from mapbender.yml
+    - Remove global $.ajax proxy rewriting
+    - Merge pull request #376 from mapbender/develop
+    
+### FOM
+
+    - Improve reset form styles
+    - Fix reset password page styling
+    - Fix add user group with same prefix
+    - Fix select element
+    - Fix add group with same prefix in security tab
+    - Fix select element global listener
+    - Improve scale and srs selector styles
+    - Fix FOM composer.json error
+    - Merge pull request #18 from mapbender/hotfix/user-activate
+    - Update messages.ru.xlf
+    - Add 'de' translations
+    - Translate default fos messages, reformate code
+    - Merge branch 'release/3.0.5' into hotfix/user-activate
+    - Fix reset password email body text
+    - 5190 change format of forgot password mail
+    - Changed translation typo de
+    - Merge branch 'hotfix/user-activate' into release/3.0.5
+    - Fix activate/deactivate only other users
+    - Add aktivate a self registrated user
+    - Merge pull request #17 from mapbender/hotfix/changelog-5489
+    - Add changelog.md information
+    
+### OWSPROXY
+
+    - Merge branch 'release/3.0.5' of https://github.com/mapbender/owsproxy3 into release/3.0.5
+    - Merge pull request #4 from mapbender/hotfix/changelog-5489
+    - Add changelog.md information #5489
+
+
+
+## v3.0.5.2 - 2015-10-27
     - Copy applications: User-Rights and groups are copied. The user who copied the application becomes owner of the copied application.
     - FOM: Changes in behaviour of wrong logins and user locking. It is only shown that the login failed, independent if the user exists or not.
     - Fixed error message when creating a user with a too short password.
@@ -26,7 +209,7 @@
     - Doku: URL parameter scale in map element.
     - Doku: WMC Loader and KeepSources.
 
-* **v3.0.5.1** - 2015-08-26
+## v3.0.5.1 - 2015-08-26
     - Map: OpenLayers TileSize: You can set the tile-size for the map. Default: 256x256.
     - Map: Delay before Tiles: For WMS-T, for example with temporal parameters (in future)
     - Print: Show coordinates in PDF print
@@ -55,7 +238,7 @@
     - composer.json upgrade version of Digitizer to 1.0.*
     - Documentation of the JS-UI Generator (Form-Generator): https://github.com/eSlider/vis-ui.js
 
-* **v3.0.5.0** - 2015-07-01
+## v3.0.5.0 - 2015-07-01
     - a map parameter "layerset" is renamed into "layersets" and represets a list of layersets
     - WMS Update
     - Digitize Functionality
@@ -71,7 +254,7 @@
     - Symfony Update 2.3.30
     - new translations for Portuguese and Russian
     
-* **v3.0.4.1** - 2015-01-23
+## v3.0.4.1 - 2015-01-23
     - option 'removelayer' added into layertree menu
     - parameter 'layerRemove' removed from layertree configuration
     - container accordion structure changed
@@ -91,7 +274,7 @@
     - improved screenshot for application handling
     - https://github.com/mapbender/mapbender/milestones/3.0.4.1
 
-* **v3.0.4.0** - 2014-09-12
+## v3.0.4.0 - 2014-09-12
     - Switched to MIT license
     - Added parameter group for element BaseSourceSwitcher to be able to create a menu bar with groupname as title of the menu
     - Added accordion container for SidePane
@@ -149,18 +332,18 @@
     - import/export of applications/sources
     - https://github.com/mapbender/mapbender/milestones/3.0.4.0
 
-* **v3.0.3.2** - 2014-04-04
+## v3.0.3.2 - 2014-04-04
     - Added HttpBasicAuthListener to WMS loading for for safely setting the auth header
     - WMSProxy passes auth challenges (HTTP 401) down to client
     - fixed fullscreen alternative Template
     - SearchRouter reset results in map
     - https://github.com/mapbender/mapbender/issues?milestone=14
 
-* **v3.0.3.1** - 2014-03-20
+## v3.0.3.1 - 2014-03-20
     - Disabled WMS validation as it renders many services unusable.
     - Made WMC editor resizable and taller
 
-* **v3.0.3.0** - 2014-03-17
+## v3.0.3.0 - 2014-03-17
     - Added function for validate WMS GetCapabilities documents
     - ACL for Elements added
     - Parameter "BaseSource" for SourceInstances added
@@ -189,7 +372,7 @@
     - Open application with parameters (f.e. position)
 
 
-* **v3.0.2.0** - 2013-11-26
+## v3.0.2.0 - 2013-11-26
     - Signer for OwsProxy added
     - Properties for regions added
     - Sketch feature (circle) added
@@ -205,10 +388,10 @@
     - Proxy security: Only pass correctly signed URLs
     - Allow for multiple application YAML files
 
-* **v3.0.1.1** - 2013-09-26
+## v3.0.1.1 - 2013-09-26
     - The development controller app_dev.php is limited to localhost again
 
-* **v3.0.1.0** - 2013-09-12
+## v3.0.1.0 - 2013-09-12
     - Fixed visibility toggle for elements and layers
     - Hide sidepane if empty
     - Parameter/Service 'mapbender.proxy' removed
@@ -239,7 +422,7 @@
     - Add new frontend template - Fullscreen alternative
     - Frontend jQuery upgrade to 1.9.1/1.10.2 (jQuery UI)
 
-* **v3.0.0.2** - 2013-07-19
+## v3.0.0.2 - 2013-07-19
     - Removed incorrect feature info function `create`
     - Set overlay `position` to `fixed`
     - PrintClient Admintype added
@@ -267,7 +450,7 @@
     - Enhanced ACL creation during service creation (#54)
     - Honor published attribute on YAML-defined applications (#42)
 
-* **v3.0.0.1** - 2013-06-07
+## v3.0.0.1 - 2013-06-07
 
-* **v3.0.0.0** - 2013-05-31
+## v3.0.0.0 - 2013-05-31
     - First version

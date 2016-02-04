@@ -183,6 +183,13 @@ parameters:
                         target: map
                         deactivateOnClose: false
                         onlyValid: true
+                        type: dialog
+                        displayType: tabs
+                        autoActivate: false
+                        printResult: true
+                        showOriginal: true
+                        width: 500
+                        height: 500
                     wmsloader:
                         title: WMS Loader
                         class: Mapbender\WmsBundle\Element\WmsLoader
@@ -283,6 +290,19 @@ parameters:
                         showBaseSource: true
                         layerRemove: true
                         menu: [opacity,zoomtolayer,metadata]
+                    redlining:
+                        title: Redlining
+                        class: Mapbender\CoreBundle\Element\Redlining
+                        target: map
+                        geometrytypes:
+                            - point
+                            - line
+                            - polygon
+                            - text
+                            - rectangle
+                        display_type: element
+                        auto_activate: false
+                        deactivate_on_close: false                        
                 footer:
                     activityindicator:
                         class: Mapbender\CoreBundle\Element\ActivityIndicator
@@ -486,8 +506,13 @@ parameters:
                         class: Mapbender\CoreBundle\Element\FeatureInfo
                         title: FeatureInfo
                         target: map
-                        deactivateOnClose: false
+                        deactivateOnClose: true
                         onlyValid: true
+                        type: dialog
+                        displayType: tabs
+                        autoActivate: false
+                        printResult: false
+                        showOriginal: false
                     wmsloader:
                         title: WMS Loader
                         class: Mapbender\WmsBundle\Element\WmsLoader
@@ -502,7 +527,6 @@ parameters:
                     printclient:
                         class: Mapbender\CoreBundle\Element\PrintClient
                         target: map
-                        print_directly: true
                         templates:
                             - { template: a4portrait, label: A4 Portrait}
                             - { template: a4landscape, label: A4 Landscape}

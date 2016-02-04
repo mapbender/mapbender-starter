@@ -12,15 +12,15 @@
         "predis/predis": "~1.0",
         "satooshi/php-coveralls": "~0.6",
         "phpunit/phpunit-selenium": ">=1.2",
-        "facebook/webdriver": "dev-master"
+        "facebook/webdriver": "1.1.*"
     },
     "require": {
         "php": ">=5.3.3",
         "symfony/symfony": "2.3.x",
         "doctrine/orm": "~2.2,>=2.2.3",
         "doctrine/doctrine-bundle": "1.2.x",
-        "twig/extensions": "1.0.x",
-        "symfony/assetic-bundle": "2.6.x",
+        "twig/extensions": "1.x",
+        "symfony/assetic-bundle": "2.7.x",
         "symfony/swiftmailer-bundle": "2.3.x",
         "symfony/monolog-bundle": "2.3.x",
         "sensio/distribution-bundle": "2.3.x",
@@ -28,23 +28,24 @@
         "sensio/generator-bundle": "2.3.x",
         "incenteev/composer-parameter-handler": "~2.0",
         "jms/security-extra-bundle": "1.5.x",
-        "jms/di-extra-bundle": "1.4.x",
+        "jms/di-extra-bundle": "1.6.x",
 
         "friendsofsymfony/jsrouting-bundle": "1.5.x",
         "kriswallsmith/buzz": "v0.15",
-        "doctrine/doctrine-fixtures-bundle": "dev-master",
+        "doctrine/doctrine-fixtures-bundle": "2.3.*",
         "toooni/fpdf": "dev-master",
         "arsgeografica/signing": "1.1.x",
-        "phayes/geophp": "1.2",
+        "phayes/geophp": "1.x",
         "viscreation/vis-ui.js": "0.0.x",
-        "igosuki/compass-mixins": "*",
-        "fontfacekit/open-sans": "*",
-        "eslider/sasscb":  "dev-master",
+        "igosuki/compass-mixins": "0.x",
+        "fontfacekit/open-sans": "1.4.x",
+        "eslider/sasscb":  "3.1.x",
         "gedmo/doctrine-extensions": "~2.3",
         "imag/ldap-bundle":  "2.3.x",
-        "mapbender/mapbender-icons": "dev-master",
+        "mapbender/mapbender-icons": "1.x",
+        "components/jquery": "1.11.2",
         "components/underscore": "1.x",
-        "components/joii": "*",
+        "components/joii": "3.1.x",
         "mapbender/digitizer": "1.0.x"
     },
     "scripts": {
@@ -142,18 +143,6 @@
                             "fonts/*/*"
                         ]
                     }
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "eslider/sasscb",
-                "version":"dev-master",
-                "source": {
-                    "url": "https://github.com/eSlider/sassc-binaries.git",
-                    "type": "git",
-                    "reference":"develop"
                 }
             }
         },
