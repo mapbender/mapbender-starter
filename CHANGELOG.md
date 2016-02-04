@@ -2,6 +2,67 @@
 
 #Release
 
+* **v3.0.5.3** - 2016-02-04
+    - Improve application manager button style
+    - Set login menu default font family
+    - Optimize default application preview images
+    - Merge export alpha layers as image
+    - Fix deactivate GPS button in Firefox
+    - Fix search router zoom to feature twice
+    - Redraw search router selected feature after zoom
+    - Fix and refactor GPS locator widget
+    - Fix deactivate gps button
+    - Improve reset form styles
+    - Fix simple search side pane styling
+    - Fix simple search admin type styles
+    - Fix set layerset name
+    - Fix  search router horizontal scroll and remove result styles
+    - Refactor search router
+    - Improve SimpleSearch element styling
+    - Fix reset password page styling
+    - Add search router horizontal scrolling
+    - Fix digitizer version
+    - Fix search router reset last results and improve styles
+    - Fix add user group with same prefix
+    - Improve poi link dialog style
+    - Disable error message fade in effect
+    - Fix composer package versions
+    - Change version number
+    - Fix search router element input label (title)
+    - Fix add group with same prefix in security tab
+    - Fix select element global listener
+    - Merge feature/3.0.5_mapbender.yml_redline
+    - Merge feature/3.0.5_mapbender.yml_featureinfog
+    - Merge pull request #17 from mapbender/feature/printtemplates
+    - Improve srs and scale selector styles
+    - Fix import/export region properties
+    - Set layer tree title max length = 40
+    - Fix composer versions to stable
+    - Fix RegionProperties entity property visibility
+    - Angepasste Templates #5530
+    - added all parameters for element featureinfo to demo mapbender_user and mapbender_user_basic
+    - added redline to mapbender.yml in mapbender_user
+    - Fix print element by merging https://github.com/mapbender/mapbender/pull/394
+    - Fix digitizer composer dependencies
+    - mapbender.yml removed unnecessary parameter
+    - Fix jQuery version to 1.11.2 (release 1.11.3 works not well yet)
+    - Fix jQuery version to 1.x
+    - update submodules
+    - Fixes sass compiler fails on Linux 32-bit
+    - merged mapbender/mapbender#390
+    - Merge pull request #13 from mapbender/hotfix/readme-5488
+    - Fix assets caching
+    - versions readme file #5488
+    - a note on the branches in the adjusted readme file #5488
+    - adjusted readme file #5488
+    - fix composer phpunit version for symfony v2.3
+    - fix coordinates display
+    - fix set active tab after form saving
+    - fix import application from mapbender.yml
+    - Update composer.phar
+    - Remove global $.ajax proxy rewriting
+    - Change parameters.yml.dist version number
+
 * **v3.0.5.2** - 2015-10-27
     - Copy applications: User-Rights and groups are copied. The user who copied the application becomes owner of the copied application.
     - FOM: Changes in behaviour of wrong logins and user locking. It is only shown that the login failed, independent if the user exists or not.
