@@ -277,6 +277,7 @@ parameters:
                         class: Mapbender\CoreBundle\Element\POI
                         target: map
                         body: 'Please take a look at this POI'
+                        useMailto: false                        
                 sidepane:
                     layertree:
                         title: Layertree
