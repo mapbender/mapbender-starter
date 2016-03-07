@@ -41,6 +41,7 @@ assetic:
 # Doctrine Configuration
 doctrine:
     dbal:
+        default_connection: default    
         connections:
             default:
                 driver:   %database_driver%
