@@ -73,32 +73,27 @@ changes that get things working in your environment.
 There are a few guidelines that we need contributors to follow so that 
 we can have a chance of keeping on top of things.
 
-
-# Workflows
-
-There two different workflow. 
-
-## Submodules
+# Submodules
 
 *Notice: this workflow is deprecated, 
 This approach is used to develop and distribute Mapbender long time.
 Course complexity and many changes in diverse bundles which located 
 in diverse submodules was decided to change development workflow.* 
 
-### Definition
+## Definition
 
 [Submodule] - git repository, which is linked on the main "mapbender-starter" repository.
 Git submodules is a part of git modularity, 
 
-### Description
+## Description
 
 Now there are three submodules: [Mapbender][Mapbender], [FOM][FOM] and [OWS Proxy][OWS Proxy], located in ```application``` folder
 Each [submodule] contains own bundles. 
 
-### Branches
+## Branches
 In order to change the source in [submodule] it's important to create a branch.
 
-#### Feature brunch
+### Feature [brunch]
 
 It's mandatory to use "feature/" prefix in brunch name.
 
@@ -115,6 +110,13 @@ git checkout -b "feature/mega-cool-feature-x"
 git add *
 git commit -m "Add some new stuff"
 ``` 
+* Merge current release code
+```sh
+git fetch -a
+git merge "release/3.0.5"
+``` 
+* If the conflicts, resolve [them][Resolve git conflicts]
+* Run tests
 * Push the changes on [github]
 ```sh
 git push
@@ -123,7 +125,7 @@ git push
 
 Wait for the answer. We will checkout and review you code, to get merge it in.
 
-#### Bug fix brunch
+### Bug fix brunch
 
 It's mandatory to use "hotfix/" prefix in brunch name.
 
@@ -135,12 +137,18 @@ cd mapbender
 git checkout -b "hotfix/bug-short-description"
 ``` 
 * Improve the code
-* Start tests
 * Save changes 
 ```sh
 git add *
-git commit -m "Add some new stuff"
+git commit -m "Fix bug description"
 ``` 
+* Merge current release code
+```sh
+git fetch -a
+git merge "release/3.0.5"
+``` 
+* If the conflicts, resolve [them][Resolve git conflicts]
+* Run tests
 * Push the changes on [github]
 ```sh
 git push
@@ -156,7 +164,7 @@ It's mandatory to use "release/" prefix in brunch name.
 
 Example:
 
-* Create brunch
+* Checkout release brunch
 ```sh
 cd mapbender
 git checkout "release/3.0.5"
@@ -164,26 +172,24 @@ git checkout "release/3.0.5"
 * Fetch changes  
 ```sh
 git fetch -a
+git pull
 ``` 
 * Merge changes
 ```sh
 git merge "hotfix/bug-short-description"
 ``` 
+* If the conflicts, resolve [them][Resolve git conflicts]
 * Code review
-* Start tests
+* Run tests
 * Save changes
 ```sh
 git commit -m "Merge 'hotfix/bug-short-description'"
 ``` 
-* Push on github
+* Push on [github]
 ```sh
 git push
 ``` 
 
-
-#### Mapbender
-#### FOM 
-#### OWS Proxy
 ---
 
 ### Modules
@@ -217,7 +223,7 @@ own git repository and reuse the same directory structure to implement new thing
 
 #### Create Bundle 
 
-In order to create bundle, please look an example structure at [digitizer bundle](https://github.com/mapbender/mapbender-digitizer).
+In order to create bundle, please look an example structure at [digitizer].
 There is
 
 
@@ -261,12 +267,12 @@ Write a good commit message.
 
 ## Submodules
 
-* [Mapbender]
-* [FOM]
-* [OWS Proxy]
+* [Mapbender] - Contains Core, Manager and Print [bundle]
+* [FOM] - *F*riends *o*f *M*apbender submodule contains some additional bundles.
+* [OWS Proxy] - OWS Proxy bundle.
 
 ## Modules
-* [Digitizer bundle](https://github.com/mapbender/mapbender-digitizer)
+* [Digitizer] - Digitalizing bundle, which contains geometries services
 
 ## Libraries
 * [Symfony framework](http://www.symfony.com)
@@ -275,7 +281,10 @@ Write a good commit message.
 * [General GitHub documentation](https://help.github.com/)
 * [GitHub pull request documentation](https://help.github.com/send-pull-requests/)
 
+[pull-request]: https://help.github.com/send-pull-requests
 [Mapbender]: https://github.com/mapbender/mapbender  "Mapbender submodule"
 [FOM]: https://github.com/mapbender/fom  "FOM submodule"
 [OWS Proxy]: https://github.com/mapbender/owsproxy3  "OWS proxy submodule"
 [submodule]: https://git-scm.com/book/de/v1/Git-Tools-Submodule  "Git submodule"
+[Digitizer]: https://github.com/mapbender/mapbender-digitizer "Mapbender digitizer module"
+[Resolve git conflicts]: https://github.com/conflicts/resolve "Resolve git conflicts"
