@@ -1,6 +1,6 @@
 # Developer Guide
 
-Mapbender welcomes contribution from everyone. Here are the guidelines if you are thinking of helping us.
+Mapbender welcomes contributions from all members. You are welcome to join us in the development, if you consider the following guidelines.
 
 
 ## Architecture
@@ -9,7 +9,7 @@ Mapbender is based on [Symfony framework](symfony) and uses composer to get exte
 
 ## Installation  
 
-Complete installation description you will find here:
+You can find the complete installation description here:
 http://doc.mapbender3.org/mapbender-documentation/output/en/book/installation.html
 
 Here is a quick installation guide to get git-based developer edition of mapbender:
@@ -19,7 +19,7 @@ Clone the project via SSH
 git clone git@github.com:mapbender/mapbender-starter.git 
 ```
 
-Alternative, is possible to clone the project via HTTP
+Alternatively, it is also possible to clone the project via HTTP
 ```sh
 git clone https://github.com/mapbender/mapbender-starter.git
 ```
@@ -39,12 +39,12 @@ Switch to the application directory
 cd application
 ```
 
-Copy ```parameters.yml``` and edit to fit you system.
+Copy ```parameters.yml``` and edit it for your system.
 ```sh
 cp app/config/parameters.yml.dist app/config/parameters.yml
 ```
 
-Create database and schema structures(tables, triggers, etc)
+Create database and schema structures (tables, triggers, etc)
 ```sh
 app/console doctrine:database:create
 app/console doctrine:schema:create
@@ -66,14 +66,14 @@ Install composer libraries
 ../composer/composer.phar install 
 ```
 
-Now yo are ready.
+Now yo are ready to use your mapbender.
 
 # How to contribute
 
-Third-party patches are essential for keeping Mapbender great. 
+Third-party patches are essential for the preservation of high standards in Mapbender.
 We simply can't access the huge number of platforms and myriad configurations 
-for running Mapbender. We want to keep it as easy as possible to contribute 
-changes that get things working in your environment. 
+for running Mapbender. 
+We want it as easy as possible to carry out changes to get the modules in your environment to run. 
 There are a few guidelines that we need contributors to follow so that 
 we can have a chance of keeping on top of things.
 
@@ -82,9 +82,9 @@ we can have a chance of keeping on top of things.
 
 *Notice: this workflow is deprecated.*
 
-*This approach is used to develop and distribute Mapbender long time.
-Course complexity and many changes in diverse bundles which located 
-in diverse submodules was decided to change development workflow in the next release of [Mapbender].*
+*This approach has been used a long time to develop and distribute Mapbender.
+Due to the course complexity and many changes in diverse bundles, located in different sub-modules, 
+it was decided to adapt the development workflow in the next release of [Mapbender].*
 
 ## Definition
 
@@ -93,15 +93,16 @@ Git submodules is a part of git modularity,
 
 ## Description
 
-Now there are three submodules: [Mapbender], [FOM] and [OWS Proxy], located in ```application``` folder
+For now there are three submodules: [Mapbender], [FOM] and [OWS Proxy], located in ```application``` folder
 Each [submodule] contains one or many bundles. 
 
 ## Branches
-In order to change the [submodule] source code it's important to create a [branch]. 
+In order to change the [submodule] source code it is important to create a new [branch]. 
 
 ### Feature branch
 
-It's mandatory to use "feature/" prefix in branch name.
+It's mandatory to use "feature/" prefix in the branch name.
+
 Example:
 
 
@@ -121,7 +122,7 @@ git commit -m "Add some new stuff"
 git fetch -a
 git merge "release/3.0.5"
 ``` 
-* If the conflicts, resolve [them][Resolve git conflicts]
+* If conflicts arise, resolve [them][Resolve git conflicts]
 * Run tests
 * Push the changes on [github]
 ```sh
@@ -129,11 +130,11 @@ git push
 ``` 
 * Create [pull-request]
 
-Wait for the answer. We will checkout and review you code, to get merge it in.
+Then please wait for the feedback. We will check it out and review your code to merge it in the branch.
 
 ### Bug fix branch
 
-It's mandatory to use "hotfix/" prefix in branch name.
+It's mandatory to use "hotfix/" prefix in your branch name.
 
 Example:
 
@@ -153,20 +154,20 @@ git commit -m "Fix bug description"
 git fetch -a
 git merge "release/3.0.5"
 ``` 
-* If the conflicts, resolve [them][Resolve git conflicts]
-* Add tests relevant to the fixed bug 
+* If conflicts arise, resolve [them][Resolve git conflicts]
+* Run or add new tests relevant to the fixed bug 
 * Push the changes on [github]
 ```sh
 git push
 ``` 
 * Create [pull-request] on the current release branch
 
-Wait for the feedback. We will checkout, test and review you code, to get merge it in.
+Then please wait for the feedback. We will check it out, test and review your code to merge it in the branch.
 
 ### Release branch
 
-This branch can be changed only by project maintainer.
-It's mandatory to use *release/* prefix in branch name.
+This branch can only be changed by project maintainer.
+It's mandatory to use *release/* prefix in your branch name.
 
 Example:
 
@@ -184,8 +185,8 @@ git pull
 ```sh
 git merge "hotfix/bug-short-description"
 ``` 
-* If the conflicts, resolve [them][Resolve git conflicts]
-* Add tests relevant to the new feature
+* If conflicts arise, resolve [them][Resolve git conflicts]
+* Run or add new tests relevant to the new feature
 * Code review
 * Run tests
 * Save changes
@@ -200,27 +201,27 @@ git push
 
 ## Modules
 
-Special builds can be created that exclude subsets of Mapbender functionality. 
-This allows for smaller custom builds when the builder is certain 
-that those parts of Mapbender are not being used. 
-For example, an app that only used map view and did not need [Digitizer] functionality.
+Special builds can be created to exclude subsets of Mapbender functionalities. 
+This allows the benefits of smaller own builds, if the builder is certain 
+that those parts of Mapbender are not used. 
+For example, an app that only used map view, must have no [ Digitizer ] functionality.
 
-In the future release any module may be excluded except for core. 
+In the future release, each module can be excluded with the exception of the core. 
 
-In the past development bundles was a part of git [submodules]. 
-Now the days each module should be own git repository 
-and reuse the same directory structure. 
+In the past development the bundles were part of the git [submodules]. 
+Currently, each module should be a separate Git repository
+reusing the same directory structure.
 
 ### Rules
 
-It's _important_ to follow the rules:
+It is _important_ to follow the following rules:
 
 Each module is:
 
-* Is git repository
-* Is symfony bundle
-* Is mapbender bundle
-* Is composer library (has composer definition)
+* git repository
+* symfony bundle
+* mapbender bundle
+* composer library (has composer definition)
 
 Each module should have:
 
@@ -229,13 +230,13 @@ Each module should have:
 * identical structure
 * own license file
 * own function description README.md file
-* own CONTRIBUTING.md to get know other developers how to contribute in it
+* own CONTRIBUTING.md so that other developers can understand how those able to contribute in it.
 * own tests relevant to new features, elements or functionality
 
 ## Bundles 
 
-Bundle is a set of functionality, like a library, which can be used outside of the bundle.
-The goal of the Bundle is to restrict usage of global name space and switch or swap extend separated functionality.
+The Bundle contains a set of functionalities, like a library, which can be used outside of the bundle.
+The aim of the bundle it is to limit the use of global namespaces and change extensions and separate functions.
 
 
 #### Create Bundle 
@@ -251,9 +252,9 @@ To get involved, please look at [digitizer] structure as example.
 
 ### Definition
 
-Every Element must have an HTML element it is represented by. 
-In the most basic case, this can be a simple DIV element, but this can be complex as needed.
-For HTML generation Mapbender3 uses Twig. A minimal twig template for an element would like this:
+Each element must have an HTML-element by which it is represented. 
+In the simplest case this can be a simple DIV element, or if desired, be a very complex element.
+For the HTML generation Mapbender3 uses Twig. A minimal twig template for an item would look like this:
 
 Mapbender Element is:
 
@@ -279,9 +280,9 @@ Mapbender Element has own:
 
 ## Tests
 
-Write tests!
+Write your own tests!
 Follow our style guide.
-Write a good commit message.
+Write a good commit message. So we know what has been changed why. 
 
  Application function test
 ```bash
