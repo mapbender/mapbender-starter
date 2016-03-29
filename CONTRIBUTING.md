@@ -31,7 +31,7 @@ cd mapbender-starter
 
 Clone submodules 
 ```sh
-git submodule https://github.com/mapbender/mapbender.git --init --recursive --force
+git submodule update --init --recursive --force
 ```
 
 Switch to the application directory
@@ -63,7 +63,7 @@ app/console fom:user:resetroot --username root --password root --silent
 
 Install composer libraries
 ```sh
-../composer/composer.phar install 
+../composer/composer.phar install
 ```
 
 Now yo are ready to use your mapbender.
