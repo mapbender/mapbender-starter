@@ -1,8 +1,7 @@
 # Developer Guide
 
-This guide provides instructions (mostly as links) on how to build the repo 
-and implement improvements. 
-It will expand over time.
+Mapbender welcomes contribution from everyone. Here are the guidelines if you are thinking of helping us.
+
 
 ## Architecture
 
@@ -10,6 +9,10 @@ Mapbender is based on [Symfony framework](symfony) and uses composer to get exte
 
 ## Installation  
 
+Complete installation description you will find here:
+http://doc.mapbender3.org/mapbender-documentation/output/en/book/installation.html
+
+Here is a quick installation guide to get git-based developer edition of mapbender:
 
 Clone the project via SSH
 ```sh
@@ -41,26 +44,27 @@ Copy ```parameters.yml``` and edit to fit you system.
 cp app/config/parameters.yml.dist app/config/parameters.yml
 ```
 
-Create database 
+Create database and schema structures(tables, triggers, etc)
 ```sh
+app/console doctrine:database:create
 app/console doctrine:schema:create
 ```
 
-Fill ACL
+Import EPSG codes
 ```sh
-app/console doctrine:fixtures:load --acl
+app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
+app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
 ```
 
-Create root user and set set password
+Create root user and set the password
 ```sh
 app/console fom:user:resetroot --username root --password root --silent
 ```
 
 Install composer libraries
 ```sh
-composer install 
+../composer/composer.phar install 
 ```
-
 
 Now yo are ready.
 
@@ -75,10 +79,12 @@ we can have a chance of keeping on top of things.
 
 # Submodules
 
-*Notice: this workflow is deprecated, 
-This approach is used to develop and distribute Mapbender long time.
+
+*Notice: this workflow is deprecated.*
+
+*This approach is used to develop and distribute Mapbender long time.
 Course complexity and many changes in diverse bundles which located 
-in diverse submodules was decided to change development workflow.* 
+in diverse submodules was decided to change development workflow in the next release of [Mapbender].*
 
 ## Definition
 
@@ -87,19 +93,19 @@ Git submodules is a part of git modularity,
 
 ## Description
 
-Now there are three submodules: [Mapbender][Mapbender], [FOM][FOM] and [OWS Proxy][OWS Proxy], located in ```application``` folder
-Each [submodule] contains own bundles. 
+Now there are three submodules: [Mapbender], [FOM] and [OWS Proxy], located in ```application``` folder
+Each [submodule] contains one or many bundles. 
 
 ## Branches
-In order to change the source in [submodule] it's important to create a branch.
+In order to change the [submodule] source code it's important to create a [branch]. 
 
-### Feature [brunch]
+### Feature branch
 
-It's mandatory to use "feature/" prefix in brunch name.
-
+It's mandatory to use "feature/" prefix in branch name.
 Example:
 
-* Create brunch
+
+* Create branch
 ```sh
 cd mapbender
 git checkout -b "feature/mega-cool-feature-x"
@@ -125,13 +131,13 @@ git push
 
 Wait for the answer. We will checkout and review you code, to get merge it in.
 
-### Bug fix brunch
+### Bug fix branch
 
-It's mandatory to use "hotfix/" prefix in brunch name.
+It's mandatory to use "hotfix/" prefix in branch name.
 
 Example:
 
-* Create brunch
+* Create branch
 ```sh
 cd mapbender
 git checkout -b "hotfix/bug-short-description"
@@ -148,23 +154,23 @@ git fetch -a
 git merge "release/3.0.5"
 ``` 
 * If the conflicts, resolve [them][Resolve git conflicts]
-* Run tests
+* Add tests relevant to the fixed bug 
 * Push the changes on [github]
 ```sh
 git push
 ``` 
 * Create [pull-request] on the current release branch
 
-Wait for the answer. We will checkout and review you code, to get merge it in.
+Wait for the feedback. We will checkout, test and review you code, to get merge it in.
 
-#### Release brunch
+### Release branch
 
 This branch can be changed only by project maintainer.
-It's mandatory to use "release/" prefix in brunch name.
+It's mandatory to use *release/* prefix in branch name.
 
 Example:
 
-* Checkout release brunch
+* Checkout release branch
 ```sh
 cd mapbender
 git checkout "release/3.0.5"
@@ -179,6 +185,7 @@ git pull
 git merge "hotfix/bug-short-description"
 ``` 
 * If the conflicts, resolve [them][Resolve git conflicts]
+* Add tests relevant to the new feature
 * Code review
 * Run tests
 * Save changes
@@ -190,56 +197,91 @@ git commit -m "Merge 'hotfix/bug-short-description'"
 git push
 ``` 
 
----
 
-### Modules
+## Modules
 
-#### Create Module 
+Special builds can be created that exclude subsets of Mapbender functionality. 
+This allows for smaller custom builds when the builder is certain 
+that those parts of Mapbender are not being used. 
+For example, an app that only used map view and did not need [Digitizer] functionality.
 
-It's important to agree and follow rules:
+In the future release any module may be excluded except for core. 
+
+In the past development bundles was a part of git [submodules]. 
+Now the days each module should be own git repository 
+and reuse the same directory structure. 
+
+### Rules
+
+It's _important_ to follow the rules:
 
 Each module is:
 
 * Is git repository
 * Is symfony bundle
 * Is mapbender bundle
-* Is composer library (composer.json)
+* Is composer library (has composer definition)
 
 Each module should have:
 
+* only one bundle 
+* only one primary namespace 
 * identical structure
 * own license file
-* own README file, which describe the functionality and using
-* own CONTRIBUTING to get know other developers how to contribute in it
+* own function description README.md file
+* own CONTRIBUTING.md to get know other developers how to contribute in it
+* own tests relevant to new features, elements or functionality
 
+## Bundles 
 
-### Bundles 
-
-Bundle is a set of functionality, like a library, which ca be used outside of the bundle.
-The goal of the Bundle is to restrict usage of global name space and switch, swap and extend separated functionality.
-In the past development many bundle was a part of git submodules. Now the days each bundle should be 
-own git repository and reuse the same directory structure to implement new things. 
+Bundle is a set of functionality, like a library, which can be used outside of the bundle.
+The goal of the Bundle is to restrict usage of global name space and switch or swap extend separated functionality.
 
 
 #### Create Bundle 
 
-In order to create bundle, please look an example structure at [digitizer].
-There is
+* Create git repository outside of Mapbender, as own project
+* Create composer.json 
+* Create bundle 
+* Follow module [rules]
 
+To get involved, please look at [digitizer] structure as example.
 
 ## Elements
-## Create element
 
- mapbender:assets:dump                 Dump all Mapbender application assets.
+### Definition
 
-```app/console mapbender:generate:element``` - Is deprecated method to generate one element, please don't use it.
+Every Element must have an HTML element it is represented by. 
+In the most basic case, this can be a simple DIV element, but this can be complex as needed.
+For HTML generation Mapbender3 uses Twig. A minimal twig template for an element would like this:
 
-  mapbender:generate:template           Generates a Mapbender application template
-  mapbender:generate:translation        Generates a Mapbender translation
+Mapbender Element is:
+
+* Symfony controller(API) 
+* jQuery widget
+* Part of bundle
+
+Mapbender Element has own:
+
+* SCSS/CSS style(s)
+* translation(s) as TWIG file
+* JavaScript front end jQuery widget
+* administration form type to set, store and restore configuration  
 
 
-#### Testing
 
+## Creation
+
+
+
+
+
+
+## Tests
+
+Write tests!
+Follow our style guide.
+Write a good commit message.
 
  Application function test
 ```bash
@@ -247,23 +289,7 @@ cd application
 vendor/phpunit/phpunit/phpunit -c app/phpunit.xml mapbender/src/Mapbender/ManagerBundle/Tests/ApplicationTest.php
 ```
 
-
-### List application commands
-```sh
-app/console
-```
-
-
-### Unit tests
-
-Write tests.
-Follow our style guide.
-Write a good commit message.
-
-
-## Building Bundle
-
-# Additional Resources
+# Resources
 
 ## Submodules
 
@@ -272,7 +298,9 @@ Write a good commit message.
 * [OWS Proxy] - OWS Proxy bundle.
 
 ## Modules
+
 * [Digitizer] - Digitalizing bundle, which contains geometries services
+* [DataStore] - DataStore bundle, which contains geometries services
 
 ## Libraries
 * [Symfony framework](http://www.symfony.com)
@@ -281,10 +309,16 @@ Write a good commit message.
 * [General GitHub documentation](https://help.github.com/)
 * [GitHub pull request documentation](https://help.github.com/send-pull-requests/)
 
-[pull-request]: https://help.github.com/send-pull-requests
+
+[pull-request]: https://help.github.com/send-pull-requests "Pull requests"
+[Resolve git conflicts]: https://github.com/conflicts/resolve "Resolve git conflicts"
+[branch]: https://help.github.com/branch "Branching"
+
+[submodule]: https://git-scm.com/book/de/v1/Git-Tools-Submodule  "Git submodule"
 [Mapbender]: https://github.com/mapbender/mapbender  "Mapbender submodule"
 [FOM]: https://github.com/mapbender/fom  "FOM submodule"
 [OWS Proxy]: https://github.com/mapbender/owsproxy3  "OWS proxy submodule"
-[submodule]: https://git-scm.com/book/de/v1/Git-Tools-Submodule  "Git submodule"
+[rules]: #rules "rules"
+
 [Digitizer]: https://github.com/mapbender/mapbender-digitizer "Mapbender digitizer module"
-[Resolve git conflicts]: https://github.com/conflicts/resolve "Resolve git conflicts"
+[DataStore]: https://github.com/mapbender/data-source "Mapbender data source"
