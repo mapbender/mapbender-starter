@@ -294,8 +294,8 @@ vendor/phpunit/phpunit/phpunit -c app/phpunit.xml mapbender/src/Mapbender/Manage
 
 ## Submodules
 
-* [Mapbender] - Contains Core, Manager and Print [bundle]
-* [FOM] - *F*riends *o*f *M*apbender submodule contains some additional bundles.
+* [Mapbender] - Contains Core, Manager and Print [bundles]
+* [FOM] - **F**riends **O**f **M**apbender [submodule] contains some additional bundles.
 * [OWS Proxy] - OWS Proxy bundle.
 
 ## Modules
