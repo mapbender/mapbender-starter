@@ -18,7 +18,6 @@
         "php": ">=5.3.3",
         "symfony/symfony": "2.3.x",
         "doctrine/common": "2.5.*",
-        "doctrine/cache": "1.5.x",
         "doctrine/orm": "~2.2,>=2.2.3",
         "doctrine/doctrine-bundle": "1.2.x",
         "twig/extensions": "1.x",
