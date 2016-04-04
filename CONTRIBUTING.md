@@ -3,11 +3,11 @@
 Mapbender welcomes contributions from all members. You are welcome to join us in the development, if you consider the following guidelines.
 
 
-## Architecture
+# Architecture
 
 Mapbender is based on [Symfony framework](symfony) and uses composer to get external libraries and own bundle-modules.
 
-## Installation  
+# Installation  
 
 You can find the complete installation description here:
 http://doc.mapbender3.org/mapbender-documentation/output/en/book/installation.html
@@ -199,51 +199,65 @@ git push
 ``` 
 
 
-## Modules
+# Modules
 
-Special builds can be created to exclude subsets of Mapbender functionalities. 
-This allows the benefits of smaller own builds, if the builder is certain 
-that those parts of Mapbender are not used. 
-For example, an app that only used map view, must have no [ Digitizer ] functionality.
+Module is a new mapbender concept, based on [Symfony modularity rules](http://www.symfony.com) 
+and [composer] dependency manager. 
 
-In the future release, each module can be excluded with the exception of the core. 
+Special builds can be created that exclude subsets of Mapbender functionality. 
+This allows for smaller custom builds when the builder is certain 
+that those parts of Mapbender are not being used. 
+For example, an application that only use map view and did not need [Digitizer] functionality.
 
-In the past development the bundles were part of the git [submodules]. 
-Currently, each module should be a separate Git repository
-reusing the same directory structure.
+In the future release any module may be excluded except for core. 
 
-### Rules
+In the past development bundles was a part of git [submodules]. 
+Now the days each module should be own git repository 
+and reuse the same directory structure. 
 
-It is _important_ to follow the following rules:
+## Rules
+
+It's _important_ to follow the rules:
 
 Each module is:
 
-* git repository
-* symfony bundle
-* mapbender bundle
-* composer library (has composer definition)
+* Is [git] repository
+* Is [Symfony] [bundle]
+* Is mapbender [bundle]
+* Is [composer] library (has [composer] definition)
 
 Each module should have:
 
-* only one bundle 
+* only one [bundle]
 * only one primary namespace 
 * identical structure
-* own license file
-* own function description README.md file
-* own CONTRIBUTING.md so that other developers can understand how those able to contribute in it.
-* own tests relevant to new features, elements or functionality
+* own [license] file
+* own function description [README.md] file
+* own [CONTRIBUTING.md] describes how other developers should install, setup and contribute in it
+* own [tests] relevant to new [features], [elements] or functionality
 
 ## Bundles 
 
-The Bundle contains a set of functionalities, like a library, which can be used outside of the bundle.
-The aim of the bundle it is to limit the use of global namespaces and change extensions and separate functions.
+Bundle is a set of functionality, synonym to library, which can be created and used outside of the Mapbender.
+The goal of the Bundle is to restrict usage of global name space and switch or swap extend separated functionality.
 
+### Bundle structure
+ 
+Is a special set of folders and files that look so:
 
-#### Create Bundle 
+* *Component* - Contains _components_ in other words _services_, 
+    this contains buisness logic in classes. The _components_ are used by API's
+* *DependencyInjection* - Contains only one file, this makes in _magical_ way [components] available as [services], 
+    if they _registred_ in _Resources/config/services.xml_ [bundle] folder
+* *Documents* - Contains documents related to the [bundle]. [MD] for text and [PUML] for charts formats are preferred.
+* *Element* - Contains Mapbender [elements]. This folder isn't [symfony] conform.
+* 
 
-* Create git repository outside of Mapbender, as own project
-* Create composer.json 
-* Create bundle 
+### Create Bundle (Module)
+
+* Create [git] repository outside of Mapbender, as own project
+* Create [composer.json]
+* Create [bundle structure](#Bundle%20structure)
 * Follow module [rules]
 
 To get involved, please look at [digitizer] structure as example.
@@ -252,37 +266,35 @@ To get involved, please look at [digitizer] structure as example.
 
 ### Definition
 
-Each element must have an HTML-element by which it is represented. 
-In the simplest case this can be a simple DIV element, or if desired, be a very complex element.
-For the HTML generation Mapbender3 uses Twig. A minimal twig template for an item would look like this:
+Elements can be a part of each [bundle]
+and should be stored in *SomeBundle/SomeElementName* folder.
 
-Mapbender Element is:
+Each Mapbender element is:
 
-* Symfony controller(API) 
-* jQuery widget
-* Part of bundle
+* central part of Mapbender configurable functionality.
+* [Symfony] controller([API]) 
+* [jQuery] [widget]
+* Part of [bundle]
+* Child of [Element class]
 
-Mapbender Element has own:
+Each Mapbender element has own:
 
-* SCSS/CSS style(s)
-* translation(s) as TWIG file
-* JavaScript front end jQuery widget
-* administration form type to set, store and restore configuration  
-
+* JavaScript front end [jQuery] [widget]
+* HTML [DOM] element
+* translation(s) as [TWIG] file
+* [SCSS]/[CSS] style(s)
+* [Backend] [API] 
+* administration form type to set, store and restore configuration
 
 
 ## Creation
 
 
-
-
-
-
 ## Tests
 
-Write your own tests!
+Write tests!
 Follow our style guide.
-Write a good commit message. So we know what has been changed why. 
+Write a good commit message.
 
  Application function test
 ```bash
@@ -295,21 +307,38 @@ vendor/phpunit/phpunit/phpunit -c app/phpunit.xml mapbender/src/Mapbender/Manage
 ## Submodules
 
 * [Mapbender] - Contains Core, Manager and Print [bundles]
-* [FOM] - **F**riends **O**f **M**apbender [submodule] contains some additional bundles.
+* [FOM] - *F*riends *o*f *M*apbender [submodule] contains some additional [bundles].
 * [OWS Proxy] - OWS Proxy bundle.
 
 ## Modules
 
-* [Digitizer] - Digitalizing bundle, which contains geometries services
-* [DataStore] - DataStore bundle, which contains geometries services
+* [Digitizer] - Digitalizing [bundle], which contains geometries [services]
+* [DataStore] - DataStore [bundle] contains data drivers and [services]
 
 ## Libraries
-* [Symfony framework](http://www.symfony.com)
+* [Symfony framework]
 * [PHPUnit documentation](https://phpunit.de/)
 * [Composer documentation](https://getcomposer.org/doc/)
 * [General GitHub documentation](https://help.github.com/)
 * [GitHub pull request documentation](https://help.github.com/send-pull-requests/)
 
+[rules]: #rules "Rules"
+[rule]: #rules "Rules"
+[bundle]: #bundle "Bundle"
+[bundles]: #bundle "Bundle"
+[test]: #tests "Tests"
+[tests]: #tests "Tests"
+[services]: #services "Symfony Services"
+
+[Symfony]: http://www.symfony.com "Symfony framework"
+[Symfony framework]: http://www.symfony.com "Symfony framework"
+[Composer]: https://getcomposer.org/doc/
+[Composer]: https://getcomposer.org/doc/00-intro.md "Composer"
+[git]: https://git-scm.com/ "Git"
+
+
+[Digitizer]: https://github.com/mapbender/mapbender-digitizer "Mapbender digitizer module"
+[DataStore]: https://github.com/mapbender/data-source "Mapbender data source"
 
 [pull-request]: https://help.github.com/send-pull-requests "Pull requests"
 [Resolve git conflicts]: https://github.com/conflicts/resolve "Resolve git conflicts"
@@ -319,7 +348,3 @@ vendor/phpunit/phpunit/phpunit -c app/phpunit.xml mapbender/src/Mapbender/Manage
 [Mapbender]: https://github.com/mapbender/mapbender  "Mapbender submodule"
 [FOM]: https://github.com/mapbender/fom  "FOM submodule"
 [OWS Proxy]: https://github.com/mapbender/owsproxy3  "OWS proxy submodule"
-[rules]: #rules "rules"
-
-[Digitizer]: https://github.com/mapbender/mapbender-digitizer "Mapbender digitizer module"
-[DataStore]: https://github.com/mapbender/data-source "Mapbender data source"
