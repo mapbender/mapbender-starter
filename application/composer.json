@@ -83,7 +83,7 @@
                 "type": "component",
                 "version": "4.0.1",
                 "dist": {
-                    "url": "http://github.com/jamesallardice/Placeholders.js/archive/v4.0.1.zip",
+                    "url": "https://github.com/jamesallardice/Placeholders.js/archive/v4.0.1.zip",
                     "type": "zip"
                 },
                 "extra": {
@@ -103,7 +103,7 @@
                 "type": "component",
                 "version": "2.0.4",
                 "dist": {
-                    "url": "http://github.com/ROMB/jquery-dialogextend/archive/2.0.4.zip",
+                    "url": "https://github.com/ROMB/jquery-dialogextend/archive/2.0.4.zip",
                     "type": "zip"
                 },
                 "extra": {
@@ -120,7 +120,7 @@
                 "type": "component",
                 "version": "0.12.6",
                 "dist": {
-                    "url": "http://github.com/Igosuki/compass-mixins/archive/v0.12.6.zip",
+                    "url": "https://github.com/Igosuki/compass-mixins/archive/v0.12.6.zip",
                     "type": "zip"
                 }
             }
@@ -132,7 +132,7 @@
                 "type": "component",
                 "version": "1.4.0",
                 "dist": {
-                    "url": "http://github.com/FontFaceKit/open-sans/archive/1.4.0.zip",
+                    "url": "https://github.com/FontFaceKit/open-sans/archive/1.4.0.zip",
                     "type": "zip"
                 },
                 "extra": {
