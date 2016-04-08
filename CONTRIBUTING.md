@@ -50,10 +50,14 @@ app/console doctrine:database:create
 app/console doctrine:schema:create
 ```
 
+Loads the applications from the "mapbender.yml" into a mapbender database
+```sh
+app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
+```
+
 Import EPSG codes
 ```sh
 app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
-app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
 ```
 
 Create root user and set the password
@@ -201,7 +205,7 @@ git push
 
 # Modules
 
-Module is a new mapbender concept, based on [Symfony modularity rules](http://www.symfony.com) 
+Module is a new part of mapbender concept, based on [Symfony modularity rules](http://www.symfony.com) 
 and [composer] dependency manager. 
 
 Special builds can be created that exclude subsets of Mapbender functionality. 
@@ -246,17 +250,19 @@ The goal of the Bundle is to restrict usage of global name space and switch or s
 Is a special set of folders and files that look so:
 
 * *Component* - Contains _components_ in other words _services_, 
-    this contains buisness logic in classes. The _components_ are used by API's
+    this contains buisness logic in classes. The _components_ are used by API's-
+* *Exception* - Contains exceptions.
+* *DataFixtures* - Fixtures are used to load a controlled set of data into a database. This data can be used for testing or could be the initial data required for the application to run smoothly
+* *EventListener* - Contains event listeners
 * *DependencyInjection* - Contains only one file, this makes in _magical_ way [components] available as [services], 
     if they _registred_ in _Resources/config/services.xml_ [bundle] folder
 * *Documents* - Contains documents related to the [bundle]. [MD] for text and [PUML] for charts formats are preferred.
 * *Element* - Contains Mapbender [elements]. This folder isn't [symfony] conform.
-* 
 
 ### Create Bundle (Module)
 
 * Create [git] repository outside of Mapbender, as own project
-* Create [composer.json]
+* Create [composer].json
 * Create [bundle structure](#Bundle%20structure)
 * Follow module [rules]
 
@@ -275,13 +281,13 @@ Each Mapbender element is:
 * [Symfony] controller([API]) 
 * [jQuery] [widget]
 * Part of [bundle]
-* Child of [Element class]
+* Child of [Element] class
 
 Each Mapbender element has own:
 
 * JavaScript front end [jQuery] [widget]
 * HTML [DOM] element
-* translation(s) as [TWIG] file
+* [translation](s) as [TWIG] file
 * [SCSS]/[CSS] style(s)
 * [Backend] [API] 
 * administration form type to set, store and restore configuration
@@ -328,13 +334,31 @@ vendor/phpunit/phpunit/phpunit -c app/phpunit.xml mapbender/src/Mapbender/Manage
 [bundles]: #bundle "Bundle"
 [test]: #tests "Tests"
 [tests]: #tests "Tests"
+[features]: #features
+[feature]: #features
+[elements]: #element
+[element]: #element
 [services]: #services "Symfony Services"
+[components]: #element
 
 [Symfony]: http://www.symfony.com "Symfony framework"
 [Symfony framework]: http://www.symfony.com "Symfony framework"
 [Composer]: https://getcomposer.org/doc/
 [Composer]: https://getcomposer.org/doc/00-intro.md "Composer"
 [git]: https://git-scm.com/ "Git"
+[API]: #API
+[jQuery]: #jQuery
+[widget]: #Widget
+[license]: #license
+[README.md]: #readme
+[CONTRIBUTING.md]: #contributing
+[MD]: #markdown
+[PUML]: #PlaintUML
+[DOM]: #dom
+[SCSS]: #scss
+[CSS]: #scss
+[TWIG]: #scss
+[translation]: #translation
 
 
 [Digitizer]: https://github.com/mapbender/mapbender-digitizer "Mapbender digitizer module"
