@@ -67,7 +67,7 @@ app/console fom:user:resetroot --username root --password root --silent
 
 Install composer libraries
 ```sh
-../composer/composer.phar install
+../composer/composer.phar update -o
 ```
 
 Now yo are ready to use your mapbender.
@@ -295,17 +295,38 @@ Each Mapbender element has own:
 
 ## Creation
 
+## Templates
+
+There is very deprecated templates named "Classic template", this one 
+should be never used. The only reason why it's still in the list is 
+backwards capability to Mapbender 3.0.x based projects.
+
+*Responsive* isn't ready and should be not used. This template is just a 
+background for future development or as base for new template. Use it 
+at your own risk.
+
+*Fullscreen* - is the main template. This should be used for desktop 
+based application.
+
+*Mabender mobile template* - is the current template this is in development
+and can be used for simple task. Use at own risk.
+
+
+### Styling
+
+Application template styling can be done by using "CSS" tab by editing.
+By save CSS/SCSS text will be parsed ann
 
 ## Tests
 
-Write tests!
-Follow our style guide.
+Don't forget to write tests!
+Follow our [style guide].
 Write a good commit message.
 
  Application function test
 ```bash
 cd application 
-vendor/phpunit/phpunit/phpunit -c app/phpunit.xml mapbender/src/Mapbender/ManagerBundle/Tests/ApplicationTest.php
+bin/phpunit -c app mapbender/src/Mapbender/ManagerBundle/Tests/ApplicationTest.php
 ```
 
 # Resources
@@ -340,6 +361,7 @@ vendor/phpunit/phpunit/phpunit -c app/phpunit.xml mapbender/src/Mapbender/Manage
 [element]: #element
 [services]: #services "Symfony Services"
 [components]: #element
+[style guide]: #element
 
 [Symfony]: http://www.symfony.com "Symfony framework"
 [Symfony framework]: http://www.symfony.com "Symfony framework"
