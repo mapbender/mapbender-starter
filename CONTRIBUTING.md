@@ -1,13 +1,18 @@
 # Developer Guide
 
-Mapbender welcomes contributions from all members. 
+Mapbender welcomes contributions from all members, so you are welcome to join us in the development!
 
-You are welcome to join us in the development, if you consider the following guidelines.
+Third-party patches are essential for the preservation of high standards in [Mapbender].
 
+We simply can't access the huge number of platforms and myriad configurations for running [Mapbender]. 
+
+We want it as easy as possible to carry out changes to get the [modules] in your environment to run. 
+
+There are a few [guidelines][rules] that we need contributors to follow so that we can have a chance of keeping on top of things.
 
 # Architecture 
 
-Mapbender is based on [Symfony framework] and uses composer to get external libraries and own bundle-modules.
+Mapbender is based on [Symfony framework] and uses [composer] to manage external and intenal libraries as own [modules][module].
 
 # Installation  
 
@@ -87,17 +92,6 @@ Server running on http://localhost:8000
 So now open the URL in your favorite browser. 
 
 For development reason it's recommended to use Chromium(Chrome) or Firefox.
-
-# How to contribute
-
-Third-party patches are essential for the preservation of high standards in Mapbender.
-
-We simply can't access the huge number of platforms and myriad configurations for running Mapbender. 
-
-We want it as easy as possible to carry out changes to get the modules in your environment to run. 
-
-There are a few guidelines that we need contributors to follow so that we can have a chance of keeping on top of things.
-
 
 # Modules
 
@@ -526,6 +520,8 @@ bin/phpunit -c app vendor/mapbender/digitizer/Mapbender/DigitizerBundle/Tests/Fe
 [template]: #templates
 [translation]: #translations
 [translations]: #translations
+[modules]: #modules
+[module]: #modules
 
 [services]: http://symfony.com/doc/2.3/book/service_container.html "Symfony Services"
 [components]: http://symfony.com/doc/current/components/index.html
