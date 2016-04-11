@@ -310,6 +310,7 @@ Each [submodule] contains one or many bundles.
 Elements can be a part of each [bundle]
 and should be stored in *SomeBundle/SomeElementName* folder.
 
+
 Each Mapbender element is:
 
 * central part of Mapbender configurable functionality.
@@ -317,6 +318,7 @@ Each Mapbender element is:
 * [jQuery] [widget]
 * Part of [bundle]
 * Child of [Element] class
+
 
 Each Mapbender element has own:
 
