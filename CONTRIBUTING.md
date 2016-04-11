@@ -16,10 +16,9 @@ Mapbender is based on [Symfony framework] and uses [composer] to manage external
 
 # Installation  
 
-You can find the complete installation description here:
-http://doc.mapbender3.org/mapbender-documentation/output/en/book/installation.html
+You can find the complete installation description [here](http://doc.mapbender3.org/en/book/installation/installation_git.html):
 
-Here is a quick installation guide to get git-based developer edition of mapbender:
+Here is a quick installation guide to get [git]-based "developer edition" of [Mapbender]:
 
 Clone the project via SSH
 ```sh
@@ -549,7 +548,7 @@ bin/phpunit -c app vendor/mapbender/digitizer/Mapbender/DigitizerBundle/Tests/Fe
 [Resolve git conflicts]: https://github.com/conflicts/resolve "Resolve git conflicts"
 [branch]: https://help.github.com/branch "Branching"
 [submodule]: https://git-scm.com/book/en/v2/Git-Tools-Submodules  "Git submodule"
-[Mapbender]: https://github.com/mapbender/mapbender  "Mapbender submodule"
+[Mapbender]: https://mapbender3.org/  "Mapbender3"
 [FOM]: https://github.com/mapbender/fom  "FOM submodule"
 [OWS Proxy]: https://github.com/mapbender/owsproxy3  "OWS proxy submodule"
 [Digitizer]: https://github.com/mapbender/mapbender-digitizer "Mapbender digitizer module"
