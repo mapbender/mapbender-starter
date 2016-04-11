@@ -35,7 +35,7 @@ or
 git clone https://github.com/mapbender/mapbender-starter.git
 ```
 
-## Switch to the project directory
+## Switch to project directory
 ```sh
 cd mapbender-starter
 ```
@@ -178,13 +178,74 @@ Read more about best practices for reusable [bundles] [here](http://symfony.com/
 
 ## Bundle creation
 
-* Create [git] repository outside of Mapbender, as own project
-* Create [composer].json
-* Create and fill [bundle structure](#Bundle%20structure) 
-* Follow [module] [rules]
-* Publish [git] repository. [Github] is preferred.
-* Go to mapbender project directory
-* Register new repository as composer module in [composer].json and add to require list
+Create [git] repository outside of Mapbender, as own project
+
+```sh
+cd ~/Projects
+mkdir new-awesome-bundle
+cd new-awesome-bundle
+git init 
+```
+
+### Bundle composer.json example 
+
+Create [composer].json as in example.
+
+Dont forget to fill it up:
+* **authors** - is need to know, who is technical director of the [module]. 
+* **name** - unique name of the [module]. You can check the existens by [composer packagist](https://packagist.org/) service. 
+* **license** - [license] short name
+* **description** - describes the [module]
+* **autoload** - [psr-0] Path to get load namespace classes well.
+* **target-dir** - Where [bundle] root should be placed in.
+
+Better if **autoload** and **target-dir** will be copied from example as is, so only [bundle] names should be changed.
+
+```sh
+{
+    "name": "mapbender/new-awesome-bundle",
+    "description": "New awesome bundle description",
+    "keywords": ["mapbender", "awesome","geo"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {"name": "Andriy Oblivantsev"}
+    ],
+    "require": {
+        "php": ">=5.3.3",
+    },
+    "autoload": {
+		"psr-0": {"Mapbender\\NewAwesomeBundle": "."}
+    },
+    "target-dir": "Mapbender/NewAwesomeBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
+```
+
+
+### Create bundle 
+ 
+In order to create [bundle], please take a look to [bundle structure](#Bundle%20structure) 
+**Don't forget to follow [module] [rules]**!
+
+### Save bundle 
+
+* Commit changes
+* [Create](https://help.github.com/articles/create-a-repo/) [GitHub] repository 
+* [Add remote](https://help.github.com/articles/adding-a-remote/) 
+* [Push](https://help.github.com/articles/pushing-to-a-remote/)  changes to [GitHub]
+* [Switch to to mapbender project directory][#switch-to-project-directory]
+
+
+### Register module
+
+Register new [git] [repository] as [composer] [module]/[bundle] in [composer].json.
+
+Example: 
 
 ```json 
 {
@@ -195,18 +256,19 @@ Read more about best practices for reusable [bundles] [here](http://symfony.com/
         "mapbender/new-awesome-bundle": "*"
     },
     "repositories": [
-        {"type": "git","url": "https://github.com/mapbender/new-awesome-bundle .git"}
+        {"type": "git","url": "https://github.com/mapbender/new-awesome-bundle.git"}
     ]
 }
 ```
 
-* Update composer
+
+### Update composer
 
 ```sh
 ../composer.phar update -o
 ```
 
-* Go to module directory
+### Go to module directory
 
 ```sh
 cd vendor/mapbender/new-awesome-bundle/Mapbender/NewAwesomeBundle/
