@@ -307,15 +307,16 @@ Is a special set of folders and files:
 * **README.md** - Contains [README] text.
 * **CONTRIBUTING.md** - Contains [CONTRIBUTING] text.
 
+Read more about best practices for reusable [bundles] [here](http://symfony.com/doc/2.3/cookbook/bundles/best_practices.html)
 
-## Create Bundle (Module)
+
+## Bundle creation
 
 * Create [git] repository outside of Mapbender, as own project
 * Create [composer].json
 * Create and filll [bundle structure](#Bundle%20structure) 
 * Follow module [rules]
 * Publish [git] repository. [Github] is preferred.
-
 * Go to mapbender project directory
 * Register new repository as composer module in [composer.json] and add to require list
 
@@ -346,15 +347,16 @@ Is a special set of folders and files:
 ../composer.phar update -o
 ```
 
-* Go to module directory 
+* Go to module directory
 ```sh
 cd vendor/mapbender/new-awesome-bundle/Mapbender/NewAwesomeBundle/
 ```
 
+This is normal [git] repository, [bundle] and [composer] package at the same. 
+
 * Now you ready to change and commit code. 
 
 To get involved, please look at [digitizer] structure as example.
-
 
 # Elements
 
