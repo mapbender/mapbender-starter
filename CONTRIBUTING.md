@@ -264,7 +264,7 @@ Example:
 
 
 
-### Update composer after add new module.
+### Update composer after add new module
 
 ```sh
 ../composer.phar update -o
@@ -278,7 +278,7 @@ Example:
 cd vendor/mapbender/new-awesome-bundle/Mapbender/NewAwesomeBundle/
 ```
 
-This is normal [git] repository, [bundle] and [composer] package at the same. 
+This is normal [git] repository, [bundle] and [composer] package at the same time. 
 
 Now you ready to change and commit code directly in the project. 
 
