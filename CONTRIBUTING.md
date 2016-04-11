@@ -262,11 +262,15 @@ Example:
 }
 ```
 
-Update composer after add new module.
+
+
+### Update composer after add new module.
 
 ```sh
 ../composer.phar update -o
 ```
+
+
 
 ### Switch to module directory
 
