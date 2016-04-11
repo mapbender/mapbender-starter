@@ -1,11 +1,13 @@
 # Developer Guide
 
-Mapbender welcomes contributions from all members. You are welcome to join us in the development, if you consider the following guidelines.
+Mapbender welcomes contributions from all members. 
+
+You are welcome to join us in the development, if you consider the following guidelines.
 
 
-# Architecture
+# Architecture 
 
-Mapbender is based on [Symfony framework](symfony) and uses composer to get external libraries and own bundle-modules.
+Mapbender is based on [Symfony framework] and uses composer to get external libraries and own bundle-modules.
 
 # Installation  
 
@@ -75,29 +77,30 @@ Now yo are ready to use your mapbender.
 # How to contribute
 
 Third-party patches are essential for the preservation of high standards in Mapbender.
-We simply can't access the huge number of platforms and myriad configurations 
-for running Mapbender. 
+
+We simply can't access the huge number of platforms and myriad configurations for running Mapbender. 
+
 We want it as easy as possible to carry out changes to get the modules in your environment to run. 
-There are a few guidelines that we need contributors to follow so that 
-we can have a chance of keeping on top of things.
+
+There are a few guidelines that we need contributors to follow so that we can have a chance of keeping on top of things.
 
 # Submodules
 
 
 *Notice: this workflow is deprecated.*
 
-*This approach has been used a long time to develop and distribute Mapbender.
+This approach has been used a long time to develop and distribute Mapbender.
+
 Due to the course complexity and many changes in diverse bundles, located in different sub-modules, 
 it was decided to adapt the development workflow in the next release of [Mapbender].*
 
 ## Definition
 
-[Submodule] - git repository, which is linked on the main "mapbender-starter" repository.
-Git submodules is a part of git modularity, 
+[Submodule] - is git repository, which is linked to primary "mapbender-starter" repository.
 
 ## Description
 
-For now there are three submodules: [Mapbender], [FOM] and [OWS Proxy], located in ```application``` folder
+For now there are three submodules: [Mapbender], [FOM] and [OWS Proxy], located in ```application``` folder.
 Each [submodule] contains one or many bundles. 
 
 ## Branches
@@ -222,13 +225,16 @@ Module is a new part of mapbender concept, based on [Symfony modularity rules](h
 and [composer] dependency manager. 
 
 Special builds can be created that exclude subsets of Mapbender functionality. 
+
 This allows for smaller custom builds when the builder is certain 
 that those parts of Mapbender are not being used. 
+
 For example, an application that only use map view and did not need [Digitizer] functionality.
 
 In the future release any module may be excluded except for core. 
 
 In the past development bundles was a part of git [submodules]. 
+
 Now the days each module should be own git repository 
 and reuse the same directory structure. 
 
@@ -262,15 +268,25 @@ The goal of the Bundle is to restrict usage of global name space and switch or s
  
 Is a special set of folders and files that look so:
 
-* *Component* - Contains _components_ in other words _services_, 
+* **Command/** - Contains commands. Read more about commands [here] (http://symfony.com/doc/current/components/console/introduction.html#creating-a-basic-command)  
+* **Controllers/** - Contains _controllers_ in other words public [API]'s. 
+* **Component/** - Contains _components_ in other words _services_, 
     this contains buisness logic in classes. The _components_ are used by controllers or other components
-* *Exception* - Contains exceptions.
-* *DataFixtures* - Fixtures are used to load a controlled set of data into a database. This data can be used for testing or could be the initial data required for the application to run smoothly
-* *EventListener* - Contains event listeners
-* *DependencyInjection* - Contains only one file, this makes in _magical_ way [components] available as [services], 
+* **DataFixtures/** - Fixtures are used to load a controlled set of data into a database. This data can be used for testing or could be the initial data required for the application to run smoothly
+* **DependencyInjection/** - Contains only one file, this makes in _magical_ way [components] available as [services], 
     if they _registred_ in _Resources/config/services.xml_ [bundle] folder
-* *Documents* - Contains documents related to the [bundle]. [MD] for text and [PUML] for charts formats are preferred.
-* *Element* - Contains Mapbender [elements]. This folder isn't [symfony] conform.
+* **Documents/** - Contains documents related to the [bundle]. [MD] for text and [PUML] for charts formats are preferred.
+* **Exception/** - Contains exceptions.
+* **Element/** - Contains Mapbender [elements]. This folder isn't [symfony] conform.
+* **Element/Type** - Contains Mapbender [elements] administration types/forms.
+* **Entity/** - Contains entities.
+* **EventListener/** - Contains event listeners.
+* **Resources/config/** - Contains configurations.
+* **Resources/public/** - Contains web resources ([CSS], JS, images)
+* **Resources/views/** - Contains [twig] and php templates.
+* **Resources/translations/** - Contains [translations].
+* **Tests/** - Contains [PHPUnit] and functional tests.
+
 
 ## Create Bundle (Module)
 
@@ -318,9 +334,10 @@ In order to introduce new element to show by add new element,
 it should be registered in main [bundle] file in "getElements" method, 
 located in root folder of the [bundle].
 
-Example:
+### Example:
  * Bundle file: Mapbender/DigitizerBundle/MapbenderDigitizerBundle.php
-```
+ 
+```php
 ...
 class MapbenderDigitizerBundle extends MapbenderBundle
 {
@@ -355,8 +372,8 @@ at your own risk.
 
 ## Styling
 
-Application template styling can be done by using "CSS" tab by editing.
-By save CSS/SCSS text will be parsed and stored to use of application top 
+Application template styling can be done by using [CSS] tab by editing.
+By save [CSS]/[SCSS] text will be parsed and stored to use of application top 
 
 # Tests
 
@@ -387,7 +404,7 @@ bin/phpunit -c app vendor/mapbender/digitizer/Mapbender/DigitizerBundle/Tests/Fe
 ## Submodules
 
 * [Mapbender] - Contains Core, Manager and Print [bundles]
-* [FOM] - *F*riends *o*f *M*apbender [submodule] contains some additional [bundles].
+* [FOM] - **F**riends **o**f **M**apbender [submodule] contains some additional [bundles].
 * [OWS Proxy] - OWS Proxy bundle.
 
 ## Modules
@@ -430,6 +447,7 @@ bin/phpunit -c app vendor/mapbender/digitizer/Mapbender/DigitizerBundle/Tests/Fe
 [MD]: https://guides.github.com/features/mastering-markdown/ "Markdown"
 [PUML]: http://plantuml.com/ "PlaintUML"
 [DOM]: http://www.w3schools.com/js/js_htmldom.asp
+[PHPUnit] https://phpunit.de/getting-started.html
 [SCSS]: http://sass-lang.com/guide "SCSS"
 [CSS]: http://www.w3schools.com/css/css_intro.asp "CSS"
 [TWIG]: http://twig.sensiolabs.org/ "TWIG"
@@ -440,7 +458,7 @@ bin/phpunit -c app vendor/mapbender/digitizer/Mapbender/DigitizerBundle/Tests/Fe
 [pull-request]: https://help.github.com/send-pull-requests "Pull requests"
 [Resolve git conflicts]: https://github.com/conflicts/resolve "Resolve git conflicts"
 [branch]: https://help.github.com/branch "Branching"
-[submodule]: https://git-scm.com/book/de/v1/Git-Tools-Submodule  "Git submodule"
+[submodule]: https://git-scm.com/book/en/v2/Git-Tools-Submodules  "Git submodule"
 [Mapbender]: https://github.com/mapbender/mapbender  "Mapbender submodule"
 [FOM]: https://github.com/mapbender/fom  "FOM submodule"
 [OWS Proxy]: https://github.com/mapbender/owsproxy3  "OWS proxy submodule"
