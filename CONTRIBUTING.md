@@ -314,8 +314,47 @@ Is a special set of folders and files:
 * Create [composer].json
 * Create and filll [bundle structure](#Bundle%20structure) 
 * Follow module [rules]
+* Publish [git] repository. [Github] is preferred.
+
+* Go to mapbender project directory
+* Register new repository as composer module in [composer.json] and add to require list
+
+```json 
+{
+    "require-dev": {
+        ...
+        "mapbender/new-awesome-bundle": ""dev-master",
+    },
+    "require": {
+        ...
+        "mapbender/new-awesome-bundle": "*",
+    }
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/mapbender/new-awesome-bundle .git"
+        }
+        ...
+    ]
+    
+}
+```
+
+* Update composer
+
+```sh
+../composer.phar update -o
+```
+
+* Go to module directory 
+```sh
+cd vendor/mapbender/new-awesome-bundle/Mapbender/NewAwesomeBundle/
+```
+
+* Now you ready to change and commit code. 
 
 To get involved, please look at [digitizer] structure as example.
+
 
 # Elements
 
