@@ -590,16 +590,15 @@ bin/phpunit -c app vendor/mapbender/digitizer/Mapbender/DigitizerBundle/Tests/Fe
 [translations]: #translations
 [modules]: #modules
 [module]: #modules
-
 [services]: http://symfony.com/doc/2.3/book/service_container.html "Symfony Services"
 [components]: http://symfony.com/doc/current/components/index.html
 [style guide]: http://www.php-fig.org/psr/psr-2/
-
 [Symfony]: http://www.symfony.com "Symfony framework"
 [Symfony framework]: http://www.symfony.com "Symfony framework"
 [Composer]: https://getcomposer.org/doc/
 [Composer]: https://getcomposer.org/doc/00-intro.md "Composer"
 [git]: https://git-scm.com/ "Git"
+[repository]: https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository "Git repository"
 [API]: https://en.wikipedia.org/wiki/Application_programming_interface
 [jQuery]: https://jquery.com/
 [widget]: http://github.bililite.com/understanding-widgets.html
