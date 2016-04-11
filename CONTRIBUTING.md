@@ -472,7 +472,6 @@ bin/phpunit -c app vendor/mapbender/digitizer/Mapbender/DigitizerBundle/Tests/Fe
 
 ## Libraries
 * [Symfony framework]
-* [PHPUnit documentation](https://phpunit.de/)
 * [Composer documentation](https://getcomposer.org/doc/)
 * [General GitHub documentation](https://help.github.com/)
 * [GitHub pull request documentation](https://help.github.com/send-pull-requests/)
@@ -509,8 +508,7 @@ bin/phpunit -c app vendor/mapbender/digitizer/Mapbender/DigitizerBundle/Tests/Fe
 [CONTRIBUTING]: https://github.com/blog/1184-contributing-guidelines
 [MD]: https://guides.github.com/features/mastering-markdown/ "Markdown"
 [PUML]: http://plantuml.com/ "PlaintUML"
-[DOM]: http://www.w3schools.com/js/js_htmldom.asp "HTML DOM"
-[PHPUnit] https://phpunit.de/getting-started.html "PHPUnit"
+[DOM]: "http://www.w3schools.com/js/js_htmldom.asp" "HTML DOM"
 [SCSS]: http://sass-lang.com/guide "SCSS"
 [CSS]: http://www.w3schools.com/css/css_intro.asp "CSS"
 [TWIG]: http://twig.sensiolabs.org/ "TWIG"
@@ -524,3 +522,4 @@ bin/phpunit -c app vendor/mapbender/digitizer/Mapbender/DigitizerBundle/Tests/Fe
 [OWS Proxy]: https://github.com/mapbender/owsproxy3  "OWS proxy submodule"
 [Digitizer]: https://github.com/mapbender/mapbender-digitizer "Mapbender digitizer module"
 [DataStore]: https://github.com/mapbender/data-source "Mapbender data source"
+[phpunit] https://phpunit.de/getting-started.html "PHPUnit"
