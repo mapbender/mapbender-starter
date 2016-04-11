@@ -323,21 +323,14 @@ Read more about best practices for reusable [bundles] [here](http://symfony.com/
 ```json 
 {
     "require-dev": {
-        ...
-        "mapbender/new-awesome-bundle": ""dev-master",
+        "mapbender/new-awesome-bundle": ""dev-master"
     },
     "require": {
-        ...
-        "mapbender/new-awesome-bundle": "*",
+        "mapbender/new-awesome-bundle": "*"
     }
     "repositories": [
-        {
-            "type": "git",
-            "url": "https://github.com/mapbender/new-awesome-bundle .git"
-        }
-        ...
+        {"type": "git","url": "https://github.com/mapbender/new-awesome-bundle .git"}
     ]
-    
 }
 ```
 
