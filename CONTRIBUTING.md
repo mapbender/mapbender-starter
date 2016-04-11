@@ -329,15 +329,19 @@ Each Mapbender element has own:
 
 ## Creation
 
-Generate new element by giving the name of Bundle, name of new element and source directory:
+Generate new element by giving:
+
+ * the name of [bundle]
+ * name of new [element]
+ * source directory, relative to _application_ folder, where [bundle] is stored 
 
 ```sh
-app/console mapbender:generate:element --help  "Mapbender\DigitizerBundle" MyNeElement vendor/mapbender/digitizer
+app/console mapbender:generate:element "Mapbender\DigitizerBundle" MyNeElement vendor/mapbender/digitizer
 ```
 
 Now there is new files located in [bundle] folder. 
-In order to introduce new element to show by add new element, 
-it should be registered in main [bundle] file in "getElements" method, 
+
+In order to introduce new element to show by add new element, it should be registered in main [bundle] file in "getElements" method, 
 located in root folder of the [bundle].
 
 ### Example:
@@ -359,13 +363,11 @@ class MapbenderDigitizerBundle extends MapbenderBundle
 
 # Templates
 
-
 * **Fullscreen** - is the main template. This should be used for desktop 
 based application.
 
 * **Mabender mobile template** - is the current template this is in development
 and can be used for simple task. Use at own risk.
-
 
 * **Classic template** - is deprecated. This one 
 should be never used. The only reason why it's still in the list is for 
@@ -380,6 +382,43 @@ at your own risk.
 
 Application template styling can be done by using [CSS] tab by editing.
 By save [CSS]/[SCSS] text will be parsed and stored to use of application top 
+
+## Creation 
+
+In order to create [template] 
+
+# Translations
+
+Read more about [translations](http://symfony.com/doc/2.3/book/translation.html)
+
+To get unique named translations, use bundle name prefix before subject
+
+## Example
+
+```xml
+      <trans-unit id="9728e3887eb78b1169723e59697f00b9" resname="somebundle.dialog.button.add">
+        <source>somebundle.dialog.button.add</source>
+        <target>Add</target>
+      </trans-unit>
+```
+
+## Generate tranlations
+
+By using [TWIG] files, there is generator, to put any used [translation] automatically in 'xlf' files.
+
+There few parameters to be submitted:
+
+* **--output-format=** - Format of generated translation file. It's important to use [xlf]. 
+* **--force** - Force append new translations to existing translation files
+* **Language** - Language short name (de/en/ru)
+* **BundleName** - Name of [bundle]
+
+### Example
+
+```sh
+app/console translation:update --output-format=xlf --force de MapbenderCoreBundle
+```
+
 
 # Tests
 
@@ -434,6 +473,11 @@ bin/phpunit -c app vendor/mapbender/digitizer/Mapbender/DigitizerBundle/Tests/Fe
 [feature]: #features
 [elements]: #element
 [element]: #element
+[templates]: #templates
+[template]: #templates
+[translation]: #translations
+[translations]: #translations
+
 [services]: http://symfony.com/doc/2.3/book/service_container.html "Symfony Services"
 [components]: http://symfony.com/doc/current/components/index.html
 [style guide]: http://www.php-fig.org/psr/psr-2/
@@ -451,15 +495,12 @@ bin/phpunit -c app vendor/mapbender/digitizer/Mapbender/DigitizerBundle/Tests/Fe
 [CONTRIBUTING]: https://github.com/blog/1184-contributing-guidelines
 [MD]: https://guides.github.com/features/mastering-markdown/ "Markdown"
 [PUML]: http://plantuml.com/ "PlaintUML"
-[DOM]: http://www.w3schools.com/js/js_htmldom.asp
-[PHPUnit] https://phpunit.de/getting-started.html
+[DOM]: http://www.w3schools.com/js/js_htmldom.asp "HTML DOM"
+[PHPUnit] https://phpunit.de/getting-started.html "PHPUnit"
 [SCSS]: http://sass-lang.com/guide "SCSS"
 [CSS]: http://www.w3schools.com/css/css_intro.asp "CSS"
 [TWIG]: http://twig.sensiolabs.org/ "TWIG"
-[translation]: #translations
-[translations]: #translations
-[parameters.yml]: http://symfony.com/doc/current/best_practices/configuration.html
-
+[parameters.yml]: http://symfony.com/doc/current/best_practices/configuration.html "Symfony configuratioN"
 [pull-request]: https://help.github.com/send-pull-requests "Pull requests"
 [Resolve git conflicts]: https://github.com/conflicts/resolve "Resolve git conflicts"
 [branch]: https://help.github.com/branch "Branching"
