@@ -193,7 +193,7 @@ Read more about best practices for reusable [bundles] [here](http://symfony.com/
     },
     "require": {
         "mapbender/new-awesome-bundle": "*"
-    }
+    },
     "repositories": [
         {"type": "git","url": "https://github.com/mapbender/new-awesome-bundle .git"}
     ]
