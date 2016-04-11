@@ -187,7 +187,11 @@ cd new-awesome-bundle
 git init 
 ```
 
-### Bundle composer.json example 
+
+In order to create [bundle], please take a look to [bundle structure](#Bundle%20structure) 
+**Don't forget to follow [module] [rules]**!
+
+### Create composer package
 
 Create [composer].json as in example.
 
@@ -227,23 +231,19 @@ Better if **autoload** and **target-dir** will be copied from example as is, so 
 ```
 
 
-### Create bundle 
- 
-In order to create [bundle], please take a look to [bundle structure](#Bundle%20structure) 
-**Don't forget to follow [module] [rules]**!
-
 ### Save bundle 
 
 * Commit changes
 * [Create](https://help.github.com/articles/create-a-repo/) [GitHub] repository 
 * [Add remote](https://help.github.com/articles/adding-a-remote/) 
 * [Push](https://help.github.com/articles/pushing-to-a-remote/)  changes to [GitHub]
-* [Switch to to mapbender project directory][#switch-to-project-directory]
 
 
-### Register module
+### Register bundle
 
-Register new [git] [repository] as [composer] [module]/[bundle] in [composer].json.
+[Switch][#switch-to-project-directory] to to [mapbender] project directory.
+
+Register new [git] [repository] as [composer] [bundle]/[module] in [composer].json.
 
 Example: 
 
@@ -261,14 +261,13 @@ Example:
 }
 ```
 
-
-### Update composer
+Update composer after add new module.
 
 ```sh
 ../composer.phar update -o
 ```
 
-### Go to module directory
+### Switch to module directory
 
 ```sh
 cd vendor/mapbender/new-awesome-bundle/Mapbender/NewAwesomeBundle/
