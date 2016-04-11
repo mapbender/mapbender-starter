@@ -236,8 +236,8 @@ Each module should have:
 * only one primary namespace 
 * identical structure
 * own [license] file
-* own function description [README.md] file
-* own [CONTRIBUTING.md] describes how other developers should install, setup and contribute in it
+* own function description [README] file
+* own [CONTRIBUTING].md describes how other developers should install, setup and contribute in it
 * own [tests] relevant to new [features], [elements] or functionality
 
 # Bundles 
@@ -250,7 +250,7 @@ The goal of the Bundle is to restrict usage of global name space and switch or s
 Is a special set of folders and files that look so:
 
 * *Component* - Contains _components_ in other words _services_, 
-    this contains buisness logic in classes. The _components_ are used by API's-
+    this contains buisness logic in classes. The _components_ are used by controllers or other components
 * *Exception* - Contains exceptions.
 * *DataFixtures* - Fixtures are used to load a controlled set of data into a database. This data can be used for testing or could be the initial data required for the application to run smoothly
 * *EventListener* - Contains event listeners
@@ -308,8 +308,6 @@ located in root folder of the [bundle].
 Example:
  * Bundle file: Mapbender/DigitizerBundle/MapbenderDigitizerBundle.php
 ```
-namespace Mapbender\DigitizerBundle;
-
 ...
 class MapbenderDigitizerBundle extends MapbenderBundle
 {
@@ -337,7 +335,7 @@ and can be used for simple task. Use at own risk.
 should be never used. The only reason why it's still in the list is for 
 backwards capability of Mapbender 3.0.x based projects.
 
-**Responsive** - isn't ready and shouldn't be used. This template is just a 
+* **Responsive** - isn't ready and shouldn't be used. This template is just a 
 playground for future development and for new templates. Use it 
 at your own risk.
 
@@ -401,38 +399,36 @@ bin/phpunit -c app vendor/mapbender/digitizer/Mapbender/DigitizerBundle/Tests/Fe
 [feature]: #features
 [elements]: #element
 [element]: #element
-[services]: #services "Symfony Services"
+[services]: http://symfony.com/doc/2.3/book/service_container.html "Symfony Services"
 [components]: #element
-[style guide]: #element
+[style guide]: http://www.php-fig.org/psr/psr-2/
 
 [Symfony]: http://www.symfony.com "Symfony framework"
 [Symfony framework]: http://www.symfony.com "Symfony framework"
 [Composer]: https://getcomposer.org/doc/
 [Composer]: https://getcomposer.org/doc/00-intro.md "Composer"
 [git]: https://git-scm.com/ "Git"
-[API]: #API
-[jQuery]: #jQuery
-[widget]: #Widget
-[license]: #license
-[README.md]: #readme
-[CONTRIBUTING.md]: #contributing
-[MD]: #markdown
-[PUML]: #PlaintUML
-[DOM]: #dom
-[SCSS]: #scss
-[CSS]: #scss
-[TWIG]: #scss
-[translation]: #translation
-
-
-[Digitizer]: https://github.com/mapbender/mapbender-digitizer "Mapbender digitizer module"
-[DataStore]: https://github.com/mapbender/data-source "Mapbender data source"
+[API]: https://en.wikipedia.org/wiki/Application_programming_interface
+[jQuery]: https://jquery.com/
+[widget]: http://github.bililite.com/understanding-widgets.html
+[license]: https://getcomposer.org/doc/04-schema.md#license
+[README]: https://en.wikipedia.org/wiki/README
+[CONTRIBUTING]: https://github.com/blog/1184-contributing-guidelines
+[MD]: https://guides.github.com/features/mastering-markdown/ "Markdown"
+[PUML]: http://plantuml.com/ "PlaintUML"
+[DOM]: http://www.w3schools.com/js/js_htmldom.asp
+[SCSS]: http://sass-lang.com/guide "SCSS"
+[CSS]: http://www.w3schools.com/css/css_intro.asp "CSS"
+[TWIG]: http://twig.sensiolabs.org/ "TWIG"
+[translation]: #translations
+[translations]: #translations
 
 [pull-request]: https://help.github.com/send-pull-requests "Pull requests"
 [Resolve git conflicts]: https://github.com/conflicts/resolve "Resolve git conflicts"
 [branch]: https://help.github.com/branch "Branching"
-
 [submodule]: https://git-scm.com/book/de/v1/Git-Tools-Submodule  "Git submodule"
 [Mapbender]: https://github.com/mapbender/mapbender  "Mapbender submodule"
 [FOM]: https://github.com/mapbender/fom  "FOM submodule"
 [OWS Proxy]: https://github.com/mapbender/owsproxy3  "OWS proxy submodule"
+[Digitizer]: https://github.com/mapbender/mapbender-digitizer "Mapbender digitizer module"
+[DataStore]: https://github.com/mapbender/data-source "Mapbender data source"
