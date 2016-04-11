@@ -98,140 +98,6 @@ We want it as easy as possible to carry out changes to get the modules in your e
 
 There are a few guidelines that we need contributors to follow so that we can have a chance of keeping on top of things.
 
-# Submodules
-
-
-*Notice: this workflow is deprecated.*
-
-This approach has been used a long time to develop and distribute Mapbender.
-
-Due to the course complexity and many changes in diverse bundles, located in different sub-modules, 
-it was decided to adapt the development workflow in the next release of [Mapbender].*
-
-## Definition
-
-[Submodule] - is git repository, which is linked to primary "mapbender-starter" repository.
-
-## Description
-
-For now there are three submodules: [Mapbender], [FOM] and [OWS Proxy], located in ```application``` folder.
-Each [submodule] contains one or many bundles. 
-
-## Branches
-In order to change the [submodule] source code it is important to create a new [branch]. 
-
-### Feature branch
-
-It's mandatory to use "feature/" prefix in the branch name.
-
-Example:
-
-
-* Create branch
-
-```sh
-cd mapbender
-git checkout -b "feature/mega-cool-feature-x"
-``` 
-* Improve the code
-* Save changes 
-
-```sh
-git add *
-git commit -m "Add some new stuff"
-``` 
-* Merge current release code
-
-```sh
-git fetch -a
-git merge "release/3.0.5"
-``` 
-* If conflicts arise, resolve [them][Resolve git conflicts]
-* Run tests
-* Push the changes on [github]
-
-```sh
-git push
-``` 
-* Create [pull-request]
-
-Then please wait for the feedback. We will check it out and review your code to merge it in the branch.
-
-### Bug fix branch
-
-It's mandatory to use "hotfix/" prefix in your branch name.
-
-Example:
-
-* Create branch
-
-```sh
-cd mapbender
-git checkout -b "hotfix/bug-short-description"
-``` 
-* Improve the code
-* Save changes 
-
-```sh
-git add *
-git commit -m "Fix bug description"
-``` 
-* Merge current release code
-
-```sh
-git fetch -a
-git merge "release/3.0.5"
-``` 
-* If conflicts arise, resolve [them][Resolve git conflicts]
-* Run or add new tests relevant to the fixed bug 
-* Push the changes on [github]
-
-```sh
-git push
-``` 
-* Create [pull-request] on the current release branch
-
-Then please wait for the feedback. We will check it out, test and review your code to merge it in the branch.
-
-### Release branch
-
-This branch can only be changed by project maintainer.
-It's mandatory to use *release/* prefix in your branch name.
-
-Example:
-
-* Checkout release branch
-
-```sh
-cd mapbender
-git checkout "release/3.0.5"
-``` 
-* Fetch changes  
-
-```sh
-git fetch -a
-git pull
-``` 
-* Merge changes
-
-```sh
-git merge "hotfix/bug-short-description"
-``` 
-* If conflicts arise, resolve [them][Resolve git conflicts]
-* Run or add new tests relevant to the new feature
-* Code review
-* Run tests
-* Save changes
-
-```sh
-git commit -m "Merge 'hotfix/bug-short-description'"
-``` 
-* Push on [github]
-
-```sh
-git push
-``` 
-
 
 # Modules
 
@@ -352,6 +218,24 @@ This is normal [git] repository, [bundle] and [composer] package at the same.
 
 To get involved, please look at [digitizer] structure as example.
 
+# Submodules
+
+*Notice: this workflow is deprecated.*
+
+This approach has been used a long time to develop and distribute Mapbender.
+
+Due to the course complexity and many changes in diverse bundles, located in different sub-modules, 
+it was decided to adapt the development workflow in the next release of [Mapbender].*
+
+## Definition
+
+[Submodule] - is git repository, which is linked to primary "mapbender-starter" repository.
+
+## Description
+
+For now there are three submodules: [Mapbender], [FOM] and [OWS Proxy], located in ```application``` folder.
+Each [submodule] contains one or many bundles. 
+
 # Elements
 
 ## Definition
@@ -451,7 +335,7 @@ To get unique named translations, use bundle name prefix before subject
       </trans-unit>
 ```
 
-## Generate tranlations
+## Generate translations
 
 By using [TWIG] files, there is generator, to put any used [translation] automatically in 'xlf' files.
 
@@ -467,6 +351,123 @@ There few parameters to be submitted:
 ```sh
 app/console translation:update --output-format=xlf --force de MapbenderCoreBundle
 ```
+
+
+# Branches
+In order to change the [submodule] source code it is important to create a new [branch]. 
+
+## Feature branch
+
+It's mandatory to use "feature/" prefix in the branch name.
+
+Example:
+
+
+* Create branch
+
+```sh
+cd mapbender
+git checkout -b "feature/mega-cool-feature-x"
+``` 
+* Improve the code
+* Save changes 
+
+```sh
+git add *
+git commit -m "Add some new stuff"
+``` 
+* Merge current release code
+
+```sh
+git fetch -a
+git merge "release/3.0.5"
+``` 
+* If conflicts arise, resolve [them][Resolve git conflicts]
+* Run tests
+* Push the changes on [github]
+
+```sh
+git push
+``` 
+* Create [pull-request]
+
+Then please wait for the feedback. We will check it out and review your code to merge it in the branch.
+
+## Bug fix branch
+
+It's mandatory to use "hotfix/" prefix in your branch name.
+
+Example:
+
+* Create branch
+
+```sh
+cd mapbender
+git checkout -b "hotfix/bug-short-description"
+``` 
+* Improve the code
+* Save changes 
+
+```sh
+git add *
+git commit -m "Fix bug description"
+``` 
+* Merge current release code
+
+```sh
+git fetch -a
+git merge "release/3.0.5"
+``` 
+* If conflicts arise, resolve [them][Resolve git conflicts]
+* Run or add new tests relevant to the fixed bug 
+* Push the changes on [github]
+
+```sh
+git push
+``` 
+* Create [pull-request] on the current release branch
+
+Then please wait for the feedback. We will check it out, test and review your code to merge it in the branch.
+
+## Release branch
+
+This branch can only be changed by project maintainer.
+It's mandatory to use *release/* prefix in your branch name.
+
+Example:
+
+* Checkout release branch
+
+```sh
+cd mapbender
+git checkout "release/3.0.5"
+``` 
+* Fetch changes  
+
+```sh
+git fetch -a
+git pull
+``` 
+* Merge changes
+
+```sh
+git merge "hotfix/bug-short-description"
+``` 
+* If conflicts arise, resolve [them][Resolve git conflicts]
+* Run or add new tests relevant to the new feature
+* Code review
+* Run tests
+* Save changes
+
+```sh
+git commit -m "Merge 'hotfix/bug-short-description'"
+``` 
+* Push on [github]
+
+```sh
+git push
+``` 
+
 
 
 # Tests
