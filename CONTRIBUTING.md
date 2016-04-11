@@ -370,7 +370,7 @@ Generate new element by giving:
 app/console mapbender:generate:element "Mapbender\DigitizerBundle" MyNewElement vendor/mapbender/digitizer
 ```
 
-Now there is new files located in [bundle] folder. 
+Now there is new files located in [bundle] folder. For more information read [full tutorial](http://doc.mapbender3.org/en/book/development/element_generate.html).
 
 In order to introduce new element to show by add new element, it should be registered in main [bundle] file in "getElements" method, 
 located in root folder of the [bundle].
