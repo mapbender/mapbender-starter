@@ -240,12 +240,12 @@ Each module should have:
 * own [CONTRIBUTING.md] describes how other developers should install, setup and contribute in it
 * own [tests] relevant to new [features], [elements] or functionality
 
-## Bundles 
+# Bundles 
 
 Bundle is a set of functionality, synonym to library, which can be created and used outside of the Mapbender.
 The goal of the Bundle is to restrict usage of global name space and switch or swap extend separated functionality.
 
-### Bundle structure
+## Bundle structure
  
 Is a special set of folders and files that look so:
 
@@ -259,7 +259,7 @@ Is a special set of folders and files that look so:
 * *Documents* - Contains documents related to the [bundle]. [MD] for text and [PUML] for charts formats are preferred.
 * *Element* - Contains Mapbender [elements]. This folder isn't [symfony] conform.
 
-### Create Bundle (Module)
+## Create Bundle (Module)
 
 * Create [git] repository outside of Mapbender, as own project
 * Create [composer].json
@@ -268,9 +268,9 @@ Is a special set of folders and files that look so:
 
 To get involved, please look at [digitizer] structure as example.
 
-## Elements
+# Elements
 
-### Definition
+## Definition
 
 Elements can be a part of each [bundle]
 and should be stored in *SomeBundle/SomeElementName* folder.
@@ -287,46 +287,88 @@ Each Mapbender element has own:
 
 * JavaScript front end [jQuery] [widget]
 * HTML [DOM] element
-* [translation](s) as [TWIG] file
+* [translation]/s as [TWIG] file
 * [SCSS]/[CSS] style(s)
 * [Backend] [API] 
 * administration form type to set, store and restore configuration
 
-
 ## Creation
 
-## Templates
+Generate new element by giving the name of Bundle, name of new element and source directory:
 
-There is very deprecated templates named "Classic template", this one 
-should be never used. The only reason why it's still in the list is 
-backwards capability to Mapbender 3.0.x based projects.
+```sh
+app/console mapbender:generate:element --help  "Mapbender\DigitizerBundle" MyNeElement vendor/mapbender/digitizer
+```
 
-*Responsive* isn't ready and should be not used. This template is just a 
-background for future development or as base for new template. Use it 
-at your own risk.
+Now there is new files located in [bundle] folder. 
+In order to introduce new element to show by add new element, 
+it should be registered in main [bundle] file in "getElements" method, 
+located in root folder of the [bundle].
 
-*Fullscreen* - is the main template. This should be used for desktop 
+Example:
+ * Bundle file: Mapbender/DigitizerBundle/MapbenderDigitizerBundle.php
+```
+namespace Mapbender\DigitizerBundle;
+
+...
+class MapbenderDigitizerBundle extends MapbenderBundle
+{
+    public function getElements()
+    {
+        return array(
+            'Mapbender\DigitizerBundle\Element\MyNeElement'
+        );
+    }
+}
+```
+
+
+# Templates
+
+
+* **Fullscreen** - is the main template. This should be used for desktop 
 based application.
 
-*Mabender mobile template* - is the current template this is in development
+* **Mabender mobile template** - is the current template this is in development
 and can be used for simple task. Use at own risk.
 
 
-### Styling
+* **Classic template** - is deprecated. This one 
+should be never used. The only reason why it's still in the list is for 
+backwards capability of Mapbender 3.0.x based projects.
+
+**Responsive** - isn't ready and shouldn't be used. This template is just a 
+playground for future development and for new templates. Use it 
+at your own risk.
+
+
+## Styling
 
 Application template styling can be done by using "CSS" tab by editing.
-By save CSS/SCSS text will be parsed ann
+By save CSS/SCSS text will be parsed and stored to use of application top 
 
-## Tests
+# Tests
 
 Don't forget to write tests!
 Follow our [style guide].
 Write a good commit message.
 
- Application function test
+## Examples
+
+
+* Test all [bundles]
 ```bash
-cd application 
-bin/phpunit -c app mapbender/src/Mapbender/ManagerBundle/Tests/ApplicationTest.php
+bin/phpunit -c app vendor/mapbender
+```
+
+* Test unique [bundle]
+```bash
+bin/phpunit -c app vendor/mapbender/digitizer
+```
+
+* Test [bundle] class
+```bash
+bin/phpunit -c app vendor/mapbender/digitizer/Mapbender/DigitizerBundle/Tests/FeaturesTest.php
 ```
 
 # Resources
