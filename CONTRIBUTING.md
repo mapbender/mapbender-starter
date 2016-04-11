@@ -189,6 +189,7 @@ git init
 
 
 In order to create [bundle], please take a look to [bundle structure](#Bundle%20structure) 
+
 **Don't forget to follow [module] [rules]**!
 
 ### Create composer package
@@ -241,7 +242,7 @@ Better if **autoload** and **target-dir** will be copied from example as is, so 
 
 ### Register bundle
 
-[Switch][#switch-to-project-directory] to to [mapbender] project directory.
+[Switch](#switch-to-project-directory) to to [mapbender] project directory.
 
 Register new [git] [repository] as [composer] [bundle]/[module] in [composer].json.
 
