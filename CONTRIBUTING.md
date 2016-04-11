@@ -553,4 +553,5 @@ bin/phpunit -c app vendor/mapbender/digitizer/Mapbender/DigitizerBundle/Tests/Fe
 [OWS Proxy]: https://github.com/mapbender/owsproxy3  "OWS proxy submodule"
 [Digitizer]: https://github.com/mapbender/mapbender-digitizer "Mapbender digitizer module"
 [DataStore]: https://github.com/mapbender/data-source "Mapbender data source"
-[phpunit] https://phpunit.de/getting-started.html "PHPUnit"
+[github]: https://github.com/ "GitHub"
+[phpunit]: https://phpunit.de/getting-started.html "PHPUnit"
