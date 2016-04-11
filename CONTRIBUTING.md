@@ -287,12 +287,17 @@ To get involved, please look at [digitizer] structure as example.
 
 # Submodules
 
-*Notice: this workflow is deprecated.*
+~~Nice ability to get bundles and modules linked with each other!~~
+
+**Please stop develop this way!** 
+
+This workflow is deprecated.
 
 This approach has been used a long time to develop and distribute Mapbender.
 
-Due to the course complexity and many changes in diverse bundles, located in different sub-modules, 
-it was decided to adapt the development workflow in the next release of [Mapbender].*
+Due to the course complexity and many changes in diverse [bundles], located in different sub-modules, 
+it was decided to change the development workflow to composer packages named as [modules].
+
 
 ## Definition
 
