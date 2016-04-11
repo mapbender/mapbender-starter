@@ -20,63 +20,70 @@ You can find the complete installation description [here](http://doc.mapbender3.
 
 Here is a quick installation guide to get [git]-based "developer edition" of [Mapbender]:
 
-Clone the project via SSH
+## Clone the project 
+
+### via SSH
 ```sh
 git clone git@github.com:mapbender/mapbender-starter.git 
 ```
 
-Alternatively, it is also possible to clone the project via HTTP
+or 
+
+### via HTTP
+
 ```sh
 git clone https://github.com/mapbender/mapbender-starter.git
 ```
 
-Switch to the project directory
+## Switch to the project directory
 ```sh
 cd mapbender-starter
 ```
 
-Clone submodules 
+## Clone submodules 
 ```sh
 git submodule update --init --recursive --force
 ```
 
-Switch to the application directory
+## Switch to the application directory
 ```sh
 cd application
 ```
 
-Copy [parameters.yml] and configurate them for your project needs.
+## Copy [parameters.yml] and configure them for your project needs.
 ```sh
 cp app/config/parameters.yml.dist app/config/parameters.yml
 ```
 
-Install composer libraries
+## Update composer libraries
 ```sh
 ../composer.phar update -o
 ```
 
-Create database and schema structures (tables, triggers, etc)
+## Create database and schema structures (tables, triggers, etc)
 ```sh
 app/console doctrine:database:create
 app/console doctrine:schema:create
 ```
 
-Loads the applications from the "mapbender.yml" into a mapbender database
+## Import applications from the "app/config/mapbender.yml" into a mapbender database
 ```sh
 app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
 ```
 
-Import EPSG codes
+## Import EPSG codes
 ```sh
 app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
 ```
 
-Create root user and set the password
+## Reset root 
+
+Create root user and set the password:
 ```sh
 app/console fom:user:resetroot --username root --password root --email root@localhost --silent
 ```
 
-Start php-server
+## Start php-server
 ```sh
 app/console server:run
 ```
@@ -173,11 +180,11 @@ Read more about best practices for reusable [bundles] [here](http://symfony.com/
 
 * Create [git] repository outside of Mapbender, as own project
 * Create [composer].json
-* Create and filll [bundle structure](#Bundle%20structure) 
-* Follow module [rules]
+* Create and fill [bundle structure](#Bundle%20structure) 
+* Follow [module] [rules]
 * Publish [git] repository. [Github] is preferred.
 * Go to mapbender project directory
-* Register new repository as composer module in [composer.json] and add to require list
+* Register new repository as composer module in [composer].json and add to require list
 
 ```json 
 {
