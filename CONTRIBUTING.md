@@ -167,11 +167,13 @@ Is a special set of folders and files:
 * **Resources/public/** - Contains web resources ([CSS], JS, images)
 * **Resources/views/** - Contains [twig] and php templates.
 * **Resources/translations/** - Contains [translations].
+* **Template/** - Contains mapbender [templates]
 * **Tests/** - Contains [PHPUnit] and functional tests.
 * **composer.json** - Describes the bundle as [composer] package/library. [Example](https://github.com/mapbender/mapbender-digitizer/blob/master/composer.json)
 * **LICENSE**  - Contains [LICENSE] text.
 * **README.md** - Contains [README] text.
 * **CONTRIBUTING.md** - Contains [CONTRIBUTING] text.
+* **MapbenderNameBundle.php** - Bundle [elements], [templates],  [manager controllers] and [layers] register.
 
 Read more about best practices for reusable [bundles] [here](http://symfony.com/doc/2.3/cookbook/bundles/best_practices.html)
 
@@ -365,7 +367,7 @@ Generate new element by giving:
  * source directory, relative to _application_ folder, where [bundle] is stored 
 
 ```sh
-app/console mapbender:generate:element "Mapbender\DigitizerBundle" MyNeElement vendor/mapbender/digitizer
+app/console mapbender:generate:element "Mapbender\DigitizerBundle" MyNewElement vendor/mapbender/digitizer
 ```
 
 Now there is new files located in [bundle] folder. 
@@ -414,7 +416,8 @@ By save [CSS]/[SCSS] text will be parsed and stored to use of application top
 
 ## Creation 
 
-In order to create [template] 
+A template is a part of [bundle] this located on  "Templates/" directory. 
+In order to create [template] it's need to be 
 
 # Translations
 
@@ -624,6 +627,8 @@ bin/phpunit -c app vendor/mapbender/digitizer/Mapbender/DigitizerBundle/Tests/Fe
 [translations]: #translations
 [modules]: #modules
 [module]: #modules
+[manager controllers] #manager-controllers 
+[layers] #layers
 [services]: http://symfony.com/doc/2.3/book/service_container.html "Symfony Services"
 [components]: http://symfony.com/doc/current/components/index.html
 [style guide]: http://www.php-fig.org/psr/psr-2/
