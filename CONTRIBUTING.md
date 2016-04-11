@@ -280,9 +280,10 @@ cd vendor/mapbender/new-awesome-bundle/Mapbender/NewAwesomeBundle/
 
 This is normal [git] repository, [bundle] and [composer] package at the same. 
 
-* Now you ready to change and commit code. 
+Now you ready to change and commit code directly in the project. 
 
 To get involved, please look at [digitizer] structure as example.
+
 
 # Submodules
 
