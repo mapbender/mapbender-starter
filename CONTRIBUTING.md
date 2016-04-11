@@ -240,12 +240,12 @@ and reuse the same directory structure.
 
 ## Rules
 
-It's _important_ to follow the rules:
+It's __important__ to follow the rules:
 
 Each module is:
 
 * Is [git] repository
-* Is [Symfony] [bundle]
+* Is [Symfony] [bundle]uide
 * Is mapbender [bundle]
 * Is [composer] library (has [composer] definition)
 
@@ -258,6 +258,8 @@ Each module should have:
 * own function description [README] file
 * own [CONTRIBUTING].md describes how other developers should install, setup and contribute in it
 * own [tests] relevant to new [features], [elements] or functionality
+
+Write your code in PSR-2 coding [style guide] standard. 
 
 # Bundles 
 
@@ -378,7 +380,6 @@ By save [CSS]/[SCSS] text will be parsed and stored to use of application top
 # Tests
 
 Don't forget to write tests!
-Follow our [style guide].
 Write a good commit message.
 
 ## Examples
@@ -421,8 +422,8 @@ bin/phpunit -c app vendor/mapbender/digitizer/Mapbender/DigitizerBundle/Tests/Fe
 
 [rules]: #rules "Rules"
 [rule]: #rules "Rules"
-[bundle]: #bundle "Bundle"
-[bundles]: #bundle "Bundle"
+[bundle]: #bundles "Bundle"
+[bundles]: #bundles "Bundle"
 [test]: #tests "Tests"
 [tests]: #tests "Tests"
 [features]: #features
@@ -430,7 +431,7 @@ bin/phpunit -c app vendor/mapbender/digitizer/Mapbender/DigitizerBundle/Tests/Fe
 [elements]: #element
 [element]: #element
 [services]: http://symfony.com/doc/2.3/book/service_container.html "Symfony Services"
-[components]: #element
+[components]: http://symfony.com/doc/current/components/index.html
 [style guide]: http://www.php-fig.org/psr/psr-2/
 
 [Symfony]: http://www.symfony.com "Symfony framework"
