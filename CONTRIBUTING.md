@@ -296,7 +296,7 @@ it was decided to adapt the development workflow in the next release of [Mapbend
 
 ## Definition
 
-[Submodule] - is git repository, which is linked to primary "mapbender-starter" repository.
+[Submodule] - is git repository, which is linked to primary [mapbender-starter](https://github.com/mapbender/mapbender-starter) repository.
 
 ## Description
 
