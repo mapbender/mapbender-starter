@@ -341,6 +341,7 @@ Read more about best practices for reusable [bundles] [here](http://symfony.com/
 ```
 
 * Go to module directory
+
 ```sh
 cd vendor/mapbender/new-awesome-bundle/Mapbender/NewAwesomeBundle/
 ```
