@@ -46,6 +46,11 @@ Copy [parameters.yml] and configurate them for your project needs.
 cp app/config/parameters.yml.dist app/config/parameters.yml
 ```
 
+Install composer libraries
+```sh
+../composer.phar update -o
+```
+
 Create database and schema structures (tables, triggers, etc)
 ```sh
 app/console doctrine:database:create
@@ -64,15 +69,24 @@ app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBund
 
 Create root user and set the password
 ```sh
-app/console fom:user:resetroot --username root --password root --silent
+app/console fom:user:resetroot --username root --password root --email root@localhost --silent
 ```
 
-Install composer libraries
+Start php-server
 ```sh
-../composer.phar update -o
+app/console server:run
 ```
 
-Now yo are ready to use your mapbender.
+The next console message describes how you can view mapbender in browser.
+
+It's looks something like:
+```sh 
+Server running on http://localhost:8000
+```
+
+So now open the URL in your favorite browser. 
+
+For development reason it's recommended to use Chromium(Chrome) or Firefox.
 
 # How to contribute
 
