@@ -39,7 +39,7 @@ Switch to the application directory
 cd application
 ```
 
-Copy ```parameters.yml``` and edit it for your system.
+Copy [parameters.yml] and configurate them for your project needs.
 ```sh
 cp app/config/parameters.yml.dist app/config/parameters.yml
 ```
@@ -67,7 +67,7 @@ app/console fom:user:resetroot --username root --password root --silent
 
 Install composer libraries
 ```sh
-../composer/composer.phar update -o
+../composer.phar update -o
 ```
 
 Now yo are ready to use your mapbender.
@@ -111,17 +111,20 @@ Example:
 
 
 * Create branch
+
 ```sh
 cd mapbender
 git checkout -b "feature/mega-cool-feature-x"
 ``` 
 * Improve the code
 * Save changes 
+
 ```sh
 git add *
 git commit -m "Add some new stuff"
 ``` 
 * Merge current release code
+
 ```sh
 git fetch -a
 git merge "release/3.0.5"
@@ -129,6 +132,7 @@ git merge "release/3.0.5"
 * If conflicts arise, resolve [them][Resolve git conflicts]
 * Run tests
 * Push the changes on [github]
+
 ```sh
 git push
 ``` 
@@ -143,17 +147,20 @@ It's mandatory to use "hotfix/" prefix in your branch name.
 Example:
 
 * Create branch
+
 ```sh
 cd mapbender
 git checkout -b "hotfix/bug-short-description"
 ``` 
 * Improve the code
 * Save changes 
+
 ```sh
 git add *
 git commit -m "Fix bug description"
 ``` 
 * Merge current release code
+
 ```sh
 git fetch -a
 git merge "release/3.0.5"
@@ -161,6 +168,7 @@ git merge "release/3.0.5"
 * If conflicts arise, resolve [them][Resolve git conflicts]
 * Run or add new tests relevant to the fixed bug 
 * Push the changes on [github]
+
 ```sh
 git push
 ``` 
@@ -176,16 +184,19 @@ It's mandatory to use *release/* prefix in your branch name.
 Example:
 
 * Checkout release branch
+
 ```sh
 cd mapbender
 git checkout "release/3.0.5"
 ``` 
 * Fetch changes  
+
 ```sh
 git fetch -a
 git pull
 ``` 
 * Merge changes
+
 ```sh
 git merge "hotfix/bug-short-description"
 ``` 
@@ -194,10 +205,12 @@ git merge "hotfix/bug-short-description"
 * Code review
 * Run tests
 * Save changes
+
 ```sh
 git commit -m "Merge 'hotfix/bug-short-description'"
 ``` 
 * Push on [github]
+
 ```sh
 git push
 ``` 
@@ -422,6 +435,7 @@ bin/phpunit -c app vendor/mapbender/digitizer/Mapbender/DigitizerBundle/Tests/Fe
 [TWIG]: http://twig.sensiolabs.org/ "TWIG"
 [translation]: #translations
 [translations]: #translations
+[parameters.yml]: http://symfony.com/doc/current/best_practices/configuration.html
 
 [pull-request]: https://help.github.com/send-pull-requests "Pull requests"
 [Resolve git conflicts]: https://github.com/conflicts/resolve "Resolve git conflicts"
