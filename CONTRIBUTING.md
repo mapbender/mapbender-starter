@@ -628,7 +628,7 @@ bin/phpunit -c app vendor/mapbender/digitizer/Mapbender/DigitizerBundle/Tests/Fe
 [modules]: #modules
 [module]: #modules
 [manager controllers]: #manager-controllers 
-[layers: #layers
+[layers]: #layers
 [services]: http://symfony.com/doc/2.3/book/service_container.html "Symfony Services"
 [components]: http://symfony.com/doc/current/components/index.html
 [style guide]: http://www.php-fig.org/psr/psr-2/
