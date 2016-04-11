@@ -240,6 +240,30 @@ Better if **autoload** and **target-dir** will be copied from example as is, so 
 * [Push](https://help.github.com/articles/pushing-to-a-remote/)  changes to [GitHub]
 
 
+### Versioning
+
+To learn about semantic versioning please read [here][versioning].
+
+#### Create version 
+
+```sh
+git tag 0.0.1
+```
+
+#### List versions
+
+```sh 
+git tag -l
+```
+
+
+#### Push version
+
+```sh 
+git push --tags
+```
+
+
 ### Register bundle
 
 [Switch](#switch-to-project-directory) to to [mapbender] project directory.
@@ -261,7 +285,6 @@ Example:
     ]
 }
 ```
-
 
 
 ### Update composer after add new module
@@ -293,10 +316,9 @@ To get involved, please look at [digitizer] structure as example.
 
 This workflow is deprecated.
 
-This approach has been used a long time to develop and distribute Mapbender.
-
-Due to the course complexity and many changes in diverse [bundles], located in different sub-modules, 
-it was decided to change the development workflow to composer packages named as [modules].
+This approach has been used a long time to develop and distribute [Mapbender], 
+but due to the course complexity and many changes in diverse [bundles], located in different sub-modules, 
+without [versioning], it was decided to change the development workflow to [composer] packages named as [modules].
 
 
 ## Definition
@@ -635,3 +657,4 @@ bin/phpunit -c app vendor/mapbender/digitizer/Mapbender/DigitizerBundle/Tests/Fe
 [DataStore]: https://github.com/mapbender/data-source "Mapbender data source"
 [github]: https://github.com/ "GitHub"
 [phpunit]: https://phpunit.de/getting-started.html "PHPUnit"
+[versioning]: http://semver.org/
