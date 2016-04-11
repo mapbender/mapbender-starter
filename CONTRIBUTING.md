@@ -268,7 +268,7 @@ The goal of the Bundle is to restrict usage of global name space and switch or s
 
 ## Bundle structure
  
-Is a special set of folders and files that look so:
+Is a special set of folders and files:
 
 * **Command/** - Contains commands. Read more about commands [here] (http://symfony.com/doc/current/components/console/introduction.html#creating-a-basic-command)  
 * **Controllers/** - Contains _controllers_ in other words public [API]'s. 
@@ -288,13 +288,17 @@ Is a special set of folders and files that look so:
 * **Resources/views/** - Contains [twig] and php templates.
 * **Resources/translations/** - Contains [translations].
 * **Tests/** - Contains [PHPUnit] and functional tests.
+* **composer.json** - Describes the bundle as [composer] package/library. [Example](https://github.com/mapbender/mapbender-digitizer/blob/master/composer.json)
+* **LICENSE**  - Contains [LICENSE] text.
+* **README.md** - Contains [README] text.
+* **CONTRIBUTING.md** - Contains [CONTRIBUTING] text.
 
 
 ## Create Bundle (Module)
 
 * Create [git] repository outside of Mapbender, as own project
 * Create [composer].json
-* Create [bundle structure](#Bundle%20structure)
+* Create and filll [bundle structure](#Bundle%20structure) 
 * Follow module [rules]
 
 To get involved, please look at [digitizer] structure as example.
