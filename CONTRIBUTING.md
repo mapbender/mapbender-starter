@@ -435,7 +435,7 @@ class NewTemplate extends Mapbender\CoreBundle\Component\Template{
     {
         return array('Mapbender\AcmeBundle\Template\NewTemplate',);
     }
-``
+```
 
 * remove the cache
 
