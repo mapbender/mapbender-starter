@@ -411,8 +411,9 @@ at your own risk.
 
 ## Styling
 
-Application template styling can be done by using [CSS] tab by editing.
-By save [CSS]/[SCSS] text will be parsed and stored to use of application top 
+Application template styling can be done by using [CSS] tab for adding own style sheets.
+
+[CSS]/[SCSS] text will be parsed to use on top of the application this stored for.
 
 ## Creation 
 
@@ -435,7 +436,7 @@ class NewTemplate extends Mapbender\CoreBundle\Component\Template{
     {
         return array('Mapbender\AcmeBundle\Template\NewTemplate',);
     }
-```
+``
 
 * remove the cache
 
