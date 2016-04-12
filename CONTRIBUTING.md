@@ -125,7 +125,7 @@ It's __important__ to follow the rules:
 Each module is:
 
 * Is [git] repository
-* Is [Symfony] [bundle] guide
+* Is [Symfony] bundle
 * Is mapbender [bundle]
 * Is [composer] library (has [composer] definition)
 
