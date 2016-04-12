@@ -4,7 +4,7 @@ use Composer\Script\CommandEvent;
 /**
  * Class ScriptHandler
  */
-class ScriptHandler
+class ComposerBootstrap
 {
     /**
      * Builds the bootstrap file.
