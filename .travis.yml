@@ -4,8 +4,7 @@ php:
   - 5.3
 
 before_script:
-  - cd application
-  - php ../composer.phar install -o
+  - bootstrap.bat
   - phantomjs --webdriver=9876 &
   - export PJSPID=$(echo $!)
   - sudo pip install selenium
