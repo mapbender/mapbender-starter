@@ -417,7 +417,29 @@ By save [CSS]/[SCSS] text will be parsed and stored to use of application top
 ## Creation 
 
 A template is a part of [bundle] this located on  "Templates/" directory. 
-In order to create [template] it's need to be 
+
+* create new template PHP-Class in "Template" directory
+* base the class by "apbender\CoreBundle\Component\Template"
+Example:
+
+```ph 
+class NewTemplate extends Mapbender\CoreBundle\Component\Template{
+}
+```
+
+* override public methods pass your needs
+* register template in [bundle] register file "AcmeBundle.php", this is located in bundle root folder
+
+```php
+    public function getTemplates()
+    {
+        return array('Mapbender\AcmeBundle\Template\NewTemplate',);
+    }
+``
+
+* remove the cache
+
+Now template should be avaible by creating new application
 
 # Translations
 
