@@ -12,7 +12,8 @@
         "predis/predis": "~1.0",
         "satooshi/php-coveralls": "~0.6",
         "phpunit/phpunit-selenium": ">=1.2",
-        "facebook/webdriver": "1.1.*"
+        "facebook/webdriver": "1.1.*",
+        "phing/phing": "2.*"
     },
     "require": {
         "php": ">=5.3.3",
@@ -52,13 +53,13 @@
     "scripts": {
         "post-install-cmd": [
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-            "ScriptHandler::checkConfiguration",
+            "ComposerBootstrap::checkConfiguration",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
         ],
         "post-update-cmd": [
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-            "ScriptHandler::checkConfiguration",
+            "ComposerBootstrap::checkConfiguration",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
         ]
