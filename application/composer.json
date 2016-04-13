@@ -1,8 +1,13 @@
 {
-    "name": "symfony/framework-standard-edition",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "name": "wheregroup/mapbender-starter",
+    "description": "Mapbender is the back office software and client framework for spatial data infrastructures.",
+    "license": "MIT",
+    "support": {
+        "issues": "https://repo.wheregroup.com/mapbender3/starter/issues",
+        "source": "https://github.com/mapbender/mapbender-starter"
+    },
     "autoload": {
-        "psr-0": { "": "src/" }
+        "psr-0": { "/": "src/" }
     },
     "provide": {
         "ext-ldap": "*"
@@ -36,7 +41,7 @@
         "friendsofsymfony/jsrouting-bundle": "1.5.x",
         "kriswallsmith/buzz": "v0.15",
         "doctrine/doctrine-fixtures-bundle": "2.3.*",
-        "toooni/fpdf": "dev-master",
+        "toooni/fpdf": "dev-master as",
         "arsgeografica/signing": "1.1.x",
         "phayes/geophp": "1.x",
         "viscreation/vis-ui.js": "0.0.x",
