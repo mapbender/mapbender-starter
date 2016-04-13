@@ -88,16 +88,16 @@ app/console fom:user:resetroot --username root --password root --email root@loca
 app/console server:run
 ```
 
-The next console message describes how you can view mapbender in browser.
+The next console message describes how you can view mapbender in your browser.
 
-It's looks something like:
+It looks something like this:
 ```sh 
 Server running on http://localhost:8000
 ```
 
 So now open the URL in your favorite browser. 
 
-For development reason it's recommended to use Chromium(Chrome) or Firefox.
+For development reason it is recommended to use Chromium(Chrome) or Firefox.
 
 # Modules
 
@@ -106,16 +106,16 @@ and [composer] dependency manager.
 
 Special builds can be created that exclude subsets of Mapbender functionality. 
 
-This allows for smaller custom builds when the builder is certain 
+This allows smaller custom builds when the builder is certain 
 that those parts of Mapbender are not being used. 
 
 For example, an application that only use map view and did not need [Digitizer] functionality.
 
-In the future release any module may be excluded except for core. 
+In the future release any module may be excluded except for the core. 
 
-In the past development bundles was a part of git [submodules]. 
+In the past the development bundles were part of the git [submodules]. 
 
-Now the days each module should be own git repository 
+Now the days each module should be an own git repository 
 and reuse the same directory structure. 
 
 ## Rules
@@ -124,10 +124,10 @@ It's __important__ to follow the rules:
 
 Each module is:
 
-* Is [git] repository
-* Is [Symfony] bundle
-* Is mapbender [bundle]
-* Is [composer] library (has [composer] definition)
+* [git] repository
+* [Symfony] bundle
+* mapbender [bundle]
+* [composer] library (has [composer] definition)
 
 Each module should have:
 
@@ -153,10 +153,10 @@ Is a special set of folders and files:
 * **Command/** - Contains commands. Read more about commands [here] (http://symfony.com/doc/current/components/console/introduction.html#creating-a-basic-command)  
 * **Controllers/** - Contains _controllers_ in other words public [API]'s. 
 * **Component/** - Contains _components_ in other words _services_, 
-    this contains buisness logic in classes. The _components_ are used by controllers or other components
-* **DataFixtures/** - Fixtures are used to load a controlled set of data into a database. This data can be used for testing or could be the initial data required for the application to run smoothly
-* **DependencyInjection/** - Contains only one file, this makes in _magical_ way [components] available as [services], 
-    if they _registred_ in _Resources/config/services.xml_ [bundle] folder
+    this contains buisness logic in classes. The _components_ are used by controllers or other components.
+* **DataFixtures/** - Fixtures are used to load a controlled set of data into a database. This data can be used for testing or could be the initial data required for the application to run smoothly.
+* **DependencyInjection/** - Contains only one file, this makes [components] in _magical_ way available as [services], 
+    if they are _registred_ in _Resources/config/services.xml_ [bundle] folder.
 * **Documents/** - Contains documents related to the [bundle]. [MD] for text and [PUML] for charts formats are preferred.
 * **Exception/** - Contains exceptions.
 * **Element/** - Contains Mapbender [elements]. This folder isn't [symfony] conform.
@@ -164,23 +164,23 @@ Is a special set of folders and files:
 * **Entity/** - Contains entities.
 * **EventListener/** - Contains event listeners.
 * **Resources/config/** - Contains configurations.
-* **Resources/public/** - Contains web resources ([CSS], JS, images)
+* **Resources/public/** - Contains web resources ([CSS], JS, images).
 * **Resources/views/** - Contains [twig] and php templates.
 * **Resources/translations/** - Contains [translations].
-* **Template/** - Contains mapbender [templates]
+* **Template/** - Contains mapbender [templates].
 * **Tests/** - Contains [PHPUnit] and functional tests.
 * **composer.json** - Describes the bundle as [composer] package/library. [Example](https://github.com/mapbender/mapbender-digitizer/blob/master/composer.json)
 * **LICENSE**  - Contains [LICENSE] text.
 * **README.md** - Contains [README] text.
 * **CONTRIBUTING.md** - Contains [CONTRIBUTING] text.
-* **MapbenderNameBundle.php** - Bundle [elements], [templates],  [manager controllers] and [layers] register.
+* **MapbenderNameBundle.php** - Contains the Bundle [elements], [templates],  [manager controllers] and [layers] register.
 
-Read more about best practices for reusable [bundles] [here](http://symfony.com/doc/2.3/cookbook/bundles/best_practices.html)
+Read more about best practices for reusable [bundles] [here](http://symfony.com/doc/2.3/cookbook/bundles/best_practices.html).
 
 
 ## Bundle creation
 
-Create [git] repository outside of Mapbender, as own project
+Create a [git] repository outside of Mapbender, as your own project.
 
 ```sh
 cd ~/Projects
@@ -189,22 +189,21 @@ cd new-awesome-bundle
 git init 
 ```
 
+In order to create a [bundle], please take a look at the [bundle structure](#Bundle%20structure). 
 
-In order to create [bundle], please take a look to [bundle structure](#Bundle%20structure) 
-
-**Don't forget to follow [module] [rules]**!
+**Don't forget to follow the [module] [rules]**!
 
 ### Create composer package
 
-Create [composer].json as in example.
+Create a [composer].json as described in the example.
 
 Dont forget to fill it up:
-* **authors** - is need to know, who is technical director of the [module]. 
-* **name** - unique name of the [module]. You can check the existens by [composer packagist](https://packagist.org/) service. 
-* **license** - [license] short name
-* **description** - describes the [module]
-* **autoload** - [psr-0] Path to get load namespace classes well.
-* **target-dir** - Where [bundle] root should be placed in.
+* **authors** - Is required in order to know the technical director of the [modules ]. 
+* **name** - Unique name of the [module]. You can check the existens by [composer packagist](https://packagist.org/) service. 
+* **license** - [license] short name.
+* **description** - Describes the [module].
+* **autoload** - [psr-0] Path to the namespace classes to load them correctly.
+* **target-dir** - Path where [bundle] root should be placed in.
 
 Better if **autoload** and **target-dir** will be copied from example as is, so only [bundle] names should be changed.
 
@@ -244,7 +243,7 @@ Better if **autoload** and **target-dir** will be copied from example as is, so 
 
 ### Versioning
 
-To learn about semantic versioning please read [here][versioning].
+To learn about semantic versioning please read the documentation [here][versioning].
 
 #### Create version 
 
@@ -268,7 +267,7 @@ git push --tags
 
 ### Register bundle
 
-[Switch](#switch-to-project-directory) to to [mapbender] project directory.
+[Switch](#switch-to-project-directory) to [mapbender] project directory.
 
 Register new [git] [repository] as [composer] [bundle]/[module] in [composer].json.
 
@@ -303,9 +302,9 @@ Example:
 cd vendor/mapbender/new-awesome-bundle/Mapbender/NewAwesomeBundle/
 ```
 
-This is normal [git] repository, [bundle] and [composer] package at the same time. 
+This is a normal [git] repository, [bundle] and [composer] package at the same time. 
 
-Now you ready to change and commit code directly in the project. 
+Now you are ready to change and commit code directly in the project. 
 
 To get involved, please look at [digitizer] structure as example.
 
@@ -329,27 +328,26 @@ without [versioning], it was decided to change the development workflow to [comp
 
 ## Description
 
-For now there are three submodules: [Mapbender], [FOM] and [OWS Proxy], located in ```application``` folder.
-Each [submodule] contains one or many bundles. 
+For now there are three submodules: [Mapbender], [FOM] and [OWS Proxy], located in the ```application``` folder.
+Each [submodule] contains one or more bundles. 
 
 # Elements
 
 ## Definition
 
-Elements can be a part of each [bundle]
-and should be stored in *SomeBundle/SomeElementName* folder.
+The Elements can be a part of each [bundle] and should be stored under *SomeBundle/SomeElementName* folder.
 
 
 Each Mapbender element is:
 
-* central part of Mapbender configurable functionality.
+* central part of Mapbender configurable functionality
 * [Symfony] controller([API]) 
 * [jQuery] [widget]
 * Part of [bundle]
 * Child of [Element] class
 
 
-Each Mapbender element has own:
+Each Mapbender element has it's own:
 
 * JavaScript front end [jQuery] [widget]
 * HTML [DOM] element
@@ -360,20 +358,20 @@ Each Mapbender element has own:
 
 ## Creation
 
-Generate new element by giving:
+Generate a new element by giving:
 
- * the name of [bundle]
+ * name of [bundle]
  * name of new [element]
- * source directory, relative to _application_ folder, where [bundle] is stored 
+ * source directory, relative to _application_ folder, where the [bundle] is stored 
 
 ```sh
 app/console mapbender:generate:element "Mapbender\DigitizerBundle" MyNewElement vendor/mapbender/digitizer
 ```
 
-Now there is new files located in [bundle] folder. For more information read [full tutorial](http://doc.mapbender3.org/en/book/development/element_generate.html).
+Now there are new files located in the [bundle] folder. For more information read the [full tutorial](http://doc.mapbender3.org/en/book/development/element_generate.html).
 
-In order to introduce new element to show by add new element, it should be registered in main [bundle] file in "getElements" method, 
-located in root folder of the [bundle].
+In order to introduce our new element and to show it by adding a new element, it should be registered in the main [bundle] file in "getElements" method, 
+located in the root folder of the [bundle].
 
 ### Example:
  * Bundle file: Mapbender/DigitizerBundle/MapbenderDigitizerBundle.php
@@ -397,30 +395,29 @@ class MapbenderDigitizerBundle extends MapbenderBundle
 * **Fullscreen** - is the main template. This should be used for desktop 
 based application.
 
-* **Mabender mobile template** - is the current template this is in development
-and can be used for simple task. Use at own risk.
+* **Mabender mobile template** - is the current mobile template. This is in development
+and can be used for simple task. Use it at your own risk.
 
-* **Classic template** - is deprecated. This one 
-should be never used. The only reason why it's still in the list is for 
+* **Classic template** - is deprecated. This template shouldn't be used. The only reason why it's still in the list is for 
 backwards capability of Mapbender 3.0.x based projects.
 
 * **Responsive** - isn't ready and shouldn't be used. This template is just a 
-playground for future development and for new templates. Use it 
-at your own risk.
+playground for future development and for new templates. Use it at your own risk.
 
 
 ## Styling
 
-Application template styling can be done by using [CSS] tab for adding own style sheets.
+Application template styling can be done by using [CSS] tab for adding your own style sheets.
 
-[CSS]/[SCSS] text will be parsed to use on top of the application this stored for.
+[CSS]/[SCSS] text will be parsed to use on top of the application it's stored for.
 
 ## Creation 
 
-A template is a part of [bundle] this located on  "Templates/" directory. 
+A template is a part of the [bundle]. It's located in the  "Templates/" directory. 
 
 * create new template PHP-Class in "Template" directory
 * base the class by "apbender\CoreBundle\Component\Template"
+
 Example:
 
 ```php
@@ -440,13 +437,13 @@ class NewTemplate extends Mapbender\CoreBundle\Component\Template{
 
 * remove the cache
 
-Now template should be avaible by creating new application
+Now your template should be avaible. You can use it by creating a new application and choose it in the template list.
 
 # Translations
 
-Read more about [translations](http://symfony.com/doc/2.3/book/translation.html)
+Read more about [translations](http://symfony.com/doc/2.3/book/translation.html).
 
-To get unique named translations, use bundle name prefix before subject
+To get unique named translations, use a bundle name prefix before subject.
 
 ## Example
 
@@ -459,7 +456,7 @@ To get unique named translations, use bundle name prefix before subject
 
 ## Generate translations
 
-By using [TWIG] files, there is generator, to put any used [translation] automatically in 'xlf' files.
+By using [TWIG] files, there is a generator, to put any used [translation] automatically in 'xlf' files.
 
 There few parameters to be submitted:
 
@@ -480,7 +477,7 @@ In order to change the [submodule] source code it is important to create a new [
 
 ## Feature branch
 
-It's mandatory to use "feature/" prefix in the branch name.
+It's mandatory to use the "feature/" prefix in the branch name.
 
 Example:
 
@@ -553,7 +550,7 @@ Then please wait for the feedback. We will check it out, test and review your co
 
 ## Release branch
 
-This branch can only be changed by project maintainer.
+This branch can only be changed by a project maintainer.
 It's mandatory to use *release/* prefix in your branch name.
 
 Example:
@@ -619,14 +616,14 @@ bin/phpunit -c app vendor/mapbender/digitizer/Mapbender/DigitizerBundle/Tests/Fe
 
 ## Submodules
 
-* [Mapbender] - Contains Core, Manager and Print [bundles]
+* [Mapbender] - Contains Core, Manager and Print [bundles].
 * [FOM] - **F**riends **o**f **M**apbender [submodule] contains some additional [bundles].
 * [OWS Proxy] - OWS Proxy bundle.
 
 ## Modules
 
-* [Digitizer] - Digitalizing [bundle], which contains geometries [services]
-* [DataStore] - DataStore [bundle] contains data drivers and [services]
+* [Digitizer] - Digitalizing [bundle], which contains geometries [services].
+* [DataStore] - DataStore [bundle], which contains data drivers and [services].
 
 ## Libraries
 * [Symfony framework]
