@@ -4,7 +4,7 @@ php:
   - 5.3
 
 before_script:
-  - bootstrap.bat
+  - bootstrap
   - phantomjs --webdriver=9876 &
   - export PJSPID=$(echo $!)
   - sudo pip install selenium
