@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7f7b5bfc35a67b8d5cd52a205dfe5666",
-    "content-hash": "abe2ef8a9080aeee809e83a116f306b6",
+    "hash": "fc95f7a5e97d6b1276ae52954c1daeca",
+    "content-hash": "9c7b0008cae7f5a765cd40d8c37b77dd",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -124,16 +124,16 @@
         },
         {
             "name": "blueimp/jquery-file-upload",
-            "version": "9.12.1",
+            "version": "9.12.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vkhramtsov/jQuery-File-Upload.git",
-                "reference": "c4d504ccbf7d5617b6c55e68fa1d084f254df873"
+                "reference": "2fb21a118d65855a5b7e30bfba3f405521dc9b12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vkhramtsov/jQuery-File-Upload/zipball/c4d504ccbf7d5617b6c55e68fa1d084f254df873",
-                "reference": "c4d504ccbf7d5617b6c55e68fa1d084f254df873",
+                "url": "https://api.github.com/repos/vkhramtsov/jQuery-File-Upload/zipball/2fb21a118d65855a5b7e30bfba3f405521dc9b12",
+                "reference": "2fb21a118d65855a5b7e30bfba3f405521dc9b12",
                 "shasum": ""
             },
             "type": "library",
@@ -170,7 +170,7 @@
                 "upload",
                 "widget"
             ],
-            "time": "2016-03-01 07:45:24"
+            "time": "2016-04-12 09:04:50"
         },
         {
             "name": "components/bootstrap",
@@ -2440,16 +2440,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.18.2",
+            "version": "1.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "064b38c16790249488e7a8b987acf1c9d7383c09"
+                "reference": "5f56ed5212dc509c8dc8caeba2715732abb32dbf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/064b38c16790249488e7a8b987acf1c9d7383c09",
-                "reference": "064b38c16790249488e7a8b987acf1c9d7383c09",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/5f56ed5212dc509c8dc8caeba2715732abb32dbf",
+                "reference": "5f56ed5212dc509c8dc8caeba2715732abb32dbf",
                 "shasum": ""
             },
             "require": {
@@ -2514,7 +2514,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2016-04-02 13:12:58"
+            "time": "2016-04-12 18:29:35"
         },
         {
             "name": "paragonie/random_compat",
@@ -3594,16 +3594,16 @@
         },
         {
             "name": "viscreation/vis-ui.js",
-            "version": "0.0.52",
+            "version": "0.0.53",
             "source": {
                 "type": "git",
                 "url": "https://github.com/eSlider/vis-ui.js.git",
-                "reference": "50f91e27af52ba6e523c78b7b89e6e6b263f13e2"
+                "reference": "acd206ac7352888ab3d145d64cc22ecceffbdb8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/eSlider/vis-ui.js/zipball/50f91e27af52ba6e523c78b7b89e6e6b263f13e2",
-                "reference": "50f91e27af52ba6e523c78b7b89e6e6b263f13e2",
+                "url": "https://api.github.com/repos/eSlider/vis-ui.js/zipball/acd206ac7352888ab3d145d64cc22ecceffbdb8c",
+                "reference": "acd206ac7352888ab3d145d64cc22ecceffbdb8c",
                 "shasum": ""
             },
             "require": {
@@ -3633,6 +3633,9 @@
                     "styles": [
                         "src/styles/base.css"
                     ]
+                },
+                "branch-alias": {
+                    "dev-master": "0.0.x-dev"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3652,7 +3655,7 @@
                 "jquery",
                 "vis-ui"
             ],
-            "time": "2016-03-31 13:42:32"
+            "time": "2016-04-12 14:30:44"
         },
         {
             "name": "willdurand/jsonp-callback-validator",
@@ -3696,6 +3699,125 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "andrewsville/php-token-reflection",
+            "version": "1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Andrewsville/PHP-Token-Reflection.git",
+                "reference": "3e3a36de17f32889fd2d4b8108af16d3033ce9bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Andrewsville/PHP-Token-Reflection/zipball/3e3a36de17f32889fd2d4b8108af16d3033ce9bf",
+                "reference": "3e3a36de17f32889fd2d4b8108af16d3033ce9bf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "TokenReflection": "./"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3"
+            ],
+            "authors": [
+                {
+                    "name": "Ondřej Nešpor",
+                    "homepage": "https://github.com/andrewsville"
+                },
+                {
+                    "name": "Jaroslav Hanslík",
+                    "homepage": "https://github.com/kukulich"
+                }
+            ],
+            "description": "Library emulating the PHP internal reflection using just the tokenized source code.",
+            "homepage": "http://andrewsville.github.com/PHP-Token-Reflection/",
+            "keywords": [
+                "library",
+                "reflection",
+                "tokenizer"
+            ],
+            "time": "2012-08-25 21:26:44"
+        },
+        {
+            "name": "apigen/apigen",
+            "version": "v2.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/apigen/ApiGen.git",
+                "reference": "bca0954e92621a48c6870be57115026a8d032706"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/apigen/ApiGen/zipball/bca0954e92621a48c6870be57115026a8d032706",
+                "reference": "bca0954e92621a48c6870be57115026a8d032706",
+                "shasum": ""
+            },
+            "require": {
+                "andrewsville/php-token-reflection": "~1.3.1",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "kukulich/fshl": "~2.1.0",
+                "nette/nette": "~2.1.1",
+                "php": ">=5.3.0",
+                "texy/texy": "~2.4.0"
+            },
+            "suggest": {
+                "ext-bz2": "*",
+                "ext-phar": "*",
+                "ext-zip": "*",
+                "ext-zlib": "*"
+            },
+            "bin": [
+                "apigen"
+            ],
+            "type": "project",
+            "extra": {
+                "branch-alias": {
+                    "dev-develop": "3.0.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "ApiGen": "./"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "http://davidgrudl.com"
+                },
+                {
+                    "name": "Ondřej Nešpor",
+                    "homepage": "https://github.com/andrewsville"
+                },
+                {
+                    "name": "Jaroslav Hanslík",
+                    "homepage": "https://github.com/kukulich"
+                }
+            ],
+            "description": "API documentation generator for PHP 5.3+",
+            "homepage": "http://apigen.org/",
+            "keywords": [
+                "api",
+                "docblock",
+                "documentation",
+                "generator",
+                "phpDocumentor",
+                "phpdoc"
+            ],
+            "time": "2014-09-01 18:06:36"
+        },
         {
             "name": "facebook/webdriver",
             "version": "1.1.1",
@@ -3835,6 +3957,48 @@
             "time": "2015-03-18 18:23:50"
         },
         {
+            "name": "kukulich/fshl",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kukulich/fshl.git",
+                "reference": "974c294ade5d76c0c16b6fe3fd3a584ba999b24f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kukulich/fshl/zipball/974c294ade5d76c0c16b6fe3fd3a584ba999b24f",
+                "reference": "974c294ade5d76c0c16b6fe3fd3a584ba999b24f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "FSHL": "./"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Jaroslav Hanslík",
+                    "homepage": "https://github.com/kukulich"
+                }
+            ],
+            "description": "FSHL is a free, open source, universal, fast syntax highlighter written in PHP.",
+            "homepage": "http://fshl.kukulich.cz/",
+            "keywords": [
+                "highlight",
+                "library",
+                "syntax"
+            ],
+            "time": "2012-09-08 19:00:07"
+        },
+        {
             "name": "myclabs/deep-copy",
             "version": "1.5.0",
             "source": {
@@ -3875,6 +4039,185 @@
                 "object graph"
             ],
             "time": "2015-11-07 22:20:37"
+        },
+        {
+            "name": "nette/nette",
+            "version": "v2.1.12",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/nette.git",
+                "reference": "180d31fdae2b91ff6e98d7588d123f3d33f8c1de"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/nette/zipball/180d31fdae2b91ff6e98d7588d123f3d33f8c1de",
+                "reference": "180d31fdae2b91ff6e98d7588d123f3d33f8c1de",
+                "shasum": ""
+            },
+            "require": {
+                "ext-iconv": "*",
+                "ext-tokenizer": "*",
+                "php": ">=5.3.1"
+            },
+            "replace": {
+                "latte/latte": "self.version",
+                "nette/application": "self.version",
+                "nette/bootstrap": "self.version",
+                "nette/caching": "self.version",
+                "nette/component-model": "self.version",
+                "nette/database": "self.version",
+                "nette/di": "self.version",
+                "nette/finder": "self.version",
+                "nette/forms": "self.version",
+                "nette/http": "self.version",
+                "nette/mail": "self.version",
+                "nette/neon": "self.version",
+                "nette/php-generator": "self.version",
+                "nette/reflection": "self.version",
+                "nette/robot-loader": "self.version",
+                "nette/safe-stream": "self.version",
+                "nette/security": "self.version",
+                "nette/tokenizer": "self.version",
+                "nette/utils": "self.version",
+                "tracy/tracy": "self.version"
+            },
+            "require-dev": {
+                "nette/tester": "~1.6"
+            },
+            "suggest": {
+                "ext-fileinfo": "",
+                "ext-gd": "",
+                "ext-mbstring": "",
+                "ext-pdo": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "Nette/"
+                ],
+                "files": [
+                    "Nette/common/shortcuts.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "Nette Framework - innovative framework for fast and easy development of secured web applications in PHP. Write less, have cleaner code and your work will bring you joy.",
+            "homepage": "https://nette.org",
+            "keywords": [
+                "Forms",
+                "database",
+                "debugging",
+                "framework",
+                "mailing",
+                "mvc",
+                "templating"
+            ],
+            "time": "2015-12-03 04:17:19"
+        },
+        {
+            "name": "phing/phing",
+            "version": "2.14.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phingofficial/phing.git",
+                "reference": "7dd73c83c377623def54b58121f46b4dcb35dd61"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phingofficial/phing/zipball/7dd73c83c377623def54b58121f46b4dcb35dd61",
+                "reference": "7dd73c83c377623def54b58121f46b4dcb35dd61",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "require-dev": {
+                "ext-pdo_sqlite": "*",
+                "lastcraft/simpletest": "@dev",
+                "mikey179/vfsstream": "^1.6",
+                "pdepend/pdepend": "2.x",
+                "pear/archive_tar": "1.4.x",
+                "pear/http_request2": "dev-trunk",
+                "pear/net_growl": "dev-trunk",
+                "pear/pear-core-minimal": "1.10.1",
+                "pear/versioncontrol_git": "@dev",
+                "pear/versioncontrol_svn": "~0.5",
+                "phpdocumentor/phpdocumentor": "2.x",
+                "phploc/phploc": "~2.0.6",
+                "phpmd/phpmd": "~2.2",
+                "phpunit/phpunit": ">=3.7",
+                "sebastian/git": "~1.0",
+                "sebastian/phpcpd": "2.x",
+                "squizlabs/php_codesniffer": "~2.2",
+                "symfony/yaml": "~2.7"
+            },
+            "suggest": {
+                "pdepend/pdepend": "PHP version of JDepend",
+                "pear/archive_tar": "Tar file management class",
+                "pear/versioncontrol_git": "A library that provides OO interface to handle Git repository",
+                "pear/versioncontrol_svn": "A simple OO-style interface for Subversion, the free/open-source version control system",
+                "phpdocumentor/phpdocumentor": "Documentation Generator for PHP",
+                "phploc/phploc": "A tool for quickly measuring the size of a PHP project",
+                "phpmd/phpmd": "PHP version of PMD tool",
+                "phpunit/php-code-coverage": "Library that provides collection, processing, and rendering functionality for PHP code coverage information",
+                "phpunit/phpunit": "The PHP Unit Testing Framework",
+                "sebastian/phpcpd": "Copy/Paste Detector (CPD) for PHP code",
+                "tedivm/jshrink": "Javascript Minifier built in PHP"
+            },
+            "bin": [
+                "bin/phing"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.14.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "classes/phing/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                "classes"
+            ],
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Michiel Rook",
+                    "email": "mrook@php.net"
+                },
+                {
+                    "name": "Phing Community",
+                    "homepage": "https://www.phing.info/trac/wiki/Development/Contributors"
+                }
+            ],
+            "description": "PHing Is Not GNU make; it's a PHP project build system or build tool based on Apache Ant.",
+            "homepage": "https://www.phing.info/",
+            "keywords": [
+                "build",
+                "phing",
+                "task",
+                "tool"
+            ],
+            "time": "2016-03-10 21:39:23"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -4230,16 +4573,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.3.1",
+            "version": "5.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "34a3acb401ae79deb37bc6e5f5ec3d325b369b4c"
+                "reference": "2c6da3536035617bae3fe3db37283c9e0eb63ab3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/34a3acb401ae79deb37bc6e5f5ec3d325b369b4c",
-                "reference": "34a3acb401ae79deb37bc6e5f5ec3d325b369b4c",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/2c6da3536035617bae3fe3db37283c9e0eb63ab3",
+                "reference": "2c6da3536035617bae3fe3db37283c9e0eb63ab3",
                 "shasum": ""
             },
             "require": {
@@ -4301,7 +4644,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-04-07 07:04:34"
+            "time": "2016-04-12 16:20:08"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -5052,6 +5395,62 @@
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
             "time": "2016-02-04 12:56:52"
+        },
+        {
+            "name": "texy/texy",
+            "version": "v2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dg/texy.git",
+                "reference": "67d02cd95e4aaa7dae96b24a7d04ba924d641015"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dg/texy/zipball/67d02cd95e4aaa7dae96b24a7d04ba924d641015",
+                "reference": "67d02cd95e4aaa7dae96b24a7d04ba924d641015",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "replace": {
+                "dg/texy": "self.version"
+            },
+            "require-dev": {
+                "nette/tester": "~1.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/texy.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "http://davidgrudl.com"
+                }
+            ],
+            "description": "Texy converts plain text in easy to read Texy syntax into structurally valid (X)HTML. It supports adding of images, links, nested lists, tables and has full support for CSS. Texy supports hyphenation of long words (which reflects language rules), clickable emails and URL (emails are obfuscated against spambots), national typographic single and double quotation marks, ellipses, em dashes, dimension sign, nonbreakable spaces (e.g. in phone numbers), acronyms, arrows and many others. Texy code can optionally contain HTML tags.",
+            "homepage": "http://texy.info",
+            "keywords": [
+                "html",
+                "markdown",
+                "markup language",
+                "plain text",
+                "text",
+                "textile",
+                "texy",
+                "wiki",
+                "xhtml"
+            ],
+            "time": "2014-02-10 02:34:57"
         }
     ],
     "aliases": [],
