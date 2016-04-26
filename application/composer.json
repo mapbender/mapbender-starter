@@ -1,6 +1,11 @@
 {
-    "name": "symfony/framework-standard-edition",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "name": "wheregroup/mapbender-starter",
+    "description": "Mapbender is the back office software and client framework for spatial data infrastructures.",
+    "license": "MIT",
+    "support": {
+        "issues": "https://repo.wheregroup.com/mapbender3/starter/issues",
+        "source": "https://github.com/mapbender/mapbender-starter"
+    },
     "autoload": {
         "psr-0": { "": "src/" }
     },
@@ -13,6 +18,7 @@
         "satooshi/php-coveralls": "~0.6",
         "phpunit/phpunit-selenium": ">=1.2",
         "facebook/webdriver": "1.1.*",
+        "apigen/apigen": "2.*",
         "phing/phing": "2.*"
     },
     "require": {
