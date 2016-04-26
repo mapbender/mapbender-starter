@@ -1,6 +1,3 @@
 [submodule "application/mapbender"]
 	path = application/mapbender
 	url = https://github.com/mapbender/mapbender.git
-[submodule "documentation/_exts"]
-	path = documentation/_exts
-	url = https://github.com/fabpot/sphinx-php.git
