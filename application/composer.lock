@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8f6e80e4de460ceb3f1b72a1ee684a26",
-    "content-hash": "7492f37264974de6698e41d89cb72de0",
+    "hash": "f0834dce65128f5d59585546053100ea",
+    "content-hash": "74f5c7b3aecc2efbf8134c7ae396c2b1",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -2336,6 +2336,55 @@
                 "mapbender"
             ],
             "time": "2016-03-10 10:47:19"
+        },
+        {
+            "name": "mapbender/fom",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mapbender/fom.git",
+                "reference": "7e2b179bc730df22ef178f2fc56d2845d7727ef4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mapbender/fom/zipball/7e2b179bc730df22ef178f2fc56d2845d7727ef4",
+                "reference": "7e2b179bc730df22ef178f2fc56d2845d7727ef4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FOM\\": "./"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stefan Winkelmann"
+                },
+                {
+                    "name": "Andreas Schmitz"
+                },
+                {
+                    "name": "Andriy Oblivansev"
+                },
+                {
+                    "name": "Paul Schmidt"
+                }
+            ],
+            "description": "Mapbender3 library",
+            "keywords": [
+                "fom",
+                "mapbender",
+                "module"
+            ],
+            "time": "2016-04-26 10:02:51"
         },
         {
             "name": "mapbender/mapbender-icons",
