@@ -1,3 +1,0 @@
-[submodule "application/mapbender"]
-	path = application/mapbender
-	url = https://github.com/mapbender/mapbender.git
