@@ -57,7 +57,8 @@
         "mapbender/digitizer": "1.0.x",
         "mapbender/fom": "1.0.0",
         "mapbender/owsproxy": "1.0",
-        "mapbender/documentaiton": "1.0.0"
+        "mapbender/documentaiton": "1.0.0",
+        "mapbender/mapbender": "3.0.6"
     },
     "scripts": {
         "post-install-cmd": [
