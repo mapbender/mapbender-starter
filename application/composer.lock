@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fc95f7a5e97d6b1276ae52954c1daeca",
-    "content-hash": "9c7b0008cae7f5a765cd40d8c37b77dd",
+    "hash": "8f6e80e4de460ceb3f1b72a1ee684a26",
+    "content-hash": "7492f37264974de6698e41d89cb72de0",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -2385,6 +2385,50 @@
             "time": "2015-10-21 08:43:30"
         },
         {
+            "name": "mapbender/owsproxy",
+            "version": "1.0.0",
+            "target-dir": "OwsProxy3/CoreBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mapbender/owsproxy3.git",
+                "reference": "bedd02bfe4e1253f821e80c2089d1bd1e898ce19"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/bedd02bfe4e1253f821e80c2089d1bd1e898ce19",
+                "reference": "bedd02bfe4e1253f821e80c2089d1bd1e898ce19",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "OwsProxy3\\CoreBundle": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andreas Schmitz"
+                },
+                {
+                    "name": "Paul Schmidt"
+                }
+            ],
+            "description": "OWS Proxy",
+            "keywords": [
+                "mapbender",
+                "module",
+                "owsproxy"
+            ],
+            "time": "2016-04-26 08:51:03"
+        },
+        {
             "name": "medialize/jquery-context-menu",
             "version": "1.6.7",
             "source": {
@@ -3594,16 +3638,16 @@
         },
         {
             "name": "viscreation/vis-ui.js",
-            "version": "0.0.53",
+            "version": "0.0.55",
             "source": {
                 "type": "git",
                 "url": "https://github.com/eSlider/vis-ui.js.git",
-                "reference": "acd206ac7352888ab3d145d64cc22ecceffbdb8c"
+                "reference": "e9745237b136bcfe8b0ed81792d13df4152a6b46"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/eSlider/vis-ui.js/zipball/acd206ac7352888ab3d145d64cc22ecceffbdb8c",
-                "reference": "acd206ac7352888ab3d145d64cc22ecceffbdb8c",
+                "url": "https://api.github.com/repos/eSlider/vis-ui.js/zipball/e9745237b136bcfe8b0ed81792d13df4152a6b46",
+                "reference": "e9745237b136bcfe8b0ed81792d13df4152a6b46",
                 "shasum": ""
             },
             "require": {
@@ -3655,7 +3699,7 @@
                 "jquery",
                 "vis-ui"
             ],
-            "time": "2016-04-12 14:30:44"
+            "time": "2016-04-20 08:37:23"
         },
         {
             "name": "willdurand/jsonp-callback-validator",
@@ -4648,16 +4692,16 @@
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "3.1.2",
+            "version": "3.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "7c34c9bdde4131b824086457a3145e27dba10ca1"
+                "reference": "151c96874bff6fe61a25039df60e776613a61489"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/7c34c9bdde4131b824086457a3145e27dba10ca1",
-                "reference": "7c34c9bdde4131b824086457a3145e27dba10ca1",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/151c96874bff6fe61a25039df60e776613a61489",
+                "reference": "151c96874bff6fe61a25039df60e776613a61489",
                 "shasum": ""
             },
             "require": {
@@ -4700,20 +4744,20 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2016-03-24 05:58:25"
+            "time": "2016-04-20 14:39:26"
         },
         {
             "name": "phpunit/phpunit-selenium",
-            "version": "3.0.1",
+            "version": "3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giorgiosironi/phpunit-selenium.git",
-                "reference": "facc2c9421a5a784092e0471e30812e711299da7"
+                "reference": "d3aa8984c31efcff7c8829b9bd9ad7ab4c94709c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giorgiosironi/phpunit-selenium/zipball/facc2c9421a5a784092e0471e30812e711299da7",
-                "reference": "facc2c9421a5a784092e0471e30812e711299da7",
+                "url": "https://api.github.com/repos/giorgiosironi/phpunit-selenium/zipball/d3aa8984c31efcff7c8829b9bd9ad7ab4c94709c",
+                "reference": "d3aa8984c31efcff7c8829b9bd9ad7ab4c94709c",
                 "shasum": ""
             },
             "require": {
@@ -4764,7 +4808,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-03-26 10:45:59"
+            "time": "2016-04-22 10:41:33"
         },
         {
             "name": "predis/predis",
