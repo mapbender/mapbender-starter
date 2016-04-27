@@ -56,6 +56,9 @@
         "components/joii": "3.1.x",
         "mapbender/digitizer": "1.0.x",
 
+        "components/codemirror": "5.13.x",
+        "components/openlayers": "2.13.x",
+
         "mapbender/mapquery": "dev-master as 1.0.0",
         "mapbender/fom": "dev-release/3.0.6",
         "mapbender/owsproxy": "dev-release/3.0.6",
@@ -90,8 +93,57 @@
     },
     "repositories": [
         {
-            "type": "git",
-            "url": "https://github.com/mapbender/mapbender-documentation/"
+            "type": "package",
+            "package": {
+                "name": "components/openlayers",
+                "type": "component",
+                "version": "2.13.1",
+                "source": {
+                    "url": "https://github.com/openlayers/ol2",
+                    "type": "git",
+                    "reference": "master"
+                },
+                "extra": {
+                    "component": {
+                        "files": [
+                            "art/**",
+                            "lib/**",
+                            "img/**",
+                            "theme/**"
+                        ]
+                    }
+                },
+                "require": {
+                    "robloach/component-installer": "*"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "components/codemirror",
+                "type": "component",
+                "version": "5.13.4",
+                "source": {
+                    "url": "https://github.com/codemirror/CodeMirror.git",
+                    "type": "git",
+                    "reference": "master"
+                },
+                "extra": {
+                    "component": {
+                        "files": [
+                            "lib/**",
+                            "keymap/**",
+                            "mode/**",
+                            "theme/**",
+                            "addon/**"
+                        ]
+                    }
+                },
+                "require": {
+                    "robloach/component-installer": "*"
+                }
+            }
         },
         {
             "type": "git",
