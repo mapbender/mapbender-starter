@@ -24,9 +24,6 @@ class ComposerBootstrap
         //$configuration         = file_get_contents($configurationBaseFile);
 
         if ($isNewInstall) {
-
-            self::updateSubmodules();
-
             copy($configurationBaseFile, $configurationFile);
 
             self::createDatabase();
@@ -118,27 +115,6 @@ class ComposerBootstrap
 
         self::printStatus("ATTENTION");
         echo "User $userName account password is: $password. Don't forget to change it!\n";
-    }
-
-    /**
-     * Update submodules
-     */
-    protected static function updateSubmodules()
-    {
-        $rootPath                = self::getSymfonyRootPath();
-        $hasApplicationSubFolder = is_dir($rootPath . "/../.git");
-        if ($hasApplicationSubFolder) {
-            echo `cd ..`;
-        }
-
-        self::printStatus("Update submodules");
-
-        echo `git submodule sync`;
-        echo `git submodule update --init --recursive`;
-
-        if ($hasApplicationSubFolder) {
-            echo `cd "$rootPath"`;
-        }
     }
 
     /**
