@@ -15,14 +15,12 @@ web/xmlschemas/*
 
 !*/web/uploads/mapbender_user
 !*/web/uploads/mapbender_user_basic
-*/web/assets/*.trans
+/web/assets/*.trans
 web/assets/.dev-cache
 extra/
-*/app/config/parameters.yml
-*/app/bootstrap.php.cache
-*/composer.phar
-*/composer.lock
-*/vendor
+/app/config/parameters.yml
+app/bootstrap.php.cache
+vendor
 *.tar.gz
 *.rpm
 *.deb
