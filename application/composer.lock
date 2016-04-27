@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f0834dce65128f5d59585546053100ea",
-    "content-hash": "74f5c7b3aecc2efbf8134c7ae396c2b1",
+    "hash": "74c5cfbdcc585c01ac0cfd91a8d3b2dc",
+    "content-hash": "e5b19958a97e3845b6c3b73015504483",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -1448,6 +1448,39 @@
             "time": "2016-01-28 19:50:13"
         },
         {
+            "name": "fabpot/sphinx-php",
+            "version": "v1.0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fabpot/sphinx-php.git",
+                "reference": "8f6abb2e0278ce6350c5451409c1514469c0a6f7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fabpot/sphinx-php/zipball/8f6abb2e0278ce6350c5451409c1514469c0a6f7",
+                "reference": "8f6abb2e0278ce6350c5451409c1514469c0a6f7",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Sphinx extension for PHP projects",
+            "time": "2015-11-04 00:48:43"
+        },
+        {
             "name": "fontfacekit/open-sans",
             "version": "1.4.0",
             "dist": {
@@ -2338,8 +2371,36 @@
             "time": "2016-03-10 10:47:19"
         },
         {
+            "name": "mapbender/documentation",
+            "version": "dev-release/3.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mapbender/mapbender-documentation/",
+                "reference": "b66ecc234fe4ca645b9a2b3bc0879be1a2d3662d"
+            },
+            "require": {
+                "fabpot/sphinx-php": "1.0.*",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Astrid Emde"
+                }
+            ],
+            "description": "Mapbender3 documentation",
+            "keywords": [
+                "documentation",
+                "mapbender"
+            ],
+            "time": "2016-04-27 10:08:49"
+        },
+        {
             "name": "mapbender/fom",
-            "version": "1.0.0",
+            "version": "dev-release/3.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/fom.git",
@@ -2385,6 +2446,48 @@
                 "module"
             ],
             "time": "2016-04-26 10:02:51"
+        },
+        {
+            "name": "mapbender/mapbender",
+            "version": "dev-release/3.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mapbender/mapbender/",
+                "reference": "46000ec396105229173a61348c22d18e414ed935"
+            },
+            "require": {
+                "mapbender/mapquery": "1.0.x",
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Mapbender\\": "."
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andreas Schmitz"
+                },
+                {
+                    "name": "Paul Schmidt"
+                },
+                {
+                    "name": "Andriy Oblivantsev"
+                },
+                {
+                    "name": "Stefan Winkelmann"
+                }
+            ],
+            "description": "Mapbender core library",
+            "keywords": [
+                "library",
+                "mapbender"
+            ],
+            "time": "2016-04-27 10:15:10"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -2434,18 +2537,57 @@
             "time": "2015-10-21 08:43:30"
         },
         {
-            "name": "mapbender/owsproxy",
+            "name": "mapbender/mapquery",
             "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mapbender/mapquery.git",
+                "reference": "66958c9984fa806cf08d346345af090f090217c8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mapbender/mapquery/zipball/66958c9984fa806cf08d346345af090f090217c8",
+                "reference": "66958c9984fa806cf08d346345af090f090217c8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Volker Mische <volker.mische@gmail.com>"
+                },
+                {
+                    "name": "Anne Blankert <anne.blankert@geodan.nl>"
+                },
+                {
+                    "name": "Steven Ottens <smo@minst.net>"
+                }
+            ],
+            "description": "MapQuery",
+            "keywords": [
+                "mapquery"
+            ],
+            "time": "2016-04-27 05:50:02"
+        },
+        {
+            "name": "mapbender/owsproxy",
+            "version": "dev-release/3.0.6",
             "target-dir": "OwsProxy3/CoreBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/owsproxy3.git",
-                "reference": "bedd02bfe4e1253f821e80c2089d1bd1e898ce19"
+                "reference": "1958e1b2ab201d5d7aeb01884a01f0ae407642db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/bedd02bfe4e1253f821e80c2089d1bd1e898ce19",
-                "reference": "bedd02bfe4e1253f821e80c2089d1bd1e898ce19",
+                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/1958e1b2ab201d5d7aeb01884a01f0ae407642db",
+                "reference": "1958e1b2ab201d5d7aeb01884a01f0ae407642db",
                 "shasum": ""
             },
             "require": {
@@ -2475,7 +2617,7 @@
                 "module",
                 "owsproxy"
             ],
-            "time": "2016-04-26 08:51:03"
+            "time": "2016-04-26 08:50:10"
         },
         {
             "name": "medialize/jquery-context-menu",
@@ -5549,7 +5691,11 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "toooni/fpdf": 20
+        "toooni/fpdf": 20,
+        "mapbender/fom": 20,
+        "mapbender/owsproxy": 20,
+        "mapbender/documentation": 20,
+        "mapbender/mapbender": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
