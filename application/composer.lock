@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0ee52539fe77a7b72a71fd7ce7291c9c",
-    "content-hash": "ba34abc05b58baedfd93f63e947cb68e",
+    "hash": "336d62124d2768076a9199259f772024",
+    "content-hash": "259659af90556dbfffeee376a38e7a5e",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -2569,7 +2569,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender/",
-                "reference": "9a226e4fbfebab0439e8f71d659467f4e4fbc770"
+                "reference": "72153629070215fac52f183a6506a265d41846f0"
             },
             "require": {
                 "mapbender/mapquery": "1.0.x",
@@ -2603,7 +2603,7 @@
                 "library",
                 "mapbender"
             ],
-            "time": "2016-04-27 13:08:01"
+            "time": "2016-04-27 14:50:43"
         },
         {
             "name": "mapbender/mapbender-icons",
