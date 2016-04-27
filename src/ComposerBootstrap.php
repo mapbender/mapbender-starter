@@ -78,8 +78,8 @@ class ComposerBootstrap
         if (!self::isWindows()) {
             self::printStatus("Enable write cache, logs and upload for user and user group");
 
-            echo `chmod -R ug+wX app/cache`;
-            echo `chmod -R ug+wX app/logs`;
+            echo `chmod -R ug+wX var/cache`;
+            echo `chmod -R ug+wX var/logs`;
             echo `chmod -R ug+wX web/uploads`;
         }
     }
