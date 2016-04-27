@@ -57,6 +57,7 @@
         "components/codemirror": "5.13.x",
         "components/openlayers": "2.13.x",
         "components/notifyjs": "0.4.2",
+        "components/json2": "1.0",
 
         "mapbender/mapbender-icons": "1.x",
         "mapbender/digitizer": "1.0.x",
@@ -93,6 +94,29 @@
         "symfony-assets-install": "symlink"
     },
     "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "components/json2",
+                "type": "component",
+                "version": "1.0",
+                "source": {
+                    "url": "https://github.com/douglascrockford/JSON-js.git",
+                    "type": "git",
+                    "reference": "master"
+                },
+                "extra": {
+                    "component": {
+                        "files": [
+                            "json2.js"
+                        ]
+                    }
+                },
+                "require": {
+                    "robloach/component-installer": "*"
+                }
+            }
+        },
         {
             "type": "package",
             "package": {
