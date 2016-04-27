@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "74c5cfbdcc585c01ac0cfd91a8d3b2dc",
-    "content-hash": "e5b19958a97e3845b6c3b73015504483",
+    "hash": "336d62124d2768076a9199259f772024",
+    "content-hash": "259659af90556dbfffeee376a38e7a5e",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -173,6 +173,28 @@
             "time": "2016-04-12 09:04:50"
         },
         {
+            "name": "components/backbone",
+            "version": "1.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jashkenas/backbone.git",
+                "reference": "master"
+            },
+            "require": {
+                "robloach/component-installer": "*"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "files": [
+                        "backbone*.js",
+                        "backbone*.map",
+                        "karma*.js"
+                    ]
+                }
+            }
+        },
+        {
             "name": "components/bootstrap",
             "version": "3.3.6",
             "source": {
@@ -239,6 +261,30 @@
                 "web"
             ],
             "time": "2015-11-24 20:19:41"
+        },
+        {
+            "name": "components/codemirror",
+            "version": "5.13.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/codemirror/CodeMirror.git",
+                "reference": "master"
+            },
+            "require": {
+                "robloach/component-installer": "*"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "files": [
+                        "lib/**",
+                        "keymap/**",
+                        "mode/**",
+                        "theme/**",
+                        "addon/**"
+                    ]
+                }
+            }
         },
         {
             "name": "components/datatables",
@@ -488,6 +534,26 @@
             "time": "2015-03-13 14:48:12"
         },
         {
+            "name": "components/json2",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/douglascrockford/JSON-js.git",
+                "reference": "master"
+            },
+            "require": {
+                "robloach/component-installer": "*"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "files": [
+                        "json2.js"
+                    ]
+                }
+            }
+        },
+        {
             "name": "components/normalize.css",
             "version": "3.0.3",
             "source": {
@@ -517,6 +583,49 @@
             "description": "Normalize.css is a customisable CSS file that makes browsers render all elements more consistently and in line with modern standards.",
             "homepage": "http://necolas.github.com/normalize.css/",
             "time": "2015-05-21 16:25:32"
+        },
+        {
+            "name": "components/notifyjs",
+            "version": "0.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/notifyjs/notifyjs",
+                "reference": "master"
+            },
+            "require": {
+                "robloach/component-installer": "*"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "files": [
+                        "dist/**"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "components/openlayers",
+            "version": "2.13.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/openlayers/ol2",
+                "reference": "master"
+            },
+            "require": {
+                "robloach/component-installer": "*"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "files": [
+                        "art/**",
+                        "lib/**",
+                        "img/**",
+                        "theme/**"
+                    ]
+                }
+            }
         },
         {
             "name": "components/placeholdersjs",
@@ -2375,14 +2484,21 @@
             "version": "dev-release/3.0.6",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mapbender/mapbender-documentation/",
+                "url": "https://github.com/mapbender/mapbender-documentation.git",
                 "reference": "b66ecc234fe4ca645b9a2b3bc0879be1a2d3662d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/b66ecc234fe4ca645b9a2b3bc0879be1a2d3662d",
+                "reference": "b66ecc234fe4ca645b9a2b3bc0879be1a2d3662d",
+                "shasum": ""
             },
             "require": {
                 "fabpot/sphinx-php": "1.0.*",
                 "php": ">=5.3.0"
             },
             "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2453,7 +2569,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender/",
-                "reference": "46000ec396105229173a61348c22d18e414ed935"
+                "reference": "f4154dbe835ef918cbb1c48f00111949c9a7169d"
             },
             "require": {
                 "mapbender/mapquery": "1.0.x",
@@ -2487,7 +2603,7 @@
                 "library",
                 "mapbender"
             ],
-            "time": "2016-04-27 10:15:10"
+            "time": "2016-04-27 15:00:42"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -2538,22 +2654,37 @@
         },
         {
             "name": "mapbender/mapquery",
-            "version": "1.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapquery.git",
-                "reference": "66958c9984fa806cf08d346345af090f090217c8"
+                "reference": "c54a6835bbf6e83bb55637d14c0e9cc71b61b0a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapquery/zipball/66958c9984fa806cf08d346345af090f090217c8",
-                "reference": "66958c9984fa806cf08d346345af090f090217c8",
+                "url": "https://api.github.com/repos/mapbender/mapquery/zipball/c54a6835bbf6e83bb55637d14c0e9cc71b61b0a9",
+                "reference": "c54a6835bbf6e83bb55637d14c0e9cc71b61b0a9",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": ">=5.3.0",
+                "robloach/component-installer": "0.2.*"
             },
-            "type": "library",
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "src/*.js"
+                    ],
+                    "files": [
+                        "lib/openlayers/*",
+                        "lib/openlayers/**"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
@@ -2573,7 +2704,7 @@
             "keywords": [
                 "mapquery"
             ],
-            "time": "2016-04-27 05:50:02"
+            "time": "2016-04-27 12:43:48"
         },
         {
             "name": "mapbender/owsproxy",
@@ -5688,10 +5819,18 @@
             "time": "2014-02-10 02:34:57"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "alias": "1.0.0",
+            "alias_normalized": "1.0.0.0",
+            "version": "9999999-dev",
+            "package": "mapbender/mapquery"
+        }
+    ],
     "minimum-stability": "stable",
     "stability-flags": {
         "toooni/fpdf": 20,
+        "mapbender/mapquery": 20,
         "mapbender/fom": 20,
         "mapbender/owsproxy": 20,
         "mapbender/documentation": 20,

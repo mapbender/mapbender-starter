@@ -50,12 +50,19 @@
         "eslider/sasscb":  "3.1.x",
         "gedmo/doctrine-extensions": "~2.3",
         "imag/ldap-bundle":  "2.3.x",
-        "mapbender/mapbender-icons": "1.x",
+
         "components/jquery": "1.11.2",
         "components/underscore": "1.x",
         "components/joii": "3.1.x",
-        "mapbender/digitizer": "1.0.x",
+        "components/codemirror": "5.13.x",
+        "components/openlayers": "2.13.x",
+        "components/notifyjs": "0.4.2",
+        "components/json2": "1.0",
+        "components/backbone": "1.3.x",
 
+        "mapbender/mapbender-icons": "1.x",
+        "mapbender/digitizer": "1.0.x",
+        "mapbender/mapquery": "dev-master as 1.0.0",
         "mapbender/fom": "dev-release/3.0.6",
         "mapbender/owsproxy": "dev-release/3.0.6",
         "mapbender/documentation": "dev-release/3.0.6",
@@ -90,11 +97,131 @@
     "repositories": [
         {
             "type": "git",
-            "url": "https://github.com/mapbender/mapbender-documentation/"
+            "url": "https://github.com/mapbender/mapbender/"
         },
         {
-            "type": "git",
-            "url": "https://github.com/mapbender/mapbender/"
+            "type": "package",
+            "package": {
+                "name": "components/backbone",
+                "type": "component",
+                "version": "1.3.3",
+                "source": {
+                    "url": "https://github.com/jashkenas/backbone.git",
+                    "type": "git",
+                    "reference": "master"
+                },
+                "extra": {
+                    "component": {
+                        "files": [
+                            "backbone*.js",
+                            "backbone*.map",
+                            "karma*.js"
+                        ]
+                    }
+                },
+                "require": {
+                    "robloach/component-installer": "*"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "components/json2",
+                "type": "component",
+                "version": "1.0",
+                "source": {
+                    "url": "https://github.com/douglascrockford/JSON-js.git",
+                    "type": "git",
+                    "reference": "master"
+                },
+                "extra": {
+                    "component": {
+                        "files": [
+                            "json2.js"
+                        ]
+                    }
+                },
+                "require": {
+                    "robloach/component-installer": "*"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "components/notifyjs",
+                "type": "component",
+                "version": "0.4.2",
+                "source": {
+                    "url": "https://github.com/notifyjs/notifyjs",
+                    "type": "git",
+                    "reference": "master"
+                },
+                "extra": {
+                    "component": {
+                        "files": [
+                            "dist/**"
+                        ]
+                    }
+                },
+                "require": {
+                    "robloach/component-installer": "*"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "components/openlayers",
+                "type": "component",
+                "version": "2.13.1",
+                "source": {
+                    "url": "https://github.com/openlayers/ol2",
+                    "type": "git",
+                    "reference": "master"
+                },
+                "extra": {
+                    "component": {
+                        "files": [
+                            "art/**",
+                            "lib/**",
+                            "img/**",
+                            "theme/**"
+                        ]
+                    }
+                },
+                "require": {
+                    "robloach/component-installer": "*"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "components/codemirror",
+                "type": "component",
+                "version": "5.13.4",
+                "source": {
+                    "url": "https://github.com/codemirror/CodeMirror.git",
+                    "type": "git",
+                    "reference": "master"
+                },
+                "extra": {
+                    "component": {
+                        "files": [
+                            "lib/**",
+                            "keymap/**",
+                            "mode/**",
+                            "theme/**",
+                            "addon/**"
+                        ]
+                    }
+                },
+                "require": {
+                    "robloach/component-installer": "*"
+                }
+            }
         },
         {
             "type": "package",
