@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f7a3d3a5f6f3dcd8cfd557f59b7de73e",
-    "content-hash": "a83fbcc8c901039b644afb36a7af6c50",
+    "hash": "2bbdab2e1561fe54185c2032025766b7",
+    "content-hash": "656e772b2fe9c9a69a6c125c0459fa3d",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -541,6 +541,26 @@
             "description": "Normalize.css is a customisable CSS file that makes browsers render all elements more consistently and in line with modern standards.",
             "homepage": "http://necolas.github.com/normalize.css/",
             "time": "2015-05-21 16:25:32"
+        },
+        {
+            "name": "components/notifyjs",
+            "version": "0.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/notifyjs/notifyjs",
+                "reference": "master"
+            },
+            "require": {
+                "robloach/component-installer": "*"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "files": [
+                        "dist/**"
+                    ]
+                }
+            }
         },
         {
             "name": "components/openlayers",
@@ -2507,7 +2527,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender/",
-                "reference": "46000ec396105229173a61348c22d18e414ed935"
+                "reference": "9a226e4fbfebab0439e8f71d659467f4e4fbc770"
             },
             "require": {
                 "mapbender/mapquery": "1.0.x",
@@ -2541,7 +2561,7 @@
                 "library",
                 "mapbender"
             ],
-            "time": "2016-04-27 10:15:10"
+            "time": "2016-04-27 13:08:01"
         },
         {
             "name": "mapbender/mapbender-icons",
