@@ -45,7 +45,7 @@ class AppKernel extends Kernel
 
         // dev and ALL test environments get some extra sugar...
         $isDevKernel = false;
-        if('dev' == $this->getEnvironment() || strpos($this->getEnvironment(), 'test') == 0) {
+        if ('dev' == $this->getEnvironment() || strpos($this->getEnvironment(), 'test') == 0) {
             $isDevKernel = true;
         }
 
@@ -60,6 +60,27 @@ class AppKernel extends Kernel
 
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
-        $loader->load(__DIR__.'/config/config_'.$this->getEnvironment().'.yml');
+        $loader->load(__DIR__ . '/config/config_' . $this->getEnvironment() . '.yml');
     }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @api
+     */
+    public function getCacheDir()
+    {
+        return $this->rootDir . '/../var/cache/' . $this->getEnvironment();
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @api
+     */
+    public function getLogDir()
+    {
+        return $this->rootDir . '/../var/logs/' . $this->getEnvironment();
+    }
+
 }

@@ -1,5 +1,8 @@
-/app/cache
-/app/logs
+/var/cache
+/var/logs
+/var/sessions
+/var/tmp
+
 /web/bundles
 /web/doc/*
 /web/uploads
