@@ -2569,7 +2569,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender/",
-                "reference": "72153629070215fac52f183a6506a265d41846f0"
+                "reference": "f4154dbe835ef918cbb1c48f00111949c9a7169d"
             },
             "require": {
                 "mapbender/mapquery": "1.0.x",
@@ -2603,7 +2603,7 @@
                 "library",
                 "mapbender"
             ],
-            "time": "2016-04-27 14:50:43"
+            "time": "2016-04-27 15:00:42"
         },
         {
             "name": "mapbender/mapbender-icons",
