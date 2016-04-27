@@ -34,53 +34,10 @@ or
 ```sh
 git clone https://github.com/mapbender/mapbender-starter.git
 ```
+### Bootstrap
 
-## Switch to project directory
 ```sh
-cd mapbender-starter
-```
-
-## Clone submodules 
-```sh
-git submodule update --init --recursive --force
-```
-
-## Switch to the application directory
-```sh
-cd application
-```
-
-## Copy [parameters.yml] and configure them for your project needs.
-```sh
-cp app/config/parameters.yml.dist app/config/parameters.yml
-```
-
-## Update composer libraries
-```sh
-../composer.phar update -o
-```
-
-## Create database and schema structures (tables, triggers, etc)
-```sh
-app/console doctrine:database:create
-app/console doctrine:schema:create
-```
-
-## Import applications from the "app/config/mapbender.yml" into a mapbender database
-```sh
-app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
-```
-
-## Import EPSG codes
-```sh
-app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
-```
-
-## Reset root 
-
-Create root user and set the password:
-```sh
-app/console fom:user:resetroot --username root --password root --email root@localhost --silent
+./bootstrap
 ```
 
 ## Start php-server
