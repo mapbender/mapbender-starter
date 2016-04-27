@@ -96,6 +96,10 @@
     },
     "repositories": [
         {
+            "type": "git",
+            "url": "https://github.com/mapbender/mapbender/"
+        },
+        {
             "type": "package",
             "package": {
                 "name": "components/backbone",
@@ -218,10 +222,6 @@
                     "robloach/component-installer": "*"
                 }
             }
-        },
-        {
-            "type": "git",
-            "url": "https://github.com/mapbender/mapbender/"
         },
         {
             "type": "package",
