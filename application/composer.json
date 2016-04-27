@@ -58,6 +58,7 @@
         "components/openlayers": "2.13.x",
         "components/notifyjs": "0.4.2",
         "components/json2": "1.0",
+        "components/backbone": "1.3.x",
 
         "mapbender/mapbender-icons": "1.x",
         "mapbender/digitizer": "1.0.x",
@@ -94,6 +95,31 @@
         "symfony-assets-install": "symlink"
     },
     "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "components/backbone",
+                "type": "component",
+                "version": "1.3.3",
+                "source": {
+                    "url": "https://github.com/jashkenas/backbone.git",
+                    "type": "git",
+                    "reference": "master"
+                },
+                "extra": {
+                    "component": {
+                        "files": [
+                            "backbone*.js",
+                            "backbone*.map",
+                            "karma*.js"
+                        ]
+                    }
+                },
+                "require": {
+                    "robloach/component-installer": "*"
+                }
+            }
+        },
         {
             "type": "package",
             "package": {

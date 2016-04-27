@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2bbdab2e1561fe54185c2032025766b7",
-    "content-hash": "656e772b2fe9c9a69a6c125c0459fa3d",
+    "hash": "0ee52539fe77a7b72a71fd7ce7291c9c",
+    "content-hash": "ba34abc05b58baedfd93f63e947cb68e",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -171,6 +171,28 @@
                 "widget"
             ],
             "time": "2016-04-12 09:04:50"
+        },
+        {
+            "name": "components/backbone",
+            "version": "1.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jashkenas/backbone.git",
+                "reference": "master"
+            },
+            "require": {
+                "robloach/component-installer": "*"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "files": [
+                        "backbone*.js",
+                        "backbone*.map",
+                        "karma*.js"
+                    ]
+                }
+            }
         },
         {
             "name": "components/bootstrap",
@@ -510,6 +532,26 @@
             ],
             "description": "jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you're building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice.",
             "time": "2015-03-13 14:48:12"
+        },
+        {
+            "name": "components/json2",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/douglascrockford/JSON-js.git",
+                "reference": "master"
+            },
+            "require": {
+                "robloach/component-installer": "*"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "files": [
+                        "json2.js"
+                    ]
+                }
+            }
         },
         {
             "name": "components/normalize.css",
