@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "74c5cfbdcc585c01ac0cfd91a8d3b2dc",
-    "content-hash": "e5b19958a97e3845b6c3b73015504483",
+    "hash": "a176d579d969c072fe59e00acda0ab51",
+    "content-hash": "473f953d99c0aaea516d5d935006c582",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -2538,7 +2538,7 @@
         },
         {
             "name": "mapbender/mapquery",
-            "version": "1.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapquery.git",
@@ -5688,10 +5688,18 @@
             "time": "2014-02-10 02:34:57"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "alias": "1.0.0",
+            "alias_normalized": "1.0.0.0",
+            "version": "9999999-dev",
+            "package": "mapbender/mapquery"
+        }
+    ],
     "minimum-stability": "stable",
     "stability-flags": {
         "toooni/fpdf": 20,
+        "mapbender/mapquery": 20,
         "mapbender/fom": 20,
         "mapbender/owsproxy": 20,
         "mapbender/documentation": 20,

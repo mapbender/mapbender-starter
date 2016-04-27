@@ -56,6 +56,7 @@
         "components/joii": "3.1.x",
         "mapbender/digitizer": "1.0.x",
 
+        "mapbender/mapquery": "dev-master as 1.0.0",
         "mapbender/fom": "dev-release/3.0.6",
         "mapbender/owsproxy": "dev-release/3.0.6",
         "mapbender/documentation": "dev-release/3.0.6",
