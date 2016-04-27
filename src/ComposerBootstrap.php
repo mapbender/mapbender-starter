@@ -55,7 +55,7 @@ class ComposerBootstrap
     protected static function clearCache()
     {
         $isWindows = self::isWindows();
-        $cachePath = "app/cache";
+        $cachePath = "var/cache";
         if (!$isWindows) {
             self::printStatus("Clear cache");
             foreach (glob($cachePath . "/*/*") as $filePath) {
