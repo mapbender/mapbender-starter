@@ -1,8 +1,3 @@
-/var/cache
-/var/logs
-/var/sessions
-/var/tmp
-
 /web/bundles
 /web/doc/*
 /web/uploads
@@ -16,21 +11,38 @@ web/xmlschemas/*
 !*/web/uploads/mapbender_user
 !*/web/uploads/mapbender_user_basic
 /web/assets/*.trans
+/web/components
+/web/index.php
 web/assets/.dev-cache
+
 extra/
+
+# Project parameters
 /app/config/parameters.yml
+
+# Cache
 app/bootstrap.php.cache
+/var/cache
+/var/logs
+/var/sessions
+/var/tmp
+
+# Packages
 vendor
+
+# Binaries
+bin/*
 *.tar.gz
 *.rpm
 *.deb
+
+# Netbeans
 local.properties
 /nbproject/private/
 testresults
-bin/*
-!bin/sassc
-!bin/sassc.exe
+
 
 # IDEA Project Files
 .idea/
+
 
