@@ -137,7 +137,7 @@ class ComposerBootstrap
     protected static function updateEpsgCodes()
     {
         self::printStatus("Update EPSG codes");
-        echo `php app/console doctrine:fixtures:load --fixtures=mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append`;
+        echo `php app/console doctrine:fixtures:load --fixtures=vendor/mapbender/mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append`;
     }
 
     /**
@@ -146,7 +146,7 @@ class ComposerBootstrap
     protected static function importExampleApplications()
     {
         self::printStatus("Import example mapbender applications");
-        echo `php app/console doctrine:fixtures:load --fixtures=mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append`;
+        echo `php app/console doctrine:fixtures:load --fixtures=vendor/mapbender/mapbender/CoreBundle/DataFixtures/ORM/Application/ --append`;
     }
 
     /**
