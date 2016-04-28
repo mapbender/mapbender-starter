@@ -1,0 +1,181 @@
+parameters:
+    applications:
+        mapbender_mobile:
+            title: Mapbender mobile
+            screenshot: mapbender_mobile.png
+            description: "Mapbender mobile Application"
+            published: true
+            template:  'Mapbender\MobileBundle\Template\Mobile'
+            layersets:
+                main:
+                    mapbender_users:
+                        class: Mapbender\WmsBundle\Entity\WmsInstance
+                        title: Mapbender Users
+                        url: http://wms.wheregroup.com/cgi-bin/mapbender_user.xml
+                        version: 1.3.0
+                        layers:
+                            10: { name: Mapbender_User,    title : User, visible: true, legendurl: http://wms.wheregroup.com/cgi-bin/mapbender_user.xml?version=1.3.0&service=WMS&request=GetLegendGraphic&sld_version=1.1.0&layer=Mapbender_User&format=image/png&STYLE=default }
+                            22: { name: Mapbender_Names,   title : Name, visible: true, queryable: true}
+                        info_format: text/html
+                        visible: true
+                        format: image/png
+                        transparent: true
+                        tiled: false
+                        opacity: 100
+                        isBaseSource: false
+                    osm:
+                        class: Mapbender\WmsBundle\Entity\WmsInstance
+                        title: OSM Demo
+                        url: http://osm-demo.wheregroup.com/service
+                        version: 1.3.0
+                        layers:
+                            30: { name: osm,    title : Germany OSM Demo WhereGroup,  visible: true }
+                        info_format: text/html
+                        visible: true
+                        format: image/png
+                        transparent: true
+                        tiled: true
+                        opacity: 100
+                        isBaseSource: true
+                    osm_2:
+                        class: Mapbender\WmsBundle\Entity\WmsInstance
+                        title: OSM Demo (with Opacity)
+                        url: http://osm-demo.wheregroup.com/service
+                        version: 1.3.0
+                        layers:
+                            30: { name: osm,    title : Germany OSM Demo WhereGroup,  visible: true }
+                        info_format: text/html
+                        visible: true
+                        format: image/png
+                        transparent: true
+                        tiled: false
+                        opacity: 30
+                        isBaseSource: true
+            elements:
+                footer:
+                    # buttons parameters: action,activate,deactivate are ignored for elements at mobilePane
+                    layertree-button:
+                        title: Themes
+                        tooltip: Themes
+                        class: Mapbender\CoreBundle\Element\Button
+                        label: false
+                        icon: iconLayertree
+                        target: layertree
+
+                    bss-button:
+                        title: 'Change Background'
+                        tooltip: 'Change Background Map'
+                        class: Mapbender\CoreBundle\Element\Button
+                        icon: iconLegend
+                        label: false
+                        target: basesourceswitcher
+
+                    gps-button:
+                        title: GPS
+                        tooltip: show GPS Position
+                        class: Mapbender\CoreBundle\Element\GpsPosition
+                        label: false
+                        target: map
+                        action: open
+                        icon: iconGps
+                        refreshinterval: '5000'
+                        average: '1'
+                        follow: false
+                        centerOnFirstPosition: true
+                        zoomToAccuracy: false
+                        zoomToAccuracyOnFirstPosition: true
+
+                    imprint-button:
+                        title: Imprint
+                        tooltip: Imprint
+                        class: Mapbender\CoreBundle\Element\Button
+                        label: false
+                        icon: iconInfoActive
+                        target: imprint
+
+                    help-button:
+                        title: Help
+                        tooltip: Help
+                        class: Mapbender\CoreBundle\Element\Button
+                        label: false
+                        icon: iconHelp
+                        target: help
+
+                content:
+                    map:
+                        title: Main Map
+                        class: Mapbender\CoreBundle\Element\Map
+                        layersets: [main]
+                        srs: EPSG:25832
+                        units: m
+                        extents:
+                            start: [361000,5619000,371150,5625000]
+                            max: [-500000,4350000,1600000,6850000]
+                        scales: [5000000,1000000,500000,100000,50000,25000,10000,7500,5000,2500,1000,500]
+                        maxResolution: 'auto'
+                        otherSrs: ["EPSG:25833","EPSG:31466","EPSG:31467","EPSG:900913","EPSG:4326"]
+                    zoombar:
+                        class: Mapbender\CoreBundle\Element\ZoomBar
+                        target: map
+                        components: ["zoom_in_out", "zoom_max"]
+                        stepsize: 50
+                        stepbypixel: true
+                        anchor: left-top
+                        draggable: false
+
+                mobilePane:
+                    layertree:
+                        title: Themes
+                        class: Mapbender\CoreBundle\Element\Layertree
+                        target: map
+                        type: element
+                        displaytype: tree
+                        useAccordion: false
+                        autoOpen: false
+                        titlemaxlength: 100
+                        showBaseSource: false
+                        layerRemove: false
+                        menu: []
+
+                    featureinfo:
+                        class: Mapbender\CoreBundle\Element\FeatureInfo
+                        title: Information
+                        target: map
+                        type: element
+                        deactivateOnClose: false
+                        autoActivate: true
+                        printResult: false
+                        displayType: tabs
+                        onlyValid: true
+
+                    imprint:
+                        title: Imprint
+                        class: Mapbender\CoreBundle\Element\HTMLElement
+                        content: '<div style="color: #6FB536; font-weight:bold" >powered by Mapbender. Read more about Mapbender3 at the <a href="http://mapbender3.org" target="_blank">Mapbender3 Project Page</a>.</div>'
+                        classes: html-element-inline
+
+                    help:
+                        title: Help
+                        class: Mapbender\CoreBundle\Element\HTMLElement
+                        content: 'Enjoy the new Mapbender mobile Template. Please note that not all elements can be used in the mobile application. <div style="color: #6FB536; font-weight:bold">Find out more about the Mapbender mobile in the <a href="http://doc.mapbender3.org/en/book/mapbender_templates.html" target="_blank">Template Documentation</a>.</div>'
+                        classes: html-element-inline
+
+                    basesourceswitcher:
+                        title: Change Background
+                        tooltip: Change Background
+                        class: Mapbender\CoreBundle\Element\BaseSourceSwitcher
+                        target: map
+                        display: mobile
+                        instancesets:
+                            is1:
+                                title: "OSM Demo (with opacity)"
+                                cprTitle: ~
+                                cprUrl: ~
+                                group: ~
+                                instances: [osm_2]
+                            is2:
+                                title: "OSM Demo"
+                                cprTitle: ~
+                                cprUrl: ~
+                                group: ~
+                                instances: [osm]
