@@ -35,6 +35,7 @@ class ComposerBootstrap
             self::updateEpsgCodes();
         }
 
+        self::genDocumentation();
         self::clearCache();
     }
 
@@ -179,5 +180,22 @@ class ComposerBootstrap
     protected static function printStatus($title)
     {
         echo "\n[$title]\n";
+    }
+
+    /**
+     * Generate API documentation
+     */
+    private static function genDocumentation()
+    {
+        if (is_file("bin/apigen")) {
+            $parameters     = \Symfony\Component\Yaml\Yaml::parse(file_get_contents("app/config/parameters.yml"));
+            $version        = $parameters["parameters"]["fom"]["server_version"];
+            $title          = escapeshellarg("Mapbender " . $version . " API documenation");
+            $configFilePath = "../apigen.conf";
+            $config         = parse_ini_file($configFilePath);
+            self::printStatus("Generate Mapbender {$version} API documenation to '{$config['destination']}'");
+            $cmd = "bin/apigen -c $configFilePath --title $title";
+            echo `$cmd`;
+        }
     }
 }
