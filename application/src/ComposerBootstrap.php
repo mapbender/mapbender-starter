@@ -35,11 +35,6 @@ class ComposerBootstrap
             self::updateEpsgCodes();
         }
 
-        if($event->isDevMode()){
-            self::genApiDocumentation();
-            self::genDocumentation();
-        }
-
         self::clearCache();
     }
 
@@ -194,6 +189,7 @@ class ComposerBootstrap
         if (is_file("bin/apigen")) {
             return;
         }
+
         $parameters     = \Symfony\Component\Yaml\Yaml::parse(file_get_contents("app/config/parameters.yml"));
         $version        = $parameters["parameters"]["fom"]["server_version"];
         $title          = escapeshellarg("Mapbender " . $version . " API documenation");

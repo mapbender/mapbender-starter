@@ -68,6 +68,14 @@
             "ComposerBootstrap::checkConfiguration",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+        ],
+        "package": [
+            "ComposerBootstrap::genApiDocumentation",
+            "ComposerBootstrap::genDocumentation"
+        ],
+        "docs": [
+            "ComposerBootstrap::genApiDocumentation",
+            "ComposerBootstrap::genDocumentation"
         ]
     },
     "config": {
