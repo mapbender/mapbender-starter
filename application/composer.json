@@ -1,7 +1,9 @@
 {
     "name": "wheregroup/mapbender-starter",
     "description": "Mapbender",
+    "type": "project",
     "license": "MIT",
+    "version": "3.0.5.4-dev",
     "support": {
         "email":        "mapbender@osgeo.org",
         "issues":       "https://repo.wheregroup.com/mapbender3/starter/issues",
@@ -12,7 +14,7 @@
         "user-list":    "https://lists.osgeo.org/pipermail/mapbender_users/"
     },
     "autoload": {
-        "psr-4": { "\\": "src/" }
+        "psr-4": { "": "src/" }
     },
     "provide": {
         "ext-ldap": "*"
