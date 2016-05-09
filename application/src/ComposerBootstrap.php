@@ -55,7 +55,7 @@ class ComposerBootstrap
     /**
      * Clear cache but let sessions alive
      */
-    protected static function clearCache()
+    public static function clearCache()
     {
         $isWindows = self::isWindows();
         $cachePath = "app/cache";

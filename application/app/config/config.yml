@@ -1,4 +1,5 @@
 imports:
+    - { resource: ../configurationLoader.php }
     - { resource: parameters.yml }
     - { resource: security.yml }
 
@@ -26,6 +27,8 @@ twig:
     strict_variables: %kernel.debug%
     globals:
         fom:    %fom%
+        project: %project%
+        version: %project.version%
     form:
         resources:
             - 'FOMCoreBundle:Form:fields.html.twig'

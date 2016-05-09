@@ -84,6 +84,9 @@
         "docs": [
             "ComposerBootstrap::genApiDocumentation",
             "ComposerBootstrap::genDocumentation"
+        ],
+        "clean": [
+            "ComposerBootstrap::clearCache"
         ]
     },
     "config": {
