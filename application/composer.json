@@ -1,13 +1,18 @@
 {
     "name": "wheregroup/mapbender-starter",
-    "description": "Mapbender is the back office software and client framework for spatial data infrastructures.",
+    "description": "Mapbender",
     "license": "MIT",
     "support": {
-        "issues": "https://repo.wheregroup.com/mapbender3/starter/issues",
-        "source": "https://github.com/mapbender/mapbender-starter"
+        "email":        "mapbender@osgeo.org",
+        "issues":       "https://repo.wheregroup.com/mapbender3/starter/issues",
+        "source":       "https://github.com/mapbender/mapbender-starter",
+        "docs":         "http://doc.mapbender3.org/",
+        "api-docs":     "http://api.mapbender3.org/",
+        "forum":        "http://osgeo-org.1560.x6.nabble.com/Mapbender-f4217602.html",
+        "user-list":    "https://lists.osgeo.org/pipermail/mapbender_users/"
     },
     "autoload": {
-        "psr-0": { "": "src/" }
+        "psr-4": { "\\": "src/" }
     },
     "provide": {
         "ext-ldap": "*"
