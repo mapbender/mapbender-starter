@@ -1,5 +1,4 @@
 imports:
-    - { resource: ../configurationLoader.php }
     - { resource: parameters.yml }
     - { resource: security.yml }
 
