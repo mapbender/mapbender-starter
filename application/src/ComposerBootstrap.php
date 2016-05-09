@@ -35,7 +35,11 @@ class ComposerBootstrap
             self::updateEpsgCodes();
         }
 
-        self::genDocumentation();
+        if($event->isDevMode()){
+            self::genApiDocumentation();
+            self::genDocumentation();
+        }
+
         self::clearCache();
     }
 
@@ -185,17 +189,30 @@ class ComposerBootstrap
     /**
      * Generate API documentation
      */
-    private static function genDocumentation()
+    public static function genApiDocumentation()
     {
         if (is_file("bin/apigen")) {
-            $parameters     = \Symfony\Component\Yaml\Yaml::parse(file_get_contents("app/config/parameters.yml"));
-            $version        = $parameters["parameters"]["fom"]["server_version"];
-            $title          = escapeshellarg("Mapbender " . $version . " API documenation");
-            $configFilePath = "../apigen.conf";
-            $config         = parse_ini_file($configFilePath);
-            self::printStatus("Generate Mapbender {$version} API documenation to '{$config['destination']}'");
-            $cmd = "bin/apigen -c $configFilePath --title $title";
-            echo `$cmd`;
+            return;
+        }
+        $parameters     = \Symfony\Component\Yaml\Yaml::parse(file_get_contents("app/config/parameters.yml"));
+        $version        = $parameters["parameters"]["fom"]["server_version"];
+        $title          = escapeshellarg("Mapbender " . $version . " API documenation");
+        $configFilePath = "../apigen.conf";
+        $config         = parse_ini_file($configFilePath);
+        self::printStatus("Generate Mapbender {$version} API documenation to '{$config['destination']}'");
+        echo `bin/apigen -c $configFilePath --title $title`;
+    }
+
+    public static function genDocumentation()
+    {
+        if (self::isWindows()) {
+            return;
+        };
+        $sphinxPath = preg_replace("/^.* |\\s*$/s", "", `type sphinx-build`);
+        if (strpos($sphinxPath, "sphinx-build") !== false) {
+            `$sphinxPath ../documentation/ web/docs`;
+        }else{
+            echo "Documentation isn't generated, please install python sphinx documentation generator.";
         }
     }
 }
