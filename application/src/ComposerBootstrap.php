@@ -74,6 +74,19 @@ class ComposerBootstrap
     }
 
     /**
+     * Installs bundle assets into a given dierectory (for details s. Symfony app/console assets:install).
+     */
+    public static function assetsInstall()
+    {
+        $isWindows = self::isWindows();
+        if (!$isWindows) {
+            echo `php app/console assets:install --symlink --relative web`;
+        } else {
+            echo `php app/console assets:install web`;
+        }
+    }
+
+    /**
      * Enable write cache, logs and upload folder by user and group
      */
     public static function allowWriteLogs()
