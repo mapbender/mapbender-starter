@@ -76,7 +76,7 @@ class ComposerBootstrap
     /**
      * Installs bundle assets into a given dierectory (for details s. Symfony app/console assets:install).
      */
-    public static function assetsInstall()
+    public static function installAssets()
     {
         $isWindows = self::isWindows();
         if (!$isWindows) {
