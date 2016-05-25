@@ -21,10 +21,10 @@
         "ext-ldap": "*"
     },
     "require-dev": {
-        "phpunit/phpunit": ">=3.7",
+        "phpunit/phpunit": "^3.7",
         "predis/predis": "~1.0",
         "satooshi/php-coveralls": "~0.6",
-        "phpunit/phpunit-selenium": ">=1.2",
+        "phpunit/phpunit-selenium": "^1.2",
         "facebook/webdriver": "1.1.*",
         "apigen/apigen": "2.*",
         "phing/phing": "2.*"
@@ -49,7 +49,6 @@
         "friendsofsymfony/jsrouting-bundle": "1.5.x",
         "kriswallsmith/buzz": "v0.15",
         "doctrine/doctrine-fixtures-bundle": "2.3.*",
-        "toooni/fpdf": "dev-master",
         "arsgeografica/signing": "1.1.x",
         "phayes/geophp": "1.x",
         "viscreation/vis-ui.js": "0.0.x",
@@ -62,7 +61,8 @@
         "components/jquery": "1.11.2",
         "components/underscore": "1.x",
         "components/joii": "3.1.x",
-        "mapbender/digitizer": "1.0.x"
+        "mapbender/digitizer": "1.0.x",
+        "setasign/fpdi-fpdf": "1.6.1"
     },
     "scripts": {
         "post-install-cmd": [
