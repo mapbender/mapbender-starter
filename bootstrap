@@ -1,3 +1,27 @@
-#!/bin/sh
+#!/bin/bash
+
+# Install packages
+
+phpVersion=$(php --version | grep -Eo "^PHP [0-9]" | grep -Eo "[0-9]")
+packages="php5 php5-pgsql php5-gd php5-curl php5-cli php5-sqlite sqlite php-apc php5-intl curl openssl"
+
+if [ "$(which apt-get)" != "" ]; then
+    echo "# Install Ubuntu packages "
+    echo "apt-get install -y ${packages}"
+    sudo apt-get install -y ${packages}
+elif  [ "$(which yast)" != "" ]; then
+    echo " - Install SLES/OpenSuSE packages";
+    echo "yast -i ${packages}"
+    sudo yast -i ${packages}
+fi
+
+
 cd application
-php ../composer.phar install --no-dev -o
+echo "# Install composer packages";
+if [ "$phpVersion" == "7" ]; then
+    echo "php bin/composer update --no-dev -o"
+    php bin/composer update --no-dev -o
+else
+    echo "php bin/composer update --no-dev -o"
+    php bin/composer install --no-dev -o
+fi
