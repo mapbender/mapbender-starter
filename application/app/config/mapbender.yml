@@ -1,1 +1,3 @@
-# This file is deprecated  nd will be removed in a future release. Please use "config.yml" instead.
+# This file is deprecated and will be removed in a future release.
+# Please use "config.yml" instead.
+parameters: []
