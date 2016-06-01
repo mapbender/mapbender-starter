@@ -1,4 +1,1 @@
-services:
-  mapbender2_geometryprovider:
-    class: OwsProxy3\CoreBundle\GeometryProvider\Mapbender2GeometryProvider
-    arguments: [ "@service_container" ]
+# This file is deprecated  nd will be removed in a future release. Please use "config.yml" instead.
