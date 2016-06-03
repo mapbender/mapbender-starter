@@ -78,6 +78,10 @@
             "ComposerBootstrap::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
         ],
+        "update-assets":[
+            "ComposerBootstrap::installAssets",
+            "ComponentInstaller\\Installer::postAutoloadDump"
+        ],
         "package": [
             "ComposerBootstrap::genApiDocumentation",
             "ComposerBootstrap::genDocumentation"
