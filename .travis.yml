@@ -17,14 +17,13 @@ php:
   - 5.3
 
 before_script:
+  - phpenv config-rm xdebug.ini
   - if (test $TRAVIS_PULL_REQUEST = false) then git checkout $TRAVIS_BRANCH; fi
   - git submodule update --init --recursive
   - cd application
   - cp app/config/parameters.yml.dist app/config/parameters.yml
-  - php5dismod xdebug
   - composer self-update
   - composer update
-  - php5enmod xdebug
   - rm -rf mapbender
   - ln -s ../../mapbender
   - php app/console doctrine:database:create
