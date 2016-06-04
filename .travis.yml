@@ -38,6 +38,7 @@ before_script:
 
 script: phpunit -c app/ --coverage-clover ../testresults/clover.xml
 
+# test commit to trigger travis
 after_script:
   - php bin/coveralls -v
   - wget https://scrutinizer-ci.com/ocular.phar
