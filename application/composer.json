@@ -46,6 +46,7 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "jms/security-extra-bundle": "1.5.x",
         "jms/di-extra-bundle": "1.6.x",
+        "jms/serializer": "1.0.x",
 
         "friendsofsymfony/jsrouting-bundle": "1.5.x",
         "kriswallsmith/buzz": "v0.15",
