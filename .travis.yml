@@ -27,13 +27,12 @@ before_script:
   - php app/console doctrine:schema:create
   - php app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
   - php app/console fom:user:resetroot --username root --password root --email root@root.de --silent
-  - phantomjs --webdriver=9876 &
-  - export PJSPORT=$(echo $!)
+#  - phantomjs --webdriver=9876 &
+#  - export PJSPORT=$(echo $!)
   - pip install --user selenium
 
 script: phpunit -c app/ --coverage-clover ../testresults/clover.xml
 
-# test commit to trigger travis
 after_script:
   - php bin/coveralls -v
   - wget https://scrutinizer-ci.com/ocular.phar
