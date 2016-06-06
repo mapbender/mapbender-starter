@@ -33,7 +33,6 @@ before_script:
 script: phpunit -c app/ --coverage-clover ../testresults/clover.xml
 
 after_script:
-  - curl http://localhost:8000
   - php bin/coveralls -v
   - wget https://scrutinizer-ci.com/ocular.phar
   - cd mapbender
