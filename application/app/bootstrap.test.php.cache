@@ -5,7 +5,7 @@ require_once __DIR__ . '/bootstrap.php.cache';
 if(version_compare(PHP_VERSION, '5.4.0') >= 0) {
     // Command that starts the built-in web server
     $command = sprintf(
-        'app/console server:run %s:%d >/tmp/weblog 2>&1 & echo $!',
+        'app/console server:run %s:%d & echo $!',
         TEST_WEB_SERVER_HOST,
         TEST_WEB_SERVER_PORT
     );
