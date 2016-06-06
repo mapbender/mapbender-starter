@@ -27,8 +27,6 @@ before_script:
   - php app/console doctrine:schema:create
   - php app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
   - php app/console fom:user:resetroot --username root --password root --email root@root.de --silent
-#  - phantomjs --webdriver=9876 &
-#  - export PJSPORT=$(echo $!)
   - pip install --user selenium
 
 script: phpunit -c app/ --coverage-clover ../testresults/clover.xml
@@ -40,9 +38,3 @@ after_script:
   - export MYREV=$(git rev-parse HEAD)
   - cd ..
   - php ocular.phar code-coverage:upload --repository g/mapbender/mapbender --format=php-clover ../testresults/clover.xml --revision $MYREV
-  - kill -9 $PJSPORT
-  - echo -e "Host mapbender3.org\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-  - sudo apt-get -qq update
-  - sudo apt-get -qq install sshpass
-  - sshpass -p "$travispassword" ssh travis@mapbender3.org mkdir -p public/screenshot/$TRAVIS_JOB_NUMBER/
-  - sshpass -p "$travispassword" scp ../testresults/screenshot/* travis@mapbender3.org:public/screenshot/$TRAVIS_JOB_NUMBER/
