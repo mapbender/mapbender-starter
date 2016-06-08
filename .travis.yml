@@ -4,6 +4,10 @@ env:
 
 language: php
 
+addons:
+  apt:
+    packages: [php5, php5-pgsql, php5-gd, php5-curl, php5-cli, php5-sqlite, sqlite, php-apc, php5-intl, curl, openssl, sshpass]
+
 cache:
     directories:
         - $HOME/.composer
@@ -15,10 +19,6 @@ php:
   - 5.5
   - 5.4
   - 5.3
-
-before_install:
-  - sudo apt-get -qq update
-  - sudo apt-get install -y php5 php5-pgsql php5-gd php5-curl php5-cli php5-sqlite sqlite php-apc php5-intl curl openssl sshpass
 
 before_script:
   - if (test $TRAVIS_PULL_REQUEST = false) then git checkout $TRAVIS_BRANCH; fi
