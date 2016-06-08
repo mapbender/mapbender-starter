@@ -28,7 +28,7 @@ if(version_compare(PHP_VERSION, '5.4.0') >= 0) {
 
     // Kill the web server when the process ends
     register_shutdown_function(function() use ($pid) {
-    `curl -D - http://localhost:8000`;
+    echo    `curl -D - http://localhost:8000`;
         echo sprintf('%s - Killing process with ID %d', date('r'), $pid) . PHP_EOL;
         exec('kill ' . $pid);
     });
