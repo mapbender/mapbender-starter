@@ -6,7 +6,7 @@ language: php
 
 addons:
   apt:
-    packages: [php5, php5-pgsql, php5-gd, php5-curl, php5-cli, php5-sqlite, sqlite, php-apc, php5-intl, curl, openssl, sshpass]
+    packages: [php5, php5-pgsql, php5-gd, php5-curl, php5-cli, php5-sqlite, php5-intl, curl, openssl, sshpass]
 
 cache:
     directories:
@@ -43,5 +43,5 @@ after_script:
   - export MYREV=$(git rev-parse HEAD)
   - cd ..
   - php ocular.phar code-coverage:upload --repository g/mapbender/mapbender --format=php-clover ../testresults/clover.xml --revision $MYREV
-  - sshpass -p "$travispassword" ssh travis@mapbender3.org mkdir -p public/screenshot/$TRAVIS_JOB_NUMBER/
-  - sshpass -p "$travispassword" scp ../testresults/screenshot/* travis@mapbender3.org:public/screenshot/$TRAVIS_JOB_NUMBER/
+  - sshpass -p "$travispassword" ssh travis@mapbender3.org mkdir -p public/screenshot/$TRAVIS_JOB_NUMBER/ -o StrictHostKeyChecking=no
+  - sshpass -p "$travispassword" scp ../testresults/screenshot/* travis@mapbender3.org:public/screenshot/$TRAVIS_JOB_NUMBER/ -o StrictHostKeyChecking=no
