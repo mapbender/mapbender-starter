@@ -43,5 +43,5 @@ after_script:
   - export MYREV=$(git rev-parse HEAD)
   - cd ..
   - php ocular.phar code-coverage:upload --repository g/mapbender/mapbender --format=php-clover ../testresults/clover.xml --revision $MYREV
-  - sshpass -p "$travispassword" ssh travis@mapbender3.org mkdir -p public/screenshot/$TRAVIS_JOB_NUMBER/ -o StrictHostKeyChecking=no
-  - sshpass -p "$travispassword" scp ../testresults/screenshot/* travis@mapbender3.org:public/screenshot/$TRAVIS_JOB_NUMBER/ -o StrictHostKeyChecking=no
+  - sshpass -p "$travispassword" ssh -o StrictHostKeyChecking=no travis@mapbender3.org mkdir -p public/screenshot/$TRAVIS_JOB_NUMBER/
+  - sshpass -p "$travispassword" scp -o StrictHostKeyChecking=no ../testresults/screenshot/* travis@mapbender3.org:public/screenshot/$TRAVIS_JOB_NUMBER/
