@@ -41,7 +41,7 @@
         "friendsofsymfony/jsrouting-bundle": "1.5.x",
         "kriswallsmith/buzz": "v0.15",
         "doctrine/doctrine-fixtures-bundle": "2.3.*",
-        "toooni/fpdf": "dev-master",
+        "setasign/fpdi-fpdf": "dev-master",
         "arsgeografica/signing": "1.1.x",
         "phayes/geophp": "1.x",
         "viscreation/vis-ui.js": "0.0.x",
