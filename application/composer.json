@@ -97,7 +97,10 @@
     "config": {
         "bin-dir": "bin",
         "component-dir": "web/components",
-        "component-baseurl": "/components"
+        "component-baseurl": "/components",
+        "platform": {
+            "php": "5.3.19"
+        }
     },
     "minimum-stability": "stable",
     "extra": {
