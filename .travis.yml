@@ -34,7 +34,7 @@ before_script:
   - npm install phantomjs@1.8
   - pip install --user selenium
   - python --version
-  - /home/travis/node_modules/phantomjs/bin/phantomjs --webdriver=9876 &
+  - /home/travis/build/mapbender/mapbender-starter/application/node_modules/phantomjs/bin/phantomjs --webdriver=9876 &
 
 script: phpunit -v --debug -c app/ --coverage-clover ../testresults/clover.xml
 
