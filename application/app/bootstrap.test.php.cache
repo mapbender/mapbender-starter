@@ -24,6 +24,8 @@ if(version_compare(PHP_VERSION, '5.4.0') >= 0) {
 
     sleep(5);
 
+    echo $command;
+
     echo    `curl -D - http://localhost:8000`;
 
     // Kill the web server when the process ends
