@@ -33,6 +33,7 @@ before_script:
   - php app/console fom:user:resetroot --username root --password root --email root@root.de --silent
   - npm install phantomjs@1.8
   - pip install --user selenium
+  - python --version
 
 script: phpunit -v --debug -c app/ --coverage-clover ../testresults/clover.xml
 
