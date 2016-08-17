@@ -6,7 +6,7 @@ language: php
 
 addons:
   apt:
-    packages: [php5, php5-pgsql, php5-gd, php5-curl, php5-cli, php5-sqlite, php5-intl, curl, openssl, sshpass, xvfb]
+    packages: [php5, php5-pgsql, php5-gd, php5-curl, php5-cli, php5-sqlite, php5-intl, curl, openssl, sshpass]
 
 cache:
     directories:
@@ -15,16 +15,13 @@ cache:
 sudo: false
 
 php:
-  - 7.0
+#  - 7.0 # TODO: figure out proper phpunit dependencies that run with PHP 5.3 and 7.0
   - 5.6
   - 5.5
   - 5.4
   - 5.3
 
 before_script:
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
-  - sleep 3
   - if (test $TRAVIS_PULL_REQUEST = false) then git checkout $TRAVIS_BRANCH; fi
   - git submodule update --init --recursive
   - cd application
@@ -39,7 +36,7 @@ before_script:
   - pip install --user selenium
   - python --version
 
-script: phpunit -v --debug -c app/ --coverage-clover ../testresults/clover.xml
+script: phpunit -c app/ --coverage-clover ../testresults/clover.xml
 
 after_script:
   - php bin/coveralls -v
