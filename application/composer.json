@@ -6,25 +6,27 @@
     "version": "3.0.5.4-dev",
     "homepage": "http://www.mapbender.org",
     "support": {
-        "email":        "mapbender@osgeo.org",
-        "issues":       "https://repo.wheregroup.com/mapbender3/starter/issues",
-        "source":       "https://github.com/mapbender/mapbender-starter",
-        "docs":         "http://doc.mapbender3.org/",
-        "api-docs":     "http://api.mapbender3.org/",
-        "forum":        "http://osgeo-org.1560.x6.nabble.com/Mapbender-f4217602.html",
-        "user-list":    "https://lists.osgeo.org/pipermail/mapbender_users/"
+        "email": "mapbender@osgeo.org",
+        "issues": "https://repo.wheregroup.com/mapbender3/starter/issues",
+        "source": "https://github.com/mapbender/mapbender-starter",
+        "docs": "http://doc.mapbender3.org/",
+        "api-docs": "http://api.mapbender3.org/",
+        "forum": "http://osgeo-org.1560.x6.nabble.com/Mapbender-f4217602.html",
+        "user-list": "https://lists.osgeo.org/pipermail/mapbender_users/"
     },
     "autoload": {
-        "psr-4": { "": "src/" }
+        "psr-4": {
+            "": "src/"
+        }
     },
     "provide": {
         "ext-ldap": "*"
     },
     "require-dev": {
-        "phpunit/phpunit": "^3.7",
+        "phpunit/phpunit": "^4.8",
         "predis/predis": "~1.0",
         "satooshi/php-coveralls": "~0.6",
-        "phpunit/phpunit-selenium": "^1.2",
+        "phpunit/phpunit-selenium": "^2.0",
         "facebook/webdriver": "1.1.*",
         "apigen/apigen": "2.*",
         "phing/phing": "2.*"
@@ -46,6 +48,7 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "jms/security-extra-bundle": "1.5.x",
         "jms/di-extra-bundle": "1.6.x",
+        "jms/serializer": "0.16.x",
 
         "friendsofsymfony/jsrouting-bundle": "1.5.x",
         "kriswallsmith/buzz": "v0.15",
@@ -55,9 +58,9 @@
         "viscreation/vis-ui.js": "0.0.x",
         "igosuki/compass-mixins": "0.x",
         "fontfacekit/open-sans": "1.4.x",
-        "eslider/sasscb":  "3.1.x",
+        "eslider/sasscb": "3.1.x",
         "gedmo/doctrine-extensions": "~2.3",
-        "imag/ldap-bundle":  "2.3.x",
+        "imag/ldap-bundle": "2.3.x",
         "mapbender/mapbender-icons": "1.x",
         "components/jquery": "1.11.2",
         "components/underscore": "1.x",
@@ -78,7 +81,7 @@
             "ComposerBootstrap::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
         ],
-        "update-assets":[
+        "update-assets": [
             "ComposerBootstrap::installAssets",
             "ComponentInstaller\\Installer::postAutoloadDump"
         ],
@@ -109,99 +112,93 @@
         "ATTENTION": "Symlinks creating under MS Windows works only if composer runs with admin permissions",
         "symfony-assets-install": "symlink"
     },
-    "repositories": [
-        {
-            "type": "package",
-            "package": {
-                "name": "components/placeholdersjs",
-                "type": "component",
-                "version": "4.0.1",
-                "dist": {
-                    "url": "https://github.com/jamesallardice/Placeholders.js/archive/v4.0.1.zip",
-                    "type": "zip"
-                },
-                "extra": {
-                    "component": {
-                        "scripts": [
-                            "dist/placeholders.min.js",
-                            "dist/placeholders.jquery.min.js"
-                        ]
-                    }
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "components/jquerydialogextendjs",
-                "type": "component",
-                "version": "2.0.4",
-                "dist": {
-                    "url": "https://github.com/ROMB/jquery-dialogextend/archive/2.0.4.zip",
-                    "type": "zip"
-                },
-                "extra": {
-                    "component": {
-                        "scripts": ["build/*.min.js"]
-                    }
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "igosuki/compass-mixins",
-                "type": "component",
-                "version": "0.12.6",
-                "dist": {
-                    "url": "https://github.com/Igosuki/compass-mixins/archive/v0.12.6.zip",
-                    "type": "zip"
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "fontfacekit/open-sans",
-                "type": "component",
-                "version": "1.4.0",
-                "dist": {
-                    "url": "https://github.com/FontFaceKit/open-sans/archive/1.4.0.zip",
-                    "type": "zip"
-                },
-                "extra": {
-                    "component": {
-                        "styles": [
-                            "*.css"
-                        ],
-                        "files": [
-                            "fonts/*/*"
-                        ]
-                    }
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "components/joii",
-                "type": "component",
-                "version": "3.1.2",
-                "source": {
-                    "url": "https://github.com/haroldiedema/joii.git",
-                    "type": "git",
-                    "reference": "master"
-                },
-                "extra": {
-                    "component": {
-                        "scripts": ["dist/joii.min.js"],
-                        "files": ["dist/joii.js"]
-                    }
-                },
-                "require": {
-                    "robloach/component-installer": "*"
+    "repositories": [{
+        "type": "package",
+        "package": {
+            "name": "components/placeholdersjs",
+            "type": "component",
+            "version": "4.0.1",
+            "dist": {
+                "url": "https://github.com/jamesallardice/Placeholders.js/archive/v4.0.1.zip",
+                "type": "zip"
+            },
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "dist/placeholders.min.js",
+                        "dist/placeholders.jquery.min.js"
+                    ]
                 }
             }
         }
-    ]
+    }, {
+        "type": "package",
+        "package": {
+            "name": "components/jquerydialogextendjs",
+            "type": "component",
+            "version": "2.0.4",
+            "dist": {
+                "url": "https://github.com/ROMB/jquery-dialogextend/archive/2.0.4.zip",
+                "type": "zip"
+            },
+            "extra": {
+                "component": {
+                    "scripts": ["build/*.min.js"]
+                }
+            }
+        }
+    }, {
+        "type": "package",
+        "package": {
+            "name": "igosuki/compass-mixins",
+            "type": "component",
+            "version": "0.12.6",
+            "dist": {
+                "url": "https://github.com/Igosuki/compass-mixins/archive/v0.12.6.zip",
+                "type": "zip"
+            }
+        }
+    }, {
+        "type": "package",
+        "package": {
+            "name": "fontfacekit/open-sans",
+            "type": "component",
+            "version": "1.4.0",
+            "dist": {
+                "url": "https://github.com/FontFaceKit/open-sans/archive/1.4.0.zip",
+                "type": "zip"
+            },
+            "extra": {
+                "component": {
+                    "styles": [
+                        "*.css"
+                    ],
+                    "files": [
+                        "fonts/*/*"
+                    ]
+                }
+            }
+        }
+    }, {
+        "type": "package",
+        "package": {
+            "name": "components/joii",
+            "type": "component",
+            "version": "3.1.2",
+            "source": {
+                "url": "https://github.com/haroldiedema/joii.git",
+                "type": "git",
+                "reference": "master"
+            },
+            "extra": {
+                "component": {
+                    "scripts": ["dist/joii.min.js"],
+                    "files": ["dist/joii.js"]
+                }
+            },
+            "require": {
+                "robloach/component-installer": "*"
+            }
+        }
+    }]
 }
