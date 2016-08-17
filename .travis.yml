@@ -22,6 +22,9 @@ php:
   - 5.3
 
 before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3
   - if (test $TRAVIS_PULL_REQUEST = false) then git checkout $TRAVIS_BRANCH; fi
   - git submodule update --init --recursive
   - cd application
@@ -36,7 +39,7 @@ before_script:
   - pip install --user selenium
   - python --version
 
-script: xvfb-run -a -s "-screen 0 1400x1000x32" phpunit -v --debug -c app/ --coverage-clover ../testresults/clover.xml
+script: phpunit -v --debug -c app/ --coverage-clover ../testresults/clover.xml
 
 after_script:
   - php bin/coveralls -v
