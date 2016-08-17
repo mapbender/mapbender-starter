@@ -35,9 +35,8 @@ before_script:
   - npm install phantomjs@1.8
   - pip install --user selenium
   - python --version
-  - xvfb-run -a -s "-screen 0 1400x1000x32" &
 
-script: phpunit -v --debug -c app/ --coverage-clover ../testresults/clover.xml
+script: xvfb-run -a -s "-screen 0 1400x1000x32" phpunit -v --debug -c app/ --coverage-clover ../testresults/clover.xml
 
 after_script:
   - php bin/coveralls -v
