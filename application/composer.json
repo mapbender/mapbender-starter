@@ -79,6 +79,10 @@
             "ComposerBootstrap::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
         ],
+        "update-assets":[
+            "ComposerBootstrap::installAssets",
+            "ComponentInstaller\\Installer::postAutoloadDump"
+        ],
         "package": [
             "ComposerBootstrap::genApiDocumentation",
             "ComposerBootstrap::genDocumentation"
@@ -94,7 +98,10 @@
     "config": {
         "bin-dir": "bin",
         "component-dir": "web/components",
-        "component-baseurl": "/components"
+        "component-baseurl": "/components",
+        "platform": {
+            "php": "5.3.19"
+        }
     },
     "minimum-stability": "stable",
     "extra": {

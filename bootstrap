@@ -18,10 +18,5 @@ fi
 
 cd application
 echo "# Install composer packages";
-if [ "$phpVersion" == "7" ]; then
-    echo "php bin/composer update --no-dev -o"
-    php bin/composer update --no-dev -o
-else
-    echo "php bin/composer update --no-dev -o"
-    php bin/composer install --no-dev -o
-fi
+echo "php bin/composer update --no-dev -o"
+php bin/composer install --no-dev -o

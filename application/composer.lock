@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ebf62068571527e962c2081019c6091d",
-    "content-hash": "ee9d6508e722bd08c4ff813d88c2d99c",
+    "hash": "c6bdc8c1cfa285e711618f821e274f9d",
+    "content-hash": "5c85f767d4011499ed0f4c07db9ba0b7",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -124,16 +124,16 @@
         },
         {
             "name": "blueimp/jquery-file-upload",
-            "version": "9.12.3",
+            "version": "9.12.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vkhramtsov/jQuery-File-Upload.git",
-                "reference": "2fb21a118d65855a5b7e30bfba3f405521dc9b12"
+                "reference": "f60a273f69303b140c5089e5cde1c8a187a94871"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vkhramtsov/jQuery-File-Upload/zipball/2fb21a118d65855a5b7e30bfba3f405521dc9b12",
-                "reference": "2fb21a118d65855a5b7e30bfba3f405521dc9b12",
+                "url": "https://api.github.com/repos/vkhramtsov/jQuery-File-Upload/zipball/f60a273f69303b140c5089e5cde1c8a187a94871",
+                "reference": "f60a273f69303b140c5089e5cde1c8a187a94871",
                 "shasum": ""
             },
             "type": "library",
@@ -170,7 +170,7 @@
                 "upload",
                 "widget"
             ],
-            "time": "2016-04-12 09:04:50"
+            "time": "2016-06-13 05:52:31"
         },
         {
             "name": "components/bootstrap",
@@ -3856,19 +3856,20 @@
         },
         {
             "name": "facebook/webdriver",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/facebook/php-webdriver.git",
-                "reference": "1c98108ba3eb435b681655764de11502a0653705"
+                "reference": "0b889d7de7461439f8a3bbcca46e0f696cb27986"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facebook/php-webdriver/zipball/1c98108ba3eb435b681655764de11502a0653705",
-                "reference": "1c98108ba3eb435b681655764de11502a0653705",
+                "url": "https://api.github.com/repos/facebook/php-webdriver/zipball/0b889d7de7461439f8a3bbcca46e0f696cb27986",
+                "reference": "0b889d7de7461439f8a3bbcca46e0f696cb27986",
                 "shasum": ""
             },
             "require": {
+                "ext-curl": "*",
                 "php": ">=5.3.19"
             },
             "require-dev": {
@@ -3895,7 +3896,7 @@
                 "selenium",
                 "webdriver"
             ],
-            "time": "2015-12-31 15:58:49"
+            "time": "2016-06-04 00:02:34"
         },
         {
             "name": "guzzle/guzzle",
@@ -5051,5 +5052,8 @@
     "platform": {
         "php": ">=5.3.3"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "platform-overrides": {
+        "php": "5.3.19"
+    }
 }
