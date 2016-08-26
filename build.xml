@@ -280,13 +280,6 @@
         </phplint>
     </target>
 
-    <target name="transupdate">
-        <exec command="application/app/console bcc:trans:update --force --output-format xliff de BkgVwmsBundle" />
-        <exec command="application/app/console bcc:trans:update --force --output-format xliff de BkgCoreBundle" />
-        <exec command="application/app/console bcc:trans:update --force --output-format xliff de MapbenderWmsBundle" />
-    </target>
-
-
     <target name="submoduleupdate">
         <exec command="git submodule sync" checkreturn="true" passthru="true" />
         <exec command="git submodule foreach 'git pull || :'" />
