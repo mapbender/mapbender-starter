@@ -23,15 +23,8 @@ php:
 
 before_script:
   - if (test $TRAVIS_PULL_REQUEST = false) then git checkout $TRAVIS_BRANCH; fi
-  - git submodule update --init --recursive
   - cd application
-  - cp app/config/parameters.yml.dist app/config/parameters.yml
-  - composer self-update
-  - composer install
-  - php app/console doctrine:database:create
-  - php app/console doctrine:schema:create
-  - php app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
-  - php app/console fom:user:resetroot --username root --password root --email root@root.de --silent
+  - bin/composer install -o
   - pip install --user selenium
   - python --version
 
