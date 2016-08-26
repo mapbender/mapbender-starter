@@ -27,7 +27,8 @@
         "phpunit/phpunit-selenium": "^2.0",
         "facebook/webdriver": "1.1.*",
         "apigen/apigen": "2.*",
-        "phing/phing": "2.*"
+        "phing/phing": "2.*",
+        "phantomjs/phantomjs": "1.x"
     },
     "require": {
         "php": ">=5.3.3",
@@ -202,6 +203,21 @@
                 "require": {
                     "robloach/component-installer": "*"
                 }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "phantomjs/phantomjs",
+                "type": "component",
+                "version": "1.8.2",
+                "dist": {
+                    "url": "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/phantomjs/phantomjs-1.8.2-linux-x86_64.tar.bz2",
+                    "type": "tar"
+                },
+                "bin": [
+                    "bin/phantomjs"
+                ]
             }
         }
     ]
