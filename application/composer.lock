@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f0840c5fb08e3d7bdd352fa475b03c9c",
-    "content-hash": "71006c09229a1a97b4453b4fc2e81eaf",
+    "hash": "a1a92a720da044cb245e0e3f782aa649",
+    "content-hash": "795be6210f8d878b6dee9a0bec112ffe",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -1393,6 +1393,39 @@
             "time": "2016-01-28 19:50:13"
         },
         {
+            "name": "fabpot/sphinx-php",
+            "version": "v1.0.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fabpot/sphinx-php.git",
+                "reference": "f1b69df331217d34425aa09821449e08fa219d38"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fabpot/sphinx-php/zipball/f1b69df331217d34425aa09821449e08fa219d38",
+                "reference": "f1b69df331217d34425aa09821449e08fa219d38",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Sphinx extension for PHP projects",
+            "time": "2016-07-18 09:43:42"
+        },
+        {
             "name": "fontfacekit/open-sans",
             "version": "1.4.0",
             "dist": {
@@ -2280,6 +2313,41 @@
                 "mapbender"
             ],
             "time": "2016-03-10 10:47:19"
+        },
+        {
+            "name": "mapbender/documentation",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mapbender/mapbender-documentation.git",
+                "reference": "7df9295aa91eaa188d0618dedaf06261a752e0c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/7df9295aa91eaa188d0618dedaf06261a752e0c6",
+                "reference": "7df9295aa91eaa188d0618dedaf06261a752e0c6",
+                "shasum": ""
+            },
+            "require": {
+                "fabpot/sphinx-php": "1.0.*",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Astrid Emde"
+                }
+            ],
+            "description": "Mapbender3 documentation",
+            "keywords": [
+                "documentation",
+                "mapbender"
+            ],
+            "time": "2016-08-29 12:47:44"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -5379,9 +5447,18 @@
             "time": "2014-02-10 02:34:57"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "alias": "3.0.5.4",
+            "alias_normalized": "3.0.5.4",
+            "version": "9999999-dev",
+            "package": "mapbender/documentation"
+        }
+    ],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "mapbender/documentation": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

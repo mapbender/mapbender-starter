@@ -65,7 +65,8 @@
         "components/underscore": "1.x",
         "components/joii": "3.1.x",
         "mapbender/digitizer": "1.0.x",
-        "setasign/fpdi-fpdf": "1.6.*"
+        "setasign/fpdi-fpdf": "1.6.*",
+        "mapbender/documentation": "dev-master as 3.0.5.4"
     },
     "scripts": {
         "post-install-cmd": [

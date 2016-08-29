@@ -199,7 +199,7 @@ class ComposerBootstrap
      */
     public static function genApiDocumentation()
     {
-        if (is_file("bin/apigen")) {
+        if (!is_file("bin/apigen")) {
             return;
         }
 
