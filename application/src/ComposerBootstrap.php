@@ -199,7 +199,7 @@ class ComposerBootstrap
      */
     public static function genApiDocumentation()
     {
-        if (!is_file("bin/apigen")) {
+        if (is_file("bin/apigen")) {
             return;
         }
 
@@ -219,7 +219,7 @@ class ComposerBootstrap
         };
         $sphinxPath = preg_replace("/^.* |\\s*$/s", "", `type sphinx-build`);
         if (strpos($sphinxPath, "sphinx-build") !== false) {
-            `cd vendor/mapbender/documentation; $sphinxPath . web/docs`;
+            `$sphinxPath vendor/mapbender/documentation web/docs`;
         }else{
             echo "Documentation isn't generated, please install python sphinx documentation generator.";
         }
