@@ -219,7 +219,7 @@ class ComposerBootstrap
         };
         $sphinxPath = preg_replace("/^.* |\\s*$/s", "", `type sphinx-build`);
         if (strpos($sphinxPath, "sphinx-build") !== false) {
-            `$sphinxPath ../documentation/ web/docs`;
+            `cd vendor/mapbender/documentation; $sphinxPath . web/docs`;
         }else{
             echo "Documentation isn't generated, please install python sphinx documentation generator.";
         }
