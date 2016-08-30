@@ -95,6 +95,12 @@
         ],
         "clean": [
             "ComposerBootstrap::clearCache"
+        ],
+        "version": [
+            "ComposerBootstrap::displayVersion"
+        ],
+        "release": [
+            "ComposerBootstrap::release"
         ]
     },
     "config": {
