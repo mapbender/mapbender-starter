@@ -284,7 +284,6 @@ class ComposerBootstrap
     private static function updateSymfonyParameters()
     {
         $files = static::getDefaultParameterFiles();
-        var_dump($files);
         static::updateYamlServerDescription($files["default"]);
         if (is_file($files["current"])) {
             static::updateYamlServerDescription($files["current"]);
@@ -299,12 +298,15 @@ class ComposerBootstrap
     private static function updateYamlServerDescription($yamlFile)
     {
         $composerDef = static::getComposerDefinition();
+        $yamlContent = preg_replace(
+            "/(fom:\\s+server_name:)(\\s*\\S+)(\\s+server_version:)(\\s*\\S+)/s",
+            "$1 " . $composerDef["description"] .
+            "$3 " . $composerDef["version"],
+            file_get_contents($yamlFile));
+        var_dump($yamlContent);
+        die();
         return file_put_contents(
-            preg_replace(
-                "/(fom:\\s+server_name:)(\\s*\\S+)(\\s+server_version:)(\\s*\\S+)/s",
-                "$1 " . $composerDef["description"] .
-                "$3 " . $composerDef["version"],
-                file_get_contents($yamlFile)),
+            $yamlContent,
             $yamlFile);
     }
 
@@ -313,19 +315,20 @@ class ComposerBootstrap
      */
     protected static function updatePhingProperties()
     {
-        $config                            = static::getComposerDefinition();
-        $versionDetails                    = sscanf($config["version"], "%d.%d.%d.%d-%s");
-        $properties                        = static::getRootPath() . "/build.properties";
-        $build                             = parse_ini_file($properties);
-        $build['version.major']            = $versionDetails[0];
-        $build['version.minor']            = $versionDetails[1];
-        $build['version.revision']         = $versionDetails[2];
-        $build['version.build']            = $versionDetails[3];
-        $build['packaging.release']        = $versionDetails[4] ? $versionDetails[4] : 0;
-        $build['phing.project.name']       = $config["name"];
-        $build['project.shortdescription'] = $config["description"];
-        $build['project.description']      = $config["description"] . " (" . $config["homepage"] . ")";
-        $initFile                          = array();
+        $initFile       = array();
+        $config         = static::getComposerDefinition();
+        $versionDetails = sscanf($config["version"], "%d.%d.%d.%d-%s");
+        $properties     = static::getRootPath() . "/build.properties";
+        $build          = array_merge(parse_ini_file($properties), array(
+            'version.major'            => $versionDetails[0],
+            'version.minor'            => $versionDetails[1],
+            'version.revision'         => $versionDetails[2],
+            'version.build'            => $versionDetails[3],
+            'packaging.release'        => $versionDetails[4] ? $versionDetails[4] : 0,
+            'phing.project.name'       => $config["name"],
+            'project.shortdescription' => $config["description"],
+            'project.description'      => $config["description"] . " (" . $config["homepage"] . ")",
+        ));
 
         // Build INI content
         foreach ($build as $k => $v) {

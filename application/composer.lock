@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a1a92a720da044cb245e0e3f782aa649",
+    "hash": "dc0056e2c3c2668fd47aa917cf471268",
     "content-hash": "795be6210f8d878b6dee9a0bec112ffe",
     "packages": [
         {
@@ -1506,16 +1506,16 @@
         },
         {
             "name": "gedmo/doctrine-extensions",
-            "version": "v2.4.21",
+            "version": "v2.4.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Atlantic18/DoctrineExtensions.git",
-                "reference": "dcaab46a25e1baeb5142c3e25d5b6fd495ced504"
+                "reference": "b8188801bafc420b86908ee5229a5e92143ce514"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/dcaab46a25e1baeb5142c3e25d5b6fd495ced504",
-                "reference": "dcaab46a25e1baeb5142c3e25d5b6fd495ced504",
+                "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/b8188801bafc420b86908ee5229a5e92143ce514",
+                "reference": "b8188801bafc420b86908ee5229a5e92143ce514",
                 "shasum": ""
             },
             "require": {
@@ -1581,7 +1581,7 @@
                 "tree",
                 "uploadable"
             ],
-            "time": "2016-08-17 16:52:00"
+            "time": "2016-08-30 18:42:36"
         },
         {
             "name": "igosuki/compass-mixins",
@@ -2270,17 +2270,17 @@
         },
         {
             "name": "mapbender/digitizer",
-            "version": "1.0.40",
+            "version": "1.0.42",
             "target-dir": "Mapbender/DigitizerBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "666d4f3c9074990f47d1f028ac7253a5065df8ed"
+                "reference": "6548c4fefd8447e26b306ceefb5afb29dd6bb5d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/666d4f3c9074990f47d1f028ac7253a5065df8ed",
-                "reference": "666d4f3c9074990f47d1f028ac7253a5065df8ed",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/6548c4fefd8447e26b306ceefb5afb29dd6bb5d6",
+                "reference": "6548c4fefd8447e26b306ceefb5afb29dd6bb5d6",
                 "shasum": ""
             },
             "require": {
@@ -2312,7 +2312,7 @@
                 "digitizing",
                 "mapbender"
             ],
-            "time": "2016-03-10 10:47:19"
+            "time": "2016-08-31 11:05:09"
         },
         {
             "name": "mapbender/documentation",
@@ -2320,12 +2320,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-documentation.git",
-                "reference": "7df9295aa91eaa188d0618dedaf06261a752e0c6"
+                "reference": "34118caa1b8f16a8174c092815745c54d6ca8382"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/7df9295aa91eaa188d0618dedaf06261a752e0c6",
-                "reference": "7df9295aa91eaa188d0618dedaf06261a752e0c6",
+                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/34118caa1b8f16a8174c092815745c54d6ca8382",
+                "reference": "34118caa1b8f16a8174c092815745c54d6ca8382",
                 "shasum": ""
             },
             "require": {
@@ -2347,7 +2347,7 @@
                 "documentation",
                 "mapbender"
             ],
-            "time": "2016-08-29 12:47:44"
+            "time": "2016-09-02 11:42:12"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -3638,16 +3638,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.24.1",
+            "version": "v1.24.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "3566d311a92aae4deec6e48682dc5a4528c4a512"
+                "reference": "33093f6e310e6976baeac7b14f3a6ec02f2d79b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/3566d311a92aae4deec6e48682dc5a4528c4a512",
-                "reference": "3566d311a92aae4deec6e48682dc5a4528c4a512",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/33093f6e310e6976baeac7b14f3a6ec02f2d79b7",
+                "reference": "33093f6e310e6976baeac7b14f3a6ec02f2d79b7",
                 "shasum": ""
             },
             "require": {
@@ -3695,7 +3695,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2016-05-30 09:11:59"
+            "time": "2016-09-01 17:50:53"
         },
         {
             "name": "viscreation/vis-ui.js",
