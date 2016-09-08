@@ -219,7 +219,7 @@
             file="application/app/config/parameters.yml.dist"
             tofile="application/app/config/parameters.yml" />
         <exec command="curl -s http://getcomposer.org/installer | php" dir="application" />
-        <exec command="php composer.phar update --no-dev" dir="application" passthru="true"/>
+        <exec command="php composer.phar install --no-dev -o" dir="application" passthru="true"/>
     </target>
 
     <target name="prepare" depends="deps,doc">
