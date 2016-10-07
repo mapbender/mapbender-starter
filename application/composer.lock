@@ -404,16 +404,16 @@
         },
         {
             "name": "components/jqueryui",
-            "version": "1.12.0.1",
+            "version": "1.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/components/jqueryui.git",
-                "reference": "2c9359a9d199da254dd278bef3d4ced047d6581c"
+                "reference": "44ecf3794cc56b65954cc19737234a3119d036cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/components/jqueryui/zipball/2c9359a9d199da254dd278bef3d4ced047d6581c",
-                "reference": "2c9359a9d199da254dd278bef3d4ced047d6581c",
+                "url": "https://api.github.com/repos/components/jqueryui/zipball/44ecf3794cc56b65954cc19737234a3119d036cc",
+                "reference": "44ecf3794cc56b65954cc19737234a3119d036cc",
                 "shasum": ""
             },
             "require": {
@@ -485,38 +485,7 @@
                 }
             ],
             "description": "jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you're building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice.",
-            "time": "2016-07-19 06:02:37"
-        },
-        {
-            "name": "components/normalize.css",
-            "version": "3.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/components/normalize.css.git",
-                "reference": "45dc73f97034936e7ab1838be4887a3be315824b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/components/normalize.css/zipball/45dc73f97034936e7ab1838be4887a3be315824b",
-                "reference": "45dc73f97034936e7ab1838be4887a3be315824b",
-                "shasum": ""
-            },
-            "type": "component",
-            "extra": {
-                "component": {
-                    "name": "normalize-css",
-                    "styles": [
-                        "normalize.css"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Normalize.css is a customisable CSS file that makes browsers render all elements more consistently and in line with modern standards.",
-            "homepage": "http://necolas.github.com/normalize.css/",
-            "time": "2015-05-21 16:25:32"
+            "time": "2016-09-16 05:47:55"
         },
         {
             "name": "components/placeholdersjs",
@@ -586,6 +555,38 @@
                 "util"
             ],
             "time": "2015-10-16 14:27:39"
+        },
+        {
+            "name": "debugteam/bootstrap-colorpicker",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/debugteam/bootstrap-colorpicker.git",
+                "reference": "fa95df5744a802284fc1e24c81938c02141b9345"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/debugteam/bootstrap-colorpicker/zipball/fa95df5744a802284fc1e24c81938c02141b9345",
+                "reference": "fa95df5744a802284fc1e24c81938c02141b9345",
+                "shasum": ""
+            },
+            "require": {
+                "components/bootstrap": ">=2",
+                "components/jquery": ">=1.10",
+                "robloach/component-installer": "*"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "files": [
+                        "img/bootstrap-colorpicker/*.png",
+                        "css/bootstrap-colorpicker.min.css",
+                        "js/bootstrap-colorpicker.min.js"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "time": "2016-08-26 08:15:26"
         },
         {
             "name": "doctrine/annotations",
@@ -1307,45 +1308,6 @@
             "time": "2015-08-31 13:19:01"
         },
         {
-            "name": "drmonty/leaflet",
-            "version": "0.7.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mrohnstock/leaflet.git",
-                "reference": "eda8011e743b8abbfc32624c1c1b1ce3d0e98e50"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mrohnstock/leaflet/zipball/eda8011e743b8abbfc32624c1c1b1ce3d0e98e50",
-                "reference": "eda8011e743b8abbfc32624c1c1b1ce3d0e98e50",
-                "shasum": ""
-            },
-            "require": {
-                "robloach/component-installer": "*"
-            },
-            "type": "component",
-            "extra": {
-                "component": {
-                    "scripts": [
-                        "js/leaflet.js"
-                    ],
-                    "files": [
-                        "js/*.js",
-                        "css/*.css",
-                        "images/*.png"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "description": "JavaScript library for mobile-friendly interactive maps http://leafletjs.com",
-            "homepage": "http://leafletjs.com/",
-            "keywords": [
-                "gis",
-                "map"
-            ],
-            "time": "2015-10-26 10:10:37"
-        },
-        {
             "name": "eslider/sasscb",
             "version": "3.1.2",
             "source": {
@@ -1506,16 +1468,16 @@
         },
         {
             "name": "gedmo/doctrine-extensions",
-            "version": "v2.4.22",
+            "version": "v2.4.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Atlantic18/DoctrineExtensions.git",
-                "reference": "b8188801bafc420b86908ee5229a5e92143ce514"
+                "reference": "c2f308fab900090c6c0f5b6f72f34a37b4dd2d84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/b8188801bafc420b86908ee5229a5e92143ce514",
-                "reference": "b8188801bafc420b86908ee5229a5e92143ce514",
+                "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/c2f308fab900090c6c0f5b6f72f34a37b4dd2d84",
+                "reference": "c2f308fab900090c6c0f5b6f72f34a37b4dd2d84",
                 "shasum": ""
             },
             "require": {
@@ -1581,7 +1543,7 @@
                 "tree",
                 "uploadable"
             ],
-            "time": "2016-08-30 18:42:36"
+            "time": "2016-09-22 13:45:22"
         },
         {
             "name": "igosuki/compass-mixins",
@@ -2270,17 +2232,17 @@
         },
         {
             "name": "mapbender/digitizer",
-            "version": "1.0.42",
+            "version": "1.0.44",
             "target-dir": "Mapbender/DigitizerBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "6548c4fefd8447e26b306ceefb5afb29dd6bb5d6"
+                "reference": "b106e13c56ca582e0c0703a654d529646011f94b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/6548c4fefd8447e26b306ceefb5afb29dd6bb5d6",
-                "reference": "6548c4fefd8447e26b306ceefb5afb29dd6bb5d6",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/b106e13c56ca582e0c0703a654d529646011f94b",
+                "reference": "b106e13c56ca582e0c0703a654d529646011f94b",
                 "shasum": ""
             },
             "require": {
@@ -2312,7 +2274,7 @@
                 "digitizing",
                 "mapbender"
             ],
-            "time": "2016-08-31 11:05:09"
+            "time": "2016-10-07 09:56:24"
         },
         {
             "name": "mapbender/documentation",
@@ -2320,12 +2282,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-documentation.git",
-                "reference": "34118caa1b8f16a8174c092815745c54d6ca8382"
+                "reference": "803c4858cb956f3a9977b5621a2411afde60b4ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/34118caa1b8f16a8174c092815745c54d6ca8382",
-                "reference": "34118caa1b8f16a8174c092815745c54d6ca8382",
+                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/803c4858cb956f3a9977b5621a2411afde60b4ce",
+                "reference": "803c4858cb956f3a9977b5621a2411afde60b4ce",
                 "shasum": ""
             },
             "require": {
@@ -2347,7 +2309,7 @@
                 "documentation",
                 "mapbender"
             ],
-            "time": "2016-09-02 11:42:12"
+            "time": "2016-10-05 09:27:30"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -3586,16 +3548,16 @@
         },
         {
             "name": "twig/extensions",
-            "version": "v1.3.0",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig-extensions.git",
-                "reference": "449e3c8a9ffad7c2479c7864557275a32b037499"
+                "reference": "531eaf4b9ab778b1d7cdd10d40fc6aa74729dfee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig-extensions/zipball/449e3c8a9ffad7c2479c7864557275a32b037499",
-                "reference": "449e3c8a9ffad7c2479c7864557275a32b037499",
+                "url": "https://api.github.com/repos/twigphp/Twig-extensions/zipball/531eaf4b9ab778b1d7cdd10d40fc6aa74729dfee",
+                "reference": "531eaf4b9ab778b1d7cdd10d40fc6aa74729dfee",
                 "shasum": ""
             },
             "require": {
@@ -3610,7 +3572,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.3-dev"
+                    "dev-master": "1.4-dev"
                 }
             },
             "autoload": {
@@ -3634,20 +3596,20 @@
                 "i18n",
                 "text"
             ],
-            "time": "2015-08-22 16:38:35"
+            "time": "2016-09-22 16:50:57"
         },
         {
             "name": "twig/twig",
-            "version": "v1.24.2",
+            "version": "v1.26.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "33093f6e310e6976baeac7b14f3a6ec02f2d79b7"
+                "reference": "a09d8ee17ac1cfea29ed60c83960ad685c6a898d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/33093f6e310e6976baeac7b14f3a6ec02f2d79b7",
-                "reference": "33093f6e310e6976baeac7b14f3a6ec02f2d79b7",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/a09d8ee17ac1cfea29ed60c83960ad685c6a898d",
+                "reference": "a09d8ee17ac1cfea29ed60c83960ad685c6a898d",
                 "shasum": ""
             },
             "require": {
@@ -3660,7 +3622,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.24-dev"
+                    "dev-master": "1.26-dev"
                 }
             },
             "autoload": {
@@ -3695,20 +3657,20 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2016-09-01 17:50:53"
+            "time": "2016-10-05 18:57:41"
         },
         {
             "name": "viscreation/vis-ui.js",
-            "version": "0.0.56",
+            "version": "0.0.59",
             "source": {
                 "type": "git",
                 "url": "https://github.com/eSlider/vis-ui.js.git",
-                "reference": "cba77da31a9a13971f2c6911f04e80b1dbfaacff"
+                "reference": "b93722cd3d30be86194abcbfc5119aeb0405953c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/eSlider/vis-ui.js/zipball/cba77da31a9a13971f2c6911f04e80b1dbfaacff",
-                "reference": "cba77da31a9a13971f2c6911f04e80b1dbfaacff",
+                "url": "https://api.github.com/repos/eSlider/vis-ui.js/zipball/b93722cd3d30be86194abcbfc5119aeb0405953c",
+                "reference": "b93722cd3d30be86194abcbfc5119aeb0405953c",
                 "shasum": ""
             },
             "require": {
@@ -3719,13 +3681,16 @@
                 "components/jquery": "1.* || 2.*",
                 "components/jquerydialogextendjs": "*",
                 "components/jqueryui": "1.*",
-                "components/normalize.css": "3.0.*",
                 "components/placeholdersjs": "*",
                 "components/underscore": "1.8.*",
-                "drmonty/leaflet": "0.*",
+                "debugteam/bootstrap-colorpicker": "1.*",
                 "medialize/jquery-context-menu": "1.*",
                 "robloach/component-installer": "0.2.*",
                 "rogeriopradoj/respond": "1.4.*"
+            },
+            "require-dev": {
+                "components/normalize.css": "3.0.*",
+                "drmonty/leaflet": "1.0.*"
             },
             "type": "component",
             "extra": {
@@ -3760,7 +3725,7 @@
                 "jquery",
                 "vis-ui"
             ],
-            "time": "2016-05-30 14:54:06"
+            "time": "2016-10-07 07:39:12"
         },
         {
             "name": "willdurand/jsonp-callback-validator",
@@ -3834,7 +3799,7 @@
             "authors": [
                 {
                     "name": "Ondřej Nešpor",
-                    "homepage": "https://github.com/andrewsville"
+                    "homepage": "https://github.com/Andrewsville"
                 },
                 {
                     "name": "Jaroslav Hanslík",
@@ -4265,16 +4230,16 @@
         },
         {
             "name": "phing/phing",
-            "version": "2.14.0",
+            "version": "2.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phingofficial/phing.git",
-                "reference": "7dd73c83c377623def54b58121f46b4dcb35dd61"
+                "reference": "bbfcaee391123220fc54e9c6feffeeea3c8775b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phingofficial/phing/zipball/7dd73c83c377623def54b58121f46b4dcb35dd61",
-                "reference": "7dd73c83c377623def54b58121f46b4dcb35dd61",
+                "url": "https://api.github.com/repos/phingofficial/phing/zipball/bbfcaee391123220fc54e9c6feffeeea3c8775b7",
+                "reference": "bbfcaee391123220fc54e9c6feffeeea3c8775b7",
                 "shasum": ""
             },
             "require": {
@@ -4297,6 +4262,7 @@
                 "phpunit/phpunit": ">=3.7",
                 "sebastian/git": "~1.0",
                 "sebastian/phpcpd": "2.x",
+                "siad007/versioncontrol_hg": "^1.0",
                 "squizlabs/php_codesniffer": "~2.2",
                 "symfony/yaml": "~2.7"
             },
@@ -4311,6 +4277,7 @@
                 "phpunit/php-code-coverage": "Library that provides collection, processing, and rendering functionality for PHP code coverage information",
                 "phpunit/phpunit": "The PHP Unit Testing Framework",
                 "sebastian/phpcpd": "Copy/Paste Detector (CPD) for PHP code",
+                "siad007/versioncontrol_hg": "A library for interfacing with Mercurial repositories.",
                 "tedivm/jshrink": "Javascript Minifier built in PHP"
             },
             "bin": [
@@ -4319,7 +4286,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.14.x-dev"
+                    "dev-master": "2.15.x-dev"
                 }
             },
             "autoload": {
@@ -4352,7 +4319,7 @@
                 "task",
                 "tool"
             ],
-            "time": "2016-03-10 21:39:23"
+            "time": "2016-09-14 19:38:14"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
