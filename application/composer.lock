@@ -124,16 +124,16 @@
         },
         {
             "name": "blueimp/jquery-file-upload",
-            "version": "9.12.5",
+            "version": "v9.12.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vkhramtsov/jQuery-File-Upload.git",
-                "reference": "f60a273f69303b140c5089e5cde1c8a187a94871"
+                "reference": "ae2e0e7637da6c8f94d37655b5429b74faf37b3a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vkhramtsov/jQuery-File-Upload/zipball/f60a273f69303b140c5089e5cde1c8a187a94871",
-                "reference": "f60a273f69303b140c5089e5cde1c8a187a94871",
+                "url": "https://api.github.com/repos/vkhramtsov/jQuery-File-Upload/zipball/ae2e0e7637da6c8f94d37655b5429b74faf37b3a",
+                "reference": "ae2e0e7637da6c8f94d37655b5429b74faf37b3a",
                 "shasum": ""
             },
             "type": "library",
@@ -170,7 +170,7 @@
                 "upload",
                 "widget"
             ],
-            "time": "2016-06-13 05:52:31"
+            "time": "2016-10-18 06:01:31"
         },
         {
             "name": "components/bootstrap",
@@ -1309,16 +1309,16 @@
         },
         {
             "name": "eslider/sasscb",
-            "version": "3.1.2",
+            "version": "3.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/eSlider/sassc-binaries.git",
-                "reference": "15b155e89cba3edfc02436469e1804712a23a3ac"
+                "reference": "4777166f4d89ed23cf80a2b6b04759cb80da708f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/eSlider/sassc-binaries/zipball/15b155e89cba3edfc02436469e1804712a23a3ac",
-                "reference": "15b155e89cba3edfc02436469e1804712a23a3ac",
+                "url": "https://api.github.com/repos/eSlider/sassc-binaries/zipball/4777166f4d89ed23cf80a2b6b04759cb80da708f",
+                "reference": "4777166f4d89ed23cf80a2b6b04759cb80da708f",
                 "shasum": ""
             },
             "require": {
@@ -1352,7 +1352,7 @@
                 "minification",
                 "scss"
             ],
-            "time": "2016-01-28 19:50:13"
+            "time": "2016-10-25 10:17:43"
         },
         {
             "name": "fabpot/sphinx-php",
@@ -1468,16 +1468,16 @@
         },
         {
             "name": "gedmo/doctrine-extensions",
-            "version": "v2.4.23",
+            "version": "v2.4.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Atlantic18/DoctrineExtensions.git",
-                "reference": "c2f308fab900090c6c0f5b6f72f34a37b4dd2d84"
+                "reference": "a7f7243a19f79a99ac83a3570444d8795f665eef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/c2f308fab900090c6c0f5b6f72f34a37b4dd2d84",
-                "reference": "c2f308fab900090c6c0f5b6f72f34a37b4dd2d84",
+                "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/a7f7243a19f79a99ac83a3570444d8795f665eef",
+                "reference": "a7f7243a19f79a99ac83a3570444d8795f665eef",
                 "shasum": ""
             },
             "require": {
@@ -1543,7 +1543,7 @@
                 "tree",
                 "uploadable"
             ],
-            "time": "2016-09-22 13:45:22"
+            "time": "2016-10-11 18:03:37"
         },
         {
             "name": "igosuki/compass-mixins",
@@ -2232,17 +2232,17 @@
         },
         {
             "name": "mapbender/digitizer",
-            "version": "1.0.44",
+            "version": "1.0.45",
             "target-dir": "Mapbender/DigitizerBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "b106e13c56ca582e0c0703a654d529646011f94b"
+                "reference": "d6b020ec7a927c0e8a7cd666be2a341cae36095c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/b106e13c56ca582e0c0703a654d529646011f94b",
-                "reference": "b106e13c56ca582e0c0703a654d529646011f94b",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/d6b020ec7a927c0e8a7cd666be2a341cae36095c",
+                "reference": "d6b020ec7a927c0e8a7cd666be2a341cae36095c",
                 "shasum": ""
             },
             "require": {
@@ -2274,7 +2274,7 @@
                 "digitizing",
                 "mapbender"
             ],
-            "time": "2016-10-07 09:56:24"
+            "time": "2016-10-07 10:01:53"
         },
         {
             "name": "mapbender/documentation",
@@ -4230,16 +4230,16 @@
         },
         {
             "name": "phing/phing",
-            "version": "2.15.0",
+            "version": "2.15.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phingofficial/phing.git",
-                "reference": "bbfcaee391123220fc54e9c6feffeeea3c8775b7"
+                "reference": "0999ab4e94e609dc00998e3d1b88df843054db7c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phingofficial/phing/zipball/bbfcaee391123220fc54e9c6feffeeea3c8775b7",
-                "reference": "bbfcaee391123220fc54e9c6feffeeea3c8775b7",
+                "url": "https://api.github.com/repos/phingofficial/phing/zipball/0999ab4e94e609dc00998e3d1b88df843054db7c",
+                "reference": "0999ab4e94e609dc00998e3d1b88df843054db7c",
                 "shasum": ""
             },
             "require": {
@@ -4319,7 +4319,7 @@
                 "task",
                 "tool"
             ],
-            "time": "2016-09-14 19:38:14"
+            "time": "2016-10-13 09:01:45"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
