@@ -63,7 +63,7 @@
         "mapbender/mapbender-icons": "1.x",
         "components/jquery": "1.11.2",
         "components/underscore": "1.x",
-        "components/joii": "3.1.x",
+        "components/joii": "3.x",
         "mapbender/digitizer": "1.0.x",
         "setasign/fpdi-fpdf": "1.6.*",
         "mapbender/documentation": "dev-master as 3.0.5.4"
@@ -195,11 +195,10 @@
             "package": {
                 "name": "components/joii",
                 "type": "component",
-                "version": "3.1.2",
-                "source": {
-                    "url": "https://github.com/haroldiedema/joii.git",
-                    "type": "git",
-                    "reference": "master"
+                "version": "3.2.0",
+                "dist": {
+                    "url": "https://github.com/haroldiedema/joii/archive/3.2.0.zip",
+                    "type": "zip"
                 },
                 "extra": {
                     "component": {
