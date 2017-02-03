@@ -1,30 +1,40 @@
 {
     "name": "wheregroup/mapbender-starter",
-    "description": "Mapbender is the back office software and client framework for spatial data infrastructures.",
+    "description": "Mapbender",
+    "type": "project",
     "license": "MIT",
+    "version": "3.1-dev",
+    "homepage": "http://www.mapbender.org",
     "support": {
-        "issues": "https://repo.wheregroup.com/mapbender3/starter/issues",
-        "source": "https://github.com/mapbender/mapbender-starter"
+        "email":        "mapbender@osgeo.org",
+        "issues":       "https://repo.wheregroup.com/mapbender3/starter/issues",
+        "source":       "https://github.com/mapbender/mapbender-starter",
+        "docs":         "http://doc.mapbender3.org/",
+        "api-docs":     "http://api.mapbender3.org/",
+        "forum":        "http://osgeo-org.1560.x6.nabble.com/Mapbender-f4217602.html",
+        "user-list":    "https://lists.osgeo.org/pipermail/mapbender_users/"
     },
     "autoload": {
-        "psr-0": { "": "src/" }
+        "psr-4": { "": "src/" }
     },
     "provide": {
         "ext-ldap": "*"
     },
     "require-dev": {
-        "phpunit/phpunit": ">=3.7",
+        "phpunit/phpunit": "^4.8",
         "predis/predis": "~1.0",
         "satooshi/php-coveralls": "~0.6",
-        "phpunit/phpunit-selenium": ">=1.2",
+        "phpunit/phpunit-selenium": "^2.0",
         "facebook/webdriver": "1.1.*",
         "apigen/apigen": "2.*",
-        "phing/phing": "2.*"
+        "phing/phing": "2.*",
+        "phantomjs/phantomjs": "1.x"
     },
     "require": {
         "php": ">=5.3.3",
         "symfony/symfony": "2.3.x",
         "doctrine/common": "2.5.*",
+        "doctrine/cache": "1.3.*",
         "doctrine/orm": "~2.2,>=2.2.3",
         "doctrine/doctrine-bundle": "1.2.x",
         "twig/extensions": "1.x",
@@ -37,11 +47,11 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "jms/security-extra-bundle": "1.5.x",
         "jms/di-extra-bundle": "1.6.x",
+        "jms/serializer": "0.16.x",
 
         "friendsofsymfony/jsrouting-bundle": "1.5.x",
         "kriswallsmith/buzz": "v0.15",
         "doctrine/doctrine-fixtures-bundle": "2.3.*",
-        "toooni/fpdf": "dev-master",
         "arsgeografica/signing": "1.1.x",
         "phayes/geophp": "1.x",
         "viscreation/vis-ui.js": "0.0.x",
@@ -50,42 +60,65 @@
         "eslider/sasscb":  "3.1.x",
         "gedmo/doctrine-extensions": "~2.3",
         "imag/ldap-bundle":  "2.3.x",
-
+        "mapbender/mapbender-icons": "1.x",
         "components/jquery": "1.11.2",
         "components/underscore": "1.x",
-        "components/joii": "3.1.x",
         "components/codemirror": "5.13.x",
         "components/openlayers": "2.13.x",
         "components/notifyjs": "0.4.2",
         "components/json2": "1.0",
         "components/backbone": "1.3.x",
-
-        "mapbender/mapbender-icons": "1.x",
-        "mapbender/digitizer": "1.0.x",
         "mapbender/mapquery": "dev-master as 1.0.0",
         "mapbender/fom": "dev-release/3.0.6",
         "mapbender/owsproxy": "dev-release/3.0.6",
         "mapbender/documentation": "dev-release/3.0.6",
-        "mapbender/mapbender": "dev-release/3.0.6"
+        "mapbender/mapbender": "dev-release/3.0.6",
+        "components/joii": "3.x",
+        "mapbender/digitizer": "1.1.x",
+        "setasign/fpdi-fpdf": "1.6.*"
     },
     "scripts": {
         "post-install-cmd": [
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "ComposerBootstrap::checkConfiguration",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "ComposerBootstrap::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
         ],
         "post-update-cmd": [
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "ComposerBootstrap::checkConfiguration",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "ComposerBootstrap::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+        ],
+        "update-assets":[
+            "ComposerBootstrap::installAssets",
+            "ComponentInstaller\\Installer::postAutoloadDump"
+        ],
+        "package": [
+            "ComposerBootstrap::genApiDocumentation",
+            "ComposerBootstrap::genDocumentation"
+        ],
+        "docs": [
+            "ComposerBootstrap::genApiDocumentation",
+            "ComposerBootstrap::genDocumentation"
+        ],
+        "clean": [
+            "ComposerBootstrap::clearCache"
+        ],
+        "version": [
+            "ComposerBootstrap::displayVersion"
+        ],
+        "release": [
+            "ComposerBootstrap::release"
         ]
     },
     "config": {
         "bin-dir": "bin",
         "component-dir": "web/components",
-        "component-baseurl": "/components"
+        "component-baseurl": "/components",
+        "platform": {
+            "php": "5.3.19"
+        }
     },
     "minimum-stability": "stable",
     "extra": {
@@ -299,11 +332,10 @@
             "package": {
                 "name": "components/joii",
                 "type": "component",
-                "version": "3.1.2",
-                "source": {
-                    "url": "https://github.com/haroldiedema/joii.git",
-                    "type": "git",
-                    "reference": "master"
+                "version": "3.2.0",
+                "dist": {
+                    "url": "https://github.com/haroldiedema/joii/archive/3.2.0.zip",
+                    "type": "zip"
                 },
                 "extra": {
                     "component": {
@@ -314,6 +346,21 @@
                 "require": {
                     "robloach/component-installer": "*"
                 }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "phantomjs/phantomjs",
+                "type": "component",
+                "version": "1.8.2",
+                "dist": {
+                    "url": "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/phantomjs/phantomjs-1.8.2-linux-x86_64.tar.bz2",
+                    "type": "tar"
+                },
+                "bin": [
+                    "bin/phantomjs"
+                ]
             }
         }
     ]

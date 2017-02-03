@@ -51,6 +51,7 @@ doctrine:
                 path:     %database_path%
                 user:     %database_user%
                 password: %database_password%
+                persistent: true
                 charset:  UTF8
                 logging: %kernel.debug%
                 profiling: %kernel.debug%

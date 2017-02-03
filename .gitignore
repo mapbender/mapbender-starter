@@ -1,7 +1,6 @@
 /web/bundles
 /web/doc/*
 /web/uploads
-/web/uploads
 
 web/xmlschemas/*
 !web/xmlschemas/http___www_opengis_net*
@@ -13,7 +12,7 @@ web/xmlschemas/*
 /web/assets/*.trans
 /web/components
 /web/index.php
-web/assets/.dev-cache
+/web/assets/.dev-cache
 
 extra/
 

@@ -219,7 +219,7 @@
             file="application/app/config/parameters.yml.dist"
             tofile="application/app/config/parameters.yml" />
         <exec command="curl -s http://getcomposer.org/installer | php" dir="application" />
-        <exec command="php composer.phar update --no-dev" dir="application" passthru="true"/>
+        <exec command="php composer.phar install --no-dev -o" dir="application" passthru="true"/>
     </target>
 
     <target name="prepare" depends="deps,doc">
@@ -279,13 +279,6 @@
             </fileset>
         </phplint>
     </target>
-
-    <target name="transupdate">
-        <exec command="application/app/console bcc:trans:update --force --output-format xliff de BkgVwmsBundle" />
-        <exec command="application/app/console bcc:trans:update --force --output-format xliff de BkgCoreBundle" />
-        <exec command="application/app/console bcc:trans:update --force --output-format xliff de MapbenderWmsBundle" />
-    </target>
-
 
     <target name="submoduleupdate">
         <exec command="git submodule sync" checkreturn="true" passthru="true" />

@@ -5,24 +5,24 @@ require_once __DIR__ . '/bootstrap.php.cache';
 if(version_compare(PHP_VERSION, '5.4.0') >= 0) {
     // Command that starts the built-in web server
     $command = sprintf(
-        'php -S %s:%d -t %s >/tmp/weblog 2>&1 & echo $!',
+        'app/console server:run %s:%d',
         TEST_WEB_SERVER_HOST,
-        TEST_WEB_SERVER_PORT,
-        TEST_WEB_SERVER_DOCROOT
+        TEST_WEB_SERVER_PORT
     );
 
-    // Execute the command and store the process ID
-    $output = array();
-    exec($command, $output);
-    $pid = (int) $output[0];
+    $proc = new \Symfony\Component\Process\Process($command);
+    $proc->start();
 
     echo sprintf(
-        '%s - Web server started on %s:%d with PID %d',
+        '%s - Web server started on %s:%d',
         date('r'),
         TEST_WEB_SERVER_HOST,
-        TEST_WEB_SERVER_PORT,
-        $pid
+        TEST_WEB_SERVER_PORT
     ) . PHP_EOL;
+
+    $pid = $proc->getPid();
+
+    sleep(5);
 
     // Kill the web server when the process ends
     register_shutdown_function(function() use ($pid) {

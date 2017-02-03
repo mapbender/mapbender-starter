@@ -16,23 +16,21 @@ class ComposerBootstrap
      */
     public static function checkConfiguration(CommandEvent $event)
     {
-        $rootPath              = self::getSymfonyRootPath();
-        $configPath            = $rootPath . "/app/config/";
-        $configurationBaseFile = $configPath . "parameters.yml.dist";
-        $configurationFile     = $configPath . "parameters.yml";
-        $isNewInstall          = !file_exists($configurationFile);
+        $files        = static::getDefaultParameterFiles();
+        $isNewInstall = !file_exists($files["current"]);
         //$configuration         = file_get_contents($configurationBaseFile);
 
         if ($isNewInstall) {
-            copy($configurationBaseFile, $configurationFile);
 
-            self::createDatabase();
-            self::resetRootLogin();
-            self::importExampleApplications();
-            self::updateEpsgCodes();
+            copy($files["default"], $files["current"]);
+
+            static::createDatabase();
+            static::resetRootLogin();
+            static::importExampleApplications();
+            static::updateEpsgCodes();
         }
 
-        self::clearCache();
+        static::clearCache();
     }
 
     /**
@@ -40,7 +38,7 @@ class ComposerBootstrap
      *
      * @return bool
      */
-    protected static function isWindows()
+    public static function isWindows()
     {
         static $isWindows;
         if ($isWindows === null) {
@@ -52,12 +50,12 @@ class ComposerBootstrap
     /**
      * Clear cache but let sessions alive
      */
-    protected static function clearCache()
+    public static function clearCache()
     {
         $isWindows = self::isWindows();
         $cachePath = "var/cache";
         if (!$isWindows) {
-            self::printStatus("Clear cache");
+            static::printStatus("Clear cache");
             foreach (glob($cachePath . "/*/*") as $filePath) {
                 $fileInfo = explode("/", $filePath);
                 $fileName = end($fileInfo);
@@ -71,12 +69,25 @@ class ComposerBootstrap
     }
 
     /**
+     * Installs bundle assets into a given dierectory (for details s. Symfony app/console assets:install).
+     */
+    public static function installAssets()
+    {
+        $isWindows = static::isWindows();
+        if (!$isWindows) {
+            echo `php app/console assets:install --symlink --relative web`;
+        } else {
+            echo `php app/console assets:install web`;
+        }
+    }
+
+    /**
      * Enable write cache, logs and upload folder by user and group
      */
-    protected static function allowWriteLogs()
+    public static function allowWriteLogs()
     {
-        if (!self::isWindows()) {
-            self::printStatus("Enable write cache, logs and upload for user and user group");
+        if (!static::isWindows()) {
+            static::printStatus("Enable write cache, logs and upload for user and user group");
 
             echo `chmod -R ug+wX var/cache`;
             echo `chmod -R ug+wX var/logs`;
@@ -87,9 +98,9 @@ class ComposerBootstrap
     /**
      * Crate database, schema and force update
      */
-    protected static function createDatabase()
+    public static function createDatabase()
     {
-        self::printStatus("Create and prepare database");
+        static::printStatus("Create and prepare database");
 
         echo `php app/console doctrine:database:create`;
         echo `php app/console doctrine:schema:create`;
@@ -109,11 +120,11 @@ class ComposerBootstrap
         $userEmail = escapeshellarg($userEmail);
         $password  = escapeshellarg($password);
 
-        self::printStatus("Reset user password");
+        static::printStatus("Reset user password");
 
         `php app/console fom:user:resetroot --username $userName --password $password --email $userEmail --silent`;
 
-        self::printStatus("ATTENTION");
+        static::printStatus("ATTENTION");
         echo "User $userName account password is: $password. Don't forget to change it!\n";
     }
 
@@ -134,19 +145,19 @@ class ComposerBootstrap
     /**
      * Import or update EPSG codes
      */
-    protected static function updateEpsgCodes()
+    public static function updateEpsgCodes()
     {
-        self::printStatus("Update EPSG codes");
-        echo `php app/console doctrine:fixtures:load --fixtures=vendor/mapbender/mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append`;
+        static::printStatus("Update EPSG codes");
+        echo `php app/console doctrine:fixtures:load --fixtures=mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append`;
     }
 
     /**
      * Import example applications from "app/config/mapbender.yml" file
      */
-    protected static function importExampleApplications()
+    public static function importExampleApplications()
     {
-        self::printStatus("Import example mapbender applications");
-        echo `php app/console doctrine:fixtures:load --fixtures=vendor/mapbender/mapbender/CoreBundle/DataFixtures/ORM/Application/ --append`;
+        static::printStatus("Import example mapbender applications");
+        echo `php app/console doctrine:fixtures:load --fixtures=mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append`;
     }
 
     /**
@@ -155,5 +166,152 @@ class ComposerBootstrap
     protected static function printStatus($title)
     {
         echo "\n[$title]\n";
+    }
+
+    /**
+     * Generate API documentation
+     */
+    public static function genApiDocumentation()
+    {
+        if (!is_file("bin/apigen")) {
+            return;
+        }
+
+        $parameters     = \Symfony\Component\Yaml\Yaml::parse(file_get_contents("app/config/parameters.yml"));
+        $version        = $parameters["parameters"]["fom"]["server_version"];
+        $title          = escapeshellarg("Mapbender " . $version . " API documenation");
+        $configFilePath = "../apigen.conf";
+        $config         = parse_ini_file($configFilePath);
+        static::printStatus("Generate Mapbender {$version} API documenation to '{$config['destination']}'");
+        echo `bin/apigen -c $configFilePath --title $title`;
+    }
+
+    public static function genDocumentation()
+    {
+        if (static::isWindows()) {
+            return;
+        };
+        $sphinxPath = preg_replace("/^.* |\\s*$/s", "", `type sphinx-build`);
+        if (strpos($sphinxPath, "sphinx-build") !== false) {
+            `$sphinxPath vendor/mapbender/documentation web/docs`;
+        } else {
+            echo "Documentation isn't generated, please install python sphinx documentation generator.";
+        }
+    }
+
+    /**
+     * Display version
+     */
+    public static function displayVersion()
+    {
+        $composerDef = static::getComposerDefinition();
+        echo $composerDef["version"] . "\n";
+    }
+
+    /**
+     * @return array Definition
+     */
+    public static function getComposerDefinition()
+    {
+        static $config;
+        if (!$config) {
+            $config = json_decode(file_get_contents(static::getRootPath() . "/application/composer.json"), true);
+        }
+        return $config;
+    }
+
+    /**
+     * @return string
+     */
+    protected static function getRootPath()
+    {
+        return realpath(__DIR__ . "/../../");
+    }
+
+    public static function release()
+    {
+        static::updatePhingProperties();
+        static::updateSymfonyParameters();
+    }
+
+    /**
+     * @return string
+     * @internal param $rootPath
+     */
+    protected static function getConfigPath()
+    {
+        return static::getSymfonyRootPath() . "/app/config/";
+    }
+
+    /**
+     * @return array
+     */
+    protected static function getDefaultParameterFiles()
+    {
+        $path = static::getConfigPath();
+        return array(
+            "default" => $path . "parameters.yml.dist",
+            "current" => $path . "parameters.yml");
+    }
+
+    /**
+     * @return int
+     * @internal param $composerDef
+     */
+    private static function updateSymfonyParameters()
+    {
+        $files = static::getDefaultParameterFiles();
+        static::updateYamlServerDescription($files["default"]);
+        if (is_file($files["current"])) {
+            static::updateYamlServerDescription($files["current"]);
+        }
+    }
+
+    /**
+     * @param $yamlFile
+     * @return int
+     * @internal param $composerDef
+     */
+    private static function updateYamlServerDescription($yamlFile)
+    {
+        $composerDef = static::getComposerDefinition();
+        $yamlContent = preg_replace(
+            "/(fom:\\s+server_name:)(\\s*\\S+)(\\s+server_version:)(\\s*\\S+)/s",
+            "$1 " . $composerDef["description"] .
+            "$3 " . $composerDef["version"],
+            file_get_contents($yamlFile));
+        var_dump($yamlContent);
+        die();
+        return file_put_contents(
+            $yamlContent,
+            $yamlFile);
+    }
+
+    /**
+     * @return int
+     */
+    protected static function updatePhingProperties()
+    {
+        $initFile       = array();
+        $config         = static::getComposerDefinition();
+        $versionDetails = sscanf($config["version"], "%d.%d.%d.%d-%s");
+        $properties     = static::getRootPath() . "/build.properties";
+        $build          = array_merge(parse_ini_file($properties), array(
+            'version.major'            => $versionDetails[0],
+            'version.minor'            => $versionDetails[1],
+            'version.revision'         => $versionDetails[2],
+            'version.build'            => $versionDetails[3],
+            'packaging.release'        => $versionDetails[4] ? $versionDetails[4] : 0,
+            'phing.project.name'       => $config["name"],
+            'project.shortdescription' => $config["description"],
+            'project.description'      => $config["description"] . " (" . $config["homepage"] . ")",
+        ));
+
+        // Build INI content
+        foreach ($build as $k => $v) {
+            $initFile[] = $k . "=\"" . $v . "\"";
+        }
+
+        return file_put_contents($properties, implode("\n", $initFile));
     }
 }

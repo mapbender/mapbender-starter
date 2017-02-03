@@ -1,17 +1,40 @@
+env:
+  global:
+      secure: "mzEL27S4I6vgtOvpnWO/k0Hk4Q+9PJOjtnC3cvNKEOTJbKjsvosWM5iqQoqSEWoktMhibO6I9NwzpjLLHfzkBUk0E4pbYFC+Mi8LNDCMXIwgNLXs38fEUiOT4sgyLlCpSe9P4NlgQuJyMAHVDrsZqQg7CuUq2puEZa1VpjIxppw="
+
 language: php
 
+addons:
+  apt:
+    packages: [php5, php5-pgsql, php5-gd, php5-curl, php5-cli, php5-sqlite, php5-intl, curl, openssl, sshpass]
+
+cache:
+    directories:
+        - $HOME/.composer
+
+sudo: false
+
 php:
+  - 7.0
+  - 5.6
+  - 5.5
   - 5.3
 
 before_script:
-  - bootstrap.bat
-  - phantomjs --webdriver=9876 &
-  - export PJSPID=$(echo $!)
-  - sudo pip install selenium
+  - if (test $TRAVIS_PULL_REQUEST = false) then git checkout $TRAVIS_BRANCH; fi
+  - cd application
+  - bin/composer install -o
+  - pip install --user selenium
+  - python --version
 
 script: phpunit -c app/ --coverage-clover ../testresults/clover.xml
 
 after_script:
   - php bin/coveralls -v
-  - cat /tmp/weblog
-  - kill -9 $PJSPID
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - cd mapbender
+  - export MYREV=$(git rev-parse HEAD)
+  - cd ..
+  - php ocular.phar code-coverage:upload --repository g/mapbender/mapbender --format=php-clover ../testresults/clover.xml --revision $MYREV
+  - sshpass -p "$travispassword" ssh -o StrictHostKeyChecking=no travis@mapbender3.org mkdir -p public/screenshot/$TRAVIS_JOB_NUMBER/
+  - sshpass -p "$travispassword" scp -o StrictHostKeyChecking=no ../testresults/screenshot/* travis@mapbender3.org:public/screenshot/$TRAVIS_JOB_NUMBER/
