@@ -3,7 +3,7 @@
     "description": "Mapbender",
     "type": "project",
     "license": "MIT",
-    "version": "3.0.5.4-dev",
+    "version": "3.0.6",
     "homepage": "http://www.mapbender.org",
     "support": {
         "email":        "mapbender@osgeo.org",
@@ -66,7 +66,7 @@
         "components/joii": "3.x",
         "mapbender/digitizer": "1.0.x",
         "setasign/fpdi-fpdf": "1.6.*",
-        "mapbender/documentation": "dev-master as 3.0.5.4"
+        "mapbender/documentation": "dev-master as 3.0.6"
     },
     "scripts": {
         "post-install-cmd": [
