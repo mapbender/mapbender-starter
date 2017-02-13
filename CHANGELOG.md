@@ -1,5 +1,13 @@
 # Changelog
 
+## v3.0.6.0
+
+- [Mapbender Starter](https://github.com/mapbender/mapbender-starter/commits/release/3.0.6)
+- [Mapbender Core](https://github.com/mapbender/mapbender/commits/release/3.0.6)
+- [FOM](https://github.com/mapbender/fom/commits/release/3.0.6)
+- [OWS Proxy](https://github.com/mapbender/owsproxy3/commits/release/3.0.6)
+
+    
 ## v3.0.5.4 - 2016-09-xx
     - Update build.properties because of quotes
     - Install instead composer update by build with phing
