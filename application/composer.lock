@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b6a41c8547d1b5b0578c8fde53108892",
-    "content-hash": "87057700d8be551b06c8fcf9190ba86e",
+    "hash": "7a5c01c28a552a1f962761a300e6cf00",
+    "content-hash": "891d6722284c0d246b44c70c2e9544ec",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -124,16 +124,16 @@
         },
         {
             "name": "blueimp/jquery-file-upload",
-            "version": "v9.14.1",
+            "version": "v9.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vkhramtsov/jQuery-File-Upload.git",
-                "reference": "71d67a9c277e29efcf5935cd2409009c0f841a57"
+                "reference": "d2471e9ad07d587ae1437ed057a145c1dbfe98f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vkhramtsov/jQuery-File-Upload/zipball/71d67a9c277e29efcf5935cd2409009c0f841a57",
-                "reference": "71d67a9c277e29efcf5935cd2409009c0f841a57",
+                "url": "https://api.github.com/repos/vkhramtsov/jQuery-File-Upload/zipball/d2471e9ad07d587ae1437ed057a145c1dbfe98f9",
+                "reference": "d2471e9ad07d587ae1437ed057a145c1dbfe98f9",
                 "shasum": ""
             },
             "type": "library",
@@ -170,7 +170,7 @@
                 "upload",
                 "widget"
             ],
-            "time": "2016-11-21 05:38:19"
+            "time": "2017-02-10 05:26:10"
         },
         {
             "name": "components/bootstrap",
@@ -1469,16 +1469,16 @@
         },
         {
             "name": "gedmo/doctrine-extensions",
-            "version": "v2.4.24",
+            "version": "v2.4.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Atlantic18/DoctrineExtensions.git",
-                "reference": "a7f7243a19f79a99ac83a3570444d8795f665eef"
+                "reference": "983dd85d6860f87fb7dffd0d9f7ad1462e20a09d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/a7f7243a19f79a99ac83a3570444d8795f665eef",
-                "reference": "a7f7243a19f79a99ac83a3570444d8795f665eef",
+                "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/983dd85d6860f87fb7dffd0d9f7ad1462e20a09d",
+                "reference": "983dd85d6860f87fb7dffd0d9f7ad1462e20a09d",
                 "shasum": ""
             },
             "require": {
@@ -1544,7 +1544,7 @@
                 "tree",
                 "uploadable"
             ],
-            "time": "2016-10-11 18:03:37"
+            "time": "2016-12-21 13:46:54"
         },
         {
             "name": "igosuki/compass-mixins",
@@ -2282,12 +2282,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-documentation.git",
-                "reference": "29499b6af24ca9be62cb00df270689cdcb8c1140"
+                "reference": "b73ac39f6049049b2e2a9a25edcf0808b331ae2a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/29499b6af24ca9be62cb00df270689cdcb8c1140",
-                "reference": "29499b6af24ca9be62cb00df270689cdcb8c1140",
+                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/b73ac39f6049049b2e2a9a25edcf0808b331ae2a",
+                "reference": "b73ac39f6049049b2e2a9a25edcf0808b331ae2a",
                 "shasum": ""
             },
             "require": {
@@ -2309,7 +2309,66 @@
                 "documentation",
                 "mapbender"
             ],
-            "time": "2016-12-02 15:51:09"
+            "time": "2017-01-25 17:02:43"
+        },
+        {
+            "name": "mapbender/ldap",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mapbender/ldap.git",
+                "reference": "4ca27ceb41f5716e8e2c572ef2e02c4e3d44cc23"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mapbender/ldap/zipball/4ca27ceb41f5716e8e2c572ef2e02c4e3d44cc23",
+                "reference": "4ca27ceb41f5716e8e2c572ef2e02c4e3d44cc23",
+                "shasum": ""
+            },
+            "require": {
+                "imag/ldap-bundle": "2.3.x",
+                "php": ">=5.3.3"
+            },
+            "provide": {
+                "ext-ldap": "*"
+            },
+            "require-dev": {
+                "doctrine/orm": "~2.2,>=2.2.3",
+                "phpunit/phpunit": "4.x",
+                "symfony/dependency-injection": "2.x",
+                "symfony/symfony": "2.3.x"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Mapbender\\LdapBundle\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andriy Oblivantsev",
+                    "email": "andriy.oblivantsev@wheregroup.com"
+                },
+                {
+                    "name": "Christian Wygoda",
+                    "email": "christian.wygoda@wheregroup.com"
+                },
+                {
+                    "name": "Arne Schubert",
+                    "email": "arne.schubert@wheregroup.com"
+                }
+            ],
+            "description": "Mapbender LDAP communication bundle",
+            "keywords": [
+                "ldap",
+                "mapbender",
+                "security"
+            ],
+            "time": "2017-02-13 07:29:53"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -3082,23 +3141,24 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v5.4.4",
+            "version": "v5.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "545ce9136690cea74f98f86fbb9c92dd9ab1a756"
+                "reference": "81fdccfaf8bdc5d5d7a1ef6bb3a61bbb1a6c4a3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/545ce9136690cea74f98f86fbb9c92dd9ab1a756",
-                "reference": "545ce9136690cea74f98f86fbb9c92dd9ab1a756",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/81fdccfaf8bdc5d5d7a1ef6bb3a61bbb1a6c4a3e",
+                "reference": "81fdccfaf8bdc5d5d7a1ef6bb3a61bbb1a6c4a3e",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
             "require-dev": {
-                "mockery/mockery": "~0.9.1"
+                "mockery/mockery": "~0.9.1",
+                "symfony/phpunit-bridge": "~3.2"
             },
             "type": "library",
             "extra": {
@@ -3131,7 +3191,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2016-11-24 01:01:23"
+            "time": "2017-02-13 07:52:53"
         },
         {
             "name": "symfony/assetic-bundle",
@@ -3600,16 +3660,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.28.2",
+            "version": "v1.31.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "b22ce0eb070e41f7cba65d78fe216de29726459c"
+                "reference": "ddc9e3e20ee9c0b6908f401ac8353635b750eca7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/b22ce0eb070e41f7cba65d78fe216de29726459c",
-                "reference": "b22ce0eb070e41f7cba65d78fe216de29726459c",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/ddc9e3e20ee9c0b6908f401ac8353635b750eca7",
+                "reference": "ddc9e3e20ee9c0b6908f401ac8353635b750eca7",
                 "shasum": ""
             },
             "require": {
@@ -3617,12 +3677,12 @@
             },
             "require-dev": {
                 "symfony/debug": "~2.7",
-                "symfony/phpunit-bridge": "~3.2@dev"
+                "symfony/phpunit-bridge": "~3.2"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.28-dev"
+                    "dev-master": "1.31-dev"
                 }
             },
             "autoload": {
@@ -3657,20 +3717,20 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2016-11-23 18:41:40"
+            "time": "2017-01-11 19:36:15"
         },
         {
             "name": "viscreation/vis-ui.js",
-            "version": "0.0.59",
+            "version": "0.0.62",
             "source": {
                 "type": "git",
                 "url": "https://github.com/eSlider/vis-ui.js.git",
-                "reference": "b93722cd3d30be86194abcbfc5119aeb0405953c"
+                "reference": "17c715e843c4204935dff3e3ece873caa507ac02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/eSlider/vis-ui.js/zipball/b93722cd3d30be86194abcbfc5119aeb0405953c",
-                "reference": "b93722cd3d30be86194abcbfc5119aeb0405953c",
+                "url": "https://api.github.com/repos/eSlider/vis-ui.js/zipball/17c715e843c4204935dff3e3ece873caa507ac02",
+                "reference": "17c715e843c4204935dff3e3ece873caa507ac02",
                 "shasum": ""
             },
             "require": {
@@ -3725,7 +3785,7 @@
                 "jquery",
                 "vis-ui"
             ],
-            "time": "2016-10-07 07:39:12"
+            "time": "2017-02-09 13:30:06"
         },
         {
             "name": "willdurand/jsonp-callback-validator",
@@ -4678,16 +4738,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.8.31",
+            "version": "4.8.35",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "98b2b39a520766bec663ff5b7ff1b729db9dbfe3"
+                "reference": "791b1a67c25af50e230f841ee7a9c6eba507dc87"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/98b2b39a520766bec663ff5b7ff1b729db9dbfe3",
-                "reference": "98b2b39a520766bec663ff5b7ff1b729db9dbfe3",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/791b1a67c25af50e230f841ee7a9c6eba507dc87",
+                "reference": "791b1a67c25af50e230f841ee7a9c6eba507dc87",
                 "shasum": ""
             },
             "require": {
@@ -4746,7 +4806,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-12-09 02:45:31"
+            "time": "2017-02-06 05:18:07"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -4806,16 +4866,16 @@
         },
         {
             "name": "phpunit/phpunit-selenium",
-            "version": "2.0.2",
+            "version": "2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/giorgiosironi/phpunit-selenium.git",
-                "reference": "2bad798ec0daf20d2854400e3bc5329ee0a7b2d1"
+                "reference": "013037eeea481657d236431634042648797e1da8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/giorgiosironi/phpunit-selenium/zipball/2bad798ec0daf20d2854400e3bc5329ee0a7b2d1",
-                "reference": "2bad798ec0daf20d2854400e3bc5329ee0a7b2d1",
+                "url": "https://api.github.com/repos/giorgiosironi/phpunit-selenium/zipball/013037eeea481657d236431634042648797e1da8",
+                "reference": "013037eeea481657d236431634042648797e1da8",
                 "shasum": ""
             },
             "require": {
@@ -4866,7 +4926,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-03-01 10:33:56"
+            "time": "2017-01-23 22:15:32"
         },
         {
             "name": "predis/predis",
@@ -4988,16 +5048,16 @@
         },
         {
             "name": "sebastian/comparator",
-            "version": "1.2.2",
+            "version": "1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/comparator.git",
-                "reference": "6a1ed12e8b2409076ab22e3897126211ff8b1f7f"
+                "reference": "2b7424b55f5047b47ac6e5ccb20b2aea4011d9be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/6a1ed12e8b2409076ab22e3897126211ff8b1f7f",
-                "reference": "6a1ed12e8b2409076ab22e3897126211ff8b1f7f",
+                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/2b7424b55f5047b47ac6e5ccb20b2aea4011d9be",
+                "reference": "2b7424b55f5047b47ac6e5ccb20b2aea4011d9be",
                 "shasum": ""
             },
             "require": {
@@ -5048,7 +5108,7 @@
                 "compare",
                 "equality"
             ],
-            "time": "2016-11-19 09:18:40"
+            "time": "2017-01-29 09:50:25"
         },
         {
             "name": "sebastian/diff",
@@ -5417,6 +5477,12 @@
     ],
     "aliases": [
         {
+            "alias": "1.0.0",
+            "alias_normalized": "1.0.0.0",
+            "version": "9999999-dev",
+            "package": "mapbender/ldap"
+        },
+        {
             "alias": "3.0.5.4",
             "alias_normalized": "3.0.5.4",
             "version": "9999999-dev",
@@ -5425,6 +5491,7 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
+        "mapbender/ldap": 20,
         "mapbender/documentation": 20
     },
     "prefer-stable": false,
