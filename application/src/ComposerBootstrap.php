@@ -1,5 +1,5 @@
 <?php
-use Composer\Script\CommandEvent;
+use Composer\Script\Event;
 
 /**
  * Class ScriptHandler
@@ -12,9 +12,9 @@ class ComposerBootstrap
      * The bootstrap file contains PHP file that are always needed by the application.
      * It speeds up the application bootstrapping.
      *
-     * @param $event CommandEvent A instance
+     * @param $event Event A instance
      */
-    public static function checkConfiguration(CommandEvent $event)
+    public static function checkConfiguration(Event $event)
     {
         $files        = static::getDefaultParameterFiles();
         $isNewInstall = !file_exists($files["current"]);
