@@ -60,7 +60,7 @@
         "components/jquery": "1.11.2",
         "components/underscore": "1.x",
         "components/joii": "3.x",
-        "mapbender/digitizer": "1.0.x",
+        "mapbender/digitizer": "1.1.x",
         "setasign/fpdi-fpdf": "1.6.*",
         "mapbender/documentation": "dev-master as 3.0.6"
     },
