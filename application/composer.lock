@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1a0c6d8593735148b6b80c59708ad777",
-    "content-hash": "0421469e50135b916377a8f1c65f414c",
+    "hash": "3f2f46fc20dd39dc52efc8dc4009249c",
+    "content-hash": "ee11ed9f6ae7414d06da004541579269",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -2172,26 +2172,83 @@
             "time": "2015-06-25 17:26:56"
         },
         {
+            "name": "mapbender/data-source",
+            "version": "0.0.35",
+            "target-dir": "Mapbender/DataSourceBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mapbender/data-source.git",
+                "reference": "67a380f0d6b6a3347d1df266799d79272d1e7a86"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mapbender/data-source/zipball/67a380f0d6b6a3347d1df266799d79272d1e7a86",
+                "reference": "67a380f0d6b6a3347d1df266799d79272d1e7a86",
+                "shasum": ""
+            },
+            "require": {
+                "phayes/geophp": "1.2",
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^3.7",
+                "symfony/framework-bundle": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Mapbender\\DataSourceBundle": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andriy Oblivantsev",
+                    "email": "andriy.oblivantsev@wheregroup.com"
+                }
+            ],
+            "description": "Mapbender data source handler",
+            "keywords": [
+                "data",
+                "data source",
+                "mapbender"
+            ],
+            "time": "2016-12-20 08:57:03"
+        },
+        {
             "name": "mapbender/digitizer",
-            "version": "1.0.46",
+            "version": "1.1.56",
             "target-dir": "Mapbender/DigitizerBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "f4f5b6f08e0b02a79ecad7480323435e2f9d3bae"
+                "reference": "a73bc0f534d11048b27faf38bead42c6e4169695"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/f4f5b6f08e0b02a79ecad7480323435e2f9d3bae",
-                "reference": "f4f5b6f08e0b02a79ecad7480323435e2f9d3bae",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/a73bc0f534d11048b27faf38bead42c6e4169695",
+                "reference": "a73bc0f534d11048b27faf38bead42c6e4169695",
                 "shasum": ""
             },
             "require": {
                 "blueimp/jquery-file-upload": "9.*",
+                "mapbender/data-source": "0.*",
                 "phayes/geophp": "1.2",
                 "php": ">=5.3.3"
             },
+            "require-dev": {
+                "mapbender/data-source": "@dev"
+            },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev",
+                    "dev-release/1.0": "1.0.x-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "Mapbender\\DigitizerBundle": "."
@@ -2215,20 +2272,20 @@
                 "digitizing",
                 "mapbender"
             ],
-            "time": "2016-11-28 13:36:35"
+            "time": "2017-02-16 08:22:06"
         },
         {
             "name": "mapbender/documentation",
-            "version": "dev-master",
+            "version": "dev-release/3.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-documentation.git",
-                "reference": "b73ac39f6049049b2e2a9a25edcf0808b331ae2a"
+                "reference": "3b99d81c5c0f029e2581d7d8dd41c1f4365ec9c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/b73ac39f6049049b2e2a9a25edcf0808b331ae2a",
-                "reference": "b73ac39f6049049b2e2a9a25edcf0808b331ae2a",
+                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/3b99d81c5c0f029e2581d7d8dd41c1f4365ec9c5",
+                "reference": "3b99d81c5c0f029e2581d7d8dd41c1f4365ec9c5",
                 "shasum": ""
             },
             "require": {
@@ -2250,7 +2307,7 @@
                 "documentation",
                 "mapbender"
             ],
-            "time": "2017-01-25 17:02:43"
+            "time": "2017-02-14 08:46:48"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -5357,14 +5414,7 @@
             "time": "2014-02-10 02:34:57"
         }
     ],
-    "aliases": [
-        {
-            "alias": "3.0.6",
-            "alias_normalized": "3.0.6.0",
-            "version": "9999999-dev",
-            "package": "mapbender/documentation"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
         "mapbender/documentation": 20
