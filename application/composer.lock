@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7a5c01c28a552a1f962761a300e6cf00",
-    "content-hash": "891d6722284c0d246b44c70c2e9544ec",
+    "hash": "1a0c6d8593735148b6b80c59708ad777",
+    "content-hash": "0421469e50135b916377a8f1c65f414c",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -1558,65 +1558,6 @@
             "type": "component"
         },
         {
-            "name": "imag/ldap-bundle",
-            "version": "v2.3.1",
-            "target-dir": "IMAG/LdapBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/BorisMorel/LdapBundle.git",
-                "reference": "44c5e9a03a4829a074c15b4397fed5ea40b705e5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/BorisMorel/LdapBundle/zipball/44c5e9a03a4829a074c15b4397fed5ea40b705e5",
-                "reference": "44c5e9a03a4829a074c15b4397fed5ea40b705e5",
-                "shasum": ""
-            },
-            "require": {
-                "ext-ldap": "*",
-                "php": ">=5.3.3",
-                "symfony/symfony": ">2.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "IMAG\\LdapBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "CeCILL"
-            ],
-            "authors": [
-                {
-                    "name": "Juti Noppornpitak",
-                    "email": "jutin@nationalfibre.net",
-                    "homepage": "https://github.com/instaclick",
-                    "role": "Fork Maintainer"
-                },
-                {
-                    "name": "Boris Morel",
-                    "email": "boris.morel@imag.fr",
-                    "homepage": "https://github.com/BorisMorel",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Shiroyuki",
-                    "homepage": "https://github.com/shiroyuki",
-                    "role": "Fork Maintainer"
-                },
-                {
-                    "name": "John Kary",
-                    "email": "john@johnkary.net",
-                    "homepage": "http://johnkary.net",
-                    "role": "Developer"
-                }
-            ],
-            "description": "LDAP Bundle for Symfony 2",
-            "homepage": "http://github.com/BorisMorel/LdapBundle",
-            "time": "2014-02-26 13:30:18"
-        },
-        {
             "name": "incenteev/composer-parameter-handler",
             "version": "v2.1.2",
             "source": {
@@ -2310,65 +2251,6 @@
                 "mapbender"
             ],
             "time": "2017-01-25 17:02:43"
-        },
-        {
-            "name": "mapbender/ldap",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mapbender/ldap.git",
-                "reference": "4ca27ceb41f5716e8e2c572ef2e02c4e3d44cc23"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/ldap/zipball/4ca27ceb41f5716e8e2c572ef2e02c4e3d44cc23",
-                "reference": "4ca27ceb41f5716e8e2c572ef2e02c4e3d44cc23",
-                "shasum": ""
-            },
-            "require": {
-                "imag/ldap-bundle": "2.3.x",
-                "php": ">=5.3.3"
-            },
-            "provide": {
-                "ext-ldap": "*"
-            },
-            "require-dev": {
-                "doctrine/orm": "~2.2,>=2.2.3",
-                "phpunit/phpunit": "4.x",
-                "symfony/dependency-injection": "2.x",
-                "symfony/symfony": "2.3.x"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Mapbender\\LdapBundle\\": "."
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Andriy Oblivantsev",
-                    "email": "andriy.oblivantsev@wheregroup.com"
-                },
-                {
-                    "name": "Christian Wygoda",
-                    "email": "christian.wygoda@wheregroup.com"
-                },
-                {
-                    "name": "Arne Schubert",
-                    "email": "arne.schubert@wheregroup.com"
-                }
-            ],
-            "description": "Mapbender LDAP communication bundle",
-            "keywords": [
-                "ldap",
-                "mapbender",
-                "security"
-            ],
-            "time": "2017-02-13 07:29:53"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -5477,21 +5359,14 @@
     ],
     "aliases": [
         {
-            "alias": "1.0.0",
-            "alias_normalized": "1.0.0.0",
-            "version": "9999999-dev",
-            "package": "mapbender/ldap"
-        },
-        {
-            "alias": "3.0.5.4",
-            "alias_normalized": "3.0.5.4",
+            "alias": "3.0.6",
+            "alias_normalized": "3.0.6.0",
             "version": "9999999-dev",
             "package": "mapbender/documentation"
         }
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "mapbender/ldap": 20,
         "mapbender/documentation": 20
     },
     "prefer-stable": false,
