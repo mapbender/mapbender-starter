@@ -280,8 +280,6 @@ class ComposerBootstrap
             "$1 " . $composerDef["description"] .
             "$3 " . $composerDef["version"],
             file_get_contents($yamlFile));
-        var_dump($yamlContent);
-        die();
         return file_put_contents(
             $yamlContent,
             $yamlFile);
