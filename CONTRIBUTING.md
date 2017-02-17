@@ -499,7 +499,7 @@ git commit -m "Add some new stuff"
 
 ```sh
 git fetch -a
-git merge "release/3.0.5"
+git merge "release/3.0.6"
 ``` 
 * If conflicts arise, resolve [them][Resolve git conflicts]
 * Run tests
@@ -535,7 +535,7 @@ git commit -m "Fix bug description"
 
 ```sh
 git fetch -a
-git merge "release/3.0.5"
+git merge "release/3.0.6"
 ``` 
 * If conflicts arise, resolve [them][Resolve git conflicts]
 * Run or add new tests relevant to the fixed bug 
@@ -559,7 +559,7 @@ Example:
 
 ```sh
 cd mapbender
-git checkout "release/3.0.5"
+git checkout "release/3.0.6"
 ``` 
 * Fetch changes  
 
