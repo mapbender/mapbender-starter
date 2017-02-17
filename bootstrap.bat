@@ -1,2 +1,2 @@
 cd application
-php ../composer.phar install --no-dev -o
+php bin/compposer install --no-dev -o
