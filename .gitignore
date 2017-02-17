@@ -7,7 +7,6 @@
 */web/uploads
 application/web/docs/
 
-
 application/web/xmlschemas/*
 !application/web/xmlschemas/http___www_opengis_net*
 !application/web/xmlschemas/http___www_w3_org*
@@ -38,3 +37,8 @@ application/bin/*
 
 # Composer asset components
 application/web/components/
+
+application/fom
+application/owsproxy
+application/mapbender
+documentaion/_exts

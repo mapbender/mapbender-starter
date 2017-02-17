@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3f2f46fc20dd39dc52efc8dc4009249c",
-    "content-hash": "ee11ed9f6ae7414d06da004541579269",
+    "hash": "afa41ae2bdc07fb15ded3388b7c1c042",
+    "content-hash": "90a355d3e2154b11da41ae34ebeb1d53",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -2310,6 +2310,75 @@
             "time": "2017-02-14 08:46:48"
         },
         {
+            "name": "mapbender/fom",
+            "version": "dev-release/3.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mapbender/fom.git",
+                "reference": "edb8dc66efce09e5f5bfa8ea69141e912fc0e7a9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mapbender/fom/zipball/edb8dc66efce09e5f5bfa8ea69141e912fc0e7a9",
+                "reference": "edb8dc66efce09e5f5bfa8ea69141e912fc0e7a9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FOM\\": "src/FOM"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Mapbender3 library",
+            "keywords": [
+                "fom",
+                "mapbender",
+                "module"
+            ],
+            "time": "2017-02-17 10:57:31"
+        },
+        {
+            "name": "mapbender/mapbender",
+            "version": "dev-release/3.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mapbender/mapbender.git",
+                "reference": "88ea656d3aa6842914b8366459ddc2c682cbb4bc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/88ea656d3aa6842914b8366459ddc2c682cbb4bc",
+                "reference": "88ea656d3aa6842914b8366459ddc2c682cbb4bc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Mapbender\\": "src/Mapbender"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Mapbender3 library",
+            "keywords": [
+                "mapbender",
+                "module"
+            ],
+            "time": "2017-02-17 10:59:08"
+        },
+        {
             "name": "mapbender/mapbender-icons",
             "version": "1.4",
             "source": {
@@ -2355,6 +2424,95 @@
                 "mapbender3"
             ],
             "time": "2015-10-21 08:43:30"
+        },
+        {
+            "name": "mapbender/mapquery",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mapbender/mapquery.git",
+                "reference": "c54a6835bbf6e83bb55637d14c0e9cc71b61b0a9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mapbender/mapquery/zipball/c54a6835bbf6e83bb55637d14c0e9cc71b61b0a9",
+                "reference": "c54a6835bbf6e83bb55637d14c0e9cc71b61b0a9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "robloach/component-installer": "0.2.*"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "src/*.js"
+                    ],
+                    "files": [
+                        "lib/openlayers/*",
+                        "lib/openlayers/**"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Volker Mische <volker.mische@gmail.com>"
+                },
+                {
+                    "name": "Anne Blankert <anne.blankert@geodan.nl>"
+                },
+                {
+                    "name": "Steven Ottens <smo@minst.net>"
+                }
+            ],
+            "description": "MapQuery",
+            "keywords": [
+                "mapquery"
+            ],
+            "time": "2016-04-27 12:43:48"
+        },
+        {
+            "name": "mapbender/owsproxy",
+            "version": "dev-release/3.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mapbender/owsproxy3.git",
+                "reference": "85681b2211c6b18b758b08ab4d5ed77824962da4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/85681b2211c6b18b758b08ab4d5ed77824962da4",
+                "reference": "85681b2211c6b18b758b08ab4d5ed77824962da4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "OwsProxy3\\": "src/OwsProxy3"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Mapbender3 library",
+            "keywords": [
+                "mapbender",
+                "module",
+                "owsproxy"
+            ],
+            "time": "2017-02-17 10:59:45"
         },
         {
             "name": "medialize/jquery-context-menu",
@@ -2409,6 +2567,57 @@
                 "right-click-menu"
             ],
             "time": "2015-07-21 12:35:09"
+        },
+        {
+            "name": "mnsami/composer-custom-directory-installer",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mnsami/composer-custom-directory-installer.git",
+                "reference": "a6fce960f28052a8bd1f72c6db4f6da286d84995"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mnsami/composer-custom-directory-installer/zipball/a6fce960f28052a8bd1f72c6db4f6da286d84995",
+                "reference": "a6fce960f28052a8bd1f72c6db4f6da286d84995",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0",
+                "php": ">=5.3"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": [
+                    "Composer\\CustomDirectoryInstaller\\LibraryPlugin",
+                    "Composer\\CustomDirectoryInstaller\\PearPlugin"
+                ],
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Composer\\CustomDirectoryInstaller": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mina Nabil Sami",
+                    "email": "mina.nsami@gmail.com"
+                }
+            ],
+            "description": "A composer plugin, to help install packages of different types in custom paths.",
+            "keywords": [
+                "composer",
+                "composer-installer",
+                "composer-plugin"
+            ],
+            "time": "2015-06-12 13:57:50"
         },
         {
             "name": "monolog/monolog",
@@ -5417,6 +5626,10 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "mapbender/fom": 20,
+        "mapbender/mapbender": 20,
+        "mapbender/owsproxy": 20,
+        "mapbender/mapquery": 20,
         "mapbender/documentation": 20
     },
     "prefer-stable": false,

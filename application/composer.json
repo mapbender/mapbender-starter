@@ -60,8 +60,16 @@
         "components/jquery": "1.11.2",
         "components/underscore": "1.x",
         "components/joii": "3.x",
-        "mapbender/digitizer": "1.1.x",
+
         "setasign/fpdi-fpdf": "1.6.*",
+
+        "mnsami/composer-custom-directory-installer": "1.0.*",
+
+        "mapbender/fom": "dev-release/3.0.6",
+        "mapbender/mapbender": "dev-release/3.0.6",
+        "mapbender/owsproxy": "dev-release/3.0.6",
+        "mapbender/mapquery": "dev-master",
+        "mapbender/digitizer": "1.1.x",
         "mapbender/documentation": "dev-release/3.0.6"
     },
     "scripts": {
@@ -112,7 +120,13 @@
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
         "ATTENTION": "Symlinks creating under MS Windows works only if composer runs with admin permissions",
-        "symfony-assets-install": "symlink"
+        "symfony-assets-install": "symlink",
+        "installer-paths":{
+            "mapbender": ["mapbender/mapbender"],
+            "fom/": ["mapbender/fom"],
+            "owsproxy/": ["mapbender/owsproxy"],
+            "mapbender/src/Mapbender/CoreBundle/Resources/public/mapquery": ["mapbender/mapquery"]
+        }
     },
     "repositories": [
         {
