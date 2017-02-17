@@ -1,2 +1,2 @@
 cd application
-php bin/compposer install --no-dev -o
+php bin/composer install --no-dev -o
