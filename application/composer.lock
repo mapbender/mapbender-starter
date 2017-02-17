@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "afa41ae2bdc07fb15ded3388b7c1c042",
-    "content-hash": "90a355d3e2154b11da41ae34ebeb1d53",
+    "hash": "b698f92066cff956062e60d3cd394103",
+    "content-hash": "b8f26f30faf1fad36be9000c21be68d4",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -239,6 +239,31 @@
                 "web"
             ],
             "time": "2016-07-26 05:59:20"
+        },
+        {
+            "name": "components/codemirror",
+            "version": "5.13.4",
+            "dist": {
+                "type": "tar",
+                "url": "https://github.com/codemirror/CodeMirror/archive/5.13.4.tar.gz",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "robloach/component-installer": "*"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "files": [
+                        "lib/**",
+                        "keymap/**",
+                        "mode/**",
+                        "theme/**",
+                        "addon/**"
+                    ]
+                }
+            }
         },
         {
             "name": "components/datatables",
@@ -2350,15 +2375,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "88ea656d3aa6842914b8366459ddc2c682cbb4bc"
+                "reference": "26b2e81e331737d4cbf83725358fb026abe3188a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/88ea656d3aa6842914b8366459ddc2c682cbb4bc",
-                "reference": "88ea656d3aa6842914b8366459ddc2c682cbb4bc",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/26b2e81e331737d4cbf83725358fb026abe3188a",
+                "reference": "26b2e81e331737d4cbf83725358fb026abe3188a",
                 "shasum": ""
             },
             "require": {
+                "components/codemirror": "5.13.x",
                 "php": ">=5.3.0"
             },
             "type": "library",
@@ -2376,7 +2402,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2017-02-17 10:59:08"
+            "time": "2017-02-17 12:40:42"
         },
         {
             "name": "mapbender/mapbender-icons",

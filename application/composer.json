@@ -235,6 +235,32 @@
                     "bin/phantomjs"
                 ]
             }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "components/codemirror",
+                "type": "component",
+                "version": "5.13.4",
+                "dist": {
+                    "url": "https://github.com/codemirror/CodeMirror/archive/5.13.4.tar.gz",
+                    "type": "tar"
+                },
+                "extra": {
+                    "component": {
+                        "files": [
+                            "lib/**",
+                            "keymap/**",
+                            "mode/**",
+                            "theme/**",
+                            "addon/**"
+                        ]
+                    }
+                },
+                "require": {
+                    "robloach/component-installer": "*"
+                }
+            }
         }
     ]
 }
