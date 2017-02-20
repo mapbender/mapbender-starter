@@ -2305,12 +2305,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-documentation.git",
-                "reference": "3b99d81c5c0f029e2581d7d8dd41c1f4365ec9c5"
+                "reference": "e88b2abe879eae603e051b48a7a0412abf2d9c62"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/3b99d81c5c0f029e2581d7d8dd41c1f4365ec9c5",
-                "reference": "3b99d81c5c0f029e2581d7d8dd41c1f4365ec9c5",
+                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/e88b2abe879eae603e051b48a7a0412abf2d9c62",
+                "reference": "e88b2abe879eae603e051b48a7a0412abf2d9c62",
                 "shasum": ""
             },
             "require": {
@@ -2332,7 +2332,7 @@
                 "documentation",
                 "mapbender"
             ],
-            "time": "2017-02-14 08:46:48"
+            "time": "2017-02-20 11:10:36"
         },
         {
             "name": "mapbender/fom",
