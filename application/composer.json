@@ -97,6 +97,12 @@
             "ComposerBootstrap::genApiDocumentation",
             "ComposerBootstrap::genDocumentation"
         ],
+        "gen-api-docs": [
+            "ComposerBootstrap::genApiDocumentation"
+        ],
+        "gen-user-docs": [
+            "ComposerBootstrap::genDocumentation"
+        ],
         "clean": [
             "ComposerBootstrap::clearCache"
         ],
