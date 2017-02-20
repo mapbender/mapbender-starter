@@ -7,7 +7,7 @@
     "homepage": "http://www.mapbender.org",
     "support": {
         "email":        "mapbender@osgeo.org",
-        "issues":       "https://repo.wheregroup.com/mapbender3/starter/issues",
+        "issues":       "https://github.com/mapbender/mapbender/issues",
         "source":       "https://github.com/mapbender/mapbender-starter",
         "docs":         "http://doc.mapbender3.org/",
         "api-docs":     "http://api.mapbender3.org/",
