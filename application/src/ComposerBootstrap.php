@@ -14,7 +14,7 @@ class ComposerBootstrap
      *
      * @param $event CommandEvent A instance
      */
-    public static function checkConfiguration(CommandEvent $event)
+    public static function checkConfiguration($event)
     {
         $files        = static::getDefaultParameterFiles();
         $isNewInstall = !file_exists($files["current"]);
