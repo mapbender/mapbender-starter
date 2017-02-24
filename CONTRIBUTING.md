@@ -12,19 +12,18 @@ There are a few [guidelines][rules] that we need contributors to follow so that 
 
 # Architecture 
 
-Mapbender is based on [Symfony framework] and uses [composer] to manage external and intenal libraries as own [modules][module].
+Mapbender is based on [Symfony framework] and uses [composer] to manage external and internal libraries as own [modules][module].
 
-# Installation  
+# Installation      
 
-You can find the complete installation description [here](http://doc.mapbender3.org/en/book/installation/installation_git.html):
-
-Here is a quick installation guide to get [git]-based "developer edition" of [Mapbender]:
+Here is a full [Mapbender] developer installation guide:
+[here](http://doc.mapbender3.org/en/book/installation/installation_git.html) or you can follow short one:
 
 ## Clone the project 
 
 ### via SSH
 ```sh
-git clone git@github.com:mapbender/mapbender-starter.git 
+git clone git@github.com:mapbender/mapbender-starter.git mapbender-starter
 ```
 
 or 
@@ -32,7 +31,7 @@ or
 ### via HTTP
 
 ```sh
-git clone https://github.com/mapbender/mapbender-starter.git
+git clone https://github.com/mapbender/mapbender-starter.git mapbender-starter
 ```
 
 ## Switch to project directory
@@ -40,68 +39,38 @@ git clone https://github.com/mapbender/mapbender-starter.git
 cd mapbender-starter
 ```
 
-## Clone submodules 
+## Run bootstrap script 
+
+Running bootstrap script take some time to get required libraries and prepares project configurations. Bootstrap saves [Mapbender] starter configurations under `application/app/db/demo.sqlite` configuraiton file. Symfony configurations are located under `application/app/config`. 
+
+
 ```sh
-git submodule update --init --recursive --force
+sh bootstrap
 ```
 
-## Switch to the application directory
-```sh
-cd application
-```
 
-## Copy [parameters.yml] and configure them for your project needs.
-```sh
-cp app/config/parameters.yml.dist app/config/parameters.yml
-```
-
-## Update composer libraries
-```sh
-../composer.phar update -o
-```
-
-## Create database and schema structures (tables, triggers, etc)
-```sh
-app/console doctrine:database:create
-app/console doctrine:schema:create
-```
-
-## Import applications from the "app/config/mapbender.yml" into a mapbender database
-```sh
-app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
-```
-
-## Import EPSG codes
-```sh
-app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
-```
-
-## Reset root 
-
-Create root user and set the password:
-```sh
-app/console fom:user:resetroot --username root --password root --email root@localhost --silent
-```
-
-## Start php-server
+## Start web-server
 ```sh
 app/console server:run
 ```
 
-The next console message describes how you can view mapbender in your browser.
-
-It looks something like this:
+After command run, console message describes how you can view web application in your browser, like this:
 ```sh 
 Server running on http://localhost:8000
 ```
 
-So now open the URL in your favorite browser. 
+So now open URL from console output message in your favorite browser. 
 
 For development reason it is recommended to use Chromium(Chrome) or Firefox.
 
+This it! 
+
+*Developer installation is only good performed for one man development purposes and should be optimized for production or coworking systems.*
+
+
 # Modules
 
-Module is a new part of mapbender concept, based on [Symfony modularity rules](http://www.symfony.com) 
+Module is a new part of [Mapbender] concept, based on [Symfony modularity rules](http://www.symfony.com) 
 and [composer] dependency manager. 
 
 Special builds can be created that exclude subsets of Mapbender functionality. 
@@ -120,7 +89,7 @@ and reuse the same directory structure.
 
 ## Rules
 
-It's __important__ to follow the rules:
+It's __very important__ to follow enclosed rules:
 
 Each module is:
 
@@ -139,12 +108,12 @@ Each module should have:
 * own [CONTRIBUTING].md describes how other developers should install, setup and contribute in it
 * own [tests] relevant to new [features], [elements] or functionality
 
-Write your code in PSR-2 coding [style guide] standard. 
+Write your code using PSR-2(a coding [style guide] standard. 
 
 # Bundles 
 
-Bundle is a set of functionality, synonym to library, which can be created and used outside of the Mapbender.
-The goal of the Bundle is to restrict usage of global name space and switch or swap extend separated functionality.
+Bundle is a set of functionality, synonym to library, which can be created and used outside of the [Mapbender].
+The goal of the Bundle is to restrict usage of global name spaces and optinaly switch, swap and extend [Mapbender] functionality.
 
 ## Bundle structure
  
@@ -191,7 +160,7 @@ git init
 
 In order to create a [bundle], please take a look at the [bundle structure](#Bundle%20structure). 
 
-**Don't forget to follow the [module] [rules]**!
+**Don't forget to follow [module] [rules]**!
 
 ### Create composer package
 
@@ -202,7 +171,7 @@ Dont forget to fill it up:
 * **name** - Unique name of the [module]. You can check the existens by [composer packagist](https://packagist.org/) service. 
 * **license** - [license] short name.
 * **description** - Describes the [module].
-* **autoload** - [psr-0] Path to the namespace classes to load them correctly.
+* **autoload** - [psr-4] Path to the namespace classes to load them correctly.
 * **target-dir** - Path where [bundle] root should be placed in.
 
 Better if **autoload** and **target-dir** will be copied from example as is, so only [bundle] names should be changed.
@@ -219,9 +188,10 @@ Better if **autoload** and **target-dir** will be copied from example as is, so 
     ],
     "require": {
         "php": ">=5.3.3",
+        "imag/ldap": "2.x"
     },
     "autoload": {
-		"psr-0": {"Mapbender\\NewAwesomeBundle": "."}
+		"psr-4": {"Mapbender\\NewAwesomeBundle": "."}
     },
     "target-dir": "Mapbender/NewAwesomeBundle",
     "extra": {
@@ -232,6 +202,7 @@ Better if **autoload** and **target-dir** will be copied from example as is, so 
 }
 ```
 
+More about composer definition [here](https://getcomposer.org/doc/04-schema.md).
 
 ### Save bundle 
 
@@ -322,14 +293,6 @@ but due to the course complexity and many changes in diverse [bundles], located 
 without [versioning], it was decided to change the development workflow to [composer] packages named as [modules].
 
 
-## Definition
-
-[Submodule] - is git repository, which is linked to primary [mapbender-starter](https://github.com/mapbender/mapbender-starter) repository.
-
-## Description
-
-For now there are three submodules: [Mapbender], [FOM] and [OWS Proxy], located in the ```application``` folder.
-Each [submodule] contains one or more bundles. 
 
 # Elements
 
@@ -472,9 +435,6 @@ app/console translation:update --output-format=xlf --force de MapbenderCoreBundl
 ```
 
 
-# Branches
-In order to change the [submodule] source code it is important to create a new [branch]. 
-
 ## Feature branch
 
 It's mandatory to use the "feature/" prefix in the branch name.
@@ -593,6 +553,7 @@ git push
 
 Don't forget to write tests!
 Write a good commit message.
+Here is a good expla
 
 ## Examples
 
@@ -614,14 +575,11 @@ bin/phpunit -c app vendor/mapbender/digitizer/Mapbender/DigitizerBundle/Tests/Fe
 
 # Resources
 
-## Submodules
-
-* [Mapbender] - Contains Core, Manager and Print [bundles].
-* [FOM] - **F**riends **o**f **M**apbender [submodule] contains some additional [bundles].
-* [OWS Proxy] - OWS Proxy bundle.
-
 ## Modules
 
+* [Mapbender] - Contains Core, Manager, Print, Mobile and some other [bundles] this will be extracted as [modules] in next releases.
+* [FOM] - **F**riends **o**f **M**apbender contains Administration and Security components [bundles]. The module is deprecated and will be splited in new modules as optional parts of Mapbender3.
+* [OWS Proxy] - Secure communicate remote hosts through Mapbender3 backend.
 * [Digitizer] - Digitalizing [bundle], which contains geometries [services].
 * [DataStore] - DataStore [bundle], which contains data drivers and [services].
 
