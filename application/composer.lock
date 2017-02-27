@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b698f92066cff956062e60d3cd394103",
+    "hash": "0645edf8044cc27a4ba483e63b9e6487",
     "content-hash": "b8f26f30faf1fad36be9000c21be68d4",
     "packages": [
         {
@@ -124,16 +124,16 @@
         },
         {
             "name": "blueimp/jquery-file-upload",
-            "version": "v9.16.0",
+            "version": "v9.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vkhramtsov/jQuery-File-Upload.git",
-                "reference": "d2471e9ad07d587ae1437ed057a145c1dbfe98f9"
+                "reference": "1e630dd8e96f517bf33f6fc20d93a2cb930a2c0f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vkhramtsov/jQuery-File-Upload/zipball/d2471e9ad07d587ae1437ed057a145c1dbfe98f9",
-                "reference": "d2471e9ad07d587ae1437ed057a145c1dbfe98f9",
+                "url": "https://api.github.com/repos/vkhramtsov/jQuery-File-Upload/zipball/1e630dd8e96f517bf33f6fc20d93a2cb930a2c0f",
+                "reference": "1e630dd8e96f517bf33f6fc20d93a2cb930a2c0f",
                 "shasum": ""
             },
             "type": "library",
@@ -170,7 +170,7 @@
                 "upload",
                 "widget"
             ],
-            "time": "2017-02-10 05:26:10"
+            "time": "2017-02-20 06:05:50"
         },
         {
             "name": "components/bootstrap",
@@ -2305,12 +2305,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-documentation.git",
-                "reference": "e88b2abe879eae603e051b48a7a0412abf2d9c62"
+                "reference": "6582533ea60b2f2af50ad7bfe2d025e3de898b58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/e88b2abe879eae603e051b48a7a0412abf2d9c62",
-                "reference": "e88b2abe879eae603e051b48a7a0412abf2d9c62",
+                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/6582533ea60b2f2af50ad7bfe2d025e3de898b58",
+                "reference": "6582533ea60b2f2af50ad7bfe2d025e3de898b58",
                 "shasum": ""
             },
             "require": {
@@ -2332,7 +2332,7 @@
                 "documentation",
                 "mapbender"
             ],
-            "time": "2017-02-20 11:10:36"
+            "time": "2017-02-20 11:48:47"
         },
         {
             "name": "mapbender/fom",
@@ -2375,12 +2375,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "26b2e81e331737d4cbf83725358fb026abe3188a"
+                "reference": "69e08dbcb0a87bebdb18973a9ab143edf0264cfc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/26b2e81e331737d4cbf83725358fb026abe3188a",
-                "reference": "26b2e81e331737d4cbf83725358fb026abe3188a",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/69e08dbcb0a87bebdb18973a9ab143edf0264cfc",
+                "reference": "69e08dbcb0a87bebdb18973a9ab143edf0264cfc",
                 "shasum": ""
             },
             "require": {
@@ -2402,7 +2402,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2017-02-17 12:40:42"
+            "time": "2017-02-22 10:55:49"
         },
         {
             "name": "mapbender/mapbender-icons",
