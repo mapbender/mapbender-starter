@@ -5,6 +5,7 @@
 */web/bundles
 */web/doc
 */web/uploads
+
 application/web/docs/
 
 application/web/xmlschemas/*
@@ -42,3 +43,6 @@ application/fom
 application/owsproxy
 application/mapbender
 documentaion/_exts
+
+# Distribution files
+/application/dist/
