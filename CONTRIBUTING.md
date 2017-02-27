@@ -142,7 +142,7 @@ Is a special set of folders and files:
 * **LICENSE**  - Contains [LICENSE] text.
 * **README.md** - Contains [README] text.
 * **CONTRIBUTING.md** - Contains [CONTRIBUTING] text.
-* **MapbenderNameBundle.php** - Contains the Bundle [elements], [templates],  [manager controllers] and [layers] register.
+* **MapbenderNameBundle.php** - Bundle description file, this register and make available bundle [elements], [templates],  [manager controllers] and [layers] register.
 
 Read more about best practices for reusable [bundles] [here](http://symfony.com/doc/2.3/cookbook/bundles/best_practices.html).
 
@@ -154,13 +154,37 @@ Create a [git] repository outside of Mapbender, as your own project.
 ```sh
 cd ~/Projects
 mkdir new-awesome-bundle
-cd new-awesome-bundle
+cd new-awesome-bundleq
 git init 
 ```
 
 In order to create a [bundle], please take a look at the [bundle structure](#Bundle%20structure). 
 
 **Don't forget to follow [module] [rules]**!
+
+
+### Create bundle description class
+
+Bundles can contains [Templates], [Elements], [Roles], administration manager menu items or ACL classes. 
+Bundle class file describes which Templates, Elements or ACL classes are delivered and available for the bundle.
+The name of bundle description  file should contain full name of bundle and class name like this: `MapbenderMapbenderNameBundle.php`
+
+Description class should extend the *MapbenderBundle* class
+
+
+#### Register bundle components
+
+Methods available to rewrite from *MapbenderBundle*:
+
+* *getElements* - Should return list of element classes provided by bundle. Each entry in the array should have a fully qualified class name.  See [source](https://github.com/mapbender/mapbender/blob/release/3.0.6/src/Mapbender/CoreBundle/MapbenderCoreBundle.php#L33) for an example.
+* *getTemplates* - List of template classes provided by bundle. Each entry in the array is a fully qualified class name.  See [source](https://github.com/mapbender/mapbender/blob/release/3.0.6/src/Mapbender/ManagerBundle/MapbenderManagerBundle.php#L33) for an example. 
+* *getManagerControllers* - List of controllers to be embedded into administration manager interface. The list must be an array of arrays, each giving the integer weight, name, route and array of route prefixes to match against. See [source](https://github.com/mapbender/mapbender/blob/release/3.0.6/src/Mapbender/ManagerBundle/MapbenderManagerBundle.php#L11) for an example. 
+* *getACLClasses* - List ACL bundle classes. See [source](https://github.com/mapbender/mapbender/blob/release/3.0.6/src/Mapbender/CoreBundle/MapbenderCoreBundle.php#L82) example.
+* *getRoles* - List bundle roles. The list must be an array with   
+    * name: String, must start with ROLE_, e.g. ROLE_USER_ADMIN
+    * title: String, human readable, e.g. "Can administrate users"
+    * @return array roles. See [source](https://github.com/mapbender/mapbender/blob/release/3.0.6/src/Mapbender/ManagerBundle/MapbenderManagerBundle.php#L64) example.
+    
 
 ### Create composer package
 
@@ -378,8 +402,10 @@ Application template styling can be done by using [CSS] tab for adding your own 
 
 A template is a part of the [bundle]. It's located in the  "Templates/" directory. 
 
-* create new template PHP-Class in "Template" directory
-* base the class by "apbender\CoreBundle\Component\Template"
+* Create new template PHP-Class in "Template" directory
+* Extend mapbender template by: 
+    * "Mapbender/CoreBundle/Component/Fullscreen" for desktop application
+    * "Mapbender/MobileBundle/Template/Mobile" for mobile application
 
 Example:
 
