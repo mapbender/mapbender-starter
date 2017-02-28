@@ -2,5 +2,4 @@
 
 cd application
 echo "# Install composer packages";
-echo "php bin/composer install --no-dev -o"
-php bin/composer install --no-dev -o
+php bin/composer install -o
