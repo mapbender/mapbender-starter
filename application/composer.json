@@ -243,7 +243,7 @@
                 "type": "component",
                 "version": "5.13.4",
                 "dist": {
-                    "url": "https://github.com/codemirror/CodeMirror/archive/5.13.4.tar.gz",
+                    "url": "https://github.com/codemirror/CodeMirror/archive/5.13.4.zip",
                     "type": "tar"
                 },
                 "extra": {
