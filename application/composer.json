@@ -47,7 +47,6 @@
         "jms/serializer": "0.16.x",
 
         "friendsofsymfony/jsrouting-bundle": "1.5.x",
-        "kriswallsmith/buzz": "v0.15",
         "doctrine/doctrine-fixtures-bundle": "2.3.*",
         "arsgeografica/signing": "1.1.x",
         "phayes/geophp": "1.x",
