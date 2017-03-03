@@ -52,10 +52,6 @@
         "doctrine/doctrine-fixtures-bundle": "2.3.*",
         "gedmo/doctrine-extensions": "~2.3",
 
-        "jms/security-extra-bundle": "1.5.x",
-        "jms/di-extra-bundle": "1.6.x",
-        "jms/serializer": "0.16.x",
-
         "kriswallsmith/buzz": "v0.15",
         "incenteev/composer-parameter-handler": "~2.0",
 
