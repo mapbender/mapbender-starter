@@ -42,32 +42,18 @@
         "sensio/framework-extra-bundle": "2.3.x",
         "sensio/generator-bundle": "2.3.x",
         "incenteev/composer-parameter-handler": "~2.0",
-        "jms/security-extra-bundle": "1.5.x",
-        "jms/di-extra-bundle": "1.6.x",
-        "jms/serializer": "0.16.x",
 
-        "friendsofsymfony/jsrouting-bundle": "1.5.x",
         "doctrine/doctrine-fixtures-bundle": "2.3.*",
-        "arsgeografica/signing": "1.1.x",
-        "phayes/geophp": "1.x",
-        "viscreation/vis-ui.js": "0.0.x",
-        "igosuki/compass-mixins": "0.x",
-        "fontfacekit/open-sans": "1.4.x",
-        "eslider/sasscb":  "3.1.x",
-        "gedmo/doctrine-extensions": "~2.3",
-        "mapbender/mapbender-icons": "1.x",
-        "components/jquery": "1.11.2",
-        "components/underscore": "1.x",
-        "components/joii": "3.x",
 
-        "setasign/fpdi-fpdf": "1.6.*",
+        "gedmo/doctrine-extensions": "~2.3",
+
+        "components/jquery": "1.11.2",
 
         "mnsami/composer-custom-directory-installer": "1.0.*",
 
         "mapbender/fom": "dev-release/3.0.6",
         "mapbender/mapbender": "dev-release/3.0.6",
         "mapbender/owsproxy": "dev-release/3.0.6",
-        "mapbender/mapquery": "dev-master",
         "mapbender/digitizer": "1.1.x",
         "mapbender/documentation": "dev-release/3.0.6"
     },
@@ -124,30 +110,10 @@
             "mapbender/": ["mapbender/mapbender"],
             "fom/": ["mapbender/fom"],
             "owsproxy/": ["mapbender/owsproxy"],
-            "mapbender/src/Mapbender/CoreBundle/Resources/public/mapquery": ["mapbender/mapquery"]
+            "mapbender/src/Mapbender/CoreBundle/Resources/public/mapquery/": ["mapbender/mapquery"]
         }
     },
     "repositories": [
-        {
-            "type": "package",
-            "package": {
-                "name": "components/placeholdersjs",
-                "type": "component",
-                "version": "4.0.1",
-                "dist": {
-                    "url": "https://github.com/jamesallardice/Placeholders.js/archive/v4.0.1.zip",
-                    "type": "zip"
-                },
-                "extra": {
-                    "component": {
-                        "scripts": [
-                            "dist/placeholders.min.js",
-                            "dist/placeholders.jquery.min.js"
-                        ]
-                    }
-                }
-            }
-        },
         {
             "type": "package",
             "package": {
