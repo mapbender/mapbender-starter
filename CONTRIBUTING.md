@@ -319,7 +319,7 @@ without [versioning], it was decided to change the development workflow to [comp
 
 ## Definition
 
-The Elements can be a part of each [bundle] and should be stored under *SomeBundle/SomeElementName* folder.
+Mapbender elements are optional part of each [bundle] and should be stored under *SomeBundle/SomeElementName* folder.
 
 
 Each Mapbender element is:
