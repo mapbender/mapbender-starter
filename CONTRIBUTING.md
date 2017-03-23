@@ -105,7 +105,7 @@ Each module should have:
 * own [CONTRIBUTING].md describes how other developers should install, setup and contribute in it
 * own [tests] relevant to new [features], [elements] or functionality
 
-Write your code using PSR-2(a coding [style guide] standard. 
+Write your code using PSR-2 a coding [style guide] standard. 
 
 # Bundles 
 
@@ -609,7 +609,7 @@ bin/phpunit -c app vendor/mapbender/digitizer/Mapbender/DigitizerBundle/Tests/Fe
 ## Libraries
 * [Symfony framework]
 * [Composer documentation](https://getcomposer.org/doc/)
-* [General GitHub documentation](https://help.github.com/)
+* [General GitHub documentation](https://help.github.com/)fd
 * [GitHub pull request documentation](https://help.github.com/send-pull-requests/)
 
 [rules]: #rules "Rules"
