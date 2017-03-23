@@ -16,9 +16,6 @@ Mapbender is based on [Symfony framework] and uses [composer] to manage external
 
 # Installation      
 
-Here is a full [Mapbender] developer installation guide:
-[here](http://doc.mapbender3.org/en/book/installation/installation_git.html) or you can follow short one:
-
 ## Clone the project 
 
 ### via SSH
