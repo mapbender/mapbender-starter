@@ -628,6 +628,7 @@ bin/phpunit -c app vendor/mapbender/digitizer/Mapbender/DigitizerBundle/Tests/Fe
 [translations]: #translations
 [modules]: #modules
 [module]: #modules
+[submodules]: #submodules "Git submodules"
 [manager controllers]: #manager-controllers 
 [layers]: #layers
 [services]: http://symfony.com/doc/2.3/book/service_container.html "Symfony Services"
