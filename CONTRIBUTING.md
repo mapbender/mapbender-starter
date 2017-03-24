@@ -1,10 +1,10 @@
 # Developer Guide
 
-Mapbender welcomes contributions from all members, so you are welcome to join us in the development!
+The Mapbender team welcomes contributions from all members - so you are welcome to join us in the development!
 
 Third-party patches are essential for the preservation of high standards in [Mapbender].
 
-We simply can't access the huge number of platforms and myriad configurations for running [Mapbender]. 
+We simply cannot access the huge number of platforms and myriad configurations for running [Mapbender]. 
 
 We want it as easy as possible to carry out changes to get the [modules] in your environment to run. 
 
@@ -12,7 +12,7 @@ There are a few [guidelines][rules] that we need contributors to follow so that 
 
 # Architecture 
 
-Mapbender is based on [Symfony framework] and uses [composer] to manage external and internal libraries as own [modules][module].
+Mapbender is based on a [Symfony framework] and uses [composer] to manage external and internal libraries as own [modules][module].
 
 # Installation      
 
@@ -38,7 +38,7 @@ cd mapbender-starter
 
 ## Run bootstrap script 
 
-Running bootstrap script take some time to get required libraries and prepares project configurations. Bootstrap saves [Mapbender] starter configurations under `application/app/db/demo.sqlite` configuraiton file. Symfony configurations are located under `application/app/config`. 
+Running the bootstrap script takes some time to get the required libraries and to prepare the project configurations. Bootstrap saves [Mapbender] starter configurations in `application/app/db/demo.sqlite` configuration file. Symfony configurations are located under `application/app/config`. 
 
 
 ```sh
@@ -51,23 +51,23 @@ sh bootstrap
 app/console server:run
 ```
 
-After command run, console message describes how you can view web application in your browser, like this:
+After executing the command run, your console describes how you can view web application in your browser:
 ```sh 
 Server running on http://localhost:8000
 ```
 
-So now open URL from console output message in your favorite browser. 
+Open the displayed URL from your console output message in your favorite browser. 
 
-For development reason it is recommended to use Chromium(Chrome) or Firefox.
+For development reasons, it is recommended to use Chromium (Chrome) or Firefox.
 
-This it! 
+That's it! 
 
-*Developer installation is only good performed for one man development purposes and should be optimized for production or coworking systems.*
+*The developer installation is only useful for solo development purposes and should be optimized for production or co-working systems.*
 
 
 # Modules
 
-Module is a new part of [Mapbender] concept, based on [Symfony modularity rules](http://www.symfony.com) 
+Module is a new part of the [Mapbender] concept, based on [Symfony modularity rules](http://www.symfony.com) 
 and [composer] dependency manager. 
 
 Special builds can be created that exclude subsets of Mapbender functionality. 
@@ -75,13 +75,13 @@ Special builds can be created that exclude subsets of Mapbender functionality.
 This allows smaller custom builds when the builder is certain 
 that those parts of Mapbender are not being used. 
 
-For example, an application that only use map view and did not need [Digitizer] functionality.
+For example, it is possible to create an application which only uses map view and did not need [Digitizer] functionality.
 
-In the future release any module may be excluded except for the core. 
+Future [Mapbender] releases may be able to exclude any additional modules apart from the core application. 
 
-In the past the development bundles were part of the git [submodules]. 
+In the past, the development bundles were part of the git [submodules]. 
 
-Now the days each module should be an own git repository 
+Today each module should be in an own git repository 
 and reuse the same directory structure. 
 
 ## Rules
