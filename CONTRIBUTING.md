@@ -81,7 +81,7 @@ Future [Mapbender] releases may be able to exclude any additional modules apart 
 
 In the past, the development bundles were part of the git [submodules]. 
 
-Today each module should be in an own git repository 
+Today, each module should be in its own git repository 
 and reuse the same directory structure. 
 
 ## Rules
@@ -603,13 +603,13 @@ bin/phpunit -c app vendor/mapbender/digitizer/Mapbender/DigitizerBundle/Tests/Fe
 * [Mapbender] - Contains Core, Manager, Print, Mobile and some other [bundles] this will be extracted as [modules] in next releases.
 * [FOM] - **F**riends **o**f **M**apbender contains Administration and Security components [bundles]. The module is deprecated and will be split in new modules as optional parts of Mapbender3.
 * [OWS Proxy] - Secure communicate remote hosts through Mapbender3 backend.
-* [Digitizer] - Digitalizing [bundle], which contains geometries [services].
+* [Digitizer] - Digitalizing [bundle], which contains geometry [services].
 * [DataStore] - DataStore [bundle], which contains data drivers and [services].
 
 ## Libraries
 * [Symfony framework]
 * [Composer documentation](https://getcomposer.org/doc/)
-* [General GitHub documentation](https://help.github.com/)fd
+* [General GitHub documentation](https://help.github.com/)
 * [GitHub pull request documentation](https://help.github.com/send-pull-requests/)
 
 [rules]: #rules "Rules"
@@ -620,8 +620,8 @@ bin/phpunit -c app vendor/mapbender/digitizer/Mapbender/DigitizerBundle/Tests/Fe
 [tests]: #tests "Tests"
 [features]: #features
 [feature]: #features
-[elements]: #element
-[element]: #element
+[elements]: #elements
+[element]: #elements
 [templates]: #templates
 [template]: #templates
 [translation]: #translations
@@ -653,9 +653,9 @@ bin/phpunit -c app vendor/mapbender/digitizer/Mapbender/DigitizerBundle/Tests/Fe
 [CSS]: http://www.w3schools.com/css/css_intro.asp "CSS"
 [TWIG]: http://twig.sensiolabs.org/ "TWIG"
 [parameters.yml]: http://symfony.com/doc/current/best_practices/configuration.html "Symfony configuratioN"
-[pull-request]: https://help.github.com/send-pull-requests "Pull requests"
-[Resolve git conflicts]: https://github.com/conflicts/resolve "Resolve git conflicts"
-[branch]: https://help.github.com/branch "Branching"
+[pull-request]: https://help.github.com/articles/creating-a-pull-request/ "Pull requests"
+[Resolve git conflicts]: https://help.github.com/articles/resolving-a-merge-conflict-on-github/ "Resolve git conflicts"
+[branch]: https://help.github.com/articles/about-branches/ "Branching"
 [submodule]: https://git-scm.com/book/en/v2/Git-Tools-Submodules  "Git submodule"
 [Mapbender]: https://mapbender3.org/  "Mapbender3"
 [FOM]: https://github.com/mapbender/fom  "FOM submodule"
