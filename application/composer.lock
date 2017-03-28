@@ -1493,16 +1493,16 @@
         },
         {
             "name": "gedmo/doctrine-extensions",
-            "version": "v2.4.26",
+            "version": "v2.4.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Atlantic18/DoctrineExtensions.git",
-                "reference": "983dd85d6860f87fb7dffd0d9f7ad1462e20a09d"
+                "reference": "fe152e1239f2f46287d369e43cc9fa817cc3cd36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/983dd85d6860f87fb7dffd0d9f7ad1462e20a09d",
-                "reference": "983dd85d6860f87fb7dffd0d9f7ad1462e20a09d",
+                "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/fe152e1239f2f46287d369e43cc9fa817cc3cd36",
+                "reference": "fe152e1239f2f46287d369e43cc9fa817cc3cd36",
                 "shasum": ""
             },
             "require": {
@@ -1514,9 +1514,8 @@
                 "doctrine/common": ">=2.5.0",
                 "doctrine/mongodb-odm": ">=1.0.2",
                 "doctrine/orm": ">=2.5.0",
-                "phpunit/phpunit": "~4.4",
-                "phpunit/phpunit-mock-objects": "~2.3",
-                "symfony/yaml": "~2.6"
+                "phpunit/phpunit": "*",
+                "symfony/yaml": "~2.6|~3.0"
             },
             "suggest": {
                 "doctrine/mongodb-odm": "to use the extensions with the MongoDB ODM",
@@ -1568,7 +1567,7 @@
                 "tree",
                 "uploadable"
             ],
-            "time": "2016-12-21T13:46:54+00:00"
+            "time": "2017-03-22T09:48:22+00:00"
         },
         {
             "name": "igosuki/compass-mixins",
@@ -2012,17 +2011,17 @@
         },
         {
             "name": "mapbender/digitizer",
-            "version": "1.1.56",
+            "version": "1.1.57",
             "target-dir": "Mapbender/DigitizerBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "a73bc0f534d11048b27faf38bead42c6e4169695"
+                "reference": "a1bc1e365be224018a3a2cc10c61fed7777af42d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/a73bc0f534d11048b27faf38bead42c6e4169695",
-                "reference": "a73bc0f534d11048b27faf38bead42c6e4169695",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/a1bc1e365be224018a3a2cc10c61fed7777af42d",
+                "reference": "a1bc1e365be224018a3a2cc10c61fed7777af42d",
                 "shasum": ""
             },
             "require": {
@@ -2064,7 +2063,7 @@
                 "digitizing",
                 "mapbender"
             ],
-            "time": "2017-02-16T08:22:06+00:00"
+            "time": "2017-03-27T12:16:39+00:00"
         },
         {
             "name": "mapbender/documentation",
@@ -2072,12 +2071,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-documentation.git",
-                "reference": "c75e1d38e88e60c20f073131754f3ea6eface8bf"
+                "reference": "7d50ab4783fa0ada9aeed15be2b8f4d8c44dc39f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/c75e1d38e88e60c20f073131754f3ea6eface8bf",
-                "reference": "c75e1d38e88e60c20f073131754f3ea6eface8bf",
+                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/7d50ab4783fa0ada9aeed15be2b8f4d8c44dc39f",
+                "reference": "7d50ab4783fa0ada9aeed15be2b8f4d8c44dc39f",
                 "shasum": ""
             },
             "require": {
@@ -2099,7 +2098,7 @@
                 "documentation",
                 "mapbender"
             ],
-            "time": "2017-03-02 11:28:31"
+            "time": "2017-03-27 13:04:01"
         },
         {
             "name": "mapbender/fom",
@@ -2107,12 +2106,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/fom.git",
-                "reference": "689f564996fb3689e688408cb1cec6506a01acf8"
+                "reference": "8d1bf7e356e3e40408a867fba9f4fce196c362d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/fom/zipball/689f564996fb3689e688408cb1cec6506a01acf8",
-                "reference": "689f564996fb3689e688408cb1cec6506a01acf8",
+                "url": "https://api.github.com/repos/mapbender/fom/zipball/8d1bf7e356e3e40408a867fba9f4fce196c362d3",
+                "reference": "8d1bf7e356e3e40408a867fba9f4fce196c362d3",
                 "shasum": ""
             },
             "require": {
@@ -2134,7 +2133,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2017-03-03 15:28:37"
+            "time": "2017-03-28 15:37:10"
         },
         {
             "name": "mapbender/mapbender",
@@ -2142,12 +2141,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "95afa96f9e3d67eccd01f62845be269003dea3e5"
+                "reference": "ca3ecfb086b3a35938d4c8a21cf288c71bfb9a2a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/95afa96f9e3d67eccd01f62845be269003dea3e5",
-                "reference": "95afa96f9e3d67eccd01f62845be269003dea3e5",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/ca3ecfb086b3a35938d4c8a21cf288c71bfb9a2a",
+                "reference": "ca3ecfb086b3a35938d4c8a21cf288c71bfb9a2a",
                 "shasum": ""
             },
             "require": {
@@ -2180,7 +2179,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2017-03-04 07:55:19"
+            "time": "2017-03-28 15:37:10"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -2289,12 +2288,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/owsproxy3.git",
-                "reference": "2eea23ad92276faf9e93c1fff32f3ca2db1f75bd"
+                "reference": "9750f7ef8b3f3e051586a4ea2b61862b0482015a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/2eea23ad92276faf9e93c1fff32f3ca2db1f75bd",
-                "reference": "2eea23ad92276faf9e93c1fff32f3ca2db1f75bd",
+                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/9750f7ef8b3f3e051586a4ea2b61862b0482015a",
+                "reference": "9750f7ef8b3f3e051586a4ea2b61862b0482015a",
                 "shasum": ""
             },
             "require": {
@@ -2318,7 +2317,7 @@
                 "module",
                 "owsproxy"
             ],
-            "time": "2017-03-03 15:35:37"
+            "time": "2017-03-24 11:45:35"
         },
         {
             "name": "medialize/jquery-context-menu",
@@ -2427,16 +2426,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.22.0",
+            "version": "1.22.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "bad29cb8d18ab0315e6c477751418a82c850d558"
+                "reference": "1e044bc4b34e91743943479f1be7a1d5eb93add0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/bad29cb8d18ab0315e6c477751418a82c850d558",
-                "reference": "bad29cb8d18ab0315e6c477751418a82c850d558",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1e044bc4b34e91743943479f1be7a1d5eb93add0",
+                "reference": "1e044bc4b34e91743943479f1be7a1d5eb93add0",
                 "shasum": ""
             },
             "require": {
@@ -2501,20 +2500,20 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2016-11-26T00:15:39+00:00"
+            "time": "2017-03-13T07:08:03+00:00"
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v1.4.1",
+            "version": "v1.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "c7e26a21ba357863de030f0b9e701c7d04593774"
+                "reference": "965cdeb01fdcab7653253aa81d40441d261f1e66"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/c7e26a21ba357863de030f0b9e701c7d04593774",
-                "reference": "c7e26a21ba357863de030f0b9e701c7d04593774",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/965cdeb01fdcab7653253aa81d40441d261f1e66",
+                "reference": "965cdeb01fdcab7653253aa81d40441d261f1e66",
                 "shasum": ""
             },
             "require": {
@@ -2549,7 +2548,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2016-03-18T20:34:03+00:00"
+            "time": "2017-03-13T16:22:52+00:00"
         },
         {
             "name": "phayes/geophp",
@@ -3614,16 +3613,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.32.0",
+            "version": "v1.33.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "9935b662e24d6e634da88901ab534cc12e8c728f"
+                "reference": "05cf49921b13f6f01d3cfdf9018cfa7a8086fd5a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/9935b662e24d6e634da88901ab534cc12e8c728f",
-                "reference": "9935b662e24d6e634da88901ab534cc12e8c728f",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/05cf49921b13f6f01d3cfdf9018cfa7a8086fd5a",
+                "reference": "05cf49921b13f6f01d3cfdf9018cfa7a8086fd5a",
                 "shasum": ""
             },
             "require": {
@@ -3632,12 +3631,12 @@
             "require-dev": {
                 "psr/container": "^1.0",
                 "symfony/debug": "~2.7",
-                "symfony/phpunit-bridge": "~3.2"
+                "symfony/phpunit-bridge": "~3.3@dev"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.32-dev"
+                    "dev-master": "1.33-dev"
                 }
             },
             "autoload": {
@@ -3672,7 +3671,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2017-02-27T00:07:03+00:00"
+            "time": "2017-03-22T15:40:09+00:00"
         },
         {
             "name": "viscreation/vis-ui.js",
@@ -5292,16 +5291,16 @@
         },
         {
             "name": "sebastian/recursion-context",
-            "version": "1.0.4",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/recursion-context.git",
-                "reference": "938df7a6478e72795e5f8266cff24d06e3136f2e"
+                "reference": "b19cc3298482a335a95f3016d2f8a6950f0fbcd7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/recursion-context/zipball/938df7a6478e72795e5f8266cff24d06e3136f2e",
-                "reference": "938df7a6478e72795e5f8266cff24d06e3136f2e",
+                "url": "https://api.github.com/repos/sebastianbergmann/recursion-context/zipball/b19cc3298482a335a95f3016d2f8a6950f0fbcd7",
+                "reference": "b19cc3298482a335a95f3016d2f8a6950f0fbcd7",
                 "shasum": ""
             },
             "require": {
@@ -5341,7 +5340,7 @@
             ],
             "description": "Provides functionality to recursively process PHP variables",
             "homepage": "http://www.github.com/sebastianbergmann/recursion-context",
-            "time": "2016-11-15T06:55:36+00:00"
+            "time": "2016-10-03T07:41:43+00:00"
         },
         {
             "name": "sebastian/version",
