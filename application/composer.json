@@ -91,6 +91,12 @@
         ],
         "init-example": [
             "ComposerBootstrap::checkConfiguration"
+        ],
+        "install-hard-copy-assets": [
+            "ComposerBootstrap::installHardCopyAssets"
+        ],
+        "install-sym-link-assets": [
+            "ComposerBootstrap::installSymLinkAssets"
         ]
     },
     "config": {

@@ -123,16 +123,16 @@
         },
         {
             "name": "blueimp/jquery-file-upload",
-            "version": "v9.17.0",
+            "version": "v9.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vkhramtsov/jQuery-File-Upload.git",
-                "reference": "1e630dd8e96f517bf33f6fc20d93a2cb930a2c0f"
+                "reference": "a136ef0280c40a53f40c4411c0d4ec0964713a52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vkhramtsov/jQuery-File-Upload/zipball/1e630dd8e96f517bf33f6fc20d93a2cb930a2c0f",
-                "reference": "1e630dd8e96f517bf33f6fc20d93a2cb930a2c0f",
+                "url": "https://api.github.com/repos/vkhramtsov/jQuery-File-Upload/zipball/a136ef0280c40a53f40c4411c0d4ec0964713a52",
+                "reference": "a136ef0280c40a53f40c4411c0d4ec0964713a52",
                 "shasum": ""
             },
             "type": "library",
@@ -169,7 +169,7 @@
                 "upload",
                 "widget"
             ],
-            "time": "2017-02-20T06:05:50+00:00"
+            "time": "2017-03-29T09:26:17+00:00"
         },
         {
             "name": "components/bootstrap",
@@ -2011,17 +2011,17 @@
         },
         {
             "name": "mapbender/digitizer",
-            "version": "1.1.57",
+            "version": "1.1.58",
             "target-dir": "Mapbender/DigitizerBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "a1bc1e365be224018a3a2cc10c61fed7777af42d"
+                "reference": "e2585c2e9335ce50b2c65cde8e09e16af3219be2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/a1bc1e365be224018a3a2cc10c61fed7777af42d",
-                "reference": "a1bc1e365be224018a3a2cc10c61fed7777af42d",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/e2585c2e9335ce50b2c65cde8e09e16af3219be2",
+                "reference": "e2585c2e9335ce50b2c65cde8e09e16af3219be2",
                 "shasum": ""
             },
             "require": {
@@ -2063,7 +2063,7 @@
                 "digitizing",
                 "mapbender"
             ],
-            "time": "2017-03-27T12:16:39+00:00"
+            "time": "2017-03-29T07:49:00+00:00"
         },
         {
             "name": "mapbender/documentation",
@@ -2071,12 +2071,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-documentation.git",
-                "reference": "7d50ab4783fa0ada9aeed15be2b8f4d8c44dc39f"
+                "reference": "95dc15913aed66ae5faf33c4c6377ac723b3c4c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/7d50ab4783fa0ada9aeed15be2b8f4d8c44dc39f",
-                "reference": "7d50ab4783fa0ada9aeed15be2b8f4d8c44dc39f",
+                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/95dc15913aed66ae5faf33c4c6377ac723b3c4c6",
+                "reference": "95dc15913aed66ae5faf33c4c6377ac723b3c4c6",
                 "shasum": ""
             },
             "require": {
@@ -2098,7 +2098,7 @@
                 "documentation",
                 "mapbender"
             ],
-            "time": "2017-03-27 13:04:01"
+            "time": "2017-03-29 12:53:38"
         },
         {
             "name": "mapbender/fom",

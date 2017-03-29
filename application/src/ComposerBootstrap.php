@@ -75,10 +75,26 @@ class ComposerBootstrap
     {
         $isWindows = static::isWindows();
         if (!$isWindows) {
-            echo `php app/console assets:install --symlink --relative web`;
+            static::installHardCopyAssets();
         } else {
-            echo `php app/console assets:install web`;
+            static::installSoftLinkAssets();
         }
+    }
+
+    /**
+     * Installs bundle assets into a given dierectory (for details s. Symfony app/console assets:install).
+     */
+    public static function installHardCopyAssets()
+    {
+        echo `php app/console assets:install web`;
+    }
+
+    /**
+     * Installs bundle assets into a given dierectory (for details s. Symfony app/console assets:install).
+     */
+    public static function installSymLinkAssets()
+    {
+        echo `php app/console assets:install web --symlink --relative `;
     }
 
     /**
