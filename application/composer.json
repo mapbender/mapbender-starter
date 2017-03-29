@@ -1,5 +1,5 @@
 {
-    "name": "wheregroup/mapbender-starter",
+    "name": "wheregroup/mapbender3-starter",
     "description": "Mapbender",
     "type": "project",
     "license": "MIT",
@@ -72,10 +72,6 @@
             "ComposerBootstrap::installAssets",
             "ComponentInstaller\\Installer::postAutoloadDump"
         ],
-        "package": [
-            "ComposerBootstrap::genApiDocumentation",
-            "ComposerBootstrap::genDocumentation"
-        ],
         "docs": [
             "ComposerBootstrap::genApiDocumentation",
             "ComposerBootstrap::genDocumentation"
@@ -98,8 +94,8 @@
         "install-sym-link-assets": [
             "ComposerBootstrap::installSymLinkAssets"
         ],
-        "build-zip": [
-            "ComposerBootstrap::buildZip"
+        "build": [
+            "ComposerBootstrap::build"
         ]
     },
     "config": {
@@ -109,14 +105,14 @@
         "platform": {
             "php": "5.3.19"
         },
-        "archive-dir": "dist/",
+        "archive-dir": "../dist",
         "archive-format": "tar.gz",
         "optimize-autoloader": true,
         "process-timeout": 600
     },
     "archive": {
       "format": "tar.gz",
-      "directory": "dist/",
+      "directory": "../dist",
       "skip-dev": true,
       "exclude": [
         "/app/cache/**",

@@ -337,36 +337,111 @@ class ComposerBootstrap
     }
 
     /**
+     * @param Event $e
      * @return int
      */
-    public static function buildZip()
+    public static function build($e)
     {
-        $composerDef     = static::getComposerDefinition();
-        $distPath        = realpath("../dist");
-        $version         = $composerDef["version"];
-        $versionName     = "mapbender3-$version";
-        $distProjectPath = "$distPath/$versionName";
+        /** @var \Composer\Package\RootPackage $package */
+        $package            = $e->getComposer()->getPackage();
+        $config             = $package->getConfig();
+        $archiveName        = current(array_slice(explode("/", $package->getName()), -1));
+        $archiveFormat      = $config["archive-format"];
+        $archivePath        = $config["archive-dir"];
+        $archiveVersion     = $package->getVersion();
+        $archiveFileName    = "$archiveName-$archiveVersion";
 
-        echo `mkdir $distPath`;
-        echo `cp -rf . $distProjectPath`;
-        echo `find $distProjectPath -name "*.git*" | xargs rm -rf `;
-        echo `rm -rf $distProjectPath/documentation`;
-        echo `rm -rf $distProjectPath/apidoc`;
-        echo `rm -rf $distProjectPath/dist`;
-        echo `rm ".coveralls.yml"`;
+        // Overwrite archive format, name and version if given
+        list($archiveFormat, $archiveName, $archiveVersion) = array_merge($e->getArguments(),
+            array($archiveFormat,
+                  $archiveName,
+                  $archiveVersion));
 
+        if (!is_dir($archivePath)) {
+            mkdir($archivePath);
+        }
 
-        echo `rm -rf $distProjectPath/vendor/mapbender/documentation`;
-        echo `rm -rf $distProjectPath/vendor/mapbender/mapbender-icons`;
+        if ($archiveFormat == "zip") {
+            static::installHardCopyAssets();
+        } else {
+            static::installSymLinkAssets();
+        }
 
-        echo `rm -rf $distProjectPath/vendor/mnsami/composer-custom-directory-installer`;
-        echo `rm -rf $distProjectPath/vendor/robloach/component-installer`;
-        echo `rm -rf $distProjectPath/vendor/phpunit`;
-        echo `rm -rf $distProjectPath/vendor/predis`;
+        $fullArchivePath    = realpath($archivePath);
+        $archiveProjectPath = "$fullArchivePath/$archiveFileName";
 
-        echo `rm -rf $distProjectPath/app/cache/*`;
-        echo `rm -rf $distProjectPath/app/logs/*`;
+        // Remove assets
+        echo `rm -rf $archiveProjectPath/web/bundles`;
 
-        echo `cd {$distPath}; zip -r -q ${versionName}.zip $versionName/`;
+        // Copy project files
+        echo `cp -rf . $archiveProjectPath`;
+
+        // Remove development files
+        echo `find $archiveProjectPath -name "*.git*" | xargs rm -rf `;
+        echo `find $archiveProjectPath -name "*.travis.yml" | xargs rm -rf `;
+        echo `find $archiveProjectPath/vendor -type d -iname "tests" | xargs rm -rf `;
+        echo `find $archiveProjectPath/vendor -type d -iname "demo" | xargs rm -rf `;
+
+        foreach (array(
+                     "documentation",
+                     "apidoc",
+                     "dist",
+                     "vendor/mapbender/documentation",
+                     "vendor/mapbender/mapbender-icons",
+
+                     "vendor/mnsami/composer-custom-directory-installer/*",
+                     "vendor/robloach/component-installer/*",
+
+                     "vendor/phpunit",
+                     "vendor/predis",
+                     "vendor/satooshi/php-coveralls",
+                     "vendor/facebook/webdriver",
+                     "vendor/apigen",
+                     "vendor/phing",
+                     "vendor/phantomjs",
+                     "vendor/fabpot/sphinx-php",
+                     "vendor/facebook/webdriver",
+
+                     "vendor/afarkas/*",
+                     "vendor/debugteam/*",
+                     "vendor/components/*",
+                     "vendor/viscreation/vis-ui.js/*",
+                     "vendor/medialize/jquery-context-menu/*",
+                     "vendor/rogeriopradoj/respond/*",
+                     "vendor/afarkas/html5shiv/*",
+                     "vendor/fontfacekit/open-sans/*",
+
+                     "app/cache/*",
+                     "app/logs/*"
+                 ) as $path) {
+            echo `GLOBIGNORE=LICENSE:README:LICENSE.md:LICENSE; rm -rf $archiveProjectPath/{$path}`;
+        }
+
+        // Copy license files
+        echo `find vendor/ -type f -iname "license*" | xargs -i cp --parents "{}" "${archiveProjectPath}"`;
+        echo `find vendor/ -type f -iname "readme*" | xargs -i cp --parents "{}" "${archiveProjectPath}"`;
+
+        // Copy project info files
+        echo `cp ../LICENSE "${archiveProjectPath}/"`;
+        echo `cp ../README.md "${archiveProjectPath}/"`;
+        echo `cp ../CONTRIBUTING.md "${archiveProjectPath}/"`;
+        echo `cp ../CHANGELOG.md "${archiveProjectPath}/"`;
+
+        // Generate change log
+        echo `git log --date=short --tags --pretty=format:"%ad: %s" > "${archiveProjectPath}/CHANGELOG"`;
+        echo `git --git-dir mapbender/.git log --date=short --tags --pretty=format:"%ad: %s" >> "${archiveProjectPath}/CHANGELOG"`;
+        echo `git --git-dir fom/.git log --tags  --date=short --pretty=format:"%ad: %s" >> "${archiveProjectPath}/CHANGELOG"`;
+        echo `git --git-dir owsproxy/.git log --date=short --tags --pretty=format:"%ad: %s" >> "${archiveProjectPath}/CHANGELOG"`;
+
+        switch ($archiveFormat) {
+            case "zip":
+
+                echo `cd {$fullArchivePath};export GZIP=-9;zip -r -q -9 ${archiveFileName}.zip $archiveFileName/`;
+                break;
+
+            case "tar.gz":
+            default:
+                echo `cd {$fullArchivePath};export GZIP=-9;tar c $archiveFileName/ | gzip --best > ${archiveFileName}.tar.gz`;
+        }
     }
 }
