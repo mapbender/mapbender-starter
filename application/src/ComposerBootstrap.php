@@ -73,6 +73,13 @@ class ComposerBootstrap
      */
     public static function installAssets()
     {
+        $files        = static::getDefaultParameterFiles();
+        $isNewInstall = !file_exists($files["current"]);
+
+        if ($isNewInstall) {
+            return;
+        }
+
         $isWindows = static::isWindows();
         if (!$isWindows) {
             static::installHardCopyAssets();
