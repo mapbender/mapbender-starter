@@ -1,2 +1,3 @@
 cd application
-php bin/composer install --no-dev -o
+php ../composer.phar install -o
+php ../composer.phar init-example

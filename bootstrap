@@ -3,3 +3,4 @@
 cd application
 echo "# Install composer packages";
 php bin/composer install -o
+php bin/composer init-example

@@ -60,13 +60,11 @@
     "scripts": {
         "post-install-cmd": [
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-            "ComposerBootstrap::checkConfiguration",
             "ComposerBootstrap::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
         ],
         "post-update-cmd": [
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-            "ComposerBootstrap::checkConfiguration",
             "ComposerBootstrap::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
         ],
@@ -90,6 +88,9 @@
         ],
         "release": [
             "ComposerBootstrap::release"
+        ],
+        "init-example": [
+            "ComposerBootstrap::checkConfiguration"
         ]
     },
     "config": {
