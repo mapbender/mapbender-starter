@@ -218,17 +218,17 @@
         <copy overwrite="false" haltonerror="false"
             file="application/app/config/parameters.yml.dist"
             tofile="application/app/config/parameters.yml" />
-        <exec command="curl -s http://getcomposer.org/installer | php" dir="application" />
+        <!-- <exec command="curl -s http://getcomposer.org/installer | php" dir="application" /> -->
         <exec command="php composer.phar install --no-dev -o" dir="application" passthru="true"/>
     </target>
 
     <target name="prepare" depends="deps,doc">
         <delete dir="application/web/assets/.dev-cache"/>
         <exec command="application/app/console assets:install --symlink --relative application/web/" />
-        <exec command="application/app/console doctrine:database:drop --force" />
+        <!-- <exec command="application/app/console doctrine:database:drop -\-force" /> -->
         <exec command="application/app/console doctrine:database:create" />
         <exec command="application/app/console doctrine:schema:create" />
-        <exec command="application/app/console init:acl" />
+        <!-- <exec command="application/app/console init:acl" /> -->
         <exec command="application/app/console fom:user:resetroot --username=root --password=root --email=root@example.com --silent " />
         <exec command="application/app/console doctrine:fixtures:load --fixtures=./application/mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append" />
     </target>
