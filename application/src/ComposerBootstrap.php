@@ -342,7 +342,7 @@ class ComposerBootstrap
     public static function buildZip()
     {
         $composerDef     = static::getComposerDefinition();
-        $distPath        = "../dist";
+        $distPath        = realpath("../dist");
         $version         = $composerDef["version"];
         $versionName     = "mapbender3-$version";
         $distProjectPath = "$distPath/$versionName";
@@ -367,6 +367,6 @@ class ComposerBootstrap
         echo `rm -rf $distProjectPath/app/cache/*`;
         echo `rm -rf $distProjectPath/app/logs/*`;
 
-        echo `zip -r -9 -q ${distPath}/${versionName}.zip $distProjectPath`;
+        echo `cd {$distPath}; zip -r -q ${versionName}.zip $versionName/`;
     }
 }
