@@ -3,7 +3,7 @@
     "description": "Mapbender",
     "type": "project",
     "license": "MIT",
-    "version": "3.0.6",
+    "version": "3.0.6.0",
     "homepage": "http://www.mapbender.org",
     "support": {
         "email":        "mapbender@osgeo.org",
@@ -97,6 +97,9 @@
         ],
         "install-sym-link-assets": [
             "ComposerBootstrap::installSymLinkAssets"
+        ],
+        "build-zip": [
+            "ComposerBootstrap::buildZip"
         ]
     },
     "config": {

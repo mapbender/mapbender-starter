@@ -335,4 +335,38 @@ class ComposerBootstrap
 
         return file_put_contents($properties, implode("\n", $initFile));
     }
+
+    /**
+     * @return int
+     */
+    public static function buildZip()
+    {
+        $composerDef     = static::getComposerDefinition();
+        $distPath        = "../dist";
+        $version         = $composerDef["version"];
+        $versionName     = "mapbender3-$version";
+        $distProjectPath = "$distPath/$versionName";
+
+        echo `mkdir $distPath`;
+        echo `cp -rf . $distProjectPath`;
+        echo `find $distProjectPath -name "*.git*" | xargs rm -rf `;
+        echo `rm -rf $distProjectPath/documentation`;
+        echo `rm -rf $distProjectPath/apidoc`;
+        echo `rm -rf $distProjectPath/dist`;
+        echo `rm ".coveralls.yml"`;
+
+
+        echo `rm -rf $distProjectPath/vendor/mapbender/documentation`;
+        echo `rm -rf $distProjectPath/vendor/mapbender/mapbender-icons`;
+
+        echo `rm -rf $distProjectPath/vendor/mnsami/composer-custom-directory-installer`;
+        echo `rm -rf $distProjectPath/vendor/robloach/component-installer`;
+        echo `rm -rf $distProjectPath/vendor/phpunit`;
+        echo `rm -rf $distProjectPath/vendor/predis`;
+
+        echo `rm -rf $distProjectPath/app/cache/*`;
+        echo `rm -rf $distProjectPath/app/logs/*`;
+
+        echo `zip -r -9 -q ${distPath}/${versionName}.zip $distProjectPath`;
+    }
 }
