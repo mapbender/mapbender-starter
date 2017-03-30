@@ -82,9 +82,6 @@
         "version": [
             "ComposerBootstrap::displayVersion"
         ],
-        "release": [
-            "ComposerBootstrap::release"
-        ],
         "init-example": [
             "ComposerBootstrap::checkConfiguration"
         ],
@@ -94,8 +91,15 @@
         "install-sym-link-assets": [
             "ComposerBootstrap::installSymLinkAssets"
         ],
+        "dist":[
+            "ComposerBootstrap::distribute"
+        ],
         "build": [
+            "ComposerBootstrap::distribute",
             "ComposerBootstrap::build"
+        ],
+        "log": [
+            "ComposerBootstrap::generateChangeLog"
         ]
     },
     "config": {
