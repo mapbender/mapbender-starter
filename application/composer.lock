@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5f12667d45249976864cf999bfa071f2",
+    "content-hash": "36c91023cd5f2310e3ce9d2e7f792fe1",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -3813,7 +3813,7 @@
             "authors": [
                 {
                     "name": "Ondřej Nešpor",
-                    "homepage": "https://github.com/Andrewsville"
+                    "homepage": "https://github.com/andrewsville"
                 },
                 {
                     "name": "Jaroslav Hanslík",
