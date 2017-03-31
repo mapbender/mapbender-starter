@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "36c91023cd5f2310e3ce9d2e7f792fe1",
+    "content-hash": "506aceec407e55b3499d46f4143de4b4",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -2141,12 +2141,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "ca3ecfb086b3a35938d4c8a21cf288c71bfb9a2a"
+                "reference": "d622b582cf38971e965595ca999cfbae0900b09d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/ca3ecfb086b3a35938d4c8a21cf288c71bfb9a2a",
-                "reference": "ca3ecfb086b3a35938d4c8a21cf288c71bfb9a2a",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/d622b582cf38971e965595ca999cfbae0900b09d",
+                "reference": "d622b582cf38971e965595ca999cfbae0900b09d",
                 "shasum": ""
             },
             "require": {
@@ -2179,7 +2179,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2017-03-28 15:37:10"
+            "time": "2017-03-31 06:26:49"
         },
         {
             "name": "mapbender/mapbender-icons",
