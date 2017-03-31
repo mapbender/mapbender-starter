@@ -196,6 +196,26 @@
         {
             "type": "package",
             "package": {
+                "name": "components/placeholdersjs",
+                "type": "component",
+                "version": "4.0.1",
+                "dist": {
+                    "url": "https://github.com/jamesallardice/Placeholders.js/archive/v4.0.1.zip",
+                    "type": "zip"
+                },
+                "extra": {
+                    "component": {
+                        "scripts": [
+                            "dist/placeholders.min.js",
+                            "dist/placeholders.jquery.min.js"
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
                 "name": "components/jquerydialogextendjs",
                 "type": "component",
                 "version": "2.0.4",
