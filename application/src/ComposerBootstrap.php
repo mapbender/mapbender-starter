@@ -14,7 +14,7 @@ class ComposerBootstrap
      *
      * @param $event Event A instance
      */
-    public static function checkConfiguration(Event $event)
+    public static function checkConfiguration($event)
     {
         $files        = static::getDefaultParameterFiles();
         $isNewInstall = !file_exists($files["current"]);
@@ -75,12 +75,35 @@ class ComposerBootstrap
      */
     public static function installAssets()
     {
+        $files        = static::getDefaultParameterFiles();
+        $isNewInstall = !file_exists($files["current"]);
+
+        if ($isNewInstall) {
+            return;
+        }
+
         $isWindows = static::isWindows();
         if (!$isWindows) {
-            echo `php app/console assets:install --symlink --relative web`;
+            static::installHardCopyAssets();
         } else {
-            echo `php app/console assets:install web`;
+            static::installSymLinkAssets();
         }
+    }
+
+    /**
+     * Installs bundle assets into a given dierectory (for details s. Symfony app/console assets:install).
+     */
+    public static function installHardCopyAssets()
+    {
+        echo `php app/console assets:install web`;
+    }
+
+    /**
+     * Installs bundle assets into a given dierectory (for details s. Symfony app/console assets:install).
+     */
+    public static function installSymLinkAssets()
+    {
+        echo `php app/console assets:install web --symlink --relative `;
     }
 
     /**
@@ -251,12 +274,6 @@ class ComposerBootstrap
         return realpath(__DIR__ . "/../../");
     }
 
-    public static function release()
-    {
-        static::updatePhingProperties();
-        static::updateSymfonyParameters();
-    }
-
     /**
      * @return string
      * @internal param $rootPath
@@ -303,8 +320,6 @@ class ComposerBootstrap
             "$1 " . $composerDef["description"] .
             "$3 " . $composerDef["version"],
             file_get_contents($yamlFile));
-        var_dump($yamlContent);
-        die();
         return file_put_contents(
             $yamlContent,
             $yamlFile);
@@ -336,5 +351,183 @@ class ComposerBootstrap
         }
 
         return file_put_contents($properties, implode("\n", $initFile));
+    }
+
+    /**
+     * @param Event $e
+     */
+    public static function distribute($e)
+    {
+        /** @var \Composer\Package\RootPackage $package */
+        $package         = $e->getComposer()->getPackage();
+        $config          = $package->getConfig();
+        $archiveName     = current(array_slice(explode("/", $package->getName()), -1));
+        $archiveFormat   = $config["archive-format"];
+        $archivePath     = $config["archive-dir"];
+        $archiveVersion  = $package->getVersion();
+        $archiveFileName = "$archiveName-$archiveVersion";
+
+        // Overwrite archive format, name and version if given
+        list($archiveFormat, $archiveName, $archiveVersion) = array_merge($e->getArguments(),
+            array($archiveFormat,
+                  $archiveName,
+                  $archiveVersion));
+
+        if (!is_dir($archivePath)) {
+            mkdir($archivePath);
+        }
+
+        if ($archiveFormat == "zip") {
+            static::installHardCopyAssets();
+        } else {
+            static::installSymLinkAssets();
+        }
+
+        $fullArchivePath    = realpath($archivePath);
+        $archiveProjectPath = "$fullArchivePath/$archiveFileName";
+        $assetsPath         = $archiveProjectPath . "/web/bundles";
+
+        // Remove assets
+        if(is_dir($assetsPath)){
+            echo `rm -rf "${assetsPath}"`;
+        }
+        // Copy project files
+        echo `cp -rf . $archiveProjectPath`;
+
+        // Remove development files
+        echo `find $archiveProjectPath -name "*.git*" | xargs rm -rf `;
+        echo `find $archiveProjectPath -name "*.travis.yml" | xargs rm -rf `;
+        echo `find $archiveProjectPath/vendor -type d -iname "tests" | xargs rm -rf `;
+        echo `find $archiveProjectPath/vendor -type d -iname "demo" | xargs rm -rf `;
+
+        foreach (array(
+                     "documentation",
+                     "apidoc",
+                     "dist",
+                     "vendor/mapbender/documentation",
+                     "vendor/mapbender/mapbender-icons",
+
+                     "vendor/mnsami/composer-custom-directory-installer",
+                     "vendor/robloach/component-installer",
+
+                     "vendor/phing",
+                     "vendor/apigen",
+                     "vendor/phpunit",
+                     "vendor/phantomjs",
+                     "vendor/predis",
+                     "vendor/satooshi/php-coveralls",
+                     "vendor/facebook/webdriver",
+                     "vendor/fabpot/sphinx-php",
+
+                     "vendor/afarkas",
+                     "vendor/debugteam",
+                     "vendor/components",
+                     "vendor/viscreation/vis-ui.js/*",
+                     "vendor/medialize/jquery-context-menu",
+                     "vendor/rogeriopradoj/respond",
+                     "vendor/afarkas/html5shiv",
+                     "vendor/fontfacekit/open-sans",
+
+                     "web/app_dev.php",
+                     "web/app_test.php",
+                     "web/index.php",
+                     "web/config.php",
+
+                     "app/cache/*",
+                     "app/logs/*",
+
+
+                 ) as $path) {
+            echo `rm -rf $archiveProjectPath/{$path}`;
+        }
+
+        // Copy license and readme files
+        echo `find vendor/ -type f -iname "license*" | xargs -i cp --parents "{}" "${archiveProjectPath}"`;
+        echo `find vendor/ -type f -iname "readme*" | xargs -i cp --parents "{}" "${archiveProjectPath}"`;
+
+        // Copy project info files
+        echo `cp ../LICENSE "${archiveProjectPath}/"`;
+        echo `cp ../README.md "${archiveProjectPath}/"`;
+        echo `cp ../CONTRIBUTING.md "${archiveProjectPath}/"`;
+        echo `cp ../CHANGELOG.md "${archiveProjectPath}/"`;
+
+        echo "Distributed to: $archiveProjectPath\n";
+    }
+
+    /**
+     * @param Event $e
+     * @return int
+     */
+    public static function build($e)
+    {
+        /** @var \Composer\Package\RootPackage $package */
+        $package         = $e->getComposer()->getPackage();
+        $config          = $package->getConfig();
+        $archiveName     = current(array_slice(explode("/", $package->getName()), -1));
+        $archiveFormat   = $config["archive-format"];
+        $archivePath     = $config["archive-dir"];
+        $archiveVersion  = $package->getVersion();
+        $archiveFileName = "$archiveName-$archiveVersion";
+
+        // Overwrite archive format, name and version if given
+        list($archiveFormat, $archiveName, $archiveVersion) = array_merge($e->getArguments(),
+            array($archiveFormat,
+                  $archiveName,
+                  $archiveVersion));
+
+        $fullArchivePath = realpath($archivePath);
+
+        switch ($archiveFormat) {
+            case "zip":
+                echo `cd {$fullArchivePath};zip -r -q -9 ${archiveFileName}.zip $archiveFileName/`;
+                break;
+            case "exe":
+                echo `cd {$fullArchivePath};zip -r -q -9 ${archiveFileName}.zip $archiveFileName/`;
+                `cd $archivePath; wget ftp://ftp.info-zip.org/pub/infozip/win32/unz552xn.exe`;
+                `cd $archivePath; cat unz552xn.exe ${archiveFileName}.zip > ${archiveFileName}.exe`;
+                break;
+
+            case "tar.gz":
+            default:
+                echo `cd {$fullArchivePath};tar c $archiveFileName/ | gzip --best > ${archiveFileName}.tar.gz`;
+        }
+        echo `du -h "{$fullArchivePath}/${archiveFileName}.${archiveFormat}"`;
+    }
+
+    /**
+     * Generate change log
+     */
+    public static function generateChangeLog()
+    {
+        $logs        = array();
+        $logFileName = "./CHANGELOG";
+        foreach (array("Mapbender-Starter" => '../',
+                       "Mapbender"         => 'mapbender',
+                       "FOM"               => 'fom',
+                       "OwsProxy3"         => 'owsproxy') as $repoName => $repoPath) {
+            $rawLog = `git --git-dir "${repoPath}/.git" log --tags --pretty=format:"%s" `; //--date=short -pretty=format:"%ad: %s"
+
+            $logs[]  = "\n# " . $repoName . "\n";
+            $logList = explode("\n", $rawLog);
+
+            foreach ($logList as $i => $logMessage) {
+                $logMessage = preg_replace("/^fix /is", "Fixed ", $logMessage);
+                $logMessage = preg_replace("/^merge /is", "Merged ", $logMessage);
+                $logMessage = preg_replace("/^bump /is", "Bumped ", $logMessage);
+                $logMessage = preg_replace("/^include /is", "Included  ", $logMessage);
+                $logMessage = preg_replace("/^add /is", "Added ", $logMessage);
+                $logMessage = preg_replace("/^Optimize /is", "Optimized ", $logMessage);
+                $logMessage = preg_replace("/^Translate /is", "Translated ", $logMessage);
+                $logMessage = preg_replace("/^Refactor /is", "Refactored ", $logMessage);
+                $logMessage = preg_replace("/^Improve /is", "Improved ", $logMessage);
+
+                $logList[ $i ] = ucfirst($logMessage);
+            }
+
+
+            $logs    = array_merge($logs, array_unique($logList));
+        }
+        file_put_contents($logFileName, implode("\n", $logs));
+        return $logFileName;
     }
 }

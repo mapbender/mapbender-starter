@@ -1,5 +1,5 @@
 {
-    "name": "wheregroup/mapbender-starter",
+    "name": "wheregroup/mapbender3-starter",
     "description": "Mapbender",
     "type": "project",
     "license": "MIT",
@@ -7,7 +7,7 @@
     "homepage": "http://www.mapbender.org",
     "support": {
         "email":        "mapbender@osgeo.org",
-        "issues":       "https://repo.wheregroup.com/mapbender3/starter/issues",
+        "issues":       "https://github.com/mapbender/mapbender/issues",
         "source":       "https://github.com/mapbender/mapbender-starter",
         "docs":         "http://doc.mapbender3.org/",
         "api-docs":     "http://api.mapbender3.org/",
@@ -103,11 +103,24 @@
         "version": [
             "ComposerBootstrap::displayVersion"
         ],
-        "release": [
-            "ComposerBootstrap::release"
-        ],
         "init-example": [
             "ComposerBootstrap::checkConfiguration"
+        ],
+        "install-hard-copy-assets": [
+            "ComposerBootstrap::installHardCopyAssets"
+        ],
+        "install-sym-link-assets": [
+            "ComposerBootstrap::installSymLinkAssets"
+        ],
+        "dist":[
+            "ComposerBootstrap::distribute"
+        ],
+        "build": [
+            "ComposerBootstrap::distribute",
+            "ComposerBootstrap::build"
+        ],
+        "log": [
+            "ComposerBootstrap::generateChangeLog"
         ]
     },
     "config": {
@@ -116,7 +129,11 @@
         "component-baseurl": "/components",
         "platform": {
             "php": "5.3.19"
-        }
+        },
+        "archive-dir": "../dist",
+        "archive-format": "tar.gz",
+        "optimize-autoloader": true,
+        "process-timeout": 600
     },
     "minimum-stability": "stable",
     "extra": {
