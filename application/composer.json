@@ -281,7 +281,7 @@
                     }
                 },
                 "require": {
-                    "robloach/component-installer": "*"
+                    "robloach/component-installer": "0.x"
                 }
             }
         },
@@ -322,7 +322,7 @@
                     }
                 },
                 "require": {
-                    "robloach/component-installer": "*"
+                    "robloach/component-installer": "0.x"
                 }
             }
         }
