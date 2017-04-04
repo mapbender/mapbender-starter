@@ -89,6 +89,19 @@ class ComposerBootstrap
     }
 
     /**
+     * Set binaries executable permission
+     */
+    public static function prepareBinaries()
+    {
+        if (static::isWindows()) {
+            return;
+        }
+
+        echo `chmod +x vendor/eslider/sasscb/dist/sassc`;
+        echo `chmod +x vendor/eslider/sasscb/dist/sassc.x86'`;
+    }
+
+    /**
      * Installs bundle assets into a given dierectory (for details s. Symfony app/console assets:install).
      */
     public static function installHardCopyAssets()
