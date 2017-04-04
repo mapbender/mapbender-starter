@@ -98,7 +98,7 @@ class ComposerBootstrap
         }
 
         echo `chmod +x vendor/eslider/sasscb/dist/sassc`;
-        echo `chmod +x vendor/eslider/sasscb/dist/sassc.x86'`;
+        echo `chmod +x vendor/eslider/sasscb/dist/sassc.x86`;
     }
 
     /**
