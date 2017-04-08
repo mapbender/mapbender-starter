@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1e7655446895cf371618bb8e3625997e",
+    "content-hash": "3add1dc8bae35cc17f6feedd7842e284",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -83,25 +83,29 @@
         },
         {
             "name": "behat/transliterator",
-            "version": "v1.1.0",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Behat/Transliterator.git",
-                "reference": "868e05be3a9f25ba6424c2dd4849567f50715003"
+                "reference": "826ce7e9c2a6664c0d1f381cbb38b1fb80a7ee2c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Transliterator/zipball/868e05be3a9f25ba6424c2dd4849567f50715003",
-                "reference": "868e05be3a9f25ba6424c2dd4849567f50715003",
+                "url": "https://api.github.com/repos/Behat/Transliterator/zipball/826ce7e9c2a6664c0d1f381cbb38b1fb80a7ee2c",
+                "reference": "826ce7e9c2a6664c0d1f381cbb38b1fb80a7ee2c",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
+            "require-dev": {
+                "chuyskywalker/rolling-curl": "^3.1",
+                "php-yaoi/php-yaoi": "^1.0"
+            },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1-dev"
+                    "dev-master": "1.2-dev"
                 }
             },
             "autoload": {
@@ -119,7 +123,7 @@
                 "slug",
                 "transliterator"
             ],
-            "time": "2015-09-28T16:26:35+00:00"
+            "time": "2017-04-04T11:38:05+00:00"
         },
         {
             "name": "blueimp/jquery-file-upload",
@@ -1968,12 +1972,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/data-manager.git",
-                "reference": "00e23a9e102fcd806eed00dd92d5bb058865ef53"
+                "reference": "a102b0cc775e0e07014b99486b72f2643e4960b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/data-manager/zipball/00e23a9e102fcd806eed00dd92d5bb058865ef53",
-                "reference": "00e23a9e102fcd806eed00dd92d5bb058865ef53",
+                "url": "https://api.github.com/repos/mapbender/data-manager/zipball/a102b0cc775e0e07014b99486b72f2643e4960b1",
+                "reference": "a102b0cc775e0e07014b99486b72f2643e4960b1",
                 "shasum": ""
             },
             "require": {
@@ -2003,21 +2007,20 @@
                 "data",
                 "mapbender"
             ],
-            "time": "2017-03-24 16:53:50"
+            "time": "2017-04-07 15:50:15"
         },
         {
             "name": "mapbender/data-source",
             "version": "dev-master",
-            "target-dir": "Mapbender/DataSourceBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/data-source.git",
-                "reference": "ce68e4e749c561018ab4e94143565538649c379a"
+                "reference": "b749f6de9382b20748fc5f64da3a8b5362112d29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/data-source/zipball/ce68e4e749c561018ab4e94143565538649c379a",
-                "reference": "ce68e4e749c561018ab4e94143565538649c379a",
+                "url": "https://api.github.com/repos/mapbender/data-source/zipball/b749f6de9382b20748fc5f64da3a8b5362112d29",
+                "reference": "b749f6de9382b20748fc5f64da3a8b5362112d29",
                 "shasum": ""
             },
             "require": {
@@ -2051,21 +2054,20 @@
                 "data source",
                 "mapbender"
             ],
-            "time": "2017-03-28 15:46:33"
+            "time": "2017-04-08 22:34:06"
         },
         {
             "name": "mapbender/digitizer",
-            "version": "1.1.58",
-            "target-dir": "Mapbender/DigitizerBundle",
+            "version": "1.1.59",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "e2585c2e9335ce50b2c65cde8e09e16af3219be2"
+                "reference": "4fa744fb4ce53206fb55da3bc8b683127610f585"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/e2585c2e9335ce50b2c65cde8e09e16af3219be2",
-                "reference": "e2585c2e9335ce50b2c65cde8e09e16af3219be2",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/4fa744fb4ce53206fb55da3bc8b683127610f585",
+                "reference": "4fa744fb4ce53206fb55da3bc8b683127610f585",
                 "shasum": ""
             },
             "require": {
@@ -2107,7 +2109,7 @@
                 "digitizing",
                 "mapbender"
             ],
-            "time": "2017-03-29T07:49:00+00:00"
+            "time": "2017-04-08T22:39:46+00:00"
         },
         {
             "name": "mapbender/documentation",
@@ -2185,12 +2187,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "541dbf98c32055d3d03d404f4a92d4b7f8cabdd9"
+                "reference": "5eaff8b3b0b3a83542a6c9da08d06de66efaee6c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/541dbf98c32055d3d03d404f4a92d4b7f8cabdd9",
-                "reference": "541dbf98c32055d3d03d404f4a92d4b7f8cabdd9",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/5eaff8b3b0b3a83542a6c9da08d06de66efaee6c",
+                "reference": "5eaff8b3b0b3a83542a6c9da08d06de66efaee6c",
                 "shasum": ""
             },
             "require": {
@@ -2223,7 +2225,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2017-04-04 10:25:18"
+            "time": "2017-04-06 11:48:37"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -2362,6 +2364,48 @@
                 "owsproxy"
             ],
             "time": "2017-03-24 11:45:35"
+        },
+        {
+            "name": "mapbender/query-builder",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mapbender/query-builder.git",
+                "reference": "a638098caf3fdb6d84bc66f170b89540eac6f0bc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mapbender/query-builder/zipball/a638098caf3fdb6d84bc66f170b89540eac6f0bc",
+                "reference": "a638098caf3fdb6d84bc66f170b89540eac6f0bc",
+                "shasum": ""
+            },
+            "require": {
+                "mapbender/data-source": "0.x",
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Mapbender\\QueryBuilderBundle": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andriy Oblivantsev",
+                    "email": "andriy.oblivantsev@wheregroup.com"
+                }
+            ],
+            "description": "Mapbender query builder element",
+            "keywords": [
+                "data",
+                "mapbender",
+                "query builder"
+            ],
+            "time": "2017-04-08 22:32:53"
         },
         {
             "name": "medialize/jquery-context-menu",
@@ -5540,6 +5584,12 @@
             "package": "mapbender/data-source"
         },
         {
+            "alias": "0.1",
+            "alias_normalized": "0.1.0.0",
+            "version": "9999999-dev",
+            "package": "mapbender/query-builder"
+        },
+        {
             "alias": "1.1",
             "alias_normalized": "1.1.0.0",
             "version": "9999999-dev",
@@ -5552,6 +5602,7 @@
         "mapbender/mapbender": 20,
         "mapbender/owsproxy": 20,
         "mapbender/data-source": 20,
+        "mapbender/query-builder": 20,
         "mapbender/data-manager": 20,
         "mapbender/documentation": 20
     },
