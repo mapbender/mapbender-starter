@@ -81,7 +81,7 @@ class ComposerBootstrap
         }
 
         $isWindows = static::isWindows();
-        if (!$isWindows) {
+        if ($isWindows) {
             static::installHardCopyAssets();
         } else {
             static::installSymLinkAssets();
