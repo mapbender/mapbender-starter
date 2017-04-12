@@ -2180,12 +2180,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-documentation.git",
-                "reference": "95dc15913aed66ae5faf33c4c6377ac723b3c4c6"
+                "reference": "cd1e970b5ab0ca0287ddf67be7a5f98bd5843391"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/95dc15913aed66ae5faf33c4c6377ac723b3c4c6",
-                "reference": "95dc15913aed66ae5faf33c4c6377ac723b3c4c6",
+                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/cd1e970b5ab0ca0287ddf67be7a5f98bd5843391",
+                "reference": "cd1e970b5ab0ca0287ddf67be7a5f98bd5843391",
                 "shasum": ""
             },
             "require": {
@@ -2207,7 +2207,7 @@
                 "documentation",
                 "mapbender"
             ],
-            "time": "2017-03-29 12:53:38"
+            "time": "2017-04-12 11:16:31"
         },
         {
             "name": "mapbender/fom",
@@ -2250,12 +2250,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "4517f03c00e0da2d682454c16d52f061801c23ce"
+                "reference": "792306eec78fd1ac6f6016c609befa31223621d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/4517f03c00e0da2d682454c16d52f061801c23ce",
-                "reference": "4517f03c00e0da2d682454c16d52f061801c23ce",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/792306eec78fd1ac6f6016c609befa31223621d2",
+                "reference": "792306eec78fd1ac6f6016c609befa31223621d2",
                 "shasum": ""
             },
             "require": {
@@ -2288,7 +2288,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2017-04-11 11:33:23"
+            "time": "2017-04-12 12:28:28"
         },
         {
             "name": "mapbender/mapbender-icons",
