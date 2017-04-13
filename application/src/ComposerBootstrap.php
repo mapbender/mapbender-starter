@@ -501,6 +501,7 @@ class ComposerBootstrap
             $logList = explode("\n", $rawLog);
 
             foreach ($logList as $i => $logMessage) {
+                $logMessage = trim($logMessage);
                 $logMessage = preg_replace("/^fix /is", "Fixed ", $logMessage);
                 $logMessage = preg_replace("/^merge /is", "Merged ", $logMessage);
                 $logMessage = preg_replace("/^bump /is", "Bumped ", $logMessage);
@@ -511,7 +512,16 @@ class ComposerBootstrap
                 $logMessage = preg_replace("/^Refactor /is", "Refactored ", $logMessage);
                 $logMessage = preg_replace("/^Improve /is", "Improved ", $logMessage);
 
-                $logList[ $i ] = ucfirst($logMessage);
+                if (
+                    $logMessage == "Fom update"
+                    || $logMessage == "Mapbender update"
+                    || $logMessage == "Bumped Mapbender"
+                    || $logMessage == "Bumped Fom"
+                ) {
+                    continue;
+
+                }
+                $logList[ $i ] = " * " . ucfirst($logMessage);
             }
 
 
