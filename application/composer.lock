@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8900c3e378a4adf38c7b3d8b47073b2a",
+    "content-hash": "943eb5a5475ef8d0ba8c5cb34041c7bc",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -312,16 +312,16 @@
         },
         {
             "name": "components/font-awesome",
-            "version": "4.5.0",
+            "version": "4.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/components/font-awesome.git",
-                "reference": "069663a8419f9db90f9bec71e71ed4bb9d28d6ee"
+                "reference": "885308b939369d147bec93174722786bc2c4eedd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/components/font-awesome/zipball/069663a8419f9db90f9bec71e71ed4bb9d28d6ee",
-                "reference": "069663a8419f9db90f9bec71e71ed4bb9d28d6ee",
+                "url": "https://api.github.com/repos/components/font-awesome/zipball/885308b939369d147bec93174722786bc2c4eedd",
+                "reference": "885308b939369d147bec93174722786bc2c4eedd",
                 "shasum": ""
             },
             "type": "component",
@@ -332,6 +332,7 @@
                     ],
                     "files": [
                         "css/font-awesome.min.css",
+                        "css/font-awesome.css.map",
                         "fonts/*"
                     ]
                 }
@@ -342,7 +343,7 @@
                 "OFL-1.1"
             ],
             "description": "The iconic font designed for use with Twitter Bootstrap.",
-            "time": "2015-11-24T10:33:56+00:00"
+            "time": "2016-10-25T10:56:23+00:00"
         },
         {
             "name": "components/joii",
@@ -515,25 +516,6 @@
             ],
             "description": "jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you're building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice.",
             "time": "2016-09-16T05:47:55+00:00"
-        },
-        {
-            "name": "components/placeholdersjs",
-            "version": "4.0.1",
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/jamesallardice/Placeholders.js/archive/v4.0.1.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "type": "component",
-            "extra": {
-                "component": {
-                    "scripts": [
-                        "dist/placeholders.min.js",
-                        "dist/placeholders.jquery.min.js"
-                    ]
-                }
-            }
         },
         {
             "name": "components/underscore",
@@ -1870,16 +1852,16 @@
         },
         {
             "name": "jms/serializer",
-            "version": "1.6.0",
+            "version": "1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/serializer.git",
-                "reference": "5e9008cbb0bac2986979d905a87ae48efcf578c4"
+                "reference": "2cf3b1aac0c93e9f5fed759c1a7441c76801e045"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/serializer/zipball/5e9008cbb0bac2986979d905a87ae48efcf578c4",
-                "reference": "5e9008cbb0bac2986979d905a87ae48efcf578c4",
+                "url": "https://api.github.com/repos/schmittjoh/serializer/zipball/2cf3b1aac0c93e9f5fed759c1a7441c76801e045",
+                "reference": "2cf3b1aac0c93e9f5fed759c1a7441c76801e045",
                 "shasum": ""
             },
             "require": {
@@ -1945,7 +1927,7 @@
                 "serialization",
                 "xml"
             ],
-            "time": "2017-03-24T13:11:23+00:00"
+            "time": "2017-04-12T14:28:35+00:00"
         },
         {
             "name": "kriswallsmith/assetic",
@@ -2180,12 +2162,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-documentation.git",
-                "reference": "cd1e970b5ab0ca0287ddf67be7a5f98bd5843391"
+                "reference": "5110174450d341815aa877ea6dbaa5d3d552f77e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/cd1e970b5ab0ca0287ddf67be7a5f98bd5843391",
-                "reference": "cd1e970b5ab0ca0287ddf67be7a5f98bd5843391",
+                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/5110174450d341815aa877ea6dbaa5d3d552f77e",
+                "reference": "5110174450d341815aa877ea6dbaa5d3d552f77e",
                 "shasum": ""
             },
             "require": {
@@ -2207,7 +2189,7 @@
                 "documentation",
                 "mapbender"
             ],
-            "time": "2017-04-12 11:16:31"
+            "time": "2017-04-12 15:33:53"
         },
         {
             "name": "mapbender/fom",
@@ -2397,12 +2379,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/owsproxy3.git",
-                "reference": "9750f7ef8b3f3e051586a4ea2b61862b0482015a"
+                "reference": "943190f2a70996390dba04015f6b9ce4c4095faf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/9750f7ef8b3f3e051586a4ea2b61862b0482015a",
-                "reference": "9750f7ef8b3f3e051586a4ea2b61862b0482015a",
+                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/943190f2a70996390dba04015f6b9ce4c4095faf",
+                "reference": "943190f2a70996390dba04015f6b9ce4c4095faf",
                 "shasum": ""
             },
             "require": {
@@ -2426,7 +2408,7 @@
                 "module",
                 "owsproxy"
             ],
-            "time": "2017-03-24 11:45:35"
+            "time": "2017-04-12 15:38:11"
         },
         {
             "name": "medialize/jquery-context-menu",
@@ -4293,27 +4275,26 @@
         },
         {
             "name": "viscreation/vis-ui.js",
-            "version": "0.0.62",
+            "version": "0.0.63",
             "source": {
                 "type": "git",
                 "url": "https://github.com/eSlider/vis-ui.js.git",
-                "reference": "17c715e843c4204935dff3e3ece873caa507ac02"
+                "reference": "d29c319a95c6385fe90f614db2f48ee1a6cd5be3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/eSlider/vis-ui.js/zipball/17c715e843c4204935dff3e3ece873caa507ac02",
-                "reference": "17c715e843c4204935dff3e3ece873caa507ac02",
+                "url": "https://api.github.com/repos/eSlider/vis-ui.js/zipball/d29c319a95c6385fe90f614db2f48ee1a6cd5be3",
+                "reference": "d29c319a95c6385fe90f614db2f48ee1a6cd5be3",
                 "shasum": ""
             },
             "require": {
                 "afarkas/html5shiv": "3.*",
                 "components/bootstrap": "3.*",
                 "components/datatables": "1.10.*",
-                "components/font-awesome": "4.5.*",
+                "components/font-awesome": "4.x",
                 "components/jquery": "1.* || 2.*",
                 "components/jquerydialogextendjs": "*",
                 "components/jqueryui": "1.*",
-                "components/placeholdersjs": "*",
                 "components/underscore": "1.8.*",
                 "debugteam/bootstrap-colorpicker": "1.*",
                 "medialize/jquery-context-menu": "1.*",
@@ -4322,6 +4303,7 @@
             },
             "require-dev": {
                 "components/normalize.css": "3.0.*",
+                "components/placeholdersjs": "*",
                 "drmonty/leaflet": "1.0.*"
             },
             "type": "component",
@@ -4357,7 +4339,7 @@
                 "jquery",
                 "vis-ui"
             ],
-            "time": "2017-02-09T13:30:06+00:00"
+            "time": "2017-04-13T08:37:22+00:00"
         },
         {
             "name": "willdurand/jsonp-callback-validator",
