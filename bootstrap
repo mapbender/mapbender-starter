@@ -4,4 +4,5 @@ cd application
 echo "# Install composer packages";
 php bin/composer install -o
 php bin/composer init-example
+php app/console assets:install --symlink --relative
 php app/console server:run
