@@ -38,7 +38,7 @@ cd mapbender-starter
 
 ## Run bootstrap script 
 
-Running the bootstrap script takes some time to get the required libraries and to prepare the project configurations. Bootstrap saves [Mapbender] starter configurations in `application/app/db/demo.sqlite` configuration file. Symfony configurations are located under `application/app/config`. 
+Running the bootstrap script takes some time to get the required libraries and to prepare the project configurations. Bootstrap saves [Mapbender] starter configurations in a `application/app/db/demo.sqlite` configuration file. After that, a SQLite testing database is created. In the end, the script starts an integrated webserver in your terminal. For more on that, check [start webserver]. Symfony configurations are located under `application/app/config`. 
 
 
 ```sh
@@ -59,6 +59,10 @@ Server running on http://localhost:8000
 Open the displayed URL from your console output message in your favorite browser. 
 
 For development reasons, it is recommended to use Chromium (Chrome) or Firefox.
+
+If you want to log in, you have to use the standard combination (name: root / pw: root). Please change these patterns if you want a secure access.
+
+To stop the server from running, just press ctrl-C or close your console.
 
 That's it! 
 
@@ -631,6 +635,7 @@ bin/phpunit -c app vendor/mapbender/digitizer/Mapbender/DigitizerBundle/Tests/Fe
 [submodules]: #submodules "Git submodules"
 [manager controllers]: #manager-controllers 
 [layers]: #layers
+[start webserver]: #start-web-server "Start webserver"
 [services]: http://symfony.com/doc/2.3/book/service_container.html "Symfony Services"
 [components]: http://symfony.com/doc/current/components/index.html
 [style guide]: http://www.php-fig.org/psr/psr-2/
