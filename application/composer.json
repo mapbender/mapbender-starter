@@ -125,102 +125,11 @@
             "mapbender/": ["mapbender/mapbender"],
             "fom/": ["mapbender/fom"],
             "owsproxy/": ["mapbender/owsproxy"],
+            "vendor/igosuki/compass-mixins": ["wheregroup/compass-mixins"],
             "mapbender/src/Mapbender/CoreBundle/Resources/public/mapquery/": ["mapbender/mapquery"]
         }
     },
     "repositories": [
-        {
-            "type": "package",
-            "package": {
-                "name": "components/placeholdersjs",
-                "type": "component",
-                "version": "4.0.1",
-                "dist": {
-                    "url": "https://github.com/jamesallardice/Placeholders.js/archive/v4.0.1.zip",
-                    "type": "zip"
-                },
-                "extra": {
-                    "component": {
-                        "scripts": [
-                            "dist/placeholders.min.js",
-                            "dist/placeholders.jquery.min.js"
-                        ]
-                    }
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "components/jquerydialogextendjs",
-                "type": "component",
-                "version": "2.0.4",
-                "dist": {
-                    "url": "https://github.com/ROMB/jquery-dialogextend/archive/2.0.4.zip",
-                    "type": "zip"
-                },
-                "extra": {
-                    "component": {
-                        "scripts": ["build/*.min.js"]
-                    }
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "igosuki/compass-mixins",
-                "type": "component",
-                "version": "0.12.6",
-                "dist": {
-                    "url": "https://github.com/Igosuki/compass-mixins/archive/v0.12.6.zip",
-                    "type": "zip"
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "fontfacekit/open-sans",
-                "type": "component",
-                "version": "1.4.0",
-                "dist": {
-                    "url": "https://github.com/FontFaceKit/open-sans/archive/1.4.0.zip",
-                    "type": "zip"
-                },
-                "extra": {
-                    "component": {
-                        "styles": [
-                            "*.css"
-                        ],
-                        "files": [
-                            "fonts/*/*"
-                        ]
-                    }
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "components/joii",
-                "type": "component",
-                "version": "3.2.0",
-                "dist": {
-                    "url": "https://github.com/haroldiedema/joii/archive/3.2.0.zip",
-                    "type": "zip"
-                },
-                "extra": {
-                    "component": {
-                        "scripts": ["dist/joii.min.js"],
-                        "files": ["dist/joii.js"]
-                    }
-                },
-                "require": {
-                    "robloach/component-installer": "0.x"
-                }
-            }
-        },
         {
             "type": "package",
             "package": {
@@ -234,32 +143,6 @@
                 "bin": [
                     "bin/phantomjs"
                 ]
-            }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "components/codemirror",
-                "type": "component",
-                "version": "5.13.4",
-                "dist": {
-                    "url": "https://github.com/codemirror/CodeMirror/archive/5.13.4.zip",
-                    "type": "tar"
-                },
-                "extra": {
-                    "component": {
-                        "files": [
-                            "lib/**",
-                            "keymap/**",
-                            "mode/**",
-                            "theme/**",
-                            "addon/**"
-                        ]
-                    }
-                },
-                "require": {
-                    "robloach/component-installer": "0.x"
-                }
             }
         }
     ]
