@@ -599,7 +599,7 @@ For distributing and building packages there is an [composer] command:
 * `bin/composer build` Build package command with follow optional parameters:
     * **[tar.gz|zip]** - Optional parameter defines package file format. Default configuration is defined in `composer.json` as `config/archive-format`.
     * **[dist-name]** - Optional parameter defines package file name prefix. Default configuration is defined in `composer.json` as `name`, vendor name will be ignored.
-    * **[dist-name]** - Optional parameter defines package version this  included in package name as suffix. Default configuration is defined in `composer.json` as `version`.
+    * **[dist-version]** - Optional parameter defines package version this  included in package name as suffix. Default configuration is defined in `composer.json` as `version`.
 
 You can define [composer] distributing path in `composer.json` as `config/archive-dir`. Default location is a `dist` folder in root of the project. 
 
