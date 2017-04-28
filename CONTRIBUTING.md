@@ -605,7 +605,7 @@ You can define [composer] distributing path in `composer.json` as `config/archiv
 
 ## Build package example
 
-Command this distributes and build packag `dist/test-distribution.1.0.1.tar.gz` 
+Command this distributes and build package `dist/test-distribution.1.0.1.tar.gz` 
 
 ```bash
 bin/composer build zip test-distribution 1.0.1
