@@ -2000,26 +2000,23 @@
         },
         {
             "name": "mapbender/digitizer",
-            "version": "1.1.60",
+            "version": "1.1.61",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "55b4259f17217a294abc69f671cd1f2e98883ad6"
+                "reference": "3c488c8087f603654cb26e81142df5a3f61eaf54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/55b4259f17217a294abc69f671cd1f2e98883ad6",
-                "reference": "55b4259f17217a294abc69f671cd1f2e98883ad6",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/3c488c8087f603654cb26e81142df5a3f61eaf54",
+                "reference": "3c488c8087f603654cb26e81142df5a3f61eaf54",
                 "shasum": ""
             },
             "require": {
                 "blueimp/jquery-file-upload": "9.*",
                 "mapbender/data-source": "0.*",
-                "phayes/geophp": "1.2",
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "mapbender/data-source": "@dev"
+                "php": ">=5.3.3",
+                "viscreation/vis-ui.js": "0.*"
             },
             "type": "library",
             "extra": {
@@ -2051,7 +2048,7 @@
                 "digitizing",
                 "mapbender"
             ],
-            "time": "2017-04-10T14:23:31+00:00"
+            "time": "2017-05-02T10:21:57+00:00"
         },
         {
             "name": "mapbender/documentation",
@@ -2094,12 +2091,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/fom.git",
-                "reference": "89547407cc29f0fa9e6561ebb20bb6dfd4e2da29"
+                "reference": "7dba3eda4a186018ed96bda474be400bc64cb57a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/fom/zipball/89547407cc29f0fa9e6561ebb20bb6dfd4e2da29",
-                "reference": "89547407cc29f0fa9e6561ebb20bb6dfd4e2da29",
+                "url": "https://api.github.com/repos/mapbender/fom/zipball/7dba3eda4a186018ed96bda474be400bc64cb57a",
+                "reference": "7dba3eda4a186018ed96bda474be400bc64cb57a",
                 "shasum": ""
             },
             "require": {
@@ -2121,7 +2118,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2017-04-11 11:33:39"
+            "time": "2017-05-02 09:32:17"
         },
         {
             "name": "mapbender/mapbender",
@@ -2129,12 +2126,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "128a65ccaf2127180f4a70d118c682d72e8bc041"
+                "reference": "bd92892713383d595ed2325531212161d6386894"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/128a65ccaf2127180f4a70d118c682d72e8bc041",
-                "reference": "128a65ccaf2127180f4a70d118c682d72e8bc041",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/bd92892713383d595ed2325531212161d6386894",
+                "reference": "bd92892713383d595ed2325531212161d6386894",
                 "shasum": ""
             },
             "require": {
@@ -2167,7 +2164,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2017-04-28 08:04:43"
+            "time": "2017-05-02 09:31:27"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -2276,12 +2273,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/owsproxy3.git",
-                "reference": "943190f2a70996390dba04015f6b9ce4c4095faf"
+                "reference": "989c084fa30f56749e59dc361869c3d39c8ed83a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/943190f2a70996390dba04015f6b9ce4c4095faf",
-                "reference": "943190f2a70996390dba04015f6b9ce4c4095faf",
+                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/989c084fa30f56749e59dc361869c3d39c8ed83a",
+                "reference": "989c084fa30f56749e59dc361869c3d39c8ed83a",
                 "shasum": ""
             },
             "require": {
@@ -2305,7 +2302,7 @@
                 "module",
                 "owsproxy"
             ],
-            "time": "2017-04-12 15:38:11"
+            "time": "2017-05-02 09:31:49"
         },
         {
             "name": "medialize/jquery-context-menu",
@@ -3921,16 +3918,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.8.19",
+            "version": "v2.8.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "da35163ddb6e876bfb6054f84e02947a6e0274e3"
+                "reference": "bbe1eae0c213e45da9fb0c6abb43aff415a3dcdd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/da35163ddb6e876bfb6054f84e02947a6e0274e3",
-                "reference": "da35163ddb6e876bfb6054f84e02947a6e0274e3",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/bbe1eae0c213e45da9fb0c6abb43aff415a3dcdd",
+                "reference": "bbe1eae0c213e45da9fb0c6abb43aff415a3dcdd",
                 "shasum": ""
             },
             "require": {
@@ -4054,7 +4051,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2017-04-05T04:05:19+00:00"
+            "time": "2017-05-01T16:14:31+00:00"
         },
         {
             "name": "twig/extensions",
