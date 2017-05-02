@@ -2000,26 +2000,23 @@
         },
         {
             "name": "mapbender/digitizer",
-            "version": "1.1.60",
+            "version": "1.1.61",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "55b4259f17217a294abc69f671cd1f2e98883ad6"
+                "reference": "3c488c8087f603654cb26e81142df5a3f61eaf54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/55b4259f17217a294abc69f671cd1f2e98883ad6",
-                "reference": "55b4259f17217a294abc69f671cd1f2e98883ad6",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/3c488c8087f603654cb26e81142df5a3f61eaf54",
+                "reference": "3c488c8087f603654cb26e81142df5a3f61eaf54",
                 "shasum": ""
             },
             "require": {
                 "blueimp/jquery-file-upload": "9.*",
                 "mapbender/data-source": "0.*",
-                "phayes/geophp": "1.2",
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "mapbender/data-source": "@dev"
+                "php": ">=5.3.3",
+                "viscreation/vis-ui.js": "0.*"
             },
             "type": "library",
             "extra": {
@@ -2051,7 +2048,7 @@
                 "digitizing",
                 "mapbender"
             ],
-            "time": "2017-04-10T14:23:31+00:00"
+            "time": "2017-05-02T10:21:57+00:00"
         },
         {
             "name": "mapbender/documentation",
