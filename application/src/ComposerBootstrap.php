@@ -355,13 +355,14 @@ class ComposerBootstrap
         $archiveFormat   = $config["archive-format"];
         $archivePath     = $config["archive-dir"];
         $archiveVersion  = $package->getVersion();
-        $archiveFileName = "$archiveName-$archiveVersion";
 
         // Overwrite archive format, name and version if given
         list($archiveFormat, $archiveName, $archiveVersion) = array_merge($e->getArguments(),
             array($archiveFormat,
                   $archiveName,
                   $archiveVersion));
+
+        $archiveFileName = "$archiveName-$archiveVersion";
 
         if (!is_dir($archivePath)) {
             mkdir($archivePath);
@@ -457,7 +458,6 @@ class ComposerBootstrap
         $archiveFormat   = $config["archive-format"];
         $archivePath     = $config["archive-dir"];
         $archiveVersion  = $package->getVersion();
-        $archiveFileName = "$archiveName-$archiveVersion";
 
         // Overwrite archive format, name and version if given
         list($archiveFormat, $archiveName, $archiveVersion) = array_merge($e->getArguments(),
@@ -465,6 +465,7 @@ class ComposerBootstrap
                   $archiveName,
                   $archiveVersion));
 
+        $archiveFileName = "$archiveName-$archiveVersion";
         $fullArchivePath = realpath($archivePath);
 
         switch ($archiveFormat) {
