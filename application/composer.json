@@ -12,6 +12,7 @@
         "docs":         "http://doc.mapbender3.org/",
         "api-docs":     "http://api.mapbender3.org/",
         "forum":        "http://osgeo-org.1560.x6.nabble.com/Mapbender-f4217602.html",
+        "twitter":      "https://twitter.com/mapbender",
         "user-list":    "https://lists.osgeo.org/pipermail/mapbender_users/"
     },
     "autoload": {
