@@ -32,7 +32,7 @@
         "php": ">=5.3.9",
         "symfony/symfony": "2.8.x",
         "doctrine/orm": "~2.2,>=2.2.3",
-        "doctrine/doctrine-bundle": "1.2.x",
+        "doctrine/doctrine-bundle": "1.x",
         "twig/extensions": "1.x",
         "symfony/assetic-bundle": "2.7.x",
         "symfony/swiftmailer-bundle": "2.3.x",
@@ -54,7 +54,6 @@
         "mapbender/mapbender": "dev-release/3.0.6",
         "mapbender/owsproxy": "dev-release/3.0.6",
         "mapbender/digitizer": "1.1.x",
-        "mapbender/data-source": "dev-master as 0.1",
         "mapbender/documentation": "dev-release/3.0.6"
     },
     "scripts": {
