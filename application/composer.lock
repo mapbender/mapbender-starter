@@ -2061,7 +2061,7 @@
         },
         {
             "name": "mapbender/data-source",
-            "version": "0.1.1",
+            "version": "0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/data-source.git",
@@ -2164,12 +2164,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-documentation.git",
-                "reference": "a8aec5f1029da49b1d1cb28d9f5508a620f668e0"
+                "reference": "95832ffe5a2c3d34843b9aa2f94a21127544fe26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/a8aec5f1029da49b1d1cb28d9f5508a620f668e0",
-                "reference": "a8aec5f1029da49b1d1cb28d9f5508a620f668e0",
+                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/95832ffe5a2c3d34843b9aa2f94a21127544fe26",
+                "reference": "95832ffe5a2c3d34843b9aa2f94a21127544fe26",
                 "shasum": ""
             },
             "require": {
@@ -2191,7 +2191,7 @@
                 "documentation",
                 "mapbender"
             ],
-            "time": "2017-05-03 11:55:51"
+            "time": "2017-05-04 15:08:05"
         },
         {
             "name": "mapbender/fom",
@@ -2234,12 +2234,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "4ca2573817daf82155b62489f495e97d05e90ca4"
+                "reference": "3e40815fa0c156dd89936fdaa4ac43032fdd5c2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/4ca2573817daf82155b62489f495e97d05e90ca4",
-                "reference": "4ca2573817daf82155b62489f495e97d05e90ca4",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/3e40815fa0c156dd89936fdaa4ac43032fdd5c2d",
+                "reference": "3e40815fa0c156dd89936fdaa4ac43032fdd5c2d",
                 "shasum": ""
             },
             "require": {
@@ -2272,7 +2272,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2017-05-03 12:53:29"
+            "time": "2017-05-04 15:40:10"
         },
         {
             "name": "mapbender/mapbender-icons",
