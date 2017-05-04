@@ -388,13 +388,23 @@ class ComposerBootstrap
         $archiveFormat   = $config["archive-format"];
         $archivePath     = $config["archive-dir"];
         $archiveVersion  = $package->getVersion();
-        $archiveFileName = "$archiveName-$archiveVersion";
 
         // Overwrite archive format, name and version if given
-        list($archiveFormat, $archiveName, $archiveVersion) = array_merge($e->getArguments(),
-            array($archiveFormat,
-                  $archiveName,
-                  $archiveVersion));
+        $arguments = $e->getArguments();
+
+        if(isset($arguments[0]) ){
+            $archiveFormat = $arguments[0];
+        }
+
+        if(isset($arguments[1]) ){
+            $archiveName = $arguments[1];
+        }
+
+        if(isset($arguments[2]) ){
+            $archiveVersion = $arguments[2];
+        }
+
+        $archiveFileName = "$archiveName-$archiveVersion";
 
         if (!is_dir($archivePath)) {
             mkdir($archivePath);
@@ -490,13 +500,23 @@ class ComposerBootstrap
         $archiveFormat   = $config["archive-format"];
         $archivePath     = $config["archive-dir"];
         $archiveVersion  = $package->getVersion();
-        $archiveFileName = "$archiveName-$archiveVersion";
 
         // Overwrite archive format, name and version if given
-        list($archiveFormat, $archiveName, $archiveVersion) = array_merge($e->getArguments(),
-            array($archiveFormat,
-                  $archiveName,
-                  $archiveVersion));
+        $arguments = $e->getArguments();
+
+        if(isset($arguments[0]) ){
+            $archiveFormat = $arguments[0];
+        }
+
+        if(isset($arguments[1]) ){
+            $archiveName = $arguments[1];
+        }
+
+        if(isset($arguments[2]) ){
+            $archiveVersion = $arguments[2];
+        }
+
+        $archiveFileName = "$archiveName-$archiveVersion";
 
         $fullArchivePath = realpath($archivePath);
 

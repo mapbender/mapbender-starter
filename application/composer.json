@@ -12,6 +12,7 @@
         "docs":         "http://doc.mapbender3.org/",
         "api-docs":     "http://api.mapbender3.org/",
         "forum":        "http://osgeo-org.1560.x6.nabble.com/Mapbender-f4217602.html",
+        "twitter":      "https://twitter.com/mapbender",
         "user-list":    "https://lists.osgeo.org/pipermail/mapbender_users/"
     },
     "autoload": {
@@ -31,7 +32,7 @@
         "php": ">=5.3.9",
         "symfony/symfony": "2.8.x",
         "doctrine/orm": "~2.2,>=2.2.3",
-        "doctrine/doctrine-bundle": "1.2.x",
+        "doctrine/doctrine-bundle": "1.x",
         "twig/extensions": "1.x",
         "symfony/assetic-bundle": "2.7.x",
         "symfony/swiftmailer-bundle": "2.3.x",
@@ -53,7 +54,6 @@
         "mapbender/mapbender": "dev-release/3.0.6",
         "mapbender/owsproxy": "dev-release/3.0.6",
         "mapbender/digitizer": "1.1.x",
-        "mapbender/data-source": "dev-master as 0.1",
         "mapbender/documentation": "dev-release/3.0.6"
     },
     "scripts": {
@@ -75,6 +75,12 @@
         ],
         "docs": [
             "ComposerBootstrap::genApiDocumentation",
+            "ComposerBootstrap::genDocumentation"
+        ],
+        "gen-api-docs": [
+            "ComposerBootstrap::genApiDocumentation"
+        ],
+        "gen-user-docs": [
             "ComposerBootstrap::genDocumentation"
         ],
         "clean": [
