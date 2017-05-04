@@ -86,7 +86,7 @@
         "init-example": [
             "ComposerBootstrap::checkConfiguration"
         ],
-        "rebuild-database": [
+        "drop-and-rebuild-database": [
             "ComposerBootstrap::rebuildDatabase"
         ],
         "install-hard-copy-assets": [
