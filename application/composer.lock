@@ -2164,12 +2164,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-documentation.git",
-                "reference": "95832ffe5a2c3d34843b9aa2f94a21127544fe26"
+                "reference": "1a5bc9bed415ad7446066d8ec29b11d43e26cc9d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/95832ffe5a2c3d34843b9aa2f94a21127544fe26",
-                "reference": "95832ffe5a2c3d34843b9aa2f94a21127544fe26",
+                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/1a5bc9bed415ad7446066d8ec29b11d43e26cc9d",
+                "reference": "1a5bc9bed415ad7446066d8ec29b11d43e26cc9d",
                 "shasum": ""
             },
             "require": {
@@ -2191,7 +2191,7 @@
                 "documentation",
                 "mapbender"
             ],
-            "time": "2017-05-04 15:08:05"
+            "time": "2017-05-05 11:39:03"
         },
         {
             "name": "mapbender/fom",
@@ -2199,12 +2199,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/fom.git",
-                "reference": "7dba3eda4a186018ed96bda474be400bc64cb57a"
+                "reference": "2e60279acbb3eda465ab738c505bfe4ed11c8699"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/fom/zipball/7dba3eda4a186018ed96bda474be400bc64cb57a",
-                "reference": "7dba3eda4a186018ed96bda474be400bc64cb57a",
+                "url": "https://api.github.com/repos/mapbender/fom/zipball/2e60279acbb3eda465ab738c505bfe4ed11c8699",
+                "reference": "2e60279acbb3eda465ab738c505bfe4ed11c8699",
                 "shasum": ""
             },
             "require": {
@@ -2226,7 +2226,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2017-05-02 09:32:17"
+            "time": "2017-05-05 11:25:42"
         },
         {
             "name": "mapbender/mapbender",
@@ -2234,12 +2234,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "3e40815fa0c156dd89936fdaa4ac43032fdd5c2d"
+                "reference": "e9674e46ffbce32cf00fee1d42c5c7cc436e71c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/3e40815fa0c156dd89936fdaa4ac43032fdd5c2d",
-                "reference": "3e40815fa0c156dd89936fdaa4ac43032fdd5c2d",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/e9674e46ffbce32cf00fee1d42c5c7cc436e71c7",
+                "reference": "e9674e46ffbce32cf00fee1d42c5c7cc436e71c7",
                 "shasum": ""
             },
             "require": {
@@ -2272,7 +2272,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2017-05-04 15:40:10"
+            "time": "2017-05-05 11:25:24"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -2381,12 +2381,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/owsproxy3.git",
-                "reference": "989c084fa30f56749e59dc361869c3d39c8ed83a"
+                "reference": "d2aa4d0321e5711e27d1af965148669f1c5cd599"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/989c084fa30f56749e59dc361869c3d39c8ed83a",
-                "reference": "989c084fa30f56749e59dc361869c3d39c8ed83a",
+                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/d2aa4d0321e5711e27d1af965148669f1c5cd599",
+                "reference": "d2aa4d0321e5711e27d1af965148669f1c5cd599",
                 "shasum": ""
             },
             "require": {
@@ -2410,7 +2410,7 @@
                 "module",
                 "owsproxy"
             ],
-            "time": "2017-05-02 09:31:49"
+            "time": "2017-05-05 11:25:58"
         },
         {
             "name": "medialize/jquery-context-menu",
