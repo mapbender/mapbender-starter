@@ -8,7 +8,7 @@
 - [OWS Proxy](https://github.com/mapbender/owsproxy3/commits/release/3.0.6)
 
     
-## v3.0.6.0 - 2017-05-02
+## v3.0.6.0 - 2017-05-05
     - Fix transalate element titles by import Closes: #46
     - Fix import applications Closes: #45, #47
     - Add php 'mbstring' and 'xml' extensions requirement
