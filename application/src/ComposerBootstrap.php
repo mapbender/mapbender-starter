@@ -428,7 +428,6 @@ class ComposerBootstrap
                      "vendor/afarkas/html5shiv",
                      "vendor/fontfacekit/open-sans",
 
-                     "web/app_dev.php",
                      "web/app_test.php",
                      "web/index.php",
                      "web/config.php",
