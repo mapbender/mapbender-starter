@@ -422,7 +422,6 @@ class ComposerBootstrap
                      "vendor/afarkas",
                      "vendor/debugteam",
                      "vendor/components",
-                     "vendor/viscreation/vis-ui.js/*",
                      "vendor/medialize/jquery-context-menu",
                      "vendor/rogeriopradoj/respond",
                      "vendor/afarkas/html5shiv",
