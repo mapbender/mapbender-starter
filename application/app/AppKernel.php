@@ -21,11 +21,21 @@ class AppKernel extends Kernel
     {
         $namespaces = include(dirname(__FILE__) . "/../vendor/composer/autoload_namespaces.php");
         foreach ($namespaces as $name => $path) {
-            $bundleClassName = $name . '\\' . str_replace('\\', "", $name);
             if (strpos($name, $nameSpace) === 0) {
+                $bundleClassName = $name . '\\' . str_replace('\\', "", $name);
                 $bundles[] = new $bundleClassName();
             }
 
+        }
+
+        $namespaces = include(dirname(__FILE__) . "/../vendor/composer/autoload_psr4.php");
+        foreach ($namespaces as $name => $path) {
+            if (strpos($name, $nameSpace) === 0
+                && strpos($name, "Bundle")
+            ) {
+                $bundleClassName = $name . str_replace('\\', "", $name);
+                $bundles[] = new $bundleClassName();
+            }
         }
         return $bundles;
     }
