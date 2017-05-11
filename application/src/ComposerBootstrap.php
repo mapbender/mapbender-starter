@@ -429,7 +429,6 @@ class ComposerBootstrap
 
                      "web/app_test.php",
                      "web/index.php",
-                     "web/config.php",
 
                      "app/cache/*",
                      "app/logs/*",
