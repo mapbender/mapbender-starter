@@ -439,7 +439,7 @@ class NewTemplate extends Mapbender\CoreBundle\Component\Template{
 ```php
     public function getTemplates()
     {
-        return array('Mapbender\AcmeBundle\Template\NewTemplate',);
+        return array('Mapbender\AcmeBundle\Template\NewTemplate');
     }
 ```
 
