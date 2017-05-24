@@ -2199,12 +2199,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/fom.git",
-                "reference": "2e60279acbb3eda465ab738c505bfe4ed11c8699"
+                "reference": "f4e943c84254a6256c9007d3bd42f25b04ca0442"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/fom/zipball/2e60279acbb3eda465ab738c505bfe4ed11c8699",
-                "reference": "2e60279acbb3eda465ab738c505bfe4ed11c8699",
+                "url": "https://api.github.com/repos/mapbender/fom/zipball/f4e943c84254a6256c9007d3bd42f25b04ca0442",
+                "reference": "f4e943c84254a6256c9007d3bd42f25b04ca0442",
                 "shasum": ""
             },
             "require": {
@@ -2226,7 +2226,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2017-05-05 11:25:42"
+            "time": "2017-05-24 13:04:10"
         },
         {
             "name": "mapbender/mapbender",
@@ -2234,12 +2234,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "a02ed120acb8db5a2ea7e03952004bf6cb7e509d"
+                "reference": "308211565807494a1609c3c6ff5cb40c1f39fdbb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/a02ed120acb8db5a2ea7e03952004bf6cb7e509d",
-                "reference": "a02ed120acb8db5a2ea7e03952004bf6cb7e509d",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/308211565807494a1609c3c6ff5cb40c1f39fdbb",
+                "reference": "308211565807494a1609c3c6ff5cb40c1f39fdbb",
                 "shasum": ""
             },
             "require": {
@@ -2272,7 +2272,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2017-05-24 10:10:04"
+            "time": "2017-05-24 13:04:36"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -2381,12 +2381,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/owsproxy3.git",
-                "reference": "528a72ca387ad5c303043322157615ada5a8efc4"
+                "reference": "d2f0901a2c8e28755d1dadf987afd0ed9bb10c68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/528a72ca387ad5c303043322157615ada5a8efc4",
-                "reference": "528a72ca387ad5c303043322157615ada5a8efc4",
+                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/d2f0901a2c8e28755d1dadf987afd0ed9bb10c68",
+                "reference": "d2f0901a2c8e28755d1dadf987afd0ed9bb10c68",
                 "shasum": ""
             },
             "require": {
@@ -2410,7 +2410,7 @@
                 "module",
                 "owsproxy"
             ],
-            "time": "2017-05-10 07:59:10"
+            "time": "2017-05-24 13:04:56"
         },
         {
             "name": "medialize/jquery-context-menu",
