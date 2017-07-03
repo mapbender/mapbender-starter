@@ -1,5 +1,35 @@
 # Changelog
 
+## v3.0.6.1
+     - [Mapbender Starter](https://github.com/mapbender/mapbender-starter/commits/release/3.0.6)
+     - [Mapbender Core](https://github.com/mapbender/mapbender/commits/release/3.0.6)
+     - [FOM](https://github.com/mapbender/fom/commits/release/3.0.6)
+     - [OWS Proxy](https://github.com/mapbender/owsproxy3/commits/release/3.0.6)
+     - Update composer.lock for next bugfix release.
+     - Fix a css problem with checkboxes; Fix print scaling
+     - Fix typo
+     - Let config.php by distributing or build a package
+     - Fix composer PSR 4 auto loading
+     - Fix symfony cookies reference URL
+     - Fix clean modal SCSS file
+     - Update composer libraries for 3.0.6.0
+     - Update Date in Changelog.md
+     - Add "app_dev.php" file for distribution
+     - Rename composer rebuild database command
+     - Disable generate API documentation generation report
+     - Fix and add application by render elements
+     - Add WmcEditor Default Parameters for width and height
+     - Fix parse dimenstion data
+     - Fix vendor specific parameter close button position
+     - Add missed VendorSpecific origextentextent property
+     - Fix build package name
+     - Fix save MetadataUrl as doctine array type
+     - Set doctrine version to 1.x
+     - Fix save Style, VendorSpecific and WmsLayerSource entities
+     - Fix retrive composer build options
+     - Add twitter link
+
+
 ## v3.0.6.0
 
 - [Mapbender Starter](https://github.com/mapbender/mapbender-starter/commits/release/3.0.6)

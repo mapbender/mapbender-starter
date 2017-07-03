@@ -34,6 +34,29 @@ class ComposerBootstrap
     }
 
     /**
+     * Rebuild database.
+     * Needs for tests
+     *
+     * @param $event
+     */
+    public static function rebuildDatabase($event)
+    {
+        $files        = static::getDefaultParameterFiles();
+        $isNewInstall = !file_exists($files["current"]);
+
+        if ($isNewInstall) {
+            copy($files["default"], $files["current"]);
+        }
+
+        static::dropDatabase();
+        static::createDatabase();
+        static::resetRootLogin();
+        static::importExampleApplications();
+        static::updateEpsgCodes();
+        //static::clearCache();
+    }
+
+    /**
      * Is windows
      *
      * @return bool
@@ -129,6 +152,16 @@ class ComposerBootstrap
             echo `chmod -R ug+wX app/logs`;
             echo `chmod -R ug+wX web/uploads`;
         }
+    }
+
+    /**
+     * Crate database, schema and force update
+     */
+    public static function dropDatabase()
+    {
+        static::printStatus("Drop database");
+
+        echo `php app/console doctrine:database:drop --force`;
     }
 
     /**
@@ -422,7 +455,6 @@ class ComposerBootstrap
                      "vendor/afarkas",
                      "vendor/debugteam",
                      "vendor/components",
-                     "vendor/viscreation/vis-ui.js/*",
                      "vendor/medialize/jquery-context-menu",
                      "vendor/rogeriopradoj/respond",
                      "vendor/afarkas/html5shiv",
@@ -430,7 +462,6 @@ class ComposerBootstrap
 
                      "web/app_test.php",
                      "web/index.php",
-                     "web/config.php",
 
                      "app/cache/*",
                      "app/logs/*",
