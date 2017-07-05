@@ -1,5 +1,5 @@
 <?php
-namespace Mapbender\OLCesium;
+namespace Mapbender\OLCesiumBundle;
 
 use Mapbender\CoreBundle\Component\MapbenderBundle;
 
@@ -14,7 +14,7 @@ class  MapbenderOLCesiumBundle extends MapbenderBundle
     public function getElements()
     {
         return array(
-            'Mapbender\OLCesium\Element\OlCesiumMap'
+            'Mapbender\OLCesiumBundle\Element\OlCesiumMap'
         );
     }
 }
