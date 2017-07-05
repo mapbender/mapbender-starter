@@ -54,7 +54,9 @@
         "mapbender/mapbender": "dev-release/3.0.6",
         "mapbender/owsproxy": "dev-release/3.0.6",
         "mapbender/digitizer": "1.1.x",
-        "mapbender/documentation": "dev-release/3.0.6"
+        "mapbender/documentation": "dev-release/3.0.6",
+
+        "openlayers/ol-cesium": "1.x"
     },
     "scripts": {
         "post-install-cmd": [
@@ -152,6 +154,25 @@
                 "bin": [
                     "bin/phantomjs"
                 ]
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "openlayers/ol-cesium",
+                "type": "component",
+                "version": "1.28",
+                "dist": {
+                    "url": "https://github.com/openlayers/ol-cesium/releases/download/v1.28/ol-cesium-v1.28.zip",
+                    "type": "zip"
+                },
+                "extra": {
+                    "component": {
+                        "files": [
+                            "**"
+                        ]
+                    }
+                }
             }
         }
     ]

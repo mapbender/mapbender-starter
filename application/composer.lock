@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c343492aa2a0f1f484c45d7e0879da93",
+    "content-hash": "97a435d62a297e14efd3dd061d0dd867",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -2598,6 +2598,24 @@
                 "psr-3"
             ],
             "time": "2017-06-19T01:22:40+00:00"
+        },
+        {
+            "name": "openlayers/ol-cesium",
+            "version": "1.28",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/openlayers/ol-cesium/releases/download/v1.28/ol-cesium-v1.28.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "files": [
+                        "**"
+                    ]
+                }
+            }
         },
         {
             "name": "paragonie/random_compat",
