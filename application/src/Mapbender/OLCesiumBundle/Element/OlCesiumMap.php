@@ -48,8 +48,16 @@ class OlCesiumMap extends Map
     public static function listAssets()
     {
         return array(
-            'js'  => array('map.element.js'),
-            'css' => array('map.element.scss')
+            'js'  => array(
+                //'/components/ol-cesium/olcesium-debug.js',
+                //'/components/ol-cesium/CesiumUnminified/Cesium.js',
+                '/components/ol-cesium/olcesium.js',
+                '/components/ol-cesium/Cesium/Cesium.js',
+                'map.element.js'
+            ),
+            'css' => array(
+                'map.element.scss'
+            )
         );
     }
 }

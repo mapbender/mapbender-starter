@@ -1,3 +1,18 @@
-.digga {
-  x: 1;
+@import url("components/ol-cesium/ol.css");
+
+.mb-element-ol-cesium-map {
+  > .ol-map {
+    width: 50%;
+    float: left;
+
+    > .ol-viewport {
+
+    }
+  }
+
+  > .cesium-map {
+    width: 50%;
+    float: left;
+    position: relative;
+  }
 }
