@@ -2,17 +2,34 @@
 
 .mb-element-ol-cesium-map {
   > .ol-map {
-    width: 50%;
     float: left;
-
+    width: 100%;
+    height: 100%;
     > .ol-viewport {
-
     }
   }
 
   > .cesium-map {
-    width: 50%;
     float: left;
     position: relative;
+  }
+
+  > .button-navigation {
+
+    display: block;
+    position: absolute;
+
+    width: 200px;
+
+    right: 20px;
+    bottom: 50px;
+
+    padding: 10px;
+    border: 1px solid #c0c0c0;
+
+    .button {
+      width: 100%;
+    }
+
   }
 }

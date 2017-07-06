@@ -4,32 +4,95 @@
         /** Element API URL */
         elementUrl: null,
 
+        /** OpenLayers 4 / cesium map element */
+        olMapElement: null,
+
+        options: {
+            fps: 60,
+
+            // Show Cesium by default?
+            ceMap: true,
+
+            // Show OpenLayers by default?
+            olMap: true
+        },
+
+        toggle3D: function() {
+            var widget = this;
+            var ol3d = widget.olMapElement.data('olCesiumMap');
+            widget.enable3D(!ol3d.getEnabled());
+        },
+
+        is3DEnabled: function() {
+            var widget = this;
+            var ol3d = widget.olMapElement.data('olCesiumMap');
+            return ol3d.getEnabled();
+        },
+
+        enable3D: function(enabled) {
+            var widget = this;
+            var ol3d = widget.olMapElement.data('olCesiumMap');
+            var options = widget.options;
+
+            options.ceMap = enabled;
+            ol3d.setEnabled(enabled);
+            widget.element.trigger("toggle3D", enabled);
+        },
+
+        updateMapContainerGeometries: function() {
+            var widget = this;
+            var height = $(window).height();
+            // var width = $(window).width();
+            // var options = widget.options;
+
+            widget.olMapElement.css({height: height});
+        },
+
         _create: function() {
             var widget = this;
             var element = widget.element;
             var options = widget.options;
-            var olMapElement = $("<div class='ol-map'/>");
-            var cesiumMapElement = $("<div class='cesium-map'/>");
+            var olMapElement = widget.olMapElement = $("<div class='ol-map'/>");
             var urls = Mapbender.configuration.application.urls;
             var webPath = urls.asset;
             var cesiumPath = window.CESIUM_BASE_URL = webPath + "components/ol-cesium/Cesium/";
             var iconPath = cesiumPath + "../examples/data/icon.png";
             var vectorDataUrl = cesiumPath + "../examples/data/geojson/vector_data.geojson";
-
-            function updateMapContainerGeometries() {
-                var height = $(window).height();
-                olMapElement.css({height: height});
-                cesiumMapElement.css({height: height});
-            }
-
-            updateMapContainerGeometries();
-
-            $(window).resize(updateMapContainerGeometries);
+            var elementUrl = widget.elementUrl = urls.element + '/' + element.attr('id');
 
             element.append(olMapElement);
-            element.append(cesiumMapElement);
 
-            widget.elementUrl = urls.element + '/' + element.attr('id');
+            widget.updateMapContainerGeometries();
+            $(window).resize(function() {
+                widget.updateMapContainerGeometries();
+            });
+
+            element.on('toggle3D', function(event, enabled) {
+                widget.updateMapContainerGeometries();
+            });
+
+            var map = new ol.Map({
+                layers:   [],
+                target:   olMapElement[0],
+                controls: ol.control.defaults({
+                    attributionOptions: /** @type {olx.control.AttributionOptions} */ ({
+                        collapsible: false
+                    })
+                }),
+                view:     new ol.View({
+                    center: [0, 0],
+                    zoom:   2
+                })
+            });
+            olMapElement.data('olMap', map);
+
+            var ol3d = new olcs.OLCesium({
+                map:    map
+            });
+
+            olMapElement.data('olCesiumMap', ol3d);
+
+            // EXAMPLES
 
             // vecotor.js
             var iconFeature = new ol.Feature({
@@ -45,7 +108,6 @@
             });
 
             cervinFeature.getGeometry().set('altitudeMode', 'clampToGround');
-
 
             var iconStyle = new ol.style.Style({
                 image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
@@ -241,59 +303,49 @@
                 source: imageVectorSource
             });
 
-            var dragAndDropInteraction = new ol.interaction.DragAndDrop({
-                formatConstructors: [
-                    ol.format.GPX,
-                    ol.format.GeoJSON,
-                    ol.format.IGC,
-                    ol.format.KML,
-                    ol.format.TopoJSON
-                ]
-            });
 
 
-            var map = new ol.Map({
-                interactions: ol.interaction.defaults().extend([dragAndDropInteraction]),
-                layers: [
-                    new ol.layer.Tile({
-                        source: new ol.source.OSM()
-                    }),
-                    vectorLayer,
-                    vectorLayer2
-                ],
-                target: olMapElement[0],
-                controls: ol.control.defaults({
-                    attributionOptions: /** @type {olx.control.AttributionOptions} */ ({
-                        collapsible: false
-                    })
-                }),
-                view: new ol.View({
-                    center: [0, 0],
-                    zoom: 2
-                })
-            });
+            // map.addInteraction()
+            map.addLayer(new ol.layer.Tile({
+                source: new ol.source.OSM()
+            }));
+            map.addLayer(vectorLayer);
+            map.addLayer(vectorLayer2);
 
-            dragAndDropInteraction.on('addfeatures', function(event) {
-                var vectorSource = new ol.source.Vector({
-                    features: event.features,
-                    projection: event.projection
-                });
-                map.getLayers().push(new ol.layer.Vector({
-                    source: vectorSource,
-                    style: styleFunction
-                }));
-                var view = map.getView();
-                view.fitExtent(
-                    vectorSource.getExtent(), /** @type {ol.Size} */ (map.getSize()));
-            });
+            // var dragAndDropInteraction = new ol.interaction.DragAndDrop({
+            //     formatConstructors: [
+            //         ol.format.GPX,
+            //         ol.format.GeoJSON,
+            //         ol.format.IGC,
+            //         ol.format.KML,
+            //         ol.format.TopoJSON
+            //     ]
+            // });
+            //
+            // map.addInteraction(ol.interaction.defaults().extend([dragAndDropInteraction]));
+            // dragAndDropInteraction.on('addfeatures', function(event) {
+            //     var vectorSource = new ol.source.Vector({
+            //         features: event.features,
+            //         projection: event.projection
+            //     });
+            //     map.getLayers().push(new ol.layer.Vector({
+            //         source: vectorSource,
+            //         style: styleFunction
+            //     }));
+            //     var view = map.getView();
+            //     view.fitExtent(
+            //         vectorSource.getExtent(), /** @type {ol.Size} */ (map.getSize()));
+            // });
 
 
-            var ol3d = new olcs.OLCesium({map: map, target: cesiumMapElement[0]});
+
             var scene = ol3d.getCesiumScene();
             var terrainProvider = new Cesium.CesiumTerrainProvider({
                 url: '//assets.agi.com/stk-terrain/world',
                 requestVertexNormals: true
             });
+
+
             scene.terrainProvider = terrainProvider;
             scene.globe.enableLighting = true;
             ol3d.setEnabled(true);
@@ -336,38 +388,42 @@
                     color: 'green'
                 })
             });
-            function toggleStyle() {
-                var swap = theCircle.getStyle();
-                theCircle.setStyle(oldStyle);
-                oldStyle = swap;
-            }
 
-            function toggleClampToGround() {
-                var altitudeMode;
-                if (!vectorLayer.get('altitudeMode')) {
-                    altitudeMode = 'clampToGround';
-                }
-                vectorLayer.set('altitudeMode', altitudeMode);
-                vectorLayer2.set('altitudeMode', altitudeMode);
-                map.removeLayer(vectorLayer);
-                map.removeLayer(vectorLayer2);
-                map.addLayer(vectorLayer);
-                map.addLayer(vectorLayer2);
-            }
+            element.append($('<div class="button-navigation"/>')
+                .append($('<a class="button">Toggle style</a>').on('click', function() {
+                    var swap = theCircle.getStyle();
+                    theCircle.setStyle(oldStyle);
+                    oldStyle = swap;
+                }))
+                .append($('<a class="button">Toggle clamp to ground</a>').on('click', function() {
+                    var altitudeMode;
+                    if(!vectorLayer.get('altitudeMode')) {
+                        altitudeMode = 'clampToGround';
+                    }
+                    vectorLayer.set('altitudeMode', altitudeMode);
+                    vectorLayer2.set('altitudeMode', altitudeMode);
+                    map.removeLayer(vectorLayer);
+                    map.removeLayer(vectorLayer2);
+                    map.addLayer(vectorLayer);
+                    map.addLayer(vectorLayer2);
+                }))
+                .append($('<a class="button">Feature X</a>').on('click', function() {
+                }))
+                .append($('<a class="button">Disable 3D</a>').on('click', function() {
+                    var button = $(this)
+                    widget.toggle3D();
 
-            function setTargetFrameRate() {
-                var fps;
-                var fpsEl = document.querySelector('#framerate');
-                if (fpsEl) {
-                    fps = Number(fpsEl.value);
-                    ol3d.setTargetFrameRate(fps);
-                }
-            }
+                    if(widget.is3DEnabled()){
+                        button.text('Disable 3D');
+                    }else{
+                        button.text('Enable 3D');
+                    }
+                }))
+            );
 
+            // setTargetFrameRate
+            // ol3d.setTargetFrameRate(options.fps);
             ol3d.enableAutoRenderLoop();
-
-
-            // debugger;
         }
     });
 })(jQuery);
