@@ -8,19 +8,24 @@
         olMapElement: null,
 
         options: {
+            // 3D FPS
             fps: 60,
 
-            // Show Cesium by default?
-            ceMap: true,
+            // Terrain service
+            terrain: {
+                url:                  '//assets.agi.com/stk-terrain/world',
+                requestWaterMask:     false,
+                requestVertexNormals: false
+            },
 
-            // Show OpenLayers by default?
-            olMap: true
+            // Show Cesium by default?
+            enable3DByDefault: false
         },
 
         toggle3D: function() {
             var widget = this;
             var ol3d = widget.olMapElement.data('olCesiumMap');
-            widget.enable3D(!ol3d.getEnabled());
+            return widget.enable3D(!ol3d.getEnabled());
         },
 
         is3DEnabled: function() {
@@ -37,6 +42,8 @@
             options.ceMap = enabled;
             ol3d.setEnabled(enabled);
             widget.element.trigger("toggle3D", enabled);
+
+            return enabled;
         },
 
         updateMapContainerGeometries: function() {
@@ -48,7 +55,33 @@
             widget.olMapElement.css({height: height});
         },
 
-        _create: function() {
+        getTextFeatureStyles: function() {
+            return [new ol.style.Style({
+                text: new ol.style.Text({
+                    text:         'Only text',
+                    textAlign:    'center',
+                    textBaseline: 'middle',
+                    stroke:       new ol.style.Stroke({
+                        color: 'red',
+                        width: 3
+                    }),
+                    fill:         new ol.style.Fill({
+                        color: 'rgba(0, 0, 155, 0.3)'
+                    })
+                })
+            }), new ol.style.Style({
+                geometry: new ol.geom.Circle([1000000, 3000000, 10000], 2e6),
+                stroke:   new ol.style.Stroke({
+                    color: 'blue',
+                    width: 2
+                }),
+                fill:     new ol.style.Fill({
+                    color: 'rgba(0, 0, 255, 0.2)'
+                })
+            })];
+        },
+
+        _create:              function() {
             var widget = this;
             var element = widget.element;
             var options = widget.options;
@@ -57,7 +90,7 @@
             var webPath = urls.asset;
             var cesiumPath = window.CESIUM_BASE_URL = webPath + "components/ol-cesium/Cesium/";
             var iconPath = cesiumPath + "../examples/data/icon.png";
-            var vectorDataUrl = cesiumPath + "../examples/data/geojson/vector_data.geojson";
+            var vectorDataUrl =  webPath + 'data/featureCollection5.geo.json';// cesiumPath + "../examples/data/geojson/vector_data.geojson";
             var elementUrl = widget.elementUrl = urls.element + '/' + element.attr('id');
 
             element.append(olMapElement);
@@ -71,6 +104,15 @@
                 widget.updateMapContainerGeometries();
             });
 
+            var london = ol.proj.transform([-0.12755, 51.507222], 'EPSG:4326', 'EPSG:3857');
+
+            // var format = new ol.format.WKT();
+            // var feature = format.readFeature("POLYGON((60586.458514127 63712.219187492,61163.541485873 63712.219187492,61163.541485873 64027.780812508,60586.458514127 64027.780812508,60586.458514127 63712.219187492))", {
+            //     dataProjection: 'EPSG:3068',
+            //     featureProjection: 'EPSG:3857'
+            // });
+
+
             var map = new ol.Map({
                 layers:   [],
                 target:   olMapElement[0],
@@ -80,10 +122,14 @@
                     })
                 }),
                 view:     new ol.View({
-                    center: [0, 0],
-                    zoom:   2
+                    // projection: 'EPSG:3068',
+                    // maxResolution: options.maxResolution,
+                    // mandatory !!!
+                    center: london, // extent:     options.extents.start,
+                    zoom:   6
                 })
             });
+
             olMapElement.data('olMap', map);
 
             var ol3d = new olcs.OLCesium({
@@ -93,6 +139,15 @@
             olMapElement.data('olCesiumMap', ol3d);
 
             // EXAMPLES
+            var oldStyle = new ol.style.Style({
+                stroke: new ol.style.Stroke({
+                    color: 'blue',
+                    width: 2
+                }),
+                fill: new ol.style.Fill({
+                    color: 'green'
+                })
+            });
 
             // vecotor.js
             var iconFeature = new ol.Feature({
@@ -131,33 +186,10 @@
                 })
             });
 
-            var textStyle = [new ol.style.Style({
-                text: new ol.style.Text({
-                    text: 'Only text',
-                    textAlign: 'center',
-                    textBaseline: 'middle',
-                    stroke: new ol.style.Stroke({
-                        color: 'red',
-                        width: 3
-                    }),
-                    fill: new ol.style.Fill({
-                        color: 'rgba(0, 0, 155, 0.3)'
-                    })
-                })
-            }), new ol.style.Style({
-                geometry: new ol.geom.Circle([1000000, 3000000, 10000], 2e6),
-                stroke: new ol.style.Stroke({
-                    color: 'blue',
-                    width: 2
-                }),
-                fill:new ol.style.Fill({
-                    color: 'rgba(0, 0, 255, 0.2)'
-                })
-            })];
 
             iconFeature.setStyle(iconStyle);
 
-            textFeature.setStyle(textStyle);
+            textFeature.setStyle(widget.getTextFeatureStyles());
 
             cervinFeature.setStyle(iconStyle);
 
@@ -293,24 +325,57 @@
             });
 
             var vectorSource2 = new ol.source.Vector({
-                features: [iconFeature, textFeature, cervinFeature, cartographicRectangle,
-                    cartographicRectangle2]
-            });
-            var imageVectorSource = new ol.source.ImageVector({
-                source: vectorSource2
+                features: [iconFeature, textFeature, cervinFeature, cartographicRectangle, cartographicRectangle2]
             });
             var vectorLayer2 = new ol.layer.Image({
-                source: imageVectorSource
+                source: new ol.source.ImageVector({
+                    source: vectorSource2
+                })
             });
 
 
+            // // // map.addInteraction()
+            // map.addLayer(new ol.layer.Tile({
+            //     source: new ol.source.OSM({url: 'https://{a-c}.tile.openstreetmap.org/{z}/{x}/{y}.png'})
+            // }));
 
             // map.addInteraction()
             map.addLayer(new ol.layer.Tile({
-                source: new ol.source.OSM()
+                source: new ol.source.TileWMS({
+                    // projection: 'EPSG:4326',
+                    url:    'http://osm-demo.wheregroup.com/service',
+                    params: {
+                        'LAYERS': 'osm',
+                        'TILED':  true
+                    }
+                })
             }));
+
             map.addLayer(vectorLayer);
             map.addLayer(vectorLayer2);
+            //
+
+            var vectorSource = new ol.source.Vector({
+                format: new ol.format.GeoJSON(),
+                url:    vectorDataUrl
+            });
+
+            var featureCollectionLayer1 = new ol.layer.Vector({
+                source: new ol.source.Vector({
+                    url:    webPath + 'data/featureCollection5.geo.json',
+                    projection: 'EPSG:3068',//,
+                    format: new ol.format.GeoJSON({
+                        defaultDataProjection: "EPSG:3068"
+                    })
+                }),
+                style: iconStyle //styleFunction
+                // style:  function(feature, resolution) {
+                //     // style.getText().setText(resolution < 5000 ? feature.get('name') : '');
+                //     return '';
+                // }
+            });
+
+            map.addLayer(featureCollectionLayer1);
 
             // var dragAndDropInteraction = new ol.interaction.DragAndDrop({
             //     formatConstructors: [
@@ -340,54 +405,12 @@
 
 
             var scene = ol3d.getCesiumScene();
-            var terrainProvider = new Cesium.CesiumTerrainProvider({
-                url: '//assets.agi.com/stk-terrain/world',
-                requestVertexNormals: true
-            });
-
-
-            scene.terrainProvider = terrainProvider;
+            // scene.terrainProvider = new Cesium.CesiumTerrainProvider();
             scene.globe.enableLighting = true;
-            ol3d.setEnabled(true);
+            ol3d.setEnabled(options.enable3DByDefault);
 
-            var csLabels = new Cesium.LabelCollection();
-            csLabels.add({
-                position: Cesium.Cartesian3.fromRadians(20, 20, 0),
-                text: 'Pre-existing primitive'
-            });
-            scene.primitives.add(csLabels);
-
-            // Adding a feature after the layer has been synchronized.
             vectorSource.addFeature(theCircle);
 
-            var hasTheVectorLayer = true;
-            function addOrRemoveOneVectorLayer() {
-                if (hasTheVectorLayer) {
-                    map.getLayers().remove(vectorLayer);
-                } else {
-                    map.getLayers().insertAt(1, vectorLayer);
-                }
-                hasTheVectorLayer = !hasTheVectorLayer;
-            }
-
-            function addOrRemoveOneFeature() {
-                var found = vectorSource2.getFeatures().indexOf(iconFeature);
-                if (found === -1) {
-                    vectorSource2.addFeature(iconFeature);
-                } else {
-                    vectorSource2.removeFeature(iconFeature);
-                }
-            }
-
-            var oldStyle = new ol.style.Style({
-                stroke: new ol.style.Stroke({
-                    color: 'blue',
-                    width: 2
-                }),
-                fill: new ol.style.Fill({
-                    color: 'green'
-                })
-            });
 
             element.append($('<div class="button-navigation"/>')
                 .append($('<a class="button">Toggle style</a>').on('click', function() {
@@ -407,19 +430,30 @@
                     map.addLayer(vectorLayer);
                     map.addLayer(vectorLayer2);
                 }))
-                .append($('<a class="button">Feature X</a>').on('click', function() {
-                }))
-                .append($('<a class="button">Disable 3D</a>').on('click', function() {
-                    var button = $(this)
-                    widget.toggle3D();
+                .append($('<a class="button">Terrain (disabled)</a>').on('click', function() {
+                    var button = $(this);
 
-                    if(widget.is3DEnabled()){
-                        button.text('Disable 3D');
-                    }else{
-                        button.text('Enable 3D');
+                    if(!options.terrain) {
+                        return;
                     }
+
+                    // if(!scene.terrainProvider) {
+                        scene.terrainProvider = new Cesium.CesiumTerrainProvider(options.terrain);
+                        button.text('Terrain (enabled)');
+                    // } else {
+                    //     scene.terrainProvider = null;
+                    //     button.text('Terrain (disabled)');
+                    // }
                 }))
-            );
+                .append($('<a class="button">3D (enabled)</a>').on('click', function() {
+                    var button = $(this);
+
+                    if(widget.toggle3D()) {
+                        button.text('3D (enabled)');
+                    } else {
+                        button.text('3D (disabled)');
+                    }
+                })));
 
             // setTargetFrameRate
             // ol3d.setTargetFrameRate(options.fps);
