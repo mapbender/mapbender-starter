@@ -90,7 +90,7 @@
             var webPath = urls.asset;
             var cesiumPath = window.CESIUM_BASE_URL = webPath + "components/ol-cesium/Cesium/";
             var iconPath = cesiumPath + "../examples/data/icon.png";
-            var vectorDataUrl =  webPath + 'data/featureCollection5.geo.json';// cesiumPath + "../examples/data/geojson/vector_data.geojson";
+            var vectorDataUrl = cesiumPath + "../examples/data/geojson/vector_data.geojson";
             var elementUrl = widget.elementUrl = urls.element + '/' + element.attr('id');
 
             element.append(olMapElement);
@@ -104,7 +104,11 @@
                 widget.updateMapContainerGeometries();
             });
 
-            var london = ol.proj.transform([-0.12755, 51.507222], 'EPSG:4326', 'EPSG:3857');
+            // Add DHDN / Soldner Berlin https://epsg.io/3068
+            // This seems to be used by OpenLayers
+            proj4.defs("EPSG:3068", "+proj=cass +lat_0=52.41864827777778 +lon_0=13.62720366666667 +x_0=40000 +y_0=10000 +ellps=bessel +towgs84=598.1,73.7,418.2,0.202,0.045,-2.455,6.7 +units=m +no_defs");
+
+            var berlin = ol.proj.transform([60644.513695901, 63808.743475716], 'EPSG:3068', 'EPSG:3857');
 
             // var format = new ol.format.WKT();
             // var feature = format.readFeature("POLYGON((60586.458514127 63712.219187492,61163.541485873 63712.219187492,61163.541485873 64027.780812508,60586.458514127 64027.780812508,60586.458514127 63712.219187492))", {
@@ -121,12 +125,13 @@
                         collapsible: false
                     })
                 }),
+                //default EPSG:3857
                 view:     new ol.View({
-                    // projection: 'EPSG:3068',
+                    projection: "EPSG:3857",
                     // maxResolution: options.maxResolution,
                     // mandatory !!!
-                    center: london, // extent:     options.extents.start,
-                    zoom:   6
+                    center: berlin, // extent:     options.extents.start,
+                    zoom:   17
                 })
             });
 
@@ -357,52 +362,31 @@
 
             var vectorSource = new ol.source.Vector({
                 format: new ol.format.GeoJSON(),
-                url:    vectorDataUrl
+                url: vectorDataUrl
             });
 
             var featureCollectionLayer1 = new ol.layer.Vector({
                 source: new ol.source.Vector({
-                    url:    webPath + 'data/featureCollection5.geo.json',
-                    projection: 'EPSG:3068',//,
+                    url: webPath + 'data/featureCollection5.geo.json',
                     format: new ol.format.GeoJSON({
-                        defaultDataProjection: "EPSG:3068"
+                        // Feautre own projection
+                        // defaultDataProjection:    "EPSG:3068",
+                        // Map projection
+                        // featureProjection: "EPSG:3857"
                     })
                 }),
-                style: iconStyle //styleFunction
-                // style:  function(feature, resolution) {
-                //     // style.getText().setText(resolution < 5000 ? feature.get('name') : '');
-                //     return '';
-                // }
+                style:  [new ol.style.Style({
+                    stroke: new ol.style.Stroke({
+                        color: 'blue',
+                        width: 1
+                    }),
+                    fill:   new ol.style.Fill({
+                        color: 'rgba(255, 255, 0, 0.1)'
+                    })
+                })]
             });
 
             map.addLayer(featureCollectionLayer1);
-
-            // var dragAndDropInteraction = new ol.interaction.DragAndDrop({
-            //     formatConstructors: [
-            //         ol.format.GPX,
-            //         ol.format.GeoJSON,
-            //         ol.format.IGC,
-            //         ol.format.KML,
-            //         ol.format.TopoJSON
-            //     ]
-            // });
-            //
-            // map.addInteraction(ol.interaction.defaults().extend([dragAndDropInteraction]));
-            // dragAndDropInteraction.on('addfeatures', function(event) {
-            //     var vectorSource = new ol.source.Vector({
-            //         features: event.features,
-            //         projection: event.projection
-            //     });
-            //     map.getLayers().push(new ol.layer.Vector({
-            //         source: vectorSource,
-            //         style: styleFunction
-            //     }));
-            //     var view = map.getView();
-            //     view.fitExtent(
-            //         vectorSource.getExtent(), /** @type {ol.Size} */ (map.getSize()));
-            // });
-
-
 
             var scene = ol3d.getCesiumScene();
             // scene.terrainProvider = new Cesium.CesiumTerrainProvider();
