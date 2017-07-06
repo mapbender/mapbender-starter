@@ -56,6 +56,7 @@
         "mapbender/digitizer": "1.1.x",
         "mapbender/documentation": "dev-release/3.0.6",
 
+        "proj4js/proj4js": "2.x",
         "openlayers/ol-cesium": "1.x"
     },
     "scripts": {
@@ -170,6 +171,26 @@
                     "component": {
                         "files": [
                             "**"
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "proj4js/proj4js",
+                "type": "component",
+                "version": "2.4.3",
+                "dist": {
+                    "url": "https://github.com/proj4js/proj4js/archive/2.4.3.zip",
+                    "type": "zip"
+                },
+                "extra": {
+                    "component": {
+                        "files": [
+                            "lib/**",
+                            "dist/**"
                         ]
                     }
                 }

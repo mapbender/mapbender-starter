@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "97a435d62a297e14efd3dd061d0dd867",
+    "content-hash": "c0ae45f6db732dd2aacea2724e8c1e60",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -2798,6 +2798,25 @@
                 "type"
             ],
             "time": "2015-07-25T16:39:46+00:00"
+        },
+        {
+            "name": "proj4js/proj4js",
+            "version": "2.4.3",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/proj4js/proj4js/archive/2.4.3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "files": [
+                        "lib/**",
+                        "dist/**"
+                    ]
+                }
+            }
         },
         {
             "name": "psr/log",
