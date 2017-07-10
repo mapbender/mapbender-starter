@@ -81,13 +81,13 @@
             })];
         },
 
-        _create:              function() {
+        _create: function() {
             var widget = this;
             var element = widget.element;
-            var elementUrl = widget.elementUrl = urls.element + '/' + element.attr('id');
             var options = widget.options;
             var olMapElement = widget.olMapElement = $("<div class='ol-map'/>");
             var urls = Mapbender.configuration.application.urls;
+            var elementUrl = widget.elementUrl = urls.element + '/' + element.attr('id');
             var webPath = urls.asset;
             var cesiumPath = window.CESIUM_BASE_URL = webPath + "components/ol-cesium/Cesium/";
             var vectorDataUrl = cesiumPath + "../examples/data/geojson/vector_data.geojson";
@@ -95,13 +95,7 @@
 
             element.append(olMapElement);
 
-            $(window).resize(function() {
-                widget.updateMapContainerGeometries();
-            });
-
-            element.on('toggle3D', function(event, enabled) {
-                widget.updateMapContainerGeometries();
-            });
+            widget.updateMapContainerGeometries();
 
             // Add DHDN / Soldner Berlin https://epsg.io/3068
             // This seems to be used by OpenLayers
@@ -270,6 +264,14 @@
             // setTargetFrameRate
             // ol3d.setTargetFrameRate(options.fps);
             ol3d.enableAutoRenderLoop();
+
+            $(window).resize(function() {
+                widget.updateMapContainerGeometries();
+            });
+
+            element.on('toggle3D', function(event, enabled) {
+                widget.updateMapContainerGeometries();
+            });
         }
     });
 })(jQuery);
