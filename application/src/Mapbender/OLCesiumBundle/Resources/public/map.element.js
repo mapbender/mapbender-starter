@@ -84,19 +84,17 @@
         _create:              function() {
             var widget = this;
             var element = widget.element;
+            var elementUrl = widget.elementUrl = urls.element + '/' + element.attr('id');
             var options = widget.options;
             var olMapElement = widget.olMapElement = $("<div class='ol-map'/>");
             var urls = Mapbender.configuration.application.urls;
             var webPath = urls.asset;
             var cesiumPath = window.CESIUM_BASE_URL = webPath + "components/ol-cesium/Cesium/";
-            var iconPath = cesiumPath + "../examples/data/icon.png";
             var vectorDataUrl = cesiumPath + "../examples/data/geojson/vector_data.geojson";
-            var elementUrl = widget.elementUrl = urls.element + '/' + element.attr('id');
             var url = 'http://osm-demo.wheregroup.com/service';
 
             element.append(olMapElement);
 
-            widget.updateMapContainerGeometries();
             $(window).resize(function() {
                 widget.updateMapContainerGeometries();
             });
@@ -111,14 +109,6 @@
             proj4.defs("EPSG:4326", "+proj=longlat +datum=WGS84 +no_defs");
 
             var berlin = ol.proj.transform([60644.513695901, 63808.743475716], 'EPSG:3068', 'EPSG:3857');
-
-            // var format = new ol.format.WKT();
-            // var feature = format.readFeature("POLYGON((60586.458514127 63712.219187492,61163.541485873 63712.219187492,61163.541485873 64027.780812508,60586.458514127 64027.780812508,60586.458514127 63712.219187492))", {
-            //     dataProjection: 'EPSG:3068',
-            //     featureProjection: 'EPSG:3857'
-            // });
-
-
             var map = new ol.Map({
                 layers:   [],
                 target:   olMapElement[0],
@@ -137,209 +127,19 @@
                 })
             });
 
-            olMapElement.data('olMap', map);
 
             var ol3d = new olcs.OLCesium({
                 map:    map
             });
 
+            olMapElement.data('olMap', map);
             olMapElement.data('olCesiumMap', ol3d);
 
-            // EXAMPLES
-            var oldStyle = new ol.style.Style({
-                stroke: new ol.style.Stroke({
-                    color: 'blue',
-                    width: 2
-                }),
-                fill: new ol.style.Fill({
-                    color: 'green'
-                })
-            });
-
-            // vecotor.js
-            var iconFeature = new ol.Feature({
-                geometry: new ol.geom.Point([700000, 200000, 100000])
-            });
-
-            var textFeature = new ol.Feature({
-                geometry: new ol.geom.Point([1000000, 3000000, 500000])
-            });
-
-            var cervinFeature = new ol.Feature({
-                geometry: new ol.geom.Point([852541, 5776649])
-            });
-
-            cervinFeature.getGeometry().set('altitudeMode', 'clampToGround');
-
-            var iconStyle = new ol.style.Style({
-                image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
-                    anchor: [0.5, 46],
-                    anchorXUnits: 'fraction',
-                    anchorYUnits: 'pixels',
-                    opacity: 0.75,
-                    src: iconPath
-                })),
-                text: new ol.style.Text({
-                    text: 'Some text',
-                    textAlign: 'center',
-                    textBaseline: 'middle',
-                    stroke: new ol.style.Stroke({
-                        color: 'magenta',
-                        width: 3
-                    }),
-                    fill: new ol.style.Fill({
-                        color: 'rgba(0, 0, 155, 0.3)'
-                    })
-                })
-            });
-
-
-            iconFeature.setStyle(iconStyle);
-
-            textFeature.setStyle(widget.getTextFeatureStyles());
-
-            cervinFeature.setStyle(iconStyle);
-
-            var image = new ol.style.Circle({
-                radius: 5,
-                fill: null,
-                stroke: new ol.style.Stroke({color: 'red', width: 1})
-            });
-
-            var styles = {
-                'Point': [new ol.style.Style({
-                    image: image
-                })],
-                'LineString': [new ol.style.Style({
-                    stroke: new ol.style.Stroke({
-                        color: 'green',
-                        lineDash: [12],
-                        width: 10
-                    })
-                })],
-                'MultiLineString': [new ol.style.Style({
-                    stroke: new ol.style.Stroke({
-                        color: 'green',
-                        width: 10
-                    })
-                })],
-                'MultiPoint': [new ol.style.Style({
-                    image: image,
-                    text: new ol.style.Text({
-                        text: 'MP',
-                        stroke: new ol.style.Stroke({
-                            color: 'purple'
-                        })
-                    })
-                })],
-                'MultiPolygon': [new ol.style.Style({
-                    stroke: new ol.style.Stroke({
-                        color: 'yellow',
-                        width: 1
-                    }),
-                    fill: new ol.style.Fill({
-                        color: 'rgba(255, 255, 0, 0.1)'
-                    })
-                })],
-                'Polygon': [new ol.style.Style({
-                    stroke: new ol.style.Stroke({
-                        color: 'blue',
-                        lineDash: [4],
-                        width: 3
-                    }),
-                    fill: new ol.style.Fill({
-                        color: 'rgba(0, 0, 255, 0.1)'
-                    })
-                })],
-                'GeometryCollection': [new ol.style.Style({
-                    stroke: new ol.style.Stroke({
-                        color: 'magenta',
-                        width: 2
-                    }),
-                    fill: new ol.style.Fill({
-                        color: 'magenta'
-                    }),
-                    image: new ol.style.Circle({
-                        radius: 10, // pixels
-                        fill: null,
-                        stroke: new ol.style.Stroke({
-                            color: 'magenta'
-                        })
-                    })
-                })],
-                'Circle': [new ol.style.Style({
-                    stroke: new ol.style.Stroke({
-                        color: 'red',
-                        width: 2
-                    }),
-                    fill: new ol.style.Fill({
-                        color: 'rgba(255,0,0,0.2)'
-                    })
-                })]
-            };
-
-            var styleFunction = function(feature, resolution) {
-                var geo = feature.getGeometry();
-                // always assign a style to prevent feature skipping
-                return geo ? styles[geo.getType()] : styles['Point'];
-            };
-
-            var vectorSource = new ol.source.Vector({
-                format: new ol.format.GeoJSON(),
-                url:    vectorDataUrl
-            });
-
-            var theCircle = new ol.Feature(new ol.geom.Circle([5e6, 7e6, 5e5], 1e6));
-
-            // Add a Cesium rectangle, via setting the property olcs.polygon_kind
-            var cartographicRectangleStyle = new ol.style.Style({
-                fill: new ol.style.Fill({
-                    color: 'rgba(255, 69, 0, 0.7)'
-                }),
-                stroke: new ol.style.Stroke({
-                    color: 'rgba(255, 69, 0, 0.9)',
-                    width: 1
-                })
-            });
-            var cartographicRectangleGeometry = new ol.geom.Polygon([[[-5e6, 11e6],
-                [4e6, 11e6], [4e6, 10.5e6], [-5e6, 10.5e6], [-5e6, 11e6]]]);
-            cartographicRectangleGeometry.set('olcs.polygon_kind', 'rectangle');
-            var cartographicRectangle = new ol.Feature({
-                geometry: cartographicRectangleGeometry
-            });
-            cartographicRectangle.setStyle(cartographicRectangleStyle);
-
-            // Add two Cesium rectangles with height and the property olcs.polygon_kind
-            var cartographicRectangleGeometry2 = new ol.geom.MultiPolygon([
-                [[
-                    [-5e6, 12e6, 0], [4e6, 12e6, 0], [4e6, 11.5e6, 0], [-5e6, 11.5e6, 0],
-                    [-5e6, 12e6, 0]
-                ]],
-                [[
-                    [-5e6, 11.5e6, 1e6], [4e6, 11.5e6, 1e6], [4e6, 11e6, 1e6],
-                    [-5e6, 11e6, 1e6], [-5e6, 11.5e6, 1e6]
-                ]]
-            ]);
-            cartographicRectangleGeometry2.set('olcs.polygon_kind', 'rectangle');
-            var cartographicRectangle2 = new ol.Feature({
-                geometry: cartographicRectangleGeometry2
-            });
-            cartographicRectangle2.setStyle(cartographicRectangleStyle);
-
-            var vectorLayer = new ol.layer.Vector({
-                source: vectorSource,
-                style: styleFunction
-            });
-
-            var vectorSource2 = new ol.source.Vector({
-                features: [iconFeature, textFeature, cervinFeature, cartographicRectangle, cartographicRectangle2]
-            });
-            var vectorLayer2 = new ol.layer.Image({
-                source: new ol.source.ImageVector({
-                    source: vectorSource2
-                })
-            });
-
+            // var format = new ol.format.WKT();
+            // var feature = format.readFeature("POLYGON((60586.458514127 63712.219187492,61163.541485873 63712.219187492,61163.541485873 64027.780812508,60586.458514127 64027.780812508,60586.458514127 63712.219187492))", {
+            //     dataProjection: 'EPSG:3068',
+            //     featureProjection: 'EPSG:3857'
+            // });
 
             // // // map.addInteraction()
             // map.addLayer(new ol.layer.Tile({
@@ -347,7 +147,6 @@
             // }));
 
             // map.addInteraction()
-
             map.addLayer(new ol.layer.Tile({
                 source: new ol.source.TileWMS({
                     // projection: 'EPSG:4326',
@@ -358,15 +157,6 @@
                     }
                 })
             }));
-
-            map.addLayer(vectorLayer);
-            map.addLayer(vectorLayer2);
-            //
-
-            var vectorSource = new ol.source.Vector({
-                format: new ol.format.GeoJSON(),
-                url: vectorDataUrl
-            });
 
             var vectorSource = new ol.source.Vector({
                 url: webPath + 'data/featureCollection5.geo.json',
@@ -382,8 +172,10 @@
                 var geometryType = geometry.getType();
                 var geometryProperties = geometry.getProperties();
 
-                geometry.height = geometryProperties.height = Math.floor(Math.random() * 100);
-                geometry.extrudedHeight = geometryProperties.extrudedHeight = Math.floor(Math.random() * 100);
+                var height = 6 + Math.floor(Math.random() * 3);
+                geometry.height = geometryProperties.height = height;
+                geometry.extrude = geometryProperties.extrude = height;
+                geometry.extrudedHeight = geometryProperties.extrudedHeight = height;
 
                 geometry.setProperties(geometryProperties);
 
@@ -391,12 +183,15 @@
                     _.each(geometry.getPolygons(), function(polygone) {
                         var properties = polygone.getProperties();
                         polygone.height = properties.height = Math.floor(Math.random() * 100);
+                        polygone.extrude = properties.extrude = Math.floor(Math.random() * 100);
                         polygone.extrudedHeight = properties.extrudedHeight = Math.floor(Math.random() * 100);
                         polygone.setProperties(properties);
+                        polygone.changed();
+
                         // console.log(polygone);
                     })
                 }
-                console.log(geometryType);
+                geometry.changed();
             }
 
             vectorSource.on("addfeature", function(event, b, c) {
@@ -404,10 +199,16 @@
                 var properties = feature.getProperties();
                 var geometry = properties.geometry;
 
+                var height = 600 + Math.floor(Math.random() * 3);
+                properties.height = height;
+                properties.extrude = height;
+                properties.extrudedHeight =  height;
 
+                feature.setProperties(properties);
 
                 setGeometryHeight(geometry);
-                // debugger;
+
+                feature.changed();
             }, widget);
 
             var featureCollectionLayer1 = new ol.layer.Vector({
@@ -430,26 +231,17 @@
             scene.globe.enableLighting = true;
             ol3d.setEnabled(options.enable3DByDefault);
 
-            vectorSource.addFeature(theCircle);
-
 
             element.append($('<div class="button-navigation"/>')
-                .append($('<a class="button">Toggle style</a>').on('click', function() {
-                    var swap = theCircle.getStyle();
-                    theCircle.setStyle(oldStyle);
-                    oldStyle = swap;
-                }))
                 .append($('<a class="button">Toggle clamp to ground</a>').on('click', function() {
                     var altitudeMode;
-                    if(!vectorLayer.get('altitudeMode')) {
+                    if(!featureCollectionLayer1.get('altitudeMode')) {
                         altitudeMode = 'clampToGround';
                     }
-                    vectorLayer.set('altitudeMode', altitudeMode);
-                    vectorLayer2.set('altitudeMode', altitudeMode);
-                    map.removeLayer(vectorLayer);
-                    map.removeLayer(vectorLayer2);
-                    map.addLayer(vectorLayer);
-                    map.addLayer(vectorLayer2);
+
+                    featureCollectionLayer1.set('altitudeMode', altitudeMode);
+                    map.removeLayer(featureCollectionLayer1);
+                    map.addLayer(featureCollectionLayer1);
                 }))
                 .append($('<a class="button">Terrain (disabled)</a>').on('click', function() {
                     var button = $(this);
@@ -466,9 +258,8 @@
                     //     button.text('Terrain (disabled)');
                     // }
                 }))
-                .append($('<a class="button">3D (enabled)</a>').on('click', function() {
+                .append($('<a class="button">3D ('+(widget.is3DEnabled()?'enabled':'disabled')+')</a>').on('click', function() {
                     var button = $(this);
-
                     if(widget.toggle3D()) {
                         button.text('3D (enabled)');
                     } else {
