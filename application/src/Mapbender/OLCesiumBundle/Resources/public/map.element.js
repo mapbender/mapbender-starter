@@ -92,6 +92,7 @@
             var iconPath = cesiumPath + "../examples/data/icon.png";
             var vectorDataUrl = cesiumPath + "../examples/data/geojson/vector_data.geojson";
             var elementUrl = widget.elementUrl = urls.element + '/' + element.attr('id');
+            var url = 'http://osm-demo.wheregroup.com/service';
 
             element.append(olMapElement);
 
@@ -107,6 +108,7 @@
             // Add DHDN / Soldner Berlin https://epsg.io/3068
             // This seems to be used by OpenLayers
             proj4.defs("EPSG:3068", "+proj=cass +lat_0=52.41864827777778 +lon_0=13.62720366666667 +x_0=40000 +y_0=10000 +ellps=bessel +towgs84=598.1,73.7,418.2,0.202,0.045,-2.455,6.7 +units=m +no_defs");
+            proj4.defs("EPSG:4326", "+proj=longlat +datum=WGS84 +no_defs");
 
             var berlin = ol.proj.transform([60644.513695901, 63808.743475716], 'EPSG:3068', 'EPSG:3857');
 
@@ -345,10 +347,11 @@
             // }));
 
             // map.addInteraction()
+
             map.addLayer(new ol.layer.Tile({
                 source: new ol.source.TileWMS({
                     // projection: 'EPSG:4326',
-                    url:    'http://osm-demo.wheregroup.com/service',
+                    url:    url,
                     params: {
                         'LAYERS': 'osm',
                         'TILED':  true
@@ -365,16 +368,50 @@
                 url: vectorDataUrl
             });
 
-            var featureCollectionLayer1 = new ol.layer.Vector({
-                source: new ol.source.Vector({
-                    url: webPath + 'data/featureCollection5.geo.json',
-                    format: new ol.format.GeoJSON({
-                        // Feautre own projection
-                        // defaultDataProjection:    "EPSG:3068",
-                        // Map projection
-                        // featureProjection: "EPSG:3857"
+            var vectorSource = new ol.source.Vector({
+                url: webPath + 'data/featureCollection5.geo.json',
+                format: new ol.format.GeoJSON({
+                    // Feautre own projection
+                    // defaultDataProjection:    "EPSG:3068",
+                    // Map projection
+                    // featureProjection: "EPSG:3857"
+                })
+            });
+
+            function setGeometryHeight(geometry) {
+                var geometryType = geometry.getType();
+                var geometryProperties = geometry.getProperties();
+
+                geometry.height = geometryProperties.height = Math.floor(Math.random() * 100);
+                geometry.extrudedHeight = geometryProperties.extrudedHeight = Math.floor(Math.random() * 100);
+
+                geometry.setProperties(geometryProperties);
+
+                if(geometryType == 'MultiPolygon') {
+                    _.each(geometry.getPolygons(), function(polygone) {
+                        var properties = polygone.getProperties();
+                        polygone.height = properties.height = Math.floor(Math.random() * 100);
+                        polygone.extrudedHeight = properties.extrudedHeight = Math.floor(Math.random() * 100);
+                        polygone.setProperties(properties);
+                        // console.log(polygone);
                     })
-                }),
+                }
+                console.log(geometryType);
+            }
+
+            vectorSource.on("addfeature", function(event, b, c) {
+                var feature = event.feature;
+                var properties = feature.getProperties();
+                var geometry = properties.geometry;
+
+
+
+                setGeometryHeight(geometry);
+                // debugger;
+            }, widget);
+
+            var featureCollectionLayer1 = new ol.layer.Vector({
+                source: vectorSource,
                 style:  [new ol.style.Style({
                     stroke: new ol.style.Stroke({
                         color: 'blue',
