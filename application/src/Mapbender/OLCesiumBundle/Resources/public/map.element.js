@@ -46,39 +46,14 @@
             return enabled;
         },
 
+        /**
+         * Update map container geometries
+         */
         updateMapContainerGeometries: function() {
             var widget = this;
             var height = $(window).height();
-            // var width = $(window).width();
-            // var options = widget.options;
 
             widget.olMapElement.css({height: height});
-        },
-
-        getTextFeatureStyles: function() {
-            return [new ol.style.Style({
-                text: new ol.style.Text({
-                    text:         'Only text',
-                    textAlign:    'center',
-                    textBaseline: 'middle',
-                    stroke:       new ol.style.Stroke({
-                        color: 'red',
-                        width: 3
-                    }),
-                    fill:         new ol.style.Fill({
-                        color: 'rgba(0, 0, 155, 0.3)'
-                    })
-                })
-            }), new ol.style.Style({
-                geometry: new ol.geom.Circle([1000000, 3000000, 10000], 2e6),
-                stroke:   new ol.style.Stroke({
-                    color: 'blue',
-                    width: 2
-                }),
-                fill:     new ol.style.Fill({
-                    color: 'rgba(0, 0, 255, 0.2)'
-                })
-            })];
         },
 
         _create: function() {
@@ -90,7 +65,6 @@
             var elementUrl = widget.elementUrl = urls.element + '/' + element.attr('id');
             var webPath = urls.asset;
             var cesiumPath = window.CESIUM_BASE_URL = webPath + "components/ol-cesium/Cesium/";
-            var vectorDataUrl = cesiumPath + "../examples/data/geojson/vector_data.geojson";
             var url = 'http://osm-demo.wheregroup.com/service';
 
             element.append(olMapElement);
@@ -129,17 +103,6 @@
             olMapElement.data('olMap', map);
             olMapElement.data('olCesiumMap', ol3d);
 
-            // var format = new ol.format.WKT();
-            // var feature = format.readFeature("POLYGON((60586.458514127 63712.219187492,61163.541485873 63712.219187492,61163.541485873 64027.780812508,60586.458514127 64027.780812508,60586.458514127 63712.219187492))", {
-            //     dataProjection: 'EPSG:3068',
-            //     featureProjection: 'EPSG:3857'
-            // });
-
-            // // // map.addInteraction()
-            // map.addLayer(new ol.layer.Tile({
-            //     source: new ol.source.OSM({url: 'https://{a-c}.tile.openstreetmap.org/{z}/{x}/{y}.png'})
-            // }));
-
             // map.addInteraction()
             map.addLayer(new ol.layer.Tile({
                 source: new ol.source.TileWMS({
@@ -155,55 +118,14 @@
             var vectorSource = new ol.source.Vector({
                 url: webPath + 'data/featureCollection5.geo.json',
                 format: new ol.format.GeoJSON({
-                    // Feautre own projection
+                    // Feature own projection
                     // defaultDataProjection:    "EPSG:3068",
+
                     // Map projection
                     // featureProjection: "EPSG:3857"
                 })
             });
 
-            function setGeometryHeight(geometry) {
-                var geometryType = geometry.getType();
-                var geometryProperties = geometry.getProperties();
-
-                var height = 6 + Math.floor(Math.random() * 3);
-                geometry.height = geometryProperties.height = height;
-                geometry.extrude = geometryProperties.extrude = height;
-                geometry.extrudedHeight = geometryProperties.extrudedHeight = height;
-
-                geometry.setProperties(geometryProperties);
-
-                if(geometryType == 'MultiPolygon') {
-                    _.each(geometry.getPolygons(), function(polygone) {
-                        var properties = polygone.getProperties();
-                        polygone.height = properties.height = Math.floor(Math.random() * 100);
-                        polygone.extrude = properties.extrude = Math.floor(Math.random() * 100);
-                        polygone.extrudedHeight = properties.extrudedHeight = Math.floor(Math.random() * 100);
-                        polygone.setProperties(properties);
-                        polygone.changed();
-
-                        // console.log(polygone);
-                    })
-                }
-                geometry.changed();
-            }
-
-            vectorSource.on("addfeature", function(event, b, c) {
-                var feature = event.feature;
-                var properties = feature.getProperties();
-                var geometry = properties.geometry;
-
-                var height = 600 + Math.floor(Math.random() * 3);
-                properties.height = height;
-                properties.extrude = height;
-                properties.extrudedHeight =  height;
-
-                feature.setProperties(properties);
-
-                setGeometryHeight(geometry);
-
-                feature.changed();
-            }, widget);
 
             var featureCollectionLayer1 = new ol.layer.Vector({
                 source: vectorSource,
@@ -224,7 +146,6 @@
             // scene.terrainProvider = new Cesium.CesiumTerrainProvider();
             scene.globe.enableLighting = true;
             ol3d.setEnabled(options.enable3DByDefault);
-
 
             element.append($('<div class="button-navigation"/>')
                 .append($('<a class="button">Toggle clamp to ground</a>').on('click', function() {
@@ -272,6 +193,57 @@
             element.on('toggle3D', function(event, enabled) {
                 widget.updateMapContainerGeometries();
             });
+        },
+
+        /**
+         * Set feature random height
+         *
+         * @param vectorSource
+         */
+        setSourceFeaturesRandomHeight: function(vectorSource) {
+
+            function setGeometryHeight(geometry) {
+                var geometryType = geometry.getType();
+                var geometryProperties = geometry.getProperties();
+
+                var height = 6 + Math.floor(Math.random() * 3);
+                geometry.height = geometryProperties.height = height;
+                geometry.extrude = geometryProperties.extrude = height;
+                geometry.extrudedHeight = geometryProperties.extrudedHeight = height;
+
+                geometry.setProperties(geometryProperties);
+
+                if(geometryType == 'MultiPolygon') {
+                    _.each(geometry.getPolygons(), function(polygone) {
+                        var properties = polygone.getProperties();
+                        polygone.height = properties.height = Math.floor(Math.random() * 100);
+                        polygone.extrude = properties.extrude = Math.floor(Math.random() * 100);
+                        polygone.extrudedHeight = properties.extrudedHeight = Math.floor(Math.random() * 100);
+                        polygone.setProperties(properties);
+                        polygone.changed();
+
+                        // console.log(polygone);
+                    })
+                }
+                geometry.changed();
+            }
+
+            vectorSource.on("addfeature", function(event, b, c) {
+                var feature = event.feature;
+                var properties = feature.getProperties();
+                var geometry = properties.geometry;
+
+                var height = 600 + Math.floor(Math.random() * 3);
+                properties.height = height;
+                properties.extrude = height;
+                properties.extrudedHeight = height;
+
+                feature.setProperties(properties);
+
+                setGeometryHeight(geometry);
+
+                feature.changed();
+            }, widget);
         }
     });
 })(jQuery);
