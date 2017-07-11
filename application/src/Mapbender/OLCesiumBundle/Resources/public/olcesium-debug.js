@@ -28511,10 +28511,9 @@ olcs.FeatureConverter.prototype.olLineStringGeometryToCesium = function(layer, f
  * @api
  */
 olcs.FeatureConverter.prototype.olPolygonGeometryToCesium = function(layer, feature, olGeometry, projection, olStyle) {
-
+  const featureGeometryProperties = feature.getProperties();
   olGeometry = olcs.core.olGeometryCloneTo4326(olGeometry, projection);
   goog.asserts.assert(olGeometry.getType() == 'Polygon');
-    console.warn(olGeometry.getCoordinates()[0].length);
   let fillGeometry, outlineGeometry;
   if ((olGeometry.getCoordinates()[0].length == 5) &&
       (feature.getGeometry().get('olcs.polygon_kind') === 'rectangle')) {
@@ -28534,12 +28533,12 @@ olcs.FeatureConverter.prototype.olPolygonGeometryToCesium = function(layer, feat
     }
 
     // Render the cartographic rectangle
-    fillGeometry = new Cesium.RectangleGeometry({
+    fillGeometry = new Cesium.RectangleGeometry(_.extend({
       ellipsoid: Cesium.Ellipsoid.WGS84,
       rectangle : rectangle,
-        extrudedHeight: 1000,
+      extrudedHeight: 10,
       height: maxHeight
-    });
+    },featureGeometryProperties));
 
     outlineGeometry = new Cesium.RectangleOutlineGeometry({
         ellipsoid: Cesium.Ellipsoid.WGS84,
@@ -28571,19 +28570,19 @@ olcs.FeatureConverter.prototype.olPolygonGeometryToCesium = function(layer, feat
       }
     }
 
-    fillGeometry = new Cesium.PolygonGeometry({
+    fillGeometry = new Cesium.PolygonGeometry(_.extend({
       // always update Cesium externs before adding a property
       polygonHierarchy,
         extrudedHeight: 10,
       perPositionHeight: true
-    });
+    },featureGeometryProperties));
 
-    outlineGeometry = new Cesium.PolygonOutlineGeometry({
+    outlineGeometry = new Cesium.PolygonOutlineGeometry(_.extend({
       // always update Cesium externs before adding a property
       polygonHierarchy: hierarchy,
         extrudedHeight: 10,
       perPositionHeight: true
-    });
+    },featureGeometryProperties));
   }
 
   const primitives = this.wrapFillAndOutlineGeometries(
@@ -28766,9 +28765,6 @@ olcs.FeatureConverter.prototype.olMultiGeometryToCesium = function(layer, featur
     });
     return primitives;
   };
-    console.log('Test')
-    console.log(feature);
-    console.warn(geometry.getType());
   let subgeos;
   switch (geometry.getType()) {
     case 'MultiPoint':
