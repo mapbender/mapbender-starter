@@ -69,7 +69,7 @@ class OlCesiumMap extends Map
                 //'/components/ol-cesium/olcesium-debug.js',
                 //'/components/ol-cesium/CesiumUnminified/Cesium.js',
                 '/components/proj4js/dist/proj4.js',
-                '/components/ol-cesium/olcesium.js',
+                'olcesium-debug.js',
                 '/components/ol-cesium/Cesium/Cesium.js',
                 'map.element.js'
             ),
