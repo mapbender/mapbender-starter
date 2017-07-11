@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c0ae45f6db732dd2aacea2724e8c1e60",
+    "content-hash": "4c5a03b700d741a4dabfe18bcbc749e6",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -1460,6 +1460,23 @@
                 "scss"
             ],
             "time": "2016-11-03T14:44:01+00:00"
+        },
+        {
+            "name": "example/data",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "git@repo.wheregroup.com:vattenfall/3d-poc.git",
+                "reference": "master"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "files": [
+                        "**"
+                    ]
+                }
+            }
         },
         {
             "name": "fabpot/sphinx-php",

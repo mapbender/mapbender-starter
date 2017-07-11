@@ -57,7 +57,8 @@
         "mapbender/documentation": "dev-release/3.0.6",
 
         "proj4js/proj4js": "2.x",
-        "openlayers/ol-cesium": "1.x"
+        "openlayers/ol-cesium": "1.x",
+        "example/data": "1.x"
     },
     "scripts": {
         "post-install-cmd": [
@@ -191,6 +192,26 @@
                         "files": [
                             "lib/**",
                             "dist/**"
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "example/data",
+                "type": "component",
+                "version": "1.0",
+                "source": {
+                    "url": "git@repo.wheregroup.com:vattenfall/3d-poc.git",
+                    "type": "git",
+                    "reference": "master"
+                },
+                "extra": {
+                    "component": {
+                        "files": [
+                            "**"
                         ]
                     }
                 }
