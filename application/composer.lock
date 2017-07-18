@@ -2242,12 +2242,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "11001dfc3b40c663baddb1a2599b948e61c7c090"
+                "reference": "8f329eb25ccde23315412a2721085e4e678286e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/11001dfc3b40c663baddb1a2599b948e61c7c090",
-                "reference": "11001dfc3b40c663baddb1a2599b948e61c7c090",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/8f329eb25ccde23315412a2721085e4e678286e6",
+                "reference": "8f329eb25ccde23315412a2721085e4e678286e6",
                 "shasum": ""
             },
             "require": {
@@ -2280,7 +2280,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2017-07-17 14:32:52"
+            "time": "2017-07-18 07:49:26"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -4034,20 +4034,21 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.8.24",
+            "version": "v2.8.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "0ab3693b1154b1b166e98981ab3755636a5ae0e3"
+                "reference": "c2452af5659d0492a43268c389bb211295c5e4c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/0ab3693b1154b1b166e98981ab3755636a5ae0e3",
-                "reference": "0ab3693b1154b1b166e98981ab3755636a5ae0e3",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/c2452af5659d0492a43268c389bb211295c5e4c9",
+                "reference": "c2452af5659d0492a43268c389bb211295c5e4c9",
                 "shasum": ""
             },
             "require": {
                 "doctrine/common": "~2.4",
+                "ext-xml": "*",
                 "php": ">=5.3.9",
                 "psr/log": "~1.0",
                 "symfony/polyfill-apcu": "~1.1",
@@ -4167,7 +4168,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2017-07-05T08:53:15+00:00"
+            "time": "2017-07-17T18:00:19+00:00"
         },
         {
             "name": "twig/extensions",
