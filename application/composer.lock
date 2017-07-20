@@ -2069,16 +2069,16 @@
         },
         {
             "name": "mapbender/data-source",
-            "version": "0.1.4",
+            "version": "0.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/data-source.git",
-                "reference": "4285a7d732cda9641f468f4aa651c3f0b2ffce1f"
+                "reference": "fa2e5a99716e49e814b04b547dacca9bef82ca58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/data-source/zipball/4285a7d732cda9641f468f4aa651c3f0b2ffce1f",
-                "reference": "4285a7d732cda9641f468f4aa651c3f0b2ffce1f",
+                "url": "https://api.github.com/repos/mapbender/data-source/zipball/fa2e5a99716e49e814b04b547dacca9bef82ca58",
+                "reference": "fa2e5a99716e49e814b04b547dacca9bef82ca58",
                 "shasum": ""
             },
             "require": {
@@ -2112,7 +2112,7 @@
                 "data source",
                 "mapbender"
             ],
-            "time": "2017-07-04T14:01:01+00:00"
+            "time": "2017-07-20T10:48:04+00:00"
         },
         {
             "name": "mapbender/digitizer",
@@ -2242,12 +2242,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "5b97107c5ed8da715479621ceb67f0d2474b8a4e"
+                "reference": "abbed98481981bbd9a5c7b4a0d621ef1eaf7ad27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/5b97107c5ed8da715479621ceb67f0d2474b8a4e",
-                "reference": "5b97107c5ed8da715479621ceb67f0d2474b8a4e",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/abbed98481981bbd9a5c7b4a0d621ef1eaf7ad27",
+                "reference": "abbed98481981bbd9a5c7b4a0d621ef1eaf7ad27",
                 "shasum": ""
             },
             "require": {
@@ -2280,7 +2280,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2017-07-19 16:01:24"
+            "time": "2017-07-20 07:17:42"
         },
         {
             "name": "mapbender/mapbender-icons",
