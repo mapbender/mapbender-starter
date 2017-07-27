@@ -5,7 +5,7 @@
  - Fixed regression for WMS Scale hint (#584)
 
 
-## v3.0.6.2 - 20.07.2017
+## v3.0.6.2 - 2017-07-20
 - [Mapbender Starter](https://github.com/mapbender/mapbender-starter/commits/release/3.0.6)
 - [Mapbender Core](https://github.com/mapbender/mapbender/commits/release/3.0.6)
 - [FOM](https://github.com/mapbender/fom/commits/release/3.0.6)
