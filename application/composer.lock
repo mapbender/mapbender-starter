@@ -602,16 +602,16 @@
         },
         {
             "name": "doctrine/cache",
-            "version": "v1.6.1",
+            "version": "v1.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "b6f544a20f4807e81f7044d31e679ccbb1866dc3"
+                "reference": "eb152c5100571c7a45470ff2a35095ab3f3b900b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/b6f544a20f4807e81f7044d31e679ccbb1866dc3",
-                "reference": "b6f544a20f4807e81f7044d31e679ccbb1866dc3",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/eb152c5100571c7a45470ff2a35095ab3f3b900b",
+                "reference": "eb152c5100571c7a45470ff2a35095ab3f3b900b",
                 "shasum": ""
             },
             "require": {
@@ -668,7 +668,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2016-10-29T11:16:17+00:00"
+            "time": "2017-07-22T12:49:21+00:00"
         },
         {
             "name": "doctrine/collections",
@@ -868,16 +868,16 @@
         },
         {
             "name": "doctrine/dbal",
-            "version": "v2.5.12",
+            "version": "v2.5.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "7b9e911f9d8b30d43b96853dab26898c710d8f44"
+                "reference": "729340d8d1eec8f01bff708e12e449a3415af873"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/7b9e911f9d8b30d43b96853dab26898c710d8f44",
-                "reference": "7b9e911f9d8b30d43b96853dab26898c710d8f44",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/729340d8d1eec8f01bff708e12e449a3415af873",
+                "reference": "729340d8d1eec8f01bff708e12e449a3415af873",
                 "shasum": ""
             },
             "require": {
@@ -935,7 +935,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2017-02-08T12:53:47+00:00"
+            "time": "2017-07-22T20:44:48+00:00"
         },
         {
             "name": "doctrine/doctrine-bundle",
@@ -2172,12 +2172,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-documentation.git",
-                "reference": "9f67cee77c12ecc2e5e571b1dbc10516dee5aa15"
+                "reference": "bfa1008b86cc5ea115c51f84c9cfc9a09989436d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/9f67cee77c12ecc2e5e571b1dbc10516dee5aa15",
-                "reference": "9f67cee77c12ecc2e5e571b1dbc10516dee5aa15",
+                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/bfa1008b86cc5ea115c51f84c9cfc9a09989436d",
+                "reference": "bfa1008b86cc5ea115c51f84c9cfc9a09989436d",
                 "shasum": ""
             },
             "require": {
@@ -2199,7 +2199,7 @@
                 "documentation",
                 "mapbender"
             ],
-            "time": "2017-07-19 16:22:13"
+            "time": "2017-07-27 08:38:17"
         },
         {
             "name": "mapbender/fom",
@@ -2207,12 +2207,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/fom.git",
-                "reference": "8edbe6392b68ea063a929a896fc2b1d01ecb8d47"
+                "reference": "29ab24de591de807d7103fba8f5f58460ebc8ebd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/fom/zipball/8edbe6392b68ea063a929a896fc2b1d01ecb8d47",
-                "reference": "8edbe6392b68ea063a929a896fc2b1d01ecb8d47",
+                "url": "https://api.github.com/repos/mapbender/fom/zipball/29ab24de591de807d7103fba8f5f58460ebc8ebd",
+                "reference": "29ab24de591de807d7103fba8f5f58460ebc8ebd",
                 "shasum": ""
             },
             "require": {
@@ -2234,7 +2234,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2017-07-19 16:02:01"
+            "time": "2017-07-27 09:05:25"
         },
         {
             "name": "mapbender/mapbender",
@@ -2242,12 +2242,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "abbed98481981bbd9a5c7b4a0d621ef1eaf7ad27"
+                "reference": "67ec22721123dc0ebf160ba8936b7ad42904d96d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/abbed98481981bbd9a5c7b4a0d621ef1eaf7ad27",
-                "reference": "abbed98481981bbd9a5c7b4a0d621ef1eaf7ad27",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/67ec22721123dc0ebf160ba8936b7ad42904d96d",
+                "reference": "67ec22721123dc0ebf160ba8936b7ad42904d96d",
                 "shasum": ""
             },
             "require": {
@@ -2280,7 +2280,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2017-07-20 07:17:42"
+            "time": "2017-07-27 11:29:27"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -2389,12 +2389,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/owsproxy3.git",
-                "reference": "7ff2f04a995245575a577c0e82fde68fd3820e6b"
+                "reference": "f4504e99e2f2a365dcabde49aff0d7288072146c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/7ff2f04a995245575a577c0e82fde68fd3820e6b",
-                "reference": "7ff2f04a995245575a577c0e82fde68fd3820e6b",
+                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/f4504e99e2f2a365dcabde49aff0d7288072146c",
+                "reference": "f4504e99e2f2a365dcabde49aff0d7288072146c",
                 "shasum": ""
             },
             "require": {
@@ -2418,7 +2418,7 @@
                 "module",
                 "owsproxy"
             ],
-            "time": "2017-07-19 16:01:48"
+            "time": "2017-07-27 09:05:54"
         },
         {
             "name": "medialize/jquery-context-menu",
