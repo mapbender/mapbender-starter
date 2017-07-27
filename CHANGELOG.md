@@ -1,5 +1,10 @@
 # Changelog
 
+## v.3.0.6.3 - 2017-07-27
+ - Fixed regression for for WMS 1.3.0 support (#529)
+ - Fixed regression for WMS Scale hint (#584)
+
+
 ## v3.0.6.2 - 20.07.2017
 - [Mapbender Starter](https://github.com/mapbender/mapbender-starter/commits/release/3.0.6)
 - [Mapbender Core](https://github.com/mapbender/mapbender/commits/release/3.0.6)
