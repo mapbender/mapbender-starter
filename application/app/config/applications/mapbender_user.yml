@@ -152,7 +152,7 @@ parameters:
                             max: [-500000,4350000,1600000,6850000]
                         scales: [5000000,1000000,500000,100000,50000,25000,10000,7500,5000,2500,1000,500]
                         maxResolution: 'auto'
-                        otherSrs: ["EPSG:25833","EPSG:31466","EPSG:31467","EPSG:900913","EPSG:4326"]
+                        otherSrs: ["EPSG:25833","EPSG:31466","EPSG:31467","EPSG:3857","EPSG:4326"]
                     zoombar:
                         class: Mapbender\CoreBundle\Element\ZoomBar
                         target: map
