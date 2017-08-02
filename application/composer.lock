@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3096d51e8a5093eee5af0105b87e4d5f",
-    "content-hash": "b5f81661225fbd1eaa1d425254d94549",
+    "hash": "64b1ed9a7613543b222ffe90d2d3bb13",
+    "content-hash": "d6d5b178fcedc7029c800732f227eb73",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -2423,7 +2423,7 @@
         },
         {
             "name": "mapbender/utfgrid",
-            "version": "0.0.1",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/utfgrid.git",
