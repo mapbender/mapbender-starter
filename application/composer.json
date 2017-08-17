@@ -89,6 +89,9 @@
         "version": [
             "ComposerBootstrap::displayVersion"
         ],
+        "project-name": [
+            "ComposerBootstrap::displayProjectName"
+        ],
         "init-example": [
             "ComposerBootstrap::checkConfiguration"
         ],
