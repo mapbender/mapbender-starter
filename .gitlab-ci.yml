@@ -19,11 +19,13 @@ package:
     - bin/composer install -o --no-dev
     - bin/composer init-example
     - bin/composer "build" "tar.gz" "${PROJECT_NAME}" "${NEXT_VERSION}"
+    - bin/composer "build" "zip" "${PROJECT_NAME}" "${NEXT_VERSION}"
 
   artifacts:
     name: "$(git describe --tags)-$(git rev-parse --short HEAD)"
     paths:
       - "${CI_PROJECT_DIR}/dist/*.tar.gz"
+      - "${CI_PROJECT_DIR}/dist/*.zip"
     expire_in: 1 week
 
 release:
@@ -35,4 +37,5 @@ release:
   script:
     - git tag ${REVISION_TAG}
     - git remote set-url --push origin "$(echo $CI_REPOSITORY_URL | perl -pe 's#.*@(.+?(\:\d+)?)/#git@\1:#')"
+    - git remote -v
     - git push origin --tags
