@@ -3,7 +3,7 @@ image: wg-runner/php7
 before_script:
   - cd application
   - export PROJECT_NAME=$(bin/composer project-name)
-  - export NEXT_VERSION_SHORT=$(bin/composer version git next-revision)
+  - export NEXT_VERSION_SHORT=$(bin/composer version git next-revision v)
   - export NEXT_VERSION=$(bin/composer version git next-revision)-$(git rev-parse --short HEAD)
   - export REVISION_TAG=v${NEXT_VERSION_SHORT}
 
@@ -18,6 +18,8 @@ package:
   script:
     - bin/composer install -o --no-dev
     - bin/composer init-example
+    - bin/composer gen-api-docs
+    - bin/composer gen-user-docs
     - bin/composer "build" "tar.gz" "${PROJECT_NAME}" "${NEXT_VERSION}"
     - bin/composer "build" "zip" "${PROJECT_NAME}" "${NEXT_VERSION}"
 
