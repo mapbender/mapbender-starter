@@ -34,7 +34,7 @@
         "doctrine/orm": "~2.2,>=2.2.3",
         "doctrine/doctrine-bundle": "1.x",
         "twig/extensions": "1.x",
-        "symfony/assetic-bundle": "2.7.x",
+        "symfony/assetic-bundle": "2.x",
         "symfony/swiftmailer-bundle": "2.3.x",
         "symfony/monolog-bundle": "2.3.x",
         "sensio/distribution-bundle": "~4.0",
