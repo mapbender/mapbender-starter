@@ -6,6 +6,7 @@ before_script:
   - export NEXT_VERSION_SHORT=$(bin/composer version git next-revision v)
   - export NEXT_VERSION=$(bin/composer version git next-revision)-$(git rev-parse --short HEAD)
   - export REVISION_TAG=v${NEXT_VERSION_SHORT}
+  - git tag ${REVISION_TAG}
 
 stages:
   - package
@@ -37,7 +38,6 @@ release:
     - /^feature\/.*$/
     - /^(fix|hotfix)\/.*$/
   script:
-    - git tag ${REVISION_TAG}
     - git remote set-url --push origin "$(echo $CI_REPOSITORY_URL | perl -pe 's#.*@(.+?(\:\d+)?)/#git@\1:#')"
     - git remote -v
     - git push origin --tags
