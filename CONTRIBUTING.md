@@ -4,11 +4,11 @@ The Mapbender team welcomes contributions from all members - so you are welcome 
 
 Third-party patches are essential for the preservation of high standards in [Mapbender].
 
-We simply cannot access the huge number of platforms and myriad configurations which run [Mapbender]. 
+We simply cannot access the huge number of platforms and myriad configurations that run [Mapbender]. 
 
 We want it as easy as possible to carry out changes to get the [modules] in your environment to run. 
 
-Therefore, we provide a few [guidelines][rules] that every contributor has to follow, in order that we have a chance of keeping on top of things.
+Therefore, we provide a few [guidelines][rules] as an overview for contributors to Mapbender.
 
 # Architecture 
 
@@ -594,18 +594,18 @@ git push
 
 # Building packages 
 
-For distributing and building packages, there is a matching [composer] command:
+There are special [composer] commands for distributing and building packages:
 
-* `bin/composer build` Build package command with follow optional parameters:
+* `bin/composer build` Command to build a package with the following optional parameters:
     * **[tar.gz|zip]** - Optional parameter that defines the package file format. The default configuration is defined in `composer.json` as `config/archive-format`.
     * **[dist-name]** - Optional parameter that defines the package file name prefix. The default configuration is defined in `composer.json` as `name`, a vendor name will be ignored.
     * **[dist-version]** - Optional parameter that defines the package version. This is included as suffix in the package name. The default configuration is defined in `composer.json` as `version`.
 
-You can define the [composer] distributing path in `composer.json` as `config/archive-dir`. The default location is a `dist` folder located in root of the project. 
+You can define the [composer] distributing path in `composer.json` as `config/archive-dir`. The default location is the `dist` folder located in root of the project. 
 
 ## Build package example
 
-Running this command distributes and builds the package `dist/test-distribution.1.0.1.tar.gz`:
+You can build and distribute an articat to `dist/test-distribution.1.0.1.tar.gz` by running:
 
 ```bash
 bin/composer build zip test-distribution 1.0.1
