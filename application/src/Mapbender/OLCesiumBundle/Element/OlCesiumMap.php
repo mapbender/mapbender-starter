@@ -68,6 +68,7 @@ class OlCesiumMap extends Map
             'js'  => array(
                 //'/components/ol-cesium/olcesium-debug.js',
                 //'/components/ol-cesium/CesiumUnminified/Cesium.js',
+                "@MapbenderElementBundle/Resources/public/mapbender.base.element.js",
                 '/components/proj4js/dist/proj4.js',
                 'olcesium-debug.js',
                 '/components/ol-cesium/Cesium/Cesium.js',

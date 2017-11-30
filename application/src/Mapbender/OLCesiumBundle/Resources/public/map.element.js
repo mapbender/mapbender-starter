@@ -1,9 +1,6 @@
 (function($) {
 
-    $.widget("mapbender.mbOlCesiumMap", {
-
-        /** Element API URL */
-        elementUrl: null,
+    $.widget("mapbender.mbOlCesiumMap", $.mapbender.baseElement, {
 
         /** OpenLayers 4 / cesium map element */
         olMapElement: null,
@@ -155,16 +152,15 @@
          *
          * @private
          */
-        _create:          function() {
+        _create: function() {
             var widget = this;
             var element = widget.element;
             var options = widget.options;
             var olMapElement = widget.olMapElement = $("<div class='ol-map'/>");
-            var urls = Mapbender.configuration.application.urls;
-            var elementUrl = widget.elementUrl = urls.element + '/' + element.attr('id');
-            var webPath = urls.asset;
-            var cesiumPath = window.CESIUM_BASE_URL = webPath + "components/ol-cesium/Cesium/";
-            var featureCollectionUrl = webPath + 'components/data/featureCollection5.geo.json';
+            var cesiumWebPath = window.CESIUM_BASE_URL = widget.getUrlByUri('components/ol-cesium/Cesium/');
+
+            widget._super();
+
             var wmsUrl = 'http://osm-demo.wheregroup.com/service';
 
             // Add DHDN / Soldner Berlin https://epsg.io/3068
@@ -184,20 +180,17 @@
                     attributionOptions: /** @type {olx.control.AttributionOptions} */ ({
                         collapsible: false
                     })
-                }),
-                //default EPSG:3857
+                }), //default EPSG:3857
                 view:     new ol.View({
-                    projection: "EPSG:3857",
-                    // maxResolution: options.maxResolution,
+                    projection: "EPSG:3857", // maxResolution: options.maxResolution,
                     // mandatory !!!
-                    center: berlin, // extent:     options.extents.start,
-                    zoom:   17
+                    center:     berlin, // extent:     options.extents.start,
+                    zoom:       17
                 })
             });
 
-
             var ol3d = widget.ol3dMap = new olcs.OLCesium({
-                map:    map
+                map: map
             });
 
             olMapElement.data('olMap', map);
@@ -205,13 +198,12 @@
 
             // map.addInteraction()
             map.addLayer(widget.loadWmsLayer(wmsUrl));
-            map.addLayer(widget.createJsonLayer(featureCollectionUrl));
 
             var scene = ol3d.getCesiumScene();
             // scene.terrainProvider = new Cesium.CesiumTerrainProvider();
             scene.globe.enableLighting = true;
 
-            if(options.enable3DByDefault){
+            if(options.enable3DByDefault) {
                 window.setTimeout(function() {
                     ol3d.setEnabled(options.enable3DByDefault);
                 }, 1000);
@@ -230,6 +222,13 @@
             element.on('toggle3D', function(event, enabled) {
                 widget.updateMapContainerGeometries();
             });
+        },
+
+        testLoadJsonLayer: function() {
+            var widget = this;
+            var map = widget.ol2dMap;
+            map.addLayer(widget.createJsonLayer(widget.getUrlByUri('components/data/featureCollection5.geo.json')));
         }
+
     });
 })(jQuery);
