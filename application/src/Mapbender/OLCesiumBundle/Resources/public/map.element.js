@@ -1,9 +1,4 @@
 (function($) {
-    // Add DHDN / Soldner Berlin https://epsg.io/3068
-    // This seems to be used by OpenLayers
-    proj4.defs("EPSG:3068", "+proj=cass +lat_0=52.41864827777778 +lon_0=13.62720366666667 +x_0=40000 +y_0=10000 +ellps=bessel +towgs84=598.1,73.7,418.2,0.202,0.045,-2.455,6.7 +units=m +no_defs");
-    proj4.defs("EPSG:4326", "+proj=longlat +datum=WGS84 +no_defs");
-
 
     $.widget("mapbender.mbOlCesiumMap", {
 
@@ -171,6 +166,11 @@
             var cesiumPath = window.CESIUM_BASE_URL = webPath + "components/ol-cesium/Cesium/";
             var featureCollectionUrl = webPath + 'components/data/featureCollection5.geo.json';
             var wmsUrl = 'http://osm-demo.wheregroup.com/service';
+
+            // Add DHDN / Soldner Berlin https://epsg.io/3068
+            // This seems to be used by OpenLayers
+            proj4.defs("EPSG:3068", "+proj=cass +lat_0=52.41864827777778 +lon_0=13.62720366666667 +x_0=40000 +y_0=10000 +ellps=bessel +towgs84=598.1,73.7,418.2,0.202,0.045,-2.455,6.7 +units=m +no_defs");
+            proj4.defs("EPSG:4326", "+proj=longlat +datum=WGS84 +no_defs");
 
             element.append(olMapElement);
 
