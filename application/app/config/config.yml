@@ -59,6 +59,13 @@ doctrine:
         auto_generate_proxy_classes: %kernel.debug%
         auto_mapping: true
 
+doctrine_migrations:
+    dir_name: "%kernel.root_dir%/DoctrineMigrations"
+    namespace: Application\Migrations
+    table_name: migration_versions
+    name: Application Migrations
+    organize_migrations: "BY_YEAR_AND_MONTH" #Possible values are: "BY_YEAR", "BY_YEAR_AND_MONTH", false
+
 # Swiftmailer Configuration
 swiftmailer:
     transport: %mailer_transport%
