@@ -17,7 +17,7 @@ class AppKernel extends Kernel
      * @param string            $nameSpace Name space prefix as string
      * @return BundleInterface[] Bundle array
      */
-    function addNameSpaceBundles(array &$bundles, $nameSpace)
+    public function addNameSpaceBundles(array &$bundles, $nameSpace)
     {
         $namespaces = include(dirname(__FILE__) . "/../vendor/composer/autoload_namespaces.php");
         foreach ($namespaces as $name => $path) {
