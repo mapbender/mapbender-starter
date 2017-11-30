@@ -211,20 +211,6 @@
             // scene.terrainProvider = new Cesium.CesiumTerrainProvider();
             scene.globe.enableLighting = true;
 
-
-            $(document).on('click', widget.element, function(event){
-                var ent = scene.drillPick(new Cesium.Cartesian2(event.clientX,event.clientY), 1)
-                console.log(ent[0].primitive.olFeature.values_);
-               var popup =  $('<div />').addClass('mb-popup');
-                _.each(ent[0].primitive.olFeature.values_, function(value,key){
-                    popup.append($('<p/>').text(key + ' : ' + value));
-                    console.log(key + ' : ' + value);
-                });
-                popup.popupDialog();
-
-            });
-
-
             window.setTimeout(function() {
                 ol3d.setEnabled(options.enable3DByDefault);
             }, 1000);
