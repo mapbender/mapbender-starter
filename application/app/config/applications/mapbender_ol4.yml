@@ -128,17 +128,20 @@ parameters:
                         class: Mapbender\CoreBundle\Element\AboutDialog
                 content:
                     map:
-                        title: Main Map
-                        class: Mapbender\CoreBundle\Element\Map
+                        title: OpenLayers4 Cesium Map
+                        class: Mapbender\OLCesiumBundle\Element\OlCesiumMap
                         layersets: [main]
-                        srs: EPSG:25832
-                        units: m
+                        srs: EPSG:4326
+                        dpi: 90.714
+                        units: m #degrees
                         extents:
-                            start: [361000,5619000,371150,5625000]
-                            max: [251000,5400000,475000,5850000]
+                            max: [0, 40, 20, 60]
+                            start: [5, 45, 15, 55]
                         scales: [500000,250000,125000,75000,50000,25000,10000,7500,5000,2500,1000,500]
-                        maxResolution: 'auto'
-                        otherSrs: ["EPSG:25833","EPSG:31466","EPSG:31467","EPSG:3857","EPSG:4326"]
+                        maxResolution: auto
+                        olMap: true
+                        ceMap: true
+                        otherSrs: ['EPSG:31466', 'EPSG:31467']
 #                    zoombar:
 #                        class: Mapbender\CoreBundle\Element\ZoomBar
 #                        target: map
