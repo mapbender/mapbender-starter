@@ -227,57 +227,6 @@
             element.on('toggle3D', function(event, enabled) {
                 widget.updateMapContainerGeometries();
             });
-        },
-
-        /**
-         * Set feature random height
-         *
-         * @param vectorSource
-         */
-        setSourceFeaturesRandomHeight: function(vectorSource) {
-
-            function setGeometryHeight(geometry) {
-                var geometryType = geometry.getType();
-                var geometryProperties = geometry.getProperties();
-
-                var height = 6 + Math.floor(Math.random() * 3);
-                geometry.height = geometryProperties.height = height;
-                geometry.extrude = geometryProperties.extrude = height;
-                geometry.extrudedHeight = geometryProperties.extrudedHeight = height;
-
-                geometry.setProperties(geometryProperties);
-
-                if(geometryType == 'MultiPolygon') {
-                    _.each(geometry.getPolygons(), function(polygone) {
-                        var properties = polygone.getProperties();
-                        polygone.height = properties.height = Math.floor(Math.random() * 100);
-                        polygone.extrude = properties.extrude = Math.floor(Math.random() * 100);
-                        polygone.extrudedHeight = properties.extrudedHeight = Math.floor(Math.random() * 100);
-                        polygone.setProperties(properties);
-                        polygone.changed();
-
-                        // console.log(polygone);
-                    })
-                }
-                geometry.changed();
-            }
-
-            vectorSource.on("addfeature", function(event, b, c) {
-                var feature = event.feature;
-                var properties = feature.getProperties();
-                var geometry = properties.geometry;
-
-                var height = 600 + Math.floor(Math.random() * 3);
-                properties.height = height;
-                properties.extrude = height;
-                properties.extrudedHeight = height;
-
-                feature.setProperties(properties);
-
-                setGeometryHeight(geometry);
-
-                feature.changed();
-            }, widget);
         }
     });
 })(jQuery);
