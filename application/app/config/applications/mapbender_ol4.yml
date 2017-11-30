@@ -139,9 +139,10 @@ parameters:
                             start: [5, 45, 15, 55]
                         scales: [500000,250000,125000,75000,50000,25000,10000,7500,5000,2500,1000,500]
                         maxResolution: auto
-                        olMap: true
-                        ceMap: true
                         otherSrs: ['EPSG:31466', 'EPSG:31467']
+                        olMap: true
+                        ceMap: false
+                        enable3DByDefault: false
 #                    zoombar:
 #                        class: Mapbender\CoreBundle\Element\ZoomBar
 #                        target: map

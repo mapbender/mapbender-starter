@@ -211,10 +211,13 @@
             // scene.terrainProvider = new Cesium.CesiumTerrainProvider();
             scene.globe.enableLighting = true;
 
-            window.setTimeout(function() {
-                ol3d.setEnabled(options.enable3DByDefault);
-            }, 1000);
+            if(options.enable3DByDefault){
+                window.setTimeout(function() {
+                    ol3d.setEnabled(options.enable3DByDefault);
+                }, 1000);
+            }
 
+            console.log(options);
 
             widget.createNavigation();
 
