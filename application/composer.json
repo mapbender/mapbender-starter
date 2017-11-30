@@ -3,7 +3,7 @@
     "description": "Mapbender",
     "type": "project",
     "license": "MIT",
-    "version": "3.0.6.1",
+    "version": "3.0.6.3",
     "homepage": "http://www.mapbender.org",
     "support": {
         "email":        "mapbender@osgeo.org",
@@ -34,7 +34,7 @@
         "doctrine/orm": "~2.2,>=2.2.3",
         "doctrine/doctrine-bundle": "1.x",
         "twig/extensions": "1.x",
-        "symfony/assetic-bundle": "2.7.x",
+        "symfony/assetic-bundle": "2.x",
         "symfony/swiftmailer-bundle": "2.3.x",
         "symfony/monolog-bundle": "2.3.x",
         "sensio/distribution-bundle": "~4.0",
@@ -92,6 +92,9 @@
         ],
         "version": [
             "ComposerBootstrap::displayVersion"
+        ],
+        "project-name": [
+            "ComposerBootstrap::displayProjectName"
         ],
         "init-example": [
             "ComposerBootstrap::checkConfiguration"
