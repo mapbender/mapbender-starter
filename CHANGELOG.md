@@ -1,5 +1,8 @@
 # Changelog
 
+## v.3.0.6.4
+ - Add oracle database config file
+
 ## v.3.0.6.3 - 2017-07-27
  - Fixed regression for for WMS 1.3.0 support (#529)
  - Fixed regression for WMS Scale hint (#584)
