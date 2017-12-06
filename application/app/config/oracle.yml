@@ -10,4 +10,4 @@ services:
   oracle.session.listener:
     class: Doctrine\DBAL\Event\Listeners\OracleSessionInit
     tags:
-    - { name: doctrine.event_listener, event: postConnect }
+     - { name: doctrine.event_listener, event: postConnect }
