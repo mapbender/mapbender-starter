@@ -131,7 +131,7 @@ parameters:
                         title: OpenLayers4 Cesium Map
                         class: Mapbender\OLCesiumBundle\Element\OlCesiumMap
                         layersets: [main]
-                        srs: EPSG:4326
+                        srs: EPSG:3857 # EPSG:4326
                         dpi: 90.714
                         units: m #degrees
                         extents:
