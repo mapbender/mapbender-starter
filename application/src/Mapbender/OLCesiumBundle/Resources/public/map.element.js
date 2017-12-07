@@ -172,7 +172,8 @@
 
             widget.updateMapContainerGeometries();
 
-            var berlin = ol.proj.transform([60644.513695901, 63808], 'EPSG:3068', 'EPSG:3857');
+            var berlin = ol.proj.transform([60644.513695901, 63808], 'EPSG:3068', options.srs);
+
             var map = widget.ol2dMap = new ol.Map({
                 layers:   [],
                 target:   olMapElement[0],
@@ -182,7 +183,7 @@
                     })
                 }), //default EPSG:3857
                 view:     new ol.View({
-                    projection: "EPSG:3857", // maxResolution: options.maxResolution,
+                    projection: options.srs, //"EPSG:3857", // maxResolution: options.maxResolution,
                     // mandatory !!!
                     center:     berlin, // extent:     options.extents.start,
                     zoom:       17
