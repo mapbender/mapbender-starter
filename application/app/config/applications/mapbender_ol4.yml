@@ -50,14 +50,6 @@ parameters:
                         opacity: 100
             elements:
                 toolbar:
-                    layertree-button:
-                        title: Layertree
-                        tooltip: Layertree
-                        class: Mapbender\CoreBundle\Element\Button
-                        label: false
-                        icon: icon-layer-tree
-                        target: layertreedialog
-                        action: open
                     fi-button:
                         title: Feature Info
                         tooltip: Feature Info
@@ -139,7 +131,7 @@ parameters:
                             start: [5, 45, 15, 55]
                         scales: [500000,250000,125000,75000,50000,25000,10000,7500,5000,2500,1000,500]
                         maxResolution: auto
-                        otherSrs: ['EPSG:31466', 'EPSG:31467']
+                        otherSrs: ['EPSG:31466', 'EPSG:31467','EPSG:4326','EPSG:3068']
                         olMap: true
                         ceMap: false
                         enable3DByDefault: false
