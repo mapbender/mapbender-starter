@@ -194,7 +194,7 @@
             widget.updateMapContainerGeometries();
 
             // Load SRS list
-            widget.query('srs/list', {list: otherSrs.push(options.srs)}).done(function(srsDefinitions) {
+            widget.query('srs/list', {list: _.union(otherSrs, [options.srs])}).done(function(srsDefinitions) {
                 _.each(srsDefinitions, function(srs) {
                     proj4.defs(srs.name, srs.definition);
                 });
