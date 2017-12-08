@@ -21,7 +21,7 @@
             var element = widget.element;
             var urls = Mapbender.configuration.application.urls;
 
-            widget.elementUrl = urls.element + '/' + element.attr('id');
+            widget.elementUrl = urls.element + '/' + element.attr('id')+'/';
         },
 
         /**
@@ -52,7 +52,7 @@
                 dataType:    "json",
                 data:        JSON.stringify(request)
             }).error(function(xhr) {
-                var errorMessage = translate('api.query.error-message');
+                var errorMessage = Mapbender.trans("Mapbender API Error:\n");
                 var errorDom = $(xhr.responseText);
 
                 if(errorDom.size() && errorDom.is(".sf-reset")) {
@@ -67,7 +67,7 @@
                     location.href = loginURL;
                     Mapbender.info("Bitte loggen sie sich ein.")
                 } else {
-                    errorMessage += JSON.stringify(xhr.responseText);
+                    errorMessage += errorDom.text();
                 }
 
                 $.notify(errorMessage, {
