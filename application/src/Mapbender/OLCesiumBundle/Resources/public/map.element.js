@@ -1,5 +1,21 @@
 (function($) {
 
+
+    function getValueOrDefault(o, s, d) {
+        s = s.replace(/\[(\w+)\]/g, '.$1'); // convert indexes to properties
+        s = s.replace(/^\./, '');           // strip a leading dot
+        var a = s.split('.');
+        for (var i = 0, n = a.length; i < n; i++) {
+            var k = a[i];
+            if(k in o) {
+                o = o[k];
+            } else {
+                return d;
+            }
+        }
+        return o;
+    }
+
     $.widget("mapbender.mbOlCesiumMap", $.mapbender.baseElement, {
 
         /** OpenLayers 4 / cesium map element */
@@ -15,6 +31,15 @@
         options: {
             // 3D FPS
             fps: 60,
+
+            // otherSrs
+            otherSrs: [ 'EPSG:31467'],
+
+            // extents
+            extents: {
+                max: [0, 40, 20, 60],
+                start: [5, 45, 15, 55]
+            },
 
             // Terrain service
             terrain: {
@@ -158,70 +183,72 @@
             var options = widget.options;
             var olMapElement = widget.olMapElement = $("<div class='ol-map'/>");
             var cesiumWebPath = window.CESIUM_BASE_URL = widget.getUrlByUri('components/ol-cesium/Cesium/');
+            var startGeometry = getValueOrDefault(options, "extents.start", [6, 45, 16, 55]);
+            var otherSrs = getValueOrDefault(options, "otherSrs", ['EPSG:3068', 'EPSG:4326']);
+            var startPoint = [startGeometry[2] - startGeometry[0], startGeometry[3] - startGeometry[1]];
+            var centralPoint = ol.proj.transform([startPoint[0], startPoint[1]], options.srs, options.srs);
 
             widget._super();
 
-            var wmsUrl = 'http://osm-demo.wheregroup.com/service';
-
-            // Add DHDN / Soldner Berlin https://epsg.io/3068
-            // This seems to be used by OpenLayers
-            proj4.defs("EPSG:3068", "+proj=cass +lat_0=52.41864827777778 +lon_0=13.62720366666667 +x_0=40000 +y_0=10000 +ellps=bessel +towgs84=598.1,73.7,418.2,0.202,0.045,-2.455,6.7 +units=m +no_defs");
-            proj4.defs("EPSG:4326", "+proj=longlat +datum=WGS84 +no_defs");
-
             element.append(olMapElement);
-
             widget.updateMapContainerGeometries();
 
-            var berlin = ol.proj.transform([60644.513695901, 63808], 'EPSG:3068', options.srs);
+            // Load SRS list
+            widget.query('srs/list', {list: otherSrs.push(options.srs)}).done(function(srsDefinitions) {
+                _.each(srsDefinitions, function(srs) {
+                    proj4.defs(srs.name, srs.definition);
+                });
+                var wmsUrl = 'http://osm-demo.wheregroup.com/service';
 
-            var map = widget.ol2dMap = new ol.Map({
-                layers:   [],
-                target:   olMapElement[0],
-                controls: ol.control.defaults({
-                    attributionOptions: /** @type {olx.control.AttributionOptions} */ ({
-                        collapsible: false
+                // var berlin = ol.proj.transform([60644.513695901, 63808], 'EPSG:3068', options.srs);
+
+                var map = widget.ol2dMap = new ol.Map({
+                    layers:   [],
+                    target:   olMapElement[0],
+                    controls: ol.control.defaults({
+                        attributionOptions: /** @type {olx.control.AttributionOptions} */ ({
+                            collapsible: false
+                        })
+                    }), //default EPSG:3857
+                    view:     new ol.View({
+                        projection: options.srs, //"EPSG:3857", // maxResolution: options.maxResolution,
+                        // mandatory !!!
+                        center:     centralPoint, // extent:     options.extents.start,
+                        zoom:       17
                     })
-                }), //default EPSG:3857
-                view:     new ol.View({
-                    projection: options.srs, //"EPSG:3857", // maxResolution: options.maxResolution,
-                    // mandatory !!!
-                    center:     berlin, // extent:     options.extents.start,
-                    zoom:       17
-                })
-            });
+                });
 
-            var ol3d = widget.ol3dMap = new olcs.OLCesium({
-                map: map
-            });
+                var ol3d = widget.ol3dMap = new olcs.OLCesium({
+                    map: map
+                });
 
-            olMapElement.data('olMap', map);
-            olMapElement.data('olCesiumMap', ol3d);
+                olMapElement.data('olMap', map);
+                olMapElement.data('olCesiumMap', ol3d);
 
-            // map.addInteraction()
-            map.addLayer(widget.loadWmsLayer(wmsUrl));
+                // map.addInteraction()
+                map.addLayer(widget.loadWmsLayer(wmsUrl));
 
-            var scene = ol3d.getCesiumScene();
-            // scene.terrainProvider = new Cesium.CesiumTerrainProvider();
-            scene.globe.enableLighting = true;
+                var scene = ol3d.getCesiumScene();
+                // scene.terrainProvider = new Cesium.CesiumTerrainProvider();
+                scene.globe.enableLighting = true;
 
-            if(options.enable3DByDefault) {
-                window.setTimeout(function() {
-                    ol3d.setEnabled(options.enable3DByDefault);
-                }, 1000);
-            }
+                if(options.enable3DByDefault) {
+                    window.setTimeout(function() {
+                        ol3d.setEnabled(options.enable3DByDefault);
+                    }, 1000);
+                }
 
-            console.log(options);
+                widget.createNavigation();
 
-            widget.createNavigation();
+                ol3d.enableAutoRenderLoop();
 
-            ol3d.enableAutoRenderLoop();
+                $(window).resize(function() {
+                    widget.updateMapContainerGeometries();
+                });
 
-            $(window).resize(function() {
-                widget.updateMapContainerGeometries();
-            });
-
-            element.on('toggle3D', function(event, enabled) {
-                widget.updateMapContainerGeometries();
+                element.on('toggle3D', function(event, enabled) {
+                    widget.updateMapContainerGeometries();
+                });
             });
         },
 
