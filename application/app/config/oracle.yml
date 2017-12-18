@@ -1,0 +1,13 @@
+# Should be used when Oracle Server default environment does not match the Doctrine requirements.
+# The following environment variables are required for the Doctrine default date format:
+# NLS_TIME_FORMAT="HH24:MI:SS"
+# NLS_DATE_FORMAT="YYYY-MM-DD HH24:MI:SS"
+# NLS_TIMESTAMP_FORMAT="YYYY-MM-DD HH24:MI:SS"
+# NLS_TIMESTAMP_TZ_FORMAT="YYYY-MM-DD HH24:MI:SS TZH:TZM
+# See http://www.doctrine-project.org/api/dbal/2.0/class-Doctrine.DBAL.Event.Listeners.OracleSessionInit.html
+
+services:
+  oracle.session.listener:
+    class: Doctrine\DBAL\Event\Listeners\OracleSessionInit
+    tags:
+     - { name: doctrine.event_listener, event: postConnect }
