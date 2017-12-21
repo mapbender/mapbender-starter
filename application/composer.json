@@ -199,26 +199,6 @@
                     }
                 }
             }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "example/data",
-                "type": "component",
-                "version": "1.0",
-                "source": {
-                    "url": "git@repo.wheregroup.com:vattenfall/3d-poc.git",
-                    "type": "git",
-                    "reference": "master"
-                },
-                "extra": {
-                    "component": {
-                        "files": [
-                            "**"
-                        ]
-                    }
-                }
-            }
         }
     ]
 }
