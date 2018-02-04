@@ -1,5 +1,8 @@
 # Changelog
 
+## v3.0.5.5
+    - Fix displaying scale value in scale selector #647
+    
 ## v3.0.5.4 - 2016-09-xx
     - Update build.properties because of quotes
     - Install instead composer update by build with phing
