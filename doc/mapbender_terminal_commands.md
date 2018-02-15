@@ -3,10 +3,10 @@ Documentation of the Mapbender terminal commands needed for quick installation a
 
 Since Mapbender has implemented the composer tool, you can do all Composer editing from the console as well. The following commands are a selection that can be done via the console.
 
-If you look at all the commands and need the description, you can go to the page [Doku](https://getcomposer.org/doc/03-cli.md).
+If you look at all the commands and need the description, you can go to the [doc page](https://getcomposer.org/doc/03-cli.md).
 
 # Creating a default composer.json
-The command `init-example` is used to create a composer.json, which is extracted from the bootstrap [Configuration](https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/bootstrap). It is made an adjustment and overwrites the old composer.json a change and re-created. The composer.json is then created in the working directory.
+The command `init-example` is used to create a composer.json, which is extracted from the bootstrap [Configuration](https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/bootstrap). Adjustments are made and the old composer.json is being overwritten and re-created in the working directory.
 
 ```bash
 php composer.phar init-example
@@ -143,7 +143,7 @@ Compiling component files
 
 #### Update without dependencies
 
-If only the dev-require packages are to be updated, then you can optionally specify the parameter `--no-dev`. It disables the installation of require-dev packages.
+If only the non-dev/production packages shall be updated, then you can optionally specify the parameter `--no-dev`. It disables the installation of require-dev packages.
 
 ```bash
 php composer.phar update --no-dev
