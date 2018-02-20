@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/bootstrap.php.cache';
+require_once __DIR__ . '/autoload.php';
 
 if(version_compare(PHP_VERSION, '5.4.0') >= 0) {
     // Command that starts the built-in web server
