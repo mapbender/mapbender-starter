@@ -1,6 +1,9 @@
 # Changelog
 
-## v3.0.5.4 - 2018-02-20
+## v3.0.5.4-RC1 - 2018-02-20
+    - Update "a4portrait" Print template
+    - Improve SCSS to CSS generation performance on windows
+    - Bypass aggressive class caching / precompilation in dev and test environments
     - Update composer binary
     - Add composer to application/bin as link
     - Add release composer command
@@ -9,11 +12,12 @@
     - Add composer shortcut to clear caches "bin/composer clean"
     - Improved and cleaned up phing builds
     - Remove redundant LICENSE and README files
-    - cleaned up .travis.yml
+    - Cleaned up .travis.yml, allow PHP 7
     - Install phantomjs via composer instead of npm
     - Add deprecation comment to "generate:*" commands
     - Set PHP platform to 5.3.19 and adds support for PHP 7
     - Remove old "mapbender2_geometryprovider" service declaration.
+    - Remove JMS security configuration and bundles
     - Update doctrine dependencies (http://www.doctrine-project.org/2015/08/31/security_misconfiguration_vulnerability_in_various_doctrine_projects.html)
     - Use "setasign/fpdi-fpdf" instead of  "toooni/fpdf" library. Adapt PDF_ImageAlpha and PrintService on "setasign/fpdi-fpdf".
     - Fix install assets on win/linux machine
@@ -530,7 +534,7 @@
     - Mobile Template: close SearchRouter window
     - Mobile Template: Mozilla Firefox Fixes on layout
     - Backend: Layerset Filter and +-Buttons doesn't hide everything anymore
-    - composer.json upgrade version of joii to 3.1.2
+    - upgrade joii to 3.1.2
     - composer.json upgrade version of Digitizer to 1.0.*
     - Documentation of the JS-UI Generator (Form-Generator): https://github.com/eSlider/vis-ui.js
 
