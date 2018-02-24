@@ -1,22 +1,14 @@
 <?php
 
 use Symfony\Component\Config\Loader\LoaderInterface;
-use Symfony\Component\HttpKernel\Kernel;
 
-class AppKernel extends Kernel
+class AppKernel extends Mapbender\BaseKernel
 {
     public function registerBundles()
     {
         $bundles = array(
             // Standard Symfony2 bundles
-            new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
-            new Symfony\Bundle\SecurityBundle\SecurityBundle(),
-            new Symfony\Bundle\TwigBundle\TwigBundle(),
-            new Symfony\Bundle\MonologBundle\MonologBundle(),
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
-            new Symfony\Bundle\AsseticBundle\AsseticBundle(),
-            new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
-            new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
 
             // Extra bundles required by Mapbender3/OWSProxy3
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
@@ -26,8 +18,7 @@ class AppKernel extends Kernel
             new FOM\ManagerBundle\FOMManagerBundle(),
             new FOM\UserBundle\FOMUserBundle(),
 
-            // Mapbender3 bundles
-            new Mapbender\CoreBundle\MapbenderCoreBundle(),
+            // Optional Mapbender bundles
             new Mapbender\WmcBundle\MapbenderWmcBundle(),
             new Mapbender\WmsBundle\MapbenderWmsBundle(),
             new Mapbender\ManagerBundle\MapbenderManagerBundle(),
@@ -40,17 +31,8 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
         );
 
-        // dev and ALL test environments get some extra sugar...
-        $isDevKernel = false;
-        if('dev' == $this->getEnvironment() || strpos($this->getEnvironment(), 'test') == 0) {
-            $isDevKernel = true;
-        }
-
-        if ($isDevKernel) {
-            $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
-            $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
-            $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
-        }
+        // prepend bundles required by Mapbender (including MapbenderCoreBundle)
+        $bundles = array_merge(parent::registerBundles(), $bundles);
 
         return $bundles;
     }
