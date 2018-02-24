@@ -67,7 +67,7 @@
         "components/joii": "3.x",
 
         "arsgeografica/signing": "1.1.x",
-        "viscreation/vis-ui.js": "0.0.x",
+        "viscreation/vis-ui.js": "0.0.62",
         "eslider/sasscb":  "3.1.x",
 
         "mapbender/mapbender-icons": "1.x",
