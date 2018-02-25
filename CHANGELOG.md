@@ -1,6 +1,7 @@
 # Changelog
 
 ## v.3.0.6.4
+ - Added new documentation file /doc/mapbender_terminal_commands.md (command line)
  - Add oracle database config file
 
 ## v.3.0.6.3 - 2017-07-27
