@@ -34,6 +34,10 @@ class AppKernel extends Mapbender\BaseKernel
         // prepend bundles required by Mapbender (including MapbenderCoreBundle)
         $bundles = array_merge(parent::registerBundles(), $bundles);
 
+        // If you get "Uncaught LogicException: Trying to register two bundles with the same name"
+        // uncomment the next line for a quick fix
+        // $bundles = BaseKernel::filterUniqueBundles($bundles)
+
         return $bundles;
     }
 
