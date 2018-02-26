@@ -54,8 +54,7 @@
         "mapbender/mapbender": "dev-release/3.0.6",
         "mapbender/owsproxy": "dev-release/3.0.6",
         "mapbender/digitizer": "1.1.x",
-        "mapbender/documentation": "dev-release/3.0.6",
-        "mapbender/coordinates-utility": "^1.0"
+        "mapbender/documentation": "dev-release/3.0.6"
     },
     "scripts": {
         "post-install-cmd": [
