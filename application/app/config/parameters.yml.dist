@@ -18,8 +18,8 @@ parameters:
     secret:            ThisTokenIsNotSoSecretChangeIt
 
     fom:
-        server_name:   Mapbender3
-        server_version: 3.0.6.3
+        server_name:   Mapbender
+        server_version: 3.0.6.4
         server_logo:   bundles/mapbendercore/image/logo_mb3.png
 
     # framework : http://symfony.com/doc/2.8/reference/configuration/framework.html#cookie-lifetime
