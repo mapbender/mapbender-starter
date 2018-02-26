@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d71fa4935ac86c9e4e6cc64cb07b849d",
+    "content-hash": "a8f4e2fdca1ab509ef5c7d9600252ac7",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -2067,52 +2067,6 @@
                 "http client"
             ],
             "time": "2015-06-25T17:26:56+00:00"
-        },
-        {
-            "name": "mapbender/coordinates-utility",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mapbender/coordinates-utility.git",
-                "reference": "828ea88b282bb35b69bc9067034197a949174446"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/coordinates-utility/zipball/828ea88b282bb35b69bc9067034197a949174446",
-                "reference": "828ea88b282bb35b69bc9067034197a949174446",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5.4"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Mapbender\\CoordinatesUtilityBundle\\": "."
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Svitlana Aliferova"
-                }
-            ],
-            "description": "Transform coordinates in different SRS. Navigate to coordinates on the map.",
-            "keywords": [
-                "coordinates",
-                "mapbender",
-                "navigate",
-                "search"
-            ],
-            "time": "2017-12-21T08:47:23+00:00"
         },
         {
             "name": "mapbender/data-source",
