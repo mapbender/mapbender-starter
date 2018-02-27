@@ -18,8 +18,9 @@
             <directory>../src/*/*Bundle/Tests</directory>
         </testsuite>
         <testsuite name="Mapbender">
-            <directory>../mapbender/src/*/*Bundle/Tests</directory>
-            <directory>../fom/src/*/*Bundle/Tests</directory>
+            <directory>../owsproxy/</directory>
+            <directory>../mapbender/</directory>
+            <directory>../fom/</directory>
         </testsuite>
     </testsuites>
 
