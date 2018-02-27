@@ -1,6 +1,7 @@
 #!/bin/bash
-APPDIR="$(dirname ${BASH_SOURCE[0]})""/../application"
-pushd $APPDIR >/dev/null
+SCRIPTPATH="$(readlink ${BASH_SOURCE[0]})"
+SCRIPTPATH="${SCRIPTPATH:-${BASH_SOURCE[0]}}"
+SCRIPTDIR="$(dirname ${SCRIPTPATH})"
 
 # Start PhantomJS, get PID
 phantomjs --webdriver=9876 --webdriver-logfile=/tmp/ghostdriver.log &
@@ -13,15 +14,22 @@ kill -0 $PJSID 2>/dev/null
 if [ $? -ne 0 ]; then
     # we're done here
     # the invocation should have already written an appropriate error message
-    popd >/dev/null
     exit 1
 fi
 
 echo Running PhantomJS on port 9876 with PID $PJSID
 
-# Run PHPUnit
-phpunit --stop-on-failure -c app/
+# use composer-installed phpunit
+# regular phpunit won't really work
+"${SCRIPTDIR}/../application/bin/phpunit" \
+  -c "${SCRIPTDIR}/../application/app/" \
+  "--bootstrap=${SCRIPTDIR}/../application/app/autoload.php" \
+  --stop-on-failure \
+  "$@"
+
+_EXC=$?
 
 # Kill PhantomJS
 kill $PJSID
-popd >/dev/null
+
+exit $_EXC
