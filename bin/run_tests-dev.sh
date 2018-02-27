@@ -1,7 +1,7 @@
 #!/bin/bash
-APPDIR="$(dirname ${BASH_SOURCE[0]})""/../application"
-pushd $APPDIR >/dev/null
+SCRIPTPATH="$(readlink ${BASH_SOURCE[0]})"
+SCRIPTPATH="${SCRIPTPATH:-${BASH_SOURCE[0]}}"
+SCRIPTDIR="$(dirname ${SCRIPTPATH})"
 # use composer-installed phpunit
 # regular phpunit won't really work
-bin/phpunit -c app/ --bootstrap=app/autoload.php --exclude-group=functional "$@"
-popd >/dev/null
+"${SCRIPTDIR}/../application/bin/phpunit" -c "${SCRIPTDIR}/../application/app/" "--bootstrap=${SCRIPTDIR}/../application/app/autoload.php" --exclude-group=functional "$@"
