@@ -24,7 +24,6 @@ echo Running PhantomJS on port 9876 with PID $PJSID
 "${SCRIPTDIR}/../application/bin/phpunit" \
   -c "${SCRIPTDIR}/../application/app/" \
   "--bootstrap=${SCRIPTDIR}/../application/app/autoload.php" \
-  --stop-on-failure \
   "$@"
 
 _EXC=$?
