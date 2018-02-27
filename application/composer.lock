@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a8f4e2fdca1ab509ef5c7d9600252ac7",
+    "content-hash": "ae5b446e4e79b8becc5ab179e873c4a7",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -2173,12 +2173,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-documentation.git",
-                "reference": "4b2a6d6dd324e17df5cd49226f0498a0bc7c03a2"
+                "reference": "f0d232c9e623055ed48969cd84dd27dbcabbdccc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/4b2a6d6dd324e17df5cd49226f0498a0bc7c03a2",
-                "reference": "4b2a6d6dd324e17df5cd49226f0498a0bc7c03a2",
+                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/f0d232c9e623055ed48969cd84dd27dbcabbdccc",
+                "reference": "f0d232c9e623055ed48969cd84dd27dbcabbdccc",
                 "shasum": ""
             },
             "require": {
@@ -2208,12 +2208,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/fom.git",
-                "reference": "2a29d6f4c0b920d5d748cff08dbc4eae084e1670"
+                "reference": "e4967837ad67e7c8dbdfea9e8c54d8cb35e6c2e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/fom/zipball/2a29d6f4c0b920d5d748cff08dbc4eae084e1670",
-                "reference": "2a29d6f4c0b920d5d748cff08dbc4eae084e1670",
+                "url": "https://api.github.com/repos/mapbender/fom/zipball/e4967837ad67e7c8dbdfea9e8c54d8cb35e6c2e0",
+                "reference": "e4967837ad67e7c8dbdfea9e8c54d8cb35e6c2e0",
                 "shasum": ""
             },
             "require": {
@@ -2243,12 +2243,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "625b7c23fde3a12ab0cb88afc58f1ab7b078a03a"
+                "reference": "6d7d21da27a49b94c96e057c775807067e8789c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/625b7c23fde3a12ab0cb88afc58f1ab7b078a03a",
-                "reference": "625b7c23fde3a12ab0cb88afc58f1ab7b078a03a",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/6d7d21da27a49b94c96e057c775807067e8789c2",
+                "reference": "6d7d21da27a49b94c96e057c775807067e8789c2",
                 "shasum": ""
             },
             "require": {
@@ -2390,12 +2390,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/owsproxy3.git",
-                "reference": "b8bbbf977db3435cd0d411b3e48d8145bdd007a6"
+                "reference": "983f707366fd328d772a597d63c160e72dae8481"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/b8bbbf977db3435cd0d411b3e48d8145bdd007a6",
-                "reference": "b8bbbf977db3435cd0d411b3e48d8145bdd007a6",
+                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/983f707366fd328d772a597d63c160e72dae8481",
+                "reference": "983f707366fd328d772a597d63c160e72dae8481",
                 "shasum": ""
             },
             "require": {
