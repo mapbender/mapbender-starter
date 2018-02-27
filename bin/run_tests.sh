@@ -1,9 +1,6 @@
-#!/bin/sh
-
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-OWD="$(pwd)"
-
-cd "$DIR/../application"
+#!/bin/bash
+APPDIR="$(dirname ${BASH_SOURCE[0]})""/../application"
+pushd $APPDIR
 
 # Start PhantomJS, get PID
 phantomjs --webdriver=9876 --webdriver-logfile=/tmp/ghostdriver.log &
@@ -16,4 +13,4 @@ phpunit --stop-on-failure -c app/
 # Kill PhantomJS
 kill $PJSID
 
-cd $OWD
+popd
