@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b4f732204e8bc1a3f08ad61b5d0d6e4f",
+    "content-hash": "8f6244396362ea918b1cea389fd72ab3",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -345,20 +345,17 @@
         },
         {
             "name": "components/jquery",
-            "version": "1.11.2",
+            "version": "1.11.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/components/jquery.git",
-                "reference": "d7dfc1aa3edf92038a24862888b46b4d0e74faba"
+                "reference": "e7c492908a9746439e20b19a671c5001e8832732"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/components/jquery/zipball/d7dfc1aa3edf92038a24862888b46b4d0e74faba",
-                "reference": "d7dfc1aa3edf92038a24862888b46b4d0e74faba",
+                "url": "https://api.github.com/repos/components/jquery/zipball/e7c492908a9746439e20b19a671c5001e8832732",
+                "reference": "e7c492908a9746439e20b19a671c5001e8832732",
                 "shasum": ""
-            },
-            "require": {
-                "robloach/component-installer": "*"
             },
             "type": "component",
             "extra": {
@@ -386,7 +383,7 @@
             ],
             "description": "jQuery JavaScript Library",
             "homepage": "http://jquery.com",
-            "time": "2014-12-23T06:54:15+00:00"
+            "time": "2015-06-08T13:35:17+00:00"
         },
         {
             "name": "components/jquerydialogextendjs",
@@ -3378,16 +3375,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.35.0",
+            "version": "v1.35.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "daa657073e55b0a78cce8fdd22682fddecc6385f"
+                "reference": "9c24f2cd39dc1906b76879e099970b7e53724601"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/daa657073e55b0a78cce8fdd22682fddecc6385f",
-                "reference": "daa657073e55b0a78cce8fdd22682fddecc6385f",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/9c24f2cd39dc1906b76879e099970b7e53724601",
+                "reference": "9c24f2cd39dc1906b76879e099970b7e53724601",
                 "shasum": ""
             },
             "require": {
@@ -3439,7 +3436,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2017-09-27T18:06:46+00:00"
+            "time": "2018-03-03T16:21:29+00:00"
         },
         {
             "name": "viscreation/vis-ui.js",
