@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ae5b446e4e79b8becc5ab179e873c4a7",
+    "content-hash": "6639b45fe18ac31ff2a5654068e7ff9d",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -322,20 +322,17 @@
         },
         {
             "name": "components/jquery",
-            "version": "1.11.2",
+            "version": "1.11.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/components/jquery.git",
-                "reference": "d7dfc1aa3edf92038a24862888b46b4d0e74faba"
+                "reference": "e7c492908a9746439e20b19a671c5001e8832732"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/components/jquery/zipball/d7dfc1aa3edf92038a24862888b46b4d0e74faba",
-                "reference": "d7dfc1aa3edf92038a24862888b46b4d0e74faba",
+                "url": "https://api.github.com/repos/components/jquery/zipball/e7c492908a9746439e20b19a671c5001e8832732",
+                "reference": "e7c492908a9746439e20b19a671c5001e8832732",
                 "shasum": ""
-            },
-            "require": {
-                "robloach/component-installer": "*"
             },
             "type": "component",
             "extra": {
@@ -363,7 +360,7 @@
             ],
             "description": "jQuery JavaScript Library",
             "homepage": "http://jquery.com",
-            "time": "2014-12-23T06:54:15+00:00"
+            "time": "2015-06-08T13:35:17+00:00"
         },
         {
             "name": "components/jqueryui",
@@ -2200,7 +2197,7 @@
                 "documentation",
                 "mapbender"
             ],
-            "time": "2018-01-25T10:05:09+00:00"
+            "time": "2018-02-20T16:28:34+00:00"
         },
         {
             "name": "mapbender/fom",
@@ -2208,18 +2205,25 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/fom.git",
-                "reference": "e4967837ad67e7c8dbdfea9e8c54d8cb35e6c2e0"
+                "reference": "b33b6bf31d9552f50cf295b0d5fc1460a52df424"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/fom/zipball/e4967837ad67e7c8dbdfea9e8c54d8cb35e6c2e0",
-                "reference": "e4967837ad67e7c8dbdfea9e8c54d8cb35e6c2e0",
+                "url": "https://api.github.com/repos/mapbender/fom/zipball/b33b6bf31d9552f50cf295b0d5fc1460a52df424",
+                "reference": "b33b6bf31d9552f50cf295b0d5fc1460a52df424",
                 "shasum": ""
             },
             "require": {
+                "friendsofsymfony/jsrouting-bundle": "^1.5.4",
                 "php": ">=5.3.0"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-release/3.0.5": "3.0.5.x-dev",
+                    "dev-release/3.0.6": "3.0.6.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "FOM\\": "src/FOM"
@@ -2235,7 +2239,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2018-01-10T09:52:09+00:00"
+            "time": "2018-03-04T15:47:58+00:00"
         },
         {
             "name": "mapbender/mapbender",
@@ -2243,12 +2247,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "6d7d21da27a49b94c96e057c775807067e8789c2"
+                "reference": "3aecffe79da1bf4379651dd78a71686b092464cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/6d7d21da27a49b94c96e057c775807067e8789c2",
-                "reference": "6d7d21da27a49b94c96e057c775807067e8789c2",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/3aecffe79da1bf4379651dd78a71686b092464cf",
+                "reference": "3aecffe79da1bf4379651dd78a71686b092464cf",
                 "shasum": ""
             },
             "require": {
@@ -2281,7 +2285,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2018-02-20T21:42:01+00:00"
+            "time": "2018-03-01T23:34:39+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -2419,7 +2423,7 @@
                 "module",
                 "owsproxy"
             ],
-            "time": "2018-02-07T12:37:46+00:00"
+            "time": "2018-02-26T15:43:29+00:00"
         },
         {
             "name": "mapbender/vis-ui.js",
@@ -4148,16 +4152,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.8.34",
+            "version": "v2.8.35",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "0455b5d26c5814062d7e9ea1ac99174ca13ad80e"
+                "reference": "7339c93c82f539305c0eaa52e53c5092d188a82b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/0455b5d26c5814062d7e9ea1ac99174ca13ad80e",
-                "reference": "0455b5d26c5814062d7e9ea1ac99174ca13ad80e",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/7339c93c82f539305c0eaa52e53c5092d188a82b",
+                "reference": "7339c93c82f539305c0eaa52e53c5092d188a82b",
                 "shasum": ""
             },
             "require": {
@@ -4283,7 +4287,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2018-01-29T10:48:31+00:00"
+            "time": "2018-03-01T16:45:46+00:00"
         },
         {
             "name": "twig/extensions",
@@ -4343,16 +4347,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.35.0",
+            "version": "v1.35.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "daa657073e55b0a78cce8fdd22682fddecc6385f"
+                "reference": "9c24f2cd39dc1906b76879e099970b7e53724601"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/daa657073e55b0a78cce8fdd22682fddecc6385f",
-                "reference": "daa657073e55b0a78cce8fdd22682fddecc6385f",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/9c24f2cd39dc1906b76879e099970b7e53724601",
+                "reference": "9c24f2cd39dc1906b76879e099970b7e53724601",
                 "shasum": ""
             },
             "require": {
@@ -4404,7 +4408,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2017-09-27T18:06:46+00:00"
+            "time": "2018-03-03T16:21:29+00:00"
         },
         {
             "name": "viscreation/vis-ui.js",
