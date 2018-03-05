@@ -19,6 +19,15 @@ monolog:
             type:  firephp
             level: info
 
+services:
+  # hack for 3.0.5 series only, Symfony <2.7 widgets trigger mass deprecation warnings in twig,
+  # potentially breaking the memory limit
+  debug.deprecation_logger_listener:
+    class: %debug.errors_logger_listener.class%
+    arguments:
+      - deprecation
+      - ~
+
 #assetic:
 #    use_controller: %sass_assets%
 #    filters:
