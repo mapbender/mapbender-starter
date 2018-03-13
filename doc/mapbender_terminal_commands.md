@@ -1,12 +1,12 @@
 # Mapbender terminal commands
-Documentation of the Mapbender terminal commands needed for quick installation and updating within Composer.json use.
+Documentation of the Mapbender terminal commands needed for quick installation and updating by using composer.json.
 
-Since Mapbender has implemented the composer tool, you can do all Composer editing from the console as well. The following commands are a selection that can be done via the console.
+Since Mapbender comes with the [composer tool](https://getcomposer.org/) as a dependeny manager innately, you can do all composer editing from the console as well. The following commands are a selection that can be done via the console.
 
-If you look at all the commands and need the description, you can go to the [doc page](https://getcomposer.org/doc/03-cli.md).
+For all available commands and their description take a look at the [doc page](https://getcomposer.org/doc/03-cli.md).
 
 # Creating a default composer.json
-The command `init-example` is used to create a composer.json, which is extracted from the bootstrap [Configuration](https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/bootstrap). Adjustments are made and the old composer.json is being overwritten and re-created in the working directory.
+The `init-example` command is used to create a composer.json, which is extracted from the bootstrap [Configuration](https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/bootstrap). Adjustments are made and the old composer.json is being overwritten and re-created in the working directory.
 
 ```bash
 php composer.phar init-example
@@ -21,7 +21,7 @@ application$: bin/composer init-example
 [Clear cache]
 ```
 
-# Dependencies install
+# Install dependencies
 
 The `install` command reads the composer.json file from the current Mapbender directory, resolves the dependencies, and installs them in the vendor directory. The install command is used by Mapbender `bootstrap`, see [Link](https://github.com/mapbender/mapbender-starter/blob/release/3.0.7/bootstrap).
 
@@ -30,9 +30,9 @@ php composer.phar install
 ```
 If a composer.lock file exists in the current Mapbender directory, it uses the exact versions from the lock file instead of resolving them. The lock file ensures that anyone using the MB library receives and uses the same versions of the dependencies.
 
-If there is no composer.lock file, Composer creates its own lock file but with the version from the reprocessors.
+If there is no composer.lock file, composer creates its own lock file but with the version from the reprocessors.
 
-# Dependencies update
+# Update dependencies
 
 The command `update` reads the file composer.json from the current directory, where it processes, updates, removes or installs all dependencies.
 
@@ -91,7 +91,7 @@ Compiling component files
 
 #### Update individual or specific packages
 
-To limit the upgrade process to a few or specific packages, you can use the packages that you want to update, specify as such:
+To limit the upgrade process to a few packages you can specify the packages to update like shown below:
  
 ```bash
 php composer.phar update mapbender/mapbender mapbender/data-source
@@ -141,7 +141,7 @@ Compiling component files
 
 ```
 
-#### Update without dependencies
+#### Update prod dependencies only
 
 If only the non-dev/production packages shall be updated, then you can optionally specify the parameter `--no-dev`. It disables the installation of require-dev packages.
 
@@ -221,9 +221,9 @@ php composer.phar update --no-dev
               > Sensio\Bundle\DistributionBundle\Composer\ScriptHandler::installRequirementsFile
 ```
 
-# Generate a Mapbender documentation
+# Generate Mapbender documentation
 
-To locally generate a Mapbender documentation, this command can be used. Such as in the creation of a [Deploy-Mapbender-Version](https://doc.mapbender.org/en/book/development/conventions.html#how-to-build-a-new-mapbender3-build). To set optional parameters, you can add `--help` in the console and a short explanation will be given.
+To generate a Mapbender documentation locally, the same command can be used as in the creation of a [Deploy-Mapbender-Version](https://doc.mapbender.org/en/book/development/conventions.html#how-to-build-a-new-mapbender3-build) described. For optional or additional parameters, you can add `--help` in the console and a short explanation will be given.
 
 ```bash
 php composer.phar docs
@@ -260,20 +260,20 @@ WARNING: The config value `api_url' has type `str', defaults to `dict'.
 [...]
 ```
 
-# Export of Mapbender application
+# Exporting Mapbender
 
-To export the current state of local Mapbender version, you can copy the directory of 'build' function and save them separately. The result is saved in the project directory `dist /`. 
+It is possible to create a filesystem copy of your current mapbender project with the ```build``` command. The result will be saved in the `dist /` directory of the project.
 
-#### Creation of an export build
+#### Building a copy
 
 ```bash
 php composer.phar build
 
 ```
 
-#### Creating a build/Zip/Tar.gz
+#### Creating a build/ZIP/Tar.gz
 
-In addition, a Zip or Tar.gz file can be created for export.
+In addition, a ZIP or Tar.gz file can be created for export.
 
 ```bash
 php composer.phar build zip 
