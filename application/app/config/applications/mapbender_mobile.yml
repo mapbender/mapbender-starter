@@ -157,7 +157,7 @@ parameters:
                     help:
                         title: Help
                         class: Mapbender\CoreBundle\Element\HTMLElement
-                        content: 'Enjoy the new Mapbender mobile Template. Please note that not all elements can be used in the mobile application. <div style="color: #6FB536; font-weight:bold">Find out more about the Mapbender mobile in the <a href="https://doc.mapbender.org/en/book/mapbender_templates.html" target="_blank">Template Documentation</a>.</div>'
+                        content: 'Enjoy the new Mapbender mobile Template. Please note that not all elements can be used in the mobile application. <div style="color: #6FB536; font-weight:bold">Find out more about the Mapbender mobile in the <a href="https://doc.mapbender.org/en/customization/mapbender_templates.html" target="_blank">Template Documentation</a>.</div>'
                         classes: html-element-inline
 
                     basesourceswitcher:
