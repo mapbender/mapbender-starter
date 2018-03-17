@@ -1,6 +1,7 @@
 # Changelog
 
 ## v.3.0.6.4
+ - Added new documentation file /doc/mapbender_terminal_commands.md (command line)
  - Add oracle database config file
 
 ## v.3.0.6.3 - 2017-07-27
@@ -154,37 +155,37 @@
     - Generate mapbender documentation from composer "bin/composer docs"
     - Add composer generate API documentation
     - Clean build.xml from project specific declarations
+
+
+## v3.0.5.4
+    - Update "a4portrait" Print template
+    - Improve SCSS to CSS generation performance on windows
+    - Bypass aggressive class caching / precompilation in dev and test environments
     - Update composer binary
+    - Add composer to application/bin as link
+    - Add release composer command
+    - Add composer generate API documentation shortcut "bin/composer docs"
+    - Add composer update assets shortcut "bin/composer update-assets"
+    - Add composer shortcut to clear caches "bin/composer clean"
+    - Improved and cleaned up phing builds
     - Remove redundant LICENSE and README files
-    - cleaned up .travis.yml
-    - use composer installed phantomjs
-    - Add PhatomJS over Composer and update composer packages
+    - Cleaned up .travis.yml, allow PHP 7
+    - Install phantomjs via composer instead of npm
     - Add deprecation comment to "generate:*" commands
     - Set PHP platform to 5.3.19 and adds support for PHP 7
-    - Update composer dependecies for dev environment
-    - Add composer update assets shortcut
     - Remove old "mapbender2_geometryprovider" service declaration.
+    - Remove JMS security configuration and bundles
     - Update doctrine dependencies (http://www.doctrine-project.org/2015/08/31/security_misconfiguration_vulnerability_in_various_doctrine_projects.html)
     - Use "setasign/fpdi-fpdf" instead of  "toooni/fpdf" library. Adapt PDF_ImageAlpha and PrintService on "setasign/fpdi-fpdf".
     - Fix install assets on win/linux machine
     - Remove project configuration settings from config.yml
     - Remove load dynamic project configuration
-    - Add composer clean lifecycle
     - Add homepage information
     - Add project version info
     - Add project support information to composer
-    - Reorganize generating documentation. New way: bin/composer docs
     - Update composer dependencies
-    - Publish ComposerBootstrap methods for using by composer event management configuration
     - Optimize connection configuration for OCI8 driver (persist=true)
-    - Generate API documentation for dev environment
-    - Generate API documentation in for dev environment
-    - Update composer dependencies
     - Change datatables maintainer
-    - Update composer to 1.0.2 version
-    - Fix relative composer link
-    - Add composer to application/bin as link / Add composer link to bin/composer
-    - Update composer to 1.0.2 version
     - Extract demo application from mapbender.yml to application/ folder as YAML file for each
     - Improve composer package description
     - Add apigen/apigen to composer dev
@@ -404,8 +405,6 @@
     - Merge pull request #411 from mapbender/release/305
     - Add SCSS validation before save application
     - update featureinfo element
-    - Merge remote-tracking branch 'origin' into feature/wms-1.3.0
-    - clean a code
     - add support for wms v1.3.0
     - Merge pull request #405 from mapbender/hotfix/change-layer-options
     - add version, exception_format to WmsInstance; use version for GetFeatureInfo
@@ -692,7 +691,7 @@
     - Mobile Template: close SearchRouter window
     - Mobile Template: Mozilla Firefox Fixes on layout
     - Backend: Layerset Filter and +-Buttons doesn't hide everything anymore
-    - composer.json upgrade version of joii to 3.1.2
+    - upgrade joii to 3.1.2
     - composer.json upgrade version of Digitizer to 1.0.*
     - Documentation of the JS-UI Generator (Form-Generator): https://github.com/eSlider/vis-ui.js
 
