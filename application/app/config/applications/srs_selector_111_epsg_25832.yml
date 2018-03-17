@@ -1,0 +1,98 @@
+parameters:
+    applications:
+        srs_selector_111_epsg_25832:
+            title: srs_selector_111_epsg_25832
+            screenshot: mapbender_user.png
+            description: https://github.com/mapbender/mapbender/issues/529 + https://trac.wheregroup.com/cp/issues/8254
+            published: true
+            template:  Mapbender\CoreBundle\Template\Fullscreen
+            layersets:
+                main:
+                    schwalmtal:
+                        class: Mapbender\WmsBundle\Entity\WmsInstance
+                        title: Schwalmtal
+                        url: http://wms2016.wheregroup.com/cgi-bin/mapserv?map=/data/umn/schwalmtal/schwalmtal.map
+                        version: 1.1.1
+                        layers:
+                            10: { name: schwalmtal,    title : Schwalmtal, visible: true, legendurl: http://wms2016.wheregroup.com/cgi-bin/mapserv?map=/data/umn/schwalmtal/schwalmtal.map&REQUEST=GetLegendGraphic&SERVICE=WMS&VERSION=1.3.0&sld_version=1.1.0&layer=Flurstuecke&format=image/png&STYLE=default }
+                            22: { name: Flurstuecke,   title : Flurstücke, visible: true, queryable: true}
+                        info_format: text/html
+                        visible: true
+                        format: image/png
+                        transparent: true
+                        tiled: false
+                        opacity: 100
+                    osm:
+                        class: Mapbender\WmsBundle\Entity\WmsInstance
+                        title: OSM Demo
+                        url: http://osm-demo.wheregroup.com/service
+                        version: 1.3.0
+                        layers:
+                            30: { name: osm,    title : Germany OSM Demo WhereGroup,  visible: true }
+                        info_format: text/html
+                        visible: true
+                        format: image/png
+                        transparent: true
+                        tiled: true
+                        opacity: 50
+                overview:
+                    osm_overview:
+                        class: Mapbender\WmsBundle\Entity\WmsInstance
+                        title: OSM Demo
+                        url: http://osm-demo.wheregroup.com/service
+                        version: 1.3.0
+                        layers:
+                            40: { name: osm,    title : Germany OSM Demo WhereGroup,  visible: true }
+                        tiled: false
+                        format: image/png
+                        transparent: true
+                        visible: true
+                        opacity: 100
+            elements:
+                content:
+                    map:
+                        title: Main Map
+                        class: Mapbender\CoreBundle\Element\Map
+                        layersets: [main]
+                        srs: EPSG:25832
+                        units: m
+                        extents:
+                            start: [306784,5673617,310818,5675853]
+                            max: [304717,5672818,312786,5677291]
+                        scales: [5000000,1000000,500000,100000,50000,25000,10000,7500,5000,2500,1000,500]
+                        maxResolution: 'auto'
+                        otherSrs: ["EPSG:25833","EPSG:31466","EPSG:31467","EPSG:900913","EPSG:4326"]
+                    overview:
+                        title: Overview
+                        class: Mapbender\CoreBundle\Element\Overview
+                        tooltip: 'Overview'
+                        target: map
+                        layerset: overview
+                        width: 200
+                        height: 100
+                        anchor: 'right-bottom'
+                        position: ['0px', '0px']
+                        maximized: false
+                        fixed: false
+                footer:
+                    coordinates:
+                        class: Mapbender\CoreBundle\Element\CoordinatesDisplay
+                        title: Coordinates Display
+                        tooltip: Coordinates Display
+                        target: map
+                        label: false
+                        empty:  "x: - y: -"
+                        prefix: "x: "
+                        separator:  " y: "
+                    srs:
+                        class: Mapbender\CoreBundle\Element\SrsSelector
+                        title: SRS Selector
+                        tooltip: SRS Selector
+                        label: false
+                        target: map
+                    scaleselector:
+                        class: Mapbender\CoreBundle\Element\ScaleSelector
+                        title: Scale Selector
+                        tooltip: Scale Selector
+                        label: false
+                        target: map
