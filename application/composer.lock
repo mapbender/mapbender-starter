@@ -2239,7 +2239,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2018-03-04T15:47:58+00:00"
+            "time": "2018-03-04T18:10:18+00:00"
         },
         {
             "name": "mapbender/mapbender",
@@ -4152,16 +4152,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.8.35",
+            "version": "v2.8.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "7339c93c82f539305c0eaa52e53c5092d188a82b"
+                "reference": "481883d56cbd4f435466dc26648d5c735671dd58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/7339c93c82f539305c0eaa52e53c5092d188a82b",
-                "reference": "7339c93c82f539305c0eaa52e53c5092d188a82b",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/481883d56cbd4f435466dc26648d5c735671dd58",
+                "reference": "481883d56cbd4f435466dc26648d5c735671dd58",
                 "shasum": ""
             },
             "require": {
@@ -4287,7 +4287,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2018-03-01T16:45:46+00:00"
+            "time": "2018-04-06T14:52:23+00:00"
         },
         {
             "name": "twig/extensions",
@@ -4818,7 +4818,7 @@
             "authors": [
                 {
                     "name": "Ondřej Nešpor",
-                    "homepage": "https://github.com/andrewsville"
+                    "homepage": "https://github.com/Andrewsville"
                 },
                 {
                     "name": "Jaroslav Hanslík",
@@ -4888,7 +4888,7 @@
                 },
                 {
                     "name": "Ondřej Nešpor",
-                    "homepage": "https://github.com/andrewsville"
+                    "homepage": "https://github.com/Andrewsville"
                 },
                 {
                     "name": "Jaroslav Hanslík",
