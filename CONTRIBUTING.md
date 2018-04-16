@@ -77,19 +77,31 @@ sh bootstrap
 ```
 
 
-## Start web-server
+## Bootstrap (first run)
+```sh
+./bootstrap
+```
 
-It is recommended to run the bootstrap script once (see above), so that required libraries, project configurations and the root user are provided.
+This command performs the following required setup tasks for you:
+* installs dependencies
+* creates a parameters.yml by copying the bundled parameters.yml.dist
+* performs the necessary database setup (as an sqlite file in `application/app/db/demo.sqlite`)
+* creates a root account
+
+It then continues booting into PHP's development web server, so after
+the setup processes have finished, the installation can be accessed
+on `http://localhost:8000/`.
+
+## Testing webserver (subsequent runs)
+In the application subdirectory, run:
 ```sh
 app/console server:run
 ```
 
-After executing the command run, your console describes how you can view web application in your browser:
+The URL is shown in the output:
 ```sh 
 Server running on http://localhost:8000
 ```
-
-Open the displayed URL from your console output message in your favorite browser. 
 
 For development reasons, it is recommended to use Chromium (Chrome) or Firefox.
 
@@ -101,6 +113,12 @@ That's it!
 
 *The developer installation is only useful for solo development purposes and should be optimized for production or co-working systems.*
 
+
+## Changing root account password
+From the application directory:
+```sh
+app/console fom:user:resetroot
+```
 
 # Modules
 
@@ -336,20 +354,6 @@ This is a normal [git] repository, [bundle] and [composer] package at the same t
 Now you are ready to change and commit code directly in the project. 
 
 To get involved, please look at [digitizer] structure as example.
-
-
-# Submodules
-
-~~Nice ability to get bundles and modules linked with each other!~~
-
-**Please stop develop this way!** 
-
-This workflow is deprecated.
-
-This approach has been used a long time to develop and distribute [Mapbender], 
-but due to the course complexity and many changes in diverse [bundles], located in different sub-modules, 
-without [versioning], we decided to change the development workflow to [composer] packages named as [modules].
-
 
 
 # Elements
