@@ -55,9 +55,9 @@ cd application
 cp app/config/parameters.yml.dist app/config/parameters.yml
 ```
 
-## Update composer libraries
+## Update dependencies
 ```sh
-../composer.phar update -o
+bin/composer update
 ```
 
 ## Create database and schema structures (tables, triggers, etc)
@@ -265,36 +265,20 @@ git push --tags
 ```
 
 
-### Register bundle
-
-[Switch](#switch-to-project-directory) to [mapbender] project directory.
-
-Register new [git] [repository] as [composer] [bundle]/[module] in [composer].json.
-
-Example: 
-
-```json 
-{
-    "require-dev": {
-        "mapbender/new-awesome-bundle": "dev-master"
-    },
-    "require": {
-        "mapbender/new-awesome-bundle": "*"
-    },
-    "repositories": [
-        {"type": "git","url": "https://github.com/mapbender/new-awesome-bundle.git"}
-    ]
-}
-```
-
-
-### Update composer after add new module
+### Install package with active source control
+I.e. you want to install an optional package in a form that allows you to branch it and run arbitrary git commands on
+it.
 
 ```sh
-../composer.phar update -o
+composer require --prefer-source mapbender/awesome-optional-package:dev-master@dev
 ```
 
+Note: the `dev-master` is a special type of "version" [recognized by composer as a branch name](https://getcomposer.org/doc/articles/versions.md#branches).
+The `@dev` relaxes [stability requirements](https://getcomposer.org/doc/articles/versions.md#minimum-stability) so you can directly install, in this case, the
+latest commit on the master branch. With default "stable" stability, you could only install proper tagged release versions. 
 
+This essentially clones the git repository into vendor/mapbender/awesome-optional-package, instead of
+just extracting a prepackaged zip archive containing the files.
 
 ### Switch to module directory
 
