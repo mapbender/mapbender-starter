@@ -78,6 +78,8 @@ sh bootstrap
 
 
 ## Start web-server
+
+It is recommended to run the bootstrap script once (see above), so that required libraries, project configurations and the root user are provided.
 ```sh
 app/console server:run
 ```
