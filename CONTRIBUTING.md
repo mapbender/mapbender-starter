@@ -22,17 +22,8 @@ Here is a quick installation guide to get [git]-based "developer edition" of [Ma
 
 ## Clone the project 
 
-### via SSH
 ```sh
-git clone git@github.com:mapbender/mapbender-starter.git 
-```
-
-or 
-
-### via HTTP
-
-```sh
-git clone https://github.com/mapbender/mapbender-starter.git
+git clone --recursive https://github.com/mapbender/mapbender-starter.git 
 ```
 
 ## Switch to project directory
@@ -40,62 +31,31 @@ git clone https://github.com/mapbender/mapbender-starter.git
 cd mapbender-starter
 ```
 
-## Clone submodules 
+## Bootstrap (first run)
 ```sh
-git submodule update --init --recursive --force
+./bootstrap
 ```
 
-## Switch to the application directory
-```sh
-cd application
-```
+This command performs the following required setup tasks for you:
+* installs dependencies
+* creates a parameters.yml by copying the bundled parameters.yml.dist
+* performs the necessary database setup (as an sqlite file in `application/app/db/demo.sqlite`)
+* creates a root account
 
-## Copy [parameters.yml] and configure them for your project needs.
-```sh
-cp app/config/parameters.yml.dist app/config/parameters.yml
-```
+It then continues booting into PHP's development web server, so after
+the setup processes have finished, the installation can be accessed
+on `http://localhost:8000/`.
 
-## Update composer libraries
-```sh
-../composer.phar update -o
-```
-
-## Create database and schema structures (tables, triggers, etc)
-```sh
-app/console doctrine:database:create
-app/console doctrine:schema:create
-```
-
-## Import applications from the "app/config/mapbender.yml" into a mapbender database
-```sh
-app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/ --append
-```
-
-## Import EPSG codes
-```sh
-app/console doctrine:fixtures:load --fixtures=./mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append
-```
-
-## Reset root 
-
-Create root user and set the password:
-```sh
-app/console fom:user:resetroot --username root --password root --email root@localhost --silent
-```
-
-## Start php-server
+## Testing webserver (subsequent runs)
+In the application subdirectory, run:
 ```sh
 app/console server:run
 ```
 
-The next console message describes how you can view mapbender in your browser.
-
-It looks something like this:
+The URL is shown in the output:
 ```sh 
 Server running on http://localhost:8000
 ```
-
-So now open the URL in your favorite browser. 
 
 For development reason it is recommended to use Chromium(Chrome) or Firefox.
 
@@ -308,28 +268,6 @@ Now you are ready to change and commit code directly in the project.
 
 To get involved, please look at [digitizer] structure as example.
 
-
-# Submodules
-
-~~Nice ability to get bundles and modules linked with each other!~~
-
-**Please stop develop this way!** 
-
-This workflow is deprecated.
-
-This approach has been used a long time to develop and distribute [Mapbender], 
-but due to the course complexity and many changes in diverse [bundles], located in different sub-modules, 
-without [versioning], it was decided to change the development workflow to [composer] packages named as [modules].
-
-
-## Definition
-
-[Submodule] - is git repository, which is linked to primary [mapbender-starter](https://github.com/mapbender/mapbender-starter) repository.
-
-## Description
-
-For now there are three submodules: [Mapbender], [FOM] and [OWS Proxy], located in the ```application``` folder.
-Each [submodule] contains one or more bundles. 
 
 # Elements
 
