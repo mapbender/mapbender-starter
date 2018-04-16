@@ -59,6 +59,12 @@ Server running on http://localhost:8000
 
 For development reason it is recommended to use Chromium(Chrome) or Firefox.
 
+## Changing root account password
+From the application directory:
+```sh
+app/console fom:user:resetroot
+```
+
 # Modules
 
 Module is a new part of mapbender concept, based on [Symfony modularity rules](http://www.symfony.com) 
