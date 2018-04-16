@@ -24,7 +24,7 @@ To get started with the development you need a PHP interpreter and some addition
 ### Preparing Ubuntu 16.04 
 
 ```sh
-sudo apt-get install php7.0 php7.0-xml php7.0-mbstring php7.0-pgsql php7.0-gd php7.0-curl php7.0-cli php7.0-sqlite php7.0-intl php7.0-json sqlite curl openssl
+sudo apt-get install php7.0 php7.0-xml php7.0-mbstring php7.0-pgsql php7.0-gd php7.0-curl php7.0-cli php7.0-sqlite php7.0-intl php7.0-json sqlite curl openssl php-bz2
 ```
 
 ### Preparing Ubuntu 14.04 
@@ -44,7 +44,7 @@ sudo apt-get update
 Install php interpreter and modules:
 
 ```sh
-sudo apt-get install php5 php5-xml php5-mbstring php5-pgsql php5-gd php5-curl php5-cli php5-sqlite php5-intl sqlite curl openssl
+sudo apt-get install php5 php5-xml php5-mbstring php5-pgsql php5-gd php5-curl php5-cli php5-sqlite php5-intl sqlite curl openssl bz2
 ```
 
 ## Cloning project source
