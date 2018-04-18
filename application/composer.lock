@@ -2247,12 +2247,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "3aecffe79da1bf4379651dd78a71686b092464cf"
+                "reference": "079b16bf9e8c5c8887222f2b7ed2d97760a7ce18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/3aecffe79da1bf4379651dd78a71686b092464cf",
-                "reference": "3aecffe79da1bf4379651dd78a71686b092464cf",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/079b16bf9e8c5c8887222f2b7ed2d97760a7ce18",
+                "reference": "079b16bf9e8c5c8887222f2b7ed2d97760a7ce18",
                 "shasum": ""
             },
             "require": {
@@ -2394,12 +2394,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/owsproxy3.git",
-                "reference": "983f707366fd328d772a597d63c160e72dae8481"
+                "reference": "be31c9c22b3a332dcc54cb7abdc5ee07efcd8a59"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/983f707366fd328d772a597d63c160e72dae8481",
-                "reference": "983f707366fd328d772a597d63c160e72dae8481",
+                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/be31c9c22b3a332dcc54cb7abdc5ee07efcd8a59",
+                "reference": "be31c9c22b3a332dcc54cb7abdc5ee07efcd8a59",
                 "shasum": ""
             },
             "require": {
