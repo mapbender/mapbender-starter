@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "27269934c0f66c93a89b8eb023e8ddf1",
+    "content-hash": "678a7a4e9aeb47c313682ba52b394e7c",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -2350,16 +2350,16 @@
         },
         {
             "name": "mapbender/documentation",
-            "version": "dev-release/3.0.6",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-documentation.git",
-                "reference": "f0d232c9e623055ed48969cd84dd27dbcabbdccc"
+                "reference": "64aa502a91412877a0f6468017f2cee230f4556f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/f0d232c9e623055ed48969cd84dd27dbcabbdccc",
-                "reference": "f0d232c9e623055ed48969cd84dd27dbcabbdccc",
+                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/64aa502a91412877a0f6468017f2cee230f4556f",
+                "reference": "64aa502a91412877a0f6468017f2cee230f4556f",
                 "shasum": ""
             },
             "require": {
@@ -2376,12 +2376,12 @@
                     "name": "Astrid Emde"
                 }
             ],
-            "description": "Mapbender documentation",
+            "description": "Mapbender3 documentation",
             "keywords": [
                 "documentation",
                 "mapbender"
             ],
-            "time": "2018-02-20T16:28:34+00:00"
+            "time": "2017-08-18T11:26:17+00:00"
         },
         {
             "name": "mapbender/fom",
@@ -6901,7 +6901,14 @@
             "time": "2018-01-29T19:49:41+00:00"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "alias": "3.0.7.0",
+            "alias_normalized": "3.0.7.0",
+            "version": "9999999-dev",
+            "package": "mapbender/documentation"
+        }
+    ],
     "minimum-stability": "stable",
     "stability-flags": {
         "mapbender/fom": 20,
