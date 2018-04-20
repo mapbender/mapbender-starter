@@ -55,7 +55,7 @@
 
         "mapbender/fom": "dev-release/3.0.6",
         "mapbender/mapbender": "~3.0.7.0",
-        "mapbender/owsproxy": "dev-release/3.0.6",
+        "mapbender/owsproxy": "~3.0.6",
         "mapbender/digitizer": "1.1.x",
         "mapbender/coordinates-utility": "^1.0.0",
         "mapbender/documentation": "dev-release/3.0.6"

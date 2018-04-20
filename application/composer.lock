@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0462ac0027166a0c2a7b0cdc6754d7fa",
+    "content-hash": "27269934c0f66c93a89b8eb023e8ddf1",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -2589,7 +2589,7 @@
         },
         {
             "name": "mapbender/owsproxy",
-            "version": "dev-release/3.0.6",
+            "version": "v3.0.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/owsproxy3.git",
@@ -2607,6 +2607,12 @@
                 "php": ">=5.3.3"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-release/3.0.5": "3.0.5.x-dev",
+                    "dev-release/3.0.6": "3.0.6.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "OwsProxy3\\": "src/OwsProxy3"
@@ -6899,7 +6905,6 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "mapbender/fom": 20,
-        "mapbender/owsproxy": 20,
         "mapbender/documentation": 20
     },
     "prefer-stable": false,
