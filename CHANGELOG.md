@@ -1,5 +1,8 @@
 # Changelog
 
+## dev-master
+- AppKernel is now an extension of Mapbender\BaseKernel
+
 ## dev-release/3.0.6
 - Update "a4portrait" Print template
 - Improve SCSS to CSS generation performance on windows
@@ -184,6 +187,8 @@
     - Add composer generate API documentation
     - Clean build.xml from project specific declarations
 
+## dev-release/3.0.5
+- AppKernel is now an extension of Mapbender\BaseKernel
 
 ## v3.0.5.4
     - Update "a4portrait" Print template
