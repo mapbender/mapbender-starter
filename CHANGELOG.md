@@ -1,5 +1,40 @@
 # Changelog
 
+## dev-master
+- AppKernel is now an extension of Mapbender\BaseKernel
+
+## dev-release/3.0.6
+- Update "a4portrait" Print template
+- Improve SCSS to CSS generation performance on windows
+- Bypass aggressive class caching / precompilation in dev and test environments
+- Update composer binary
+- Add composer generate API documentation shortcut "bin/composer docs"
+- Add composer update assets shortcut "bin/composer update-assets"
+- Add composer shortcut to clear caches "bin/composer clean"
+- Improved and cleaned up phing builds
+- Cleaned up .travis.yml, allow PHP 7
+- Install phantomjs via composer instead of npm
+- Add deprecation comment to "generate:*" commands
+- Remove old "mapbender2_geometryprovider" service declaration.
+- Remove JMS security configuration and bundles
+- Use "setasign/fpdi-fpdf" instead of  "toooni/fpdf" library. Adapt PDF_ImageAlpha and PrintService on "setasign/fpdi-fpdf".
+- Fix install assets on win/linux machine
+- Remove project configuration settings from config.yml
+- Remove load dynamic project configuration
+- Optimize connection configuration for OCI8 driver (persist=true)
+- Extract demo application from mapbender.yml to application/ folder as YAML file for each
+- Improve composer package description
+- Add apigen/apigen to composer dev
+- Optimize bootstrap script for composer, travis and windows
+- Rename ScriptHandler to ComposerBootstrap
+- Change composer own ScriptHandler order after symfony bootstrap
+- Add composer first installation script handler
+
+
+## v.3.0.6.4
+ - Added new documentation file /doc/mapbender_terminal_commands.md (command line)
+ - Add oracle database config file
+
 ## v.3.0.6.3 - 2017-07-27
  - Fixed regression for for WMS 1.3.0 support (#529)
  - Fixed regression for WMS Scale hint (#584)
@@ -151,37 +186,39 @@
     - Generate mapbender documentation from composer "bin/composer docs"
     - Add composer generate API documentation
     - Clean build.xml from project specific declarations
+
+## dev-release/3.0.5
+- AppKernel is now an extension of Mapbender\BaseKernel
+
+## v3.0.5.4
+    - Update "a4portrait" Print template
+    - Improve SCSS to CSS generation performance on windows
+    - Bypass aggressive class caching / precompilation in dev and test environments
     - Update composer binary
+    - Add composer to application/bin as link
+    - Add release composer command
+    - Add composer generate API documentation shortcut "bin/composer docs"
+    - Add composer update assets shortcut "bin/composer update-assets"
+    - Add composer shortcut to clear caches "bin/composer clean"
+    - Improved and cleaned up phing builds
     - Remove redundant LICENSE and README files
-    - cleaned up .travis.yml
-    - use composer installed phantomjs
-    - Add PhatomJS over Composer and update composer packages
+    - Cleaned up .travis.yml, allow PHP 7
+    - Install phantomjs via composer instead of npm
     - Add deprecation comment to "generate:*" commands
     - Set PHP platform to 5.3.19 and adds support for PHP 7
-    - Update composer dependecies for dev environment
-    - Add composer update assets shortcut
     - Remove old "mapbender2_geometryprovider" service declaration.
+    - Remove JMS security configuration and bundles
     - Update doctrine dependencies (http://www.doctrine-project.org/2015/08/31/security_misconfiguration_vulnerability_in_various_doctrine_projects.html)
     - Use "setasign/fpdi-fpdf" instead of  "toooni/fpdf" library. Adapt PDF_ImageAlpha and PrintService on "setasign/fpdi-fpdf".
     - Fix install assets on win/linux machine
     - Remove project configuration settings from config.yml
     - Remove load dynamic project configuration
-    - Add composer clean lifecycle
     - Add homepage information
     - Add project version info
     - Add project support information to composer
-    - Reorganize generating documentation. New way: bin/composer docs
     - Update composer dependencies
-    - Publish ComposerBootstrap methods for using by composer event management configuration
     - Optimize connection configuration for OCI8 driver (persist=true)
-    - Generate API documentation for dev environment
-    - Generate API documentation in for dev environment
-    - Update composer dependencies
     - Change datatables maintainer
-    - Update composer to 1.0.2 version
-    - Fix relative composer link
-    - Add composer to application/bin as link / Add composer link to bin/composer
-    - Update composer to 1.0.2 version
     - Extract demo application from mapbender.yml to application/ folder as YAML file for each
     - Improve composer package description
     - Add apigen/apigen to composer dev
@@ -199,6 +236,55 @@
     - Add templates description to CONTRIBUTE.md
 
 ## Mapbender
+    - Support reversible layer order per WMS source instance (new dropdown application backend section "Layersets")
+    - Support WMS keywords > 255 characters; needs app/console doctrine:schema:update for running installations
+    - Extend WmsLoader WMS service compatibility, now matches backend
+    - Update WmsLoader example URL to https
+    - Skip undefined element classes in Yaml applications, log a warning instead of crashing
+    - Fix unbounded growth in "authority" on repeated export / reimport / cloning of applications (#777)
+    - Backport doctrine annotations to fix some broken import / export scenarios
+    - Various fixes to displaying and handling min / max scale definition from sublayers vs root layers (see pull #787)
+    - Backport fix for getting Dimension configuration with open extent
+    - Fix strict SCSS warnings when compiling with ruby-sass (closes issue #761)
+    - Fix possible URL signing spoof with input URLs missing query parameters (internal issue #8375)
+    - Replace usort => array_multisort to skip around PHP bug #50688 when sorting Element names (MB3 issue #586)
+    - Merge pull request #765 from mapbender/fix/wms-cleanups-loading
+    - Fix http 500 when rendering meta data for a service with undefined contact information
+    - Merge pull request #760 from mapbender/fix/unittest-preconditions
+    - Merge pull request #747 from mapbender/fix/metadata-serialization-746
+    - Merge pull request #743 from mapbender/fix/element-inheritance-639-noconfig
+    - Fix getting new application entity by slug from database (issue #739)
+    - Changed Opacity for zoombar and toolbar to get a unique button color
+    - Support legend URL extraction from styles even if last style has no LegendURL node
+    - Merge pull request #699 from mapbender/hotfix/publicFieldsInEntity
+    - Merge pull request #657 from mapbender/fix/display-scale-selector-status
+    - Merge pull request #456 from mapbender/hotfix/redlining-text
+    - No longer persist `WmsInstance->configuration["children"]` (aka "layersets" in frontend), generate only for Application config
+    - Fix unknown instance access HTTP status via tunnel (500 => 404)
+    - Remove deprecated joii.min.js library
+    - Misc code documentation and type annotation improvements
+    - Deprecate template and element generator commands
+    - Add copyright element width and height configuration options
+    - Merge pull request #484 from mapbender/hotfix/scaledisplay
+    - Remove unnecessary overlay from mobile SCSS
+    - Improved mimetype handling in Print and ImageExport
+    - Fix BaseSourceSwitcher initial state immediately on application load
+    - Fix duplicate loads of WMS when a layer is going out of scale.
+    - allow saving of instances with VIEW right on sources
+    - Support print Pdf templates with transparent background
+    - Merge pull request #466 from LazerTiberius/feature/immediate-ruler-measurement
+    - Improve FeatureInfo behavior in mobile apps
+    - Fix feature info reopen if active
+    - Make login, register, forgot password and restore password screens responsive
+    - Disallow select map, overview and buttons as text
+    - Improved PHP7 support
+    - Add syntax highlighting for Yaml entry forms
+    - Improve cookie and legend handling via "instance tunnel" (used for services secured by basic auth)
+    - Better print / export support for secured services
+    - Better print support for digitizer features and other geometries
+    - Add SymfonyAjaxManager to ManagerTemplate
+    - Intergrate bootstrap and refactor/fix administration SCSS files
+    - Merge pull request #460 from mapbender/hotfix/default-titlesize512
     - Fix doublets zoom level dots
     - Merge pull request #457 from mapbender/hotfix/featureinfo-css-no-accordion
     - use composer installed phantomjs for tests
@@ -381,7 +467,6 @@
     - add persist application by components change
     - Merge pull request #412 from mapbender/feature/load-app-config-dynamic
     - use wms version at wmsloader
-    - Merge remote-tracking branch 'origin/release/3.0.5' into feature/load-app-config-dynamic
     - add initDropdown for select
     - Improve feature info response table styling
     - fix hide wms tiled for outer scale
@@ -395,14 +480,11 @@
     - Merge pull request #410 from mapbender/feature/wms-1.3.0
     - support wms version 1.3.0 in overview element
     - fix default version for mapbender.yaml wms
-    - Merge branch 'release/3.0.5' into feature/wms-1.3.0
     - add srs for poi
     - round a poi coordiante
     - Merge pull request #411 from mapbender/release/305
     - Add SCSS validation before save application
     - update featureinfo element
-    - Merge remote-tracking branch 'origin' into feature/wms-1.3.0
-    - clean a code
     - add support for wms v1.3.0
     - Merge pull request #405 from mapbender/hotfix/change-layer-options
     - add version, exception_format to WmsInstance; use version for GetFeatureInfo
@@ -415,10 +497,8 @@
     - Refactor mapbender overview  element javascript
     - Refactor overview style sheets
     - Remove obsolete mapbender.element.overview.css
-    - Merge remote-tracking branch 'origin/release/3.0.5' into hotfix/exchange
     - fix default visibility for a layer
     - fix name 'application' at form type
-    - Merge branch 'release/3.0.5' of https://github.com/mapbender/mapbender into release/3.0.5
     - optimize applications import/copy for not mysql, sqlite, spatialite
     - Add SecurityContext get user role names
     - Set default YAMLDataTransformer indentention=2
@@ -557,10 +637,8 @@
     - Change Application $regionProperties property to protected
     - Merge pull request #394 from mapbender/feature/print-sidepane
     - Print: sidepane-print changed button style and behaviour
-    - Merge branch 'release/3.0.5' into feature/print-sidepane
     - Print: bugfix type parameter
     - Improve SearchRouter table header padding
-    - Merge branch 'release/3.0.5' into feature/print-sidepane
     - Print: fixed sidepane usage
     - Remove normalize.css becourse bootstrap alredy include them
     - Remove using normalize.css because bootstrap.css already includes them
@@ -582,7 +660,6 @@
     - Fix annotation typo
     - Fix HTML element assets paths
     - Fix max height for searchRouter result
-    - Merge branch 'release/3.0.5' into feature/redlining-without-dialog
     - Fix a layer validation for an instance
     - Fix: add only valid instances into layerset configuration
     - Fix layertree: remove theme by missing sources
@@ -622,7 +699,6 @@
     - Update messages.ru.xlf
     - Add 'de' translations
     - Translate default fos messages, reformate code
-    - Merge branch 'release/3.0.5' into hotfix/user-activate
     - Fix reset password email body text
     - 5190 change format of forgot password mail
     - Changed translation typo de
@@ -633,8 +709,6 @@
     - Add changelog.md information
     
 ### OWSPROXY
-
-    - Merge branch 'release/3.0.5' of https://github.com/mapbender/owsproxy3 into release/3.0.5
     - Merge pull request #4 from mapbender/hotfix/changelog-5489
     - Add changelog.md information #5489
 
@@ -689,7 +763,7 @@
     - Mobile Template: close SearchRouter window
     - Mobile Template: Mozilla Firefox Fixes on layout
     - Backend: Layerset Filter and +-Buttons doesn't hide everything anymore
-    - composer.json upgrade version of joii to 3.1.2
+    - upgrade joii to 3.1.2
     - composer.json upgrade version of Digitizer to 1.0.*
     - Documentation of the JS-UI Generator (Form-Generator): https://github.com/eSlider/vis-ui.js
 

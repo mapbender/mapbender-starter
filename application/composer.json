@@ -3,7 +3,7 @@
     "description": "Mapbender",
     "type": "project",
     "license": "MIT",
-    "version": "3.0.6.3",
+    "version": "3.0.7.0",
     "homepage": "http://www.mapbender.org",
     "support": {
         "email":        "mapbender@osgeo.org",
@@ -34,26 +34,30 @@
         "doctrine/orm": "~2.2,>=2.2.3",
         "doctrine/doctrine-bundle": "1.x",
         "twig/extensions": "1.x",
-        "symfony/assetic-bundle": "2.7.x",
+        "symfony/assetic-bundle": "2.x",
         "symfony/swiftmailer-bundle": "2.3.x",
         "symfony/monolog-bundle": "2.3.x",
         "sensio/distribution-bundle": "~4.0",
         "sensio/framework-extra-bundle": "~3.0",
         "sensio/generator-bundle": "2.3.x",
+
+        "friendsofsymfony/jsrouting-bundle": "^1.5",
+
         "incenteev/composer-parameter-handler": "~2.0",
 
         "doctrine/doctrine-fixtures-bundle": "2.3.*",
 
         "gedmo/doctrine-extensions": "~2.3",
 
-        "components/jquery": "1.11.2",
+        "components/jquery": "~1.11.2",
 
         "mnsami/composer-custom-directory-installer": "1.0.*",
 
         "mapbender/fom": "dev-release/3.0.6",
-        "mapbender/mapbender": "dev-release/3.0.6",
-        "mapbender/owsproxy": "dev-release/3.0.6",
+        "mapbender/mapbender": "~3.0.7.0",
+        "mapbender/owsproxy": "~3.0.6",
         "mapbender/digitizer": "1.1.x",
+        "mapbender/coordinates-utility": "^1.0.0",
         "mapbender/documentation": "dev-release/3.0.6"
     },
     "scripts": {
@@ -88,6 +92,9 @@
         ],
         "version": [
             "ComposerBootstrap::displayVersion"
+        ],
+        "project-name": [
+            "ComposerBootstrap::displayProjectName"
         ],
         "init-example": [
             "ComposerBootstrap::checkConfiguration"

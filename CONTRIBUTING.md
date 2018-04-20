@@ -4,11 +4,11 @@ The Mapbender team welcomes contributions from all members - so you are welcome 
 
 Third-party patches are essential for the preservation of high standards in [Mapbender].
 
-We simply cannot access the huge number of platforms and myriad configurations for running [Mapbender]. 
+We simply cannot access the huge number of platforms and myriad configurations that run [Mapbender]. 
 
 We want it as easy as possible to carry out changes to get the [modules] in your environment to run. 
 
-There are a few [guidelines][rules] that we need contributors to follow so that we can have a chance of keeping on top of things.
+Therefore, we provide a few [guidelines][rules] as an overview for contributors to Mapbender.
 
 # Architecture 
 
@@ -19,12 +19,12 @@ Mapbender is based on a [Symfony framework] and uses [composer] to manage extern
 
 ## Preparing system
 
-To get started with the development you will need PHP interpreter and some additional libraries.
+To get started with the development you need a PHP interpreter and some additional libraries.
   
 ### Preparing Ubuntu 16.04 
 
 ```sh
-sudo apt-get install php7.0 php7.0-xml php7.0-mbstring php7.0-pgsql php7.0-gd php7.0-curl php7.0-cli php7.0-sqlite php7.0-intl php7.0-json sqlite curl openssl
+sudo apt-get install php7.0 php7.0-xml php7.0-mbstring php7.0-pgsql php7.0-gd php7.0-curl php7.0-cli php7.0-sqlite php7.0-intl php7.0-json sqlite curl openssl php-bz2
 ```
 
 ### Preparing Ubuntu 14.04 
@@ -44,7 +44,7 @@ sudo apt-get update
 Install php interpreter and modules:
 
 ```sh
-sudo apt-get install php5 php5-xml php5-mbstring php5-pgsql php5-gd php5-curl php5-cli php5-sqlite php5-intl sqlite curl openssl
+sudo apt-get install php5 php5-xml php5-mbstring php5-pgsql php5-gd php5-curl php5-cli php5-sqlite php5-intl sqlite curl openssl bz2
 ```
 
 ## Cloning project source
@@ -77,17 +77,31 @@ sh bootstrap
 ```
 
 
-## Start web-server
+## Bootstrap (first run)
+```sh
+./bootstrap
+```
+
+This command performs the following required setup tasks for you:
+* installs dependencies
+* creates a parameters.yml by copying the bundled parameters.yml.dist
+* performs the necessary database setup (as an sqlite file in `application/app/db/demo.sqlite`)
+* creates a root account
+
+It then continues booting into PHP's development web server, so after
+the setup processes have finished, the installation can be accessed
+on `http://localhost:8000/`.
+
+## Testing webserver (subsequent runs)
+In the application subdirectory, run:
 ```sh
 app/console server:run
 ```
 
-After executing the command run, your console describes how you can view web application in your browser:
+The URL is shown in the output:
 ```sh 
 Server running on http://localhost:8000
 ```
-
-Open the displayed URL from your console output message in your favorite browser. 
 
 For development reasons, it is recommended to use Chromium (Chrome) or Firefox.
 
@@ -99,6 +113,12 @@ That's it!
 
 *The developer installation is only useful for solo development purposes and should be optimized for production or co-working systems.*
 
+
+## Changing root account password
+From the application directory:
+```sh
+app/console fom:user:resetroot
+```
 
 # Modules
 
@@ -292,36 +312,20 @@ git push --tags
 ```
 
 
-### Register bundle
-
-[Switch](#switch-to-project-directory) to [mapbender] project directory.
-
-Register new [git] [repository] as [composer] [bundle]/[module] in [composer].json.
-
-Example: 
-
-```json 
-{
-    "require-dev": {
-        "mapbender/new-awesome-bundle": "dev-master"
-    },
-    "require": {
-        "mapbender/new-awesome-bundle": "*"
-    },
-    "repositories": [
-        {"type": "git","url": "https://github.com/mapbender/new-awesome-bundle.git"}
-    ]
-}
-```
-
-
-### Update composer after add new module
+### Install package with active source control
+I.e. you want to install an optional package in a form that allows you to branch it and run arbitrary git commands on
+it.
 
 ```sh
-../composer.phar update -o
+composer require --prefer-source mapbender/awesome-optional-package:dev-master@dev
 ```
 
+Note: the `dev-master` is a special type of "version" [recognized by composer as a branch name](https://getcomposer.org/doc/articles/versions.md#branches).
+The `@dev` relaxes [stability requirements](https://getcomposer.org/doc/articles/versions.md#minimum-stability) so you can directly install, in this case, the
+latest commit on the master branch. With default "stable" stability, you could only install proper tagged release versions. 
 
+This essentially clones the git repository into vendor/mapbender/awesome-optional-package, instead of
+just extracting a prepackaged zip archive containing the files.
 
 ### Switch to module directory
 
@@ -334,20 +338,6 @@ This is a normal [git] repository, [bundle] and [composer] package at the same t
 Now you are ready to change and commit code directly in the project. 
 
 To get involved, please look at [digitizer] structure as example.
-
-
-# Submodules
-
-~~Nice ability to get bundles and modules linked with each other!~~
-
-**Please stop develop this way!** 
-
-This workflow is deprecated.
-
-This approach has been used a long time to develop and distribute [Mapbender], 
-but due to the course complexity and many changes in diverse [bundles], located in different sub-modules, 
-without [versioning], we decided to change the development workflow to [composer] packages named as [modules].
-
 
 
 # Elements
@@ -500,71 +490,71 @@ It's mandatory to use the "feature/" prefix in the branch name.
 Example:
 
 
-* Create branch
+* Create branch:
 
 ```sh
 cd mapbender
 git checkout -b "feature/mega-cool-feature-x"
 ``` 
-* Improve the code
-* Save changes 
+* Improve the code.
+* Save changes: 
 
 ```sh
 git add *
 git commit -m "Add some new stuff"
 ``` 
-* Merge current release code
+* Merge current release code:
 
 ```sh
 git fetch -a
 git merge "release/3.0.6"
 ``` 
-* If conflicts arise, resolve [them][Resolve git conflicts]
-* Run tests
-* Push the changes on [github]
+* If conflicts arise, resolve [them][Resolve git conflicts].
+* Run tests.
+* Push the changes on [github]:
 
 ```sh
 git push
 ``` 
-* Create [pull-request]
+* Create [pull-request]:
 
-Then please wait for the feedback. We will check it out and review your code to merge it in the branch.
+Then just wait for our feedback. We will check it out and review your code to merge it in the branch. Thanks!
 
 ## Bug fix branch
 
-It's mandatory to use "hotfix/" prefix in your branch name.
+It's mandatory to use the "hotfix/" prefix in your branch name.
 
 Example:
 
-* Create branch
+* Create branch:
 
 ```sh
 cd mapbender
 git checkout -b "hotfix/bug-short-description"
 ``` 
-* Improve the code
-* Save changes 
+* Improve the code.
+* Save changes: 
 
 ```sh
 git add *
 git commit -m "Fix bug description"
 ``` 
-* Merge current release code
+* Merge current release code:
 
 ```sh
 git fetch -a
 git merge "release/3.0.6"
 ``` 
-* If conflicts arise, resolve [them][Resolve git conflicts]
-* Run or add new tests relevant to the fixed bug 
-* Push the changes on [github]
+* If conflicts arise, resolve [them][Resolve git conflicts].
+* Run or add new tests relevant to the fixed bug. 
+* Push the changes on [github]:
 
 ```sh
 git push
 ``` 
-* Create [pull-request] on the current release branch
+* Create [pull-request] on the current release branch.
 
-Then please wait for the feedback. We will check it out, test and review your code to merge it in the branch.
+Then just wait for our feedback. We will check it out, test and review your code to merge it in the branch. Thanks!
 
 ## Release branch
 
@@ -573,60 +563,84 @@ It's mandatory to use *release/* prefix in your branch name.
 
 Example:
 
-* Checkout release branch
+* Checkout release branch:
 
 ```sh
 cd mapbender
 git checkout "release/3.0.6"
 ``` 
-* Fetch changes  
+* Fetch changes:  
 
 ```sh
 git fetch -a
 git pull
 ``` 
-* Merge changes
+* Merge changes:
 
 ```sh
 git merge "hotfix/bug-short-description"
 ``` 
-* If conflicts arise, resolve [them][Resolve git conflicts]
-* Run or add new tests relevant to the new feature
-* Code review
-* Run tests
-* Save changes
+* If conflicts arise, resolve [them][Resolve git conflicts].
+* Run or add new tests relevant to the new feature.
+* Review the code.
+* Run tests.
+* Save changes:
 
 ```sh
 git commit -m "Merge 'hotfix/bug-short-description'"
 ``` 
-* Push on [github]
+* Push on [github]:
 
 ```sh
 git push
 ``` 
 
+# Building packages 
+
+There are special [composer] commands for distributing and building packages:
+
+* `bin/composer build` Command to build a package with the following optional parameters:
+    * **[tar.gz|zip]** - Optional parameter that defines the package file format. The default configuration is defined in `composer.json` as `config/archive-format`.
+    * **[dist-name]** - Optional parameter that defines the package file name prefix. The default configuration is defined in `composer.json` as `name`, a vendor name will be ignored.
+    * **[dist-version]** - Optional parameter that defines the package version. This is included as suffix in the package name. The default configuration is defined in `composer.json` as `version`.
+
+You can define the [composer] distributing path in `composer.json` as `config/archive-dir`. The default location is the `dist` folder located in root of the project. 
+
+## Build package example
+
+You can build and distribute an articat to `dist/test-distribution.1.0.1.tar.gz` by running:
+
+```bash
+bin/composer build zip test-distribution 1.0.1
+```
+
+## Building linux tarball-file
+
+```bash
+bin/composer build tar.gz
+```
 
 
 # Tests
 
-Don't forget to write tests!
+Don't forget to write tests! 
 Moreover, please write a clear commit message.
 Here are some good explanations:
 
 ## Examples
 
 
-* Test all [bundles]
+* Test all [bundles]:
 ```bash
 bin/phpunit -c app vendor/mapbender
 ```
 
-* Test unique [bundle]
+* Test unique [bundle]:
 ```bash
 bin/phpunit -c app vendor/mapbender/digitizer
 ```
 
-* Test [bundle] class
+* Test [bundle] class:
 ```bash
 bin/phpunit -c app vendor/mapbender/digitizer/Mapbender/DigitizerBundle/Tests/FeaturesTest.php
 ```

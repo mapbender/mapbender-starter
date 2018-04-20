@@ -1,0 +1,43 @@
+image: wg-runner/php7
+
+before_script:
+  - cd application
+  - export PROJECT_NAME=$(bin/composer project-name)
+  - export NEXT_VERSION_SHORT=$(bin/composer version git next-revision v)
+  - export NEXT_VERSION=$(bin/composer version git next-revision)-$(git rev-parse --short HEAD)
+  - export REVISION_TAG=v${NEXT_VERSION_SHORT}
+
+stages:
+  - package
+  - release
+
+package:
+  stage: package
+  except:
+    - tags
+  script:
+    - bin/composer install -o --no-dev
+    - bin/composer init-example
+    - bin/composer gen-api-docs
+    - bin/composer gen-user-docs
+    - bin/composer "build" "tar.gz" "${PROJECT_NAME}" "${NEXT_VERSION}"
+    - bin/composer "build" "zip" "${PROJECT_NAME}" "${NEXT_VERSION}"
+
+  artifacts:
+    name: "$(git describe --tags)-$(git rev-parse --short HEAD)"
+    paths:
+      - "${CI_PROJECT_DIR}/dist/*.tar.gz"
+      - "${CI_PROJECT_DIR}/dist/*.zip"
+    expire_in: 1 week
+
+release:
+  stage: release
+  except:
+    - tags
+    - /^feature\/.*$/
+    - /^(fix|hotfix)\/.*$/
+  script:
+    - git tag ${REVISION_TAG}
+    - git remote set-url --push origin "$(echo $CI_REPOSITORY_URL | perl -pe 's#.*@(.+?(\:\d+)?)/#git@\1:#')"
+    - git remote -v
+    - git push origin --tags

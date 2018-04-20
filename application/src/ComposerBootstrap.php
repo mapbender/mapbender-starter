@@ -270,11 +270,64 @@ class ComposerBootstrap
 
     /**
      * Display version
+     *
+     * @param Event $e
      */
-    public static function displayVersion()
+    public static function displayVersion($e)
     {
-        $composerDef = static::getComposerDefinition();
-        echo $composerDef["version"] . "\n";
+        $defaults = array('composer', 'minor', '-');
+        list($vendorType, $versionTime, $versionGlue) = array_replace($defaults, $e->getArguments());
+        if ($vendorType == "composer") {
+            $composerDef = static::getComposerDefinition();
+            if ($versionTime == "minor") {
+                echo $composerDef["version"] . "\n";
+                return;
+            }
+        }
+
+        if ($vendorType == "git") {
+            if ($versionTime == "next-revision") {
+                list($projectName, $projectVersion) = explode("/", self::getGitBranchName());
+
+                // Don't save 'release' as project name
+                if($projectName == 'release'){
+                    $projectName ='';
+                }
+
+                $revisions = null;
+                preg_match_all("/^" . preg_quote($projectName . $versionGlue) . '(' . preg_quote($projectVersion) . ")\.(\S+)/sm", `git tag`, $revisions, PREG_SET_ORDER);
+                $revisions = array_map(function ($match) { return $match[2]; }, $revisions);
+                natsort($revisions);
+
+                $lastRevision = count($revisions) ? intval(end($revisions)) : -1;
+                $nextRevision = $lastRevision + 1;
+                echo "${projectVersion}.${nextRevision}\n";
+            }
+        }
+    }
+
+    /**
+     * Display name
+     *
+     * @param Event $e
+     */
+    public static function displayProjectName($e)
+    {
+        $defaults = array('git');
+
+        list($vendorType) = array_replace($defaults, $e->getArguments());
+
+        if ($vendorType == "composer") {
+            $composerDef = static::getComposerDefinition();
+            list($nameSpace, $projectName) = explode("/", $composerDef["name"]);
+            echo $projectName . "\n";
+            return;
+        }
+
+        if ($vendorType == "git") {
+            list($projectName, $projectVersion) = explode("/", self::getGitBranchName());
+            echo $projectName . "\n";
+        }
     }
 
     /**
@@ -315,6 +368,18 @@ class ComposerBootstrap
         return array(
             "default" => $path . "parameters.yml.dist",
             "current" => $path . "parameters.yml");
+    }
+
+    /**
+     * @return string
+     */
+    public static function getGitBranchName()
+    {
+        $branchName = trim(`git rev-parse --abbrev-ref HEAD`);
+        if ($branchName == "HEAD") {
+            $branchName = trim(`echo \$CI_COMMIT_REF_NAME`);
+        }
+        return $branchName;
     }
 
     /**

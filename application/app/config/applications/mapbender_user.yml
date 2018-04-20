@@ -16,10 +16,10 @@ parameters:
                     mapbender_users:
                         class: Mapbender\WmsBundle\Entity\WmsInstance
                         title: Mapbender Users
-                        url: http://wms.wheregroup.com/cgi-bin/mapbender_user.xml
+                        url: https://wms.wheregroup.com/cgi-bin/mapbender_user.xml
                         version: 1.3.0
                         layers:
-                            10: { name: Mapbender_User,    title : User, visible: true, legendurl: http://wms.wheregroup.com/cgi-bin/mapbender_user.xml?version=1.3.0&service=WMS&request=GetLegendGraphic&sld_version=1.1.0&layer=Mapbender_User&format=image/png&STYLE=default }
+                            10: { name: Mapbender_User,    title : User, visible: true, legendurl: https://wms.wheregroup.com/cgi-bin/mapbender_user.xml?version=1.3.0&service=WMS&request=GetLegendGraphic&sld_version=1.1.0&layer=Mapbender_User&format=image/png&STYLE=default }
                             22: { name: Mapbender_Names,   title : Name, visible: true, queryable: true}
                         info_format: text/html
                         visible: true
@@ -30,7 +30,7 @@ parameters:
                     osm:
                         class: Mapbender\WmsBundle\Entity\WmsInstance
                         title: OSM Demo
-                        url: http://osm-demo.wheregroup.com/service
+                        url: https://osm-demo.wheregroup.com/service
                         version: 1.3.0
                         layers:
                             30: { name: osm,    title : Germany OSM Demo WhereGroup,  visible: true }
@@ -44,7 +44,7 @@ parameters:
                     osm_overview:
                         class: Mapbender\WmsBundle\Entity\WmsInstance
                         title: OSM Demo
-                        url: http://osm-demo.wheregroup.com/service
+                        url: https://osm-demo.wheregroup.com/service
                         version: 1.3.0
                         layers:
                             40: { name: osm,    title : Germany OSM Demo WhereGroup,  visible: true }
@@ -203,7 +203,7 @@ parameters:
                     printclient:
                         class: Mapbender\CoreBundle\Element\PrintClient
                         target: map
-                        file_prefix: mapbender3
+                        file_prefix: mapbender
                         templates:
                             - { template: a4portrait, label: A4 Portrait}
                             - { template: a4landscape, label: A4 Landscape}
@@ -303,6 +303,12 @@ parameters:
                         display_type: element
                         auto_activate: false
                         deactivate_on_close: false
+                    html-about-mapbender:
+                        title: 'About Mapbender'
+                        class: Mapbender\CoreBundle\Element\HTMLElement
+                        classes: html-element-inline
+                        content: "<p>\r\nMapbender is an \r\n</p></br>\r\n<p>\r\n<a href=\"https://www.osgeo.org/projects/mapbender/\" target=\"_blank\"><img src=\"https://mapbender.org/sites/default/files/osgeo-project-cmyk.png\" alt=\"OSGeo Project\"  title=\"OSGeo Project\" width=\"100px\" /></a>\r\n</p></br>\r\n<p>\r\nFind out more about OSGeo at \r\n</br>\r\n<a href=\"https://osgeo.org\" target=\"_blank\">https://www.osgeo.org</a>\r\n</br>\r\n<a href=\"https://osgeo.org/projects/mapbender/\" target=\"_blank\">https://www.osgeo.org/projects/mapbender/</a>"
+
                 footer:
                     activityindicator:
                         class: Mapbender\CoreBundle\Element\ActivityIndicator
@@ -336,7 +342,7 @@ parameters:
                         tooltip: Line Ruler
                         class: Mapbender\CoreBundle\Element\Button
                         label: true
-                        click: http://www.openstreetmap.org/copyright
+                        click: https://www.openstreetmap.org/copyright
                     HTML:
                         title: HTML
                         class: Mapbender\CoreBundle\Element\HTMLElement

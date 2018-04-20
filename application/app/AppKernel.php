@@ -2,44 +2,12 @@
 
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\HttpKernel\Bundle\BundleInterface;
-use Symfony\Component\HttpKernel\Kernel;
 
 /**
  * Mapbender3 kernel
  */
-class AppKernel extends Kernel
+class AppKernel extends Mapbender\BaseKernel
 {
-    /**
-     * Search and initialize name space bundles.
-     * Search approach uses indirectly the composer auto generated file to get bundle names.
-     *
-     * @param BundleInterface[] $bundles   Bundle array link
-     * @param string            $nameSpace Name space prefix as string
-     * @return BundleInterface[] Bundle array
-     */
-    function addNameSpaceBundles(array &$bundles, $nameSpace)
-    {
-        $namespaces = include(dirname(__FILE__) . "/../vendor/composer/autoload_namespaces.php");
-        foreach ($namespaces as $name => $path) {
-            if (strpos($name, $nameSpace) === 0) {
-                $bundleClassName = $name . '\\' . str_replace('\\', "", $name);
-                $bundles[] = new $bundleClassName();
-            }
-
-        }
-
-        $namespaces = include(dirname(__FILE__) . "/../vendor/composer/autoload_psr4.php");
-        foreach ($namespaces as $name => $path) {
-            if (strpos($name, $nameSpace) === 0
-                && strpos($name, "Bundle")
-            ) {
-                $bundleClassName = $name . str_replace('\\', "", $name);
-                $bundles[] = new $bundleClassName();
-            }
-        }
-        return $bundles;
-    }
-
     /**
      * Returns an array of bundles to register.
      *
@@ -49,14 +17,7 @@ class AppKernel extends Kernel
     {
         $bundles = array(
             // Standard Symfony2 bundles
-            new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
-            new Symfony\Bundle\SecurityBundle\SecurityBundle(),
-            new Symfony\Bundle\TwigBundle\TwigBundle(),
-            new Symfony\Bundle\MonologBundle\MonologBundle(),
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
-            new Symfony\Bundle\AsseticBundle\AsseticBundle(),
-            new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
-            new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
 
             // Extra bundles required by Mapbender3/OWSProxy3
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
@@ -66,8 +27,7 @@ class AppKernel extends Kernel
             new FOM\ManagerBundle\FOMManagerBundle(),
             new FOM\UserBundle\FOMUserBundle(),
 
-            // Mapbender3 bundles
-            new Mapbender\CoreBundle\MapbenderCoreBundle(),
+            // Optional Mapbender bundles
             new Mapbender\WmcBundle\MapbenderWmcBundle(),
             new Mapbender\WmsBundle\MapbenderWmsBundle(),
             new Mapbender\ManagerBundle\MapbenderManagerBundle(),
@@ -81,17 +41,12 @@ class AppKernel extends Kernel
 
         $this->addNameSpaceBundles($bundles, 'Mapbender\\');
 
-        // dev and ALL test environments get some extra sugar...
-        $isDevKernel = false;
-        if('dev' == $this->getEnvironment() || strpos($this->getEnvironment(), 'test') == 0) {
-            $isDevKernel = true;
-        }
+        // prepend bundles required by Mapbender (including MapbenderCoreBundle)
+        $bundles = array_merge(parent::registerBundles(), $bundles);
 
-        if ($isDevKernel) {
-            $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
-            $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
-            $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
-        }
+        // If you get "Uncaught LogicException: Trying to register two bundles with the same name"
+        // uncomment the next line for a quick fix
+        // $bundles = BaseKernel::filterUniqueBundles($bundles)
 
         return $bundles;
     }

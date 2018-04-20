@@ -20,7 +20,6 @@ application/web/assets/.dev-cache
 extra/
 */app/config/parameters.yml
 */app/bootstrap.php.cache
-*/composer.phar
 */composer.lock
 */vendor
 *.tar.gz
@@ -29,9 +28,6 @@ extra/
 local.properties
 /nbproject/private/
 testresults
-application/bin/*
-!application/bin/sassc
-!application/bin/sassc.exe
 
 # IDEA Project Files
 .idea/

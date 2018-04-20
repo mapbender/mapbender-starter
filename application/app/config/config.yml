@@ -1,6 +1,8 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
+#Uncomment then next line if you have problems using an oracle database with mapbender.
+#   - { resource: oracle.yml }
 
 framework:
     #esi:             ~
