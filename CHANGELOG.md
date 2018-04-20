@@ -1,5 +1,33 @@
 # Changelog
 
+## dev-release/3.0.6
+- Update "a4portrait" Print template
+- Improve SCSS to CSS generation performance on windows
+- Bypass aggressive class caching / precompilation in dev and test environments
+- Update composer binary
+- Add composer generate API documentation shortcut "bin/composer docs"
+- Add composer update assets shortcut "bin/composer update-assets"
+- Add composer shortcut to clear caches "bin/composer clean"
+- Improved and cleaned up phing builds
+- Cleaned up .travis.yml, allow PHP 7
+- Install phantomjs via composer instead of npm
+- Add deprecation comment to "generate:*" commands
+- Remove old "mapbender2_geometryprovider" service declaration.
+- Remove JMS security configuration and bundles
+- Use "setasign/fpdi-fpdf" instead of  "toooni/fpdf" library. Adapt PDF_ImageAlpha and PrintService on "setasign/fpdi-fpdf".
+- Fix install assets on win/linux machine
+- Remove project configuration settings from config.yml
+- Remove load dynamic project configuration
+- Optimize connection configuration for OCI8 driver (persist=true)
+- Extract demo application from mapbender.yml to application/ folder as YAML file for each
+- Improve composer package description
+- Add apigen/apigen to composer dev
+- Optimize bootstrap script for composer, travis and windows
+- Rename ScriptHandler to ComposerBootstrap
+- Change composer own ScriptHandler order after symfony bootstrap
+- Add composer first installation script handler
+
+
 ## v.3.0.6.4
  - Added new documentation file /doc/mapbender_terminal_commands.md (command line)
  - Add oracle database config file
