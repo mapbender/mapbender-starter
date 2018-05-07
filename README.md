@@ -83,35 +83,26 @@ cd mapbender-starter
 ./bootstrap
 ```
 
-Running the bootstrap script takes some time to get the required libraries and to prepare the project configurations. Bootstrap saves [Mapbender] starter configurations in a `application/app/db/demo.sqlite` configuration file. After that, a SQLite testing database is created. In the end, the script starts an integrated webserver in your terminal. For more on that, check [start webserver]. Symfony configurations are located under `application/app/config`. 
-
-## Bootstrap (first run)
-```sh
-./bootstrap
-```
-
-This command performs the following required setup tasks for you:
-* installs dependencies
+The bootstrap command performs the following required setup tasks for you:
+* installs userland dependencies (via composer)
 * creates a parameters.yml by copying the bundled parameters.yml.dist
 * performs the necessary database setup (as an sqlite file in `application/app/db/demo.sqlite`)
-* creates a root account
+* creates a root account with a default password `root` (which you should change later)
 
-It then continues booting into PHP's development web server, so after
-the setup processes have finished, the installation can be accessed
-on `http://localhost:8000/`.
-
-## Testing webserver (subsequent runs)
-In the application subdirectory, run:
-```sh
-app/console server:run
-```
-
-The URL is shown in the output:
+It then continues booting into PHP's development web server, which is not
+production quality, but allows quick testing. The URL is shown in the output:
 ```sh
 Server running on http://localhost:8000
 ```
 
+We recommend doing this at least once even if you plan on using a proper webserver.
+You can stop the server with a simple Ctrl+C.
 
+The full setup processes is only needed once. If you want to run the development webserver again,
+you can skip the dependency checks etc and directly use:
+```sh
+app/console server:run
+```
 
 ## Components
 
