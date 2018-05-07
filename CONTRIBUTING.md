@@ -14,27 +14,6 @@ Therefore, we provide a few [guidelines][rules] as an overview for contributors 
 
 Mapbender is based on a [Symfony framework] and uses [composer] to manage external and internal libraries as own [modules][module].
 
-# Installation      
-
-
-
-For development reasons, it is recommended to use Chromium (Chrome) or Firefox.
-
-If you want to log in, you have to use the standard combination (name: root / pw: root). Please change these patterns if you want a secure access.
-
-To stop the server from running, just press ctrl-C or close your console.
-
-That's it! 
-
-*The developer installation is only useful for solo development purposes and should be optimized for production or co-working systems.*
-
-
-## Changing root account password
-From the application directory:
-```sh
-app/console fom:user:resetroot
-```
-
 # Modules
 
 Module is a new part of the [Mapbender] concept, based on [Symfony modularity rules](http://www.symfony.com) 

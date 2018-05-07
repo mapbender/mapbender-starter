@@ -104,6 +104,12 @@ you can skip the dependency checks etc and directly use:
 app/console server:run
 ```
 
+## Changing root account password
+From the application directory run:
+```sh
+app/console fom:user:resetroot
+```
+
 ## Components
 
 Our code is maintained using git and hosted at Github. We split up our code into several parts:
