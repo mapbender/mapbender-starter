@@ -6,6 +6,45 @@ The [official site](http://mapbender.org/?q=en) contains [documentation](http://
 
 To install Mapbender from this Git-repository, please read the guide of the [Git-based installation](http://doc.mapbender.org/en/book/installation/installation_git.html) ([in German](http://doc.mapbender.org/de/book/installation/installation_git.html)).
 
+## Requirements
+
+At a minimum, Mapbender requires a PHP interpreter and the following php extensions to be installed and enabled:
+* curl
+* gd
+* bz2
+* xml
+* json
+* intl
+* mbstring
+* sqlite
+
+### Ubuntu 16.04
+
+```sh
+sudo apt-get install php7.0 php7.0-xml php7.0-mbstring php7.0-pgsql php7.0-gd php7.0-curl php7.0-cli php7.0-sqlite php7.0-intl php7.0-json sqlite curl openssl php-bz2
+```
+
+### Preparing Ubuntu 14.04
+
+Activate universe repoisitory:
+
+```sh
+sudo add-apt-repository universe
+```
+
+Update package list:
+
+```sh
+sudo apt-get update
+```
+
+Install php interpreter and modules:
+
+```sh
+sudo apt-get install php5 php5-xml php5-mbstring php5-pgsql php5-gd php5-curl php5-cli php5-sqlite php5-intl sqlite curl openssl bz2
+```
+
+
 
 ## Components
 
