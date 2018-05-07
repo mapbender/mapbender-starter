@@ -63,6 +63,14 @@ sudo apt-get install php5 php5-cli openssl bzip2 \
     sqlite curl
 ```
 
+## System configuration
+Make sure your PHP interpreter has explicitly configured temp and uploads directories and that they are writable. In >= PHP5.5,
+there are separate php.ini settings for `sys_temp_dir` and `upload_tmp_dir`.
+PHP <= 5.4 uses the value of `upload_tmp_dir` for both.
+
+Your system most likely has separate php.ini files for cli and web server SAPIs such as mod_php, php-fpm, fcgi etc.
+Make sure to make changes in _all_ php.ini files relevant to your installation.
+
 ## Getting the code
 
 Git clone mapbender-starter via ssh or https at your preference:
