@@ -8,25 +8,40 @@ To install Mapbender from this Git-repository, please read the guide of the [Git
 
 ## Requirements
 
-At a minimum, Mapbender requires a PHP interpreter and the following php extensions to be installed and enabled:
+At a minimum, Mapbender requires OpenSSL, curl, a PHP 5.4 interpreter, bzip2 decompression and the following php extensions to be installed and enabled:
 * curl
 * gd
+* intl
+* mbstring
 * bz2
 * xml
 * json
-* intl
-* mbstring
 * sqlite
+
+You may have to install and enable further extensions at your own discretion if you
+want to use specific database systems.
+
+We also recommend installing an sqlite client so you can inspect the (default) sqlite
+database.
+
+E.g.
 
 ### Ubuntu 16.04
 
 ```sh
-sudo apt-get install php7.0 php7.0-xml php7.0-mbstring php7.0-pgsql php7.0-gd php7.0-curl php7.0-cli php7.0-sqlite php7.0-intl php7.0-json sqlite curl openssl php-bz2
+sudo apt-get install php php-cli openssl bzip2 \
+    php-curl php-gd php-intl php-mbstring \
+    php-bz2 php-xml php-json \
+    php-sqlite php-pgsql php-mysql \
+    sqlite curl
 ```
 
-### Preparing Ubuntu 14.04
 
-Activate universe repoisitory:
+### Ubuntu 14.04
+
+14.04 is similar, but requires activation of the "universe" repository and uses versioned package names ("php5-" instead of "php-").
+
+Activate universe repository:
 
 ```sh
 sudo add-apt-repository universe
@@ -38,12 +53,15 @@ Update package list:
 sudo apt-get update
 ```
 
-Install php interpreter and modules:
+Install packages:
 
 ```sh
-sudo apt-get install php5 php5-xml php5-mbstring php5-pgsql php5-gd php5-curl php5-cli php5-sqlite php5-intl sqlite curl openssl bz2
+sudo apt-get install php5 php5-cli openssl bzip2 \
+    php5-curl php5-gd php5-intl php5-mbstring \
+    php5-xml php5-json \
+    php5-sqlite php5-pgsql php5-mysql
+    sqlite curl
 ```
-
 
 
 ## Components
