@@ -17,61 +17,6 @@ Mapbender is based on a [Symfony framework] and uses [composer] to manage extern
 # Installation      
 
 
-## Cloning project source
-
-### via SSH
-```sh
-git clone git@github.com:mapbender/mapbender-starter.git mapbender-starter
-```
-
-or 
-
-### via HTTP
-
-```sh
-git clone https://github.com/mapbender/mapbender-starter.git mapbender-starter
-```
-
-## Switch to project directory
-```sh
-cd mapbender-starter
-```
-
-## Run bootstrap script 
-
-Running the bootstrap script takes some time to get the required libraries and to prepare the project configurations. Bootstrap saves [Mapbender] starter configurations in a `application/app/db/demo.sqlite` configuration file. After that, a SQLite testing database is created. In the end, the script starts an integrated webserver in your terminal. For more on that, check [start webserver]. Symfony configurations are located under `application/app/config`. 
-
-
-```sh
-sh bootstrap
-```
-
-
-## Bootstrap (first run)
-```sh
-./bootstrap
-```
-
-This command performs the following required setup tasks for you:
-* installs dependencies
-* creates a parameters.yml by copying the bundled parameters.yml.dist
-* performs the necessary database setup (as an sqlite file in `application/app/db/demo.sqlite`)
-* creates a root account
-
-It then continues booting into PHP's development web server, so after
-the setup processes have finished, the installation can be accessed
-on `http://localhost:8000/`.
-
-## Testing webserver (subsequent runs)
-In the application subdirectory, run:
-```sh
-app/console server:run
-```
-
-The URL is shown in the output:
-```sh 
-Server running on http://localhost:8000
-```
 
 For development reasons, it is recommended to use Chromium (Chrome) or Firefox.
 
