@@ -49,7 +49,7 @@
 
         "gedmo/doctrine-extensions": "~2.3",
 
-        "components/jquery": "~1.11.2",
+        "components/jquery": "1.11.2",
 
         "mnsami/composer-custom-directory-installer": "1.0.*",
 
