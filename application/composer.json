@@ -129,7 +129,10 @@
         "archive-dir": "../dist",
         "archive-format": "tar.gz",
         "optimize-autoloader": true,
-        "process-timeout": 600
+        "process-timeout": 600,
+        "preferred-install": {
+            "mapbender/*": "source"
+        }
     },
     "minimum-stability": "stable",
     "extra": {

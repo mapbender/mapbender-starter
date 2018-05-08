@@ -6,12 +6,117 @@ The [official site](http://mapbender.org/?q=en) contains [documentation](http://
 
 To install Mapbender from this Git-repository, please read the guide of the [Git-based installation](http://doc.mapbender.org/en/book/installation/installation_git.html) ([in German](http://doc.mapbender.org/de/book/installation/installation_git.html)).
 
+## Requirements
 
-## Branches
+At a minimum, Mapbender requires OpenSSL, curl, a PHP 5.4 interpreter, bzip2 decompression and the following php extensions to be installed and enabled:
+* curl
+* gd
+* intl
+* mbstring
+* bz2
+* xml
+* json
+* sqlite
 
-The current version of Mapbender is based on the [release/3.0.6 branch](https://github.com/mapbender/mapbender-starter/tree/release/3.0.5). The master branch will reflect the changes of the [current releases](https://github.com/mapbender/mapbender-starter/releases) while the develop branch might contain new features.
+You may have to install and enable further extensions at your own discretion if you
+want to use specific database systems.
+
+We also recommend installing an sqlite client so you can inspect the (default) sqlite
+database.
+
+E.g.
+
+### Ubuntu 16.04
+
+```sh
+sudo apt-get install php php-cli openssl bzip2 \
+    php-curl php-gd php-intl php-mbstring \
+    php-bz2 php-xml php-json \
+    php-sqlite php-pgsql php-mysql \
+    sqlite curl
+```
 
 
+### Ubuntu 14.04
+
+14.04 is similar, but requires activation of the "universe" repository and uses versioned package names ("php5-" instead of "php-").
+
+Activate universe repository:
+
+```sh
+sudo add-apt-repository universe
+```
+
+Update package list:
+
+```sh
+sudo apt-get update
+```
+
+Install packages:
+
+```sh
+sudo apt-get install php5 php5-cli openssl bzip2 \
+    php5-curl php5-gd php5-intl php5-mbstring \
+    php5-xml php5-json \
+    php5-sqlite php5-pgsql php5-mysql
+    sqlite curl
+```
+
+## System configuration
+Make sure your PHP interpreter has explicitly configured temp and uploads directories and that they are writable. In >= PHP5.5,
+there are separate php.ini settings for `sys_temp_dir` and `upload_tmp_dir`.
+PHP <= 5.4 uses the value of `upload_tmp_dir` for both.
+
+Your system most likely has separate php.ini files for cli and web server SAPIs such as mod_php, php-fpm, fcgi etc.
+Make sure to make changes in _all_ php.ini files relevant to your installation.
+
+## Getting the code
+
+Git clone mapbender-starter via ssh or https at your preference:
+```sh
+git clone git@github.com:mapbender/mapbender-starter.git mapbender-starter
+```
+
+or
+
+```sh
+git clone https://github.com/mapbender/mapbender-starter.git mapbender-starter
+```
+
+## Bootstrapping
+Switch to project directory and run ./bootstrap
+```sh
+cd mapbender-starter
+./bootstrap
+```
+
+The bootstrap command performs the following required setup tasks for you:
+* installs userland dependencies (via composer)
+* creates a parameters.yml by copying the bundled parameters.yml.dist
+* performs the necessary database setup (as an sqlite file in `application/app/db/demo.sqlite`)
+* creates a root account with a default password `root` (which you should change later)
+
+It then continues booting into PHP's development web server, which is not
+production quality, but allows quick testing. The URL is shown in the output:
+```sh
+Server running on http://localhost:8000
+```
+
+We recommend doing this at least once even if you plan on using a proper webserver.
+You can stop the server with a simple Ctrl+C.
+
+The full setup processes is only needed once. If you want to run the development webserver again,
+you can skip the dependency checks etc and directly use:
+```sh
+app/console server:run
+```
+
+## Changing root account password
+From the application directory run:
+```sh
+app/console fom:user:resetroot
+```
 
 ## Components
 
