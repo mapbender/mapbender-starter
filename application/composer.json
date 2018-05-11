@@ -57,7 +57,7 @@
         "mapbender/mapbender": "~3.0.7.0",
         "mapbender/owsproxy": "~3.0.6",
         "mapbender/digitizer": "1.1.x",
-        "mapbender/coordinates-utility": "^1.0.0",
+        "mapbender/coordinates-utility": "^1.0.1",
         "mapbender/documentation": "dev-master as 3.0.7.0"
     },
     "scripts": {
