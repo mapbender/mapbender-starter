@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "678a7a4e9aeb47c313682ba52b394e7c",
+    "content-hash": "0b9c914ed3eefe015c5d6872c5d4461d",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -322,16 +322,16 @@
         },
         {
             "name": "components/jquery",
-            "version": "1.11.3",
+            "version": "1.12.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/components/jquery.git",
-                "reference": "e7c492908a9746439e20b19a671c5001e8832732"
+                "reference": "5dd7297d7603e11e53bdcca2a71074d92de37b8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/components/jquery/zipball/e7c492908a9746439e20b19a671c5001e8832732",
-                "reference": "e7c492908a9746439e20b19a671c5001e8832732",
+                "url": "https://api.github.com/repos/components/jquery/zipball/5dd7297d7603e11e53bdcca2a71074d92de37b8f",
+                "reference": "5dd7297d7603e11e53bdcca2a71074d92de37b8f",
                 "shasum": ""
             },
             "type": "component",
@@ -342,9 +342,9 @@
                     ],
                     "files": [
                         "jquery.min.js",
+                        "jquery.min.map",
                         "jquery-migrate.js",
-                        "jquery-migrate.min.js",
-                        "jquery.min.map"
+                        "jquery-migrate.min.js"
                     ]
                 }
             },
@@ -360,7 +360,7 @@
             ],
             "description": "jQuery JavaScript Library",
             "homepage": "http://jquery.com",
-            "time": "2015-06-08T13:35:17+00:00"
+            "time": "2016-05-25T06:50:04+00:00"
         },
         {
             "name": "components/jqueryui",
@@ -496,6 +496,29 @@
                 "util"
             ],
             "time": "2015-10-16T14:27:39+00:00"
+        },
+        {
+            "name": "datatables/datatables",
+            "version": "1.10.16",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DataTables/DataTables.git",
+                "reference": "75a665f64f02982c0f4666b15a25c4670e5e6b18"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DataTables/DataTables/zipball/75a665f64f02982c0f4666b15a25c4670e5e6b18",
+                "reference": "75a665f64f02982c0f4666b15a25c4670e5e6b18",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "DataTables is a plug-in for the jQuery Javascript library. It is a highly flexible tool, based upon the foundations of progressive enhancement, which will add advanced interaction controls to any HTML table.",
+            "homepage": "http://www.datatables.net/",
+            "time": "2017-08-31T13:52:17+00:00"
         },
         {
             "name": "debugteam/bootstrap-colorpicker",
@@ -1686,16 +1709,16 @@
         },
         {
             "name": "gedmo/doctrine-extensions",
-            "version": "v2.4.34",
+            "version": "v2.4.35",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Atlantic18/DoctrineExtensions.git",
-                "reference": "f61d14436c30d0faa35b1e7f53b3855597c46c5a"
+                "reference": "1e400fbd05b7e5f912f55fe95805450f7d3bed60"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/f61d14436c30d0faa35b1e7f53b3855597c46c5a",
-                "reference": "f61d14436c30d0faa35b1e7f53b3855597c46c5a",
+                "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/1e400fbd05b7e5f912f55fe95805450f7d3bed60",
+                "reference": "1e400fbd05b7e5f912f55fe95805450f7d3bed60",
                 "shasum": ""
             },
             "require": {
@@ -1763,7 +1786,7 @@
                 "tree",
                 "uploadable"
             ],
-            "time": "2018-04-13T13:49:18+00:00"
+            "time": "2018-05-08T12:28:40+00:00"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -2354,12 +2377,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-documentation.git",
-                "reference": "64aa502a91412877a0f6468017f2cee230f4556f"
+                "reference": "b821317943e4e7234e5311242833d04e75779dac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/64aa502a91412877a0f6468017f2cee230f4556f",
-                "reference": "64aa502a91412877a0f6468017f2cee230f4556f",
+                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/b821317943e4e7234e5311242833d04e75779dac",
+                "reference": "b821317943e4e7234e5311242833d04e75779dac",
                 "shasum": ""
             },
             "require": {
@@ -2632,26 +2655,26 @@
         },
         {
             "name": "mapbender/vis-ui.js",
-            "version": "0.0.70",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/vis-ui.js.git",
-                "reference": "acc835948e83d26549d1fbba76db0c6012cc4875"
+                "reference": "c2142e0156384310df23b2b33fb5582835a1aaad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/vis-ui.js/zipball/acc835948e83d26549d1fbba76db0c6012cc4875",
-                "reference": "acc835948e83d26549d1fbba76db0c6012cc4875",
+                "url": "https://api.github.com/repos/mapbender/vis-ui.js/zipball/c2142e0156384310df23b2b33fb5582835a1aaad",
+                "reference": "c2142e0156384310df23b2b33fb5582835a1aaad",
                 "shasum": ""
             },
             "require": {
                 "afarkas/html5shiv": "3.*",
                 "components/bootstrap": "3.*",
-                "components/datatables": "1.10.*",
                 "components/font-awesome": "4.x",
                 "components/jquery": "1.* || 2.*",
                 "components/jqueryui": "1.*",
                 "components/underscore": "1.8.*",
+                "datatables/datatables": "1.10.*",
                 "debugteam/bootstrap-colorpicker": "1.*",
                 "medialize/jquery-context-menu": "1.*",
                 "robloach/component-installer": "0.2.*",
@@ -2697,7 +2720,7 @@
                 "jquery",
                 "vis-ui"
             ],
-            "time": "2017-12-13T21:05:16+00:00"
+            "time": "2018-05-08T14:02:01+00:00"
         },
         {
             "name": "medialize/jquery-context-menu",
@@ -3848,16 +3871,16 @@
         },
         {
             "name": "symfony/polyfill-apcu",
-            "version": "v1.7.0",
+            "version": "v1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-apcu.git",
-                "reference": "e8ae2136ddb53dea314df56fcd88e318ab936c00"
+                "reference": "9b83bd010112ec196410849e840d9b9fefcb15ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-apcu/zipball/e8ae2136ddb53dea314df56fcd88e318ab936c00",
-                "reference": "e8ae2136ddb53dea314df56fcd88e318ab936c00",
+                "url": "https://api.github.com/repos/symfony/polyfill-apcu/zipball/9b83bd010112ec196410849e840d9b9fefcb15ad",
+                "reference": "9b83bd010112ec196410849e840d9b9fefcb15ad",
                 "shasum": ""
             },
             "require": {
@@ -3866,7 +3889,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.7-dev"
+                    "dev-master": "1.8-dev"
                 }
             },
             "autoload": {
@@ -3900,20 +3923,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-01-30T19:27:44+00:00"
+            "time": "2018-04-26T10:06:28+00:00"
         },
         {
             "name": "symfony/polyfill-intl-icu",
-            "version": "v1.7.0",
+            "version": "v1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-icu.git",
-                "reference": "254919c03761d46c29291616576ed003f10e91c1"
+                "reference": "80ee17ae83c10cd513e5144f91a73607a21edb4e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-icu/zipball/254919c03761d46c29291616576ed003f10e91c1",
-                "reference": "254919c03761d46c29291616576ed003f10e91c1",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-icu/zipball/80ee17ae83c10cd513e5144f91a73607a21edb4e",
+                "reference": "80ee17ae83c10cd513e5144f91a73607a21edb4e",
                 "shasum": ""
             },
             "require": {
@@ -3926,7 +3949,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.7-dev"
+                    "dev-master": "1.8-dev"
                 }
             },
             "autoload": {
@@ -3958,20 +3981,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-01-30T19:27:44+00:00"
+            "time": "2018-04-25T14:53:50+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.7.0",
+            "version": "v1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "78be803ce01e55d3491c1397cf1c64beb9c1b63b"
+                "reference": "3296adf6a6454a050679cde90f95350ad604b171"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/78be803ce01e55d3491c1397cf1c64beb9c1b63b",
-                "reference": "78be803ce01e55d3491c1397cf1c64beb9c1b63b",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/3296adf6a6454a050679cde90f95350ad604b171",
+                "reference": "3296adf6a6454a050679cde90f95350ad604b171",
                 "shasum": ""
             },
             "require": {
@@ -3983,7 +4006,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.7-dev"
+                    "dev-master": "1.8-dev"
                 }
             },
             "autoload": {
@@ -4017,20 +4040,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-01-30T19:27:44+00:00"
+            "time": "2018-04-26T10:06:28+00:00"
         },
         {
             "name": "symfony/polyfill-php54",
-            "version": "v1.7.0",
+            "version": "v1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php54.git",
-                "reference": "84e2b616c197ef400c6d0556a0606cee7c9e21d5"
+                "reference": "6c3a2b84c6025e4ea3f6a19feac35408c64b22e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php54/zipball/84e2b616c197ef400c6d0556a0606cee7c9e21d5",
-                "reference": "84e2b616c197ef400c6d0556a0606cee7c9e21d5",
+                "url": "https://api.github.com/repos/symfony/polyfill-php54/zipball/6c3a2b84c6025e4ea3f6a19feac35408c64b22e1",
+                "reference": "6c3a2b84c6025e4ea3f6a19feac35408c64b22e1",
                 "shasum": ""
             },
             "require": {
@@ -4039,7 +4062,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.7-dev"
+                    "dev-master": "1.8-dev"
                 }
             },
             "autoload": {
@@ -4075,20 +4098,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-01-30T19:27:44+00:00"
+            "time": "2018-04-26T10:06:28+00:00"
         },
         {
             "name": "symfony/polyfill-php55",
-            "version": "v1.7.0",
+            "version": "v1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php55.git",
-                "reference": "168371cb3dfb10e0afde96e7c2688be02470d143"
+                "reference": "a39456128377a85f2c5707fcae458678560cba46"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php55/zipball/168371cb3dfb10e0afde96e7c2688be02470d143",
-                "reference": "168371cb3dfb10e0afde96e7c2688be02470d143",
+                "url": "https://api.github.com/repos/symfony/polyfill-php55/zipball/a39456128377a85f2c5707fcae458678560cba46",
+                "reference": "a39456128377a85f2c5707fcae458678560cba46",
                 "shasum": ""
             },
             "require": {
@@ -4098,7 +4121,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.7-dev"
+                    "dev-master": "1.8-dev"
                 }
             },
             "autoload": {
@@ -4131,20 +4154,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-01-30T19:27:44+00:00"
+            "time": "2018-04-26T10:06:28+00:00"
         },
         {
             "name": "symfony/polyfill-php56",
-            "version": "v1.7.0",
+            "version": "v1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php56.git",
-                "reference": "ebc999ce5f14204c5150b9bd15f8f04e621409d8"
+                "reference": "af98553c84912459db3f636329567809d639a8f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php56/zipball/ebc999ce5f14204c5150b9bd15f8f04e621409d8",
-                "reference": "ebc999ce5f14204c5150b9bd15f8f04e621409d8",
+                "url": "https://api.github.com/repos/symfony/polyfill-php56/zipball/af98553c84912459db3f636329567809d639a8f6",
+                "reference": "af98553c84912459db3f636329567809d639a8f6",
                 "shasum": ""
             },
             "require": {
@@ -4154,7 +4177,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.7-dev"
+                    "dev-master": "1.8-dev"
                 }
             },
             "autoload": {
@@ -4187,20 +4210,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-01-30T19:27:44+00:00"
+            "time": "2018-04-26T10:06:28+00:00"
         },
         {
             "name": "symfony/polyfill-php70",
-            "version": "v1.7.0",
+            "version": "v1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php70.git",
-                "reference": "3532bfcd8f933a7816f3a0a59682fc404776600f"
+                "reference": "77454693d8f10dd23bb24955cffd2d82db1007a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/3532bfcd8f933a7816f3a0a59682fc404776600f",
-                "reference": "3532bfcd8f933a7816f3a0a59682fc404776600f",
+                "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/77454693d8f10dd23bb24955cffd2d82db1007a6",
+                "reference": "77454693d8f10dd23bb24955cffd2d82db1007a6",
                 "shasum": ""
             },
             "require": {
@@ -4210,7 +4233,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.7-dev"
+                    "dev-master": "1.8-dev"
                 }
             },
             "autoload": {
@@ -4246,20 +4269,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-01-30T19:27:44+00:00"
+            "time": "2018-04-26T10:06:28+00:00"
         },
         {
             "name": "symfony/polyfill-util",
-            "version": "v1.7.0",
+            "version": "v1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-util.git",
-                "reference": "e17c808ec4228026d4f5a8832afa19be85979563"
+                "reference": "1a5ad95d9436cbff3296034fe9f8d586dce3fb3a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-util/zipball/e17c808ec4228026d4f5a8832afa19be85979563",
-                "reference": "e17c808ec4228026d4f5a8832afa19be85979563",
+                "url": "https://api.github.com/repos/symfony/polyfill-util/zipball/1a5ad95d9436cbff3296034fe9f8d586dce3fb3a",
+                "reference": "1a5ad95d9436cbff3296034fe9f8d586dce3fb3a",
                 "shasum": ""
             },
             "require": {
@@ -4268,7 +4291,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.7-dev"
+                    "dev-master": "1.8-dev"
                 }
             },
             "autoload": {
@@ -4298,7 +4321,7 @@
                 "polyfill",
                 "shim"
             ],
-            "time": "2018-01-31T18:08:44+00:00"
+            "time": "2018-04-26T10:06:28+00:00"
         },
         {
             "name": "symfony/security-acl",
@@ -4420,16 +4443,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.8.38",
+            "version": "v2.8.39",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "481883d56cbd4f435466dc26648d5c735671dd58"
+                "reference": "9b75ffe7b3adf2dad279e968787b71f829c1c404"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/481883d56cbd4f435466dc26648d5c735671dd58",
-                "reference": "481883d56cbd4f435466dc26648d5c735671dd58",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/9b75ffe7b3adf2dad279e968787b71f829c1c404",
+                "reference": "9b75ffe7b3adf2dad279e968787b71f829c1c404",
                 "shasum": ""
             },
             "require": {
@@ -4555,7 +4578,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2018-04-06T14:52:23+00:00"
+            "time": "2018-04-30T05:53:09+00:00"
         },
         {
             "name": "twig/extensions",
@@ -6903,6 +6926,12 @@
     ],
     "aliases": [
         {
+            "alias": "0.0.70",
+            "alias_normalized": "0.0.70.0",
+            "version": "9999999-dev",
+            "package": "mapbender/vis-ui.js"
+        },
+        {
             "alias": "3.0.7.0",
             "alias_normalized": "3.0.7.0",
             "version": "9999999-dev",
@@ -6911,6 +6940,7 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
+        "mapbender/vis-ui.js": 20,
         "mapbender/fom": 20,
         "mapbender/documentation": 20
     },
