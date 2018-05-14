@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f3fb6d8bae192bacd277f9d8fd52e48a",
+    "content-hash": "1b43d3e05e8de95304d73fa4694c41a1",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -2412,16 +2412,16 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v3.0.7.0",
+            "version": "v3.0.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "efb442d1c401a0c9a9334a313251a7e81248d8a1"
+                "reference": "3a26f2b2be4c0cce1a27bcb50e895d166f6cc535"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/efb442d1c401a0c9a9334a313251a7e81248d8a1",
-                "reference": "efb442d1c401a0c9a9334a313251a7e81248d8a1",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/3a26f2b2be4c0cce1a27bcb50e895d166f6cc535",
+                "reference": "3a26f2b2be4c0cce1a27bcb50e895d166f6cc535",
                 "shasum": ""
             },
             "require": {
@@ -2468,7 +2468,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2018-04-20T14:25:16+00:00"
+            "time": "2018-05-14T11:54:51+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
