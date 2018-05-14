@@ -48,7 +48,7 @@
         "doctrine/doctrine-fixtures-bundle": "2.3.*",
 
         "gedmo/doctrine-extensions": "~2.3",
-        "mapbender/vis-ui.js": "0.0.71",
+        "mapbender/vis-ui.js": "~0.0.71",
         "components/jquery": "^1.11.2",
 
         "mnsami/composer-custom-directory-installer": "1.0.*",

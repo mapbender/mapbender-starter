@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "678a7a4e9aeb47c313682ba52b394e7c",
+    "content-hash": "f3fb6d8bae192bacd277f9d8fd52e48a",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -244,48 +244,6 @@
             "time": "2016-07-26T05:59:20+00:00"
         },
         {
-            "name": "components/datatables",
-            "version": "1.10.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/SamMousa/datatables.git",
-                "reference": "d37d8a1baabd859aeefe00655d15d8ef72aece82"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/SamMousa/datatables/zipball/d37d8a1baabd859aeefe00655d15d8ef72aece82",
-                "reference": "d37d8a1baabd859aeefe00655d15d8ef72aece82",
-                "shasum": ""
-            },
-            "require": {
-                "components/jquery": "*",
-                "robloach/component-installer": "*"
-            },
-            "type": "component",
-            "extra": {
-                "component": {
-                    "scripts": [
-                        "media/js/jquery.dataTables.js"
-                    ],
-                    "styles": [
-                        "media/css/jquery.dataTables.css"
-                    ],
-                    "files": [
-                        "media/js/jquery.dataTables.min.js",
-                        "media/css/jquery.dataTables.min.css",
-                        "media/css/jquery.dataTables_themeroller.css",
-                        "media/images/*"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "abandoned": "bower-asset/datatables",
-            "time": "2014-11-06T12:09:07+00:00"
-        },
-        {
             "name": "components/font-awesome",
             "version": "4.7.0",
             "source": {
@@ -322,16 +280,16 @@
         },
         {
             "name": "components/jquery",
-            "version": "1.11.3",
+            "version": "1.12.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/components/jquery.git",
-                "reference": "e7c492908a9746439e20b19a671c5001e8832732"
+                "reference": "5dd7297d7603e11e53bdcca2a71074d92de37b8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/components/jquery/zipball/e7c492908a9746439e20b19a671c5001e8832732",
-                "reference": "e7c492908a9746439e20b19a671c5001e8832732",
+                "url": "https://api.github.com/repos/components/jquery/zipball/5dd7297d7603e11e53bdcca2a71074d92de37b8f",
+                "reference": "5dd7297d7603e11e53bdcca2a71074d92de37b8f",
                 "shasum": ""
             },
             "type": "component",
@@ -342,9 +300,9 @@
                     ],
                     "files": [
                         "jquery.min.js",
+                        "jquery.min.map",
                         "jquery-migrate.js",
-                        "jquery-migrate.min.js",
-                        "jquery.min.map"
+                        "jquery-migrate.min.js"
                     ]
                 }
             },
@@ -360,7 +318,7 @@
             ],
             "description": "jQuery JavaScript Library",
             "homepage": "http://jquery.com",
-            "time": "2015-06-08T13:35:17+00:00"
+            "time": "2016-05-25T06:50:04+00:00"
         },
         {
             "name": "components/jqueryui",
@@ -496,6 +454,29 @@
                 "util"
             ],
             "time": "2015-10-16T14:27:39+00:00"
+        },
+        {
+            "name": "datatables/datatables",
+            "version": "1.10.16",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DataTables/DataTables.git",
+                "reference": "75a665f64f02982c0f4666b15a25c4670e5e6b18"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DataTables/DataTables/zipball/75a665f64f02982c0f4666b15a25c4670e5e6b18",
+                "reference": "75a665f64f02982c0f4666b15a25c4670e5e6b18",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "DataTables is a plug-in for the jQuery Javascript library. It is a highly flexible tool, based upon the foundations of progressive enhancement, which will add advanced interaction controls to any HTML table.",
+            "homepage": "http://www.datatables.net/",
+            "time": "2017-08-31T13:52:17+00:00"
         },
         {
             "name": "debugteam/bootstrap-colorpicker",
@@ -2205,16 +2186,16 @@
         },
         {
             "name": "mapbender/coordinates-utility",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/coordinates-utility.git",
-                "reference": "828ea88b282bb35b69bc9067034197a949174446"
+                "reference": "f11c025fd302037b0084f88ed923ca9a89deb3c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/coordinates-utility/zipball/828ea88b282bb35b69bc9067034197a949174446",
-                "reference": "828ea88b282bb35b69bc9067034197a949174446",
+                "url": "https://api.github.com/repos/mapbender/coordinates-utility/zipball/f11c025fd302037b0084f88ed923ca9a89deb3c9",
+                "reference": "f11c025fd302037b0084f88ed923ca9a89deb3c9",
                 "shasum": ""
             },
             "require": {
@@ -2247,7 +2228,7 @@
                 "navigate",
                 "search"
             ],
-            "time": "2017-12-21T08:47:23+00:00"
+            "time": "2018-05-11T08:31:39+00:00"
         },
         {
             "name": "mapbender/data-source",
@@ -2298,23 +2279,23 @@
         },
         {
             "name": "mapbender/digitizer",
-            "version": "1.1.61",
+            "version": "1.1.62",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "3c488c8087f603654cb26e81142df5a3f61eaf54"
+                "reference": "69361826a0debf0d9ee8774d2091393030bb9fa1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/3c488c8087f603654cb26e81142df5a3f61eaf54",
-                "reference": "3c488c8087f603654cb26e81142df5a3f61eaf54",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/69361826a0debf0d9ee8774d2091393030bb9fa1",
+                "reference": "69361826a0debf0d9ee8774d2091393030bb9fa1",
                 "shasum": ""
             },
             "require": {
                 "blueimp/jquery-file-upload": "9.*",
                 "mapbender/data-source": "0.*",
-                "php": ">=5.3.3",
-                "viscreation/vis-ui.js": "0.*"
+                "mapbender/vis-ui.js": "*",
+                "php": ">=5.3.3"
             },
             "type": "library",
             "extra": {
@@ -2338,6 +2319,9 @@
                 },
                 {
                     "name": "Stefan Winkelmann"
+                },
+                {
+                    "name": "David Patzke"
                 }
             ],
             "description": "Mapbender digitizer element",
@@ -2346,7 +2330,7 @@
                 "digitizing",
                 "mapbender"
             ],
-            "time": "2017-05-02T10:21:57+00:00"
+            "time": "2018-05-11T08:52:37+00:00"
         },
         {
             "name": "mapbender/documentation",
@@ -2381,7 +2365,7 @@
                 "documentation",
                 "mapbender"
             ],
-            "time": "2017-08-18T11:26:17+00:00"
+            "time": "2018-04-20T15:38:41+00:00"
         },
         {
             "name": "mapbender/fom",
@@ -2632,26 +2616,26 @@
         },
         {
             "name": "mapbender/vis-ui.js",
-            "version": "0.0.70",
+            "version": "0.0.71",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/vis-ui.js.git",
-                "reference": "acc835948e83d26549d1fbba76db0c6012cc4875"
+                "reference": "3ef38cf2032362963a27a852fa7cbd54da63f7db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/vis-ui.js/zipball/acc835948e83d26549d1fbba76db0c6012cc4875",
-                "reference": "acc835948e83d26549d1fbba76db0c6012cc4875",
+                "url": "https://api.github.com/repos/mapbender/vis-ui.js/zipball/3ef38cf2032362963a27a852fa7cbd54da63f7db",
+                "reference": "3ef38cf2032362963a27a852fa7cbd54da63f7db",
                 "shasum": ""
             },
             "require": {
                 "afarkas/html5shiv": "3.*",
                 "components/bootstrap": "3.*",
-                "components/datatables": "1.10.*",
                 "components/font-awesome": "4.x",
                 "components/jquery": "1.* || 2.*",
                 "components/jqueryui": "1.*",
                 "components/underscore": "1.8.*",
+                "datatables/datatables": "^1.10.16",
                 "debugteam/bootstrap-colorpicker": "1.*",
                 "medialize/jquery-context-menu": "1.*",
                 "robloach/component-installer": "0.2.*",
@@ -2697,7 +2681,7 @@
                 "jquery",
                 "vis-ui"
             ],
-            "time": "2017-12-13T21:05:16+00:00"
+            "time": "2018-05-11T08:21:00+00:00"
         },
         {
             "name": "medialize/jquery-context-menu",
@@ -4679,75 +4663,6 @@
             "time": "2018-03-20T04:25:58+00:00"
         },
         {
-            "name": "viscreation/vis-ui.js",
-            "version": "0.1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/eSlider/vis-ui.js.git",
-                "reference": "01591f4b662f19d02009c173aee5766214f8973e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/eSlider/vis-ui.js/zipball/01591f4b662f19d02009c173aee5766214f8973e",
-                "reference": "01591f4b662f19d02009c173aee5766214f8973e",
-                "shasum": ""
-            },
-            "require": {
-                "afarkas/html5shiv": "3.*",
-                "components/bootstrap": "3.*",
-                "components/datatables": "1.10.*",
-                "components/font-awesome": "4.x",
-                "components/jquery": "1.* || 2.*",
-                "components/jqueryui": "1.*",
-                "components/underscore": "1.8.*",
-                "debugteam/bootstrap-colorpicker": "1.*",
-                "medialize/jquery-context-menu": "1.*",
-                "robloach/component-installer": "0.2.*",
-                "rogeriopradoj/respond": "1.4.*",
-                "select2/select2": "^4.0",
-                "wheregroup/jquerydialogextendjs": "2.x"
-            },
-            "require-dev": {
-                "components/normalize.css": "3.0.*",
-                "components/placeholdersjs": "*",
-                "drmonty/leaflet": "1.0.*"
-            },
-            "type": "component",
-            "extra": {
-                "component": {
-                    "scripts": [
-                        "src/js/utils/*.js",
-                        "src/js/elements/*.js",
-                        "src/js/jquery.form.generator.js"
-                    ],
-                    "styles": [
-                        "src/styles/base.css"
-                    ]
-                },
-                "branch-alias": {
-                    "dev-master": "0.0.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Andriy Oblivantsev",
-                    "email": "eslider@gmail.com"
-                }
-            ],
-            "description": "JavaScript UI generator framework based on jQuery UI  and some other elements",
-            "homepage": "https://github.com/eSlider",
-            "keywords": [
-                "assets",
-                "jquery",
-                "vis-ui"
-            ],
-            "time": "2017-09-19T09:16:53+00:00"
-        },
-        {
             "name": "wheregroup/codemirror",
             "version": "5.13.4",
             "source": {
@@ -5192,7 +5107,7 @@
             "authors": [
                 {
                     "name": "Ondřej Nešpor",
-                    "homepage": "https://github.com/Andrewsville"
+                    "homepage": "https://github.com/andrewsville"
                 },
                 {
                     "name": "Jaroslav Hanslík",
@@ -5262,7 +5177,7 @@
                 },
                 {
                     "name": "Ondřej Nešpor",
-                    "homepage": "https://github.com/Andrewsville"
+                    "homepage": "https://github.com/andrewsville"
                 },
                 {
                     "name": "Jaroslav Hanslík",
