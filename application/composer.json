@@ -145,7 +145,8 @@
             "fom/": ["mapbender/fom"],
             "owsproxy/": ["mapbender/owsproxy"],
             "vendor/igosuki/compass-mixins": ["wheregroup/compass-mixins"],
-            "mapbender/src/Mapbender/CoreBundle/Resources/public/mapquery/": ["mapbender/mapquery"]
+            "mapbender/src/Mapbender/CoreBundle/Resources/public/mapquery/": ["mapbender/mapquery"],
+            "web/components/datatables/": ["datatables/datatables"]
         }
     },
     "repositories": [
