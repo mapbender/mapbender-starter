@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "24f25bb8b65526a2c94cdd7adf0096e1",
+    "content-hash": "f3a7ba403c013b53766d7f6ac2d8bf1e",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -2186,7 +2186,7 @@
         },
         {
             "name": "mapbender/coordinates-utility",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/coordinates-utility.git",
