@@ -140,13 +140,6 @@ parameters:
                         icon: iconPoi
                         label: true
                         target: poi
-                    coordinatesutility-button:
-                        title: 'Coordinates Utility'
-                        tooltip: 'Coordinates Utility'
-                        class: Mapbender\CoreBundle\Element\Button
-                        icon: iconGpsTarget
-                        label: true
-                        target: coordinatesutility
                 content:
                     map:
                         title: Main Map
@@ -332,6 +325,13 @@ parameters:
                         display_type: element
                         auto_activate: false
                         deactivate_on_close: false
+                    coordinatesutility:
+                        title: 'Coordinates Utility'
+                        class: Mapbender\CoordinatesUtilityBundle\Element\CoordinatesUtility
+                        type: element
+                        target: map
+                        srsList: []
+                        addMapSrsList: true                        
                     html-about-mapbender:
                         title: 'About Mapbender'
                         class: Mapbender\CoreBundle\Element\HTMLElement
