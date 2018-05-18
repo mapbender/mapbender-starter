@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1b43d3e05e8de95304d73fa4694c41a1",
+    "content-hash": "24f25bb8b65526a2c94cdd7adf0096e1",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -2279,16 +2279,16 @@
         },
         {
             "name": "mapbender/digitizer",
-            "version": "1.1.62",
+            "version": "1.1.63",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "69361826a0debf0d9ee8774d2091393030bb9fa1"
+                "reference": "dfa595bfa986696a616c650803e8de3743c62d47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/69361826a0debf0d9ee8774d2091393030bb9fa1",
-                "reference": "69361826a0debf0d9ee8774d2091393030bb9fa1",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/dfa595bfa986696a616c650803e8de3743c62d47",
+                "reference": "dfa595bfa986696a616c650803e8de3743c62d47",
                 "shasum": ""
             },
             "require": {
@@ -2330,7 +2330,7 @@
                 "digitizing",
                 "mapbender"
             ],
-            "time": "2018-05-11T08:52:37+00:00"
+            "time": "2018-05-18T12:08:22+00:00"
         },
         {
             "name": "mapbender/documentation",
@@ -3770,6 +3770,7 @@
                 "compression",
                 "minification"
             ],
+            "abandoned": "symfony/webpack-encore-pack",
             "time": "2017-07-14T07:26:46+00:00"
         },
         {
@@ -6335,6 +6336,7 @@
                 "github",
                 "test"
             ],
+            "abandoned": "php-coveralls/php-coveralls",
             "time": "2015-12-17T18:04:18+00:00"
         },
         {
