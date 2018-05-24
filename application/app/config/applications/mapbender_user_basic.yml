@@ -153,6 +153,13 @@ parameters:
                         icon: icon-about
                         label: false
                         class: Mapbender\CoreBundle\Element\AboutDialog
+                    coordinatesutility-button:
+                        title: 'Coordinates Utility'
+                        tooltip: 'Coordinates Utility'
+                        class: Mapbender\CoreBundle\Element\Button
+                        icon: iconGpsTarget
+                        label: false
+                        target: coordinatesutility
                 content:
                     map:
                         title: Main Map
@@ -272,6 +279,28 @@ parameters:
                         position: ['0px', '0px']
                         maximized: true
                         fixed: false
+                    coordinatesutility:
+                        title: 'Coordinates Utility'
+                        class: Mapbender\CoordinatesUtilityBundle\Element\CoordinatesUtility
+                        type: dialog
+                        target: map
+                        srsList:
+                            -
+                                name: 'EPSG:31466'
+                                title: '31466'
+                            -
+                                name: 'EPSG:31468'
+                                title: '31468'
+                            -
+                                name: 'EPSG:25832'
+                                title: '25832'
+                            -
+                                name: 'EPSG:25833'
+                                title: '25833'
+                            -
+                                name: 'EPSG:4326'
+                                title: '4326'
+                        addMapSrsList: true
                 footer:
                     activityindicator:
                         class: Mapbender\CoreBundle\Element\ActivityIndicator
