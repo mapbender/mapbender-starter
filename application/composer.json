@@ -48,8 +48,8 @@
         "doctrine/doctrine-fixtures-bundle": "2.3.*",
 
         "gedmo/doctrine-extensions": "~2.3",
-
-        "components/jquery": "~1.11.2",
+        "mapbender/vis-ui.js": "~0.0.71",
+        "components/jquery": "^1.11.2",
 
         "mnsami/composer-custom-directory-installer": "1.0.*",
 
@@ -57,8 +57,10 @@
         "mapbender/mapbender": "~3.0.7.0",
         "mapbender/owsproxy": "~3.0.6",
         "mapbender/digitizer": "1.1.x",
-        "mapbender/coordinates-utility": "^1.0.0",
-        "mapbender/documentation": "dev-master as 3.0.7.0"
+
+        "mapbender/coordinates-utility": "^1.0.2",
+        "mapbender/documentation": "dev-master as 3.0.7.0",
+        "wheregroup/cookieconsent": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [
@@ -145,7 +147,8 @@
             "fom/": ["mapbender/fom"],
             "owsproxy/": ["mapbender/owsproxy"],
             "vendor/igosuki/compass-mixins": ["wheregroup/compass-mixins"],
-            "mapbender/src/Mapbender/CoreBundle/Resources/public/mapquery/": ["mapbender/mapquery"]
+            "mapbender/src/Mapbender/CoreBundle/Resources/public/mapquery/": ["mapbender/mapquery"],
+            "web/components/datatables/": ["datatables/datatables"]
         }
     },
     "repositories": [
