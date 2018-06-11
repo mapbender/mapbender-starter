@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6639b45fe18ac31ff2a5654068e7ff9d",
+    "content-hash": "0b0582832a1fc1dcb0a986c664bb8476",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -2285,7 +2285,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2018-03-01T23:34:39+00:00"
+            "time": "2018-04-17T13:32:06+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -2423,7 +2423,7 @@
                 "module",
                 "owsproxy"
             ],
-            "time": "2018-02-26T15:43:29+00:00"
+            "time": "2018-03-04T21:11:58+00:00"
         },
         {
             "name": "mapbender/vis-ui.js",
@@ -3518,6 +3518,7 @@
                 "compression",
                 "minification"
             ],
+            "abandoned": "symfony/webpack-encore-pack",
             "time": "2017-07-14T07:26:46+00:00"
         },
         {
@@ -4558,6 +4559,44 @@
             "description": "Compass stylesheets",
             "homepage": "https://github.com/Igosuki/compass-mixins",
             "time": "2017-04-20T08:22:51+00:00"
+        },
+        {
+            "name": "wheregroup/cookieconsent",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/WhereGroup/cookieconsent.git",
+                "reference": "92d5b59e82c5c70df30e27d9b56e26da97acf640"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/WhereGroup/cookieconsent/zipball/92d5b59e82c5c70df30e27d9b56e26da97acf640",
+                "reference": "92d5b59e82c5c70df30e27d9b56e26da97acf640",
+                "shasum": ""
+            },
+            "require": {
+                "robloach/component-installer": "*"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "files": [
+                        "build/*.js",
+                        "build/*.css"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Silktide Ltd."
+                }
+            ],
+            "description": "A free solution to the EU Cookie Law https://cookieconsent.insites.com/",
+            "time": "2018-05-22T11:49:22+00:00"
         },
         {
             "name": "wheregroup/joii",
@@ -6533,7 +6572,8 @@
         "mapbender/fom": 20,
         "mapbender/mapbender": 20,
         "mapbender/owsproxy": 20,
-        "mapbender/documentation": 20
+        "mapbender/documentation": 20,
+        "wheregroup/cookieconsent": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -57,7 +57,8 @@
         "mapbender/mapbender": "dev-release/3.0.6",
         "mapbender/owsproxy": "dev-release/3.0.6",
         "mapbender/digitizer": "1.1.x",
-        "mapbender/documentation": "dev-release/3.0.6"
+        "mapbender/documentation": "dev-release/3.0.6",
+        "wheregroup/cookieconsent": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [
