@@ -97,19 +97,21 @@ The bootstrap command performs the following required setup tasks for you:
 * performs the necessary database setup (as an sqlite file in `application/app/db/demo.sqlite`)
 * creates a root account with a default password `root` (which you should change later)
 
-It then continues booting into PHP's development web server, which is not
-production quality, but allows quick testing. The URL is shown in the output:
-```sh
-Server running on http://localhost:8000
-```
+The full setup processes is only needed once. If you invoke it again, nothing of consequence will happen.
 
-We recommend doing this at least once even if you plan on using a proper webserver.
-You can stop the server with a simple Ctrl+C.
+## Built-in server
+You can test your freshly bootstrapped Mapbender installation using a built-in development server.
+This is not production quality, and has some known issues processing external requests (such as
+in printing), but it allows some quick testing before you set up a production-grade web server.
 
-The full setup processes is only needed once. If you want to run the development webserver again,
-you can skip the dependency checks etc and directly use:
+The server is started like this:
 ```sh
 app/console server:run
+```
+
+The URL is shown in the output:
+```sh
+Server running on http://localhost:8000
 ```
 
 ## Changing root account password
