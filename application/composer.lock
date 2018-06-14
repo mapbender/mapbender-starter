@@ -2373,12 +2373,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/fom.git",
-                "reference": "b33b6bf31d9552f50cf295b0d5fc1460a52df424"
+                "reference": "cd71140efb4b8ff0b8a4f20fd359fbb7b656dfe7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/fom/zipball/b33b6bf31d9552f50cf295b0d5fc1460a52df424",
-                "reference": "b33b6bf31d9552f50cf295b0d5fc1460a52df424",
+                "url": "https://api.github.com/repos/mapbender/fom/zipball/cd71140efb4b8ff0b8a4f20fd359fbb7b656dfe7",
+                "reference": "cd71140efb4b8ff0b8a4f20fd359fbb7b656dfe7",
                 "shasum": ""
             },
             "require": {
@@ -2408,20 +2408,20 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2018-03-04T18:10:18+00:00"
+            "time": "2018-06-11T12:16:11+00:00"
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v3.0.7.1",
+            "version": "v3.0.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "3a26f2b2be4c0cce1a27bcb50e895d166f6cc535"
+                "reference": "b4e1e489c1b0cf9d8f4bfcc50ba1bc9391182326"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/3a26f2b2be4c0cce1a27bcb50e895d166f6cc535",
-                "reference": "3a26f2b2be4c0cce1a27bcb50e895d166f6cc535",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/b4e1e489c1b0cf9d8f4bfcc50ba1bc9391182326",
+                "reference": "b4e1e489c1b0cf9d8f4bfcc50ba1bc9391182326",
                 "shasum": ""
             },
             "require": {
@@ -2451,7 +2451,7 @@
                 "branch-alias": {
                     "dev-release/3.0.5": "3.0.5.x-dev",
                     "dev-release/3.0.6": "3.0.6.x-dev",
-                    "dev-master": "3.0.7.x-dev"
+                    "dev-master": "3.0.7.2-dev"
                 }
             },
             "autoload": {
@@ -2468,7 +2468,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2018-05-14T11:54:51+00:00"
+            "time": "2018-06-14T15:28:29+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
