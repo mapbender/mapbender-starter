@@ -59,7 +59,7 @@
         "mapbender/digitizer": "1.1.x",
 
         "mapbender/coordinates-utility": "^1.0.2",
-        "mapbender/documentation": "dev-master as 3.0.7.0",
+        "mapbender/documentation": "dev-master",
         "wheregroup/cookieconsent": "dev-master"
     },
     "scripts": {
