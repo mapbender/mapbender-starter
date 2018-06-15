@@ -2338,12 +2338,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-documentation.git",
-                "reference": "64aa502a91412877a0f6468017f2cee230f4556f"
+                "reference": "55836ffb3b291fdfd519434f1665b84794be29b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/64aa502a91412877a0f6468017f2cee230f4556f",
-                "reference": "64aa502a91412877a0f6468017f2cee230f4556f",
+                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/55836ffb3b291fdfd519434f1665b84794be29b2",
+                "reference": "55836ffb3b291fdfd519434f1665b84794be29b2",
                 "shasum": ""
             },
             "require": {
