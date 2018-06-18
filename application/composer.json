@@ -60,7 +60,7 @@
         "mapbender/coordinates-utility": "^1.0.2",
         "mapbender/documentation": "dev-master",
         "wheregroup/cookieconsent": "dev-master",
-	"openlayers/openlayers" : "4.6.5"
+        "openlayers/openlayers": "4.6.5"
     },
     "scripts": {
         "post-install-cmd": [
@@ -168,15 +168,23 @@
                 ]
             }
         },
-{
+        {
             "type": "package",
             "package": {
                 "name": "openlayers/openlayers",
-                "type": "component",
                 "version": "4.6.5",
+                "type": "component",
                 "dist": {
                     "url": "https://github.com/openlayers/openlayers/releases/download/v4.6.5/v4.6.5-dist.zip",
                     "type": "zip"
+                },
+                "extra": {
+                    "component": {
+                        "files": [
+                            "ol.css",
+                            "ol.js"
+                        ]
+                    }
                 }
             }
         }

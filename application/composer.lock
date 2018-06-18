@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2138c83bac67ecf068e1e784d061e802",
+    "content-hash": "3fff94813ab28b0d960fe3ae9e4cb284",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -2365,7 +2365,7 @@
                 "documentation",
                 "mapbender"
             ],
-            "time": "2018-04-20T15:38:41+00:00"
+            "time": "2018-06-15T10:23:00+00:00"
         },
         {
             "name": "mapbender/fom",
@@ -2928,6 +2928,25 @@
                 "service proxies"
             ],
             "time": "2015-08-09T04:28:19+00:00"
+        },
+        {
+            "name": "openlayers/openlayers",
+            "version": "4.6.5",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/openlayers/openlayers/releases/download/v4.6.5/v4.6.5-dist.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "files": [
+                        "ol.css",
+                        "ol.js"
+                    ]
+                }
+            }
         },
         {
             "name": "paragonie/random_compat",
