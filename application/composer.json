@@ -59,7 +59,8 @@
 
         "mapbender/coordinates-utility": "^1.0.2",
         "mapbender/documentation": "dev-master",
-        "wheregroup/cookieconsent": "dev-master"
+        "wheregroup/cookieconsent": "dev-master",
+	"openlayers/openlayers" : "4.6.5"
     },
     "scripts": {
         "post-install-cmd": [
@@ -147,7 +148,8 @@
             "owsproxy/": ["mapbender/owsproxy"],
             "vendor/igosuki/compass-mixins": ["wheregroup/compass-mixins"],
             "mapbender/src/Mapbender/CoreBundle/Resources/public/mapquery/": ["mapbender/mapquery"],
-            "web/components/datatables/": ["datatables/datatables"]
+            "web/components/datatables/": ["datatables/datatables"],
+	        "web/components/openlayers/": ["openlayers/openlayers"]
         }
     },
     "repositories": [
@@ -164,6 +166,18 @@
                 "bin": [
                     "bin/phantomjs"
                 ]
+            }
+        },
+{
+            "type": "package",
+            "package": {
+                "name": "openlayers/openlayers",
+                "type": "component",
+                "version": "4.6.5",
+                "dist": {
+                    "url": "https://github.com/openlayers/openlayers/releases/download/v4.6.5/v4.6.5-dist.zip",
+                    "type": "zip"
+                }
             }
         }
     ]
