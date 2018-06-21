@@ -6,17 +6,19 @@
     "version": "3.0.7.0",
     "homepage": "http://www.mapbender.org",
     "support": {
-        "email":        "mapbender@osgeo.org",
-        "issues":       "https://github.com/mapbender/mapbender/issues",
-        "source":       "https://github.com/mapbender/mapbender-starter",
-        "docs":         "http://doc.mapbender3.org/",
-        "api-docs":     "http://api.mapbender3.org/",
-        "forum":        "http://osgeo-org.1560.x6.nabble.com/Mapbender-f4217602.html",
-        "twitter":      "https://twitter.com/mapbender",
-        "user-list":    "https://lists.osgeo.org/pipermail/mapbender_users/"
+        "email": "mapbender@osgeo.org",
+        "issues": "https://github.com/mapbender/mapbender/issues",
+        "source": "https://github.com/mapbender/mapbender-starter",
+        "docs": "http://doc.mapbender3.org/",
+        "api-docs": "http://api.mapbender3.org/",
+        "forum": "http://osgeo-org.1560.x6.nabble.com/Mapbender-f4217602.html",
+        "twitter": "https://twitter.com/mapbender",
+        "user-list": "https://lists.osgeo.org/pipermail/mapbender_users/"
     },
     "autoload": {
-        "psr-4": { "": "src/" }
+        "psr-4": {
+            "": "src/"
+        }
     },
     "require-dev": {
         "phpunit/phpunit": "^4.8",
@@ -39,28 +41,22 @@
         "sensio/distribution-bundle": "~4.0",
         "sensio/framework-extra-bundle": "~3.0",
         "sensio/generator-bundle": "2.3.x",
-
         "friendsofsymfony/jsrouting-bundle": "^1.5",
-
         "incenteev/composer-parameter-handler": "~2.0",
-
         "doctrine/doctrine-fixtures-bundle": "2.3.*",
-
         "gedmo/doctrine-extensions": "~2.3",
         "mapbender/vis-ui.js": "~0.0.71",
         "components/jquery": "^1.11.2",
-
         "mnsami/composer-custom-directory-installer": "1.0.*",
-
         "mapbender/fom": "dev-release/3.0.6",
         "mapbender/mapbender": "~3.0.7.0",
         "mapbender/owsproxy": "~3.0.6",
         "mapbender/digitizer": "1.1.x",
-
         "mapbender/coordinates-utility": "^1.0.2",
         "mapbender/documentation": "dev-master",
         "wheregroup/cookieconsent": "dev-master",
-        "openlayers/openlayers": "4.6.5"
+        "openlayers/openlayers": "^4.6",
+        "proj4js/proj4js": "^2.4"
     },
     "scripts": {
         "post-install-cmd": [
@@ -75,7 +71,7 @@
             "ComposerBootstrap::prepareBinaries",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
         ],
-        "update-assets":[
+        "update-assets": [
             "ComposerBootstrap::installAssets",
             "ComponentInstaller\\Installer::postAutoloadDump"
         ],
@@ -110,7 +106,7 @@
         "install-sym-link-assets": [
             "ComposerBootstrap::installSymLinkAssets"
         ],
-        "dist":[
+        "dist": [
             "ComposerBootstrap::distribute"
         ],
         "build": [
@@ -142,14 +138,28 @@
         "symfony-web-dir": "web",
         "ATTENTION": "Symlinks creating under MS Windows works only if composer runs with admin permissions",
         "symfony-assets-install": "symlink",
-        "installer-paths":{
-            "mapbender/": ["mapbender/mapbender"],
-            "fom/": ["mapbender/fom"],
-            "owsproxy/": ["mapbender/owsproxy"],
-            "vendor/igosuki/compass-mixins": ["wheregroup/compass-mixins"],
-            "mapbender/src/Mapbender/CoreBundle/Resources/public/mapquery/": ["mapbender/mapquery"],
-            "web/components/datatables/": ["datatables/datatables"],
-	        "web/components/openlayers/": ["openlayers/openlayers"]
+        "installer-paths": {
+            "mapbender/": [
+                "mapbender/mapbender"
+            ],
+            "fom/": [
+                "mapbender/fom"
+            ],
+            "owsproxy/": [
+                "mapbender/owsproxy"
+            ],
+            "vendor/igosuki/compass-mixins": [
+                "wheregroup/compass-mixins"
+            ],
+            "mapbender/src/Mapbender/CoreBundle/Resources/public/mapquery/": [
+                "mapbender/mapquery"
+            ],
+            "web/components/datatables/": [
+                "datatables/datatables"
+            ],
+            "web/components/openlayers/": [
+                "openlayers/openlayers"
+            ]
         }
     },
     "repositories": [
@@ -182,7 +192,26 @@
                     "component": {
                         "files": [
                             "ol.css",
-                            "ol.js"
+                            "ol*.js"
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "proj4js/proj4js",
+                "version": "2.4.3",
+                "type": "component",
+                "dist": {
+                    "url": "https://github.com/proj4js/proj4js/archive/2.4.3.zip",
+                    "type": "zip"
+                },
+                "extra": {
+                    "component": {
+                        "files": [
+                            "dist/*.js"
                         ]
                     }
                 }
