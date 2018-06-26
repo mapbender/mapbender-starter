@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "924b9783f0e397edc53ceaf9fcf59481",
+    "content-hash": "1f72018c2d485b0188a08384ed991a3c",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -2186,16 +2186,16 @@
         },
         {
             "name": "mapbender/coordinates-utility",
-            "version": "1.0.3",
+            "version": "dev-ol4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/coordinates-utility.git",
-                "reference": "6d87c10492821c1baac593356f5cbeb6a4d689e6"
+                "reference": "3637af9f710816c2ca8e80ef6f7da2fd09fc3d22"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/coordinates-utility/zipball/6d87c10492821c1baac593356f5cbeb6a4d689e6",
-                "reference": "6d87c10492821c1baac593356f5cbeb6a4d689e6",
+                "url": "https://api.github.com/repos/mapbender/coordinates-utility/zipball/3637af9f710816c2ca8e80ef6f7da2fd09fc3d22",
+                "reference": "3637af9f710816c2ca8e80ef6f7da2fd09fc3d22",
                 "shasum": ""
             },
             "require": {
@@ -2228,7 +2228,7 @@
                 "navigate",
                 "search"
             ],
-            "time": "2018-05-23T13:06:52+00:00"
+            "time": "2018-06-26T09:53:22+00:00"
         },
         {
             "name": "mapbender/data-source",
@@ -2412,16 +2412,16 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v3.0.7.2",
+            "version": "dev-ol4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "b4e1e489c1b0cf9d8f4bfcc50ba1bc9391182326"
+                "reference": "bf4cbe32345a6a719b8f0fe0ccd7e7c563f5e53c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/b4e1e489c1b0cf9d8f4bfcc50ba1bc9391182326",
-                "reference": "b4e1e489c1b0cf9d8f4bfcc50ba1bc9391182326",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/bf4cbe32345a6a719b8f0fe0ccd7e7c563f5e53c",
+                "reference": "bf4cbe32345a6a719b8f0fe0ccd7e7c563f5e53c",
                 "shasum": ""
             },
             "require": {
@@ -2451,7 +2451,9 @@
                 "branch-alias": {
                     "dev-release/3.0.5": "3.0.5.x-dev",
                     "dev-release/3.0.6": "3.0.6.x-dev",
-                    "dev-master": "3.0.7.2-dev"
+                    "dev-release/3.0.7": "3.0.7.x-dev",
+                    "dev-master": "3.0.7.2-dev",
+                    "dev-ol4": "3.1.0.0-dev"
                 }
             },
             "autoload": {
@@ -2468,7 +2470,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2018-06-14T15:28:29+00:00"
+            "time": "2018-06-26T13:11:43+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -6592,6 +6594,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "mapbender/fom": 20,
+        "mapbender/mapbender": 20,
+        "mapbender/coordinates-utility": 20,
         "mapbender/documentation": 20,
         "wheregroup/cookieconsent": 20
     },
