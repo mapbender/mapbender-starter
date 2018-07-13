@@ -1,7 +1,15 @@
 # Changelog
 
-## dev-master
+## v3.0.7.3 (on dev-master)
+- Ship with new Coordinates Utility
 - AppKernel is now an extension of Mapbender\BaseKernel
+- Misc branding updates
+- Misc component namespace changes
+- Misc documentation improvements
+- Separate server:run from main bootstrap script
+- Add .editorconfig
+- Easier Unit Testing
+
 
 ## dev-release/3.0.6
 - Update "a4portrait" Print template
