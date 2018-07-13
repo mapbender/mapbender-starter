@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2138c83bac67ecf068e1e784d061e802",
+    "content-hash": "f481f7afbde58883e0df9d81c830e106",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -2365,7 +2365,7 @@
                 "documentation",
                 "mapbender"
             ],
-            "time": "2018-04-20T15:38:41+00:00"
+            "time": "2018-06-15T10:23:00+00:00"
         },
         {
             "name": "mapbender/fom",
@@ -2412,16 +2412,16 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v3.0.7.2",
+            "version": "v3.0.7.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "b4e1e489c1b0cf9d8f4bfcc50ba1bc9391182326"
+                "reference": "93198dfef289e06539f57a32ffd02e2b394c8c99"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/b4e1e489c1b0cf9d8f4bfcc50ba1bc9391182326",
-                "reference": "b4e1e489c1b0cf9d8f4bfcc50ba1bc9391182326",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/93198dfef289e06539f57a32ffd02e2b394c8c99",
+                "reference": "93198dfef289e06539f57a32ffd02e2b394c8c99",
                 "shasum": ""
             },
             "require": {
@@ -2451,6 +2451,7 @@
                 "branch-alias": {
                     "dev-release/3.0.5": "3.0.5.x-dev",
                     "dev-release/3.0.6": "3.0.6.x-dev",
+                    "dev-release/3.0.7": "3.0.7.x-dev",
                     "dev-master": "3.0.7.2-dev"
                 }
             },
@@ -2468,7 +2469,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2018-06-14T15:28:29+00:00"
+            "time": "2018-07-09T11:01:06+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
