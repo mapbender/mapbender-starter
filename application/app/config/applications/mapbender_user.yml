@@ -56,16 +56,16 @@ parameters:
             elements:
                 toolbar:
                     layertree-button:
-                        title: Layertree
-                        tooltip: Layertree
+                        title: mb.core.layertree.class.title
+                        tooltip: mb.core.layertree.class.title
                         class: Mapbender\CoreBundle\Element\Button
                         label: true
                         icon: iconLayertree
                         target: layertreedialog
                         action: open
                     fi-button:
-                        title: Feature Info
-                        tooltip: Feature Info
+                        title: mb.core.featureinfo.class.title
+                        tooltip: mb.core.featureinfo.class.title
                         class: Mapbender\CoreBundle\Element\Button
                         icon: iconInfoActive
                         label: true
@@ -73,8 +73,8 @@ parameters:
                         deactivate: deactivate
                         group: featureinfo
                     print-button:
-                        title: Print
-                        tooltip: Print PDF
+                        title: mb.core.printclient.class.title
+                        tooltip: mb.core.printclient.class.title
                         class: Mapbender\CoreBundle\Element\Button
                         label: true
                         icon: iconPrint
@@ -89,29 +89,31 @@ parameters:
                         target: imageexport
                         action: open
                     legend-button:
-                        title: Legend
-                        tooltip: Legend
+                        title: mb.core.legend.class.title
+                        tooltip: mb.core.legend.class.title
                         class: Mapbender\CoreBundle\Element\Button
+                        label: true
                         target: legend
                         icon: iconLegend
                         action: open
                     wmsloader-button:
-                        title: WMS Loader
-                        tooltip: WMS Loader
+                        title: mb.wms.wmsloader.class.title
+                        tooltip: mb.wms.wmsloader.class.description
                         class: Mapbender\CoreBundle\Element\Button
+                        label: true
                         target: wmsloader
                         icon: iconWms
                         action: open
                     gps-button:
-                        title: GPS
-                        tooltip: Show GPS Position
+                        title: mb.core.gpsposition.class.title
+                        tooltip: mb.core.gpsposition.class.description
                         class: Mapbender\CoreBundle\Element\GpsPosition
                         label: true
                         target: map
                         action: open
                     linerulerButton:
-                        title: Line Ruler
-                        tooltip: Line Ruler
+                        title: mb.core.ruler.tag.measure 
+                        tooltip: mb.core.ruler.tag.line
                         class: Mapbender\CoreBundle\Element\Button
                         icon: icon-line-ruler
                         label: true
@@ -119,8 +121,8 @@ parameters:
                         deactivate: deactivate
                         group: rulers
                     arearulerButton:
-                        title: Area Ruler
-                        tooltip: Area Ruler
+                        title: mb.core.ruler.tag.measure 
+                        tooltip: mb.core.ruler.tag.area
                         class: Mapbender\CoreBundle\Element\Button
                         icon: icon-area-ruler
                         label: true
@@ -128,21 +130,21 @@ parameters:
                         deactivate: deactivate
                         group: rulers
                     about:
-                        title: About
-                        tooltip: About
-                        label: true
+                        title: 
+                        tooltip: mb.core.aboutdialog.class.description
                         icon: icon-about
+                        label: true
                         class: Mapbender\CoreBundle\Element\AboutDialog
                     poiButton:
-                        title: POI
-                        tooltip: Send POI
+                        title: mb.core.poi.class.title
+                        tooltip: mb.core.poi.class.description
                         class: Mapbender\CoreBundle\Element\Button
                         icon: iconPoi
                         label: true
                         target: poi
                 content:
                     map:
-                        title: Main Map
+                        title: mb.core.map.class.title
                         class: Mapbender\CoreBundle\Element\Map
                         layersets: [main]
                         srs: EPSG:25832
@@ -166,7 +168,7 @@ parameters:
                     legend:
                         class: Mapbender\CoreBundle\Element\Legend
                         target: map
-                        title: Legend
+                        title: mb.core.legend.class.title
                         elementType: dialog
                         autoOpen: false
                         displayType: list
@@ -178,7 +180,7 @@ parameters:
                         showGroupedLayerTitle: true
                     featureinfo:
                         class: Mapbender\CoreBundle\Element\FeatureInfo
-                        title: FeatureInfo
+                        title: mb.core.featureinfo.class.title
                         target: map
                         deactivateOnClose: false
                         onlyValid: true
@@ -190,7 +192,7 @@ parameters:
                         width: 500
                         height: 500
                     wmsloader:
-                        title: WMS Loader
+                        title: mb.wms.wmsloader.class.title
                         class: Mapbender\WmsBundle\Element\WmsLoader
                         target: map
                         autoOpen: false
@@ -200,7 +202,9 @@ parameters:
                     imageexport:
                         class: Mapbender\PrintBundle\Element\ImageExport
                         target: map
+                        title: Image export
                     printclient:
+                        title: mb.core.printclient.class.title
                         class: Mapbender\CoreBundle\Element\PrintClient
                         target: map
                         file_prefix: mapbender
@@ -222,13 +226,13 @@ parameters:
                                 options:                  #
                                     required: true        # true or false
                     lineruler:
-                        title: Distance
+                        title: mb.core.ruler.tag.line
                         tooltip: 'ruler'
                         class: Mapbender\CoreBundle\Element\Ruler
                         target: map
                         type: line
                     arearuler:
-                        title: Area
+                        title: mb.core.ruler.tag.area
                         tooltip: 'area'
                         class: Mapbender\CoreBundle\Element\Ruler
                         target: map
@@ -241,7 +245,7 @@ parameters:
                         maxWidth: 200
                         units: ['km']
                     layertreedialog:
-                        title: Layertree
+                        title: mb.core.layertree.class.title
                         class: Mapbender\CoreBundle\Element\Layertree
                         target: map
                         type: dialog
@@ -253,7 +257,7 @@ parameters:
                         layerRemove: false
                         menu: []
                     overview:
-                        title: Overview
+                        title: mb.core.overview.class.title
                         class: Mapbender\CoreBundle\Element\Overview
                         tooltip: 'Overview'
                         target: map
@@ -265,7 +269,7 @@ parameters:
                         maximized: true
                         fixed: false
                     scaledisplay:
-                        title: Scale Display
+                        title: mb.core.scaledisplay.class.title
                         class: Mapbender\CoreBundle\Element\ScaleDisplay
                         tooltip: Scale
                         target: map
@@ -273,13 +277,14 @@ parameters:
                         scalePrefix: Scale
                         unitPrefix: true
                     poi:
+                        title: mb.core.poi.class.title
                         class: Mapbender\CoreBundle\Element\POI
                         target: map
                         body: 'Please take a look at this POI'
                         useMailto: false
                 sidepane:
                     layertree:
-                        title: Layertree
+                        title: mb.core.layertree.class.title
                         class: Mapbender\CoreBundle\Element\Layertree
                         target: map
                         type: element
@@ -291,7 +296,7 @@ parameters:
                         layerRemove: true
                         menu: [opacity,zoomtolayer,metadata]
                     redlining:
-                        title: Redlining
+                        title: mb.core.redlining.class.title
                         class: Mapbender\CoreBundle\Element\Redlining
                         target: map
                         geometrytypes:
@@ -304,7 +309,7 @@ parameters:
                         auto_activate: false
                         deactivate_on_close: false
                     coordinatesutility:
-                        title: 'Coordinates Utility'
+                        title: mb.coordinatesutility.class.title
                         class: Mapbender\CoordinatesUtilityBundle\Element\CoordinatesUtility
                         type: element
                         target: map
@@ -319,14 +324,14 @@ parameters:
                 footer:
                     activityindicator:
                         class: Mapbender\CoreBundle\Element\ActivityIndicator
-                        title: Activity Indicator
+                        title: mb.core.activityindicator.class.title
                         activityClass: mb-activity
                         ajaxActivityClass: mb-activity-ajax
                         tileActivityClass: mb-activity-tile
                     coordinates:
                         class: Mapbender\CoreBundle\Element\CoordinatesDisplay
-                        title: Coordinates Display
-                        tooltip: Coordinates Display
+                        title: mb.core.coordinates.class.title
+                        tooltip: mb.core.coordinates.class.description
                         target: map
                         label: false
                         empty:  "x: - y: -"
@@ -334,24 +339,24 @@ parameters:
                         separator:  " y: "
                     srs:
                         class: Mapbender\CoreBundle\Element\SrsSelector
-                        title: SRS Selector
-                        tooltip: SRS Selector
+                        title: mb.core.srsselector.class.title
+                        tooltip: mb.core.srsselector.class.description
                         label: false
                         target: map
                     scaleselector:
                         class: Mapbender\CoreBundle\Element\ScaleSelector
-                        title: Scale Selector
-                        tooltip: Scale Selector
+                        title: mb.core.scaleselector.class.title
+                        tooltip: mb.core.scaleselector.class.description
                         label: false
                         target: map
                     copyrightButton:
                         title: © OpenStreetMap contributors
-                        tooltip: Line Ruler
+                        tooltip: © OpenStreetMap contributors
                         class: Mapbender\CoreBundle\Element\Button
                         label: true
                         click: https://www.openstreetmap.org/copyright
                     HTML:
-                        title: HTML
+                        title: HTML-powered by Mapbender
                         class: Mapbender\CoreBundle\Element\HTMLElement
                         content: '<div style="color: #6FB536; font-weight:bold">powered by Mapbender</div>'
                         classes: html-element-inline
