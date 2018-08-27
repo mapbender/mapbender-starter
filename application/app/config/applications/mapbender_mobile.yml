@@ -63,16 +63,16 @@ parameters:
                         target: layertree
 
                     bss-button:
-                        title: 'Change Background'
-                        tooltip: 'Change Background Map'
+                        title: mb.core.basesourceswitcher.class.title
+                        tooltip: mb.core.basesourceswitcher.class.Description
                         class: Mapbender\CoreBundle\Element\Button
                         icon: iconLegend
                         label: false
                         target: basesourceswitcher
 
                     gps-button:
-                        title: GPS
-                        tooltip: show GPS Position
+                        title: mb.core.gpsposition.class.title
+                        tooltip: mb.core.gpsposition.class.description
                         class: Mapbender\CoreBundle\Element\GpsPosition
                         label: false
                         target: map
@@ -94,16 +94,16 @@ parameters:
                         target: imprint
 
                     help-button:
-                        title: Help
-                        tooltip: Help
+                        title: mb.core.aboutdialog.tag.help
+                        tooltip: mb.core.aboutdialog.tag.help
                         class: Mapbender\CoreBundle\Element\Button
                         label: false
                         icon: iconHelp
                         target: help
 
                     about-mapbender-button:
-                        title: About Mapbender
-                        tooltip: About Mapbender
+                        title: mb.core.aboutdialog.tag.about
+                        tooltip: mb.core.aboutdialog.tag.about
                         class: Mapbender\CoreBundle\Element\Button
                         label: false
                         icon: iconAbout
@@ -111,7 +111,7 @@ parameters:
 
                 content:
                     map:
-                        title: Main Map
+                        title: mb.core.map.class.title
                         class: Mapbender\CoreBundle\Element\Map
                         layersets: [main]
                         srs: EPSG:25832
@@ -147,7 +147,7 @@ parameters:
 
                     featureinfo:
                         class: Mapbender\CoreBundle\Element\FeatureInfo
-                        title: Information
+                        title:  mb.core.featureinfo.class.title
                         target: map
                         type: element
                         deactivateOnClose: false
@@ -163,14 +163,14 @@ parameters:
                         classes: html-element-inline
 
                     help:
-                        title: Help
+                        title: mb.core.aboutdialog.tag.help
                         class: Mapbender\CoreBundle\Element\HTMLElement
                         content: 'Enjoy the new Mapbender mobile Template. Please note that not all elements can be used in the mobile application. <div style="color: #6FB536; font-weight:bold">Find out more about the Mapbender mobile in the <a href="https://doc.mapbender.org/en/customization/mapbender_templates.html" target="_blank">Template Documentation</a>.</div>'
                         classes: html-element-inline
 
                     basesourceswitcher:
-                        title: Change Background
-                        tooltip: Change Background
+                        title: mb.core.basesourceswitcher.class.title
+                        tooltip: mb.core.basesourceswitcher.class.title
                         class: Mapbender\CoreBundle\Element\BaseSourceSwitcher
                         target: map
                         display: mobile
@@ -189,7 +189,7 @@ parameters:
                                 instances: [osm]
 
                     html-about-mapbender:
-                        title: 'About Mapbender'
+                        title: mb.core.aboutdialog.tag.about
                         class: Mapbender\CoreBundle\Element\HTMLElement
                         classes: html-element-inline
                         content: "<p>\r\nMapbender is an \r\n</p></br>\r\n<p>\r\n<a href=\"https://www.osgeo.org/projects/mapbender/\" target=\"_blank\"><img src=\"https://mapbender.org/sites/default/files/osgeo-project-cmyk.png\" alt=\"OSGeo Project\"  title=\"OSGeo Project\" width=\"100px\" /></a>\r\n</p></br>\r\n<p>\r\nFind out more about OSGeo at \r\n</br>\r\n<a href=\"https://osgeo.org\" target=\"_blank\">https://www.osgeo.org</a>\r\n</br>\r\n<a href=\"https://osgeo.org/projects/mapbender/\" target=\"_blank\">https://www.osgeo.org/projects/mapbender/</a>"
