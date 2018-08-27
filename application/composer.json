@@ -3,7 +3,7 @@
     "description": "Mapbender",
     "type": "project",
     "license": "MIT",
-    "version": "3.0.7.3",
+    "version": "3.0.7.4",
     "homepage": "http://www.mapbender.org",
     "support": {
         "email":        "mapbender@osgeo.org",

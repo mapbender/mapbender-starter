@@ -1,5 +1,9 @@
 # Changelog
 
+## v3.0.7.4 (on dev-master)
+- Bump mapbender to v3.0.7.4, see https://github.com/mapbender/mapbender/releases/tag/v3.0.7.4
+- Shipping yaml applications now use localised text
+
 ## v3.0.7.3 (on dev-master)
 - Ship with new Coordinates Utility
 - AppKernel is now an extension of Mapbender\BaseKernel
