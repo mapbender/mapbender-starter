@@ -288,24 +288,28 @@ class ComposerBootstrap
                 $branch = self::getGitBranchName();
                 $projectName = current(explode("/", $branch));
                 $projectVersion = implode('', array_slice(explode("/", $branch), -1));
+                $isNumericVersion = !!preg_match('/^[\d]+(\.(RC-)?\d+)*$/', $projectVersion);
 
-                if (!$projectVersion || $projectVersion == $projectName) {
-                    // most recent tag name on current branch with no decoration
-                    $currentTag = trim(`git describe --tags --abbrev=0 {$branch}`);
-                    // remove last number, possible 'RC-' prefix
-                    $tagBaseVersion = preg_replace('#[-.](RC-)?\d+$#', '', $currentTag);
-                    // remove 'versionGlue' prefix
-                    $projectVersion = preg_replace('/^' . preg_quote($versionGlue, '/') . '/', '', $tagBaseVersion);
-                }
-
-                $branchBlacklist = array(
+                $notProjectNames = array(
                     'release',
                     'master',
                     'develop',
+                    'fix',
+                    'feature',
+                    'hotfix',
+                    'enh',
+                    'enhancement',
                 );
-                // Don't save non-project branch groups as project name
-                if (in_array($projectName, $branchBlacklist)) {
-                    $projectName ='';
+                if (in_array($projectName, $notProjectNames) || ($isNumericVersion && $projectName == $projectVersion)) {
+                    $projectName = '';
+                }
+                if (!$projectVersion || !$isNumericVersion) {
+                    // most recent tag name on current branch with no decoration
+                    $currentTag = trim(`git describe --tags --abbrev=0 {$branch}`);
+                    // remove last number, possible 'RC-' prefix
+                    $tagBaseVersion = preg_replace('#[-.]\d+((-?RC-?)?\d+)?$#', '', $currentTag);
+                    // remove 'versionGlue' prefix
+                    $projectVersion = preg_replace('/^' . preg_quote($versionGlue, '/') . '/', '', $tagBaseVersion);
                 }
 
                 $tagPrefix = "${versionGlue}{$projectName}{$projectVersion}";
