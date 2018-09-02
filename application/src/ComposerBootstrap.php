@@ -318,8 +318,9 @@ class ComposerBootstrap
         list($vendorType) = array_replace($defaults, $e->getArguments());
 
         if ($vendorType == "composer") {
-            $composerDef = static::getComposerDefinition();
-            list($nameSpace, $projectName) = explode("/", $composerDef["name"]);
+            /** @var \Composer\Package\RootPackage $rootPackage */
+            $rootPackage = $e->getComposer()->getPackage();
+            $projectName = current(array_slice(explode('/', $rootPackage->getName()), -1));
             echo $projectName . "\n";
             return;
         }
