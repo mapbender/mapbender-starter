@@ -275,8 +275,35 @@ class ComposerBootstrap
      */
     public static function displayVersion(Event $e)
     {
-        $defaults = array('composer', '');
         $args = $e->getArguments();
+        if (array_intersect(array('--help', '-h', 'help'), $args)) {
+            echo implode("\n", array(
+                "Usage:",
+                "   bin/composer run version composer",
+                "       Displays root package version as defined in composer.json",
+                "   bin/composer run git-current [tag-prefix]",
+                "       Prints the latest revision tag. Falls back to '0.0.0.0' if the repository is not"
+                . " yet tagged at all.",
+                "   bin/composer run git-next [tag-prefix]",
+                "       Prints a proposed next, unused tag.",
+                "   bin/composer run git [tag-prefix]",
+                "       Deprecated alias for 'git-next'.",
+                "",
+                "Both 'git-current' and 'git-next' inspect current branch name (if it looks like a version)"
+                - " and / or tags starting with the optional <tag-prefix> when looking for minor"
+                . " versions.",
+                "",
+                "The printed tag DOES NOT start with <tag-prefix>. If you want the prefix, you have to"
+                . " re-add it yourself. This is useful if you want to 'mirror' tags from Github in your"
+                . " fork, using a different prefix.",
+                "E.g. you can transpose the current Github tag, assuming v3.0.7.4, into a gh3.0.7.4 with (bash):",
+                "   _MIRROR_TAG=\"gh\"\"$(bin/composer run version git-current v)\"",
+                "",
+                "",
+            ));
+            exit(0);
+        }
+        $defaults = array('composer', '');
         if (count($args) >= 2 && ($args[1] == 'next-revision' || $args[1] == 'minor')) {
             fwrite(STDERR, "WARNING: second argument {$args[1]} is redundant, please update your scripts\n");
             $args = array_merge(array($args[0]), array_slice($args, 2));
