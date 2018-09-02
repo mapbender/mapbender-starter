@@ -275,20 +275,39 @@ class ComposerBootstrap
      */
     public static function displayVersion(Event $e)
     {
-        $defaults = array('composer', 'minor', '');
-        list($vendorType, $versionTime, $versionGlue) = array_replace($defaults, $e->getArguments());
-        if ($vendorType == "composer") {
-            /** @var \Composer\Package\RootPackage $rootPackage */
-            $rootPackage = $e->getComposer()->getPackage();
-            echo $rootPackage->getVersion() . "\n";
+        $defaults = array('composer', '');
+        $args = $e->getArguments();
+        if (count($args) >= 2 && ($args[1] == 'next-revision' || $args[1] == 'minor')) {
+            fwrite(STDERR, "WARNING: second argument {$args[1]} is redundant, please update your scripts\n");
+            $args = array_merge(array($args[0]), array_slice($args, 2));
         }
-
-        if ($vendorType == "git") {
-            if ($versionTime == "next-revision") {
+        list($mode, $tagPrefix) = array_replace($defaults, $args);
+        switch ($mode) {
+            case 'composer':
+                if (count($args) > 1) {
+                    throw new \InvalidArgumentException("Extra arguments not supported for 'composer' mode");
+                }
+                /** @var \Composer\Package\RootPackage $rootPackage */
+                $rootPackage = $e->getComposer()->getPackage();
+                echo $rootPackage->getVersion() . "\n";
+                exit(0);
+            case 'git':
                 $branch = self::getGitBranchName();
-                $projectName = current(explode("/", $branch));
-                $projectVersion = implode('', array_slice(explode("/", $branch), -1));
-                $isNumericVersion = !!preg_match('/^[\d]+(\.(RC-)?\d+)*$/', $projectVersion);
+                $branchNameParts = explode("/", $branch, 2);
+
+                $minorVersionPattern = '/^[\d]+(\.(RC-)?\d+)*$/';
+                if (count($branchNameParts) > 1 && preg_match($minorVersionPattern, $branchNameParts[1])) {
+                    // this only works for branches named 'release/3.0.4', 'kakadu-project/27.4.11' etc
+                    $projectMinorVersion = $branchNameParts[1];
+                } else {
+                    // Grab minor version from most recent git tag
+                    // most recent tag name on current branch with no decoration
+                    $currentTag = trim(`git describe --tags --abbrev=0 {$branch}`);
+                    // remove last number, possible 'RC-' prefix
+                    $tagBaseVersion = preg_replace('#[-.]\d+((-?RC-?)?\d+)?$#', '', $currentTag);
+                    // remove 'tagPrefix' prefix
+                    $projectMinorVersion = substr($tagBaseVersion, strlen($tagPrefix));
+                }
 
                 $notProjectNames = array(
                     'release',
@@ -300,22 +319,19 @@ class ComposerBootstrap
                     'enh',
                     'enhancement',
                 );
-                if (in_array($projectName, $notProjectNames) || ($isNumericVersion && $projectName == $projectVersion)) {
-                    $projectName = '';
+                // Match tags that start with
+                // 1) the global tag prefix (from command line)
+                // 2) the branch base name (unless blacklisted)
+                // 3) the calculated minor version
+                $matchTagPrefix = $tagPrefix;
+                if (count($branchNameParts) > 1 && !in_array($branchNameParts[0], $notProjectNames)) {
+                    $matchTagPrefix .= $branchNameParts[0];
                 }
-                if (!$projectVersion || !$isNumericVersion) {
-                    // most recent tag name on current branch with no decoration
-                    $currentTag = trim(`git describe --tags --abbrev=0 {$branch}`);
-                    // remove last number, possible 'RC-' prefix
-                    $tagBaseVersion = preg_replace('#[-.]\d+((-?RC-?)?\d+)?$#', '', $currentTag);
-                    // remove 'versionGlue' prefix
-                    $projectVersion = preg_replace('/^' . preg_quote($versionGlue, '/') . '/', '', $tagBaseVersion);
-                }
+                $matchTagPrefix .= $projectMinorVersion;
+                $matchingTags = explode("\n", trim(`git tag -l '${matchTagPrefix}*'`));
 
-                $tagPrefix = "${versionGlue}{$projectName}{$projectVersion}";
-                $matchingTags = explode("\n", trim(`git tag -l '${tagPrefix}*'`));
                 // extract only the final group of consecutive digits as "revisions"
-                $revisions = preg_filter('#(^.{' . (strlen($tagPrefix) + 1) . '})(\S+)#sm', '$2', $matchingTags);
+                $revisions = preg_filter('#(^.{' . (strlen($matchTagPrefix) + 1) . '})(\S+)#sm', '$2', $matchingTags);
                 natsort($revisions);
                 $nextRevision = 0;
                 foreach (array_reverse($revisions) as $revision) {
@@ -324,8 +340,10 @@ class ComposerBootstrap
                         break;
                     }
                 }
-                echo "${projectVersion}.${nextRevision}\n";
-            }
+                echo "${projectMinorVersion}.${nextRevision}\n";
+                exit(0);
+            default:
+                throw new \InvalidArgumentException("Unsupported argument 1 " . var_export($mode, true));
         }
     }
 
