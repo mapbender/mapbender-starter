@@ -299,7 +299,7 @@ class ComposerBootstrap
                 // most recent tag name on current branch with no decoration
                 $currentTag = trim(@shell_exec('git describe --tags --abbrev=0 ' . escapeshellarg($branch))) ?: null;
                 if (!$currentTag) {
-                    fwrite(STDERR, "WARNING: git describe failed, on {$branch}, trying again on origin/{$branch}");
+                    fwrite(STDERR, "WARNING: git describe failed, on {$branch}, trying again on origin/{$branch}\n");
                     $currentTag = trim(@shell_exec('git describe --tags --abbrev=0 ' . escapeshellarg("origin/{$branch}"))) ?: null;
                 }
                 if ($currentTag) {
@@ -340,7 +340,8 @@ class ComposerBootstrap
                     $matchTagPrefix .= $branchNameParts[0];
                 }
                 $matchTagPrefix .= $projectMinorVersion;
-                $matchingTags = array_filter(explode("\n", trim(`git tag -l '${matchTagPrefix}*'`)));
+                $escapedMatchTagPattern = escapeshellarg("{$matchTagPrefix}*");
+                $matchingTags = array_filter(explode("\n", trim(`git tag -l -- $escapedMatchTagPattern`)));
                 if ($matchingTags) {
                     // extract only the final group of consecutive digits as "revisions"
                     $revisions = preg_filter('#(^.{' . (strlen($matchTagPrefix) + 1) . '})(\S+)#sm', '$2', $matchingTags);
