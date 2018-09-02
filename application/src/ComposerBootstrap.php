@@ -349,11 +349,20 @@ class ComposerBootstrap
                 }
 
                 natsort($revisions);
+
                 $nextRevision = 0;
                 foreach (array_reverse($revisions) as $revision) {
-                    if (false === strpos('RC', $revision)) {
+                    if (false === strpos($revision, 'RC')) {
                         $nextRevision = intval($revision) + 1;
                         break;
+                    } else {
+                        $preRcRevision = intval($revision);
+                        if (!in_array($preRcRevision, $revisions)) {
+                            // we have an RC version as the highest, and there is no corresponding non-RC
+                            // => "upgrade" the RC patch level directly to a non-RC patch level
+                            $nextRevision = $preRcRevision;
+                            break;
+                        }
                     }
                 }
                 echo "${projectMinorVersion}.${nextRevision}\n";
