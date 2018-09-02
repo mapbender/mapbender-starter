@@ -273,30 +273,45 @@ class ComposerBootstrap
      *
      * @param Event $e
      */
-    public static function displayVersion($e)
+    public static function displayVersion(Event $e)
     {
         $defaults = array('composer', 'minor', '-');
         list($vendorType, $versionTime, $versionGlue) = array_replace($defaults, $e->getArguments());
         if ($vendorType == "composer") {
-            $composerDef = static::getComposerDefinition();
-            if ($versionTime == "minor") {
-                echo $composerDef["version"] . "\n";
-                return;
-            }
+            /** @var \Composer\Package\RootPackage $rootPackage */
+            $rootPackage = $e->getComposer()->getPackage();
+            echo $rootPackage->getVersion() . "\n";
         }
 
         if ($vendorType == "git") {
             if ($versionTime == "next-revision") {
-                list($projectName, $projectVersion) = explode("/", self::getGitBranchName());
+                $branch = self::getGitBranchName();
+                $projectName = current(explode("/", $branch));
+                $projectVersion = implode('', array_slice(explode("/", $branch), -1));
 
-                // Don't save 'release' as project name
-                if($projectName == 'release'){
+                if (!$projectVersion || $projectVersion == $projectName) {
+                    // most recent tag name on current branch with no decoration
+                    $currentTag = trim(`git describe --tags --abbrev=0 {$branch}`);
+                    // remove last number, possible 'RC-' prefix
+                    $tagBaseVersion = preg_replace('#[-.](RC-)?\d+$#', '', $currentTag);
+                    // remove 'versionGlue' prefix
+                    $projectVersion = preg_replace('/^' . preg_quote($versionGlue, '/') . '/', '', $tagBaseVersion);
+                }
+
+                $branchBlacklist = array(
+                    'release',
+                    'master',
+                    'develop',
+                );
+                // Don't save non-project branch groups as project name
+                if (in_array($projectName, $branchBlacklist)) {
                     $projectName ='';
                 }
 
-                $revisions = null;
-                preg_match_all("/^" . preg_quote($projectName . $versionGlue) . '(' . preg_quote($projectVersion) . ")\.(\S+)/sm", `git tag`, $revisions, PREG_SET_ORDER);
-                $revisions = array_map(function ($match) { return $match[2]; }, $revisions);
+                $tagPrefix = "${versionGlue}{$projectName}{$projectVersion}";
+                $matchingTags = explode("\n", trim(`git tag -l '${tagPrefix}*'`));
+                // extract only the final group of consecutive digits as "revisions"
+                $revisions = preg_filter('#(^.{' . (strlen($tagPrefix) + 1) . '})(\S+)#sm', '$2', $matchingTags);
                 natsort($revisions);
 
                 $lastRevision = count($revisions) ? intval(end($revisions)) : -1;
