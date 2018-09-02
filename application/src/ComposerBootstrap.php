@@ -292,6 +292,8 @@ class ComposerBootstrap
                 echo $rootPackage->getVersion() . "\n";
                 exit(0);
             case 'git':
+            case 'git-next':
+            case 'git-current':
                 $branch = self::getGitBranchName();
                 $branchNameParts = explode("/", $branch, 2);
 
@@ -350,26 +352,46 @@ class ComposerBootstrap
                 }
 
                 natsort($revisions);
-
+                break;
+            default:
+                throw new \InvalidArgumentException("Unsupported argument 1 " . var_export($mode, true));
+        }
+        switch ($mode) {
+            case 'git':         // legacy alias
+            case 'git-next':
                 $nextRevision = 0;
                 foreach (array_reverse($revisions) as $revision) {
                     if (false === strpos($revision, 'RC')) {
                         $nextRevision = intval($revision) + 1;
                         break;
                     } else {
-                        $preRcRevision = intval($revision);
-                        if (!in_array($preRcRevision, $revisions)) {
+                        $nonRcRevision = intval($revision);
+                        if (!in_array($nonRcRevision, $revisions)) {
                             // we have an RC version as the highest, and there is no corresponding non-RC
                             // => "upgrade" the RC patch level directly to a non-RC patch level
-                            $nextRevision = $preRcRevision;
+                            $nextRevision = $nonRcRevision;
                             break;
                         }
                     }
                 }
-                echo "${projectMinorVersion}.${nextRevision}\n";
+                echo "{$projectMinorVersion}.{$nextRevision}\n";
                 exit(0);
-            default:
-                throw new \InvalidArgumentException("Unsupported argument 1 " . var_export($mode, true));
+            case 'git-current':
+                if ($revisions) {
+                    $currentPatchLevel = max($revisions);
+                    if (false !== strpos($currentPatchLevel, 'RC')) {
+                        $nonRcRevision = intval($currentPatchLevel);
+                        if (in_array($nonRcRevision, $revisions)) {
+                            // We had an RC version as the highest, but found the corresponding non-RC
+                            // => the non-RC is the highest available version
+                            $currentPatchLevel = $nonRcRevision;
+                        }
+                    }
+                } else {
+                    $currentPatchLevel = 0;
+                }
+                echo "{$projectMinorVersion}.{$currentPatchLevel}\n";
+                exit(0);
         }
     }
 
