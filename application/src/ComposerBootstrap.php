@@ -340,10 +340,14 @@ class ComposerBootstrap
                     $matchTagPrefix .= $branchNameParts[0];
                 }
                 $matchTagPrefix .= $projectMinorVersion;
-                $matchingTags = explode("\n", trim(`git tag -l '${matchTagPrefix}*'`));
+                $matchingTags = array_filter(explode("\n", trim(`git tag -l '${matchTagPrefix}*'`)));
+                if ($matchingTags) {
+                    // extract only the final group of consecutive digits as "revisions"
+                    $revisions = preg_filter('#(^.{' . (strlen($matchTagPrefix) + 1) . '})(\S+)#sm', '$2', $matchingTags);
+                } else {
+                    $revisions = array();
+                }
 
-                // extract only the final group of consecutive digits as "revisions"
-                $revisions = preg_filter('#(^.{' . (strlen($matchTagPrefix) + 1) . '})(\S+)#sm', '$2', $matchingTags);
                 natsort($revisions);
                 $nextRevision = 0;
                 foreach (array_reverse($revisions) as $revision) {
