@@ -303,6 +303,10 @@ class ComposerBootstrap
                     // Grab minor version from most recent git tag
                     // most recent tag name on current branch with no decoration
                     $currentTag = trim(@shell_exec('git describe --tags --abbrev=0 ' . escapeshellarg($branch))) ?: null;
+                    if (!$currentTag) {
+                        fwrite(STDERR, "WARNING: git describe failed, on {$branch}, trying again on origin/{$branch}");
+                        $currentTag = trim(@shell_exec('git describe --tags --abbrev=0 ' . escapeshellarg("origin/{$branch}"))) ?: null;
+                    }
                     if ($currentTag) {
                         // remove last number, possible 'RC-' prefix
                         $tagBaseVersion = preg_replace('#[-.]\d+((-?RC-?)?\d+)?$#', '', $currentTag);
