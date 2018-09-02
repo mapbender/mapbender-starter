@@ -302,11 +302,17 @@ class ComposerBootstrap
                 } else {
                     // Grab minor version from most recent git tag
                     // most recent tag name on current branch with no decoration
-                    $currentTag = trim(`git describe --tags --abbrev=0 {$branch}`);
-                    // remove last number, possible 'RC-' prefix
-                    $tagBaseVersion = preg_replace('#[-.]\d+((-?RC-?)?\d+)?$#', '', $currentTag);
-                    // remove 'tagPrefix' prefix
-                    $projectMinorVersion = substr($tagBaseVersion, strlen($tagPrefix));
+                    $currentTag = trim(@shell_exec('git describe --tags --abbrev=0 ' . escapeshellarg($branch))) ?: null;
+                    if ($currentTag) {
+                        // remove last number, possible 'RC-' prefix
+                        $tagBaseVersion = preg_replace('#[-.]\d+((-?RC-?)?\d+)?$#', '', $currentTag);
+                        // remove 'tagPrefix' prefix
+                        $projectMinorVersion = substr($tagBaseVersion, strlen($tagPrefix));
+                    } else {
+                        $fallback = '0.0.0';
+                        fwrite(STDERR, "Current commit does not trace back to any tag, using {$fallback} as a minor version\n");
+                        $projectMinorVersion = $fallback;
+                    }
                 }
 
                 $notProjectNames = array(
