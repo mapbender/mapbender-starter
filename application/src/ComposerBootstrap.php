@@ -295,28 +295,30 @@ class ComposerBootstrap
                 $branch = self::getGitBranchName();
                 $branchNameParts = explode("/", $branch, 2);
 
+                // Grab minor version from most recent git tag
+                // most recent tag name on current branch with no decoration
+                $currentTag = trim(@shell_exec('git describe --tags --abbrev=0 ' . escapeshellarg($branch))) ?: null;
+                if (!$currentTag) {
+                    fwrite(STDERR, "WARNING: git describe failed, on {$branch}, trying again on origin/{$branch}");
+                    $currentTag = trim(@shell_exec('git describe --tags --abbrev=0 ' . escapeshellarg("origin/{$branch}"))) ?: null;
+                }
+                if ($currentTag) {
+                    // remove 'tagPrefix' prefix
+                    $minorGitVersion = substr($currentTag, strlen($tagPrefix));
+                } else {
+                    $minorGitVersion = null;
+                }
                 $minorVersionPattern = '/^[\d]+(\.(RC-)?\d+)*$/';
                 if (count($branchNameParts) > 1 && preg_match($minorVersionPattern, $branchNameParts[1])) {
                     // this only works for branches named 'release/3.0.4', 'kakadu-project/27.4.11' etc
                     $projectMinorVersion = $branchNameParts[1];
+                } else if ($minorGitVersion) {
+                    // remove last number, possible 'RC-' prefix
+                    $projectMinorVersion = preg_replace('#[-.]\d+((-?RC-?)?\d+)?$#', '', $minorGitVersion);
                 } else {
-                    // Grab minor version from most recent git tag
-                    // most recent tag name on current branch with no decoration
-                    $currentTag = trim(@shell_exec('git describe --tags --abbrev=0 ' . escapeshellarg($branch))) ?: null;
-                    if (!$currentTag) {
-                        fwrite(STDERR, "WARNING: git describe failed, on {$branch}, trying again on origin/{$branch}");
-                        $currentTag = trim(@shell_exec('git describe --tags --abbrev=0 ' . escapeshellarg("origin/{$branch}"))) ?: null;
-                    }
-                    if ($currentTag) {
-                        // remove last number, possible 'RC-' prefix
-                        $tagBaseVersion = preg_replace('#[-.]\d+((-?RC-?)?\d+)?$#', '', $currentTag);
-                        // remove 'tagPrefix' prefix
-                        $projectMinorVersion = substr($tagBaseVersion, strlen($tagPrefix));
-                    } else {
-                        $fallback = '0.0.0';
-                        fwrite(STDERR, "Current commit does not trace back to any tag, using {$fallback} as a minor version\n");
-                        $projectMinorVersion = $fallback;
-                    }
+                    $fallback = '0.0.0';
+                    fwrite(STDERR, "WARNING: Can't extract minor version from neither branch name or current commit. Using {$fallback}.\n");
+                    $projectMinorVersion = $fallback;
                 }
 
                 $notProjectNames = array(
