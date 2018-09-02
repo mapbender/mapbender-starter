@@ -33,6 +33,9 @@ package:
 release:
   stage: release
   except:
+    # If you want to auto-tag your project repository, comment / remove the next line
+    # This is no longer desirable default behaviour for the main Mapbender project
+    - /./
     - tags
     - /^feature\/.*$/
     - /^(fix|hotfix)\/.*$/
