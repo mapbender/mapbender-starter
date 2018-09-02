@@ -313,9 +313,13 @@ class ComposerBootstrap
                 // extract only the final group of consecutive digits as "revisions"
                 $revisions = preg_filter('#(^.{' . (strlen($tagPrefix) + 1) . '})(\S+)#sm', '$2', $matchingTags);
                 natsort($revisions);
-
-                $lastRevision = count($revisions) ? intval(end($revisions)) : -1;
-                $nextRevision = $lastRevision + 1;
+                $nextRevision = 0;
+                foreach (array_reverse($revisions) as $revision) {
+                    if (false === strpos('RC', $revision)) {
+                        $nextRevision = intval($revision) + 1;
+                        break;
+                    }
+                }
                 echo "${projectVersion}.${nextRevision}\n";
             }
         }
