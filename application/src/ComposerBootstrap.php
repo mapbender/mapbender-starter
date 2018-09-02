@@ -383,65 +383,6 @@ class ComposerBootstrap
     }
 
     /**
-     * @return int
-     * @internal param $composerDef
-     */
-    private static function updateSymfonyParameters()
-    {
-        $files = static::getDefaultParameterFiles();
-        static::updateYamlServerDescription($files["default"]);
-        if (is_file($files["current"])) {
-            static::updateYamlServerDescription($files["current"]);
-        }
-    }
-
-    /**
-     * @param $yamlFile
-     * @return int
-     * @internal param $composerDef
-     */
-    private static function updateYamlServerDescription($yamlFile)
-    {
-        $composerDef = static::getComposerDefinition();
-        $yamlContent = preg_replace(
-            "/(fom:\\s+server_name:)(\\s*\\S+)(\\s+server_version:)(\\s*\\S+)/s",
-            "$1 " . $composerDef["description"] .
-            "$3 " . $composerDef["version"],
-            file_get_contents($yamlFile));
-        return file_put_contents(
-            $yamlContent,
-            $yamlFile);
-    }
-
-    /**
-     * @return int
-     */
-    protected static function updatePhingProperties()
-    {
-        $initFile       = array();
-        $config         = static::getComposerDefinition();
-        $versionDetails = sscanf($config["version"], "%d.%d.%d.%d-%s");
-        $properties     = static::getRootPath() . "/build.properties";
-        $build          = array_merge(parse_ini_file($properties), array(
-            'version.major'            => $versionDetails[0],
-            'version.minor'            => $versionDetails[1],
-            'version.revision'         => $versionDetails[2],
-            'version.build'            => $versionDetails[3],
-            'packaging.release'        => $versionDetails[4] ? $versionDetails[4] : 0,
-            'phing.project.name'       => $config["name"],
-            'project.shortdescription' => $config["description"],
-            'project.description'      => $config["description"] . " (" . $config["homepage"] . ")",
-        ));
-
-        // Build INI content
-        foreach ($build as $k => $v) {
-            $initFile[] = $k . "=\"" . $v . "\"";
-        }
-
-        return file_put_contents($properties, implode("\n", $initFile));
-    }
-
-    /**
      * @param Event $e
      */
     public static function distribute($e)
