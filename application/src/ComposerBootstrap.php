@@ -275,7 +275,7 @@ class ComposerBootstrap
      */
     public static function displayVersion(Event $e)
     {
-        $defaults = array('composer', 'minor', '-');
+        $defaults = array('composer', 'minor', '');
         list($vendorType, $versionTime, $versionGlue) = array_replace($defaults, $e->getArguments());
         if ($vendorType == "composer") {
             /** @var \Composer\Package\RootPackage $rootPackage */
