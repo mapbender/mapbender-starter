@@ -2232,16 +2232,16 @@
         },
         {
             "name": "mapbender/data-source",
-            "version": "0.1.6",
+            "version": "0.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/data-source.git",
-                "reference": "91bf574d2d4e86e8388dddd769b064aa55f134ca"
+                "reference": "5ed43cb7ce03b84bc64cfb5384f32c0288fec203"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/data-source/zipball/91bf574d2d4e86e8388dddd769b064aa55f134ca",
-                "reference": "91bf574d2d4e86e8388dddd769b064aa55f134ca",
+                "url": "https://api.github.com/repos/mapbender/data-source/zipball/5ed43cb7ce03b84bc64cfb5384f32c0288fec203",
+                "reference": "5ed43cb7ce03b84bc64cfb5384f32c0288fec203",
                 "shasum": ""
             },
             "require": {
@@ -2275,7 +2275,7 @@
                 "data source",
                 "mapbender"
             ],
-            "time": "2017-10-05T08:02:24+00:00"
+            "time": "2018-09-02T22:32:46+00:00"
         },
         {
             "name": "mapbender/digitizer",
@@ -2617,16 +2617,16 @@
         },
         {
             "name": "mapbender/vis-ui.js",
-            "version": "0.0.71",
+            "version": "0.0.72",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/vis-ui.js.git",
-                "reference": "3ef38cf2032362963a27a852fa7cbd54da63f7db"
+                "reference": "d91c1878c1710e1a3fd2de9bf625e6ad711487ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/vis-ui.js/zipball/3ef38cf2032362963a27a852fa7cbd54da63f7db",
-                "reference": "3ef38cf2032362963a27a852fa7cbd54da63f7db",
+                "url": "https://api.github.com/repos/mapbender/vis-ui.js/zipball/d91c1878c1710e1a3fd2de9bf625e6ad711487ab",
+                "reference": "d91c1878c1710e1a3fd2de9bf625e6ad711487ab",
                 "shasum": ""
             },
             "require": {
@@ -2682,7 +2682,7 @@
                 "jquery",
                 "vis-ui"
             ],
-            "time": "2018-05-11T08:21:00+00:00"
+            "time": "2018-09-02T22:11:21+00:00"
         },
         {
             "name": "medialize/jquery-context-menu",

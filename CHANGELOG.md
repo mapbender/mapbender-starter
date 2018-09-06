@@ -1,5 +1,10 @@
 # Changelog
 
+## dev-master @ 75a2413
+- Update mapbender/vis-ui.js to [0.0.72](https://github.com/mapbender/vis-ui.js/releases/tag/0.0.72)
+- Update mapbender/data-source to [0.1.7](https://github.com/mapbender/data-source/releases/tag/0.1.7)
+- Misc ComposerBootstrap cleanups
+
 ## v3.0.7.4 (on dev-master)
 - Bump mapbender to v3.0.7.4, see https://github.com/mapbender/mapbender/releases/tag/v3.0.7.4
 - Shipping yaml applications now use localised text
