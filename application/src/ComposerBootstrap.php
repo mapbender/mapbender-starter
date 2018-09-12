@@ -284,9 +284,9 @@ class ComposerBootstrap
                 "   bin/composer run git-current [tag-prefix]",
                 "       Prints the latest revision tag. Falls back to '0.0.0.0' if the repository is not"
                 . " yet tagged at all.",
-                "   bin/composer run git-next [tag-prefix]",
+                "   bin/composer run version git-next [tag-prefix]",
                 "       Prints a proposed next, unused tag.",
-                "   bin/composer run git [tag-prefix]",
+                "   bin/composer run version git [tag-prefix]",
                 "       Deprecated alias for 'git-next'.",
                 "",
                 "Both 'git-current' and 'git-next' inspect current branch name (if it looks like a version)"
