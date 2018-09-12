@@ -1,4 +1,4 @@
-# Mapbender
+![Mapbender](./application/app/Resources/public/image/Mapbender-logo.png)
 
 Mapbender is a web based geoportal framework.
 
