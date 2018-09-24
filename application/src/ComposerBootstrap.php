@@ -7,23 +7,11 @@ use Composer\Script\Event;
 class ComposerBootstrap
 {
     /**
-     * Builds the bootstrap file.
-     *
-     * The bootstrap file contains PHP file that are always needed by the application.
-     * It speeds up the application bootstrapping.
-     *
-     * @param $event Event A instance
+     * @param $event Event
      */
     public static function checkConfiguration($event)
     {
-        $files        = static::getDefaultParameterFiles();
-        $isNewInstall = !file_exists($files["current"]);
-        //$configuration         = file_get_contents($configurationBaseFile);
-
-        if ($isNewInstall) {
-
-            copy($files["default"], $files["current"]);
-
+        if (static::ensureConfig()) {
             static::createDatabase();
             static::resetRootLogin();
             static::importExampleApplications();
@@ -34,6 +22,21 @@ class ComposerBootstrap
     }
 
     /**
+     * @return bool true if config file needed to be created
+     */
+    protected static function ensureConfig()
+    {
+        $configPath = static::getParametersPath();
+
+        if (!file_exists($configPath)) {
+            copy("{$configPath}.dist", $configPath);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /**
      * Rebuild database.
      * Needs for tests
      *
@@ -41,13 +44,7 @@ class ComposerBootstrap
      */
     public static function rebuildDatabase($event)
     {
-        $files        = static::getDefaultParameterFiles();
-        $isNewInstall = !file_exists($files["current"]);
-
-        if ($isNewInstall) {
-            copy($files["default"], $files["current"]);
-        }
-
+        static::ensureConfig();
         static::dropDatabase();
         static::createDatabase();
         static::resetRootLogin();
@@ -96,11 +93,8 @@ class ComposerBootstrap
      */
     public static function installAssets()
     {
-        $files        = static::getDefaultParameterFiles();
-        $isNewInstall = !file_exists($files["current"]);
-
-        if ($isNewInstall) {
-            return;
+        if (!file_exists(static::getParametersPath())) {
+            throw new \RuntimeException("Application not configured");
         }
 
         $isWindows = static::isWindows();
@@ -230,7 +224,7 @@ class ComposerBootstrap
     }
 
     /**
-     * @return string
+     * @param string $title
      */
     protected static function printStatus($title)
     {
@@ -448,43 +442,11 @@ class ComposerBootstrap
     }
 
     /**
-     * @return array Definition
-     */
-    public static function getComposerDefinition()
-    {
-        static $config;
-        if (!$config) {
-            $config = json_decode(file_get_contents(static::getRootPath() . "/application/composer.json"), true);
-        }
-        return $config;
-    }
-
-    /**
      * @return string
      */
-    protected static function getRootPath()
+    protected static function getParametersPath()
     {
-        return realpath(__DIR__ . "/../../");
-    }
-
-    /**
-     * @return string
-     * @internal param $rootPath
-     */
-    protected static function getConfigPath()
-    {
-        return static::getSymfonyRootPath() . "/app/config/";
-    }
-
-    /**
-     * @return array
-     */
-    protected static function getDefaultParameterFiles()
-    {
-        $path = static::getConfigPath();
-        return array(
-            "default" => $path . "parameters.yml.dist",
-            "current" => $path . "parameters.yml");
+        return static::getSymfonyRootPath() . '/app/config/parameters.yml';
     }
 
     /**
