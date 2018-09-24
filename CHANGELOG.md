@@ -1,6 +1,9 @@
 # Changelog
 
-## dev-master @ 75a2413
+## dev-master @ 0c16d53
+- Fix automation errors based on concrete branch naming ([PR#84](https://github.com/mapbender/mapbender-starter/pull/84))
+- Add Logo to Mapbender Starter and link it in Readme.md ([PR#82](https://github.com/mapbender/mapbender-starter/pull/82))
+- Update Owsproxy to [v3.0.6.4](https://github.com/mapbender/owsproxy3/releases/tag/v3.0.6.4), includes Owsproxy dependencies
 - Update mapbender/vis-ui.js to [0.0.72](https://github.com/mapbender/vis-ui.js/releases/tag/0.0.72)
 - Update mapbender/data-source to [0.1.7](https://github.com/mapbender/data-source/releases/tag/0.1.7)
 - Misc ComposerBootstrap cleanups
