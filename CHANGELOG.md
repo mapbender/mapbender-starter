@@ -8,6 +8,7 @@
 - Update mapbender/vis-ui.js to [0.0.72](https://github.com/mapbender/vis-ui.js/releases/tag/0.0.72)
 - Update mapbender/data-source to [0.1.7](https://github.com/mapbender/data-source/releases/tag/0.1.7)
 - Update mapbender/digitizer to 1.1.65
+- Update bundled Composer to [1.6.5](https://github.com/composer/composer/releases/tag/1.6.5)
 - Misc ComposerBootstrap cleanups
 
 ## v3.0.7.4 (on dev-master)
