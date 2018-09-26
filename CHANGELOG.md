@@ -6,7 +6,7 @@
 - Update Mapbender to [v3.0.7.5](https://github.com/mapbender/mapbender/releases/tag/v3.0.7.5)
 - Update Owsproxy to [v3.0.6.4](https://github.com/mapbender/owsproxy3/releases/tag/v3.0.6.4), includes Owsproxy dependencies
 - Update mapbender/vis-ui.js to [0.0.72](https://github.com/mapbender/vis-ui.js/releases/tag/0.0.72)
-- Update mapbender/data-source to [0.1.7](https://github.com/mapbender/data-source/releases/tag/0.1.7)
+- Update mapbender/data-source to [0.1.8](https://github.com/mapbender/data-source/releases/tag/0.1.8)
 - Update mapbender/digitizer to 1.1.65
 - Update bundled Composer to [1.6.5](https://github.com/composer/composer/releases/tag/1.6.5)
 - Misc ComposerBootstrap cleanups
