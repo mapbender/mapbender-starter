@@ -1,6 +1,6 @@
 # Changelog
 
-## dev-master @ 0c16d53
+## v3.0.7.5 (on dev-master)
 - Fix automation errors based on concrete branch naming ([PR#84](https://github.com/mapbender/mapbender-starter/pull/84))
 - Add Logo to Mapbender Starter and link it in Readme.md ([PR#82](https://github.com/mapbender/mapbender-starter/pull/82))
 - Update Mapbender to [v3.0.7.5](https://github.com/mapbender/mapbender/releases/tag/v3.0.7.5)
