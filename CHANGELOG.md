@@ -2,6 +2,7 @@
 
 ## dev-master
 - Update mapbender/vis-ui.js to [0.0.73](https://github.com/mapbender/vis-ui.js/releases/tag/0.0.73) for performance fix
+- Update mapbender/fom to [v3.0.6.2](https://github.com/mapbender/fom/releases/tag/v3.0.6.2)
 
 ## v3.0.7.5 (on dev-master)
 - Fix automation errors based on concrete branch naming ([PR#84](https://github.com/mapbender/mapbender-starter/pull/84))
