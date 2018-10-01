@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "89d1fd81692aa4c7aa62feb12962302a",
+    "content-hash": "d81a930cbdfc3ca3fc11094755bdfa6f",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -2332,16 +2332,16 @@
         },
         {
             "name": "mapbender/fom",
-            "version": "dev-release/3.0.6",
+            "version": "v3.0.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/fom.git",
-                "reference": "3aab4e68611e0a2ab262220971f5de0377d316f4"
+                "reference": "5cbe354783fec288291bd0cc15dafd1e70db504a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/fom/zipball/3aab4e68611e0a2ab262220971f5de0377d316f4",
-                "reference": "3aab4e68611e0a2ab262220971f5de0377d316f4",
+                "url": "https://api.github.com/repos/mapbender/fom/zipball/5cbe354783fec288291bd0cc15dafd1e70db504a",
+                "reference": "5cbe354783fec288291bd0cc15dafd1e70db504a",
                 "shasum": ""
             },
             "require": {
@@ -6551,7 +6551,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "mapbender/fom": 20,
         "mapbender/documentation": 20,
         "wheregroup/cookieconsent": 20
     },
