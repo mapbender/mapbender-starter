@@ -1,5 +1,8 @@
 # Changelog
 
+## dev-master
+- Update mapbender/vis-ui.js to [0.0.73](https://github.com/mapbender/vis-ui.js/releases/tag/0.0.73) for performance fix
+
 ## v3.0.7.5 (on dev-master)
 - Fix automation errors based on concrete branch naming ([PR#84](https://github.com/mapbender/mapbender-starter/pull/84))
 - Add Logo to Mapbender Starter and link it in Readme.md ([PR#82](https://github.com/mapbender/mapbender-starter/pull/82))
