@@ -1,5 +1,8 @@
 # Changelog
 
+## v3.0.7.7
+- Update mapbender/mapbender to [v3.0.7.7](https://github.com/mapbender/mapbender/releases/tag/v3.0.7.7)
+
 ## v3.0.7.6
 - Update mapbender/mapbender to [v3.0.7.6](https://github.com/mapbender/mapbender/releases/tag/v3.0.7.6)
 - Update mapbender/vis-ui.js to [0.0.73](https://github.com/mapbender/vis-ui.js/releases/tag/0.0.73) for performance fix
