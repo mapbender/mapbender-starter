@@ -2375,16 +2375,16 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v3.0.7.6",
+            "version": "v3.0.7.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "0928cc09b526ea04d734111a820bc583d6fa92ea"
+                "reference": "b78dd27e8a158b79a8d88f4a74e01a39a2206932"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/0928cc09b526ea04d734111a820bc583d6fa92ea",
-                "reference": "0928cc09b526ea04d734111a820bc583d6fa92ea",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/b78dd27e8a158b79a8d88f4a74e01a39a2206932",
+                "reference": "b78dd27e8a158b79a8d88f4a74e01a39a2206932",
                 "shasum": ""
             },
             "require": {
@@ -2415,7 +2415,7 @@
                     "dev-release/3.0.5": "3.0.5.x-dev",
                     "dev-release/3.0.6": "3.0.6.x-dev",
                     "dev-release/3.0.7": "3.0.7.x-dev",
-                    "dev-master": "3.0.7.5-dev"
+                    "dev-master": "3.0.7.7-dev"
                 }
             },
             "autoload": {
@@ -2427,12 +2427,12 @@
             "license": [
                 "MIT"
             ],
-            "description": "Mapbender3 library",
+            "description": "Mapbender library",
             "keywords": [
                 "mapbender",
                 "module"
             ],
-            "time": "2018-10-18T08:50:35+00:00"
+            "time": "2018-11-07T13:33:32+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
