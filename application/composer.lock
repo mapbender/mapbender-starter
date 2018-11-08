@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1f72018c2d485b0188a08384ed991a3c",
+    "content-hash": "4ebd34625fc62b5ca0ae1fe2e4ae1f90",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -2328,7 +2328,7 @@
                 "documentation",
                 "mapbender"
             ],
-            "time": "2018-06-15T10:23:00+00:00"
+            "time": "2018-09-06T09:12:43+00:00"
         },
         {
             "name": "mapbender/fom",
@@ -2371,7 +2371,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2018-10-01T14:32:21+00:00"
+            "time": "2018-10-01T14:56:01+00:00"
         },
         {
             "name": "mapbender/mapbender",
@@ -2379,12 +2379,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "bf4cbe32345a6a719b8f0fe0ccd7e7c563f5e53c"
+                "reference": "827d5bf4e299a7b4db731f0fefd7aae3928e1b1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/bf4cbe32345a6a719b8f0fe0ccd7e7c563f5e53c",
-                "reference": "bf4cbe32345a6a719b8f0fe0ccd7e7c563f5e53c",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/827d5bf4e299a7b4db731f0fefd7aae3928e1b1e",
+                "reference": "827d5bf4e299a7b4db731f0fefd7aae3928e1b1e",
                 "shasum": ""
             },
             "require": {
@@ -2415,7 +2415,7 @@
                     "dev-release/3.0.5": "3.0.5.x-dev",
                     "dev-release/3.0.6": "3.0.6.x-dev",
                     "dev-release/3.0.7": "3.0.7.x-dev",
-                    "dev-master": "3.0.7.2-dev",
+                    "dev-master": "3.0.7.5-dev",
                     "dev-ol4": "3.1.0.0-dev"
                 }
             },
@@ -2428,12 +2428,12 @@
             "license": [
                 "MIT"
             ],
-            "description": "Mapbender library",
+            "description": "Mapbender3 library",
             "keywords": [
                 "mapbender",
                 "module"
             ],
-            "time": "2018-06-26T13:11:43+00:00"
+            "time": "2018-10-19T02:30:06+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
