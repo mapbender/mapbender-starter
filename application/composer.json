@@ -3,7 +3,7 @@
     "description": "Mapbender",
     "type": "project",
     "license": "MIT",
-    "version": "3.0.7.0",
+    "version": "3.0.7.5",
     "homepage": "http://www.mapbender.org",
     "support": {
         "email": "mapbender@osgeo.org",
@@ -48,7 +48,8 @@
         "mapbender/vis-ui.js": "~0.0.71",
         "components/jquery": "^1.11.2",
         "mnsami/composer-custom-directory-installer": "1.0.*",
-        "mapbender/fom": "dev-release/3.0.6",
+
+        "mapbender/fom": "^3.0.6.0",
         "mapbender/mapbender": "dev-ol4@dev",
         "mapbender/owsproxy": "~3.0.6",
         "mapbender/digitizer": "1.1.x",

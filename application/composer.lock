@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "1f72018c2d485b0188a08384ed991a3c",
@@ -1575,39 +1575,6 @@
             "time": "2018-03-18T17:12:38+00:00"
         },
         {
-            "name": "fabpot/sphinx-php",
-            "version": "v1.0.11",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/fabpot/sphinx-php.git",
-                "reference": "578573fd3215a97e56a4fc113fdb58dbdb4cf6a7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/sphinx-php/zipball/578573fd3215a97e56a4fc113fdb58dbdb4cf6a7",
-                "reference": "578573fd3215a97e56a4fc113fdb58dbdb4cf6a7",
-                "shasum": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "Sphinx extension for PHP projects",
-            "time": "2018-04-20T11:27:45+00:00"
-        },
-        {
             "name": "friendsofsymfony/jsrouting-bundle",
             "version": "1.5.4",
             "source": {
@@ -1977,22 +1944,22 @@
         },
         {
             "name": "jms/serializer",
-            "version": "1.11.0",
+            "version": "1.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/serializer.git",
-                "reference": "e7c53477ff55c21d1b1db7d062edc050a24f465f"
+                "reference": "00863e1d55b411cc33ad3e1de09a4c8d3aae793c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/serializer/zipball/e7c53477ff55c21d1b1db7d062edc050a24f465f",
-                "reference": "e7c53477ff55c21d1b1db7d062edc050a24f465f",
+                "url": "https://api.github.com/repos/schmittjoh/serializer/zipball/00863e1d55b411cc33ad3e1de09a4c8d3aae793c",
+                "reference": "00863e1d55b411cc33ad3e1de09a4c8d3aae793c",
                 "shasum": ""
             },
             "require": {
                 "doctrine/annotations": "^1.0",
                 "doctrine/instantiator": "^1.0.3",
-                "jms/metadata": "~1.1",
+                "jms/metadata": "^1.3",
                 "jms/parser-lib": "1.*",
                 "php": "^5.5|^7.0",
                 "phpcollection/phpcollection": "~0.1",
@@ -2026,7 +1993,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.11-dev"
+                    "dev-1.x": "1.13-dev"
                 }
             },
             "autoload": {
@@ -2036,7 +2003,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "Apache-2.0"
+                "MIT"
             ],
             "authors": [
                 {
@@ -2057,7 +2024,7 @@
                 "serialization",
                 "xml"
             ],
-            "time": "2018-02-04T17:48:54+00:00"
+            "time": "2018-07-25T13:58:54+00:00"
         },
         {
             "name": "kriswallsmith/assetic",
@@ -2232,16 +2199,16 @@
         },
         {
             "name": "mapbender/data-source",
-            "version": "0.1.6",
+            "version": "0.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/data-source.git",
-                "reference": "91bf574d2d4e86e8388dddd769b064aa55f134ca"
+                "reference": "c420dde010bd2cf2e756584d0f55f335ca13f8f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/data-source/zipball/91bf574d2d4e86e8388dddd769b064aa55f134ca",
-                "reference": "91bf574d2d4e86e8388dddd769b064aa55f134ca",
+                "url": "https://api.github.com/repos/mapbender/data-source/zipball/c420dde010bd2cf2e756584d0f55f335ca13f8f5",
+                "reference": "c420dde010bd2cf2e756584d0f55f335ca13f8f5",
                 "shasum": ""
             },
             "require": {
@@ -2275,20 +2242,20 @@
                 "data source",
                 "mapbender"
             ],
-            "time": "2017-10-05T08:02:24+00:00"
+            "time": "2018-09-26T17:40:01+00:00"
         },
         {
             "name": "mapbender/digitizer",
-            "version": "1.1.63",
+            "version": "1.1.66",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "dfa595bfa986696a616c650803e8de3743c62d47"
+                "reference": "c09ee8cc101c2666fa1c5af4e7fe075dd1c9ebae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/dfa595bfa986696a616c650803e8de3743c62d47",
-                "reference": "dfa595bfa986696a616c650803e8de3743c62d47",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/c09ee8cc101c2666fa1c5af4e7fe075dd1c9ebae",
+                "reference": "c09ee8cc101c2666fa1c5af4e7fe075dd1c9ebae",
                 "shasum": ""
             },
             "require": {
@@ -2330,7 +2297,7 @@
                 "digitizing",
                 "mapbender"
             ],
-            "time": "2018-05-18T12:08:22+00:00"
+            "time": "2018-09-26T19:15:49+00:00"
         },
         {
             "name": "mapbender/documentation",
@@ -2338,17 +2305,13 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-documentation.git",
-                "reference": "55836ffb3b291fdfd519434f1665b84794be29b2"
+                "reference": "c6ee6e325708cf0f797a3f4866fb23b0c0908937"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/55836ffb3b291fdfd519434f1665b84794be29b2",
-                "reference": "55836ffb3b291fdfd519434f1665b84794be29b2",
+                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/c6ee6e325708cf0f797a3f4866fb23b0c0908937",
+                "reference": "c6ee6e325708cf0f797a3f4866fb23b0c0908937",
                 "shasum": ""
-            },
-            "require": {
-                "fabpot/sphinx-php": "1.0.*",
-                "php": ">=5.3.0"
             },
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
@@ -2360,7 +2323,7 @@
                     "name": "Astrid Emde"
                 }
             ],
-            "description": "Mapbender3 documentation",
+            "description": "Mapbender documentation",
             "keywords": [
                 "documentation",
                 "mapbender"
@@ -2369,16 +2332,16 @@
         },
         {
             "name": "mapbender/fom",
-            "version": "dev-release/3.0.6",
+            "version": "v3.0.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/fom.git",
-                "reference": "cd71140efb4b8ff0b8a4f20fd359fbb7b656dfe7"
+                "reference": "5cbe354783fec288291bd0cc15dafd1e70db504a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/fom/zipball/cd71140efb4b8ff0b8a4f20fd359fbb7b656dfe7",
-                "reference": "cd71140efb4b8ff0b8a4f20fd359fbb7b656dfe7",
+                "url": "https://api.github.com/repos/mapbender/fom/zipball/5cbe354783fec288291bd0cc15dafd1e70db504a",
+                "reference": "5cbe354783fec288291bd0cc15dafd1e70db504a",
                 "shasum": ""
             },
             "require": {
@@ -2408,7 +2371,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2018-06-11T12:16:11+00:00"
+            "time": "2018-10-01T14:32:21+00:00"
         },
         {
             "name": "mapbender/mapbender",
@@ -2465,7 +2428,7 @@
             "license": [
                 "MIT"
             ],
-            "description": "Mapbender3 library",
+            "description": "Mapbender library",
             "keywords": [
                 "mapbender",
                 "module"
@@ -2575,16 +2538,16 @@
         },
         {
             "name": "mapbender/owsproxy",
-            "version": "v3.0.6.3",
+            "version": "v3.0.6.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/owsproxy3.git",
-                "reference": "be31c9c22b3a332dcc54cb7abdc5ee07efcd8a59"
+                "reference": "c4c06f99d00efcd5e8ab65756ccc58ac3cec8eae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/be31c9c22b3a332dcc54cb7abdc5ee07efcd8a59",
-                "reference": "be31c9c22b3a332dcc54cb7abdc5ee07efcd8a59",
+                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/c4c06f99d00efcd5e8ab65756ccc58ac3cec8eae",
+                "reference": "c4c06f99d00efcd5e8ab65756ccc58ac3cec8eae",
                 "shasum": ""
             },
             "require": {
@@ -2614,20 +2577,20 @@
                 "module",
                 "owsproxy"
             ],
-            "time": "2018-03-04T21:11:58+00:00"
+            "time": "2018-09-11T22:15:48+00:00"
         },
         {
             "name": "mapbender/vis-ui.js",
-            "version": "0.0.71",
+            "version": "0.0.73",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/vis-ui.js.git",
-                "reference": "3ef38cf2032362963a27a852fa7cbd54da63f7db"
+                "reference": "e03578bc3e56255f007371cbbf61c63b3b9c0cca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/vis-ui.js/zipball/3ef38cf2032362963a27a852fa7cbd54da63f7db",
-                "reference": "3ef38cf2032362963a27a852fa7cbd54da63f7db",
+                "url": "https://api.github.com/repos/mapbender/vis-ui.js/zipball/e03578bc3e56255f007371cbbf61c63b3b9c0cca",
+                "reference": "e03578bc3e56255f007371cbbf61c63b3b9c0cca",
                 "shasum": ""
             },
             "require": {
@@ -2683,7 +2646,7 @@
                 "jquery",
                 "vis-ui"
             ],
-            "time": "2018-05-11T08:21:00+00:00"
+            "time": "2018-09-24T07:23:41+00:00"
         },
         {
             "name": "medialize/jquery-context-menu",
@@ -5156,6 +5119,39 @@
     ],
     "packages-dev": [
         {
+            "name": "fabpot/sphinx-php",
+            "version": "v1.0.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fabpot/sphinx-php.git",
+                "reference": "578573fd3215a97e56a4fc113fdb58dbdb4cf6a7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fabpot/sphinx-php/zipball/578573fd3215a97e56a4fc113fdb58dbdb4cf6a7",
+                "reference": "578573fd3215a97e56a4fc113fdb58dbdb4cf6a7",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Sphinx extension for PHP projects",
+            "time": "2018-04-20T11:27:45+00:00"
+        },
+        {
             "name": "facebook/webdriver",
             "version": "1.1.3",
             "source": {
@@ -6593,7 +6589,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "mapbender/fom": 20,
         "mapbender/mapbender": 20,
         "mapbender/coordinates-utility": 20,
         "mapbender/documentation": 20,

@@ -17,9 +17,16 @@ parameters:
     locale:            en
     secret:            ThisTokenIsNotSoSecretChangeIt
 
+    ## Legacy branding / verioning params.
+    ## This is no longer used for versioning Mapbender and will never be updated
+    ## again for a Mapbender release.
+    ## For BC / continuity, you may still use these variables to brand / version your project.
+    ## For summary information / discussion see https://github.com/mapbender/mapbender/pull/1012
+    ## For full project branding / versioning options, see code comment:
+    ## https://github.com/mapbender/mapbender/blob/42e0f8b9a8031118719fc4881a92f0adab4ebacf/src/Mapbender/CoreBundle/DependencyInjection/Compiler/ProvideBrandingPass.php#L17
     fom:
         server_name:   Mapbender
-        server_version: 3.0.7.2
+        server_version: 3.0.7.4
         server_logo:   bundles/mapbendercore/image/logo_mb3.png
 
     # framework : http://symfony.com/doc/2.8/reference/configuration/framework.html#cookie-lifetime
@@ -36,3 +43,10 @@ parameters:
     ows_proxy3_user: ~
     ows_proxy3_password: ~
     ows_proxy3_noproxy: ~
+
+    # default layer order when creating *new* WMS layerset instances
+    # allowed values are either
+    # * "standard": Traditional Mapbender behaviour: top-down rendering in GetCapabilities order;
+    #               also the default if this parameter is not defined
+    # * "reverse": bottom-up, for QGIS server, ArcGIS etc
+#     wms.default_layer_order: standard

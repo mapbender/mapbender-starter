@@ -1,7 +1,38 @@
 # Changelog
 
-## dev-master
+## v3.0.7.7
+- Update mapbender/mapbender to [v3.0.7.7](https://github.com/mapbender/mapbender/releases/tag/v3.0.7.7)
+
+## v3.0.7.6
+- Update mapbender/mapbender to [v3.0.7.6](https://github.com/mapbender/mapbender/releases/tag/v3.0.7.6)
+- Update mapbender/vis-ui.js to [0.0.73](https://github.com/mapbender/vis-ui.js/releases/tag/0.0.73) for performance fix
+- Update mapbender/fom to [v3.0.6.2](https://github.com/mapbender/fom/releases/tag/v3.0.6.2)
+
+## v3.0.7.5 (on dev-master)
+- Fix automation errors based on concrete branch naming ([PR#84](https://github.com/mapbender/mapbender-starter/pull/84))
+- Add Logo to Mapbender Starter and link it in Readme.md ([PR#82](https://github.com/mapbender/mapbender-starter/pull/82))
+- Update Mapbender to [v3.0.7.5](https://github.com/mapbender/mapbender/releases/tag/v3.0.7.5)
+- Update Owsproxy to [v3.0.6.4](https://github.com/mapbender/owsproxy3/releases/tag/v3.0.6.4), includes Owsproxy dependencies
+- Update mapbender/vis-ui.js to [0.0.72](https://github.com/mapbender/vis-ui.js/releases/tag/0.0.72)
+- Update mapbender/data-source to [0.1.8](https://github.com/mapbender/data-source/releases/tag/0.1.8)
+- Update mapbender/digitizer to [1.1.66](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.1.66)
+- Update bundled Composer to [1.6.5](https://github.com/composer/composer/releases/tag/1.6.5)
+- Misc ComposerBootstrap cleanups
+
+## v3.0.7.4 (on dev-master)
+- Bump mapbender to v3.0.7.4, see https://github.com/mapbender/mapbender/releases/tag/v3.0.7.4
+- Shipping yaml applications now use localised text
+
+## v3.0.7.3 (on dev-master)
+- Ship with new Coordinates Utility
 - AppKernel is now an extension of Mapbender\BaseKernel
+- Misc branding updates
+- Misc component namespace changes
+- Misc documentation improvements
+- Separate server:run from main bootstrap script
+- Add .editorconfig
+- Easier Unit Testing
+
 
 ## dev-release/3.0.6
 - Update "a4portrait" Print template
