@@ -2153,16 +2153,16 @@
         },
         {
             "name": "mapbender/coordinates-utility",
-            "version": "1.0.3",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/coordinates-utility.git",
-                "reference": "6d87c10492821c1baac593356f5cbeb6a4d689e6"
+                "reference": "148c6e3ed66da8874e9a395fad3252d0194d65e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/coordinates-utility/zipball/6d87c10492821c1baac593356f5cbeb6a4d689e6",
-                "reference": "6d87c10492821c1baac593356f5cbeb6a4d689e6",
+                "url": "https://api.github.com/repos/mapbender/coordinates-utility/zipball/148c6e3ed66da8874e9a395fad3252d0194d65e9",
+                "reference": "148c6e3ed66da8874e9a395fad3252d0194d65e9",
                 "shasum": ""
             },
             "require": {
@@ -2195,7 +2195,7 @@
                 "navigate",
                 "search"
             ],
-            "time": "2018-05-23T13:06:52+00:00"
+            "time": "2018-11-16T16:07:01+00:00"
         },
         {
             "name": "mapbender/data-source",
