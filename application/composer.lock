@@ -2199,16 +2199,16 @@
         },
         {
             "name": "mapbender/data-source",
-            "version": "0.1.8",
+            "version": "0.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/data-source.git",
-                "reference": "c420dde010bd2cf2e756584d0f55f335ca13f8f5"
+                "reference": "920f4d3a0856fe33ecfb59424d383e14d92f1491"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/data-source/zipball/c420dde010bd2cf2e756584d0f55f335ca13f8f5",
-                "reference": "c420dde010bd2cf2e756584d0f55f335ca13f8f5",
+                "url": "https://api.github.com/repos/mapbender/data-source/zipball/920f4d3a0856fe33ecfb59424d383e14d92f1491",
+                "reference": "920f4d3a0856fe33ecfb59424d383e14d92f1491",
                 "shasum": ""
             },
             "require": {
@@ -2242,7 +2242,7 @@
                 "data source",
                 "mapbender"
             ],
-            "time": "2018-09-26T17:40:01+00:00"
+            "time": "2018-11-21T14:12:36+00:00"
         },
         {
             "name": "mapbender/digitizer",
@@ -5080,39 +5080,6 @@
         }
     ],
     "packages-dev": [
-        {
-            "name": "fabpot/sphinx-php",
-            "version": "v1.0.11",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/fabpot/sphinx-php.git",
-                "reference": "578573fd3215a97e56a4fc113fdb58dbdb4cf6a7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/sphinx-php/zipball/578573fd3215a97e56a4fc113fdb58dbdb4cf6a7",
-                "reference": "578573fd3215a97e56a4fc113fdb58dbdb4cf6a7",
-                "shasum": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "Sphinx extension for PHP projects",
-            "time": "2018-04-20T11:27:45+00:00"
-        },
         {
             "name": "facebook/webdriver",
             "version": "1.1.3",
