@@ -62,6 +62,9 @@
         "wheregroup/cookieconsent": "dev-master"
     },
     "scripts": {
+        "build-bootstrap": [
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap"
+        ],
         "post-install-cmd": [
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "ComposerBootstrap::installAssets",

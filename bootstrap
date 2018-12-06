@@ -1,8 +1,8 @@
 #!/bin/bash
 
 cd application
-echo "# Install composer packages";
-php bin/composer install -o
+php bin/composer install -o --no-scripts
+php bin/composer run build-bootstrap
 php bin/composer init-example
 php app/console assets:install --symlink --relative
 echo Bootstrap finished!
