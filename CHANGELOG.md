@@ -1,5 +1,10 @@
 # Changelog
 
+## dev-master @ 73fc8bb
+- Fix Exception on first bootstrap run, before parameters.yml is created
+- Update mapbender/data-source to 0.1.9
+- Update mapbender/coordinates-utility to 1.0.5
+
 ## v3.0.7.7
 - Update mapbender/mapbender to [v3.0.7.7](https://github.com/mapbender/mapbender/releases/tag/v3.0.7.7)
 
