@@ -231,24 +231,6 @@ class ComposerBootstrap
         echo "\n[$title]\n";
     }
 
-    /**
-     * Generate API documentation
-     */
-    public static function genApiDocumentation()
-    {
-        if (!is_file("bin/apigen")) {
-            return;
-        }
-
-        $parameters     = \Symfony\Component\Yaml\Yaml::parse(file_get_contents("app/config/parameters.yml"));
-        $version        = $parameters["parameters"]["fom"]["server_version"];
-        $title          = escapeshellarg("Mapbender " . $version . " API documenation");
-        $configFilePath = "../apigen.conf";
-        $config         = parse_ini_file($configFilePath);
-        static::printStatus("Generate Mapbender {$version} API documenation to '{$config['destination']}'");
-        echo `bin/apigen -c $configFilePath --title $title`;
-    }
-
     public static function genDocumentation()
     {
         if (static::isWindows()) {
