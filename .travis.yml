@@ -23,7 +23,7 @@ php:
 before_script:
   - if (test $TRAVIS_PULL_REQUEST = false) then git checkout $TRAVIS_BRANCH; fi
   - cd application
-  - bin/composer install -o
+  - bin/composer install -o --ignore-platform-reqs
   - pip install --user selenium
   - python --version
 
