@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d81a930cbdfc3ca3fc11094755bdfa6f",
+    "content-hash": "1526da34dc7c98bd5b0e3e50474c374d",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -1456,12 +1456,12 @@
             "version": "v2.5.14",
             "source": {
                 "type": "git",
-                "url": "https://github.com/doctrine/doctrine2.git",
+                "url": "https://github.com/doctrine/orm.git",
                 "reference": "810a7baf81462a5ddf10e8baa8cb94b6eec02754"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/810a7baf81462a5ddf10e8baa8cb94b6eec02754",
+                "url": "https://api.github.com/repos/doctrine/orm/zipball/810a7baf81462a5ddf10e8baa8cb94b6eec02754",
                 "reference": "810a7baf81462a5ddf10e8baa8cb94b6eec02754",
                 "shasum": ""
             },
@@ -2580,22 +2580,22 @@
         },
         {
             "name": "mapbender/vis-ui.js",
-            "version": "0.0.73",
+            "version": "0.0.75",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/vis-ui.js.git",
-                "reference": "e03578bc3e56255f007371cbbf61c63b3b9c0cca"
+                "reference": "fe96673eabaecc07dafcb8621f5325d5860ed4c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/vis-ui.js/zipball/e03578bc3e56255f007371cbbf61c63b3b9c0cca",
-                "reference": "e03578bc3e56255f007371cbbf61c63b3b9c0cca",
+                "url": "https://api.github.com/repos/mapbender/vis-ui.js/zipball/fe96673eabaecc07dafcb8621f5325d5860ed4c0",
+                "reference": "fe96673eabaecc07dafcb8621f5325d5860ed4c0",
                 "shasum": ""
             },
             "require": {
                 "afarkas/html5shiv": "3.*",
                 "components/bootstrap": "3.*",
-                "components/font-awesome": "4.x",
+                "components/font-awesome": "^3.0 || ^4.0 || ^5.0",
                 "components/jquery": "1.* || 2.*",
                 "components/jqueryui": "1.*",
                 "components/underscore": "1.8.*",
@@ -2645,7 +2645,7 @@
                 "jquery",
                 "vis-ui"
             ],
-            "time": "2018-09-24T07:23:41+00:00"
+            "time": "2019-01-16T12:24:32+00:00"
         },
         {
             "name": "medialize/jquery-context-menu",
