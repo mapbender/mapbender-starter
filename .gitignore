@@ -28,6 +28,7 @@ extra/
 local.properties
 /nbproject/private/
 testresults
+.web-server-pid
 
 # IDEA Project Files
 .idea/
