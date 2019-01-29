@@ -3,7 +3,7 @@ parameters:
     database_host:     ~
     database_port:     ~
     database_name:     ~
-    database_path:     %kernel.root_dir%/db/demo.sqlite
+    database_path:     %kernel.project_dir%/var/db/demo.sqlite
     database_user:     ~
     database_password: ~
 
