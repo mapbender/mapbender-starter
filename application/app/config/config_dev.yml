@@ -2,7 +2,9 @@ imports:
     - { resource: config.yml }
 
 framework:
-    router:   { resource: "%kernel.root_dir%/config/routing_dev.yml" }
+    router:
+        resource: '%kernel.project_dir%/app/config/routing_dev.yml'
+        strict_requirements: true
     profiler: { only_exceptions: false }
 
 web_profiler:
@@ -12,21 +14,17 @@ web_profiler:
 monolog:
     handlers:
         main:
-            type:  stream
-            path:  %kernel.logs_dir%/%kernel.environment%.log
-            level: info
-        firephp:
-            type:  firephp
-            level: info
-
-#assetic:
-#    use_controller: %sass_assets%
-#    filters:
-#        cssrewrite: ~
-#        compass:
-#            style: compressed
-#            load_paths:
-#                 - "%kernel.root_dir%/../mapbender/src/Mapbender/CoreBundle/Resources/public/sass"
-
-#mapbender_core:
-#    sass_assets: %sass_assets%
+            type: stream
+            path: '%kernel.logs_dir%/%kernel.environment%.log'
+            level: debug
+            channels: ['!event']
+        console:
+            type: console
+            process_psr_3_messages: false
+            channels: ['!event', '!doctrine', '!console']
+        # To follow logs in real time, execute the following command:
+        # `bin/console server:log -vv`
+        server_log:
+            type: server_log
+            process_psr_3_messages: false
+            host: 127.0.0.1:9911

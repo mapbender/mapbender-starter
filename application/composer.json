@@ -16,116 +16,68 @@
         "user-list":    "https://lists.osgeo.org/pipermail/mapbender_users/"
     },
     "autoload": {
-        "psr-4": { "": "src/" }
+        "psr-4": { "": "src/" },
+        "classmap": [
+            "app/AppKernel.php",
+            "app/AppCache.php"
+        ]
+    },
+    "autoload-dev": {
+        "files": [
+            "vendor/symfony/symfony/src/Symfony/Component/VarDumper/Resources/functions/dump.php"
+        ]
     },
     "require-dev": {
-        "phpunit/phpunit": "^4.8",
-        "predis/predis": "~1.0",
-        "satooshi/php-coveralls": "~0.6",
-        "phpunit/phpunit-selenium": "^2.0",
-        "facebook/webdriver": "1.1.*",
-        "phing/phing": "2.*",
-        "phantomjs/phantomjs": "1.x"
+        "sensio/generator-bundle": "^3.0",
+        "symfony/phpunit-bridge": "^3.0"
     },
     "require": {
-        "php": ">=5.3.9",
-        "symfony/symfony": "2.8.x",
-        "doctrine/orm": "~2.2,>=2.2.3",
-        "doctrine/doctrine-bundle": "1.x",
-        "twig/extensions": "1.x",
-        "symfony/assetic-bundle": "2.x",
-        "symfony/swiftmailer-bundle": "2.3.x",
-        "symfony/monolog-bundle": "2.3.x",
-        "sensio/distribution-bundle": "~4.0",
-        "sensio/framework-extra-bundle": "~3.0",
-        "sensio/generator-bundle": "2.3.x",
-
-        "friendsofsymfony/jsrouting-bundle": "^1.5",
-
-        "incenteev/composer-parameter-handler": "~2.0",
-
+        "php": ">=5.5",
+        "ext-json": "*",
+        "doctrine/doctrine-bundle": "^1.6",
+        "doctrine/orm": "^2.5",
+        "doctrine/doctrine-migrations-bundle": "^1.3",
         "doctrine/doctrine-fixtures-bundle": "2.3.*",
-
-        "gedmo/doctrine-extensions": "~2.3",
-        "mapbender/vis-ui.js": "~0.0.71",
-        "components/jquery": "^1.11.2",
-
-        "mnsami/composer-custom-directory-installer": "1.0.*",
-
-        "mapbender/fom": "^3.0.6.0",
-        "mapbender/mapbender": "~3.0.7.0",
-        "mapbender/owsproxy": "~3.0.6",
-        "mapbender/digitizer": "1.1.x",
-
+        "incenteev/composer-parameter-handler": "^2.0",
+        "sensio/distribution-bundle": "^5.0.19",
+        "sensio/framework-extra-bundle": "^5.0.0",
+        "symfony/monolog-bundle": "^3.1.0",
+        "symfony/polyfill-apcu": "^1.0",
+        "symfony/swiftmailer-bundle": "^2.6.4",
+        "symfony/symfony": "3.4.*",
+        "symfony/security-acl": "^3.0",
+        "twig/twig": "^1.0||^2.0",
+        "mapbender/mapbender": "dev-symfony-upgrade",
+        "mapbender/fom": "dev-symfony-upgrade",
+        "mapbender/owsproxy": "dev-symfony-upgrade",
         "mapbender/coordinates-utility": "^1.0.2",
-        "mapbender/documentation": "dev-master",
-        "wheregroup/cookieconsent": "dev-master"
+        "wheregroup/cookieconsent": "dev-master",
+        "eslider/sasscb":  "3.1.x",
+        "gedmo/doctrine-extensions": "~2.3",
+        "mnsami/composer-custom-directory-installer": "1.0.*",
+        "components/jquery": "^1.11.2",
+        "symfony/assetic-bundle": "dev-master"
     },
     "scripts": {
-        "build-bootstrap": [
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap"
+        "symfony-scripts": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
         ],
         "post-install-cmd": [
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-            "ComposerBootstrap::installAssets",
-            "ComposerBootstrap::prepareBinaries",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
+            "@symfony-scripts"
         ],
         "post-update-cmd": [
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-            "ComposerBootstrap::installAssets",
-            "ComposerBootstrap::prepareBinaries",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
-        ],
-        "update-assets":[
-            "ComposerBootstrap::installAssets",
-            "ComponentInstaller\\Installer::postAutoloadDump"
-        ],
-        "docs": [
-            "ComposerBootstrap::genDocumentation"
-        ],
-        "gen-user-docs": [
-            "ComposerBootstrap::genDocumentation"
-        ],
-        "clean": [
-            "ComposerBootstrap::clearCache"
-        ],
-        "version": [
-            "ComposerBootstrap::displayVersion"
-        ],
-        "project-name": [
-            "ComposerBootstrap::displayProjectName"
-        ],
-        "init-example": [
-            "ComposerBootstrap::checkConfiguration"
-        ],
-        "drop-and-rebuild-database": [
-            "ComposerBootstrap::rebuildDatabase"
-        ],
-        "install-hard-copy-assets": [
-            "ComposerBootstrap::installHardCopyAssets"
-        ],
-        "install-sym-link-assets": [
-            "ComposerBootstrap::installSymLinkAssets"
-        ],
-        "dist":[
-            "ComposerBootstrap::distribute"
-        ],
-        "build": [
-            "ComposerBootstrap::distribute",
-            "ComposerBootstrap::build"
-        ],
-        "log": [
-            "ComposerBootstrap::generateChangeLog"
+            "@symfony-scripts"
         ]
     },
     "config": {
         "bin-dir": "bin",
         "component-dir": "web/components",
         "component-baseurl": "/components",
-        "platform": {
-            "php": "5.5.4"
-        },
         "archive-dir": "../dist",
         "archive-format": "tar.gz",
         "optimize-autoloader": true,
@@ -137,9 +89,16 @@
     "minimum-stability": "stable",
     "extra": {
         "symfony-app-dir": "app",
+        "symfony-bin-dir": "bin",
+        "symfony-var-dir": "var",
         "symfony-web-dir": "web",
+        "symfony-tests-dir": "tests",
+        "symfony-assets-install": "relative",
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml"
+        },
+        "branch-alias": null,
         "ATTENTION": "Symlinks creating under MS Windows works only if composer runs with admin permissions",
-        "symfony-assets-install": "symlink",
         "installer-paths":{
             "mapbender/": ["mapbender/mapbender"],
             "fom/": ["mapbender/fom"],
@@ -164,6 +123,10 @@
                     "bin/phantomjs"
                 ]
             }
+        },
+        {
+            "type": "vcs",
+            "url":  "git@repo.wheregroup.com:mapbender3/developer-tools.git"
         }
     ]
 }

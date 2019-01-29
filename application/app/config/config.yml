@@ -1,73 +1,90 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
-#Uncomment then next line if you have problems using an oracle database with mapbender.
+    - { resource: services.yml }
+# Uncomment then next line if you have problems using an oracle database with mapbender.
 #   - { resource: oracle.yml }
 
-framework:
-    #esi:             ~
-    translator:      { fallback: %fallback_locale% }
-    secret:          %secret%
-    router:
-        resource: "%kernel.root_dir%/config/routing.yml"
-        strict_requirements: %kernel.debug%
-    form:            true
-    csrf_protection: true
-    validation:      { enable_annotations: true }
-    templating:      { engines: ['twig'] } #assets_version: SomeVersionScheme
-    default_locale:  %locale%
-    session:
-        cookie_httponly: true
-        cookie_secure: %cookie_secure%
-        cookie_lifetime: %cookie_lifetime%
+# Put parameters here that don't need to change on each machine where the app is deployed
+parameters:
+    fallback_locale: en
 
+framework:
+    translator: { fallbacks: ['%fallback_locale%'] }
+    secret: '%secret%'
+    router:
+        resource: '%kernel.project_dir%/app/config/routing.yml'
+        strict_requirements: ~
+    form: ~
+    csrf_protection: ~
+    validation: { enable_annotations: true }
+    default_locale:  '%locale%'
+    trusted_hosts: ~
+    session:
+        # https://symfony.com/doc/current/reference/configuration/framework.html#handler-id
+        handler_id: session.handler.native_file
+        save_path: '%kernel.project_dir%/var/sessions/%kernel.environment%'
+        cookie_httponly: true
+        cookie_secure: '%cookie_secure%'
+        cookie_lifetime: '%cookie_lifetime%'
+    fragments: ~
+    http_method_override: true
+    assets: ~
+    php_errors:
+        log: true
+    templating:
+        engines: ['twig']
 
 # Twig Configuration
 twig:
-    debug:            %kernel.debug%
-    strict_variables: %kernel.debug%
+    debug: '%kernel.debug%'
+    strict_variables: '%kernel.debug%'
     globals:
-        fom:    %fom%
-    form:
-        resources:
-            - 'FOMCoreBundle:Form:fields.html.twig'
+        fom: '%fom%'
+    form_themes: ['FOMCoreBundle:Form:fields.html.twig']
+
+
+# Doctrine Configuration
+doctrine:
+    dbal:
+        default_connection: default
+        connections:
+            default:
+                driver: '%database_driver%'
+                host: '%database_host%'
+                port: '%database_port%'
+                dbname: '%database_name%'
+                path: '%database_path%'
+                user: '%database_user%'
+                password: '%database_password%'
+                persistent: true
+                charset:  UTF8
+                logging: '%kernel.debug%'
+                profiling: '%kernel.debug%'
+    orm:
+        auto_generate_proxy_classes: '%kernel.debug%'
+        naming_strategy: doctrine.orm.naming_strategy.underscore
+        auto_mapping: true
 
 # Assetic Configuration
 assetic:
-    debug: %kernel.debug%
+    debug: '%kernel.debug%'
     use_controller: true
     filters:
         cssrewrite: ~
         sass: ~
 
-# Doctrine Configuration
-doctrine:
-    dbal:
-        default_connection: default    
-        connections:
-            default:
-                driver:   %database_driver%
-                host:     %database_host%
-                port:     %database_port%
-                dbname:   %database_name%
-                path:     %database_path%
-                user:     %database_user%
-                password: %database_password%
-                persistent: true
-                charset:  UTF8
-                logging: %kernel.debug%
-                profiling: %kernel.debug%
-    orm:
-        auto_generate_proxy_classes: %kernel.debug%
-        auto_mapping: true
-
 # Swiftmailer Configuration
 swiftmailer:
-    transport: %mailer_transport%
-    host:      %mailer_host%
-    username:  %mailer_user%
-    password:  %mailer_password%
-    spool:     { type: memory }
+    transport: '%mailer_transport%'
+    host: '%mailer_host%'
+    username: '%mailer_user%'
+    password: '%mailer_password%'
+    spool: { type: memory }
+
+sensio_framework_extra:
+    router:
+        annotations: false
 
 # FOM Manager Configuration
 fom_manager:
@@ -103,17 +120,17 @@ fom_user:
 
 # OWSProxy Configuration
 ows_proxy3_core:
-    logging: %ows_proxy3_logging%
-    obfuscate_client_ip: %ows_proxy3_obfuscate_client_ip%
+    logging: '%ows_proxy3_logging%'
+    obfuscate_client_ip: '%ows_proxy3_obfuscate_client_ip%'
     proxy:
-        host: %ows_proxy3_host%
-        port: %ows_proxy3_port%
-        connecttimeout: %ows_proxy3_connecttimeout%
-        timeout: %ows_proxy3_timeout%
-        user: %ows_proxy3_user%
-        password: %ows_proxy3_password%
+        host: '%ows_proxy3_host%'
+        port: '%ows_proxy3_port%'
+        connecttimeout: '%ows_proxy3_connecttimeout%'
+        timeout: '%ows_proxy3_timeout%'
+        user: '%ows_proxy3_user%'
+        password: '%ows_proxy3_password%'
+        noproxy: '%ows_proxy3_noproxy%'
         checkssl: true
-        noproxy: %ows_proxy3_noproxy%
 
 # Mapbender Configuration
 mapbender_core: ~
