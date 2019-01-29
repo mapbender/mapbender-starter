@@ -2906,12 +2906,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "7900f2f3846b15bb1e74b858ba3e92a167bd6342"
+                "reference": "f8734524d79d174df4eb12c82d104997e7b97abc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/7900f2f3846b15bb1e74b858ba3e92a167bd6342",
-                "reference": "7900f2f3846b15bb1e74b858ba3e92a167bd6342",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/f8734524d79d174df4eb12c82d104997e7b97abc",
+                "reference": "f8734524d79d174df4eb12c82d104997e7b97abc",
                 "shasum": ""
             },
             "require": {
@@ -2940,7 +2940,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2019-01-29T09:27:29+00:00"
+            "time": "2019-01-29T13:53:55+00:00"
         },
         {
             "name": "mapbender/owsproxy",
