@@ -46,17 +46,25 @@
         "symfony/swiftmailer-bundle": "^2.6.4",
         "symfony/symfony": "3.4.*",
         "symfony/security-acl": "^3.0",
+        "symfony/assetic-bundle": "dev-master",
         "twig/twig": "^1.0||^2.0",
+
         "mapbender/mapbender": "dev-symfony-upgrade",
         "mapbender/fom": "dev-symfony-upgrade",
         "mapbender/owsproxy": "dev-symfony-upgrade",
         "mapbender/coordinates-utility": "^1.0.2",
+
         "wheregroup/cookieconsent": "dev-master",
+        "wheregroup/compass-mixins": "0.x",
+        "wheregroup/joii": "3.x",
+        "wheregroup/open-sans": "1.x",
+
+        "arsgeografica/signing": "1.1.x",
         "eslider/sasscb":  "3.1.x",
         "gedmo/doctrine-extensions": "~2.3",
         "mnsami/composer-custom-directory-installer": "1.0.*",
         "components/jquery": "^1.11.2",
-        "symfony/assetic-bundle": "dev-master"
+        "setasign/fpdi-fpdf": "1.6.*"
     },
     "scripts": {
         "symfony-scripts": [

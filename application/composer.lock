@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "41376a5bc981da35db706d2b46d56155",
+    "content-hash": "e684d9307da4bdd4fd8e69e1261da6f4",
     "packages": [
         {
             "name": "arsgeografica/signing",
@@ -3735,6 +3735,138 @@
             "time": "2018-12-19T17:14:59+00:00"
         },
         {
+            "name": "setasign/fpdf",
+            "version": "1.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Setasign/FPDF.git",
+                "reference": "2c68c9e6c034ac3187d25968790139a73184cdb1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Setasign/FPDF/zipball/2c68c9e6c034ac3187d25968790139a73184cdb1",
+                "reference": "2c68c9e6c034ac3187d25968790139a73184cdb1",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "fpdf.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "no usage restriction"
+            ],
+            "authors": [
+                {
+                    "name": "Olivier Plathey",
+                    "email": "oliver@fpdf.org",
+                    "homepage": "http://fpdf.org/"
+                }
+            ],
+            "description": "FPDF is a PHP class which allows to generate PDF files with pure PHP. F from FPDF stands for Free: you may use it for any kind of usage and modify it to suit your needs.",
+            "homepage": "http://www.fpdf.org",
+            "keywords": [
+                "fpdf",
+                "pdf"
+            ],
+            "time": "2016-01-01T17:47:15+00:00"
+        },
+        {
+            "name": "setasign/fpdi",
+            "version": "1.6.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Setasign/FPDI.git",
+                "reference": "a6ad58897a6d97cc2d2cd2adaeda343b25a368ea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Setasign/FPDI/zipball/a6ad58897a6d97cc2d2cd2adaeda343b25a368ea",
+                "reference": "a6ad58897a6d97cc2d2cd2adaeda343b25a368ea",
+                "shasum": ""
+            },
+            "suggest": {
+                "setasign/fpdf": "FPDI will extend this class but as it is also possible to use \"tecnickcom/tcpdf\" as an alternative there's no fixed dependency configured.",
+                "setasign/fpdi-fpdf": "Use this package to automatically evaluate dependencies to FPDF.",
+                "setasign/fpdi-tcpdf": "Use this package to automatically evaluate dependencies to TCPDF."
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "filters/",
+                    "fpdi.php",
+                    "fpdf_tpl.php",
+                    "fpdi_pdf_parser.php",
+                    "pdf_context.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jan Slabon",
+                    "email": "jan.slabon@setasign.com",
+                    "homepage": "https://www.setasign.com"
+                }
+            ],
+            "description": "FPDI is a collection of PHP classes facilitating developers to read pages from existing PDF documents and use them as templates in FPDF. Because it is also possible to use FPDI with TCPDF, there are no fixed dependencies defined. Please see suggestions for packages which evaluates the dependencies automatically.",
+            "homepage": "https://www.setasign.com/fpdi",
+            "keywords": [
+                "fpdf",
+                "fpdi",
+                "pdf"
+            ],
+            "time": "2017-05-11T14:25:49+00:00"
+        },
+        {
+            "name": "setasign/fpdi-fpdf",
+            "version": "1.6.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Setasign/FPDI-FPDF.git",
+                "reference": "a5dda72b78253c0e9e4d644e6e3af4b94662e27e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Setasign/FPDI-FPDF/zipball/a5dda72b78253c0e9e4d644e6e3af4b94662e27e",
+                "reference": "a5dda72b78253c0e9e4d644e6e3af4b94662e27e",
+                "shasum": ""
+            },
+            "require": {
+                "setasign/fpdf": "1.8.1",
+                "setasign/fpdi": "1.6.2"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "fpdi_bridge.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jan Slabon",
+                    "email": "jan.slabon@setasign.com",
+                    "homepage": "https://www.setasign.com"
+                }
+            ],
+            "description": "Kind of metadata package for dependencies of the latest versions of FPDI and FPDF.",
+            "homepage": "https://www.setasign.com/fpdi",
+            "keywords": [
+                "fpdf",
+                "fpdi",
+                "pdf"
+            ],
+            "time": "2017-05-11T14:57:54+00:00"
+        },
+        {
             "name": "swiftmailer/swiftmailer",
             "version": "v5.4.12",
             "source": {
@@ -4663,6 +4795,38 @@
             "time": "2019-01-14T15:00:48+00:00"
         },
         {
+            "name": "wheregroup/compass-mixins",
+            "version": "0.12.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/WhereGroup/compass-mixins.git",
+                "reference": "f023d953f8aad4e6223b14bed296703ab631ca2c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/WhereGroup/compass-mixins/zipball/f023d953f8aad4e6223b14bed296703ab631ca2c",
+                "reference": "f023d953f8aad4e6223b14bed296703ab631ca2c",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Guillaume Balaine",
+                    "email": "igosuki@gmail.com"
+                },
+                {
+                    "name": "Michael Heillein"
+                }
+            ],
+            "description": "Compass stylesheets",
+            "homepage": "https://github.com/Igosuki/compass-mixins",
+            "time": "2017-04-20T08:22:51+00:00"
+        },
+        {
             "name": "wheregroup/cookieconsent",
             "version": "dev-master",
             "source": {
@@ -4699,6 +4863,106 @@
             ],
             "description": "A free solution to the EU Cookie Law https://cookieconsent.insites.com/",
             "time": "2018-05-22T11:49:22+00:00"
+        },
+        {
+            "name": "wheregroup/joii",
+            "version": "3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/WhereGroup/joii.git",
+                "reference": "23bbe44c6f29fe13482c26f13342e58d41b2d35d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/WhereGroup/joii/zipball/23bbe44c6f29fe13482c26f13342e58d41b2d35d",
+                "reference": "23bbe44c6f29fe13482c26f13342e58d41b2d35d",
+                "shasum": ""
+            },
+            "require": {
+                "robloach/component-installer": "0.x"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "dist/joii.min.js"
+                    ],
+                    "files": [
+                        "dist/joii.js"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Javascript Object Inheritance Implementation",
+            "homepage": "http://joii.harold.info",
+            "keywords": [
+                "OOP",
+                "class",
+                "enum",
+                "enumerator",
+                "extends",
+                "inheritance",
+                "interface",
+                "javascript",
+                "joii",
+                "private",
+                "protected",
+                "public",
+                "visibility"
+            ],
+            "time": "2017-04-20T09:05:36+00:00"
+        },
+        {
+            "name": "wheregroup/open-sans",
+            "version": "1.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/WhereGroup/open-sans.git",
+                "reference": "3ddb115c2a969303d7a049a1be66ca41b0d56c98"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/WhereGroup/open-sans/zipball/3ddb115c2a969303d7a049a1be66ca41b0d56c98",
+                "reference": "3ddb115c2a969303d7a049a1be66ca41b0d56c98",
+                "shasum": ""
+            },
+            "require": {
+                "robloach/component-installer": "0.x"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "styles": [
+                        "*.css"
+                    ],
+                    "files": [
+                        "fonts/*/*"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Gustavo Henke",
+                    "email": "gustavo@injoin.com.br"
+                },
+                {
+                    "name": "Martin Domke",
+                    "email": "martin.domke@gateprotect.com"
+                }
+            ],
+            "description": "Open Sans @font-face kit",
+            "homepage": "https://github.com/FontFaceKit/open-sans",
+            "keywords": [
+                "font"
+            ],
+            "time": "2017-04-20T09:20:46+00:00"
         },
         {
             "name": "zendframework/zend-code",
@@ -4933,11 +5197,11 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "symfony/assetic-bundle": 20,
         "mapbender/mapbender": 20,
         "mapbender/fom": 20,
         "mapbender/owsproxy": 20,
-        "wheregroup/cookieconsent": 20,
-        "symfony/assetic-bundle": 20
+        "wheregroup/cookieconsent": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
