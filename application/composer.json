@@ -55,11 +55,15 @@
         "mapbender/digitizer": "1.1.x",
         "mapbender/coordinates-utility": "dev-ol4@dev",
         "mapbender/documentation": "dev-master",
+        "components/font-awesome": "^4.0",
         "wheregroup/cookieconsent": "dev-master",
         "openlayers/openlayers": "^4.6",
         "proj4js/proj4js": "^2.4"
     },
     "scripts": {
+        "build-bootstrap": [
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap"
+        ],
         "post-install-cmd": [
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "ComposerBootstrap::installAssets",
@@ -77,11 +81,7 @@
             "ComponentInstaller\\Installer::postAutoloadDump"
         ],
         "docs": [
-            "ComposerBootstrap::genApiDocumentation",
             "ComposerBootstrap::genDocumentation"
-        ],
-        "gen-api-docs": [
-            "ComposerBootstrap::genApiDocumentation"
         ],
         "gen-user-docs": [
             "ComposerBootstrap::genDocumentation"

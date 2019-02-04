@@ -16,9 +16,8 @@ package:
   except:
     - tags
   script:
-    - bin/composer install -o --no-dev
+    - bin/composer install -o --no-dev --ignore-platform-reqs
     - bin/composer init-example
-    - bin/composer gen-api-docs
     - bin/composer gen-user-docs
     - bin/composer "build" "tar.gz" "${PROJECT_NAME}" "${NEXT_VERSION}"
     - bin/composer "build" "zip" "${PROJECT_NAME}" "${NEXT_VERSION}"
