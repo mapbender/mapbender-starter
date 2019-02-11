@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0345258fff5ddd58ab328f70a87aef2e",
+    "content-hash": "06e810aacec059f5abef9ae9a49ee67f",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -2246,23 +2246,28 @@
         },
         {
             "name": "mapbender/digitizer",
-            "version": "1.1.66",
+            "version": "1.2-RC8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "c09ee8cc101c2666fa1c5af4e7fe075dd1c9ebae"
+                "reference": "d97c49df9f7f51f343a243e424a5aa49277de923"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/c09ee8cc101c2666fa1c5af4e7fe075dd1c9ebae",
-                "reference": "c09ee8cc101c2666fa1c5af4e7fe075dd1c9ebae",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/d97c49df9f7f51f343a243e424a5aa49277de923",
+                "reference": "d97c49df9f7f51f343a243e424a5aa49277de923",
                 "shasum": ""
             },
             "require": {
                 "blueimp/jquery-file-upload": "9.*",
+                "debugteam/bootstrap-colorpicker": "1.x",
                 "mapbender/data-source": "0.*",
                 "mapbender/vis-ui.js": "*",
+                "phayes/geophp": "1.2",
                 "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "mapbender/data-source": "@dev"
             },
             "type": "library",
             "extra": {
@@ -2272,8 +2277,8 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Mapbender\\DigitizerBundle": "."
+                "psr-4": {
+                    "Mapbender\\DigitizerBundle\\": "."
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2297,7 +2302,7 @@
                 "digitizing",
                 "mapbender"
             ],
-            "time": "2018-09-26T19:15:49+00:00"
+            "time": "2019-02-04T14:22:07+00:00"
         },
         {
             "name": "mapbender/fom",
@@ -2548,16 +2553,16 @@
         },
         {
             "name": "mapbender/vis-ui.js",
-            "version": "0.0.75",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/vis-ui.js.git",
-                "reference": "fe96673eabaecc07dafcb8621f5325d5860ed4c0"
+                "reference": "50dbee1950a49ab3cbf08a401e2d571877259176"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/vis-ui.js/zipball/fe96673eabaecc07dafcb8621f5325d5860ed4c0",
-                "reference": "fe96673eabaecc07dafcb8621f5325d5860ed4c0",
+                "url": "https://api.github.com/repos/mapbender/vis-ui.js/zipball/50dbee1950a49ab3cbf08a401e2d571877259176",
+                "reference": "50dbee1950a49ab3cbf08a401e2d571877259176",
                 "shasum": ""
             },
             "require": {
@@ -2574,6 +2579,9 @@
                 "rogeriopradoj/respond": "1.4.*",
                 "select2/select2": "^4.0",
                 "wheregroup/jquerydialogextendjs": "2.x"
+            },
+            "conflict": {
+                "mapbender/digitizer": "<1.1.67"
             },
             "require-dev": {
                 "components/normalize.css": "3.0.*",
@@ -2613,7 +2621,7 @@
                 "jquery",
                 "vis-ui"
             ],
-            "time": "2019-01-16T12:24:32+00:00"
+            "time": "2019-02-04T12:14:52+00:00"
         },
         {
             "name": "medialize/jquery-context-menu",
@@ -6487,6 +6495,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "mapbender/mapbender": 20,
+        "mapbender/digitizer": 5,
         "wheregroup/cookieconsent": 20
     },
     "prefer-stable": false,
