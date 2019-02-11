@@ -1,5 +1,5 @@
 cd application
-php bin/composer install -o --no-scripts
+php bin/composer install -o --no-scripts --no-suggest
 php bin/composer run build-bootstrap
 php bin/composer init-example
 php app/console assets:install
