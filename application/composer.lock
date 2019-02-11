@@ -2404,22 +2404,22 @@
         },
         {
             "name": "mapbender/mapbender-icons",
-            "version": "1.4",
+            "version": "1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/icons.git",
-                "reference": "f9e7e258c25acc4f426ebf2e6a855bbb03042316"
+                "reference": "4158bb1fb883d338a5e6597f8a73cbb991a7a48d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/icons/zipball/f9e7e258c25acc4f426ebf2e6a855bbb03042316",
-                "reference": "f9e7e258c25acc4f426ebf2e6a855bbb03042316",
+                "url": "https://api.github.com/repos/mapbender/icons/zipball/4158bb1fb883d338a5e6597f8a73cbb991a7a48d",
+                "reference": "4158bb1fb883d338a5e6597f8a73cbb991a7a48d",
                 "shasum": ""
             },
             "require": {
                 "robloach/component-installer": "*"
             },
-            "type": "library",
+            "type": "component",
             "extra": {
                 "component": {
                     "styles": [
@@ -2447,7 +2447,7 @@
                 "icons",
                 "mapbender3"
             ],
-            "time": "2015-10-21T08:43:30+00:00"
+            "time": "2018-12-03T08:41:07+00:00"
         },
         {
             "name": "mapbender/mapquery",
