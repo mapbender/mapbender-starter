@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e5224f764b01c1c3c5f5918f37a57944",
+    "content-hash": "0345258fff5ddd58ab328f70a87aef2e",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -2199,16 +2199,16 @@
         },
         {
             "name": "mapbender/data-source",
-            "version": "0.1.9",
+            "version": "0.1.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/data-source.git",
-                "reference": "920f4d3a0856fe33ecfb59424d383e14d92f1491"
+                "reference": "00ffc3a74b16196bfdc8aafc72a1f3b001ed01a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/data-source/zipball/920f4d3a0856fe33ecfb59424d383e14d92f1491",
-                "reference": "920f4d3a0856fe33ecfb59424d383e14d92f1491",
+                "url": "https://api.github.com/repos/mapbender/data-source/zipball/00ffc3a74b16196bfdc8aafc72a1f3b001ed01a0",
+                "reference": "00ffc3a74b16196bfdc8aafc72a1f3b001ed01a0",
                 "shasum": ""
             },
             "require": {
@@ -2242,7 +2242,7 @@
                 "data source",
                 "mapbender"
             ],
-            "time": "2018-11-21T14:12:36+00:00"
+            "time": "2019-02-11T15:44:49+00:00"
         },
         {
             "name": "mapbender/digitizer",
