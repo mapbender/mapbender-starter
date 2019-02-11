@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1526da34dc7c98bd5b0e3e50474c374d",
+    "content-hash": "e5224f764b01c1c3c5f5918f37a57944",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -2300,37 +2300,6 @@
             "time": "2018-09-26T19:15:49+00:00"
         },
         {
-            "name": "mapbender/documentation",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mapbender/mapbender-documentation.git",
-                "reference": "c6ee6e325708cf0f797a3f4866fb23b0c0908937"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/c6ee6e325708cf0f797a3f4866fb23b0c0908937",
-                "reference": "c6ee6e325708cf0f797a3f4866fb23b0c0908937",
-                "shasum": ""
-            },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Astrid Emde"
-                }
-            ],
-            "description": "Mapbender documentation",
-            "keywords": [
-                "documentation",
-                "mapbender"
-            ],
-            "time": "2018-09-06T09:12:43+00:00"
-        },
-        {
             "name": "mapbender/fom",
             "version": "v3.0.6.2",
             "source": {
@@ -2375,16 +2344,16 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v3.0.7.7",
+            "version": "dev-release/3.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "7aae4cc02fd2a259333a87bf8785227baa29b499"
+                "reference": "01aeb8f48c80c3749272f4928d41894844c3819d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/7aae4cc02fd2a259333a87bf8785227baa29b499",
-                "reference": "7aae4cc02fd2a259333a87bf8785227baa29b499",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/01aeb8f48c80c3749272f4928d41894844c3819d",
+                "reference": "01aeb8f48c80c3749272f4928d41894844c3819d",
                 "shasum": ""
             },
             "require": {
@@ -2394,12 +2363,11 @@
                 "doctrine/doctrine-migrations-bundle": "^1.3",
                 "doctrine/orm": "^2.2.3",
                 "eslider/sasscb": "3.1.x",
-                "friendsofsymfony/jsrouting-bundle": "1.5.x",
                 "mapbender/fom": "^3.0.6.2@dev || ~4.0.0@dev",
                 "mapbender/mapbender-icons": "1.x",
                 "mapbender/mapquery": "1.x",
                 "mapbender/owsproxy": "^3.0.6.2@dev",
-                "mapbender/vis-ui.js": "0.0.x",
+                "mapbender/vis-ui.js": "~0.0",
                 "php": ">=5.4.30",
                 "setasign/fpdi-fpdf": "1.6.*",
                 "symfony/symfony": "^2.3",
@@ -2432,7 +2400,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2018-11-07T13:33:32+00:00"
+            "time": "2019-02-11T15:14:52+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -6518,7 +6486,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "mapbender/documentation": 20,
+        "mapbender/mapbender": 20,
         "wheregroup/cookieconsent": 20
     },
     "prefer-stable": false,

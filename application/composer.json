@@ -52,12 +52,11 @@
         "mnsami/composer-custom-directory-installer": "1.0.*",
 
         "mapbender/fom": "^3.0.6.0",
-        "mapbender/mapbender": "~3.0.7.0",
+        "mapbender/mapbender": "dev-release/3.0.7@dev",
         "mapbender/owsproxy": "~3.0.6",
         "mapbender/digitizer": "1.1.x",
 
         "mapbender/coordinates-utility": "^1.0.2",
-        "mapbender/documentation": "dev-master",
         "components/font-awesome": "^4.0",
         "wheregroup/cookieconsent": "dev-master"
     },
