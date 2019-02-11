@@ -2353,12 +2353,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "01aeb8f48c80c3749272f4928d41894844c3819d"
+                "reference": "dce03a5cc8e1d7a738ec7095858a87dacf171c7b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/01aeb8f48c80c3749272f4928d41894844c3819d",
-                "reference": "01aeb8f48c80c3749272f4928d41894844c3819d",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/dce03a5cc8e1d7a738ec7095858a87dacf171c7b",
+                "reference": "dce03a5cc8e1d7a738ec7095858a87dacf171c7b",
                 "shasum": ""
             },
             "require": {
@@ -2405,7 +2405,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2019-02-11T15:14:52+00:00"
+            "time": "2019-02-11T17:04:38+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
