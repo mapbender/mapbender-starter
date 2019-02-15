@@ -16,14 +16,15 @@ package:
   except:
     - tags
   script:
-    - bin/composer install -o --no-dev --ignore-platform-reqs
+    - bin/composer install -o --no-dev --ignore-platform-reqs --no-scripts --no-suggest
+    - bin/composer run build-bootstrap
     - bin/composer init-example
     - bin/composer gen-user-docs
     - bin/composer "build" "tar.gz" "${PROJECT_NAME}" "${NEXT_VERSION}"
     - bin/composer "build" "zip" "${PROJECT_NAME}" "${NEXT_VERSION}"
 
   artifacts:
-    name: "$(git describe --tags)-$(git rev-parse --short HEAD)"
+    name: "$(git describe --tags HEAD)"
     paths:
       - "${CI_PROJECT_DIR}/dist/*.tar.gz"
       - "${CI_PROJECT_DIR}/dist/*.zip"
