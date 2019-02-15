@@ -418,8 +418,9 @@ class ComposerBootstrap
         }
 
         if ($vendorType == "git") {
-            list($projectName, $projectVersion) = explode("/", self::getGitBranchName());
-            echo $projectName . "\n";
+            $branchNameParts = explode('/', self::getGitBranchName());
+            $firstPart = implode('', array_slice($branchNameParts, 0, 1));
+            echo "{$firstPart}\n";
         }
     }
 
