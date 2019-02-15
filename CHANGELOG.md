@@ -1,9 +1,11 @@
 # Changelog
 
-## dev-master @ 5c36231
+## dev-master @ 7362e4f
 - Fix Exception on first bootstrap run, before parameters.yml is created
 - Update mapbender/data-source to 0.1.9
 - Update mapbender/coordinates-utility to 1.0.5
+- Fix missing backend icons after first bootstrap run
+- Fix CI build failures ([PR#86](https://github.com/mapbender/mapbender-starter/pull/86))
 - Ignore platform reqs in CI / automation environment composer install to allow clean php extension dependency modelling
 - Remove nonfunctional remnant apigen-dependent commands; apigen required was removed 11 months ago
 - Downgrade default log level from debug => info to reduce log spam and increase visibility of more significant messages
