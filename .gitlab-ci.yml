@@ -24,7 +24,7 @@ package:
     - bin/composer "build" "zip" "${PROJECT_NAME}" "${NEXT_VERSION}"
 
   artifacts:
-    name: "$(git describe --tags)-$(git rev-parse --short HEAD)"
+    name: "$(git describe --tags HEAD)"
     paths:
       - "${CI_PROJECT_DIR}/dist/*.tar.gz"
       - "${CI_PROJECT_DIR}/dist/*.zip"
