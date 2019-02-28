@@ -1,9 +1,15 @@
-# Changelog
-
-## dev-master @ 7362e4f
+## v3.0.8-beta1
+- Update mapbender/mapbender to [3.0.8-beta1](https://github.com/mapbender/mapbender/releases/tag/v3.0.8-beta1)
+- Update mapbender/digitizer to [1.2-RC8](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.2-RC8)
+- Update mapbender/data-source to [0.1.10](https://github.com/mapbender/data-source/releases/tag/0.1.10)
+- Update mapbender/vis-ui.js to [0.2.0](https://github.com/mapbender/vis-ui.js/releases/tag/0.2.0)
+- Update mapbender/coordinates-utility to [1.0.6.1](https://github.com/mapbender/coordinates-utility/releases/tag/1.0.6.1)
+- Update mapbender/icons to [1.5](https://github.com/mapbender/icons/releases/tag/1.5)
+- Removed [mapbender/documentation](https://github.com/mapbender/mapbender-documentation) dependency. The end user
+  documentation will no longer be included by default and some of the build amenities have been removed from
+  Mapbender Starter. Please see [the main repository](https://github.com/mapbender/mapbender-documentation) for
+  standalone build instructions.
 - Fix Exception on first bootstrap run, before parameters.yml is created
-- Update mapbender/data-source to 0.1.9
-- Update mapbender/coordinates-utility to 1.0.5
 - Fix missing backend icons after first bootstrap run
 - Fix CI build failures ([PR#86](https://github.com/mapbender/mapbender-starter/pull/86))
 - Ignore platform reqs in CI / automation environment composer install to allow clean php extension dependency modelling
