@@ -1,3 +1,6 @@
+## dev-master @ 4ac9322
+- Update mapbender/coordinates-utility to [1.0.7](https://github.com/mapbender/coordinates-utility/releases/tag/1.0.7)
+
 ## v3.0.8-beta1
 - Update mapbender/mapbender to [3.0.8-beta1](https://github.com/mapbender/mapbender/releases/tag/v3.0.8-beta1)
 - Update mapbender/digitizer to [1.2-RC8](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.2-RC8)
