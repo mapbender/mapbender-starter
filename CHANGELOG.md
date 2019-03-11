@@ -1,5 +1,6 @@
-## dev-master @ 4ac9322
-- Update mapbender/coordinates-utility to [1.0.7](https://github.com/mapbender/coordinates-utility/releases/tag/1.0.7)
+## dev-master @ 7701180
+- Update mapbender/coordinates-utility to [1.0.7.1](https://github.com/mapbender/coordinates-utility/releases/tag/1.0.7.1)
+- When installing / updating packages via composer, also clear cache and rebuild components ([7701180](https://github.com/mapbender/mapbender-starter/commit/77011800357fba181fef0aa7728533689e2c7044))
 
 ## v3.0.8-beta1
 - Update mapbender/mapbender to [3.0.8-beta1](https://github.com/mapbender/mapbender/releases/tag/v3.0.8-beta1)
