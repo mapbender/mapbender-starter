@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5d019b417c2ba407884eea8b461422b7",
+    "content-hash": "7869c92247602c14d69aac063a83b4e0",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -2153,16 +2153,16 @@
         },
         {
             "name": "mapbender/coordinates-utility",
-            "version": "1.0.7",
+            "version": "1.0.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/coordinates-utility.git",
-                "reference": "2cce27a79fa06b3fddfd3eaf713dd21ff9c076a7"
+                "reference": "0b2265d2217267c1ed2cf49850679a2c9e725a0e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/coordinates-utility/zipball/2cce27a79fa06b3fddfd3eaf713dd21ff9c076a7",
-                "reference": "2cce27a79fa06b3fddfd3eaf713dd21ff9c076a7",
+                "url": "https://api.github.com/repos/mapbender/coordinates-utility/zipball/0b2265d2217267c1ed2cf49850679a2c9e725a0e",
+                "reference": "0b2265d2217267c1ed2cf49850679a2c9e725a0e",
                 "shasum": ""
             },
             "require": {
@@ -2195,7 +2195,7 @@
                 "navigate",
                 "search"
             ],
-            "time": "2019-03-09T13:40:56+00:00"
+            "time": "2019-03-11T13:06:08+00:00"
         },
         {
             "name": "mapbender/data-source",
