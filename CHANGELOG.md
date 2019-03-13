@@ -1,5 +1,9 @@
-## dev-master @ 7701180
+## dev-master @ 0864ace
 - Update mapbender/coordinates-utility to [1.0.7.1](https://github.com/mapbender/coordinates-utility/releases/tag/1.0.7.1)
+- Update symfony/symfony to [v2.8.49](https://github.com/symfony/symfony/releases/tag/v2.8.49)
+- Update symfony/monolog-bundle to [v3.2.0](https://github.com/symfony/monolog-bundle/releases/tag/v3.2.0)  
+  This fixes [a warning on PHP7.2](http://php.net/manual/en/migration72.incompatible.php#migration72.incompatible.warn-on-non-countable-types)
+- Update monolog/monolog to [1.24.0](https://github.com/Seldaek/monolog/releases/tag/1.24.0)
 - When installing / updating packages via composer, also clear cache and rebuild components ([7701180](https://github.com/mapbender/mapbender-starter/commit/77011800357fba181fef0aa7728533689e2c7044))
 
 ## v3.0.8-beta1
