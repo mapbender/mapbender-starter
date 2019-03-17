@@ -1,5 +1,6 @@
 ## dev-master @ 0864ace
 - Update mapbender/coordinates-utility to [1.0.7.1](https://github.com/mapbender/coordinates-utility/releases/tag/1.0.7.1)
+- Update mapbender/data-source to [0.1.11](https://github.com/mapbender/data-source/releases/tag/0.1.11)
 - Update symfony/symfony to [v2.8.49](https://github.com/symfony/symfony/releases/tag/v2.8.49)
 - Update symfony/monolog-bundle to [v3.2.0](https://github.com/symfony/monolog-bundle/releases/tag/v3.2.0)  
   This fixes [a warning on PHP7.2](http://php.net/manual/en/migration72.incompatible.php#migration72.incompatible.warn-on-non-countable-types)
