@@ -137,9 +137,7 @@ parameters:
                         class: Mapbender\CoreBundle\Element\Layertree
                         target: map
                         type: element
-                        displaytype: tree
                         autoOpen: false
-                        titlemaxlength: 100
                         showBaseSource: false
                         layerRemove: false
                         menu: []

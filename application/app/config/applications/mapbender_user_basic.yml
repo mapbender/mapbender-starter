@@ -181,11 +181,9 @@ parameters:
                         class: Mapbender\CoreBundle\Element\ZoomBar
                         target: map
                         components: ["pan","history","zoom_box","zoom_max","zoom_slider"]
-                        position: [15em, 3em]
                         stepsize: 50
                         stepbypixel: true
                         anchor: right-top
-                        position: [200,40]
                         draggable: false
                     legend:
                         class: Mapbender\CoreBundle\Element\Legend
@@ -196,7 +194,6 @@ parameters:
                         displayType: list
                         hideEmptyLayers: true
                         noLegend: "No legend available"
-                        generateLegendGraphic: false
                         showWmsTitle: true
                         showLayerTitle: true
                         showGroupedLayerTitle: true
@@ -267,9 +264,7 @@ parameters:
                         class: Mapbender\CoreBundle\Element\Layertree
                         target: map
                         type: dialog
-                        displaytype: tree
                         autoOpen: false
-                        titlemaxlength: 30
                         showBaseSource: true
                         showHeader: false
                         layerMenu: false
