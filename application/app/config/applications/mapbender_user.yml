@@ -112,7 +112,7 @@ parameters:
                         target: map
                         action: open
                     linerulerButton:
-                        title: mb.core.ruler.tag.measure 
+                        title: mb.core.ruler.tag.measure
                         tooltip: mb.core.ruler.tag.line
                         class: Mapbender\CoreBundle\Element\Button
                         icon: icon-line-ruler
@@ -130,8 +130,8 @@ parameters:
                         deactivate: deactivate
                         group: rulers
                     about:
-                        title: 
-                        tooltip: mb.core.aboutdialog.class.description
+                        title: mb.core.aboutdialog.tag.about
+                        tooltip: mb.core.aboutdialog.tag.about
                         icon: icon-about
                         label: true
                         class: Mapbender\CoreBundle\Element\AboutDialog
@@ -250,7 +250,6 @@ parameters:
                         target: map
                         type: dialog
                         displaytype: tree
-                        useAccordion: false
                         autoOpen: false
                         titlemaxlength: 30
                         showBaseSource: true
@@ -289,7 +288,6 @@ parameters:
                         target: map
                         type: element
                         displaytype: tree
-                        useAccordion: false
                         autoOpen: false
                         titlemaxlength: 30
                         showBaseSource: true

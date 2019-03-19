@@ -152,14 +152,14 @@ parameters:
                         deactivate: deactivate
                         group: rulers
                     about:
-                        title: mb.core.aboutdialog.class.title
-                        tooltip: mb.core.aboutdialog.class.description
+                        title: mb.core.aboutdialog.tag.about
+                        tooltip: mb.core.aboutdialog.tag.about
                         icon: icon-about
                         label: false
                         class: Mapbender\CoreBundle\Element\AboutDialog
                     coordinatesutility-button:
-                        title: mb.core.poi.class.title
-                        tooltip: mb.core.poi.class.description
+                        title: mb.coordinatesutility.class.title
+                        tooltip: mb.coordinatesutility.class.title
                         class: Mapbender\CoreBundle\Element\Button
                         icon: iconGpsTarget
                         label: false
@@ -244,7 +244,7 @@ parameters:
                         legend_default_behaviour: false
                         optional_fields: ~
                     lineruler:
-                        title: mb.core.ruler.class.title
+                        title: mb.core.ruler.tag.line
                         tooltip: 'ruler'
                         class: Mapbender\CoreBundle\Element\Ruler
                         target: map
@@ -268,7 +268,6 @@ parameters:
                         target: map
                         type: dialog
                         displaytype: tree
-                        useAccordion: false
                         autoOpen: false
                         titlemaxlength: 30
                         showBaseSource: true

@@ -72,7 +72,7 @@ parameters:
 
                     gps-button:
                         title: mb.core.gpsposition.class.title
-                        tooltip: mb.core.gpsposition.class.description
+                        tooltip: mb.core.gpsposition.class.title
                         class: Mapbender\CoreBundle\Element\GpsPosition
                         label: false
                         target: map
@@ -138,7 +138,6 @@ parameters:
                         target: map
                         type: element
                         displaytype: tree
-                        useAccordion: false
                         autoOpen: false
                         titlemaxlength: 100
                         showBaseSource: false
