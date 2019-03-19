@@ -40,8 +40,6 @@
         "sensio/framework-extra-bundle": "~3.0",
         "sensio/generator-bundle": "2.3.x",
 
-        "friendsofsymfony/jsrouting-bundle": "^1.5",
-
         "incenteev/composer-parameter-handler": "~2.0",
 
         "doctrine/doctrine-fixtures-bundle": "2.3.*",

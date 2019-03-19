@@ -19,9 +19,6 @@ class AppKernel extends Mapbender\BaseKernel
             // Standard Symfony2 bundles
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
 
-            // Extra bundles required by Mapbender3/OWSProxy3
-            new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
-
             // FoM bundles
             new FOM\CoreBundle\FOMCoreBundle(),
             new FOM\ManagerBundle\FOMManagerBundle(),
