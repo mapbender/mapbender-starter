@@ -8,27 +8,19 @@ parameters:
             template:  Mapbender\CoreBundle\Template\Fullscreen
             custom_css: |
               .toolBar {
-                background-color: rgba(0, 29, 122,0.9) !important;
+                background-color: rgba(0, 29, 122,0.9);
                 border-bottom: solid 2px rgb(197,43,69)
-              }
-
-              .toolPane {
-                background-color: rgba(0, 29, 122, 0.9)!important;
-              }
-
-              .sidePane {
-                overflow: visible;
-                background:none;
-                background-color: #fff;
               }
 
               .mb-element-zoombar .pan {
                 background-color: rgba(0, 29, 122, 0.9);
-                border-radius: 50%;
                 border: solid 1px #c0c0c0;
                 color: #fff;
-                position:relative;
               }
+              .mb-element-zoombar .toolPane {
+                background-color: rgba(0, 29, 122, 0.9);
+              }
+
               .popup {
                 background-color: #FFFFFF;
                 background-image: none;
@@ -341,5 +333,5 @@ parameters:
                     HTML:
                         title: HTML
                         class: Mapbender\CoreBundle\Element\HTMLElement
-                        content: '<div style="color: #6FB536; font-weight:bold" >powered by Mapbender</div>'
+                        content: '<span style="color: #6FB536; font-weight:bold" >powered by Mapbender</span>'
                         classes: html-element-inline

@@ -349,5 +349,5 @@ parameters:
                     HTML:
                         title: HTML-powered by Mapbender
                         class: Mapbender\CoreBundle\Element\HTMLElement
-                        content: '<div style="color: #6FB536; font-weight:bold">powered by Mapbender</div>'
+                        content: '<span style="color: #6FB536; font-weight:bold">powered by Mapbender</span>'
                         classes: html-element-inline
