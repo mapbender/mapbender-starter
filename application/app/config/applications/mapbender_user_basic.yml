@@ -8,27 +8,19 @@ parameters:
             template:  Mapbender\CoreBundle\Template\Fullscreen
             custom_css: |
               .toolBar {
-                background-color: rgba(0, 29, 122,0.9) !important;
+                background-color: rgba(0, 29, 122,0.9);
                 border-bottom: solid 2px rgb(197,43,69)
-              }
-
-              .toolPane {
-                background-color: rgba(0, 29, 122, 0.9)!important;
-              }
-
-              .sidePane {
-                overflow: visible;
-                background:none;
-                background-color: #fff;
               }
 
               .mb-element-zoombar .pan {
                 background-color: rgba(0, 29, 122, 0.9);
-                border-radius: 50%;
                 border: solid 1px #c0c0c0;
                 color: #fff;
-                position:relative;
               }
+              .mb-element-zoombar .toolPane {
+                background-color: rgba(0, 29, 122, 0.9);
+              }
+
               .popup {
                 background-color: #FFFFFF;
                 background-image: none;
@@ -152,14 +144,14 @@ parameters:
                         deactivate: deactivate
                         group: rulers
                     about:
-                        title: mb.core.aboutdialog.class.title
-                        tooltip: mb.core.aboutdialog.class.description
+                        title: mb.core.aboutdialog.tag.about
+                        tooltip: mb.core.aboutdialog.tag.about
                         icon: icon-about
                         label: false
                         class: Mapbender\CoreBundle\Element\AboutDialog
                     coordinatesutility-button:
-                        title: mb.core.poi.class.title
-                        tooltip: mb.core.poi.class.description
+                        title: mb.coordinatesutility.class.title
+                        tooltip: mb.coordinatesutility.class.title
                         class: Mapbender\CoreBundle\Element\Button
                         icon: iconGpsTarget
                         label: false
@@ -181,11 +173,9 @@ parameters:
                         class: Mapbender\CoreBundle\Element\ZoomBar
                         target: map
                         components: ["pan","history","zoom_box","zoom_max","zoom_slider"]
-                        position: [15em, 3em]
                         stepsize: 50
                         stepbypixel: true
                         anchor: right-top
-                        position: [200,40]
                         draggable: false
                     legend:
                         class: Mapbender\CoreBundle\Element\Legend
@@ -196,7 +186,6 @@ parameters:
                         displayType: list
                         hideEmptyLayers: true
                         noLegend: "No legend available"
-                        generateLegendGraphic: false
                         showWmsTitle: true
                         showLayerTitle: true
                         showGroupedLayerTitle: true
@@ -244,7 +233,7 @@ parameters:
                         legend_default_behaviour: false
                         optional_fields: ~
                     lineruler:
-                        title: mb.core.ruler.class.title
+                        title: mb.core.ruler.tag.line
                         tooltip: 'ruler'
                         class: Mapbender\CoreBundle\Element\Ruler
                         target: map
@@ -267,10 +256,7 @@ parameters:
                         class: Mapbender\CoreBundle\Element\Layertree
                         target: map
                         type: dialog
-                        displaytype: tree
-                        useAccordion: false
                         autoOpen: false
-                        titlemaxlength: 30
                         showBaseSource: true
                         showHeader: false
                         layerMenu: false
@@ -347,5 +333,5 @@ parameters:
                     HTML:
                         title: HTML
                         class: Mapbender\CoreBundle\Element\HTMLElement
-                        content: '<div style="color: #6FB536; font-weight:bold" >powered by Mapbender</div>'
+                        content: '<span style="color: #6FB536; font-weight:bold" >powered by Mapbender</span>'
                         classes: html-element-inline

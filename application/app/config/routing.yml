@@ -31,6 +31,3 @@ ows_corebundle:
     resource: "@OwsProxy3CoreBundle/Controller/"
     prefix: "/owsproxy"
     type: annotation
-
-fos_js_routing:
-    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"

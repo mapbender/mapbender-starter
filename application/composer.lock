@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6c4a8c4eaec3c2b170ebd10b2190c2a7",
+    "content-hash": "03954ddd876b555871b0a3d1f98656f3",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -1639,64 +1639,6 @@
             "time": "2018-03-18T17:12:38+00:00"
         },
         {
-            "name": "friendsofsymfony/jsrouting-bundle",
-            "version": "1.5.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfSymfony/FOSJsRoutingBundle.git",
-                "reference": "539a6ac0c1fb6b010f92a1c877426a4caa5abba1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSJsRoutingBundle/zipball/539a6ac0c1fb6b010f92a1c877426a4caa5abba1",
-                "reference": "539a6ac0c1fb6b010f92a1c877426a4caa5abba1",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2",
-                "symfony/console": "~2.0",
-                "symfony/framework-bundle": "~2.0",
-                "symfony/serializer": "~2.0",
-                "willdurand/jsonp-callback-validator": "~1.0"
-            },
-            "require-dev": {
-                "symfony/expression-language": "~2.4"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.5-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "FOS\\JsRoutingBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "FriendsOfSymfony Community",
-                    "homepage": "https://github.com/friendsofsymfony/FOSJsRoutingBundle/contributors"
-                },
-                {
-                    "name": "William Durand",
-                    "email": "william.durand1@gmail.com"
-                }
-            ],
-            "description": "A pretty nice way to expose your Symfony2 routing to client applications.",
-            "homepage": "http://friendsofsymfony.github.com",
-            "keywords": [
-                "Js Routing",
-                "javascript",
-                "routing"
-            ],
-            "time": "2015-01-23T02:44:26+00:00"
-        },
-        {
             "name": "gedmo/doctrine-extensions",
             "version": "v2.4.36",
             "source": {
@@ -2267,16 +2209,16 @@
         },
         {
             "name": "mapbender/data-source",
-            "version": "0.1.9",
+            "version": "0.1.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/data-source.git",
-                "reference": "920f4d3a0856fe33ecfb59424d383e14d92f1491"
+                "reference": "fe1c366b2c2134e7c311c741ce47bca3edd00e00"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/data-source/zipball/920f4d3a0856fe33ecfb59424d383e14d92f1491",
-                "reference": "920f4d3a0856fe33ecfb59424d383e14d92f1491",
+                "url": "https://api.github.com/repos/mapbender/data-source/zipball/fe1c366b2c2134e7c311c741ce47bca3edd00e00",
+                "reference": "fe1c366b2c2134e7c311c741ce47bca3edd00e00",
                 "shasum": ""
             },
             "require": {
@@ -2310,27 +2252,32 @@
                 "data source",
                 "mapbender"
             ],
-            "time": "2018-11-21T14:12:36+00:00"
+            "time": "2019-03-16T22:47:51+00:00"
         },
         {
             "name": "mapbender/digitizer",
-            "version": "1.1.67",
+            "version": "1.2-RC8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "0ecca652ef3a9e02b7a8b8a33dc9def2d7f27196"
+                "reference": "d97c49df9f7f51f343a243e424a5aa49277de923"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/0ecca652ef3a9e02b7a8b8a33dc9def2d7f27196",
-                "reference": "0ecca652ef3a9e02b7a8b8a33dc9def2d7f27196",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/d97c49df9f7f51f343a243e424a5aa49277de923",
+                "reference": "d97c49df9f7f51f343a243e424a5aa49277de923",
                 "shasum": ""
             },
             "require": {
                 "blueimp/jquery-file-upload": "9.*",
+                "debugteam/bootstrap-colorpicker": "1.x",
                 "mapbender/data-source": "0.*",
                 "mapbender/vis-ui.js": "*",
+                "phayes/geophp": "1.2",
                 "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "mapbender/data-source": "@dev"
             },
             "type": "library",
             "extra": {
@@ -2340,8 +2287,8 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Mapbender\\DigitizerBundle": "."
+                "psr-4": {
+                    "Mapbender\\DigitizerBundle\\": "."
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2365,57 +2312,28 @@
                 "digitizing",
                 "mapbender"
             ],
-            "time": "2019-01-24T12:47:17+00:00"
-        },
-        {
-            "name": "mapbender/documentation",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mapbender/mapbender-documentation.git",
-                "reference": "d7c3b286f5fc1f414a6aedba48b5a07a6137636f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-documentation/zipball/d7c3b286f5fc1f414a6aedba48b5a07a6137636f",
-                "reference": "d7c3b286f5fc1f414a6aedba48b5a07a6137636f",
-                "shasum": ""
-            },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Astrid Emde"
-                }
-            ],
-            "description": "Mapbender documentation",
-            "keywords": [
-                "documentation",
-                "mapbender"
-            ],
-            "time": "2019-01-30T07:22:02+00:00"
+            "time": "2019-02-04T14:22:07+00:00"
         },
         {
             "name": "mapbender/fom",
-            "version": "v3.0.6.2",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/fom.git",
-                "reference": "5cbe354783fec288291bd0cc15dafd1e70db504a"
+                "reference": "6dea943121f3c3f9b1b4b14dc2a8e8640a120675"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/fom/zipball/5cbe354783fec288291bd0cc15dafd1e70db504a",
-                "reference": "5cbe354783fec288291bd0cc15dafd1e70db504a",
+                "url": "https://api.github.com/repos/mapbender/fom/zipball/6dea943121f3c3f9b1b4b14dc2a8e8640a120675",
+                "reference": "6dea943121f3c3f9b1b4b14dc2a8e8640a120675",
                 "shasum": ""
             },
             "require": {
-                "friendsofsymfony/jsrouting-bundle": "^1.5.4",
                 "php": ">=5.3.0",
                 "symfony/dependency-injection": "^2.4"
+            },
+            "conflict": {
+                "mapbender/mapbender": "<3.0.8"
             },
             "type": "library",
             "extra": {
@@ -2439,7 +2357,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2018-10-01T14:56:01+00:00"
+            "time": "2019-03-19T07:15:55+00:00"
         },
         {
             "name": "mapbender/mapbender",
@@ -2462,7 +2380,6 @@
                 "doctrine/doctrine-migrations-bundle": "^1.3",
                 "doctrine/orm": "^2.2.3",
                 "eslider/sasscb": "3.1.x",
-                "friendsofsymfony/jsrouting-bundle": "1.5.x",
                 "mapbender/fom": "^3.0.6.2@dev || ~4.0.0@dev",
                 "mapbender/mapbender-icons": "1.x",
                 "mapbender/mapquery": "1.x",
@@ -2476,6 +2393,10 @@
                 "wheregroup/compass-mixins": "0.x",
                 "wheregroup/joii": "3.x",
                 "wheregroup/open-sans": "1.x"
+            },
+            "conflict": {
+                "mapbender/data-source": "<0.1.11",
+                "mapbender/wmts": "*"
             },
             "type": "library",
             "extra": {
@@ -2649,16 +2570,16 @@
         },
         {
             "name": "mapbender/vis-ui.js",
-            "version": "0.0.75",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/vis-ui.js.git",
-                "reference": "fe96673eabaecc07dafcb8621f5325d5860ed4c0"
+                "reference": "50dbee1950a49ab3cbf08a401e2d571877259176"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/vis-ui.js/zipball/fe96673eabaecc07dafcb8621f5325d5860ed4c0",
-                "reference": "fe96673eabaecc07dafcb8621f5325d5860ed4c0",
+                "url": "https://api.github.com/repos/mapbender/vis-ui.js/zipball/50dbee1950a49ab3cbf08a401e2d571877259176",
+                "reference": "50dbee1950a49ab3cbf08a401e2d571877259176",
                 "shasum": ""
             },
             "require": {
@@ -2675,6 +2596,9 @@
                 "rogeriopradoj/respond": "1.4.*",
                 "select2/select2": "^4.0",
                 "wheregroup/jquerydialogextendjs": "2.x"
+            },
+            "conflict": {
+                "mapbender/digitizer": "<1.1.67"
             },
             "require-dev": {
                 "components/normalize.css": "3.0.*",
@@ -2714,7 +2638,7 @@
                 "jquery",
                 "vis-ui"
             ],
-            "time": "2019-01-16T12:24:32+00:00"
+            "time": "2019-02-04T12:14:52+00:00"
         },
         {
             "name": "medialize/jquery-context-menu",
@@ -3847,39 +3771,44 @@
         },
         {
             "name": "symfony/monolog-bundle",
-            "version": "v2.3.0",
-            "target-dir": "Symfony/Bundle/MonologBundle",
+            "version": "v3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/monolog-bundle.git",
-                "reference": "03ed73bc11367b3156cc21f22ac37c7f70fcd10a"
+                "reference": "8781649349fe418d51d194f8c9d212c0b97c40dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/monolog-bundle/zipball/03ed73bc11367b3156cc21f22ac37c7f70fcd10a",
-                "reference": "03ed73bc11367b3156cc21f22ac37c7f70fcd10a",
+                "url": "https://api.github.com/repos/symfony/monolog-bundle/zipball/8781649349fe418d51d194f8c9d212c0b97c40dd",
+                "reference": "8781649349fe418d51d194f8c9d212c0b97c40dd",
                 "shasum": ""
             },
             "require": {
-                "monolog/monolog": "~1.3",
+                "monolog/monolog": "~1.22",
                 "php": ">=5.3.2",
-                "symfony/config": "~2.2-beta2",
-                "symfony/dependency-injection": "~2.2-beta2",
-                "symfony/monolog-bridge": "~2.2-beta2"
+                "symfony/config": "~2.7|~3.0|~4.0",
+                "symfony/dependency-injection": "~2.7|~3.0|~4.0",
+                "symfony/http-kernel": "~2.7|~3.0|~4.0",
+                "symfony/monolog-bridge": "~2.7|~3.0|~4.0"
             },
             "require-dev": {
-                "symfony/yaml": "~2.2-beta2"
+                "symfony/console": "~2.3|~3.0|~4.0",
+                "symfony/phpunit-bridge": "^3.3|^4.0",
+                "symfony/yaml": "~2.3|~3.0|~4.0"
             },
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2.x-dev"
+                    "dev-master": "3.x-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Symfony\\Bundle\\MonologBundle": ""
-                }
+                "psr-4": {
+                    "Symfony\\Bundle\\MonologBundle\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -3901,7 +3830,7 @@
                 "log",
                 "logging"
             ],
-            "time": "2013-05-27T18:06:55+00:00"
+            "time": "2018-03-05T14:51:36+00:00"
         },
         {
             "name": "symfony/polyfill-apcu",
@@ -5046,46 +4975,6 @@
             "time": "2017-04-20T09:20:46+00:00"
         },
         {
-            "name": "willdurand/jsonp-callback-validator",
-            "version": "v1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/willdurand/JsonpCallbackValidator.git",
-                "reference": "1a7d388bb521959e612ef50c5c7b1691b097e909"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/willdurand/JsonpCallbackValidator/zipball/1a7d388bb521959e612ef50c5c7b1691b097e909",
-                "reference": "1a7d388bb521959e612ef50c5c7b1691b097e909",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~3.7"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "JsonpCallbackValidator": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "William Durand",
-                    "email": "william.durand1@gmail.com",
-                    "homepage": "http://www.willdurand.fr"
-                }
-            ],
-            "description": "JSONP callback validator.",
-            "time": "2014-01-20T22:35:06+00:00"
-        },
-        {
             "name": "zendframework/zend-code",
             "version": "2.6.3",
             "source": {
@@ -6079,6 +5968,7 @@
                 "mock",
                 "xunit"
             ],
+            "abandoned": true,
             "time": "2015-10-02T06:51:40+00:00"
         },
         {
@@ -6681,14 +6571,54 @@
                 "validate"
             ],
             "time": "2018-12-25T11:19:39+00:00"
+        },
+        {
+            "name": "willdurand/jsonp-callback-validator",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/willdurand/JsonpCallbackValidator.git",
+                "reference": "1a7d388bb521959e612ef50c5c7b1691b097e909"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/willdurand/JsonpCallbackValidator/zipball/1a7d388bb521959e612ef50c5c7b1691b097e909",
+                "reference": "1a7d388bb521959e612ef50c5c7b1691b097e909",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "JsonpCallbackValidator": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "William Durand",
+                    "email": "william.durand1@gmail.com",
+                    "homepage": "http://www.willdurand.fr"
+                }
+            ],
+            "description": "JSONP callback validator.",
+            "time": "2014-01-20T22:35:06+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
         "mapbender/mapbender": 20,
+        "mapbender/digitizer": 5,
         "mapbender/coordinates-utility": 20,
-        "mapbender/documentation": 20,
         "wheregroup/cookieconsent": 20
     },
     "prefer-stable": false,

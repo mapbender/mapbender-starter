@@ -1,9 +1,28 @@
-# Changelog
+## dev-master @ 527bf56
+- Update mapbender/mapbender to [3.0.8-beta2](https://github.com/mapbender/mapbender/releases/tag/v3.0.8-beta2)
+- Update mapbender/fom to [3.1.0](https://github.com/mapbender/fom/releases/tag/v3.1.0)
+- Update mapbender/coordinates-utility to [1.0.7.1](https://github.com/mapbender/coordinates-utility/releases/tag/1.0.7.1)
+- Update mapbender/data-source to [0.1.11](https://github.com/mapbender/data-source/releases/tag/0.1.11)
+- Update symfony/symfony to [v2.8.49](https://github.com/symfony/symfony/releases/tag/v2.8.49)
+- Update symfony/monolog-bundle to [v3.2.0](https://github.com/symfony/monolog-bundle/releases/tag/v3.2.0)  
+  This fixes [a warning on PHP7.2](http://php.net/manual/en/migration72.incompatible.php#migration72.incompatible.warn-on-non-countable-types)
+- Update monolog/monolog to [1.24.0](https://github.com/Seldaek/monolog/releases/tag/1.24.0)
+- When installing / updating packages via composer, also clear cache and rebuild components ([7701180](https://github.com/mapbender/mapbender-starter/commit/77011800357fba181fef0aa7728533689e2c7044))
 
-## dev-master @ 5c36231
+## v3.0.8-beta1
+- Update mapbender/mapbender to [3.0.8-beta1](https://github.com/mapbender/mapbender/releases/tag/v3.0.8-beta1)
+- Update mapbender/digitizer to [1.2-RC8](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.2-RC8)
+- Update mapbender/data-source to [0.1.10](https://github.com/mapbender/data-source/releases/tag/0.1.10)
+- Update mapbender/vis-ui.js to [0.2.0](https://github.com/mapbender/vis-ui.js/releases/tag/0.2.0)
+- Update mapbender/coordinates-utility to [1.0.6.1](https://github.com/mapbender/coordinates-utility/releases/tag/1.0.6.1)
+- Update mapbender/icons to [1.5](https://github.com/mapbender/icons/releases/tag/1.5)
+- Removed [mapbender/documentation](https://github.com/mapbender/mapbender-documentation) dependency. The end user
+  documentation will no longer be included by default and some of the build amenities have been removed from
+  Mapbender Starter. Please see [the main repository](https://github.com/mapbender/mapbender-documentation) for
+  standalone build instructions.
 - Fix Exception on first bootstrap run, before parameters.yml is created
-- Update mapbender/data-source to 0.1.9
-- Update mapbender/coordinates-utility to 1.0.5
+- Fix missing backend icons after first bootstrap run
+- Fix CI build failures ([PR#86](https://github.com/mapbender/mapbender-starter/pull/86))
 - Ignore platform reqs in CI / automation environment composer install to allow clean php extension dependency modelling
 - Remove nonfunctional remnant apigen-dependent commands; apigen required was removed 11 months ago
 - Downgrade default log level from debug => info to reduce log spam and increase visibility of more significant messages

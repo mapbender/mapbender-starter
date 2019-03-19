@@ -112,7 +112,7 @@ parameters:
                         target: map
                         action: open
                     linerulerButton:
-                        title: mb.core.ruler.tag.measure 
+                        title: mb.core.ruler.tag.measure
                         tooltip: mb.core.ruler.tag.line
                         class: Mapbender\CoreBundle\Element\Button
                         icon: icon-line-ruler
@@ -130,8 +130,8 @@ parameters:
                         deactivate: deactivate
                         group: rulers
                     about:
-                        title: 
-                        tooltip: mb.core.aboutdialog.class.description
+                        title: mb.core.aboutdialog.tag.about
+                        tooltip: mb.core.aboutdialog.tag.about
                         icon: icon-about
                         label: true
                         class: Mapbender\CoreBundle\Element\AboutDialog
@@ -159,11 +159,9 @@ parameters:
                         class: Mapbender\CoreBundle\Element\ZoomBar
                         target: map
                         components: ["pan","history","zoom_box","zoom_max","zoom_slider"]
-                        position: [15em, 3em]
                         stepsize: 50
                         stepbypixel: true
                         anchor: right-top
-                        position: [200,40]
                         draggable: false
                     legend:
                         class: Mapbender\CoreBundle\Element\Legend
@@ -174,7 +172,6 @@ parameters:
                         displayType: list
                         hideEmptyLayers: true
                         noLegend: "No legend available"
-                        generateLegendGraphic: false
                         showWmsTitle: true
                         showLayerTitle: true
                         showGroupedLayerTitle: true
@@ -249,10 +246,7 @@ parameters:
                         class: Mapbender\CoreBundle\Element\Layertree
                         target: map
                         type: dialog
-                        displaytype: tree
-                        useAccordion: false
                         autoOpen: false
-                        titlemaxlength: 30
                         showBaseSource: true
                         layerRemove: false
                         menu: []
@@ -288,10 +282,7 @@ parameters:
                         class: Mapbender\CoreBundle\Element\Layertree
                         target: map
                         type: element
-                        displaytype: tree
-                        useAccordion: false
                         autoOpen: false
-                        titlemaxlength: 30
                         showBaseSource: true
                         layerRemove: true
                         menu: [opacity,zoomtolayer,metadata]
@@ -358,5 +349,5 @@ parameters:
                     HTML:
                         title: HTML-powered by Mapbender
                         class: Mapbender\CoreBundle\Element\HTMLElement
-                        content: '<div style="color: #6FB536; font-weight:bold">powered by Mapbender</div>'
+                        content: '<span style="color: #6FB536; font-weight:bold">powered by Mapbender</span>'
                         classes: html-element-inline

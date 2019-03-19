@@ -17,7 +17,7 @@ parameters:
     locale:            en
     secret:            ThisTokenIsNotSoSecretChangeIt
 
-    ## Legacy branding / verioning params.
+    ## Legacy branding / versioning params.
     ## This is no longer used for versioning Mapbender and will never be updated
     ## again for a Mapbender release.
     ## For BC / continuity, you may still use these variables to brand / version your project.
