@@ -1,4 +1,6 @@
-## dev-master @ 0864ace
+## dev-master @ 527bf56
+- Update mapbender/mapbender to [3.0.8-beta2](https://github.com/mapbender/mapbender/releases/tag/v3.0.8-beta2)
+- Update mapbender/fom to [3.1.0](https://github.com/mapbender/fom/releases/tag/v3.1.0)
 - Update mapbender/coordinates-utility to [1.0.7.1](https://github.com/mapbender/coordinates-utility/releases/tag/1.0.7.1)
 - Update mapbender/data-source to [0.1.11](https://github.com/mapbender/data-source/releases/tag/0.1.11)
 - Update symfony/symfony to [v2.8.49](https://github.com/symfony/symfony/releases/tag/v2.8.49)
