@@ -35,7 +35,7 @@
         "twig/extensions": "1.x",
         "symfony/assetic-bundle": "2.x",
         "symfony/swiftmailer-bundle": "2.3.x",
-        "symfony/monolog-bundle": "*",
+        "symfony/monolog-bundle": "^3",
         "sensio/distribution-bundle": "~4.0",
         "sensio/framework-extra-bundle": "~3.0",
         "sensio/generator-bundle": "2.3.x",
