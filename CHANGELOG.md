@@ -1,5 +1,6 @@
 ## dev-master @ 527bf56
-- Update mapbender/mapbender to [3.0.8-beta2](https://github.com/mapbender/mapbender/releases/tag/v3.0.8-beta2)
+- Update mapbender/mapbender to [3.0.8-beta3](https://github.com/mapbender/mapbender/releases/tag/v3.0.8-beta3)
+- Downgrade mapbender/digitizer to [1.1.68](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.1.68)
 - Update mapbender/fom to [3.1.0](https://github.com/mapbender/fom/releases/tag/v3.1.0)
 - Update mapbender/coordinates-utility to [1.0.7.1](https://github.com/mapbender/coordinates-utility/releases/tag/1.0.7.1)
 - Update mapbender/data-source to [0.1.11](https://github.com/mapbender/data-source/releases/tag/0.1.11)
