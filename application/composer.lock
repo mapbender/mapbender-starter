@@ -2256,28 +2256,26 @@
         },
         {
             "name": "mapbender/digitizer",
-            "version": "1.2-RC8",
+            "version": "1.1.68",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "d97c49df9f7f51f343a243e424a5aa49277de923"
+                "reference": "39768e4e4befdb3ae5b70f26eaf4c72b7c134077"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/d97c49df9f7f51f343a243e424a5aa49277de923",
-                "reference": "d97c49df9f7f51f343a243e424a5aa49277de923",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/39768e4e4befdb3ae5b70f26eaf4c72b7c134077",
+                "reference": "39768e4e4befdb3ae5b70f26eaf4c72b7c134077",
                 "shasum": ""
             },
             "require": {
                 "blueimp/jquery-file-upload": "9.*",
-                "debugteam/bootstrap-colorpicker": "1.x",
                 "mapbender/data-source": "0.*",
                 "mapbender/vis-ui.js": "*",
-                "phayes/geophp": "1.2",
                 "php": ">=5.3.3"
             },
-            "require-dev": {
-                "mapbender/data-source": "@dev"
+            "conflict": {
+                "mapbender/mapbender": "<3.0.8"
             },
             "type": "library",
             "extra": {
@@ -2287,8 +2285,8 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Mapbender\\DigitizerBundle\\": "."
+                "psr-0": {
+                    "Mapbender\\DigitizerBundle": "."
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2312,7 +2310,7 @@
                 "digitizing",
                 "mapbender"
             ],
-            "time": "2019-02-04T14:22:07+00:00"
+            "time": "2019-03-21T09:23:37+00:00"
         },
         {
             "name": "mapbender/fom",
@@ -2396,6 +2394,7 @@
             },
             "conflict": {
                 "mapbender/data-source": "<0.1.11",
+                "mapbender/digitizer": "<1.1.68",
                 "mapbender/wmts": "*"
             },
             "type": "library",
@@ -6571,53 +6570,12 @@
                 "validate"
             ],
             "time": "2018-12-25T11:19:39+00:00"
-        },
-        {
-            "name": "willdurand/jsonp-callback-validator",
-            "version": "v1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/willdurand/JsonpCallbackValidator.git",
-                "reference": "1a7d388bb521959e612ef50c5c7b1691b097e909"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/willdurand/JsonpCallbackValidator/zipball/1a7d388bb521959e612ef50c5c7b1691b097e909",
-                "reference": "1a7d388bb521959e612ef50c5c7b1691b097e909",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~3.7"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "JsonpCallbackValidator": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "William Durand",
-                    "email": "william.durand1@gmail.com",
-                    "homepage": "http://www.willdurand.fr"
-                }
-            ],
-            "description": "JSONP callback validator.",
-            "time": "2014-01-20T22:35:06+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "mapbender/mapbender": 20,
-        "mapbender/digitizer": 5,
+        "mapbender/mapbender": 10,
         "mapbender/coordinates-utility": 20,
         "wheregroup/cookieconsent": 20
     },

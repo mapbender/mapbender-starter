@@ -54,7 +54,7 @@
         "mapbender/fom": "^3.0.6.0",
         "mapbender/mapbender": "dev-ol4@dev",
         "mapbender/owsproxy": "~3.0.6",
-        "mapbender/digitizer": "^1.0@RC",
+        "mapbender/digitizer": "^1.0",
 
         "mapbender/coordinates-utility": "dev-ol4@dev",
         "components/font-awesome": "^4.0",
