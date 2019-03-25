@@ -295,6 +295,7 @@ parameters:
                                 name: 'EPSG:4326'
                                 title: '4326'
                         addMapSrsList: true
+                        zoomlevel: 6
                 footer:
                     activityindicator:
                         class: Mapbender\CoreBundle\Element\ActivityIndicator
