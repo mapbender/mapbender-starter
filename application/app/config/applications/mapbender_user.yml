@@ -305,6 +305,7 @@ parameters:
                         target: map
                         srsList: []
                         addMapSrsList: true                        
+                        zoomlevel: 6
                     html-about-mapbender:
                         title: 'About Mapbender'
                         class: Mapbender\CoreBundle\Element\HTMLElement
