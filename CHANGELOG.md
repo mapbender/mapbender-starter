@@ -1,4 +1,5 @@
-## dev-master @ 823163d
+## v3.0.8-beta4
+- Update mapbender/mapbender to [3.0.8-beta4](https://github.com/mapbender/mapbender/releases/tag/v3.0.8-beta4)
 - Fix positioning of `legendpage_image` in a4landscape print template ([PR#87](https://github.com/mapbender/mapbender-starter/pull/87))
 - Pre-configure Coordinates Utility in demo applications with a `zoomlevel` option ([PR#88](https://github.com/mapbender/mapbender-starter/pull/88))
 
