@@ -1,3 +1,6 @@
+## dev-master @ 3e139eb
+- Update mapbender/digitizer to [1.1.69](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.1.69)
+
 ## v3.0.8-beta4
 - Update mapbender/mapbender to [3.0.8-beta4](https://github.com/mapbender/mapbender/releases/tag/v3.0.8-beta4)
 - Fix positioning of `legendpage_image` in a4landscape print template ([PR#87](https://github.com/mapbender/mapbender-starter/pull/87))
