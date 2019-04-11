@@ -50,3 +50,6 @@ parameters:
     #               also the default if this parameter is not defined
     # * "reverse": bottom-up, for QGIS server, ArcGIS etc
 #     wms.default_layer_order: standard
+
+    # Dimensions Handler
+    mapbender.preview.element.dimensionshandler: false
