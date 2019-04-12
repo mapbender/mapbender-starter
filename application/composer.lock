@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "482b1cd43f8b1dcc14cd579a50c5241b",
+    "content-hash": "0879d3249bfdcd787bf5b6a746f5adf5",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -2291,16 +2291,16 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v3.0.8-beta4",
+            "version": "v3.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "8d574ea136fedc4b91bd9651803d3587e3a6b549"
+                "reference": "ab369ebf8ec901ee1ee7335c67dc50bc5c5a343c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/8d574ea136fedc4b91bd9651803d3587e3a6b549",
-                "reference": "8d574ea136fedc4b91bd9651803d3587e3a6b549",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/ab369ebf8ec901ee1ee7335c67dc50bc5c5a343c",
+                "reference": "ab369ebf8ec901ee1ee7335c67dc50bc5c5a343c",
                 "shasum": ""
             },
             "require": {
@@ -2351,7 +2351,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2019-04-02T10:02:48+00:00"
+            "time": "2019-04-12T09:09:23+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -6465,7 +6465,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "mapbender/mapbender": 10,
         "wheregroup/cookieconsent": 20
     },
     "prefer-stable": false,
