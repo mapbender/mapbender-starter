@@ -1,4 +1,5 @@
-## dev-master @ 3e139eb
+## v3.0.8
+- Update mapbender/mapbender to [v3.0.8](https://github.com/mapbender/mapbender/releases/tag/v3.0.8)
 - Update mapbender/digitizer to [1.1.69](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.1.69)
 
 ## v3.0.8-beta4
