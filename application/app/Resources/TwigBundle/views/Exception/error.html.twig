@@ -96,7 +96,7 @@
     <div class="buttonContainer">
         <a href="  {{ path('mapbender_core_welcome_list')  }}" class="button">Go back </a>
         {%   if  fom.server_admin  is defined %}
-            <a href='mailto:{{ fom.server_admin }}?subject=I think something is broken in your application?body=Hi, I think this page should work/exist {{ app.request.uri }} but I got an 404 error' class="button">Contact an Admin</a>
+            <a href='mailto:{{ fom.server_admin }}?subject=I think something is broken in your application&body=Hi, %0D%0A I think this page should work/exist {{ app.request.uri }} but I got an {{ status_code }} error' class="button">Contact an Admin</a>
         {% endif %}
     </div>
 {% endblock %}
