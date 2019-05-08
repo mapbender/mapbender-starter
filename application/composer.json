@@ -125,7 +125,7 @@
         "component-dir": "web/components",
         "component-baseurl": "/components",
         "platform": {
-            "php": "5.5.4"
+            "php": "5.5.38"
         },
         "archive-dir": "../dist",
         "archive-format": "tar.gz",
