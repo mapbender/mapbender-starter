@@ -42,8 +42,6 @@
         "incenteev/composer-parameter-handler": "~2.0",
 
         "doctrine/doctrine-fixtures-bundle": "^2.3",
-
-        "gedmo/doctrine-extensions": "~2.3",
         "components/jquery": "^1.11.2",
 
         "mnsami/composer-custom-directory-installer": "1.0.*",
