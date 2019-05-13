@@ -1,7 +1,8 @@
-## dev-master @ c624452
+## dev-master @ 2f19d5b
 - Update mapbender/mapbender to [v3.0.8.1](https://github.com/mapbender/mapbender/releases/tag/v3.0.8.1)
 - Update mapbender/owsproxy to [v3.1.0](https://github.com/mapbender/owsproxy3/releases/tag/v3.1.0)
 - Update mapbender/fom to [v3.2.0](https://github.com/mapbender/fom/releases/tag/v3.2.0)
+- Update mapbender/digitizer to [1.1.70](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.1.70)
 - Update symfony/symfony from 2.8.49 to 2.8.51
 - Update symfony/security-acl from 2.8.0 to 3.0.2
 - Update twig/twig from 1.35.3 to 1.40.1
