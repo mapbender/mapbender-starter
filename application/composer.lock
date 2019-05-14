@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "03954ddd876b555871b0a3d1f98656f3",
+    "content-hash": "b9a2793cc3999a1051507cb5a7ca2977",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -2718,6 +2718,24 @@
             "time": "2014-12-02T06:11:22+00:00"
         },
         {
+            "name": "proj4js/proj4js",
+            "version": "2.4.3",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/proj4js/proj4js/archive/2.4.3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "files": [
+                        "dist/*.js"
+                    ]
+                }
+            }
+        },
+        {
             "name": "psr/http-message",
             "version": "1.0.1",
             "source": {
@@ -2805,47 +2823,6 @@
                     "homepage": "http://www.php-fig.org/"
                 }
             ],
-            "description": "Common interface for logging libraries",
-            "homepage": "https://github.com/php-fig/log",
-            "keywords": [
-                "log",
-                "psr",
-                "psr-3"
-            ],
-            "time": "2018-11-20T15:27:04+00:00"
-        },
-        {
-            "name": "proj4js/proj4js",
-            "version": "2.4.3",
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/proj4js/proj4js/archive/2.4.3.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "type": "component",
-            "extra": {
-                "component": {
-                    "files": [
-                        "dist/*.js"
-                    ]
-                }
-            }
-        },
-        {
-            "name": "psr/log",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/log.git",
-                "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
-                "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
-                "shasum": ""
-            },
             "description": "Common interface for logging libraries",
             "homepage": "https://github.com/php-fig/log",
             "keywords": [
@@ -6318,7 +6295,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "mapbender/mapbender": 10,
+        "mapbender/mapbender": 20,
         "mapbender/coordinates-utility": 20,
         "wheregroup/cookieconsent": 20
     },
