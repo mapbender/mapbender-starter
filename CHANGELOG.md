@@ -1,3 +1,27 @@
+## v3.0.8.1
+- Update mapbender/mapbender to [v3.0.8.1](https://github.com/mapbender/mapbender/releases/tag/v3.0.8.1)
+- Update mapbender/owsproxy to [v3.1.0](https://github.com/mapbender/owsproxy3/releases/tag/v3.1.0)
+- Update mapbender/fom to [v3.2.0](https://github.com/mapbender/fom/releases/tag/v3.2.0)
+- Update mapbender/digitizer to [1.1.70](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.1.70)
+- Update symfony/symfony from 2.8.49 to 2.8.51
+- Update symfony/security-acl from 2.8.0 to 3.0.2
+- Update twig/twig from 1.35.3 to 1.40.1
+- Update twig/extensions from 1.5.1 to 1.5.4
+- Update doctrine/doctrine-bundle from 1.6.4 to 1.10.2
+- Update doctrine/doctrine-fixtures-bundle from 2.3.0 to 2.4.1
+- Update doctrine/doctrine-migrations-bundle from 1.3.1 to 1.3.2
+- Update doctrine/doctrine-cache-bundle from 1.3.3 to 1.3.5
+- Update kriswallsmith/buzz from 0.15.2 to 0.16.1
+- Dropped arsgeografica/signing requirement
+- Dropped gedmo/doctrine-extensions requirement
+- Update misc indirect dependencies
+- Fix composer.json meta links ([PR#89](https://github.com/mapbender/mapbender-starter/pull/89))
+
+
+## v3.0.8
+- Update mapbender/mapbender to [v3.0.8](https://github.com/mapbender/mapbender/releases/tag/v3.0.8)
+- Update mapbender/digitizer to [1.1.69](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.1.69)
+
 ## v3.0.8-beta4
 - Update mapbender/mapbender to [3.0.8-beta4](https://github.com/mapbender/mapbender/releases/tag/v3.0.8-beta4)
 - Fix positioning of `legendpage_image` in a4landscape print template ([PR#87](https://github.com/mapbender/mapbender-starter/pull/87))

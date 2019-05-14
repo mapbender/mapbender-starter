@@ -3,14 +3,13 @@
     "description": "Mapbender",
     "type": "project",
     "license": "MIT",
-    "version": "3.0.7.5",
+    "version": "3.0.8.1",
     "homepage": "http://www.mapbender.org",
     "support": {
         "email":        "mapbender@osgeo.org",
         "issues":       "https://github.com/mapbender/mapbender/issues",
         "source":       "https://github.com/mapbender/mapbender-starter",
-        "docs":         "http://doc.mapbender3.org/",
-        "api-docs":     "http://api.mapbender3.org/",
+        "docs":         "http://doc.mapbender.org/",
         "forum":        "http://osgeo-org.1560.x6.nabble.com/Mapbender-f4217602.html",
         "twitter":      "https://twitter.com/mapbender",
         "user-list":    "https://lists.osgeo.org/pipermail/mapbender_users/"
@@ -42,9 +41,7 @@
 
         "incenteev/composer-parameter-handler": "~2.0",
 
-        "doctrine/doctrine-fixtures-bundle": "2.3.*",
-
-        "gedmo/doctrine-extensions": "~2.3",
+        "doctrine/doctrine-fixtures-bundle": "^2.3",
         "components/jquery": "^1.11.2",
 
         "mnsami/composer-custom-directory-installer": "1.0.*",
@@ -53,7 +50,7 @@
         "proj4js/proj4js": "^2.4",
         "mapbender/fom": "^3.0.6.0",
         "mapbender/mapbender": "dev-ol4@dev",
-        "mapbender/owsproxy": "~3.0.6",
+        "mapbender/owsproxy": "^3.0.6",
         "mapbender/digitizer": "^1.0",
 
         "mapbender/coordinates-utility": "dev-ol4@dev",
@@ -127,7 +124,7 @@
         "component-dir": "web/components",
         "component-baseurl": "/components",
         "platform": {
-            "php": "5.5.4"
+            "php": "5.5.38"
         },
         "archive-dir": "../dist",
         "archive-format": "tar.gz",
