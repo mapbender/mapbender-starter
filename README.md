@@ -106,6 +106,7 @@ in printing), but it allows some quick testing before you set up a production-gr
 
 The server is started like this:
 ```sh
+cd application
 app/console server:run
 ```
 
