@@ -53,7 +53,8 @@
 
         "mapbender/coordinates-utility": "^1.0.2",
         "components/font-awesome": "^4.0",
-        "wheregroup/cookieconsent": "dev-master"
+        "wheregroup/cookieconsent": "dev-master",
+        "twbs/bootstrap": "^4.3"
     },
     "scripts": {
         "build-bootstrap": [

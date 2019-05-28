@@ -28,9 +28,10 @@ twig:
     strict_variables: %kernel.debug%
     globals:
         fom:    %fom%
+
     form:
         resources:
-            - 'FOMCoreBundle:Form:fields.html.twig'
+            - 'bootstrap_3_layout.html.twig'
 
 # Assetic Configuration
 assetic:
