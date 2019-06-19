@@ -63,7 +63,6 @@
             "ComposerBootstrap::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "ComposerBootstrap::installAssets",
-            "ComposerBootstrap::prepareBinaries",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
             "ComponentInstaller\\Installer::postAutoloadDump"
         ],
@@ -71,7 +70,6 @@
             "ComposerBootstrap::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "ComposerBootstrap::installAssets",
-            "ComposerBootstrap::prepareBinaries",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
             "ComponentInstaller\\Installer::postAutoloadDump"
         ],
@@ -112,9 +110,6 @@
         "build": [
             "ComposerBootstrap::distribute",
             "ComposerBootstrap::build"
-        ],
-        "log": [
-            "ComposerBootstrap::generateChangeLog"
         ]
     },
     "config": {

@@ -106,19 +106,6 @@ class ComposerBootstrap
     }
 
     /**
-     * Set binaries executable permission
-     */
-    public static function prepareBinaries()
-    {
-        if (static::isWindows()) {
-            return;
-        }
-
-        echo `chmod +x vendor/eslider/sasscb/dist/sassc`;
-        echo `chmod +x vendor/eslider/sasscb/dist/sassc.x86`;
-    }
-
-    /**
      * Installs bundle assets into a given dierectory (for details s. Symfony app/console assets:install).
      */
     public static function installHardCopyAssets()
@@ -600,52 +587,5 @@ class ComposerBootstrap
                 echo `cd {$fullArchivePath};tar c $archiveFileName/ | gzip --best > ${archiveFileName}.tar.gz`;
         }
         echo `du -h "{$fullArchivePath}/${archiveFileName}.${archiveFormat}"`;
-    }
-
-    /**
-     * Generate change log
-     */
-    public static function generateChangeLog()
-    {
-        $logs        = array();
-        $logFileName = "./CHANGELOG";
-        foreach (array("Mapbender-Starter" => '../',
-                       "Mapbender"         => 'mapbender',
-                       "FOM"               => 'fom',
-                       "OwsProxy3"         => 'owsproxy') as $repoName => $repoPath) {
-            $rawLog = `git --git-dir "${repoPath}/.git" log --tags --pretty=format:"%s" `; //--date=short -pretty=format:"%ad: %s"
-
-            $logs[]  = "\n# " . $repoName . "\n";
-            $logList = explode("\n", $rawLog);
-
-            foreach ($logList as $i => $logMessage) {
-                $logMessage = trim($logMessage);
-                $logMessage = preg_replace("/^fix /is", "Fixed ", $logMessage);
-                $logMessage = preg_replace("/^merge /is", "Merged ", $logMessage);
-                $logMessage = preg_replace("/^bump /is", "Bumped ", $logMessage);
-                $logMessage = preg_replace("/^include /is", "Included  ", $logMessage);
-                $logMessage = preg_replace("/^add /is", "Added ", $logMessage);
-                $logMessage = preg_replace("/^Optimize /is", "Optimized ", $logMessage);
-                $logMessage = preg_replace("/^Translate /is", "Translated ", $logMessage);
-                $logMessage = preg_replace("/^Refactor /is", "Refactored ", $logMessage);
-                $logMessage = preg_replace("/^Improve /is", "Improved ", $logMessage);
-
-                if (
-                    $logMessage == "Fom update"
-                    || $logMessage == "Mapbender update"
-                    || $logMessage == "Bumped Mapbender"
-                    || $logMessage == "Bumped Fom"
-                ) {
-                    continue;
-
-                }
-                $logList[ $i ] = " * " . ucfirst($logMessage);
-            }
-
-
-            $logs    = array_merge($logs, array_unique($logList));
-        }
-        file_put_contents($logFileName, implode("\n", $logs));
-        return $logFileName;
     }
 }
