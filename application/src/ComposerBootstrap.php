@@ -218,19 +218,6 @@ class ComposerBootstrap
         echo "\n[$title]\n";
     }
 
-    public static function genDocumentation()
-    {
-        if (static::isWindows()) {
-            return;
-        };
-        $sphinxPath = preg_replace("/^.* |\\s*$/s", "", `type sphinx-build`);
-        if (strpos($sphinxPath, "sphinx-build") !== false) {
-            `$sphinxPath vendor/mapbender/documentation web/docs`;
-        } else {
-            echo "Documentation isn't generated, please install python sphinx documentation generator.";
-        }
-    }
-
     /**
      * Display version
      *

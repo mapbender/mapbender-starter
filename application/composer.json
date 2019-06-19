@@ -77,12 +77,6 @@
             "ComposerBootstrap::installAssets",
             "ComponentInstaller\\Installer::postAutoloadDump"
         ],
-        "docs": [
-            "ComposerBootstrap::genDocumentation"
-        ],
-        "gen-user-docs": [
-            "ComposerBootstrap::genDocumentation"
-        ],
         "clean": [
             "ComposerBootstrap::clearCache"
         ],
