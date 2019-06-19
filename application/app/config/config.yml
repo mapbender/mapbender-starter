@@ -109,5 +109,3 @@ ows_proxy3_core:
         checkssl: true
         noproxy: %ows_proxy3_noproxy%
 
-# Mapbender Configuration
-mapbender_core: ~
