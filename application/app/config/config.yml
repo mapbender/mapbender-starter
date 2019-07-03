@@ -28,7 +28,7 @@ twig:
     strict_variables: %kernel.debug%
     form:
         resources:
-            - 'FOMCoreBundle:Form:fields.html.twig'
+           - MapbenderCoreBundle:form:fields.html.twig
 
 # Assetic Configuration
 assetic:
