@@ -27,7 +27,7 @@
         "phantomjs/phantomjs": "1.x"
     },
     "require": {
-        "php": ">=5.3.9",
+        "php": ">=7.1",
         "symfony/symfony": "2.8.x",
         "doctrine/orm": "~2.2,>=2.2.3",
         "doctrine/doctrine-bundle": "1.x",
@@ -114,7 +114,7 @@
         "component-dir": "web/components",
         "component-baseurl": "/components",
         "platform": {
-            "php": "5.5.38"
+            "php": "7.1.9"
         },
         "archive-dir": "../dist",
         "archive-format": "tar.gz",
