@@ -1,3 +1,10 @@
+## dev-master @ 3d1136c
+- Update mapbender/fom to [v3.2.4](https://github.com/mapbender/fom/releases/tag/v3.2.4)
+- Update mapbender/owsproxy to [v3.1.1](https://github.com/mapbender/owsproxy3/releases/tag/v3.1.1)
+- Correct README.md server startup instructions ([PR#92](https://github.com/mapbender/mapbender-starter/pull/92))
+- Clean up misc no longer used config values
+- Remove misc remnant code and composer command definitions for (no longer bundled) documentation builds
+
 ## v3.0.8.1
 - Update mapbender/mapbender to [v3.0.8.1](https://github.com/mapbender/mapbender/releases/tag/v3.0.8.1)
 - Update mapbender/owsproxy to [v3.1.0](https://github.com/mapbender/owsproxy3/releases/tag/v3.1.0)
