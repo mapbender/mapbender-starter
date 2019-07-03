@@ -1,8 +1,10 @@
-## dev-master @ 42c2871
+## dev-master @ 1c102a9
+- Update mapbender/mapbender to [v3.0.8.2](https://github.com/mapbender/mapbender/releases/tag/v3.0.8.2)
 - Update mapbender/fom to [v3.2.4](https://github.com/mapbender/fom/releases/tag/v3.2.4)
 - Update mapbender/owsproxy to [v3.1.1](https://github.com/mapbender/owsproxy3/releases/tag/v3.1.1)
 - Correct README.md server startup instructions ([PR#92](https://github.com/mapbender/mapbender-starter/pull/92))
 - Update 'OSM Demo' layer titles in demo applications ([PR#93](https://github.com/mapbender/mapbender-starter/pull/93))
+- Add separate composer sub-command reimport-example-apps
 - Clean up misc no longer used config values
 - Remove misc remnant code and composer command definitions for (no longer bundled) documentation builds
 
