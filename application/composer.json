@@ -89,6 +89,9 @@
         "init-example": [
             "ComposerBootstrap::checkConfiguration"
         ],
+        "reimport-example-apps": [
+            "ComposerBootstrap::reimportExampleApps"
+        ],
         "drop-and-rebuild-database": [
             "ComposerBootstrap::rebuildDatabase"
         ],

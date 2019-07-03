@@ -21,6 +21,12 @@ class ComposerBootstrap
         static::clearCache();
     }
 
+    public static function reimportExampleApps()
+    {
+        static::importExampleApplications();
+        static::clearCache();
+    }
+
     /**
      * @return bool true if config file needed to be created
      */
