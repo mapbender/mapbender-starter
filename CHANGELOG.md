@@ -1,4 +1,4 @@
-## dev-master @ 1c102a9
+## v3.0.8.2
 - Update mapbender/mapbender to [v3.0.8.2](https://github.com/mapbender/mapbender/releases/tag/v3.0.8.2)
 - Update mapbender/fom to [v3.2.4](https://github.com/mapbender/fom/releases/tag/v3.2.4)
 - Update mapbender/owsproxy to [v3.1.1](https://github.com/mapbender/owsproxy3/releases/tag/v3.1.1)
