@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "45f19927048bb8f019d8bd75437eb0bd",
+    "content-hash": "b2ad09039f0afbf97e93b307cc34bc9f",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -2192,16 +2192,16 @@
         },
         {
             "name": "mapbender/owsproxy",
-            "version": "v3.1.0",
+            "version": "v3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/owsproxy3.git",
-                "reference": "ae4b4d3b6acbbf827eee7bc6e8518b0c143d6fa1"
+                "reference": "6dd76ca03edb90f031a30449dc3c24e652a81285"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/ae4b4d3b6acbbf827eee7bc6e8518b0c143d6fa1",
-                "reference": "ae4b4d3b6acbbf827eee7bc6e8518b0c143d6fa1",
+                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/6dd76ca03edb90f031a30449dc3c24e652a81285",
+                "reference": "6dd76ca03edb90f031a30449dc3c24e652a81285",
                 "shasum": ""
             },
             "require": {
@@ -2212,7 +2212,8 @@
             "extra": {
                 "branch-alias": {
                     "dev-release/3.0.5": "3.0.5.x-dev",
-                    "dev-release/3.0.6": "3.0.6.x-dev"
+                    "dev-release/3.0.6": "3.0.6.x-dev",
+                    "dev-master": "3.1.x-dev"
                 }
             },
             "autoload": {
@@ -2230,7 +2231,7 @@
                 "module",
                 "owsproxy"
             ],
-            "time": "2019-05-08T08:00:10+00:00"
+            "time": "2019-06-28T09:33:48+00:00"
         },
         {
             "name": "mapbender/vis-ui.js",
