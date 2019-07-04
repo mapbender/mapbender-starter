@@ -1,3 +1,6 @@
+## v3.0.8.2.1
+- Update FOM to v3.2.5
+
 ## v3.0.8.2
 - Update mapbender/mapbender to [v3.0.8.2](https://github.com/mapbender/mapbender/releases/tag/v3.0.8.2)
 - Update mapbender/fom to [v3.2.4](https://github.com/mapbender/fom/releases/tag/v3.2.4)
