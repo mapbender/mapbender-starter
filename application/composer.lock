@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6d6812d914fd052073d4cee1aa769abf",
+    "content-hash": "a13a83c63d00c373f814e7b5d1bedf16",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -2000,16 +2000,16 @@
         },
         {
             "name": "mapbender/fom",
-            "version": "v3.2.4",
+            "version": "v3.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/fom.git",
-                "reference": "d4dac7bc356a7c06040785dea771da89bd5af99c"
+                "reference": "e59ea18b10168fab4139c9ff73d6d5b3523d0fab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/fom/zipball/d4dac7bc356a7c06040785dea771da89bd5af99c",
-                "reference": "d4dac7bc356a7c06040785dea771da89bd5af99c",
+                "url": "https://api.github.com/repos/mapbender/fom/zipball/e59ea18b10168fab4139c9ff73d6d5b3523d0fab",
+                "reference": "e59ea18b10168fab4139c9ff73d6d5b3523d0fab",
                 "shasum": ""
             },
             "require": {
@@ -2042,7 +2042,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2019-06-28T12:41:34+00:00"
+            "time": "2019-07-04T21:48:57+00:00"
         },
         {
             "name": "mapbender/mapbender",
