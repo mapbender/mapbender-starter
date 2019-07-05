@@ -2000,16 +2000,16 @@
         },
         {
             "name": "mapbender/fom",
-            "version": "v3.2.5",
+            "version": "v3.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/fom.git",
-                "reference": "e59ea18b10168fab4139c9ff73d6d5b3523d0fab"
+                "reference": "3a8bcee3c629d9cb740e68224ef573f13d531ce9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/fom/zipball/e59ea18b10168fab4139c9ff73d6d5b3523d0fab",
-                "reference": "e59ea18b10168fab4139c9ff73d6d5b3523d0fab",
+                "url": "https://api.github.com/repos/mapbender/fom/zipball/3a8bcee3c629d9cb740e68224ef573f13d531ce9",
+                "reference": "3a8bcee3c629d9cb740e68224ef573f13d531ce9",
                 "shasum": ""
             },
             "require": {
@@ -2042,20 +2042,20 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2019-07-04T21:48:57+00:00"
+            "time": "2019-07-05T11:30:17+00:00"
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v3.0.8.2",
+            "version": "v3.0.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "a148f5f8a6431ed7daa225d019cf9fb2c82ca549"
+                "reference": "9c8dbc2d5ab61b78cee85cd3003bbeb04ac03d7a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/a148f5f8a6431ed7daa225d019cf9fb2c82ca549",
-                "reference": "a148f5f8a6431ed7daa225d019cf9fb2c82ca549",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/9c8dbc2d5ab61b78cee85cd3003bbeb04ac03d7a",
+                "reference": "9c8dbc2d5ab61b78cee85cd3003bbeb04ac03d7a",
                 "shasum": ""
             },
             "require": {
@@ -2105,7 +2105,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2019-07-03T09:10:30+00:00"
+            "time": "2019-07-05T12:23:23+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
