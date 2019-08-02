@@ -1,3 +1,6 @@
+## v3.0.8.4-RC1
+- Update mapbender/mapbender to [v3.0.8.4-RC1](https://github.com/mapbender/mapbender/releases/tag/v3.0.8.4-RC1)
+
 ## v3.0.8.3
 - Update mapbender/mapbender to [v3.0.8.3](https://github.com/mapbender/mapbender/releases/tag/v3.0.8.3)
 - Update mapbender/fom to [v3.2.6](https://github.com/mapbender/fom/releases/tag/v3.2.6)
