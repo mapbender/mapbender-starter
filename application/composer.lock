@@ -1878,19 +1878,20 @@
         },
         {
             "name": "mapbender/data-source",
-            "version": "0.1.11",
+            "version": "0.1.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/data-source.git",
-                "reference": "fe1c366b2c2134e7c311c741ce47bca3edd00e00"
+                "reference": "88ffa4615e2df8722fc8d6a560e92940b6094651"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/data-source/zipball/fe1c366b2c2134e7c311c741ce47bca3edd00e00",
-                "reference": "fe1c366b2c2134e7c311c741ce47bca3edd00e00",
+                "url": "https://api.github.com/repos/mapbender/data-source/zipball/88ffa4615e2df8722fc8d6a560e92940b6094651",
+                "reference": "88ffa4615e2df8722fc8d6a560e92940b6094651",
                 "shasum": ""
             },
             "require": {
+                "mapbender/mapbender": ">=3.0.8",
                 "phayes/geophp": "1.2",
                 "php": ">=5.3.3",
                 "zumba/json-serializer": "1.x"
@@ -1921,7 +1922,7 @@
                 "data source",
                 "mapbender"
             ],
-            "time": "2019-03-16T22:47:51+00:00"
+            "time": "2019-08-15T14:00:08+00:00"
         },
         {
             "name": "mapbender/digitizer",
@@ -1983,16 +1984,16 @@
         },
         {
             "name": "mapbender/fom",
-            "version": "v3.2.7",
+            "version": "v3.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/fom.git",
-                "reference": "51bfe8368b277a4dfb86747edf619303e097f151"
+                "reference": "c942917ed0e1439a45f4b3c6e5301aad1c050e58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/fom/zipball/51bfe8368b277a4dfb86747edf619303e097f151",
-                "reference": "51bfe8368b277a4dfb86747edf619303e097f151",
+                "url": "https://api.github.com/repos/mapbender/fom/zipball/c942917ed0e1439a45f4b3c6e5301aad1c050e58",
+                "reference": "c942917ed0e1439a45f4b3c6e5301aad1c050e58",
                 "shasum": ""
             },
             "require": {
@@ -2025,20 +2026,20 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2019-07-18T13:36:30+00:00"
+            "time": "2019-08-16T11:22:07+00:00"
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v3.0.8.4-RC1",
+            "version": "v3.0.8.4-RC2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "dd184afdd86de9067a350cbef5f9330ecdcb723e"
+                "reference": "c9b81145203b3bc8ef76936c5503851d29ebe85f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/dd184afdd86de9067a350cbef5f9330ecdcb723e",
-                "reference": "dd184afdd86de9067a350cbef5f9330ecdcb723e",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/c9b81145203b3bc8ef76936c5503851d29ebe85f",
+                "reference": "c9b81145203b3bc8ef76936c5503851d29ebe85f",
                 "shasum": ""
             },
             "require": {
@@ -2088,7 +2089,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2019-08-02T07:44:26+00:00"
+            "time": "2019-08-16T13:25:54+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -2193,21 +2194,21 @@
         },
         {
             "name": "mapbender/owsproxy",
-            "version": "v3.1.1",
+            "version": "v3.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/owsproxy3.git",
-                "reference": "6dd76ca03edb90f031a30449dc3c24e652a81285"
+                "reference": "65ae2c4fc0a7d4d791103440a4f3d727451803b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/6dd76ca03edb90f031a30449dc3c24e652a81285",
-                "reference": "6dd76ca03edb90f031a30449dc3c24e652a81285",
+                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/65ae2c4fc0a7d4d791103440a4f3d727451803b3",
+                "reference": "65ae2c4fc0a7d4d791103440a4f3d727451803b3",
                 "shasum": ""
             },
             "require": {
-                "kriswallsmith/buzz": "~0.15.0|~0.16.0",
-                "php": ">=5.3.3"
+                "kriswallsmith/buzz": "~0.16.1",
+                "php": "^5.4|^7.0"
             },
             "type": "library",
             "extra": {
@@ -2232,7 +2233,7 @@
                 "module",
                 "owsproxy"
             ],
-            "time": "2019-06-28T09:33:48+00:00"
+            "time": "2019-08-12T12:49:56+00:00"
         },
         {
             "name": "mapbender/vis-ui.js",
