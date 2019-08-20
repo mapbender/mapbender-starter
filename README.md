@@ -17,6 +17,7 @@ At a minimum, Mapbender requires OpenSSL, curl, a PHP 5.4 interpreter, bzip2 dec
 * xml
 * json
 * sqlite
+* ldap
 
 You may have to install and enable further extensions at your own discretion if you
 want to use specific database systems.
@@ -33,7 +34,8 @@ sudo apt-get install php php-cli openssl bzip2 \
     php-curl php-gd php-intl php-mbstring \
     php-bz2 php-xml php-json \
     php-sqlite php-pgsql php-mysql \
-    sqlite curl
+    sqlite curl \
+    apt-get install php-ldap
 ```
 
 
@@ -59,8 +61,9 @@ Install packages:
 sudo apt-get install php5 php5-cli openssl bzip2 \
     php5-curl php5-gd php5-intl php5-mbstring \
     php5-xml php5-json \
-    php5-sqlite php5-pgsql php5-mysql
-    sqlite curl
+    php5-sqlite php5-pgsql php5-mysql \
+    sqlite curl \
+    apt-get install php-ldap
 ```
 
 ## System configuration
