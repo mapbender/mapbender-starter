@@ -27,7 +27,7 @@ database.
 
 E.g.
 
-### Ubuntu 16.04
+### Ubuntu 16.04 / 18.04
 
 ```sh
 sudo apt-get install php php-cli openssl bzip2 \
