@@ -3,7 +3,7 @@
     "description": "Mapbender",
     "type": "project",
     "license": "MIT",
-    "version": "3.0.8.1",
+    "version": "3.0.8.2",
     "homepage": "http://www.mapbender.org",
     "support": {
         "email":        "mapbender@osgeo.org",
@@ -65,7 +65,6 @@
             "ComposerBootstrap::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "ComposerBootstrap::installAssets",
-            "ComposerBootstrap::prepareBinaries",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
             "ComponentInstaller\\Installer::postAutoloadDump"
         ],
@@ -73,19 +72,12 @@
             "ComposerBootstrap::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "ComposerBootstrap::installAssets",
-            "ComposerBootstrap::prepareBinaries",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
             "ComponentInstaller\\Installer::postAutoloadDump"
         ],
         "update-assets":[
             "ComposerBootstrap::installAssets",
             "ComponentInstaller\\Installer::postAutoloadDump"
-        ],
-        "docs": [
-            "ComposerBootstrap::genDocumentation"
-        ],
-        "gen-user-docs": [
-            "ComposerBootstrap::genDocumentation"
         ],
         "clean": [
             "ComposerBootstrap::clearCache"
@@ -98,6 +90,9 @@
         ],
         "init-example": [
             "ComposerBootstrap::checkConfiguration"
+        ],
+        "reimport-example-apps": [
+            "ComposerBootstrap::reimportExampleApps"
         ],
         "drop-and-rebuild-database": [
             "ComposerBootstrap::rebuildDatabase"
@@ -114,9 +109,6 @@
         "build": [
             "ComposerBootstrap::distribute",
             "ComposerBootstrap::build"
-        ],
-        "log": [
-            "ComposerBootstrap::generateChangeLog"
         ]
     },
     "config": {

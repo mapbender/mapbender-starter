@@ -26,11 +26,9 @@ framework:
 twig:
     debug:            %kernel.debug%
     strict_variables: %kernel.debug%
-    globals:
-        fom:    %fom%
     form:
         resources:
-            - 'FOMCoreBundle:Form:fields.html.twig'
+           - MapbenderCoreBundle:form:fields.html.twig
 
 # Assetic Configuration
 assetic:
@@ -88,10 +86,6 @@ fom_user:
         - Self Registered
         - Demo Group
 
-    # Allow to create user log table on the fly if the table doesn't exits.
-    # Default: true
-    auto_create_log_table: false
-
     # Time between to check login tries
     login_check_log_time: "-5 minutes"
 
@@ -115,5 +109,3 @@ ows_proxy3_core:
         checkssl: true
         noproxy: %ows_proxy3_noproxy%
 
-# Mapbender Configuration
-mapbender_core: ~

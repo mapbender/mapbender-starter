@@ -47,7 +47,7 @@ parameters:
                         url: https://osm-demo.wheregroup.com/service
                         version: 1.3.0
                         layers:
-                            30: { name: osm,    title : Germany OSM Demo WhereGroup,  visible: true }
+                            30: { name: osm,    title : OSM Demo WhereGroup,  visible: true }
                         info_format: text/html
                         visible: true
                         format: image/png
@@ -61,7 +61,7 @@ parameters:
                         url: https://osm-demo.wheregroup.com/service
                         version: 1.3.0
                         layers:
-                            40: { name: osm,    title : Germany OSM Demo WhereGroup,  visible: true }
+                            40: { name: osm,    title : OSM Demo WhereGroup,  visible: true }
                         tiled: false
                         format: image/png
                         transparent: true

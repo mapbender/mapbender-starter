@@ -21,6 +21,12 @@ class ComposerBootstrap
         static::clearCache();
     }
 
+    public static function reimportExampleApps()
+    {
+        static::importExampleApplications();
+        static::clearCache();
+    }
+
     /**
      * @return bool true if config file needed to be created
      */
@@ -103,19 +109,6 @@ class ComposerBootstrap
         } else {
             static::installSymLinkAssets();
         }
-    }
-
-    /**
-     * Set binaries executable permission
-     */
-    public static function prepareBinaries()
-    {
-        if (static::isWindows()) {
-            return;
-        }
-
-        echo `chmod +x vendor/eslider/sasscb/dist/sassc`;
-        echo `chmod +x vendor/eslider/sasscb/dist/sassc.x86`;
     }
 
     /**
@@ -229,19 +222,6 @@ class ComposerBootstrap
     protected static function printStatus($title)
     {
         echo "\n[$title]\n";
-    }
-
-    public static function genDocumentation()
-    {
-        if (static::isWindows()) {
-            return;
-        };
-        $sphinxPath = preg_replace("/^.* |\\s*$/s", "", `type sphinx-build`);
-        if (strpos($sphinxPath, "sphinx-build") !== false) {
-            `$sphinxPath vendor/mapbender/documentation web/docs`;
-        } else {
-            echo "Documentation isn't generated, please install python sphinx documentation generator.";
-        }
     }
 
     /**
@@ -600,52 +580,5 @@ class ComposerBootstrap
                 echo `cd {$fullArchivePath};tar c $archiveFileName/ | gzip --best > ${archiveFileName}.tar.gz`;
         }
         echo `du -h "{$fullArchivePath}/${archiveFileName}.${archiveFormat}"`;
-    }
-
-    /**
-     * Generate change log
-     */
-    public static function generateChangeLog()
-    {
-        $logs        = array();
-        $logFileName = "./CHANGELOG";
-        foreach (array("Mapbender-Starter" => '../',
-                       "Mapbender"         => 'mapbender',
-                       "FOM"               => 'fom',
-                       "OwsProxy3"         => 'owsproxy') as $repoName => $repoPath) {
-            $rawLog = `git --git-dir "${repoPath}/.git" log --tags --pretty=format:"%s" `; //--date=short -pretty=format:"%ad: %s"
-
-            $logs[]  = "\n# " . $repoName . "\n";
-            $logList = explode("\n", $rawLog);
-
-            foreach ($logList as $i => $logMessage) {
-                $logMessage = trim($logMessage);
-                $logMessage = preg_replace("/^fix /is", "Fixed ", $logMessage);
-                $logMessage = preg_replace("/^merge /is", "Merged ", $logMessage);
-                $logMessage = preg_replace("/^bump /is", "Bumped ", $logMessage);
-                $logMessage = preg_replace("/^include /is", "Included  ", $logMessage);
-                $logMessage = preg_replace("/^add /is", "Added ", $logMessage);
-                $logMessage = preg_replace("/^Optimize /is", "Optimized ", $logMessage);
-                $logMessage = preg_replace("/^Translate /is", "Translated ", $logMessage);
-                $logMessage = preg_replace("/^Refactor /is", "Refactored ", $logMessage);
-                $logMessage = preg_replace("/^Improve /is", "Improved ", $logMessage);
-
-                if (
-                    $logMessage == "Fom update"
-                    || $logMessage == "Mapbender update"
-                    || $logMessage == "Bumped Mapbender"
-                    || $logMessage == "Bumped Fom"
-                ) {
-                    continue;
-
-                }
-                $logList[ $i ] = " * " . ucfirst($logMessage);
-            }
-
-
-            $logs    = array_merge($logs, array_unique($logList));
-        }
-        file_put_contents($logFileName, implode("\n", $logs));
-        return $logFileName;
     }
 }
