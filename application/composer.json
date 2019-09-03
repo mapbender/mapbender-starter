@@ -49,7 +49,7 @@
         "openlayers/openlayers": "^4.6",
         "proj4js/proj4js": "^2.4",
         "mapbender/fom": "^3.0.6.0",
-        "mapbender/mapbender": "dev-feature/ol4-ol2-why-not-both@dev",
+        "mapbender/mapbender": "dev-staging/v3.1 as 3.1",
         "mapbender/owsproxy": "^3.0.6",
         "mapbender/digitizer": "dev-release/1.4-withDataManager",
 
