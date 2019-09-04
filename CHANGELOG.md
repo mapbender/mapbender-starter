@@ -1,4 +1,19 @@
-## dev-master@71ca554
+## v3.0.8.4-RC3
+- Update mapbender/mapbender to [v3.0.8.4-RC3](https://github.com/mapbender/mapbender/releases/tag/v3.0.8.4-RC3)
+- Update mapbender/fom to [v3.2.9](https://github.com/mapbender/fom/releases/tag/v3.2.9)
+- Update mapbender/owsproxy to [v3.1.3](https://github.com/mapbender/owsproxy3/releases/tag/v3.1.3)
+- Add `cd application` to bootstrap testing server instructions
+- Document ext-ldap as a required PHP extension
+
+## v3.0.8.4-RC2
+- Update mapbender/mapbender to [v3.0.8.4-RC2](https://github.com/mapbender/mapbender/releases/tag/v3.0.8.4-RC2)
+- Update mapbender/fom to [v3.2.8](https://github.com/mapbender/fom/releases/tag/v3.2.8)
+- Update mapbender/owsproxy to [v3.1.2](https://github.com/mapbender/owsproxy3/releases/tag/v3.1.2)
+- Update mapbender/data-source to [0.1.13](https://github.com/mapbender/data-source/releases/tag/0.1.13)
+- Fix invalid html markup and non-cert covered osgeo.org links in demo applications
+
+## v3.0.8.4-RC1
+- Update mapbender/mapbender to [v3.0.8.4-RC1](https://github.com/mapbender/mapbender/releases/tag/v3.0.8.4-RC1)
 - Update mapbender/fom to [v3.2.7](https://github.com/mapbender/fom/releases/tag/v3.2.7)
 
 ## v3.0.8.3
