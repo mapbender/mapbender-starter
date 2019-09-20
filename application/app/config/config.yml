@@ -33,7 +33,7 @@ twig:
 # Assetic Configuration
 assetic:
     debug: %kernel.debug%
-    use_controller: true
+    use_controller: false
     filters:
         cssrewrite: ~
         sass: ~
@@ -41,7 +41,7 @@ assetic:
 # Doctrine Configuration
 doctrine:
     dbal:
-        default_connection: default    
+        default_connection: default
         connections:
             default:
                 driver:   %database_driver%
