@@ -497,7 +497,6 @@ class ComposerBootstrap
                      "vendor/phantomjs",
                      "vendor/predis",
                      "vendor/satooshi/php-coveralls",
-                     "vendor/facebook/webdriver",
                      "vendor/fabpot/sphinx-php",
 
                      "vendor/afarkas",
