@@ -26,7 +26,7 @@
         "phantomjs/phantomjs": "1.x"
     },
     "require": {
-        "php": ">=5.3.9",
+        "php": ">=5.4.30",
         "symfony/symfony": "2.8.x",
         "doctrine/orm": "~2.2,>=2.2.3",
         "doctrine/doctrine-bundle": "1.x",
