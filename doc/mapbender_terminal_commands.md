@@ -5,22 +5,6 @@ Since Mapbender comes with the [composer tool](https://getcomposer.org/) as a de
 
 For all available commands and their description take a look at the [doc page](https://getcomposer.org/doc/03-cli.md).
 
-# Creating a default composer.json
-The `init-example` command is used to create a composer.json, which is extracted from the bootstrap [Configuration](https://github.com/mapbender/mapbender-starter/blob/release/3.0.6/bootstrap). Adjustments are made and the old composer.json is being overwritten and re-created in the working directory.
-
-```bash
-php composer.phar init-example
-```
-
-* example:
-
-```text
-application$: bin/composer init-example
-> ComposerBootstrap::checkConfiguration
-
-[Clear cache]
-```
-
 # Install dependencies
 
 The `install` command reads the composer.json file from the current Mapbender directory, resolves the dependencies, and installs them in the vendor directory. The install command is used by Mapbender `bootstrap`, see [Link](https://github.com/mapbender/mapbender-starter/blob/release/3.0.7/bootstrap).
