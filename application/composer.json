@@ -22,8 +22,10 @@
         "predis/predis": "~1.0",
         "satooshi/php-coveralls": "~0.6",
         "phpunit/phpunit-selenium": "^2.0",
-        "phing/phing": "2.*",
         "phantomjs/phantomjs": "1.x"
+    },
+    "suggest": {
+        "phing/phing": "For executing legacy Phing build tasks (unmaintained)"
     },
     "require": {
         "php": ">=5.4.30",
