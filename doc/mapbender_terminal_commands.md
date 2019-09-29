@@ -24,55 +24,6 @@ The command `update` reads the file composer.json from the current directory, wh
 php composer.phar update
 ```
 
-#### Update with optimized order
-
-Optimize the autoloader during the autoloader dump with this extra command:
-
-```bash
-php composer.phar update -o
-```
-
-* example:
-
-```text
-/application$: php composer.phar update -o
-Loading composer repositories with package information
-Updating dependencies (including require-dev)
-Nothing to install or update
-Package components/datatables is abandoned, you should avoid using it. Use bower-asset/datatables instead.
-Package guzzle/guzzle is abandoned, you should avoid using it. Use guzzlehttp/guzzle instead.
-Generating optimized autoload files
-> ComponentInstaller\Installer::postAutoloadDump
-Compiling component files
-> Sensio\Bundle\DistributionBundle\Composer\ScriptHandler::buildBootstrap
-> ComposerBootstrap::installAssets
-
- Trying to install assets as relative symbolic links.
-
- --- -------------------------- ------------------ 
-      Bundle                     Method / Error    
- --- -------------------------- ------------------ 
-  ✔   FrameworkBundle            relative symlink  
-  ✔   FOSJsRoutingBundle         relative symlink  
-  ✔   FOMCoreBundle              relative symlink  
-  ✔   FOMManagerBundle           relative symlink  
-  ✔   FOMUserBundle              relative symlink  
-  ✔   MapbenderCoreBundle        relative symlink  
-  ✔   MapbenderWmcBundle         relative symlink  
-  ✔   MapbenderWmsBundle         relative symlink  
-  ✔   MapbenderManagerBundle     relative symlink  
-  ✔   MapbenderPrintBundle       relative symlink  
-  ✔   MapbenderMobileBundle      relative symlink  
-  ✔   MapbenderDigitizerBundle   relative symlink  
-  ✔   SensioDistributionBundle   relative symlink  
- --- -------------------------- ------------------ 
-
- [OK] All assets were successfully installed.                                                                           
-
-> ComposerBootstrap::prepareBinaries
-> Sensio\Bundle\DistributionBundle\Composer\ScriptHandler::installRequirementsFile
-```
-
 #### Update individual or specific packages
 
 To limit the upgrade process to a few packages you can specify the packages to update like shown below:
