@@ -492,7 +492,6 @@ class ComposerBootstrap
                      "vendor/robloach/component-installer",
 
                      "vendor/phing",
-                     "vendor/apigen",
                      "vendor/phpunit",
                      "vendor/phantomjs",
                      "vendor/predis",

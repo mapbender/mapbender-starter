@@ -221,45 +221,6 @@ php composer.phar update --no-dev
               > Sensio\Bundle\DistributionBundle\Composer\ScriptHandler::installRequirementsFile
 ```
 
-# Generate Mapbender documentation
-
-To generate a Mapbender documentation locally, the same command can be used as in the creation of a [Deploy-Mapbender-Version](https://doc.mapbender.org/en/book/development/conventions.html#how-to-build-a-new-mapbender3-build) described. For optional or additional parameters, you can add `--help` in the console and a short explanation will be given.
-
-```bash
-php composer.phar docs
-```
-
-* example:
-
-```text
-/application$: php composer.phar docs
-> ComposerBootstrap::genApiDocumentation
-
-[Generate Mapbender 3.0.7.0 API documenation to 'application/web/docs/api']
-ApiGen 2.8.0
-------------
-Scanning
- /home/XX/Projekte/Mapbender/mapbender-starter-commands/application/fom/src
- /home/XX/Projekte/Mapbender/mapbender-starter-commands/application/mapbender/src
- /home/XX/Projekte/Mapbender/mapbender-starter-commands/application/owsproxy/src
- /home/XX/Projekte/Mapbender/mapbender-starter-commands/application/src
- /home/XX/Projekte/Mapbender/mapbender-starter-commands/application/vendor/mapbender 
-
-[=========================>                                      ]  39.67%  20MB
-[===============================================================>] 100.00%  28MB
-
-Found 410 classes, 0 constants, 0 functions and other 16 used PHP internal classes
-Documentation for 410 classes, 0 constants, 0 functions and other 16 used PHP internal classes will be generated
-Using template config file /home/XX/Projekte/Mapbender/mapbender-starter-commands/application/vendor/apigen/apigen/templates/bootstrap/config.neon
-Wiping out destination directory
-Generating to directory /home/XX/Projekte/Mapbender/mapbender-starter-commands/application/web/docs/api              [>                                                               ]   1.03%  30MB
-enerating to directory /home/XX/Projekte/Mapbender/mapbender-starter-commands/application/web/docs/api              [>                                                               ]   1.03%  30MB
-The class Symfony\Component\DependencyInjection\ContainerAwareTrait is in use but has not been found in the defined sources.
-WARNING: primary_domain 'php' not found, ignored.
-WARNING: The config value `api_url' has type `str', defaults to `dict'.
-[...]
-```
-
 # Exporting Mapbender
 
 It is possible to create a filesystem copy of your current mapbender project with the ```build``` command. The result will be saved in the `dist /` directory of the project.
