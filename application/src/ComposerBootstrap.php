@@ -482,11 +482,7 @@ class ComposerBootstrap
         echo `find $archiveProjectPath/vendor -type d -iname "demo" | xargs rm -rf `;
 
         foreach (array(
-                     "documentation",
-                     "apidoc",
-                     "dist",
                      "vendor/mapbender/documentation",
-                     "vendor/mapbender/mapbender-icons",
 
                      "vendor/mnsami/composer-custom-directory-installer",
                      "vendor/robloach/component-installer",
@@ -498,21 +494,11 @@ class ComposerBootstrap
                      "vendor/satooshi/php-coveralls",
                      "vendor/fabpot/sphinx-php",
 
-                     "vendor/afarkas",
-                     "vendor/debugteam",
-                     "vendor/components",
-                     "vendor/medialize/jquery-context-menu",
-                     "vendor/rogeriopradoj/respond",
-                     "vendor/afarkas/html5shiv",
-                     "vendor/fontfacekit/open-sans",
-
                      "web/app_test.php",
                      "web/index.php",
 
                      "app/cache/*",
                      "app/logs/*",
-
-
                  ) as $path) {
             echo `rm -rf $archiveProjectPath/{$path}`;
         }
