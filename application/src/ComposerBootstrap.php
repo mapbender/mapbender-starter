@@ -518,8 +518,8 @@ class ComposerBootstrap
         }
 
         // Copy license and readme files
-        echo `find vendor/ -type f -iname "license*" | xargs -i cp --parents "{}" "${archiveProjectPath}"`;
-        echo `find vendor/ -type f -iname "readme*" | xargs -i cp --parents "{}" "${archiveProjectPath}"`;
+        echo `find vendor/ -type f -iname "license*" | xargs -I'{}' cp --parents '{}' "${archiveProjectPath}"`;
+        echo `find vendor/ -type f -iname "readme*" | xargs -I'{}' cp --parents '{}' "${archiveProjectPath}"`;
 
         // Copy project info files
         echo `cp ../LICENSE "${archiveProjectPath}/"`;
