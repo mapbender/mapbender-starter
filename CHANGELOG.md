@@ -1,5 +1,6 @@
 ## dev-master @ bbaadd5
-- Bump php reqs to absolute minimum for Mapbender itself
+- Bump php reqs to absolute minimum for Mapbender itself (5.4.30)
+- Keep `vendor` directory intact in dist (minus some testing-only deps)
 - Drop unused facebook/webdriver dependency
 - Disable unused assetic bundle controller
 - Remove broken doc:sphinx and doc:api from legacy Phing targets
@@ -8,6 +9,7 @@
 - Remove remnant config / description of long gone, unmaintained apigen integration
 - Avoid deprecated `xargs -i` usages in `dist` command (fixes errors on OSX)
 - Drop `composer.json`-defined version, extract version information from git tags instead
+- Update `terminal_commands.md`
 
 ## v3.0.8.4
 - Update mapbender/mapbender to [v3.0.8.4](https://github.com/mapbender/mapbender/releases/tag/v3.0.8.4)
