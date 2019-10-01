@@ -225,6 +225,36 @@ class ComposerBootstrap
     }
 
     /**
+     * @param string $mode
+     * @param string|null $stripPrefix
+     * @return string
+     */
+    protected static function getVersion($mode = 'git', $stripPrefix = null)
+    {
+        if ($stripPrefix) {
+            $version = static::getVersion($mode, null);
+            $prefixPosition = strpos($version, $stripPrefix);
+            if ($prefixPosition) {  // !== false && !== 0
+                throw new \LogicException("Passed version prefix " . print_r($stripPrefix, true) . " occurs not as a prefix, but at offset {$prefixPosition} in version {$version}");
+            } elseif ($prefixPosition === 0) {
+                return substr($version, strlen($stripPrefix));
+            } else {
+                fwrite(STDERR, "WARNING: Passsed version prefix " . print_r($stripPrefix, true) . " does not occur in version {$version}\n");
+                return $version;
+            }
+        }
+        switch ($mode) {
+            default:
+                throw new \InvalidArgumentException("Unsupported mode " . print_r($mode, true));
+            case 'git':
+                return trim(@shell_exec('git describe --tags'));
+            case 'composer':
+                fwrite(STDERR, "WARNING: 'composer' version mode is deprecated, please update your scripts to 'git' mode\n");
+                return trim(@shell_exec('git describe --tags --abbrev=0'));
+        }
+    }
+
+    /**
      * Display version
      *
      * @param Event $e
@@ -270,9 +300,7 @@ class ComposerBootstrap
                 if (count($args) > 1) {
                     throw new \InvalidArgumentException("Extra arguments not supported for 'composer' mode");
                 }
-                /** @var \Composer\Package\RootPackage $rootPackage */
-                $rootPackage = $e->getComposer()->getPackage();
-                echo $rootPackage->getVersion() . "\n";
+                echo static::getVersion('composer', 'v') . "\n";
                 exit(0);
             case 'git':
             case 'git-next':
@@ -435,7 +463,7 @@ class ComposerBootstrap
         $archiveName     = current(array_slice(explode("/", $package->getName()), -1));
         $archiveFormat   = $config["archive-format"];
         $archivePath     = $config["archive-dir"];
-        $archiveVersion  = $package->getVersion();
+        $archiveVersion = static::getVersion('git', 'v');
 
         // Overwrite archive format, name and version if given
         $arguments = $e->getArguments();
@@ -528,7 +556,7 @@ class ComposerBootstrap
         $archiveName     = current(array_slice(explode("/", $package->getName()), -1));
         $archiveFormat   = $config["archive-format"];
         $archivePath     = $config["archive-dir"];
-        $archiveVersion  = $package->getVersion();
+        $archiveVersion = static::getVersion('git', 'v');
 
         // Overwrite archive format, name and version if given
         $arguments = $e->getArguments();
