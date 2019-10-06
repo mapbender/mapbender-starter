@@ -169,14 +169,10 @@ parameters:
                         instancesets:
                             is1:
                                 title: "OSM Demo (with opacity)"
-                                cprTitle: ~
-                                cprUrl: ~
                                 group: ~
                                 instances: [osm_2]
                             is2:
                                 title: "OSM Demo"
-                                cprTitle: ~
-                                cprUrl: ~
                                 group: ~
                                 instances: [osm]
 
