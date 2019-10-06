@@ -123,8 +123,8 @@ parameters:
                         class: Mapbender\CoreBundle\Element\ZoomBar
                         target: map
                         components: ["zoom_in_out", "zoom_max"]
-                        stepsize: 50
-                        stepbypixel: true
+                        stepSize: 50
+                        stepByPixel: true
                         anchor: left-top
                         draggable: false
 

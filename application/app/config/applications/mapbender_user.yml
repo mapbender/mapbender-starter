@@ -156,8 +156,8 @@ parameters:
                         class: Mapbender\CoreBundle\Element\ZoomBar
                         target: map
                         components: ["pan","history","zoom_box","zoom_max","zoom_slider"]
-                        stepsize: 50
-                        stepbypixel: true
+                        stepSize: 50
+                        stepByPixel: true
                         anchor: right-top
                         draggable: false
                     legend:
