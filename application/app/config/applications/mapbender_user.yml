@@ -167,9 +167,6 @@ parameters:
                         elementType: dialog
                         autoOpen: false
                         displayType: list
-                        hideEmptyLayers: true
-                        noLegend: "No legend available"
-                        showWmsTitle: true
                         showLayerTitle: true
                         showGroupedLayerTitle: true
                     featureinfo:

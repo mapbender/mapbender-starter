@@ -81,7 +81,6 @@ parameters:
                         average: '1'
                         follow: false
                         centerOnFirstPosition: true
-                        zoomToAccuracy: false
                         zoomToAccuracyOnFirstPosition: true
 
                     imprint-button:
