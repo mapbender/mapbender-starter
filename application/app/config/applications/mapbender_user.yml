@@ -110,7 +110,6 @@ parameters:
                         class: Mapbender\CoreBundle\Element\GpsPosition
                         label: true
                         target: map
-                        action: open
                     linerulerButton:
                         title: mb.core.ruler.tag.measure
                         tooltip: mb.core.ruler.tag.line
@@ -132,7 +131,6 @@ parameters:
                     about:
                         title: mb.core.aboutdialog.tag.about
                         tooltip: mb.core.aboutdialog.tag.about
-                        icon: icon-about
                         label: true
                         class: Mapbender\CoreBundle\Element\AboutDialog
                     poiButton:
@@ -237,7 +235,6 @@ parameters:
                         class: Mapbender\CoreBundle\Element\ScaleBar
                         target: map
                         anchor: 'left-bottom'
-                        position: ['10px', '10px']
                         maxWidth: 200
                         units: ['km']
                     layertreedialog:
@@ -247,24 +244,20 @@ parameters:
                         type: dialog
                         autoOpen: false
                         showBaseSource: true
-                        layerRemove: false
                         menu: []
                     overview:
                         title: mb.core.overview.class.title
                         class: Mapbender\CoreBundle\Element\Overview
-                        tooltip: 'Overview'
                         target: map
                         layerset: overview
                         width: 200
                         height: 100
                         anchor: 'right-bottom'
-                        position: ['0px', '0px']
                         maximized: true
                         fixed: false
                     scaledisplay:
                         title: mb.core.scaledisplay.class.title
                         class: Mapbender\CoreBundle\Element\ScaleDisplay
-                        tooltip: Scale
                         target: map
                         anchor: left-top
                         scalePrefix: Scale
@@ -283,7 +276,6 @@ parameters:
                         type: element
                         autoOpen: false
                         showBaseSource: true
-                        layerRemove: true
                         menu: [opacity,zoomtolayer,metadata]
                     redlining:
                         title: mb.core.redlining.class.title
@@ -322,7 +314,6 @@ parameters:
                     coordinates:
                         class: Mapbender\CoreBundle\Element\CoordinatesDisplay
                         title: mb.core.coordinates.class.title
-                        tooltip: mb.core.coordinates.class.description
                         target: map
                         label: false
                         empty:  "x: - y: -"

@@ -76,7 +76,6 @@ parameters:
                         class: Mapbender\CoreBundle\Element\GpsPosition
                         label: false
                         target: map
-                        action: open
                         icon: iconGps
                         refreshinterval: '5000'
                         average: '1'
@@ -138,7 +137,6 @@ parameters:
                         type: element
                         autoOpen: false
                         showBaseSource: false
-                        layerRemove: false
                         menu: []
 
                     featureinfo:
@@ -169,7 +167,6 @@ parameters:
                         tooltip: mb.core.basesourceswitcher.class.title
                         class: Mapbender\CoreBundle\Element\BaseSourceSwitcher
                         target: map
-                        display: mobile
                         instancesets:
                             is1:
                                 title: "OSM Demo (with opacity)"
