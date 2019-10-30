@@ -24,11 +24,9 @@ framework:
 
 # Twig Configuration
 twig:
-    debug:            %kernel.debug%
     strict_variables: %kernel.debug%
-    form:
-        resources:
-           - MapbenderCoreBundle:form:fields.html.twig
+    form_themes:
+       - MapbenderCoreBundle:form:fields.html.twig
 
 # Assetic Configuration
 assetic:
