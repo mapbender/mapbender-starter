@@ -1,6 +1,8 @@
-## dev-master @ bbaadd5
+## dev-master @ 45e3671
 - Bump php reqs to absolute minimum for Mapbender itself (5.4.30)
 - Keep `vendor` directory intact in dist (minus some testing-only deps)
+- Update sensio/distribution-bundle from 4.0.39 => 5.0.22
+- Update sensio/generator-bundle from 2.3.5 => 3.1.7
 - Drop unused facebook/webdriver dependency
 - Disable unused assetic bundle controller
 - Remove broken doc:sphinx and doc:api from legacy Phing targets
