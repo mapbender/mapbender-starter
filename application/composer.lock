@@ -7,6 +7,37 @@
     "content-hash": "0d17505aa2a05728d04a6e1f300dd6b6",
     "packages": [
         {
+            "name": "afarkas/html5shiv",
+            "version": "3.7.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aFarkas/html5shiv.git",
+                "reference": "ed28c56c071bddfe7d635ad88995674957a016be"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aFarkas/html5shiv/zipball/ed28c56c071bddfe7d635ad88995674957a016be",
+                "reference": "ed28c56c071bddfe7d635ad88995674957a016be",
+                "shasum": ""
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "dist/html5shiv.js"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT",
+                "GPL-2.0"
+            ],
+            "description": "Defacto way to enable use of HTML5 sectioning elements in legacy Internet Explorer.",
+            "homepage": "http://paulirish.com/2011/the-history-of-the-html5-shiv/",
+            "time": "2015-07-20T20:04:00+00:00"
+        },
+        {
             "name": "blueimp/jquery-file-upload",
             "version": "v9.34.0",
             "source": {
@@ -2087,12 +2118,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "00e0d9d605cd6dd1117daf7b126e34027cabdb6a"
+                "reference": "da95303c03cf9f69f8fef989b2fdd2805ce6991e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/00e0d9d605cd6dd1117daf7b126e34027cabdb6a",
-                "reference": "00e0d9d605cd6dd1117daf7b126e34027cabdb6a",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/da95303c03cf9f69f8fef989b2fdd2805ce6991e",
+                "reference": "da95303c03cf9f69f8fef989b2fdd2805ce6991e",
                 "shasum": ""
             },
             "require": {
@@ -2144,7 +2175,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2019-11-11T06:47:42+00:00"
+            "time": "2019-11-11T07:06:43+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -2292,19 +2323,20 @@
         },
         {
             "name": "mapbender/vis-ui.js",
-            "version": "0.4.0",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/vis-ui.js.git",
-                "reference": "a77845446be2c43aedc7e62ec1acf7dd6c1c55a6"
+                "reference": "50dbee1950a49ab3cbf08a401e2d571877259176"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/vis-ui.js/zipball/a77845446be2c43aedc7e62ec1acf7dd6c1c55a6",
-                "reference": "a77845446be2c43aedc7e62ec1acf7dd6c1c55a6",
+                "url": "https://api.github.com/repos/mapbender/vis-ui.js/zipball/50dbee1950a49ab3cbf08a401e2d571877259176",
+                "reference": "50dbee1950a49ab3cbf08a401e2d571877259176",
                 "shasum": ""
             },
             "require": {
+                "afarkas/html5shiv": "3.*",
                 "components/bootstrap": "3.*",
                 "components/font-awesome": "^3.0 || ^4.0 || ^5.0",
                 "components/jquery": "1.* || 2.*",
@@ -2314,11 +2346,17 @@
                 "debugteam/bootstrap-colorpicker": "1.*",
                 "medialize/jquery-context-menu": "1.*",
                 "robloach/component-installer": "0.2.*",
+                "rogeriopradoj/respond": "1.4.*",
                 "select2/select2": "^4.0",
                 "wheregroup/jquerydialogextendjs": "2.x"
             },
             "conflict": {
                 "mapbender/digitizer": "<1.1.67"
+            },
+            "require-dev": {
+                "components/normalize.css": "3.0.*",
+                "components/placeholdersjs": "*",
+                "drmonty/leaflet": "1.0.*"
             },
             "type": "component",
             "extra": {
@@ -2353,7 +2391,7 @@
                 "jquery",
                 "vis-ui"
             ],
-            "time": "2019-11-05T12:01:07+00:00"
+            "time": "2019-02-04T12:14:52+00:00"
         },
         {
             "name": "medialize/jquery-context-menu",
@@ -3062,6 +3100,51 @@
             ],
             "description": "Allows installation of Components via Composer.",
             "time": "2015-08-10T12:35:38+00:00"
+        },
+        {
+            "name": "rogeriopradoj/respond",
+            "version": "1.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rogeriopradoj/Respond.git",
+                "reference": "885cd21e14e0199c4d126e4fe563581de2cd6aea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rogeriopradoj/Respond/zipball/885cd21e14e0199c4d126e4fe563581de2cd6aea",
+                "reference": "885cd21e14e0199c4d126e4fe563581de2cd6aea",
+                "shasum": ""
+            },
+            "require": {
+                "robloach/component-installer": "*"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "name": "respond",
+                    "scripts": [
+                        "dest/respond.src.js"
+                    ],
+                    "files": [
+                        "dest/respond.min.js"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rogerio Prado de Jesus",
+                    "email": "rogeriopradoj@gmail.com"
+                }
+            ],
+            "description": "A way to install Respond.js via composer",
+            "keywords": [
+                "JS"
+            ],
+            "time": "2014-02-14T20:48:52+00:00"
         },
         {
             "name": "select2/select2",
