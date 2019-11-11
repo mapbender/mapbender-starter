@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0d17505aa2a05728d04a6e1f300dd6b6",
+    "content-hash": "d8a49c1397815c9384378a63e533cab7",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -36,61 +36,6 @@
             "description": "Defacto way to enable use of HTML5 sectioning elements in legacy Internet Explorer.",
             "homepage": "http://paulirish.com/2011/the-history-of-the-html5-shiv/",
             "time": "2015-07-20T20:04:00+00:00"
-        },
-        {
-            "name": "blueimp/jquery-file-upload",
-            "version": "v9.34.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/vkhramtsov/jQuery-File-Upload.git",
-                "reference": "6d86a591f9a35bb811befb750dcd2c7da9ac05a2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/vkhramtsov/jQuery-File-Upload/zipball/6d86a591f9a35bb811befb750dcd2c7da9ac05a2",
-                "reference": "6d86a591f9a35bb811befb750dcd2c7da9ac05a2",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "server/php/UploadHandler.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sebastian Tschan",
-                    "homepage": "https://blueimp.net"
-                }
-            ],
-            "description": "File Upload widget for jQuery.",
-            "homepage": "https://github.com/blueimp/jQuery-File-Upload",
-            "keywords": [
-                "bootstrap",
-                "chunk",
-                "cross-domain",
-                "cross-site",
-                "drag",
-                "drop",
-                "file",
-                "gae",
-                "go",
-                "jquery",
-                "multiple",
-                "php",
-                "preview",
-                "progress",
-                "python",
-                "resume",
-                "selection",
-                "upload",
-                "widget"
-            ],
-            "time": "2019-07-22T13:10:51+00:00"
         },
         {
             "name": "components/bootstrap",
@@ -1960,112 +1905,6 @@
             "time": "2019-03-11T13:06:08+00:00"
         },
         {
-            "name": "mapbender/data-source",
-            "version": "0.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mapbender/data-source.git",
-                "reference": "334fcd0be5a954d3abd2b2727a10b0fee9c6b2e0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/data-source/zipball/334fcd0be5a954d3abd2b2727a10b0fee9c6b2e0",
-                "reference": "334fcd0be5a954d3abd2b2727a10b0fee9c6b2e0",
-                "shasum": ""
-            },
-            "require": {
-                "mapbender/mapbender": ">=3.0.8",
-                "phayes/geophp": "1.2",
-                "php": ">=5.3.3",
-                "zumba/json-serializer": "1.x"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^3.7",
-                "symfony/framework-bundle": "*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Mapbender\\DataSourceBundle\\": "."
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Andriy Oblivantsev",
-                    "email": "andriy.oblivantsev@wheregroup.com"
-                }
-            ],
-            "description": "Mapbender data source handler",
-            "keywords": [
-                "data",
-                "data source",
-                "mapbender"
-            ],
-            "time": "2019-11-05T12:04:31+00:00"
-        },
-        {
-            "name": "mapbender/digitizer",
-            "version": "1.1.71",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "5391fd11c07622325ccca59d8f1de29550a6c3bb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/5391fd11c07622325ccca59d8f1de29550a6c3bb",
-                "reference": "5391fd11c07622325ccca59d8f1de29550a6c3bb",
-                "shasum": ""
-            },
-            "require": {
-                "blueimp/jquery-file-upload": "9.*",
-                "mapbender/data-source": "0.*",
-                "mapbender/vis-ui.js": "*",
-                "php": ">=5.3.3"
-            },
-            "conflict": {
-                "mapbender/mapbender": "<3.0.8"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1.x-dev",
-                    "dev-release/1.0": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Mapbender\\DigitizerBundle": "."
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Andriy Oblivantsev"
-                },
-                {
-                    "name": "Stefan Winkelmann"
-                },
-                {
-                    "name": "David Patzke"
-                }
-            ],
-            "description": "Mapbender digitizer element",
-            "keywords": [
-                "digitizer",
-                "digitizing",
-                "mapbender"
-            ],
-            "time": "2019-07-29T11:36:30+00:00"
-        },
-        {
             "name": "mapbender/fom",
             "version": "dev-staging/3.3",
             "source": {
@@ -2687,42 +2526,6 @@
                 "random"
             ],
             "time": "2019-01-03T20:59:08+00:00"
-        },
-        {
-            "name": "phayes/geophp",
-            "version": "1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phayes/geoPHP.git",
-                "reference": "015404e85b602e0df1f91441f8db0f9e98f7e567"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phayes/geoPHP/zipball/015404e85b602e0df1f91441f8db0f9e98f7e567",
-                "reference": "015404e85b602e0df1f91441f8db0f9e98f7e567",
-                "shasum": ""
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.1.*"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "geoPHP.inc"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2 or New-BSD"
-            ],
-            "authors": [
-                {
-                    "name": "Patrick Hayes"
-                }
-            ],
-            "description": "GeoPHP is a open-source native PHP library for doing geometry operations. It is written entirely in PHP and can therefore run on shared hosts. It can read and write a wide variety of formats: WKT (including EWKT), WKB (including EWKB), GeoJSON, KML, GPX, GeoRSS). It works with all Simple-Feature geometries (Point, LineString, Polygon, GeometryCollection etc.) and can be used to get centroids, bounding-boxes, area, and a wide variety of other useful information.",
-            "homepage": "https://github.com/phayes/geoPHP",
-            "time": "2014-12-02T06:11:22+00:00"
         },
         {
             "name": "psr/cache",
@@ -4823,60 +4626,6 @@
                 "zf2"
             ],
             "time": "2016-02-18T20:53:00+00:00"
-        },
-        {
-            "name": "zumba/json-serializer",
-            "version": "1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zumba/json-serializer.git",
-                "reference": "61cb3a9458146b2b91e8f7700cee80cad1bf9279"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zumba/json-serializer/zipball/61cb3a9458146b2b91e8f7700cee80cad1bf9279",
-                "reference": "61cb3a9458146b2b91e8f7700cee80cad1bf9279",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.6"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "3.7.*"
-            },
-            "suggest": {
-                "ext-mbstring": "To support unescaped unicode characters in PHP 5.3."
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Zumba\\Util": "src/",
-                    "Zumba\\Exception": "src/",
-                    "Zumba\\Util\\Test": "tests/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Juan Basso",
-                    "email": "juan.basso@zumba.com"
-                },
-                {
-                    "name": "Zumba Fitness, LLC",
-                    "email": "engineering@zumba.com"
-                }
-            ],
-            "description": "Serialize PHP variables, including objects, in JSON format. Support to unserialize it too.",
-            "homepage": "http://tech.zumba.com",
-            "keywords": [
-                "json",
-                "serialize",
-                "serializer"
-            ],
-            "time": "2014-07-05T20:09:27+00:00"
         }
     ],
     "packages-dev": [
