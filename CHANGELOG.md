@@ -1,4 +1,5 @@
-## dev-master @ 45e3671
+## dev-master @ b3473e5
+- Update symfony/symfony 2.8.51 => [2.8.52](https://github.com/symfony/symfony/releases/tag/v2.8.52)
 - Bump php reqs to absolute minimum for Mapbender itself (5.4.30)
 - Keep `vendor` directory intact in dist (minus some testing-only deps)
 - Update sensio/distribution-bundle from 4.0.39 => 5.0.22
