@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "891df162cda01b5e2b0650d9cb69fcd3",
+    "content-hash": "ab035165f95227b0137f814fa2ed71af",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -4422,20 +4422,20 @@
         },
         {
             "name": "wheregroup/cookieconsent",
-            "version": "dev-master",
+            "version": "3.0.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WhereGroup/cookieconsent.git",
-                "reference": "92d5b59e82c5c70df30e27d9b56e26da97acf640"
+                "reference": "c7b34ef544e3a0e9b25640f4899c1d5eb74b43f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WhereGroup/cookieconsent/zipball/92d5b59e82c5c70df30e27d9b56e26da97acf640",
-                "reference": "92d5b59e82c5c70df30e27d9b56e26da97acf640",
+                "url": "https://api.github.com/repos/WhereGroup/cookieconsent/zipball/c7b34ef544e3a0e9b25640f4899c1d5eb74b43f9",
+                "reference": "c7b34ef544e3a0e9b25640f4899c1d5eb74b43f9",
                 "shasum": ""
             },
             "require": {
-                "robloach/component-installer": "*"
+                "robloach/component-installer": "^0.2"
             },
             "type": "component",
             "extra": {
@@ -4456,7 +4456,7 @@
                 }
             ],
             "description": "A free solution to the EU Cookie Law https://cookieconsent.insites.com/",
-            "time": "2018-05-22T11:49:22+00:00"
+            "time": "2019-11-15T05:50:04+00:00"
         },
         {
             "name": "wheregroup/joii",
@@ -5893,9 +5893,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "wheregroup/cookieconsent": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
