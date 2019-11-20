@@ -1984,21 +1984,22 @@
         },
         {
             "name": "mapbender/fom",
-            "version": "v3.2.9",
+            "version": "v3.2.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/fom.git",
-                "reference": "b1f500eed7c2bf0d74095cb067c4fc4874efa7b6"
+                "reference": "660da636dd492ce73712aa688d271ff0304fe5ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/fom/zipball/b1f500eed7c2bf0d74095cb067c4fc4874efa7b6",
-                "reference": "b1f500eed7c2bf0d74095cb067c4fc4874efa7b6",
+                "url": "https://api.github.com/repos/mapbender/fom/zipball/660da636dd492ce73712aa688d271ff0304fe5ac",
+                "reference": "660da636dd492ce73712aa688d271ff0304fe5ac",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0",
-                "symfony/dependency-injection": "^2.4"
+                "php": ">=5.3",
+                "symfony/security-acl": "^2.3 || ^3",
+                "symfony/symfony": "^2.5 || ^3"
             },
             "conflict": {
                 "mapbender/mapbender": "<3.0.8.1"
@@ -2026,7 +2027,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2019-08-23T13:03:46+00:00"
+            "time": "2019-11-18T06:43:55+00:00"
         },
         {
             "name": "mapbender/mapbender",
