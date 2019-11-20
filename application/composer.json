@@ -28,6 +28,7 @@
     "require": {
         "php": ">=5.4.30",
         "symfony/symfony": "~3.4.0",
+        "symfony/web-server-bundle": "^3.4",
         "doctrine/orm": "~2.2,>=2.2.3",
         "doctrine/doctrine-bundle": "1.x",
         "twig/extensions": "1.x",

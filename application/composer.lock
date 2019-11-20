@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d8a49c1397815c9384378a63e533cab7",
+    "content-hash": "4fd8e8b5106a4bcf6bfb15a6c9af7b1d",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -4047,16 +4047,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v3.4.33",
+            "version": "v3.4.35",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "47813652695f1345987fd5dfc0df67607e738b31"
+                "reference": "2adc85d49cbe14e346068fa7e9c2e1f08ab31de6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/47813652695f1345987fd5dfc0df67607e738b31",
-                "reference": "47813652695f1345987fd5dfc0df67607e738b31",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/2adc85d49cbe14e346068fa7e9c2e1f08ab31de6",
+                "reference": "2adc85d49cbe14e346068fa7e9c2e1f08ab31de6",
                 "shasum": ""
             },
             "require": {
@@ -4198,7 +4198,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2019-11-01T09:46:51+00:00"
+            "time": "2019-11-13T08:45:05+00:00"
         },
         {
             "name": "twig/extensions",
