@@ -1,9 +1,12 @@
-## dev-master @ b3473e5
+## dev-master @ 0546a04
+- Update mapbender/fom to [v3.2.10](https://github.com/mapbender/fom/releases/tag/v3.2.10)
+- Update mapbender/owsproxy to [v3.1.4](https://github.com/mapbender/owsproxy3/releases/tag/v3.1.4)
 - Update symfony/symfony 2.8.51 => [2.8.52](https://github.com/symfony/symfony/releases/tag/v2.8.52)
-- Bump php reqs to absolute minimum for Mapbender itself (5.4.30)
-- Keep `vendor` directory intact in dist (minus some testing-only deps)
 - Update sensio/distribution-bundle from 4.0.39 => 5.0.22
 - Update sensio/generator-bundle from 2.3.5 => 3.1.7
+- Add optional Symfony WebServerBundle initialization to AppKernel to ease Symfony 3 transition
+- Bump php reqs to absolute minimum for Mapbender itself (5.4.30)
+- Keep `vendor` directory intact in dist (minus some testing-only deps)
 - Drop unused facebook/webdriver dependency
 - Disable unused assetic bundle controller
 - Remove broken doc:sphinx and doc:api from legacy Phing targets
