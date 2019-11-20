@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "252707e7bb3c20dc94bdd16633d7e007",
+    "content-hash": "686d88e39fde4a44e5398d50ae48301a",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -1953,16 +1953,16 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "dev-feature/symfony-3.4",
+            "version": "dev-release/3.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "da95303c03cf9f69f8fef989b2fdd2805ce6991e"
+                "reference": "a8b4000f34992027150e867ed6e684cdf21c70db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/da95303c03cf9f69f8fef989b2fdd2805ce6991e",
-                "reference": "da95303c03cf9f69f8fef989b2fdd2805ce6991e",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/a8b4000f34992027150e867ed6e684cdf21c70db",
+                "reference": "a8b4000f34992027150e867ed6e684cdf21c70db",
                 "shasum": ""
             },
             "require": {
@@ -1974,13 +1974,13 @@
                 "mapbender/fom": "~3.1.2 || ^3.2.1",
                 "mapbender/mapbender-icons": "1.x",
                 "mapbender/mapquery": "1.x",
-                "mapbender/owsproxy": "^3.0.6.2@dev",
+                "mapbender/owsproxy": "^3.0.6.2",
                 "mapbender/vis-ui.js": "~0.0",
                 "php": ">=5.4.30",
                 "sensio/generator-bundle": "^2 || ^3",
                 "setasign/fpdi-fpdf": "1.6.*",
                 "symfony/security-acl": "~2.8 || ~3.0",
-                "symfony/symfony": "^2.3|^3",
+                "symfony/symfony": "^2.4|^3",
                 "twig/extensions": "1.x",
                 "wheregroup/codemirror": "5.x",
                 "wheregroup/compass-mixins": "0.x",
@@ -1989,7 +1989,6 @@
             "conflict": {
                 "mapbender/data-source": "<0.1.11",
                 "mapbender/digitizer": "<1.1.68",
-                "mapbender/fom": "<3.1.5, 3.2.0 - 3.2.3",
                 "mapbender/wmts": "*"
             },
             "type": "library",
@@ -2014,7 +2013,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2019-11-11T07:06:43+00:00"
+            "time": "2019-11-20T10:31:47+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -5718,9 +5717,9 @@
     ],
     "aliases": [
         {
-            "alias": "3.0.8.9",
-            "alias_normalized": "3.0.8.9",
-            "version": "dev-feature/symfony-3.4",
+            "alias": "3.0.8.9@dev",
+            "alias_normalized": "dev-3.0.8.9@",
+            "version": "dev-release/3.0.7",
             "package": "mapbender/mapbender"
         }
     ],

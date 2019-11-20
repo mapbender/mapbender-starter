@@ -45,7 +45,7 @@
         "mnsami/composer-custom-directory-installer": "1.0.*",
 
         "mapbender/fom": "^3.0.6.0",
-        "mapbender/mapbender": "dev-feature/symfony-3.4 as 3.0.8.9",
+        "mapbender/mapbender": "dev-release/3.0.7#a8b4000f34992027150e867ed6e684cdf21c70db as 3.0.8.9@dev",
         "mapbender/owsproxy": "^3.0.6",
 
         "mapbender/coordinates-utility": "^1.0.2",
