@@ -18,7 +18,6 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^4.8",
-        "predis/predis": "~1.0",
         "phpunit/phpunit-selenium": "^2.0",
         "phantomjs/phantomjs": "1.x"
     },
@@ -51,7 +50,7 @@
 
         "mapbender/coordinates-utility": "^1.0.2",
         "components/font-awesome": "^4.0",
-        "wheregroup/cookieconsent": "dev-master"
+        "wheregroup/cookieconsent": "^3"
     },
     "scripts": {
         "build-bootstrap": [

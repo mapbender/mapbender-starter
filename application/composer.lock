@@ -1906,22 +1906,22 @@
         },
         {
             "name": "mapbender/fom",
-            "version": "dev-staging/3.3",
+            "version": "v3.2.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/fom.git",
-                "reference": "9d5ba58d55ed7fe0e3af26f955feb6e4e1b725c6"
+                "reference": "660da636dd492ce73712aa688d271ff0304fe5ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/fom/zipball/9d5ba58d55ed7fe0e3af26f955feb6e4e1b725c6",
-                "reference": "9d5ba58d55ed7fe0e3af26f955feb6e4e1b725c6",
+                "url": "https://api.github.com/repos/mapbender/fom/zipball/660da636dd492ce73712aa688d271ff0304fe5ac",
+                "reference": "660da636dd492ce73712aa688d271ff0304fe5ac",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3",
-                "symfony/dependency-injection": "~2.4|^3",
-                "symfony/form": "^2.4|^3"
+                "symfony/security-acl": "^2.3 || ^3",
+                "symfony/symfony": "^2.5 || ^3"
             },
             "conflict": {
                 "mapbender/mapbender": "<=3.0.8.4"
@@ -1949,7 +1949,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2019-11-04T18:21:24+00:00"
+            "time": "2019-11-18T06:43:55+00:00"
         },
         {
             "name": "mapbender/mapbender",
@@ -2119,16 +2119,16 @@
         },
         {
             "name": "mapbender/owsproxy",
-            "version": "v3.1.3",
+            "version": "v3.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/owsproxy3.git",
-                "reference": "50412b361e97463ddf0b21106aa69b005f778f81"
+                "reference": "7e98320f99d908abc2e5b3a818edd4bfb14124e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/50412b361e97463ddf0b21106aa69b005f778f81",
-                "reference": "50412b361e97463ddf0b21106aa69b005f778f81",
+                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/7e98320f99d908abc2e5b3a818edd4bfb14124e9",
+                "reference": "7e98320f99d908abc2e5b3a818edd4bfb14124e9",
                 "shasum": ""
             },
             "require": {
@@ -2158,7 +2158,7 @@
                 "module",
                 "owsproxy"
             ],
-            "time": "2019-08-23T12:28:20+00:00"
+            "time": "2019-11-18T06:31:50+00:00"
         },
         {
             "name": "mapbender/vis-ui.js",
@@ -4403,20 +4403,20 @@
         },
         {
             "name": "wheregroup/cookieconsent",
-            "version": "dev-master",
+            "version": "3.0.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WhereGroup/cookieconsent.git",
-                "reference": "92d5b59e82c5c70df30e27d9b56e26da97acf640"
+                "reference": "c7b34ef544e3a0e9b25640f4899c1d5eb74b43f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WhereGroup/cookieconsent/zipball/92d5b59e82c5c70df30e27d9b56e26da97acf640",
-                "reference": "92d5b59e82c5c70df30e27d9b56e26da97acf640",
+                "url": "https://api.github.com/repos/WhereGroup/cookieconsent/zipball/c7b34ef544e3a0e9b25640f4899c1d5eb74b43f9",
+                "reference": "c7b34ef544e3a0e9b25640f4899c1d5eb74b43f9",
                 "shasum": ""
             },
             "require": {
-                "robloach/component-installer": "*"
+                "robloach/component-installer": "^0.2"
             },
             "type": "component",
             "extra": {
@@ -4437,7 +4437,7 @@
                 }
             ],
             "description": "A free solution to the EU Cookie Law https://cookieconsent.insites.com/",
-            "time": "2018-05-22T11:49:22+00:00"
+            "time": "2019-11-15T05:50:04+00:00"
         },
         {
             "name": "wheregroup/jquerydialogextendjs",
@@ -5294,56 +5294,6 @@
             "time": "2017-01-23T22:15:32+00:00"
         },
         {
-            "name": "predis/predis",
-            "version": "v1.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nrk/predis.git",
-                "reference": "f0210e38881631afeafb56ab43405a92cafd9fd1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nrk/predis/zipball/f0210e38881631afeafb56ab43405a92cafd9fd1",
-                "reference": "f0210e38881631afeafb56ab43405a92cafd9fd1",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.9"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.8"
-            },
-            "suggest": {
-                "ext-curl": "Allows access to Webdis when paired with phpiredis",
-                "ext-phpiredis": "Allows faster serialization and deserialization of the Redis protocol"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Predis\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Daniele Alessandri",
-                    "email": "suppakilla@gmail.com",
-                    "homepage": "http://clorophilla.net"
-                }
-            ],
-            "description": "Flexible and feature-complete Redis client for PHP and HHVM",
-            "homepage": "http://github.com/nrk/predis",
-            "keywords": [
-                "nosql",
-                "predis",
-                "redis"
-            ],
-            "time": "2016-06-16T16:22:20+00:00"
-        },
-        {
             "name": "sebastian/comparator",
             "version": "1.2.4",
             "source": {
@@ -5781,11 +5731,7 @@
         }
     ],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "mapbender/fom": 20,
-        "mapbender/mapbender": 20,
-        "wheregroup/cookieconsent": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
