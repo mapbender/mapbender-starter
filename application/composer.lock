@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4fd8e8b5106a4bcf6bfb15a6c9af7b1d",
+    "content-hash": "252707e7bb3c20dc94bdd16633d7e007",
     "packages": [
         {
             "name": "afarkas/html5shiv",
@@ -1924,7 +1924,7 @@
                 "symfony/symfony": "^2.5 || ^3"
             },
             "conflict": {
-                "mapbender/mapbender": "<=3.0.8.4"
+                "mapbender/mapbender": "<3.0.8.1"
             },
             "type": "library",
             "extra": {
@@ -5718,12 +5718,6 @@
     ],
     "aliases": [
         {
-            "alias": "3.2.99",
-            "alias_normalized": "3.2.99.0",
-            "version": "dev-staging/3.3",
-            "package": "mapbender/fom"
-        },
-        {
             "alias": "3.0.8.9",
             "alias_normalized": "3.0.8.9",
             "version": "dev-feature/symfony-3.4",
@@ -5731,7 +5725,9 @@
         }
     ],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "mapbender/mapbender": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
