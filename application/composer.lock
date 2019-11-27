@@ -1832,16 +1832,16 @@
         },
         {
             "name": "mapbender/coordinates-utility",
-            "version": "1.0.7.1",
+            "version": "1.0.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/coordinates-utility.git",
-                "reference": "0b2265d2217267c1ed2cf49850679a2c9e725a0e"
+                "reference": "e4940905c80cb9ab3e359ed2fb8fe3dafcaf631a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/coordinates-utility/zipball/0b2265d2217267c1ed2cf49850679a2c9e725a0e",
-                "reference": "0b2265d2217267c1ed2cf49850679a2c9e725a0e",
+                "url": "https://api.github.com/repos/mapbender/coordinates-utility/zipball/e4940905c80cb9ab3e359ed2fb8fe3dafcaf631a",
+                "reference": "e4940905c80cb9ab3e359ed2fb8fe3dafcaf631a",
                 "shasum": ""
             },
             "require": {
@@ -1874,7 +1874,7 @@
                 "navigate",
                 "search"
             ],
-            "time": "2019-03-11T13:06:08+00:00"
+            "time": "2019-11-26T23:50:08+00:00"
         },
         {
             "name": "mapbender/data-source",
