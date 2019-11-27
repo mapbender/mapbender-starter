@@ -1,6 +1,9 @@
-## dev-master @ 0546a04
+## dev-master @ af0e7dc
 - Update mapbender/fom to [v3.2.10](https://github.com/mapbender/fom/releases/tag/v3.2.10)
 - Update mapbender/owsproxy to [v3.1.4](https://github.com/mapbender/owsproxy3/releases/tag/v3.1.4)
+- Update mapbender/digitizer to [1.1.72](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.1.72)
+- Update mapbender/coordinates-utility to [1.0.7.2](https://github.com/mapbender/coordinates-utility/releases/tag/1.0.7.2)
+- Update mapbender/vis-ui.js to [0.2.1](https://github.com/mapbender/vis-ui.js/releases/tag/0.2.1)
 - Update symfony/symfony 2.8.51 => [2.8.52](https://github.com/symfony/symfony/releases/tag/v2.8.52)
 - Update sensio/distribution-bundle from 4.0.39 => 5.0.22
 - Update sensio/generator-bundle from 2.3.5 => 3.1.7
