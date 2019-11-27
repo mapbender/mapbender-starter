@@ -45,7 +45,7 @@
         "mnsami/composer-custom-directory-installer": "1.0.*",
 
         "mapbender/fom": "^3.0.6.0",
-        "mapbender/mapbender": "^3.0.8",
+        "mapbender/mapbender": "dev-staging/v3.0.8.5 as 3.0.8.5",
         "mapbender/owsproxy": "^3.0.6",
         "mapbender/digitizer": "^1.0",
 
