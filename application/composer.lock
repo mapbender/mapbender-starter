@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c05e6cf2abbb00c5d0039dda9e165a01",
+    "content-hash": "a6234630e6eaf5d7fcbbf9d8f582f52a",
     "packages": [
         {
             "name": "blueimp/jquery-file-upload",
@@ -58,16 +58,16 @@
         },
         {
             "name": "components/bootstrap",
-            "version": "3.3.7",
+            "version": "3.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/components/bootstrap.git",
-                "reference": "fe6e7683be66ba45a725816efdb51d4566733043"
+                "reference": "427f4d414fc6ae8385aee02b7efc8e391eb141ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/components/bootstrap/zipball/fe6e7683be66ba45a725816efdb51d4566733043",
-                "reference": "fe6e7683be66ba45a725816efdb51d4566733043",
+                "url": "https://api.github.com/repos/components/bootstrap/zipball/427f4d414fc6ae8385aee02b7efc8e391eb141ad",
+                "reference": "427f4d414fc6ae8385aee02b7efc8e391eb141ad",
                 "shasum": ""
             },
             "require": {
@@ -122,7 +122,7 @@
                 "responsive",
                 "web"
             ],
-            "time": "2016-07-26T05:59:20+00:00"
+            "time": "2019-05-08T19:36:29+00:00"
         },
         {
             "name": "components/font-awesome",
@@ -338,16 +338,16 @@
         },
         {
             "name": "datatables/datatables",
-            "version": "1.10.16",
+            "version": "1.10.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DataTables/DataTables.git",
-                "reference": "75a665f64f02982c0f4666b15a25c4670e5e6b18"
+                "reference": "156faa83386460c578e00c460eca9766e38a0c5f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DataTables/DataTables/zipball/75a665f64f02982c0f4666b15a25c4670e5e6b18",
-                "reference": "75a665f64f02982c0f4666b15a25c4670e5e6b18",
+                "url": "https://api.github.com/repos/DataTables/DataTables/zipball/156faa83386460c578e00c460eca9766e38a0c5f",
+                "reference": "156faa83386460c578e00c460eca9766e38a0c5f",
                 "shasum": ""
             },
             "type": "library",
@@ -357,7 +357,7 @@
             ],
             "description": "DataTables is a plug-in for the jQuery Javascript library. It is a highly flexible tool, based upon the foundations of progressive enhancement, which will add advanced interaction controls to any HTML table.",
             "homepage": "http://www.datatables.net/",
-            "time": "2017-08-31T13:52:17+00:00"
+            "time": "2018-06-22T15:34:14+00:00"
         },
         {
             "name": "debugteam/bootstrap-colorpicker",
@@ -1213,20 +1213,23 @@
         },
         {
             "name": "doctrine/lexer",
-            "version": "v1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/lexer.git",
-                "reference": "83893c552fd2045dd78aef794c31e694c37c0b8c"
+                "reference": "1febd6c3ef84253d7c815bed85fc622ad207a9f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/lexer/zipball/83893c552fd2045dd78aef794c31e694c37c0b8c",
-                "reference": "83893c552fd2045dd78aef794c31e694c37c0b8c",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/1febd6c3ef84253d7c815bed85fc622ad207a9f8",
+                "reference": "1febd6c3ef84253d7c815bed85fc622ad207a9f8",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.5"
             },
             "type": "library",
             "extra": {
@@ -1235,8 +1238,8 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Doctrine\\Common\\Lexer\\": "lib/"
+                "psr-4": {
+                    "Doctrine\\Common\\Lexer\\": "lib/Doctrine/Common/Lexer"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1257,13 +1260,16 @@
                     "email": "schmittjoh@gmail.com"
                 }
             ],
-            "description": "Base library for a lexer that can be used in Top-Down, Recursive Descent Parsers.",
-            "homepage": "http://www.doctrine-project.org",
+            "description": "PHP Doctrine Lexer parser library that can be used in Top-Down, Recursive Descent Parsers.",
+            "homepage": "https://www.doctrine-project.org/projects/lexer.html",
             "keywords": [
+                "annotations",
+                "docblock",
                 "lexer",
-                "parser"
+                "parser",
+                "php"
             ],
-            "time": "2014-09-09T13:34:57+00:00"
+            "time": "2019-06-08T11:03:04+00:00"
         },
         {
             "name": "doctrine/migrations",
@@ -1414,53 +1420,6 @@
                 "orm"
             ],
             "time": "2017-12-17T02:57:51+00:00"
-        },
-        {
-            "name": "eslider/sasscb",
-            "version": "3.1.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/eSlider/sassc-binaries.git",
-                "reference": "fedc7361aeeb0936b3c17e26f931fd26013f58ae"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/eSlider/sassc-binaries/zipball/fedc7361aeeb0936b3c17e26f931fd26013f58ae",
-                "reference": "fedc7361aeeb0936b3c17e26f931fd26013f58ae",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.1"
-            },
-            "suggest": {
-                "kriswallsmith/assetic": "Asset Management for PHP"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Eslider\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Andriy Oblivantsev",
-                    "email": "eslider@gmail.com",
-                    "homepage": "https://github.com/eSlider"
-                }
-            ],
-            "description": "SASS compiler binaries",
-            "keywords": [
-                "assets",
-                "compiler",
-                "compression",
-                "minification",
-                "scss"
-            ],
-            "time": "2018-03-18T17:12:38+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -2000,16 +1959,16 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v3.0.8.4",
+            "version": "dev-staging/v3.0.8.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "8810f6a5656041dda0c01a1f66bc248cb466a6a9"
+                "reference": "f9a494c84760702eec55efed0c16e9880e186322"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/8810f6a5656041dda0c01a1f66bc248cb466a6a9",
-                "reference": "8810f6a5656041dda0c01a1f66bc248cb466a6a9",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/f9a494c84760702eec55efed0c16e9880e186322",
+                "reference": "f9a494c84760702eec55efed0c16e9880e186322",
                 "shasum": ""
             },
             "require": {
@@ -2017,20 +1976,23 @@
                 "doctrine/doctrine-fixtures-bundle": "^2.3",
                 "doctrine/doctrine-migrations-bundle": "^1.3",
                 "doctrine/orm": "^2.2.3",
-                "eslider/sasscb": "3.1.x",
-                "mapbender/fom": "^3.0.6.2@dev || ~4.0.0@dev",
+                "mapbender/fom": "~3.1.2 || ^3.2.1",
                 "mapbender/mapbender-icons": "1.x",
                 "mapbender/mapquery": "1.x",
-                "mapbender/owsproxy": "^3.0.6.2@dev",
+                "mapbender/owsproxy": "^3.0.6.2",
                 "mapbender/vis-ui.js": "~0.0",
                 "php": ">=5.4.30",
+                "sensio/generator-bundle": "^2 || ^3",
                 "setasign/fpdi-fpdf": "1.6.*",
-                "symfony/symfony": "^2.3",
+                "symfony/security-acl": "~2.8 || ~3.0",
+                "symfony/symfony": "^2.4|^3",
                 "twig/extensions": "1.x",
+                "wheregroup/assetic-filter-sassc": "^0.0.1",
                 "wheregroup/codemirror": "5.x",
                 "wheregroup/compass-mixins": "0.x",
-                "wheregroup/joii": "3.x",
-                "wheregroup/open-sans": "1.x"
+                "wheregroup/doctrine-dbal-shims": "^1",
+                "wheregroup/open-sans": "1.x",
+                "wheregroup/sassc-binaries": "^0.0.1"
             },
             "conflict": {
                 "mapbender/data-source": "<0.1.11",
@@ -2059,7 +2021,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2019-09-04T12:10:02+00:00"
+            "time": "2019-11-27T09:41:29+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -2788,20 +2750,17 @@
         },
         {
             "name": "select2/select2",
-            "version": "4.0.5",
+            "version": "4.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/select2/select2.git",
-                "reference": "ebf10c93db7d6d7a0d1330119d4c6f32cbd231d7"
+                "reference": "5765090318c4d382ae56463cfa25ba8ca7bdd495"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/select2/select2/zipball/ebf10c93db7d6d7a0d1330119d4c6f32cbd231d7",
-                "reference": "ebf10c93db7d6d7a0d1330119d4c6f32cbd231d7",
+                "url": "https://api.github.com/repos/select2/select2/zipball/5765090318c4d382ae56463cfa25ba8ca7bdd495",
+                "reference": "5765090318c4d382ae56463cfa25ba8ca7bdd495",
                 "shasum": ""
-            },
-            "require": {
-                "robloach/component-installer": "*"
             },
             "type": "component",
             "extra": {
@@ -2825,7 +2784,7 @@
             ],
             "description": "Select2 is a jQuery based replacement for select boxes.",
             "homepage": "https://select2.org/",
-            "time": "2017-10-25T22:08:18+00:00"
+            "time": "2019-11-06T01:34:17+00:00"
         },
         {
             "name": "sensio/distribution-bundle",
@@ -4259,17 +4218,50 @@
             "time": "2019-04-29T14:12:28+00:00"
         },
         {
-            "name": "wheregroup/codemirror",
-            "version": "5.13.4",
+            "name": "wheregroup/assetic-filter-sassc",
+            "version": "0.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/WhereGroup/CodeMirror.git",
-                "reference": "dddf9dc10d541842471de13a834e5beafb2538af"
+                "url": "https://github.com/WhereGroup/assetic-filter-sassc.git",
+                "reference": "6526a4763743c32bbcdd708351f6bcf3fbed41c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WhereGroup/CodeMirror/zipball/dddf9dc10d541842471de13a834e5beafb2538af",
-                "reference": "dddf9dc10d541842471de13a834e5beafb2538af",
+                "url": "https://api.github.com/repos/WhereGroup/assetic-filter-sassc/zipball/6526a4763743c32bbcdd708351f6bcf3fbed41c6",
+                "reference": "6526a4763743c32bbcdd708351f6bcf3fbed41c6",
+                "shasum": ""
+            },
+            "require": {
+                "kriswallsmith/assetic": "^1.2"
+            },
+            "suggest": {
+                "wheregroup/sassc-binaries": "Precompiled sassc binaries for various platforms"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Wheregroup\\AsseticFilterSassc\\": "lib"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Assetic filter wrapper for sassc",
+            "time": "2019-11-14T11:11:29+00:00"
+        },
+        {
+            "name": "wheregroup/codemirror",
+            "version": "5.47.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/WhereGroup/CodeMirror.git",
+                "reference": "41b71d9528685c1941b9ef1e99cb54950c3a0fd6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/WhereGroup/CodeMirror/zipball/41b71d9528685c1941b9ef1e99cb54950c3a0fd6",
+                "reference": "41b71d9528685c1941b9ef1e99cb54950c3a0fd6",
                 "shasum": ""
             },
             "require": {
@@ -4304,7 +4296,7 @@
                 "editor",
                 "javascript"
             ],
-            "time": "2017-04-20T08:40:49+00:00"
+            "time": "2019-06-04T05:47:28+00:00"
         },
         {
             "name": "wheregroup/compass-mixins",
@@ -4377,56 +4369,38 @@
             "time": "2019-11-15T05:50:04+00:00"
         },
         {
-            "name": "wheregroup/joii",
-            "version": "3.2.0",
+            "name": "wheregroup/doctrine-dbal-shims",
+            "version": "v1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/WhereGroup/joii.git",
-                "reference": "23bbe44c6f29fe13482c26f13342e58d41b2d35d"
+                "url": "https://github.com/WhereGroup/doctrine-dbal-shims.git",
+                "reference": "b5741a48d6f3ea7524d8bfc9232e261de6e10686"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WhereGroup/joii/zipball/23bbe44c6f29fe13482c26f13342e58d41b2d35d",
-                "reference": "23bbe44c6f29fe13482c26f13342e58d41b2d35d",
+                "url": "https://api.github.com/repos/WhereGroup/doctrine-dbal-shims/zipball/b5741a48d6f3ea7524d8bfc9232e261de6e10686",
+                "reference": "b5741a48d6f3ea7524d8bfc9232e261de6e10686",
                 "shasum": ""
             },
             "require": {
-                "robloach/component-installer": "0.x"
+                "doctrine/dbal": "^2",
+                "php": ">=5.3"
             },
-            "type": "component",
-            "extra": {
-                "component": {
-                    "scripts": [
-                        "dist/joii.min.js"
-                    ],
-                    "files": [
-                        "dist/joii.js"
-                    ]
+            "suggest": {
+                "doctrine/dbal-bundle": "To use ShimmedConnectionFactory and compiler passes"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Wheregroup\\DoctrineDbalShims\\": "lib"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
-            "description": "Javascript Object Inheritance Implementation",
-            "homepage": "http://joii.harold.info",
-            "keywords": [
-                "OOP",
-                "class",
-                "enum",
-                "enumerator",
-                "extends",
-                "inheritance",
-                "interface",
-                "javascript",
-                "joii",
-                "private",
-                "protected",
-                "public",
-                "visibility"
-            ],
-            "abandoned": true,
-            "time": "2017-04-20T09:05:36+00:00"
+            "description": "Extended DBAL server support on outdated PHP versions",
+            "time": "2019-10-17T13:12:36+00:00"
         },
         {
             "name": "wheregroup/jquerydialogextendjs",
@@ -4509,6 +4483,82 @@
                 "font"
             ],
             "time": "2017-04-20T09:20:46+00:00"
+        },
+        {
+            "name": "wheregroup/platform-detect",
+            "version": "0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/WhereGroup/platform-detect.git",
+                "reference": "23a66c65eedb8ba5c84ab3f73d4dece6d925b003"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/WhereGroup/platform-detect/zipball/23a66c65eedb8ba5c84ab3f73d4dece6d925b003",
+                "reference": "23a66c65eedb8ba5c84ab3f73d4dece6d925b003",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8|~5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Wheregroup\\PlatformDetect\\": "lib"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Platform detection for PHP",
+            "time": "2019-09-20T09:21:44+00:00"
+        },
+        {
+            "name": "wheregroup/sassc-binaries",
+            "version": "0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/WhereGroup/sassc-binaries.git",
+                "reference": "fdb8fbb907683ba51d70e08e7cdc3eb73bfc3253"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/WhereGroup/sassc-binaries/zipball/fdb8fbb907683ba51d70e08e7cdc3eb73bfc3253",
+                "reference": "fdb8fbb907683ba51d70e08e7cdc3eb73bfc3253",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.1",
+                "wheregroup/platform-detect": "~0.0 || ^1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Wheregroup\\SasscBinaries\\": "lib"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andriy Oblivantsev",
+                    "email": "eslider@gmail.com",
+                    "homepage": "https://github.com/eSlider"
+                }
+            ],
+            "description": "Precompiled sassc binaries for multiple platforms",
+            "keywords": [
+                "compiler",
+                "sassc",
+                "scss"
+            ],
+            "time": "2019-09-20T11:15:35+00:00"
         },
         {
             "name": "zendframework/zend-code",
@@ -5759,9 +5809,18 @@
             "time": "2018-01-29T19:49:41+00:00"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "alias": "3.0.8.5",
+            "alias_normalized": "3.0.8.5",
+            "version": "dev-staging/v3.0.8.5",
+            "package": "mapbender/mapbender"
+        }
+    ],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "mapbender/mapbender": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
