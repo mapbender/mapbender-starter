@@ -9,13 +9,14 @@ parameters:
             custom_css: |
               .toolBar {
                 background-color: rgba(0, 29, 122,0.9);
-                border-bottom: solid 2px rgb(197,43,69)
+                border-color: #C52B45;
+                &.top {
+                    border-bottom-width: 2px;
+                }
               }
 
               .mb-element-zoombar .pan {
                 background-color: rgba(0, 29, 122, 0.9);
-                border: solid 1px #c0c0c0;
-                color: #fff;
               }
               .mb-element-zoombar .toolPane {
                 background-color: rgba(0, 29, 122, 0.9);
