@@ -45,7 +45,7 @@
         "mnsami/composer-custom-directory-installer": "1.0.*",
 
         "mapbender/fom": "^3.0.6.0",
-        "mapbender/mapbender": "^3.0.8.5@RC",
+        "mapbender/mapbender": "dev-testing/reusable-source-instances as 3.0.8.5",
         "mapbender/owsproxy": "^3.0.6",
         "mapbender/digitizer": "^1.0",
 
@@ -122,7 +122,7 @@
             "mapbender/*": "source"
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",

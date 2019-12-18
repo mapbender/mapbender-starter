@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "de9e5596b2a36964f942e1b4aada8b87",
+    "content-hash": "c368160db802e1cba31ca9dce3d217d2",
     "packages": [
         {
             "name": "blueimp/jquery-file-upload",
@@ -1959,16 +1959,16 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v3.0.8.5-RC1",
+            "version": "dev-testing/reusable-source-instances",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "63c8b9cf30b48e7e51d4c8820d211985b5d5487d"
+                "reference": "852e4cf94d7a4609a4879a5589b735b5f3b759dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/63c8b9cf30b48e7e51d4c8820d211985b5d5487d",
-                "reference": "63c8b9cf30b48e7e51d4c8820d211985b5d5487d",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/852e4cf94d7a4609a4879a5589b735b5f3b759dd",
+                "reference": "852e4cf94d7a4609a4879a5589b735b5f3b759dd",
                 "shasum": ""
             },
             "require": {
@@ -2021,7 +2021,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2019-12-18T10:01:23+00:00"
+            "time": "2019-12-18T10:19:03+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -5861,10 +5861,17 @@
             "time": "2017-04-20T09:05:36+00:00"
         }
     ],
-    "aliases": [],
-    "minimum-stability": "stable",
+    "aliases": [
+        {
+            "alias": "3.0.8.5",
+            "alias_normalized": "3.0.8.5",
+            "version": "dev-testing/reusable-source-instances",
+            "package": "mapbender/mapbender"
+        }
+    ],
+    "minimum-stability": "dev",
     "stability-flags": {
-        "mapbender/mapbender": 5
+        "mapbender/mapbender": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
