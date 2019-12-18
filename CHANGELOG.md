@@ -1,8 +1,9 @@
-## dev-master @ af0e7dc
+## dev-master @ 713a569
 - Update mapbender/fom to [v3.2.10](https://github.com/mapbender/fom/releases/tag/v3.2.10)
 - Update mapbender/owsproxy to [v3.1.4](https://github.com/mapbender/owsproxy3/releases/tag/v3.1.4)
 - Update mapbender/digitizer to [1.1.72](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.1.72)
 - Update mapbender/coordinates-utility to [1.0.7.2](https://github.com/mapbender/coordinates-utility/releases/tag/1.0.7.2)
+- Update mapbender/data-source to [0.1.16](https://github.com/mapbender/data-source/releases/tag/0.1.16)
 - Update mapbender/vis-ui.js to [0.2.1](https://github.com/mapbender/vis-ui.js/releases/tag/0.2.1)
 - Update symfony/symfony 2.8.51 => [2.8.52](https://github.com/symfony/symfony/releases/tag/v2.8.52)
 - Update sensio/distribution-bundle from 4.0.39 => 5.0.22
@@ -17,6 +18,7 @@
 - Drop abandoned satooshi/php-coveralls from require-dev, drop inconsequential invocation from Travis config
 - Remove remnant config / description of long gone, unmaintained apigen integration
 - Avoid deprecated `xargs -i` usages in `dist` command (fixes errors on OSX)
+- mapbender_user_basic: fix toolbar border rules, fix zoombar styling
 - Drop `composer.json`-defined version, extract version information from git tags instead
 - Update `terminal_commands.md`
 

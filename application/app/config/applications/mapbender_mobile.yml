@@ -113,7 +113,6 @@ parameters:
                         class: Mapbender\CoreBundle\Element\Map
                         layersets: [main]
                         srs: EPSG:25832
-                        units: m
                         extents:
                             start: [361000,5619000,371150,5625000]
                             max: [-500000,4350000,1600000,6850000]
