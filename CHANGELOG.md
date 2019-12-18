@@ -1,4 +1,5 @@
-## dev-master @ 713a569
+## v3.0.8.5-RC1
+- Update mapbender/mapbender to [v3.0.8.5-RC1](https://github.com/mapbender/mapbender/releases/tag/v3.0.8.5-RC1)
 - Update mapbender/fom to [v3.2.10](https://github.com/mapbender/fom/releases/tag/v3.2.10)
 - Update mapbender/owsproxy to [v3.1.4](https://github.com/mapbender/owsproxy3/releases/tag/v3.1.4)
 - Update mapbender/digitizer to [1.1.72](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.1.72)
