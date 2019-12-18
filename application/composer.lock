@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a6234630e6eaf5d7fcbbf9d8f582f52a",
+    "content-hash": "de9e5596b2a36964f942e1b4aada8b87",
     "packages": [
         {
             "name": "blueimp/jquery-file-upload",
@@ -1959,16 +1959,16 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "dev-staging/v3.0.8.5",
+            "version": "v3.0.8.5-RC1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "f9a494c84760702eec55efed0c16e9880e186322"
+                "reference": "63c8b9cf30b48e7e51d4c8820d211985b5d5487d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/f9a494c84760702eec55efed0c16e9880e186322",
-                "reference": "f9a494c84760702eec55efed0c16e9880e186322",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/63c8b9cf30b48e7e51d4c8820d211985b5d5487d",
+                "reference": "63c8b9cf30b48e7e51d4c8820d211985b5d5487d",
                 "shasum": ""
             },
             "require": {
@@ -2021,7 +2021,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2019-11-27T09:41:29+00:00"
+            "time": "2019-12-18T10:01:23+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -5807,19 +5807,64 @@
                 "validate"
             ],
             "time": "2018-01-29T19:49:41+00:00"
-        }
-    ],
-    "aliases": [
+        },
         {
-            "alias": "3.0.8.5",
-            "alias_normalized": "3.0.8.5",
-            "version": "dev-staging/v3.0.8.5",
-            "package": "mapbender/mapbender"
+            "name": "wheregroup/joii",
+            "version": "3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/WhereGroup/joii.git",
+                "reference": "23bbe44c6f29fe13482c26f13342e58d41b2d35d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/WhereGroup/joii/zipball/23bbe44c6f29fe13482c26f13342e58d41b2d35d",
+                "reference": "23bbe44c6f29fe13482c26f13342e58d41b2d35d",
+                "shasum": ""
+            },
+            "require": {
+                "robloach/component-installer": "0.x"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "dist/joii.min.js"
+                    ],
+                    "files": [
+                        "dist/joii.js"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Javascript Object Inheritance Implementation",
+            "homepage": "http://joii.harold.info",
+            "keywords": [
+                "OOP",
+                "class",
+                "enum",
+                "enumerator",
+                "extends",
+                "inheritance",
+                "interface",
+                "javascript",
+                "joii",
+                "private",
+                "protected",
+                "public",
+                "visibility"
+            ],
+            "abandoned": true,
+            "time": "2017-04-20T09:05:36+00:00"
         }
     ],
+    "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "mapbender/mapbender": 20
+        "mapbender/mapbender": 5
     },
     "prefer-stable": false,
     "prefer-lowest": false,
