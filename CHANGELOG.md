@@ -2,7 +2,7 @@
 - Update mapbender/mapbender to [v3.0.8.5-RC1](https://github.com/mapbender/mapbender/releases/tag/v3.0.8.5-RC1)
 - Update mapbender/fom to [v3.2.10](https://github.com/mapbender/fom/releases/tag/v3.2.10)
 - Update mapbender/owsproxy to [v3.1.4](https://github.com/mapbender/owsproxy3/releases/tag/v3.1.4)
-- Update mapbender/digitizer to [1.1.72](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.1.72)
+- Update mapbender/digitizer to [1.1.72.1](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.1.72.1)
 - Update mapbender/coordinates-utility to [1.0.7.2](https://github.com/mapbender/coordinates-utility/releases/tag/1.0.7.2)
 - Update mapbender/data-source to [0.1.16](https://github.com/mapbender/data-source/releases/tag/0.1.16)
 - Update mapbender/vis-ui.js to [0.2.1](https://github.com/mapbender/vis-ui.js/releases/tag/0.2.1)

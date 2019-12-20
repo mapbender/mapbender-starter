@@ -1854,16 +1854,16 @@
         },
         {
             "name": "mapbender/digitizer",
-            "version": "1.1.72",
+            "version": "1.1.72.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "6ad232428cb58d36e94622fb19915c64e53d98e4"
+                "reference": "ef707a4355c2aac23d4d0757d0744f97b4bc618a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/6ad232428cb58d36e94622fb19915c64e53d98e4",
-                "reference": "6ad232428cb58d36e94622fb19915c64e53d98e4",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/ef707a4355c2aac23d4d0757d0744f97b4bc618a",
+                "reference": "ef707a4355c2aac23d4d0757d0744f97b4bc618a",
                 "shasum": ""
             },
             "require": {
@@ -1908,7 +1908,7 @@
                 "digitizing",
                 "mapbender"
             ],
-            "time": "2019-11-26T22:40:04+00:00"
+            "time": "2019-12-20T09:41:48+00:00"
         },
         {
             "name": "mapbender/fom",
