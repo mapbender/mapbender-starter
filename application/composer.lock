@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c368160db802e1cba31ca9dce3d217d2",
+    "content-hash": "c1a46e08f2eee9008ba2d35ad885f79c",
     "packages": [
         {
             "name": "blueimp/jquery-file-upload",
@@ -1912,16 +1912,16 @@
         },
         {
             "name": "mapbender/fom",
-            "version": "v3.2.10",
+            "version": "v3.2.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/fom.git",
-                "reference": "660da636dd492ce73712aa688d271ff0304fe5ac"
+                "reference": "38a6ac6379e140ecdc6b576064c854aff44a8f84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/fom/zipball/660da636dd492ce73712aa688d271ff0304fe5ac",
-                "reference": "660da636dd492ce73712aa688d271ff0304fe5ac",
+                "url": "https://api.github.com/repos/mapbender/fom/zipball/38a6ac6379e140ecdc6b576064c854aff44a8f84",
+                "reference": "38a6ac6379e140ecdc6b576064c854aff44a8f84",
                 "shasum": ""
             },
             "require": {
@@ -1937,7 +1937,8 @@
                 "branch-alias": {
                     "dev-release/3.0.5": "3.0.5.x-dev",
                     "dev-release/3.0.6": "3.0.6.x-dev",
-                    "dev-release/3.1": "3.1.x-dev"
+                    "dev-release/3.1": "3.1.x-dev",
+                    "dev-master": "3.2.x-dev"
                 }
             },
             "autoload": {
@@ -1955,7 +1956,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2019-11-18T06:43:55+00:00"
+            "time": "2020-01-14T11:16:39+00:00"
         },
         {
             "name": "mapbender/mapbender",
@@ -4610,6 +4611,7 @@
                 "code",
                 "zf2"
             ],
+            "abandoned": "laminas/laminas-code",
             "time": "2016-04-20T17:26:42+00:00"
         },
         {
@@ -4664,6 +4666,7 @@
                 "events",
                 "zf2"
             ],
+            "abandoned": "laminas/laminas-eventmanager",
             "time": "2016-02-18T20:53:00+00:00"
         },
         {
@@ -5871,6 +5874,7 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
+        "mapbender/fom": 0,
         "mapbender/mapbender": 20
     },
     "prefer-stable": false,
