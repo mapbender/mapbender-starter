@@ -1963,12 +1963,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "63c8b9cf30b48e7e51d4c8820d211985b5d5487d"
+                "reference": "d4e60530ca3078f96f5474ac8f988141c6ff747b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/63c8b9cf30b48e7e51d4c8820d211985b5d5487d",
-                "reference": "63c8b9cf30b48e7e51d4c8820d211985b5d5487d",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/d4e60530ca3078f96f5474ac8f988141c6ff747b",
+                "reference": "d4e60530ca3078f96f5474ac8f988141c6ff747b",
                 "shasum": ""
             },
             "require": {
