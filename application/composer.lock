@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c1a46e08f2eee9008ba2d35ad885f79c",
+    "content-hash": "bb2991655c07d455cf685b2494f4b5cb",
     "packages": [
         {
             "name": "blueimp/jquery-file-upload",
@@ -1964,12 +1964,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "5edac23cc20447be3174877c8805b81192ca5197"
+                "reference": "ab5e71cd431cad07e3b2358ae782cb47be2a572f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/5edac23cc20447be3174877c8805b81192ca5197",
-                "reference": "5edac23cc20447be3174877c8805b81192ca5197",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/ab5e71cd431cad07e3b2358ae782cb47be2a572f",
+                "reference": "ab5e71cd431cad07e3b2358ae782cb47be2a572f",
                 "shasum": ""
             },
             "require": {
@@ -2022,7 +2022,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2020-01-14T08:05:53+00:00"
+            "time": "2020-01-28T13:29:44+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -2747,6 +2747,7 @@
                 }
             ],
             "description": "Allows installation of Components via Composer.",
+            "abandoned": "oomphinc/composer-installers-extender",
             "time": "2015-08-10T12:35:38+00:00"
         },
         {
