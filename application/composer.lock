@@ -1963,12 +1963,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "d4e60530ca3078f96f5474ac8f988141c6ff747b"
+                "reference": "63c8b9cf30b48e7e51d4c8820d211985b5d5487d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/d4e60530ca3078f96f5474ac8f988141c6ff747b",
-                "reference": "d4e60530ca3078f96f5474ac8f988141c6ff747b",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/63c8b9cf30b48e7e51d4c8820d211985b5d5487d",
+                "reference": "63c8b9cf30b48e7e51d4c8820d211985b5d5487d",
                 "shasum": ""
             },
             "require": {
@@ -2746,6 +2746,7 @@
                 }
             ],
             "description": "Allows installation of Components via Composer.",
+            "abandoned": "oomphinc/composer-installers-extender",
             "time": "2015-08-10T12:35:38+00:00"
         },
         {
@@ -4370,16 +4371,16 @@
         },
         {
             "name": "wheregroup/doctrine-dbal-shims",
-            "version": "v1.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WhereGroup/doctrine-dbal-shims.git",
-                "reference": "b5741a48d6f3ea7524d8bfc9232e261de6e10686"
+                "reference": "8c8bc7b87b38a4b627b5a11b1be851de51037c61"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WhereGroup/doctrine-dbal-shims/zipball/b5741a48d6f3ea7524d8bfc9232e261de6e10686",
-                "reference": "b5741a48d6f3ea7524d8bfc9232e261de6e10686",
+                "url": "https://api.github.com/repos/WhereGroup/doctrine-dbal-shims/zipball/8c8bc7b87b38a4b627b5a11b1be851de51037c61",
+                "reference": "8c8bc7b87b38a4b627b5a11b1be851de51037c61",
                 "shasum": ""
             },
             "require": {
@@ -4400,7 +4401,7 @@
                 "MIT"
             ],
             "description": "Extended DBAL server support on outdated PHP versions",
-            "time": "2019-10-17T13:12:36+00:00"
+            "time": "2019-12-16T10:16:54+00:00"
         },
         {
             "name": "wheregroup/jquerydialogextendjs",
@@ -4610,6 +4611,7 @@
                 "code",
                 "zf2"
             ],
+            "abandoned": "laminas/laminas-code",
             "time": "2016-04-20T17:26:42+00:00"
         },
         {
@@ -4664,6 +4666,7 @@
                 "events",
                 "zf2"
             ],
+            "abandoned": "laminas/laminas-eventmanager",
             "time": "2016-02-18T20:53:00+00:00"
         },
         {
