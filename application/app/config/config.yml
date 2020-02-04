@@ -67,7 +67,7 @@ fom_user:
     reset_password: true
     max_reset_time: 1
 
-# OWSProxy Configuration
+# see https://github.com/mapbender/owsproxy3/blob/master/CONFIGURATION.md#extension-configuration
 ows_proxy3_core:
     logging: %ows_proxy3_logging%
     obfuscate_client_ip: %ows_proxy3_obfuscate_client_ip%
