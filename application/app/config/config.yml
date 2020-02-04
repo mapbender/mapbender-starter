@@ -61,31 +61,13 @@ swiftmailer:
 fom_manager:
     route_prefix: /manager
 
-# FOM User Configuration
+# see https://github.com/mapbender/fom/blob/master/src/FOM/UserBundle/CONFIGURATION.md#extension-configuration
 fom_user:
     selfregister: false
     reset_password: true
-    max_registration_time: 1
     max_reset_time: 1
-    mail_from_address: wizard@oz.net
-    mail_from_name: Wizard of Oz
-    profile_entity: FOM\UserBundle\Entity\BasicProfile
-    profile_formtype: FOM\UserBundle\Form\Type\BasicProfileType
-    profile_template: FOMUserBundle:User:basic_profile.html.twig
-    self_registration_groups:
-        - Self Registered
-        - Demo Group
 
-    # Time between to check login tries
-    login_check_log_time: "-5 minutes"
-
-    # Login attemps before delay starts
-    login_attempts_before_delay: 3
-
-    # Login delay after all attemps are failed
-    login_delay_after_fail: 5 # Seconds
-
-# OWSProxy Configuration
+# see https://github.com/mapbender/owsproxy3/blob/master/CONFIGURATION.md#extension-configuration
 ows_proxy3_core:
     logging: %ows_proxy3_logging%
     obfuscate_client_ip: %ows_proxy3_obfuscate_client_ip%

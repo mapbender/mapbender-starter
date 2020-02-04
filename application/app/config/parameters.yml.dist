@@ -34,6 +34,7 @@ parameters:
     cookie_lifetime: 3600
 
 # OWSProxy Configuration
+# see https://github.com/mapbender/owsproxy3/blob/master/CONFIGURATION.md#extension-configuration
     ows_proxy3_logging: false
     ows_proxy3_obfuscate_client_ip: true
     ows_proxy3_host: ~
