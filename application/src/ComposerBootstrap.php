@@ -204,7 +204,7 @@ class ComposerBootstrap
     public static function updateEpsgCodes()
     {
         static::printStatus("Update EPSG codes");
-        echo `php app/console doctrine:fixtures:load --fixtures=mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append`;
+        echo `php app/console mapbender:database:init -v`;
     }
 
     /**
