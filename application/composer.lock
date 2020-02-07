@@ -1964,12 +1964,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "ab5e71cd431cad07e3b2358ae782cb47be2a572f"
+                "reference": "f4354139781fe92e319a194a58c9691436c5f587"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/ab5e71cd431cad07e3b2358ae782cb47be2a572f",
-                "reference": "ab5e71cd431cad07e3b2358ae782cb47be2a572f",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/f4354139781fe92e319a194a58c9691436c5f587",
+                "reference": "f4354139781fe92e319a194a58c9691436c5f587",
                 "shasum": ""
             },
             "require": {
@@ -2022,7 +2022,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2020-01-28T13:29:44+00:00"
+            "time": "2020-02-03T19:52:12+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -2962,6 +2962,7 @@
                 }
             ],
             "description": "This bundle generates code for you",
+            "abandoned": true,
             "time": "2017-12-07T15:36:41+00:00"
         },
         {
