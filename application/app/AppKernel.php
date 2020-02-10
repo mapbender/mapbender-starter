@@ -36,6 +36,11 @@ class AppKernel extends Mapbender\BaseKernel
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
         );
 
+        // Symfony 3 only. Only required by starter.
+        if (class_exists('\Symfony\Bundle\WebServerBundle\WebServerBundle')) {
+            $bundles[] = new \Symfony\Bundle\WebServerBundle\WebServerBundle();
+        }
+
         $this->addNameSpaceBundles($bundles, 'Mapbender\\');
 
         // prepend bundles required by Mapbender (including MapbenderCoreBundle)

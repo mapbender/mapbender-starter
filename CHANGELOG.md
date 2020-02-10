@@ -1,20 +1,36 @@
-## v3.0.8.4-RC3
-- Update mapbender/mapbender to [v3.0.8.4-RC3](https://github.com/mapbender/mapbender/releases/tag/v3.0.8.4-RC3)
+## v3.0.8.5
+- Update mapbender/mapbender to [v3.0.8.5](https://github.com/mapbender/mapbender/releases/tag/v3.0.8.5)
+- Update mapbender/fom to [v3.2.12](https://github.com/mapbender/fom/releases/tag/v3.2.12)
+- Update mapbender/owsproxy to [v3.1.4](https://github.com/mapbender/owsproxy3/releases/tag/v3.1.4)
+- Update mapbender/digitizer to [1.1.72.1](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.1.72.1)
+- Update mapbender/coordinates-utility to [1.0.7.2](https://github.com/mapbender/coordinates-utility/releases/tag/1.0.7.2)
+- Update mapbender/data-source to [0.1.16](https://github.com/mapbender/data-source/releases/tag/0.1.16)
+- Update mapbender/vis-ui.js to [0.2.1](https://github.com/mapbender/vis-ui.js/releases/tag/0.2.1)
+- Update symfony/symfony 2.8.51 => [2.8.52](https://github.com/symfony/symfony/releases/tag/v2.8.52)
+- Update sensio/distribution-bundle from 4.0.39 => 5.0.22
+- Update sensio/generator-bundle from 2.3.5 => 3.1.7
+- Add optional Symfony WebServerBundle initialization to AppKernel to ease Symfony 3 transition
+- Bump php reqs to absolute minimum for Mapbender itself (5.4.30)
+- Keep `vendor` directory intact in dist (minus some testing-only deps)
+- Drop unused facebook/webdriver dependency
+- Disable unused assetic bundle controller
+- Remove broken doc:sphinx and doc:api from legacy Phing targets
+- Drop phing/phing from require-dev, demote to suggest
+- Drop abandoned satooshi/php-coveralls from require-dev, drop inconsequential invocation from Travis config
+- Remove remnant config / description of long gone, unmaintained apigen integration
+- Avoid deprecated `xargs -i` usages in `dist` command (fixes errors on OSX)
+- mapbender_user_basic: fix toolbar border rules, fix zoombar styling
+- Drop `composer.json`-defined version, extract version information from git tags instead
+- Update `terminal_commands.md`
+
+## v3.0.8.4
+- Update mapbender/mapbender to [v3.0.8.4](https://github.com/mapbender/mapbender/releases/tag/v3.0.8.4)
 - Update mapbender/fom to [v3.2.9](https://github.com/mapbender/fom/releases/tag/v3.2.9)
 - Update mapbender/owsproxy to [v3.1.3](https://github.com/mapbender/owsproxy3/releases/tag/v3.1.3)
+- Update mapbender/data-source to [0.1.13](https://github.com/mapbender/data-source/releases/tag/0.1.13)
 - Add `cd application` to bootstrap testing server instructions
 - Document ext-ldap as a required PHP extension
-
-## v3.0.8.4-RC2
-- Update mapbender/mapbender to [v3.0.8.4-RC2](https://github.com/mapbender/mapbender/releases/tag/v3.0.8.4-RC2)
-- Update mapbender/fom to [v3.2.8](https://github.com/mapbender/fom/releases/tag/v3.2.8)
-- Update mapbender/owsproxy to [v3.1.2](https://github.com/mapbender/owsproxy3/releases/tag/v3.1.2)
-- Update mapbender/data-source to [0.1.13](https://github.com/mapbender/data-source/releases/tag/0.1.13)
 - Fix invalid html markup and non-cert covered osgeo.org links in demo applications
-
-## v3.0.8.4-RC1
-- Update mapbender/mapbender to [v3.0.8.4-RC1](https://github.com/mapbender/mapbender/releases/tag/v3.0.8.4-RC1)
-- Update mapbender/fom to [v3.2.7](https://github.com/mapbender/fom/releases/tag/v3.2.7)
 
 ## v3.0.8.3
 - Update mapbender/mapbender to [v3.0.8.3](https://github.com/mapbender/mapbender/releases/tag/v3.0.8.3)

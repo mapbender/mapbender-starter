@@ -3,7 +3,6 @@
     "description": "Mapbender",
     "type": "project",
     "license": "MIT",
-    "version": "3.0.8.2",
     "homepage": "http://www.mapbender.org",
     "support": {
         "email":        "mapbender@osgeo.org",
@@ -19,25 +18,23 @@
     },
     "require-dev": {
         "phpunit/phpunit": "^4.8",
-        "predis/predis": "~1.0",
-        "satooshi/php-coveralls": "~0.6",
         "phpunit/phpunit-selenium": "^2.0",
-        "facebook/webdriver": "1.1.*",
-        "phing/phing": "2.*",
         "phantomjs/phantomjs": "1.x"
     },
+    "suggest": {
+        "phing/phing": "For executing legacy Phing build tasks (unmaintained)"
+    },
     "require": {
-        "php": ">=5.3.9",
+        "php": ">=5.4.30",
         "symfony/symfony": "2.8.x",
         "doctrine/orm": "~2.2,>=2.2.3",
         "doctrine/doctrine-bundle": "1.x",
         "twig/extensions": "1.x",
-        "symfony/assetic-bundle": "2.x",
         "symfony/swiftmailer-bundle": "2.3.x",
         "symfony/monolog-bundle": "^3",
-        "sensio/distribution-bundle": "~4.0",
+        "sensio/distribution-bundle": "^4.0 || ^5.0",
         "sensio/framework-extra-bundle": "~3.0",
-        "sensio/generator-bundle": "2.3.x",
+        "sensio/generator-bundle": "^2 || ^3",
 
         "incenteev/composer-parameter-handler": "~2.0",
 
@@ -55,7 +52,7 @@
 
         "mapbender/coordinates-utility": "dev-ol4@dev",
         "components/font-awesome": "^4.0",
-        "wheregroup/cookieconsent": "dev-master"
+        "wheregroup/cookieconsent": "^3"
     },
     "scripts": {
         "build-bootstrap": [

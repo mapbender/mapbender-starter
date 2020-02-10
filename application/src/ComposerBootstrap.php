@@ -204,7 +204,7 @@ class ComposerBootstrap
     public static function updateEpsgCodes()
     {
         static::printStatus("Update EPSG codes");
-        echo `php app/console doctrine:fixtures:load --fixtures=mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Epsg/ --append`;
+        echo `php app/console mapbender:database:init -v`;
     }
 
     /**
@@ -222,6 +222,36 @@ class ComposerBootstrap
     protected static function printStatus($title)
     {
         echo "\n[$title]\n";
+    }
+
+    /**
+     * @param string $mode
+     * @param string|null $stripPrefix
+     * @return string
+     */
+    protected static function getVersion($mode = 'git', $stripPrefix = null)
+    {
+        if ($stripPrefix) {
+            $version = static::getVersion($mode, null);
+            $prefixPosition = strpos($version, $stripPrefix);
+            if ($prefixPosition) {  // !== false && !== 0
+                throw new \LogicException("Passed version prefix " . print_r($stripPrefix, true) . " occurs not as a prefix, but at offset {$prefixPosition} in version {$version}");
+            } elseif ($prefixPosition === 0) {
+                return substr($version, strlen($stripPrefix));
+            } else {
+                fwrite(STDERR, "WARNING: Passsed version prefix " . print_r($stripPrefix, true) . " does not occur in version {$version}\n");
+                return $version;
+            }
+        }
+        switch ($mode) {
+            default:
+                throw new \InvalidArgumentException("Unsupported mode " . print_r($mode, true));
+            case 'git':
+                return trim(@shell_exec('git describe --tags'));
+            case 'composer':
+                fwrite(STDERR, "WARNING: 'composer' version mode is deprecated, please update your scripts to 'git' mode\n");
+                return trim(@shell_exec('git describe --tags --abbrev=0'));
+        }
     }
 
     /**
@@ -270,9 +300,7 @@ class ComposerBootstrap
                 if (count($args) > 1) {
                     throw new \InvalidArgumentException("Extra arguments not supported for 'composer' mode");
                 }
-                /** @var \Composer\Package\RootPackage $rootPackage */
-                $rootPackage = $e->getComposer()->getPackage();
-                echo $rootPackage->getVersion() . "\n";
+                echo static::getVersion('composer', 'v') . "\n";
                 exit(0);
             case 'git':
             case 'git-next':
@@ -435,7 +463,7 @@ class ComposerBootstrap
         $archiveName     = current(array_slice(explode("/", $package->getName()), -1));
         $archiveFormat   = $config["archive-format"];
         $archivePath     = $config["archive-dir"];
-        $archiveVersion  = $package->getVersion();
+        $archiveVersion = static::getVersion('git', 'v');
 
         // Overwrite archive format, name and version if given
         $arguments = $e->getArguments();
@@ -482,46 +510,30 @@ class ComposerBootstrap
         echo `find $archiveProjectPath/vendor -type d -iname "demo" | xargs rm -rf `;
 
         foreach (array(
-                     "documentation",
-                     "apidoc",
-                     "dist",
                      "vendor/mapbender/documentation",
-                     "vendor/mapbender/mapbender-icons",
 
                      "vendor/mnsami/composer-custom-directory-installer",
                      "vendor/robloach/component-installer",
 
                      "vendor/phing",
-                     "vendor/apigen",
                      "vendor/phpunit",
                      "vendor/phantomjs",
                      "vendor/predis",
                      "vendor/satooshi/php-coveralls",
-                     "vendor/facebook/webdriver",
                      "vendor/fabpot/sphinx-php",
-
-                     "vendor/afarkas",
-                     "vendor/debugteam",
-                     "vendor/components",
-                     "vendor/medialize/jquery-context-menu",
-                     "vendor/rogeriopradoj/respond",
-                     "vendor/afarkas/html5shiv",
-                     "vendor/fontfacekit/open-sans",
 
                      "web/app_test.php",
                      "web/index.php",
 
                      "app/cache/*",
                      "app/logs/*",
-
-
                  ) as $path) {
             echo `rm -rf $archiveProjectPath/{$path}`;
         }
 
         // Copy license and readme files
-        echo `find vendor/ -type f -iname "license*" | xargs -i cp --parents "{}" "${archiveProjectPath}"`;
-        echo `find vendor/ -type f -iname "readme*" | xargs -i cp --parents "{}" "${archiveProjectPath}"`;
+        echo `find vendor/ -type f -iname "license*" | xargs -I'{}' cp --parents '{}' "${archiveProjectPath}"`;
+        echo `find vendor/ -type f -iname "readme*" | xargs -I'{}' cp --parents '{}' "${archiveProjectPath}"`;
 
         // Copy project info files
         echo `cp ../LICENSE "${archiveProjectPath}/"`;
@@ -544,7 +556,7 @@ class ComposerBootstrap
         $archiveName     = current(array_slice(explode("/", $package->getName()), -1));
         $archiveFormat   = $config["archive-format"];
         $archivePath     = $config["archive-dir"];
-        $archiveVersion  = $package->getVersion();
+        $archiveVersion = static::getVersion('git', 'v');
 
         // Overwrite archive format, name and version if given
         $arguments = $e->getArguments();

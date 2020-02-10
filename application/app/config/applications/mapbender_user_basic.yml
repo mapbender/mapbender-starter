@@ -9,13 +9,14 @@ parameters:
             custom_css: |
               .toolBar {
                 background-color: rgba(0, 29, 122,0.9);
-                border-bottom: solid 2px rgb(197,43,69)
+                border-color: #C52B45;
+                &.top {
+                    border-bottom-width: 2px;
+                }
               }
 
               .mb-element-zoombar .pan {
                 background-color: rgba(0, 29, 122, 0.9);
-                border: solid 1px #c0c0c0;
-                color: #fff;
               }
               .mb-element-zoombar .toolPane {
                 background-color: rgba(0, 29, 122, 0.9);
@@ -124,7 +125,6 @@ parameters:
                         class: Mapbender\CoreBundle\Element\GpsPosition
                         label: false
                         target: map
-                        action: open
                     linerulerButton:
                         title: mb.core.ruler.tag.measure 
                         tooltip: mb.core.ruler.tag.line
@@ -146,7 +146,6 @@ parameters:
                     about:
                         title: mb.core.aboutdialog.tag.about
                         tooltip: mb.core.aboutdialog.tag.about
-                        icon: icon-about
                         label: false
                         class: Mapbender\CoreBundle\Element\AboutDialog
                     coordinatesutility-button:
@@ -162,7 +161,6 @@ parameters:
                         class: Mapbender\CoreBundle\Element\Map
                         layersets: [main]
                         srs: EPSG:25832
-                        units: m
                         extents:
                             start: [361000,5619000,371150,5625000]
                             max: [251000,5400000,475000,5850000]
@@ -172,8 +170,8 @@ parameters:
                         class: Mapbender\CoreBundle\Element\ZoomBar
                         target: map
                         components: ["pan","history","zoom_box","zoom_max","zoom_slider"]
-                        stepsize: 50
-                        stepbypixel: true
+                        stepSize: 50
+                        stepByPixel: true
                         anchor: right-top
                         draggable: false
                     legend:
@@ -183,9 +181,6 @@ parameters:
                         elementType: dialog
                         autoOpen: false
                         displayType: list
-                        hideEmptyLayers: true
-                        noLegend: "No legend available"
-                        showWmsTitle: true
                         showLayerTitle: true
                         showGroupedLayerTitle: true
                     featureinfo:
@@ -247,7 +242,6 @@ parameters:
                         class: Mapbender\CoreBundle\Element\ScaleBar
                         target: map
                         anchor: 'left-bottom'
-                        position: ['10px', '10px']
                         maxWidth: 200
                         units: ['km']
                     layertreedialog:
@@ -258,19 +252,15 @@ parameters:
                         autoOpen: false
                         showBaseSource: true
                         showHeader: false
-                        layerMenu: false
-                        layerRemove: false
                         menu: []
                     overview:
                         title: mb.core.overview.class.title
                         class: Mapbender\CoreBundle\Element\Overview
-                        tooltip: 'Overview'
                         target: map
                         layerset: overview
                         width: 200
                         height: 100
                         anchor: 'right-bottom'
-                        position: ['0px', '0px']
                         maximized: true
                         fixed: false
                     coordinatesutility:
@@ -306,7 +296,6 @@ parameters:
                     coordinates:
                         class: Mapbender\CoreBundle\Element\CoordinatesDisplay
                         title: mb.core.coordinates.class.title
-                        tooltip: mb.core.coordinates.class.description
                         target: map
                         label: false
                         empty:  "x: - y: -"

@@ -1,4 +1,7 @@
 parameters:
+### todo: switch to using dsn urls, see https://www.doctrine-project.org/projects/doctrine-dbal/en/2.9/reference/configuration.html#connecting-using-a-url
+###       To avoid suprises, a DSN can be constructed here from parts, at least for the shipping default parameters
+###       Connection definition in config.yml should only use url: %database_dsn% though
     database_driver:   pdo_sqlite
     database_host:     ~
     database_port:     ~
@@ -31,6 +34,7 @@ parameters:
     cookie_lifetime: 3600
 
 # OWSProxy Configuration
+# see https://github.com/mapbender/owsproxy3/blob/master/CONFIGURATION.md#extension-configuration
     ows_proxy3_logging: false
     ows_proxy3_obfuscate_client_ip: true
     ows_proxy3_host: ~

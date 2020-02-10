@@ -201,19 +201,6 @@
         <delete dir="${buildroot}" />
     </target>
 
-    <target name="doc:sphinx">
-        <symlink target="../application/mapbender" link="documentation/mapbender" />
-        <symlink target="../application/fom" link="documentation/fom" />
-        <exec command="sphinx-build documentation/ application/documentation/" passthru="true" />
-    </target>
-
-    <target name="doc:api">
-        <apigen config="apigen.conf" destination="application/apidoc" />
-    </target>
-
-    <target name="doc" depends="doc:sphinx,doc:api">
-    </target>
-
     <target name="deps">
         <copy overwrite="false" haltonerror="false"
             file="application/app/config/parameters.yml.dist"
@@ -222,7 +209,7 @@
         <exec command="php bin/composer install --no-dev -o" dir="application" passthru="true"/>
     </target>
 
-    <target name="prepare" depends="deps,doc">
+    <target name="prepare" depends="deps">
         <delete dir="application/web/assets/.dev-cache"/>
         <exec command="application/app/console assets:install --symlink --relative application/web/" />
         <!-- <exec command="application/app/console doctrine:database:drop -\-force" /> -->

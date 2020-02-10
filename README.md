@@ -74,15 +74,15 @@ Make sure to make changes in _all_ php.ini files relevant to your installation.
 
 ## Getting the code
 
-Git clone mapbender-starter via ssh or https at your preference:
+Git clone mapbender-starter via https or ssh (requires configured git credentials) at your preference:
 ```sh
-git clone git@github.com:mapbender/mapbender-starter.git mapbender-starter
+git clone https://github.com/mapbender/mapbender-starter.git mapbender-starter
 ```
 
 or
 
 ```sh
-git clone https://github.com/mapbender/mapbender-starter.git mapbender-starter
+git clone git@github.com:mapbender/mapbender-starter.git mapbender-starter
 ```
 
 ## Bootstrapping

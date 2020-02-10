@@ -76,13 +76,11 @@ parameters:
                         class: Mapbender\CoreBundle\Element\GpsPosition
                         label: false
                         target: map
-                        action: open
                         icon: iconGps
                         refreshinterval: '5000'
                         average: '1'
                         follow: false
                         centerOnFirstPosition: true
-                        zoomToAccuracy: false
                         zoomToAccuracyOnFirstPosition: true
 
                     imprint-button:
@@ -115,7 +113,6 @@ parameters:
                         class: Mapbender\CoreBundle\Element\Map
                         layersets: [main]
                         srs: EPSG:25832
-                        units: m
                         extents:
                             start: [361000,5619000,371150,5625000]
                             max: [-500000,4350000,1600000,6850000]
@@ -125,8 +122,8 @@ parameters:
                         class: Mapbender\CoreBundle\Element\ZoomBar
                         target: map
                         components: ["zoom_in_out", "zoom_max"]
-                        stepsize: 50
-                        stepbypixel: true
+                        stepSize: 50
+                        stepByPixel: true
                         anchor: left-top
                         draggable: false
 
@@ -138,7 +135,6 @@ parameters:
                         type: element
                         autoOpen: false
                         showBaseSource: false
-                        layerRemove: false
                         menu: []
 
                     featureinfo:
@@ -169,18 +165,13 @@ parameters:
                         tooltip: mb.core.basesourceswitcher.class.title
                         class: Mapbender\CoreBundle\Element\BaseSourceSwitcher
                         target: map
-                        display: mobile
                         instancesets:
                             is1:
                                 title: "OSM Demo (with opacity)"
-                                cprTitle: ~
-                                cprUrl: ~
                                 group: ~
                                 instances: [osm_2]
                             is2:
                                 title: "OSM Demo"
-                                cprTitle: ~
-                                cprUrl: ~
                                 group: ~
                                 instances: [osm]
 
