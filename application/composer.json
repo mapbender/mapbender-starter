@@ -134,7 +134,6 @@
             "web/components/openlayers/": [
                 "openlayers/openlayers"
             ],
-            "mapbender/src/Mapbender/CoreBundle/Resources/public/mapquery/": ["mapbender/mapquery"],
             "web/components/datatables/": ["datatables/datatables"]
         }
     },
