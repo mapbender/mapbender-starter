@@ -1964,12 +1964,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "f4354139781fe92e319a194a58c9691436c5f587"
+                "reference": "38b7192c6613ec8d6690209ddfc4bb962cb98878"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/f4354139781fe92e319a194a58c9691436c5f587",
-                "reference": "f4354139781fe92e319a194a58c9691436c5f587",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/38b7192c6613ec8d6690209ddfc4bb962cb98878",
+                "reference": "38b7192c6613ec8d6690209ddfc4bb962cb98878",
                 "shasum": ""
             },
             "require": {
@@ -2022,7 +2022,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2020-02-03T19:52:12+00:00"
+            "time": "2020-02-27T09:59:34+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -2170,16 +2170,16 @@
         },
         {
             "name": "mapbender/vis-ui.js",
-            "version": "0.2.1",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/vis-ui.js.git",
-                "reference": "bebb41fbaa459996b3d36feb9969532741b8b390"
+                "reference": "94691cda60591c571a209a47bfffeecf3ca6a992"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/vis-ui.js/zipball/bebb41fbaa459996b3d36feb9969532741b8b390",
-                "reference": "bebb41fbaa459996b3d36feb9969532741b8b390",
+                "url": "https://api.github.com/repos/mapbender/vis-ui.js/zipball/94691cda60591c571a209a47bfffeecf3ca6a992",
+                "reference": "94691cda60591c571a209a47bfffeecf3ca6a992",
                 "shasum": ""
             },
             "require": {
@@ -2231,7 +2231,7 @@
                 "jquery",
                 "vis-ui"
             ],
-            "time": "2019-11-27T01:03:24+00:00"
+            "time": "2020-02-28T11:00:13+00:00"
         },
         {
             "name": "medialize/jquery-context-menu",
@@ -2962,7 +2962,7 @@
                 }
             ],
             "description": "This bundle generates code for you",
-            "abandoned": true,
+            "abandoned": "symfony/maker-bundle",
             "time": "2017-12-07T15:36:41+00:00"
         },
         {
