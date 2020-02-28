@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bb2991655c07d455cf685b2494f4b5cb",
+    "content-hash": "d8a9272135468b3710921ca3f5124014",
     "packages": [
         {
             "name": "blueimp/jquery-file-upload",
@@ -1806,16 +1806,16 @@
         },
         {
             "name": "mapbender/data-source",
-            "version": "0.1.16",
+            "version": "0.1.16.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/data-source.git",
-                "reference": "800d6e540d7e98020c0f9d525fce4a8556925cd0"
+                "reference": "dbf70e109b2bb0177a65a6da093e28119c56ea1a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/data-source/zipball/800d6e540d7e98020c0f9d525fce4a8556925cd0",
-                "reference": "800d6e540d7e98020c0f9d525fce4a8556925cd0",
+                "url": "https://api.github.com/repos/mapbender/data-source/zipball/dbf70e109b2bb0177a65a6da093e28119c56ea1a",
+                "reference": "dbf70e109b2bb0177a65a6da093e28119c56ea1a",
                 "shasum": ""
             },
             "require": {
@@ -1850,7 +1850,7 @@
                 "data source",
                 "mapbender"
             ],
-            "time": "2019-11-20T09:15:29+00:00"
+            "time": "2020-02-24T15:01:36+00:00"
         },
         {
             "name": "mapbender/digitizer",
@@ -1912,16 +1912,16 @@
         },
         {
             "name": "mapbender/fom",
-            "version": "v3.2.11",
+            "version": "v3.2.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/fom.git",
-                "reference": "38a6ac6379e140ecdc6b576064c854aff44a8f84"
+                "reference": "14d072ab39363b371b28752d31465ed92420a7cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/fom/zipball/38a6ac6379e140ecdc6b576064c854aff44a8f84",
-                "reference": "38a6ac6379e140ecdc6b576064c854aff44a8f84",
+                "url": "https://api.github.com/repos/mapbender/fom/zipball/14d072ab39363b371b28752d31465ed92420a7cf",
+                "reference": "14d072ab39363b371b28752d31465ed92420a7cf",
                 "shasum": ""
             },
             "require": {
@@ -1956,7 +1956,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2020-01-14T11:16:39+00:00"
+            "time": "2020-02-18T11:15:29+00:00"
         },
         {
             "name": "mapbender/mapbender",
@@ -2127,16 +2127,16 @@
         },
         {
             "name": "mapbender/owsproxy",
-            "version": "v3.1.4",
+            "version": "v3.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/owsproxy3.git",
-                "reference": "7e98320f99d908abc2e5b3a818edd4bfb14124e9"
+                "reference": "bfce4eff1188a0d1323ea59eb260d3cc12b1841b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/7e98320f99d908abc2e5b3a818edd4bfb14124e9",
-                "reference": "7e98320f99d908abc2e5b3a818edd4bfb14124e9",
+                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/bfce4eff1188a0d1323ea59eb260d3cc12b1841b",
+                "reference": "bfce4eff1188a0d1323ea59eb260d3cc12b1841b",
                 "shasum": ""
             },
             "require": {
@@ -2166,7 +2166,7 @@
                 "module",
                 "owsproxy"
             ],
-            "time": "2019-11-18T06:31:50+00:00"
+            "time": "2020-02-19T22:47:28+00:00"
         },
         {
             "name": "mapbender/vis-ui.js",
@@ -5806,7 +5806,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "mapbender/fom": 0,
-        "mapbender/mapbender": 20
+        "mapbender/mapbender": 20,
+        "mapbender/owsproxy": 0
     },
     "prefer-stable": false,
     "prefer-lowest": false,

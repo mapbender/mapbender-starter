@@ -45,7 +45,7 @@
 
         "mapbender/fom": "~3.2.0@stable",
         "mapbender/mapbender": "dev-testing/reusable-source-instances as 3.0.8.5",
-        "mapbender/owsproxy": "^3.0.6",
+        "mapbender/owsproxy": "^3.0.6@stable",
         "mapbender/digitizer": "^1.0",
 
         "mapbender/coordinates-utility": "^1.0.2",
