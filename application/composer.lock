@@ -2170,16 +2170,16 @@
         },
         {
             "name": "mapbender/vis-ui.js",
-            "version": "0.2.0",
+            "version": "0.2.81",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/vis-ui.js.git",
-                "reference": "94691cda60591c571a209a47bfffeecf3ca6a992"
+                "reference": "754c95e81ac997cbb3858f8e6c3c773285133646"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/vis-ui.js/zipball/94691cda60591c571a209a47bfffeecf3ca6a992",
-                "reference": "94691cda60591c571a209a47bfffeecf3ca6a992",
+                "url": "https://api.github.com/repos/mapbender/vis-ui.js/zipball/754c95e81ac997cbb3858f8e6c3c773285133646",
+                "reference": "754c95e81ac997cbb3858f8e6c3c773285133646",
                 "shasum": ""
             },
             "require": {
@@ -2231,7 +2231,7 @@
                 "jquery",
                 "vis-ui"
             ],
-            "time": "2020-02-28T11:00:13+00:00"
+            "time": "2020-03-02T12:49:04+00:00"
         },
         {
             "name": "medialize/jquery-context-menu",
