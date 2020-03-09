@@ -31,6 +31,11 @@ class AppKernel extends Mapbender\BaseKernel
             new Mapbender\PrintBundle\MapbenderPrintBundle(),
             new Mapbender\MobileBundle\MapbenderMobileBundle(),
 
+            // Extra bundles installed by default starter
+            new \Mapbender\DigitizerBundle\MapbenderDigitizerBundle(),
+            new \Mapbender\DataSourceBundle\MapbenderDataSourceBundle(),
+            new \Mapbender\CoordinatesUtilityBundle\MapbenderCoordinatesUtilityBundle(),
+
             // OWSProxy3 bundles
             new OwsProxy3\CoreBundle\OwsProxy3CoreBundle(),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
@@ -40,8 +45,6 @@ class AppKernel extends Mapbender\BaseKernel
         if (class_exists('\Symfony\Bundle\WebServerBundle\WebServerBundle')) {
             $bundles[] = new \Symfony\Bundle\WebServerBundle\WebServerBundle();
         }
-
-        $this->addNameSpaceBundles($bundles, 'Mapbender\\');
 
         // prepend bundles required by Mapbender (including MapbenderCoreBundle)
         $bundles = array_merge(parent::registerBundles(), $bundles);
