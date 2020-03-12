@@ -1915,16 +1915,16 @@
         },
         {
             "name": "mapbender/fom",
-            "version": "v3.2.12",
+            "version": "v3.2.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/fom.git",
-                "reference": "13928f36a87fa106bdedf5f43e4395899712e6e9"
+                "reference": "14d072ab39363b371b28752d31465ed92420a7cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/fom/zipball/13928f36a87fa106bdedf5f43e4395899712e6e9",
-                "reference": "13928f36a87fa106bdedf5f43e4395899712e6e9",
+                "url": "https://api.github.com/repos/mapbender/fom/zipball/14d072ab39363b371b28752d31465ed92420a7cf",
+                "reference": "14d072ab39363b371b28752d31465ed92420a7cf",
                 "shasum": ""
             },
             "require": {
@@ -1959,7 +1959,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2020-02-04T13:27:48+00:00"
+            "time": "2020-02-18T11:15:29+00:00"
         },
         {
             "name": "mapbender/mapbender",
@@ -2130,16 +2130,16 @@
         },
         {
             "name": "mapbender/owsproxy",
-            "version": "v3.1.4",
+            "version": "v3.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/owsproxy3.git",
-                "reference": "7e98320f99d908abc2e5b3a818edd4bfb14124e9"
+                "reference": "bfce4eff1188a0d1323ea59eb260d3cc12b1841b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/7e98320f99d908abc2e5b3a818edd4bfb14124e9",
-                "reference": "7e98320f99d908abc2e5b3a818edd4bfb14124e9",
+                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/bfce4eff1188a0d1323ea59eb260d3cc12b1841b",
+                "reference": "bfce4eff1188a0d1323ea59eb260d3cc12b1841b",
                 "shasum": ""
             },
             "require": {
@@ -2169,7 +2169,7 @@
                 "module",
                 "owsproxy"
             ],
-            "time": "2019-11-18T06:31:50+00:00"
+            "time": "2020-02-19T22:47:28+00:00"
         },
         {
             "name": "mapbender/vis-ui.js",
