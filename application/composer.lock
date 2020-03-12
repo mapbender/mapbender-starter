@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "22719d2a8becd414820469295a149bf1",
+    "content-hash": "7044e5801a5498a6cb6b26b5c572fa3e",
     "packages": [
         {
             "name": "blueimp/jquery-file-upload",
@@ -1760,20 +1760,23 @@
         },
         {
             "name": "mapbender/coordinates-utility",
-            "version": "1.0.7.2",
+            "version": "1.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/coordinates-utility.git",
-                "reference": "e4940905c80cb9ab3e359ed2fb8fe3dafcaf631a"
+                "reference": "874e3ac56cd597bca892b935b9f5d13c90a0a51c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/coordinates-utility/zipball/e4940905c80cb9ab3e359ed2fb8fe3dafcaf631a",
-                "reference": "e4940905c80cb9ab3e359ed2fb8fe3dafcaf631a",
+                "url": "https://api.github.com/repos/mapbender/coordinates-utility/zipball/874e3ac56cd597bca892b935b9f5d13c90a0a51c",
+                "reference": "874e3ac56cd597bca892b935b9f5d13c90a0a51c",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.5.4"
+            },
+            "conflict": {
+                "mapbender/mapbender": "<3.0.8.5"
             },
             "type": "library",
             "extra": {
@@ -1802,7 +1805,7 @@
                 "navigate",
                 "search"
             ],
-            "time": "2019-11-26T23:50:08+00:00"
+            "time": "2020-02-17T13:10:20+00:00"
         },
         {
             "name": "mapbender/data-source",
@@ -2962,7 +2965,7 @@
                 }
             ],
             "description": "This bundle generates code for you",
-            "abandoned": true,
+            "abandoned": "symfony/maker-bundle",
             "time": "2017-12-07T15:36:41+00:00"
         },
         {
