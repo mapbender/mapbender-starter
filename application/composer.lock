@@ -1809,16 +1809,16 @@
         },
         {
             "name": "mapbender/data-source",
-            "version": "0.1.16",
+            "version": "0.1.16.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/data-source.git",
-                "reference": "800d6e540d7e98020c0f9d525fce4a8556925cd0"
+                "reference": "108b4fbe657dca93ba9379bac28ea54e1f73d0bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/data-source/zipball/800d6e540d7e98020c0f9d525fce4a8556925cd0",
-                "reference": "800d6e540d7e98020c0f9d525fce4a8556925cd0",
+                "url": "https://api.github.com/repos/mapbender/data-source/zipball/108b4fbe657dca93ba9379bac28ea54e1f73d0bb",
+                "reference": "108b4fbe657dca93ba9379bac28ea54e1f73d0bb",
                 "shasum": ""
             },
             "require": {
@@ -1853,7 +1853,7 @@
                 "data source",
                 "mapbender"
             ],
-            "time": "2019-11-20T09:15:29+00:00"
+            "time": "2020-03-12T09:45:37+00:00"
         },
         {
             "name": "mapbender/digitizer",
