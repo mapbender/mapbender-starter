@@ -2173,16 +2173,16 @@
         },
         {
             "name": "mapbender/vis-ui.js",
-            "version": "0.2.1",
+            "version": "0.2.83",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/vis-ui.js.git",
-                "reference": "bebb41fbaa459996b3d36feb9969532741b8b390"
+                "reference": "330c6461fef595d3d754f37a9b9a76a75ac530a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/vis-ui.js/zipball/bebb41fbaa459996b3d36feb9969532741b8b390",
-                "reference": "bebb41fbaa459996b3d36feb9969532741b8b390",
+                "url": "https://api.github.com/repos/mapbender/vis-ui.js/zipball/330c6461fef595d3d754f37a9b9a76a75ac530a3",
+                "reference": "330c6461fef595d3d754f37a9b9a76a75ac530a3",
                 "shasum": ""
             },
             "require": {
@@ -2234,7 +2234,7 @@
                 "jquery",
                 "vis-ui"
             ],
-            "time": "2019-11-27T01:03:24+00:00"
+            "time": "2020-03-10T08:24:16+00:00"
         },
         {
             "name": "medialize/jquery-context-menu",
@@ -4339,16 +4339,16 @@
         },
         {
             "name": "wheregroup/jquerydialogextendjs",
-            "version": "2.0.4",
+            "version": "2.1.204",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WhereGroup/jquery-dialogextend.git",
-                "reference": "ece974a1f44ed513fc784e1a97c7b0988ab6f980"
+                "reference": "ae1886291b5da0b67d375847613511031220d344"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WhereGroup/jquery-dialogextend/zipball/ece974a1f44ed513fc784e1a97c7b0988ab6f980",
-                "reference": "ece974a1f44ed513fc784e1a97c7b0988ab6f980",
+                "url": "https://api.github.com/repos/WhereGroup/jquery-dialogextend/zipball/ae1886291b5da0b67d375847613511031220d344",
+                "reference": "ae1886291b5da0b67d375847613511031220d344",
                 "shasum": ""
             },
             "require": {
@@ -4368,7 +4368,7 @@
             ],
             "description": "Maximize and Minimize Buttons for UI Dialog",
             "homepage": "https://github.com/ROMB/jquery-dialogextend",
-            "time": "2017-04-20T07:50:22+00:00"
+            "time": "2020-03-10T10:08:39+00:00"
         },
         {
             "name": "wheregroup/open-sans",
