@@ -1821,20 +1821,23 @@
         },
         {
             "name": "mapbender/coordinates-utility",
-            "version": "dev-ol4",
+            "version": "1.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/coordinates-utility.git",
-                "reference": "3637af9f710816c2ca8e80ef6f7da2fd09fc3d22"
+                "reference": "874e3ac56cd597bca892b935b9f5d13c90a0a51c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/coordinates-utility/zipball/3637af9f710816c2ca8e80ef6f7da2fd09fc3d22",
-                "reference": "3637af9f710816c2ca8e80ef6f7da2fd09fc3d22",
+                "url": "https://api.github.com/repos/mapbender/coordinates-utility/zipball/874e3ac56cd597bca892b935b9f5d13c90a0a51c",
+                "reference": "874e3ac56cd597bca892b935b9f5d13c90a0a51c",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.5.4"
+            },
+            "conflict": {
+                "mapbender/mapbender": "<3.0.8.5"
             },
             "type": "library",
             "extra": {
@@ -1863,20 +1866,20 @@
                 "navigate",
                 "search"
             ],
-            "time": "2018-06-26T09:53:22+00:00"
+            "time": "2020-02-17T13:10:20+00:00"
         },
         {
             "name": "mapbender/data-source",
-            "version": "0.1.16",
+            "version": "0.1.16.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/data-source.git",
-                "reference": "800d6e540d7e98020c0f9d525fce4a8556925cd0"
+                "reference": "108b4fbe657dca93ba9379bac28ea54e1f73d0bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/data-source/zipball/800d6e540d7e98020c0f9d525fce4a8556925cd0",
-                "reference": "800d6e540d7e98020c0f9d525fce4a8556925cd0",
+                "url": "https://api.github.com/repos/mapbender/data-source/zipball/108b4fbe657dca93ba9379bac28ea54e1f73d0bb",
+                "reference": "108b4fbe657dca93ba9379bac28ea54e1f73d0bb",
                 "shasum": ""
             },
             "require": {
@@ -1911,7 +1914,7 @@
                 "data source",
                 "mapbender"
             ],
-            "time": "2019-11-20T09:15:29+00:00"
+            "time": "2020-03-12T09:45:37+00:00"
         },
         {
             "name": "mapbender/digitizer",
@@ -1973,16 +1976,16 @@
         },
         {
             "name": "mapbender/fom",
-            "version": "v3.2.12",
+            "version": "v3.2.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/fom.git",
-                "reference": "13928f36a87fa106bdedf5f43e4395899712e6e9"
+                "reference": "14d072ab39363b371b28752d31465ed92420a7cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/fom/zipball/13928f36a87fa106bdedf5f43e4395899712e6e9",
-                "reference": "13928f36a87fa106bdedf5f43e4395899712e6e9",
+                "url": "https://api.github.com/repos/mapbender/fom/zipball/14d072ab39363b371b28752d31465ed92420a7cf",
+                "reference": "14d072ab39363b371b28752d31465ed92420a7cf",
                 "shasum": ""
             },
             "require": {
@@ -2017,7 +2020,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2020-02-04T13:27:48+00:00"
+            "time": "2020-02-18T11:15:29+00:00"
         },
         {
             "name": "mapbender/mapbender",
@@ -2138,35 +2141,35 @@
         },
         {
             "name": "mapbender/mapquery",
-            "version": "1.0.2",
+            "version": "1.1.2131",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapquery.git",
-                "reference": "339254e038b121c73c6d1a3ebb39db6f8407c2f1"
+                "reference": "a1d23990c927c596dfe8e6eb8b3d7c99c5e86f7b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapquery/zipball/339254e038b121c73c6d1a3ebb39db6f8407c2f1",
-                "reference": "339254e038b121c73c6d1a3ebb39db6f8407c2f1",
+                "url": "https://api.github.com/repos/mapbender/mapquery/zipball/a1d23990c927c596dfe8e6eb8b3d7c99c5e86f7b",
+                "reference": "a1d23990c927c596dfe8e6eb8b3d7c99c5e86f7b",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0",
                 "robloach/component-installer": "0.2.*"
             },
+            "conflict": {
+                "mapbender/mapbender": "<3.0.8"
+            },
             "type": "component",
             "extra": {
                 "component": {
-                    "scripts": [
-                        "src/*.js"
-                    ],
                     "files": [
                         "lib/openlayers/*",
                         "lib/openlayers/**"
                     ]
                 },
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2188,20 +2191,20 @@
             "keywords": [
                 "mapquery"
             ],
-            "time": "2018-01-04T14:15:31+00:00"
+            "time": "2020-02-20T14:20:22+00:00"
         },
         {
             "name": "mapbender/owsproxy",
-            "version": "v3.1.4",
+            "version": "v3.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/owsproxy3.git",
-                "reference": "7e98320f99d908abc2e5b3a818edd4bfb14124e9"
+                "reference": "bfce4eff1188a0d1323ea59eb260d3cc12b1841b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/7e98320f99d908abc2e5b3a818edd4bfb14124e9",
-                "reference": "7e98320f99d908abc2e5b3a818edd4bfb14124e9",
+                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/bfce4eff1188a0d1323ea59eb260d3cc12b1841b",
+                "reference": "bfce4eff1188a0d1323ea59eb260d3cc12b1841b",
                 "shasum": ""
             },
             "require": {
@@ -2231,20 +2234,20 @@
                 "module",
                 "owsproxy"
             ],
-            "time": "2019-11-18T06:31:50+00:00"
+            "time": "2020-02-19T22:47:28+00:00"
         },
         {
             "name": "mapbender/vis-ui.js",
-            "version": "0.2.1",
+            "version": "0.2.83",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/vis-ui.js.git",
-                "reference": "bebb41fbaa459996b3d36feb9969532741b8b390"
+                "reference": "330c6461fef595d3d754f37a9b9a76a75ac530a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/vis-ui.js/zipball/bebb41fbaa459996b3d36feb9969532741b8b390",
-                "reference": "bebb41fbaa459996b3d36feb9969532741b8b390",
+                "url": "https://api.github.com/repos/mapbender/vis-ui.js/zipball/330c6461fef595d3d754f37a9b9a76a75ac530a3",
+                "reference": "330c6461fef595d3d754f37a9b9a76a75ac530a3",
                 "shasum": ""
             },
             "require": {
@@ -2296,7 +2299,7 @@
                 "jquery",
                 "vis-ui"
             ],
-            "time": "2019-11-27T01:03:24+00:00"
+            "time": "2020-03-10T08:24:16+00:00"
         },
         {
             "name": "medialize/jquery-context-menu",
@@ -3064,7 +3067,7 @@
                 }
             ],
             "description": "This bundle generates code for you",
-            "abandoned": true,
+            "abandoned": "symfony/maker-bundle",
             "time": "2017-12-07T15:36:41+00:00"
         },
         {
@@ -4439,16 +4442,16 @@
         },
         {
             "name": "wheregroup/jquerydialogextendjs",
-            "version": "2.0.4",
+            "version": "2.1.204",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WhereGroup/jquery-dialogextend.git",
-                "reference": "ece974a1f44ed513fc784e1a97c7b0988ab6f980"
+                "reference": "ae1886291b5da0b67d375847613511031220d344"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WhereGroup/jquery-dialogextend/zipball/ece974a1f44ed513fc784e1a97c7b0988ab6f980",
-                "reference": "ece974a1f44ed513fc784e1a97c7b0988ab6f980",
+                "url": "https://api.github.com/repos/WhereGroup/jquery-dialogextend/zipball/ae1886291b5da0b67d375847613511031220d344",
+                "reference": "ae1886291b5da0b67d375847613511031220d344",
                 "shasum": ""
             },
             "require": {
@@ -4468,7 +4471,7 @@
             ],
             "description": "Maximize and Minimize Buttons for UI Dialog",
             "homepage": "https://github.com/ROMB/jquery-dialogextend",
-            "time": "2017-04-20T07:50:22+00:00"
+            "time": "2020-03-10T10:08:39+00:00"
         },
         {
             "name": "wheregroup/open-sans",
