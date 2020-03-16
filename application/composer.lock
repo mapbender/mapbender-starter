@@ -2094,35 +2094,33 @@
         },
         {
             "name": "mapbender/mapbender-icons",
-            "version": "1.5",
+            "version": "1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/icons.git",
-                "reference": "4158bb1fb883d338a5e6597f8a73cbb991a7a48d"
+                "reference": "ff92d645f67eabf0999b20ee56330db2f7f8f31b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/icons/zipball/4158bb1fb883d338a5e6597f8a73cbb991a7a48d",
-                "reference": "4158bb1fb883d338a5e6597f8a73cbb991a7a48d",
+                "url": "https://api.github.com/repos/mapbender/icons/zipball/ff92d645f67eabf0999b20ee56330db2f7f8f31b",
+                "reference": "ff92d645f67eabf0999b20ee56330db2f7f8f31b",
                 "shasum": ""
             },
             "require": {
-                "robloach/component-installer": "*"
+                "robloach/component-installer": "^0.2"
             },
             "type": "component",
             "extra": {
                 "component": {
-                    "styles": [
-                        "style.css"
-                    ],
                     "files": [
+                        "style.css",
                         "fonts/*"
                     ]
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "Open Source Geospatial Foundation"
+                "MIT"
             ],
             "authors": [
                 {
@@ -2130,14 +2128,9 @@
                     "email": "eslider@gmail.com"
                 }
             ],
-            "description": "Mapbender3 icons",
-            "homepage": "http://mapbender3.org/",
-            "keywords": [
-                "assets",
-                "icons",
-                "mapbender3"
-            ],
-            "time": "2018-12-03T08:41:07+00:00"
+            "description": "Mapbender icons",
+            "homepage": "http://mapbender.org/",
+            "time": "2020-02-21T06:06:37+00:00"
         },
         {
             "name": "mapbender/mapquery",
