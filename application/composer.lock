@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "347fcf5ed147223aca4954048655df94",
+    "content-hash": "3a104036a6c57598ce15950cc6e7c37e",
     "packages": [
         {
             "name": "blueimp/jquery-file-upload",
@@ -1854,16 +1854,16 @@
         },
         {
             "name": "mapbender/digitizer",
-            "version": "1.1.72.1",
+            "version": "dev-fix/bugfixesForLatestMapbender",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "ef707a4355c2aac23d4d0757d0744f97b4bc618a"
+                "reference": "592287a4631ac37af8b185f00597a402abd5feb8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/ef707a4355c2aac23d4d0757d0744f97b4bc618a",
-                "reference": "ef707a4355c2aac23d4d0757d0744f97b4bc618a",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/592287a4631ac37af8b185f00597a402abd5feb8",
+                "reference": "592287a4631ac37af8b185f00597a402abd5feb8",
                 "shasum": ""
             },
             "require": {
@@ -1908,7 +1908,7 @@
                 "digitizing",
                 "mapbender"
             ],
-            "time": "2019-12-20T09:41:48+00:00"
+            "time": "2020-04-03T12:16:32+00:00"
         },
         {
             "name": "mapbender/fom",
@@ -5815,6 +5815,7 @@
         "mapbender/fom": 0,
         "mapbender/mapbender": 20,
         "mapbender/owsproxy": 0,
+        "mapbender/digitizer": 20,
         "mapbender/data-source": 20
     },
     "prefer-stable": false,
