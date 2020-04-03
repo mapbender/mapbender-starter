@@ -47,6 +47,7 @@
         "mapbender/mapbender": "dev-testing/reusable-source-instances as 3.0.8.5",
         "mapbender/owsproxy": "^3.0.6@stable",
         "mapbender/digitizer": "^1.0",
+        "mapbender/data-source": "dev-fix/compatibilityIssueWithParametersOfGetSelectQueryBuilder as 0.1.16",
 
         "mapbender/coordinates-utility": "^1.0.2",
         "components/font-awesome": "^4.0",

@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d8a9272135468b3710921ca3f5124014",
+    "content-hash": "347fcf5ed147223aca4954048655df94",
     "packages": [
         {
             "name": "blueimp/jquery-file-upload",
@@ -1806,16 +1806,16 @@
         },
         {
             "name": "mapbender/data-source",
-            "version": "0.1.16.1",
+            "version": "dev-fix/compatibilityIssueWithParametersOfGetSelectQueryBuilder",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/data-source.git",
-                "reference": "dbf70e109b2bb0177a65a6da093e28119c56ea1a"
+                "reference": "2d25838d3854bbebb1ef6f474b826ec7f7f6319f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/data-source/zipball/dbf70e109b2bb0177a65a6da093e28119c56ea1a",
-                "reference": "dbf70e109b2bb0177a65a6da093e28119c56ea1a",
+                "url": "https://api.github.com/repos/mapbender/data-source/zipball/2d25838d3854bbebb1ef6f474b826ec7f7f6319f",
+                "reference": "2d25838d3854bbebb1ef6f474b826ec7f7f6319f",
                 "shasum": ""
             },
             "require": {
@@ -1850,7 +1850,7 @@
                 "data source",
                 "mapbender"
             ],
-            "time": "2020-02-24T15:01:36+00:00"
+            "time": "2020-04-03T12:02:41+00:00"
         },
         {
             "name": "mapbender/digitizer",
@@ -3139,6 +3139,7 @@
                 "fpdi",
                 "pdf"
             ],
+            "abandoned": true,
             "time": "2017-05-11T14:57:54+00:00"
         },
         {
@@ -5801,13 +5802,20 @@
             "alias_normalized": "3.0.8.5",
             "version": "dev-testing/reusable-source-instances",
             "package": "mapbender/mapbender"
+        },
+        {
+            "alias": "0.1.16",
+            "alias_normalized": "0.1.16.0",
+            "version": "dev-fix/compatibilityIssueWithParametersOfGetSelectQueryBuilder",
+            "package": "mapbender/data-source"
         }
     ],
     "minimum-stability": "dev",
     "stability-flags": {
         "mapbender/fom": 0,
         "mapbender/mapbender": 20,
-        "mapbender/owsproxy": 0
+        "mapbender/owsproxy": 0,
+        "mapbender/data-source": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
