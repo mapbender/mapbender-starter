@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4da499684b30a3ef7c9e4f41be5ee753",
+    "content-hash": "dfc28af1d8fc041ef52006fbb4129644",
     "packages": [
         {
             "name": "blueimp/jquery-file-upload",
@@ -1821,28 +1821,27 @@
         },
         {
             "name": "mapbender/coordinates-utility",
-            "version": "1.0.9",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/coordinates-utility.git",
-                "reference": "874e3ac56cd597bca892b935b9f5d13c90a0a51c"
+                "reference": "a1393f70dbabe05480ba1775fd9abd154e3e89b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/coordinates-utility/zipball/874e3ac56cd597bca892b935b9f5d13c90a0a51c",
-                "reference": "874e3ac56cd597bca892b935b9f5d13c90a0a51c",
+                "url": "https://api.github.com/repos/mapbender/coordinates-utility/zipball/a1393f70dbabe05480ba1775fd9abd154e3e89b9",
+                "reference": "a1393f70dbabe05480ba1775fd9abd154e3e89b9",
                 "shasum": ""
             },
             "require": {
+                "mapbender/mapbender": "^3.1",
                 "php": ">=5.5.4"
-            },
-            "conflict": {
-                "mapbender/mapbender": "<3.0.8.5"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "1.0-dev",
+                    "dev-ol4": "1.1-dev"
                 }
             },
             "autoload": {
@@ -1866,7 +1865,7 @@
                 "navigate",
                 "search"
             ],
-            "time": "2020-02-17T13:10:20+00:00"
+            "time": "2020-03-18T10:44:55+00:00"
         },
         {
             "name": "mapbender/data-source",
@@ -2024,16 +2023,16 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "dev-staging/v3.1",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "8a7dde1c74902337851b906946756b9fb72bd0c6"
+                "reference": "035d5c1b38d1687d32dbe8584f590c0883f72785"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/7f6c1b6f24db1cfb823ecf2e2aa1b9e612877930",
-                "reference": "8a7dde1c74902337851b906946756b9fb72bd0c6",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/035d5c1b38d1687d32dbe8584f590c0883f72785",
+                "reference": "035d5c1b38d1687d32dbe8584f590c0883f72785",
                 "shasum": ""
             },
             "require": {
@@ -2062,10 +2061,12 @@
                 "wheregroup/sassc-binaries": "^0.0.1"
             },
             "conflict": {
+                "mapbender/coordinates-utility": "<1.0.9",
                 "mapbender/data-source": "<0.1.11",
                 "mapbender/digitizer": "<1.1.68",
                 "mapbender/fom": "<3.1.5, 3.2.0 - 3.2.3",
-                "mapbender/wmts": "*"
+                "mapbender/wmts": "*",
+                "wheregroup/jquerydialogextendjs": "<2.1"
             },
             "type": "library",
             "extra": {
@@ -2090,7 +2091,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2020-01-28T02:56:39+00:00"
+            "time": "2020-04-08T06:11:58+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -5893,22 +5894,13 @@
                 "public",
                 "visibility"
             ],
+            "abandoned": true,
             "time": "2017-04-20T09:05:36+00:00"
         }
     ],
-    "aliases": [
-        {
-            "alias": "3.1",
-            "alias_normalized": "3.1.0.0",
-            "version": "dev-staging/v3.1",
-            "package": "mapbender/mapbender"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "mapbender/mapbender": 20,
-        "mapbender/coordinates-utility": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

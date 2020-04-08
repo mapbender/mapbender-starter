@@ -46,11 +46,11 @@
         "openlayers/openlayers": "^4.6",
         "proj4js/proj4js": "^2.4",
         "mapbender/fom": "^3.0.6.0",
-        "mapbender/mapbender": "dev-staging/v3.1 as 3.1",
+        "mapbender/mapbender": "^3.1",
         "mapbender/owsproxy": "^3.0.6",
         "mapbender/digitizer": "^1.0",
 
-        "mapbender/coordinates-utility": "dev-ol4@dev",
+        "mapbender/coordinates-utility": "^1.1",
         "components/font-awesome": "^4.0",
         "wheregroup/cookieconsent": "^3"
     },
