@@ -1,26 +1,31 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3a104036a6c57598ce15950cc6e7c37e",
+    "content-hash": "e3912da48dc61c272b2ceb96bb463592",
     "packages": [
         {
             "name": "blueimp/jquery-file-upload",
-            "version": "v9.21.0",
+            "version": "v9.34.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vkhramtsov/jQuery-File-Upload.git",
-                "reference": "8439fc8b3cb0cb69019452eedd20f56ad7722b5f"
+                "reference": "6d86a591f9a35bb811befb750dcd2c7da9ac05a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vkhramtsov/jQuery-File-Upload/zipball/8439fc8b3cb0cb69019452eedd20f56ad7722b5f",
-                "reference": "8439fc8b3cb0cb69019452eedd20f56ad7722b5f",
+                "url": "https://api.github.com/repos/vkhramtsov/jQuery-File-Upload/zipball/6d86a591f9a35bb811befb750dcd2c7da9ac05a2",
+                "reference": "6d86a591f9a35bb811befb750dcd2c7da9ac05a2",
                 "shasum": ""
             },
             "type": "library",
+            "autoload": {
+                "classmap": [
+                    "server/php/UploadHandler.php"
+                ]
+            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
@@ -54,11 +59,11 @@
                 "upload",
                 "widget"
             ],
-            "time": "2018-02-20T06:20:24+00:00"
+            "time": "2019-07-22T13:10:51+00:00"
         },
         {
             "name": "components/bootstrap",
-            "version": "3.4.1",
+            "version": "3.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/components/bootstrap.git",
@@ -338,16 +343,16 @@
         },
         {
             "name": "datatables/datatables",
-            "version": "1.10.19",
+            "version": "1.10.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DataTables/DataTables.git",
-                "reference": "156faa83386460c578e00c460eca9766e38a0c5f"
+                "reference": "83657a29e33ce93ee940ce25684940eb3acb2913"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DataTables/DataTables/zipball/156faa83386460c578e00c460eca9766e38a0c5f",
-                "reference": "156faa83386460c578e00c460eca9766e38a0c5f",
+                "url": "https://api.github.com/repos/DataTables/DataTables/zipball/83657a29e33ce93ee940ce25684940eb3acb2913",
+                "reference": "83657a29e33ce93ee940ce25684940eb3acb2913",
                 "shasum": ""
             },
             "type": "library",
@@ -357,7 +362,7 @@
             ],
             "description": "DataTables is a plug-in for the jQuery Javascript library. It is a highly flexible tool, based upon the foundations of progressive enhancement, which will add advanced interaction controls to any HTML table.",
             "homepage": "http://www.datatables.net/",
-            "time": "2018-06-22T15:34:14+00:00"
+            "time": "2019-10-01T13:42:32+00:00"
         },
         {
             "name": "debugteam/bootstrap-colorpicker",
@@ -1633,7 +1638,7 @@
         },
         {
             "name": "kriswallsmith/assetic",
-            "version": "v1.4.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kriswallsmith/assetic.git",
@@ -1805,6 +1810,49 @@
             "time": "2019-11-26T23:50:08+00:00"
         },
         {
+            "name": "mapbender/data-manager",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mapbender/data-manager.git",
+                "reference": "f4abc7426b5ce604307e7cc7ec0cd4e610d8e6a7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mapbender/data-manager/zipball/f4abc7426b5ce604307e7cc7ec0cd4e610d8e6a7",
+                "reference": "f4abc7426b5ce604307e7cc7ec0cd4e610d8e6a7",
+                "shasum": ""
+            },
+            "require": {
+                "blueimp/jquery-file-upload": "9.*",
+                "mapbender/data-source": "0.x",
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Mapbender\\DataManagerBundle\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andriy Oblivantsev",
+                    "email": "andriy.oblivantsev@wheregroup.com"
+                }
+            ],
+            "description": "Mapbender data manager",
+            "keywords": [
+                "Data Manager",
+                "data",
+                "mapbender"
+            ],
+            "time": "2020-03-12T09:23:24+00:00"
+        },
+        {
             "name": "mapbender/data-source",
             "version": "dev-fix/compatibilityIssueWithParametersOfGetSelectQueryBuilder",
             "source": {
@@ -1854,26 +1902,29 @@
         },
         {
             "name": "mapbender/digitizer",
-            "version": "dev-fix/bugfixesForLatestMapbender",
+            "version": "dev-release/1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "592287a4631ac37af8b185f00597a402abd5feb8"
+                "reference": "369d782516a31799c7df140a1343e9d1779acb06"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/592287a4631ac37af8b185f00597a402abd5feb8",
-                "reference": "592287a4631ac37af8b185f00597a402abd5feb8",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/369d782516a31799c7df140a1343e9d1779acb06",
+                "reference": "369d782516a31799c7df140a1343e9d1779acb06",
                 "shasum": ""
             },
             "require": {
                 "blueimp/jquery-file-upload": "9.*",
-                "mapbender/data-source": "~0.0.35 || ~0.1",
-                "mapbender/vis-ui.js": "*",
+                "debugteam/bootstrap-colorpicker": "1.x",
+                "mapbender/data-manager": "*",
+                "mapbender/data-source": "0.*",
+                "mapbender/vis-ui.js": "dev-master-keep-backward-compatibility as 0.2.83",
+                "phayes/geophp": "1.2",
                 "php": ">=5.3.3"
             },
-            "conflict": {
-                "mapbender/mapbender": "<3.0.8"
+            "require-dev": {
+                "mapbender/data-source": "@dev"
             },
             "type": "library",
             "extra": {
@@ -1883,8 +1934,8 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Mapbender\\DigitizerBundle": "."
+                "psr-4": {
+                    "Mapbender\\DigitizerBundle\\": "."
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1908,7 +1959,7 @@
                 "digitizing",
                 "mapbender"
             ],
-            "time": "2020-04-03T12:16:32+00:00"
+            "time": "2020-03-31T12:54:30+00:00"
         },
         {
             "name": "mapbender/fom",
@@ -1964,12 +2015,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "38b7192c6613ec8d6690209ddfc4bb962cb98878"
+                "reference": "3e6bc1820b80e18ac853887b70a9a549e6c68ed3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/38b7192c6613ec8d6690209ddfc4bb962cb98878",
-                "reference": "38b7192c6613ec8d6690209ddfc4bb962cb98878",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/3e6bc1820b80e18ac853887b70a9a549e6c68ed3",
+                "reference": "3e6bc1820b80e18ac853887b70a9a549e6c68ed3",
                 "shasum": ""
             },
             "require": {
@@ -1981,7 +2032,7 @@
                 "mapbender/mapbender-icons": "1.x",
                 "mapbender/mapquery": "1.x",
                 "mapbender/owsproxy": "^3.0.6.2",
-                "mapbender/vis-ui.js": "~0.0",
+                "mapbender/vis-ui.js": "*",
                 "php": ">=5.4.30",
                 "sensio/generator-bundle": "^2 || ^3",
                 "setasign/fpdi-fpdf": "1.6.*",
@@ -2022,7 +2073,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2020-02-27T09:59:34+00:00"
+            "time": "2020-04-14T12:01:41+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -2170,16 +2221,16 @@
         },
         {
             "name": "mapbender/vis-ui.js",
-            "version": "0.2.81",
+            "version": "dev-master-keep-backward-compatibility",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/vis-ui.js.git",
-                "reference": "754c95e81ac997cbb3858f8e6c3c773285133646"
+                "reference": "56b3d0540a2fdf18fdde7ecd725b329cd4f52de3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/vis-ui.js/zipball/754c95e81ac997cbb3858f8e6c3c773285133646",
-                "reference": "754c95e81ac997cbb3858f8e6c3c773285133646",
+                "url": "https://api.github.com/repos/mapbender/vis-ui.js/zipball/56b3d0540a2fdf18fdde7ecd725b329cd4f52de3",
+                "reference": "56b3d0540a2fdf18fdde7ecd725b329cd4f52de3",
                 "shasum": ""
             },
             "require": {
@@ -2231,7 +2282,7 @@
                 "jquery",
                 "vis-ui"
             ],
-            "time": "2020-03-02T12:49:04+00:00"
+            "time": "2020-03-30T11:45:56+00:00"
         },
         {
             "name": "medialize/jquery-context-menu",
@@ -2752,16 +2803,16 @@
         },
         {
             "name": "select2/select2",
-            "version": "4.0.12",
+            "version": "4.0.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/select2/select2.git",
-                "reference": "5765090318c4d382ae56463cfa25ba8ca7bdd495"
+                "reference": "45f2b83ceed5231afa7b3d5b12b58ad335edd82e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/select2/select2/zipball/5765090318c4d382ae56463cfa25ba8ca7bdd495",
-                "reference": "5765090318c4d382ae56463cfa25ba8ca7bdd495",
+                "url": "https://api.github.com/repos/select2/select2/zipball/45f2b83ceed5231afa7b3d5b12b58ad335edd82e",
+                "reference": "45f2b83ceed5231afa7b3d5b12b58ad335edd82e",
                 "shasum": ""
             },
             "type": "component",
@@ -2786,7 +2837,7 @@
             ],
             "description": "Select2 is a jQuery based replacement for select boxes.",
             "homepage": "https://select2.org/",
-            "time": "2019-11-06T01:34:17+00:00"
+            "time": "2020-01-28T05:01:22+00:00"
         },
         {
             "name": "sensio/distribution-bundle",
@@ -4337,16 +4388,16 @@
         },
         {
             "name": "wheregroup/jquerydialogextendjs",
-            "version": "2.0.4",
+            "version": "2.1.204",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WhereGroup/jquery-dialogextend.git",
-                "reference": "ece974a1f44ed513fc784e1a97c7b0988ab6f980"
+                "reference": "ae1886291b5da0b67d375847613511031220d344"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WhereGroup/jquery-dialogextend/zipball/ece974a1f44ed513fc784e1a97c7b0988ab6f980",
-                "reference": "ece974a1f44ed513fc784e1a97c7b0988ab6f980",
+                "url": "https://api.github.com/repos/WhereGroup/jquery-dialogextend/zipball/ae1886291b5da0b67d375847613511031220d344",
+                "reference": "ae1886291b5da0b67d375847613511031220d344",
                 "shasum": ""
             },
             "require": {
@@ -4366,7 +4417,7 @@
             ],
             "description": "Maximize and Minimize Buttons for UI Dialog",
             "homepage": "https://github.com/ROMB/jquery-dialogextend",
-            "time": "2017-04-20T07:50:22+00:00"
+            "time": "2020-03-10T10:08:39+00:00"
         },
         {
             "name": "wheregroup/open-sans",
