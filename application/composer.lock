@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
     "content-hash": "e3912da48dc61c272b2ceb96bb463592",
@@ -1906,12 +1906,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "369d782516a31799c7df140a1343e9d1779acb06"
+                "reference": "e966d6ac57082713a8e598428b2dddc98c979448"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/369d782516a31799c7df140a1343e9d1779acb06",
-                "reference": "369d782516a31799c7df140a1343e9d1779acb06",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/e966d6ac57082713a8e598428b2dddc98c979448",
+                "reference": "e966d6ac57082713a8e598428b2dddc98c979448",
                 "shasum": ""
             },
             "require": {
@@ -1959,7 +1959,7 @@
                 "digitizing",
                 "mapbender"
             ],
-            "time": "2020-03-31T12:54:30+00:00"
+            "time": "2020-04-15T07:00:24+00:00"
         },
         {
             "name": "mapbender/fom",
