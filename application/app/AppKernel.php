@@ -27,6 +27,7 @@ class AppKernel extends Mapbender\BaseKernel
             // Optional Mapbender bundles
             new Mapbender\WmcBundle\MapbenderWmcBundle(),
             new Mapbender\WmsBundle\MapbenderWmsBundle(),
+            new Mapbender\WmtsBundle\MapbenderWmtsBundle(),
             new Mapbender\ManagerBundle\MapbenderManagerBundle(),
             new Mapbender\PrintBundle\MapbenderPrintBundle(),
             new Mapbender\MobileBundle\MapbenderMobileBundle(),
