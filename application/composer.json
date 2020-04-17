@@ -25,7 +25,7 @@
         "phing/phing": "For executing legacy Phing build tasks (unmaintained)"
     },
     "require": {
-        "php": ">=5.4.30",
+        "php": ">=7.1.0",
         "symfony/symfony": "2.8.x",
         "doctrine/orm": "~2.2,>=2.2.3",
         "doctrine/doctrine-bundle": "1.x",
@@ -113,7 +113,7 @@
         "component-dir": "web/components",
         "component-baseurl": "/components",
         "platform": {
-            "php": "5.5.38"
+            "php": "7.1.30"
         },
         "archive-dir": "../dist",
         "archive-format": "tar.gz",
