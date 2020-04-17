@@ -1920,21 +1920,22 @@
         },
         {
             "name": "mapbender/fom",
-            "version": "v3.2.13",
+            "version": "v3.2.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/fom.git",
-                "reference": "14d072ab39363b371b28752d31465ed92420a7cf"
+                "reference": "2d343f6ef4a61e2dca6e86251e0d913c579d91ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/fom/zipball/14d072ab39363b371b28752d31465ed92420a7cf",
-                "reference": "14d072ab39363b371b28752d31465ed92420a7cf",
+                "url": "https://api.github.com/repos/mapbender/fom/zipball/2d343f6ef4a61e2dca6e86251e0d913c579d91ac",
+                "reference": "2d343f6ef4a61e2dca6e86251e0d913c579d91ac",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3",
                 "symfony/security-acl": "^2.3 || ^3",
+                "symfony/swiftmailer-bundle": "^2.3 || ^3",
                 "symfony/symfony": "^2.5 || ^3"
             },
             "conflict": {
@@ -1964,7 +1965,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2020-02-18T11:15:29+00:00"
+            "time": "2020-04-17T10:46:50+00:00"
         },
         {
             "name": "mapbender/mapbender",
