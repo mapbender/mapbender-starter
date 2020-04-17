@@ -28,7 +28,6 @@
         "php": ">=7.1.0",
         "symfony/symfony": "~3.4.0",
         "doctrine/orm": "~2.2,>=2.2.3",
-        "doctrine/doctrine-bundle": "1.x",
         "twig/twig": "^1.41",
         "twig/extensions": "1.x",
         "symfony/swiftmailer-bundle": "^2 || ^3",
