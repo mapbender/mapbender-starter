@@ -1,9 +1,10 @@
 parameters:
     applications:
-        mapbender_user:
-            title: Mapbender Demo Map
-            screenshot: mapbender_user.png
+        mapbender_user_ol2:
+            title: Mapbender Demo Map OL2
+            screenshot: mapbender_user_ol2.png
             description: Fullscreen style, Simple map showing WMS use.
+            mapEngineCode: ol2
             published: true
             template:  Mapbender\CoreBundle\Template\Fullscreen
             regionProperties:
@@ -120,7 +121,7 @@ parameters:
                         deactivate: deactivate
                         group: rulers
                     arearulerButton:
-                        title: mb.core.ruler.tag.measure 
+                        title: mb.core.ruler.tag.measure
                         tooltip: mb.core.ruler.tag.area
                         class: Mapbender\CoreBundle\Element\Button
                         icon: icon-area-ruler
@@ -289,7 +290,7 @@ parameters:
                         type: element
                         target: map
                         srsList: []
-                        addMapSrsList: true                        
+                        addMapSrsList: true
                         zoomlevel: 6
                     html-about-mapbender:
                         title: 'About Mapbender'

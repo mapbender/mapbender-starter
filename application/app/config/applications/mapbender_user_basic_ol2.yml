@@ -1,9 +1,10 @@
 parameters:
     applications:
-        mapbender_user_basic:
-            title: Mapbender Demo Map basic
-            screenshot: mapbender_user_basic.png
+        mapbender_user_basic_ol2:
+            title: Mapbender Demo Map basic OL2
+            screenshot: mapbender_user_basic_ol2.png
             description: Fullscreen style, simple buttons, simple map showing WMS use.
+            mapEngineCode: ol2
             published: true
             template:  Mapbender\CoreBundle\Template\Fullscreen
             custom_css: |
@@ -118,7 +119,7 @@ parameters:
                         label: false
                         target: map
                     linerulerButton:
-                        title: mb.core.ruler.tag.measure 
+                        title: mb.core.ruler.tag.measure
                         tooltip: mb.core.ruler.tag.line
                         class: Mapbender\CoreBundle\Element\Button
                         icon: icon-line-ruler
@@ -127,7 +128,7 @@ parameters:
                         deactivate: deactivate
                         group: rulers
                     arearulerButton:
-                        title: mb.core.ruler.tag.measure 
+                        title: mb.core.ruler.tag.measure
                         tooltip: mb.core.ruler.tag.area
                         class: Mapbender\CoreBundle\Element\Button
                         icon: icon-area-ruler
