@@ -56,14 +56,6 @@ parameters:
                         opacity: 100
             elements:
                 toolbar:
-                    layertree-button:
-                        title: mb.core.layertree.class.title
-                        tooltip: mb.core.layertree.class.title
-                        class: Mapbender\CoreBundle\Element\Button
-                        label: true
-                        icon: iconLayertree
-                        target: layertreedialog
-                        action: open
                     fi-button:
                         title: mb.core.featureinfo.class.title
                         tooltip: mb.core.featureinfo.class.title
@@ -231,14 +223,6 @@ parameters:
                         anchor: 'left-bottom'
                         maxWidth: 200
                         units: ['km']
-                    layertreedialog:
-                        title: mb.core.layertree.class.title
-                        class: Mapbender\CoreBundle\Element\Layertree
-                        target: map
-                        type: dialog
-                        autoOpen: false
-                        showBaseSource: true
-                        menu: []
                     overview:
                         title: mb.core.overview.class.title
                         class: Mapbender\CoreBundle\Element\Overview
