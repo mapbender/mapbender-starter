@@ -122,7 +122,7 @@ parameters:
                     zoombar:
                         class: Mapbender\CoreBundle\Element\ZoomBar
                         target: map
-                        components: ["zoom_in_out", "zoom_max"]
+                        components: ["rotation", "zoom_in_out", "zoom_max"]
                         anchor: left-top
                         draggable: false
 
