@@ -61,7 +61,7 @@ parameters:
                         tooltip: mb.core.featureinfo.class.title
                         class: Mapbender\CoreBundle\Element\Button
                         icon: iconInfoActive
-                        label: true
+                        label: false
                         target: featureinfo
                         deactivate: deactivate
                         group: featureinfo
@@ -69,7 +69,7 @@ parameters:
                         title: mb.core.printclient.class.title
                         tooltip: mb.core.printclient.class.title
                         class: Mapbender\CoreBundle\Element\Button
-                        label: true
+                        label: false
                         icon: iconPrint
                         target: printclient
                         action: open
@@ -77,7 +77,7 @@ parameters:
                         title: Image Export
                         tooltip: Image Export
                         class: Mapbender\CoreBundle\Element\Button
-                        label: true
+                        label: false
                         icon: iconImageExport
                         target: imageexport
                         action: open
@@ -85,7 +85,7 @@ parameters:
                         title: mb.core.legend.class.title
                         tooltip: mb.core.legend.class.title
                         class: Mapbender\CoreBundle\Element\Button
-                        label: true
+                        label: false
                         target: legend
                         icon: iconLegend
                         action: open
@@ -93,7 +93,7 @@ parameters:
                         title: mb.wms.wmsloader.class.title
                         tooltip: mb.wms.wmsloader.class.description
                         class: Mapbender\CoreBundle\Element\Button
-                        label: true
+                        label: false
                         target: wmsloader
                         icon: iconWms
                         action: open
@@ -101,14 +101,14 @@ parameters:
                         title: mb.core.gpsposition.class.title
                         tooltip: mb.core.gpsposition.class.description
                         class: Mapbender\CoreBundle\Element\GpsPosition
-                        label: true
+                        label: false
                         target: map
                     linerulerButton:
                         title: mb.core.ruler.tag.measure
                         tooltip: mb.core.ruler.tag.line
                         class: Mapbender\CoreBundle\Element\Button
                         icon: icon-line-ruler
-                        label: true
+                        label: false
                         target: lineruler
                         deactivate: deactivate
                         group: rulers
@@ -117,21 +117,21 @@ parameters:
                         tooltip: mb.core.ruler.tag.area
                         class: Mapbender\CoreBundle\Element\Button
                         icon: icon-area-ruler
-                        label: true
+                        label: false
                         target: arearuler
                         deactivate: deactivate
                         group: rulers
                     about:
                         title: mb.core.aboutdialog.tag.about
                         tooltip: mb.core.aboutdialog.tag.about
-                        label: true
+                        label: false
                         class: Mapbender\CoreBundle\Element\AboutDialog
                     poiButton:
                         title: mb.core.poi.class.title
                         tooltip: mb.core.poi.class.description
                         class: Mapbender\CoreBundle\Element\Button
                         icon: iconPoi
-                        label: true
+                        label: false
                         target: poi
                 content:
                     map:
