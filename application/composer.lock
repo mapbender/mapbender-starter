@@ -2331,16 +2331,16 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v3.1.0.5",
+            "version": "v3.1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "9f0b0b8ec7826198260516538d756904fb140ded"
+                "reference": "bbc0e30ec7d5551be66d8b1b2b4c167402922e27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/9f0b0b8ec7826198260516538d756904fb140ded",
-                "reference": "9f0b0b8ec7826198260516538d756904fb140ded",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/bbc0e30ec7d5551be66d8b1b2b4c167402922e27",
+                "reference": "bbc0e30ec7d5551be66d8b1b2b4c167402922e27",
                 "shasum": ""
             },
             "require": {
@@ -2399,7 +2399,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2020-05-18T13:26:46+00:00"
+            "time": "2020-05-26T08:07:17+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
