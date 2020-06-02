@@ -259,15 +259,7 @@ parameters:
                         title: mb.core.redlining.class.title
                         class: Mapbender\CoreBundle\Element\Redlining
                         target: map
-                        geometrytypes:
-                            - point
-                            - line
-                            - polygon
-                            - text
-                            - rectangle
-                        display_type: element
                         auto_activate: false
-                        deactivate_on_close: false
                     coordinatesutility:
                         title: mb.coordinatesutility.class.title
                         class: Mapbender\CoordinatesUtilityBundle\Element\CoordinatesUtility
