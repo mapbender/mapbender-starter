@@ -237,7 +237,7 @@ parameters:
                         title: mb.core.scaledisplay.class.title
                         class: Mapbender\CoreBundle\Element\ScaleDisplay
                         target: map
-                        anchor: left-top
+                        anchor: right-top
                         scalePrefix: Scale
                         unitPrefix: true
                     poi:
