@@ -241,7 +241,6 @@ parameters:
                         type: dialog
                         autoOpen: false
                         showBaseSource: true
-                        showHeader: false
                         menu: []
                     overview:
                         title: mb.core.overview.class.title
