@@ -77,7 +77,6 @@ parameters:
                         label: false
                         target: map
                         icon: iconGps
-                        refreshinterval: '5000'
                         average: '1'
                         follow: false
                         centerOnFirstPosition: true
