@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "95149c26870edf0742e9531a591966bf",
+    "content-hash": "5cba7ff3854c3ba288988f21f7685d45",
     "packages": [
         {
             "name": "blueimp/jquery-file-upload",
@@ -1969,16 +1969,16 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v3.0.8.5",
+            "version": "v3.0.8.6-RC1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "7acaac1f29b195b2b889f783ded2b6b180643c9c"
+                "reference": "69d66992146dc593e821de7a7ca9e873d1ea1c56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/7acaac1f29b195b2b889f783ded2b6b180643c9c",
-                "reference": "7acaac1f29b195b2b889f783ded2b6b180643c9c",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/69d66992146dc593e821de7a7ca9e873d1ea1c56",
+                "reference": "69d66992146dc593e821de7a7ca9e873d1ea1c56",
                 "shasum": ""
             },
             "require": {
@@ -2005,9 +2005,11 @@
                 "wheregroup/sassc-binaries": "^0.0.1"
             },
             "conflict": {
+                "mapbender/coordinates-utility": "<1.0.9",
                 "mapbender/data-source": "<0.1.11",
                 "mapbender/digitizer": "<1.1.68",
-                "mapbender/wmts": "*"
+                "mapbender/wmts": "*",
+                "wheregroup/jquerydialogextendjs": "<2.1"
             },
             "type": "library",
             "extra": {
@@ -2031,7 +2033,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2020-02-05T10:16:32+00:00"
+            "time": "2020-07-12T10:37:05+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -4343,16 +4345,16 @@
         },
         {
             "name": "wheregroup/jquerydialogextendjs",
-            "version": "2.1.204",
+            "version": "2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WhereGroup/jquery-dialogextend.git",
-                "reference": "ae1886291b5da0b67d375847613511031220d344"
+                "reference": "da2fa04c29eebfce0cfca5bf5e4e812b85b5f60e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WhereGroup/jquery-dialogextend/zipball/ae1886291b5da0b67d375847613511031220d344",
-                "reference": "ae1886291b5da0b67d375847613511031220d344",
+                "url": "https://api.github.com/repos/WhereGroup/jquery-dialogextend/zipball/da2fa04c29eebfce0cfca5bf5e4e812b85b5f60e",
+                "reference": "da2fa04c29eebfce0cfca5bf5e4e812b85b5f60e",
                 "shasum": ""
             },
             "require": {
@@ -4371,8 +4373,8 @@
                 "MIT"
             ],
             "description": "Maximize and Minimize Buttons for UI Dialog",
-            "homepage": "https://github.com/ROMB/jquery-dialogextend",
-            "time": "2020-03-10T10:08:39+00:00"
+            "homepage": "https://github.com/wheregroup/jquery-dialogextend",
+            "time": "2020-07-11T19:31:59+00:00"
         },
         {
             "name": "wheregroup/open-sans",
@@ -5804,7 +5806,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "mapbender/mapbender": 5
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
