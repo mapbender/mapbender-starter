@@ -65,7 +65,7 @@ parameters:
 
                     bss-button:
                         title: mb.core.basesourceswitcher.class.title
-                        tooltip: mb.core.basesourceswitcher.class.Description
+                        tooltip: mb.core.basesourceswitcher.class.title
                         class: Mapbender\CoreBundle\Element\Button
                         icon: iconLegend
                         label: false
@@ -78,7 +78,6 @@ parameters:
                         label: false
                         target: map
                         icon: iconGps
-                        refreshinterval: '5000'
                         average: '1'
                         follow: false
                         centerOnFirstPosition: true
