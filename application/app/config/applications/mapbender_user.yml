@@ -202,13 +202,11 @@ parameters:
                                     required: true        # true or false
                     lineruler:
                         title: mb.core.ruler.tag.line
-                        tooltip: 'ruler'
                         class: Mapbender\CoreBundle\Element\Ruler
                         target: map
                         type: line
                     arearuler:
                         title: mb.core.ruler.tag.area
-                        tooltip: 'area'
                         class: Mapbender\CoreBundle\Element\Ruler
                         target: map
                         type: area
