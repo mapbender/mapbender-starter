@@ -62,7 +62,6 @@ parameters:
                         label: true
                         icon: iconLayertree
                         target: layertreedialog
-                        action: open
                     fi-button:
                         title: mb.core.featureinfo.class.title
                         tooltip: mb.core.featureinfo.class.title
@@ -70,7 +69,6 @@ parameters:
                         icon: iconInfoActive
                         label: true
                         target: featureinfo
-                        deactivate: deactivate
                         group: featureinfo
                     print-button:
                         title: mb.core.printclient.class.title
@@ -79,7 +77,6 @@ parameters:
                         label: true
                         icon: iconPrint
                         target: printclient
-                        action: open
                     imageexport-button:
                         title: mb.print.imageexport.class.title
                         tooltip: mb.print.imageexport.class.title
@@ -87,7 +84,6 @@ parameters:
                         label: true
                         icon: iconImageExport
                         target: imageexport
-                        action: open
                     legend-button:
                         title: mb.core.legend.class.title
                         tooltip: mb.core.legend.class.title
@@ -95,7 +91,6 @@ parameters:
                         label: true
                         target: legend
                         icon: iconLegend
-                        action: open
                     wmsloader-button:
                         title: mb.wms.wmsloader.class.title
                         tooltip: mb.wms.wmsloader.class.description
@@ -103,7 +98,6 @@ parameters:
                         label: true
                         target: wmsloader
                         icon: iconWms
-                        action: open
                     gps-button:
                         title: mb.core.gpsposition.class.title
                         tooltip: mb.core.gpsposition.class.title
@@ -117,7 +111,6 @@ parameters:
                         icon: icon-line-ruler
                         label: true
                         target: lineruler
-                        deactivate: deactivate
                         group: rulers
                     arearulerButton:
                         title: mb.core.ruler.tag.measure 
@@ -126,7 +119,6 @@ parameters:
                         icon: icon-area-ruler
                         label: true
                         target: arearuler
-                        deactivate: deactivate
                         group: rulers
                     about:
                         title: mb.core.aboutdialog.tag.about
