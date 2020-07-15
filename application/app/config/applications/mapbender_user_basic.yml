@@ -77,7 +77,6 @@ parameters:
                         label: false
                         icon: icon-layer-tree
                         target: layertreedialog
-                        action: open
                     fi-button:
                         title: mb.core.featureinfo.class.title
                         tooltip: mb.core.featureinfo.class.title
@@ -85,7 +84,6 @@ parameters:
                         icon: icon-feature-info
                         label: false
                         target: featureinfo
-                        deactivate: deactivate
                         group: featureinfo
                     print-button:
                         title: mb.core.printclient.class.title
@@ -94,7 +92,6 @@ parameters:
                         label: false
                         icon: iconPrint
                         target: printclient
-                        action: open
                     imageexport-button:
                         title: mb.print.imageexport.class.title
                         tooltip: mb.print.imageexport.class.title
@@ -102,7 +99,6 @@ parameters:
                         label: false
                         icon: icon-image-export
                         target: imageexport
-                        action: open
                     legend-button:
                         title: mb.core.legend.class.title
                         tooltip: mb.core.legend.class.title
@@ -110,7 +106,6 @@ parameters:
                         label: false
                         target: legend
                         icon: icon-legend
-                        action: open
                     wmsloader-button:
                         title: mb.wms.wmsloader.class.title
                         tooltip: mb.wms.wmsloader.class.description
@@ -118,7 +113,6 @@ parameters:
                         label: false
                         target: wmsloader
                         icon: iconWms
-                        action: open
                     gps-button:
                         title: mb.core.gpsposition.class.title
                         tooltip: mb.core.gpsposition.class.title
@@ -132,7 +126,6 @@ parameters:
                         icon: icon-line-ruler
                         label: false
                         target: lineruler
-                        deactivate: deactivate
                         group: rulers
                     arearulerButton:
                         title: mb.core.ruler.tag.measure 
@@ -141,7 +134,6 @@ parameters:
                         icon: icon-area-ruler
                         label: false
                         target: arearuler
-                        deactivate: deactivate
                         group: rulers
                     about:
                         title: mb.core.aboutdialog.tag.about
@@ -212,18 +204,11 @@ parameters:
                         title: mb.core.printclient.class.title
                         class: Mapbender\CoreBundle\Element\PrintClient
                         target: map
-                        file_prefix: mapbender
                         templates:
                             - { template: a4portrait, label: A4 Portrait}
                             - { template: a4landscape, label: A4 Landscape}
                             - { template: a3portrait, label: A3 Portrait}
                             - { template: a3landscape, label: A3 Landscape}
-                        scales: [500, 1000, 5000, 10000, 25000, 50000]
-                        quality_levels:
-                            - { dpi: 72 , label: Draft (72dpi)}
-                            - { dpi: 288,  label: Document (288dpi)}
-                        rotatable: true
-                        legend: true
                         legend_default_behaviour: false
                         optional_fields: ~
                     lineruler:
