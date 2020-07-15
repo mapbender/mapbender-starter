@@ -106,7 +106,7 @@ parameters:
                         action: open
                     gps-button:
                         title: mb.core.gpsposition.class.title
-                        tooltip: mb.core.gpsposition.class.description
+                        tooltip: mb.core.gpsposition.class.title
                         class: Mapbender\CoreBundle\Element\GpsPosition
                         label: true
                         target: map
