@@ -157,7 +157,6 @@ parameters:
                         target: map
                         deactivateOnClose: false
                         onlyValid: true
-                        type: dialog
                         displayType: tabs
                         autoActivate: false
                         printResult: true

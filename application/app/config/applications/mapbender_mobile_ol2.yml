@@ -139,7 +139,6 @@ parameters:
                         class: Mapbender\CoreBundle\Element\FeatureInfo
                         title:  mb.core.featureinfo.class.title
                         target: map
-                        type: element
                         deactivateOnClose: false
                         autoActivate: true
                         printResult: false
