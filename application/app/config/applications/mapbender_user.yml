@@ -197,18 +197,11 @@ parameters:
                         title: mb.core.printclient.class.title
                         class: Mapbender\CoreBundle\Element\PrintClient
                         target: map
-                        file_prefix: mapbender
                         templates:
                             - { template: a4portrait, label: A4 Portrait}
                             - { template: a4landscape, label: A4 Landscape}
                             - { template: a3portrait, label: A3 Portrait}
                             - { template: a3landscape, label: A3 Landscape}
-                        scales: [500, 1000, 5000, 10000, 25000, 50000]
-                        quality_levels:
-                            - { dpi: 72 , label: Draft (72dpi)}
-                            - { dpi: 288,  label: Document (288dpi)}
-                        rotatable: true
-                        legend: true
                         legend_default_behaviour: false
                         optional_fields:
                             title:
