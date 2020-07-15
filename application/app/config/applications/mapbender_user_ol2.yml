@@ -74,8 +74,8 @@ parameters:
                         target: printclient
                         action: open
                     imageexport-button:
-                        title: Image Export
-                        tooltip: Image Export
+                        title: mb.print.imageexport.class.title
+                        tooltip: mb.print.imageexport.class.title
                         class: Mapbender\CoreBundle\Element\Button
                         label: false
                         icon: iconImageExport
@@ -99,7 +99,7 @@ parameters:
                         action: open
                     gps-button:
                         title: mb.core.gpsposition.class.title
-                        tooltip: mb.core.gpsposition.class.description
+                        tooltip: mb.core.gpsposition.class.title
                         class: Mapbender\CoreBundle\Element\GpsPosition
                         label: false
                         target: map
@@ -182,7 +182,7 @@ parameters:
                     imageexport:
                         class: Mapbender\PrintBundle\Element\ImageExport
                         target: map
-                        title: Image export
+                        title: mb.print.imageexport.class.title
                     printclient:
                         title: mb.core.printclient.class.title
                         class: Mapbender\CoreBundle\Element\PrintClient
