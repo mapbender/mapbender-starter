@@ -96,8 +96,8 @@ parameters:
                         target: printclient
                         action: open
                     imageexport-button:
-                        title: Image Export
-                        tooltip: Image Export
+                        title: mb.print.imageexport.class.title
+                        tooltip: mb.print.imageexport.class.title
                         class: Mapbender\CoreBundle\Element\Button
                         label: false
                         icon: icon-image-export
@@ -207,7 +207,7 @@ parameters:
                     imageexport:
                         class: Mapbender\PrintBundle\Element\ImageExport
                         target: map
-                        title: Image export
+                        title: mb.print.imageexport.class.title
                     printclient:
                         title: mb.core.printclient.class.title
                         class: Mapbender\CoreBundle\Element\PrintClient
