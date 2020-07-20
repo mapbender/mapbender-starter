@@ -13,11 +13,6 @@ parameters:
               .toolBar.top {
                 border-bottom: 2px solid #C52B45;
               }
-
-              .popup {
-                background-color: #FFFFFF;
-                background-image: none;
-              }
             layersets:
                 main:
                     mapbender_users:
