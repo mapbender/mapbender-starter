@@ -4,63 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5dd27b3c5873df8ef920b5a6635610f9",
+    "content-hash": "220baf7e18ba20ff7e75ad069cbcdf31",
     "packages": [
-        {
-            "name": "blueimp/jquery-file-upload",
-            "version": "v9.28.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/vkhramtsov/jQuery-File-Upload.git",
-                "reference": "ff5accfe2e5c4a522777faa980a90cf86a636d1d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/vkhramtsov/jQuery-File-Upload/zipball/ff5accfe2e5c4a522777faa980a90cf86a636d1d",
-                "reference": "ff5accfe2e5c4a522777faa980a90cf86a636d1d",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "server/php/UploadHandler.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sebastian Tschan",
-                    "homepage": "https://blueimp.net"
-                }
-            ],
-            "description": "File Upload widget for jQuery.",
-            "homepage": "https://github.com/blueimp/jQuery-File-Upload",
-            "keywords": [
-                "bootstrap",
-                "chunk",
-                "cross-domain",
-                "cross-site",
-                "drag",
-                "drop",
-                "file",
-                "gae",
-                "go",
-                "jquery",
-                "multiple",
-                "php",
-                "preview",
-                "progress",
-                "python",
-                "resume",
-                "selection",
-                "upload",
-                "widget"
-            ],
-            "time": "2018-11-13T05:41:39+00:00"
-        },
         {
             "name": "components/bootstrap",
             "version": "3.4.1",
@@ -2183,112 +2128,6 @@
             "time": "2020-03-18T10:44:55+00:00"
         },
         {
-            "name": "mapbender/data-source",
-            "version": "0.1.16.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mapbender/data-source.git",
-                "reference": "108b4fbe657dca93ba9379bac28ea54e1f73d0bb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/data-source/zipball/108b4fbe657dca93ba9379bac28ea54e1f73d0bb",
-                "reference": "108b4fbe657dca93ba9379bac28ea54e1f73d0bb",
-                "shasum": ""
-            },
-            "require": {
-                "mapbender/mapbender": ">=3.0.8",
-                "phayes/geophp": "1.2",
-                "php": ">=5.3.3",
-                "zumba/json-serializer": "1.x"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^3.7",
-                "symfony/framework-bundle": "*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Mapbender\\DataSourceBundle\\": "."
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Andriy Oblivantsev",
-                    "email": "andriy.oblivantsev@wheregroup.com"
-                }
-            ],
-            "description": "Mapbender data source handler",
-            "keywords": [
-                "data",
-                "data source",
-                "mapbender"
-            ],
-            "time": "2020-03-12T09:45:37+00:00"
-        },
-        {
-            "name": "mapbender/digitizer",
-            "version": "1.1.72.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "ef707a4355c2aac23d4d0757d0744f97b4bc618a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/ef707a4355c2aac23d4d0757d0744f97b4bc618a",
-                "reference": "ef707a4355c2aac23d4d0757d0744f97b4bc618a",
-                "shasum": ""
-            },
-            "require": {
-                "blueimp/jquery-file-upload": "9.*",
-                "mapbender/data-source": "~0.0.35 || ~0.1",
-                "mapbender/vis-ui.js": "*",
-                "php": ">=5.3.3"
-            },
-            "conflict": {
-                "mapbender/mapbender": "<3.0.8"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1.x-dev",
-                    "dev-release/1.0": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Mapbender\\DigitizerBundle": "."
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Andriy Oblivantsev"
-                },
-                {
-                    "name": "Stefan Winkelmann"
-                },
-                {
-                    "name": "David Patzke"
-                }
-            ],
-            "description": "Mapbender digitizer element",
-            "keywords": [
-                "digitizer",
-                "digitizing",
-                "mapbender"
-            ],
-            "time": "2019-12-20T09:41:48+00:00"
-        },
-        {
             "name": "mapbender/fom",
             "version": "v3.2.14",
             "source": {
@@ -2977,42 +2816,6 @@
                 "random"
             ],
             "time": "2018-07-02T15:55:56+00:00"
-        },
-        {
-            "name": "phayes/geophp",
-            "version": "1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phayes/geoPHP.git",
-                "reference": "015404e85b602e0df1f91441f8db0f9e98f7e567"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phayes/geoPHP/zipball/015404e85b602e0df1f91441f8db0f9e98f7e567",
-                "reference": "015404e85b602e0df1f91441f8db0f9e98f7e567",
-                "shasum": ""
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.1.*"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "geoPHP.inc"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2 or New-BSD"
-            ],
-            "authors": [
-                {
-                    "name": "Patrick Hayes"
-                }
-            ],
-            "description": "GeoPHP is a open-source native PHP library for doing geometry operations. It is written entirely in PHP and can therefore run on shared hosts. It can read and write a wide variety of formats: WKT (including EWKT), WKB (including EWKB), GeoJSON, KML, GPX, GeoRSS). It works with all Simple-Feature geometries (Point, LineString, Polygon, GeometryCollection etc.) and can be used to get centroids, bounding-boxes, area, and a wide variety of other useful information.",
-            "homepage": "https://github.com/phayes/geoPHP",
-            "time": "2014-12-02T06:11:22+00:00"
         },
         {
             "name": "proj4js/proj4js",
@@ -5405,60 +5208,6 @@
             ],
             "abandoned": "laminas/laminas-eventmanager",
             "time": "2018-04-25T15:33:34+00:00"
-        },
-        {
-            "name": "zumba/json-serializer",
-            "version": "1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zumba/json-serializer.git",
-                "reference": "61cb3a9458146b2b91e8f7700cee80cad1bf9279"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zumba/json-serializer/zipball/61cb3a9458146b2b91e8f7700cee80cad1bf9279",
-                "reference": "61cb3a9458146b2b91e8f7700cee80cad1bf9279",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.6"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "3.7.*"
-            },
-            "suggest": {
-                "ext-mbstring": "To support unescaped unicode characters in PHP 5.3."
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Zumba\\Util": "src/",
-                    "Zumba\\Exception": "src/",
-                    "Zumba\\Util\\Test": "tests/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Juan Basso",
-                    "email": "juan.basso@zumba.com"
-                },
-                {
-                    "name": "Zumba Fitness, LLC",
-                    "email": "engineering@zumba.com"
-                }
-            ],
-            "description": "Serialize PHP variables, including objects, in JSON format. Support to unserialize it too.",
-            "homepage": "http://tech.zumba.com",
-            "keywords": [
-                "json",
-                "serialize",
-                "serializer"
-            ],
-            "time": "2014-07-05T20:09:27+00:00"
         }
     ],
     "packages-dev": [
