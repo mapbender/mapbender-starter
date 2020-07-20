@@ -1,10 +1,9 @@
 parameters:
     applications:
-        mapbender_user_basic_ol4:
-            title: Mapbender Demo Map basic OL4
-            screenshot: mapbender_user_basic_ol4.png
+        mapbender_user_basic:
+            title: Mapbender Demo Map basic
+            screenshot: screenshot.png
             description: Fullscreen style, simple buttons, simple map showing WMS use.
-            mapEngineCode: ol4
             published: true
             template:  Mapbender\CoreBundle\Template\Fullscreen
             custom_css: |

@@ -1,10 +1,9 @@
 parameters:
     applications:
-        mapbender_mobile_ol4:
-            title: Mapbender mobile OL4
-            screenshot: mapbender_mobile_ol4.png
+        mapbender_mobile:
+            title: Mapbender mobile
+            screenshot: screenshot.png
             description: "Mapbender mobile Application"
-            mapEngineCode: ol4
             published: true
             template:  'Mapbender\MobileBundle\Template\Mobile'
             layersets:
