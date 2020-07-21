@@ -7,9 +7,6 @@ parameters:
             published: true
             template:  Mapbender\CoreBundle\Template\Fullscreen
             custom_css: |
-              .toolBar, .mb-element-zoombar .toolPane, .mb-element-zoombar .rotation, .mb-element-zoombar .pan {
-                background-color: rgba(0, 29, 122,0.9);
-              }
               .toolBar.top {
                 border-bottom: 2px solid #C52B45;
               }
