@@ -130,9 +130,6 @@
             "fom/": ["mapbender/fom"],
             "owsproxy/": ["mapbender/owsproxy"],
             "vendor/igosuki/compass-mixins": ["wheregroup/compass-mixins"],
-            "web/components/openlayers/": [
-                "openlayers/openlayers"
-            ],
             "web/components/datatables/": ["datatables/datatables"]
         }
     },
@@ -150,26 +147,6 @@
                 "bin": [
                     "bin/phantomjs"
                 ]
-            }
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "openlayers/openlayers",
-                "version": "4.6.5",
-                "type": "component",
-                "dist": {
-                    "url": "https://github.com/openlayers/openlayers/releases/download/v4.6.5/v4.6.5-dist.zip",
-                    "type": "zip"
-                },
-                "extra": {
-                    "component": {
-                        "files": [
-                            "ol.css",
-                            "ol*.js"
-                        ]
-                    }
-                }
             }
         },
         {
