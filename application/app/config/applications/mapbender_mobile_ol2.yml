@@ -46,7 +46,7 @@ parameters:
                         layers:
                             30: { name: osm,    title : OSM Demo WhereGroup,  visible: true }
                         info_format: text/html
-                        visible: true
+                        visible: false
                         format: image/png
                         transparent: true
                         tiled: false
