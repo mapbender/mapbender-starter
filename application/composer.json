@@ -43,12 +43,13 @@
         "openlayers/openlayers": "^4.6",
         "proj4js/proj4js": "^2.4",
         "mapbender/fom": "^3.0.6.0",
-        "mapbender/mapbender": "^3.1",
+        "mapbender/mapbender": "^3.1@RC",
         "mapbender/owsproxy": "^3.0.6",
 
         "mapbender/coordinates-utility": "^1.1",
         "components/font-awesome": "^4.0",
-        "wheregroup/cookieconsent": "^3"
+        "wheregroup/cookieconsent": "^3",
+        "components/bootstrap": "^3"
     },
     "scripts": {
         "build-bootstrap": [
