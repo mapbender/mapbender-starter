@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c48aac16b306ccdcc3c4044ddeccd6af",
+    "content-hash": "d46cc3645339de9eef525fc6d5f25f67",
     "packages": [
         {
             "name": "components/bootstrap",
@@ -2348,6 +2348,40 @@
             "time": "2020-02-20T14:20:22+00:00"
         },
         {
+            "name": "mapbender/openlayers6-es5",
+            "version": "0.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mapbender/openlayers6-es5.git",
+                "reference": "aeb19b26c732542dced20e0070a8dbe62bb8940e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mapbender/openlayers6-es5/zipball/aeb19b26c732542dced20e0070a8dbe62bb8940e",
+                "reference": "aeb19b26c732542dced20e0070a8dbe62bb8940e",
+                "shasum": ""
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "dist/*.js"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paul Schmidt",
+                    "email": "paul.schmidt@wheregroup.com"
+                }
+            ],
+            "time": "2020-07-17T08:00:38+00:00"
+        },
+        {
             "name": "mapbender/owsproxy",
             "version": "v3.1.6",
             "source": {
@@ -2389,40 +2423,6 @@
                 "owsproxy"
             ],
             "time": "2020-02-19T22:47:28+00:00"
-        },
-        {
-            "name": "mapbender/openlayers6-es5",
-            "version": "0.3.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mapbender/openlayers6-es5.git",
-                "reference": "aeb19b26c732542dced20e0070a8dbe62bb8940e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/openlayers6-es5/zipball/aeb19b26c732542dced20e0070a8dbe62bb8940e",
-                "reference": "aeb19b26c732542dced20e0070a8dbe62bb8940e",
-                "shasum": ""
-            },
-            "type": "component",
-            "extra": {
-                "component": {
-                    "scripts": [
-                        "dist/*.js"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Paul Schmidt",
-                    "email": "paul.schmidt@wheregroup.com"
-                }
-            ],
-            "time": "2020-07-17T08:00:38+00:00"
         },
         {
             "name": "mnsami/composer-custom-directory-installer",
@@ -2671,25 +2671,6 @@
                 "service proxies"
             ],
             "time": "2017-05-04T11:12:50+00:00"
-        },
-        {
-            "name": "openlayers/openlayers",
-            "version": "4.6.5",
-            "dist": {
-                "type": "zip",
-                "url": "https://github.com/openlayers/openlayers/releases/download/v4.6.5/v4.6.5-dist.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "type": "component",
-            "extra": {
-                "component": {
-                    "files": [
-                        "ol.css",
-                        "ol*.js"
-                    ]
-                }
-            }
         },
         {
             "name": "paragonie/random_compat",
