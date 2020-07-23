@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d46cc3645339de9eef525fc6d5f25f67",
+    "content-hash": "a536bcbd50f3570a70463c672e7926b9",
     "packages": [
         {
             "name": "components/bootstrap",
@@ -2349,16 +2349,16 @@
         },
         {
             "name": "mapbender/openlayers6-es5",
-            "version": "0.3.1",
+            "version": "0.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/openlayers6-es5.git",
-                "reference": "aeb19b26c732542dced20e0070a8dbe62bb8940e"
+                "reference": "d126029e2dbd6280abe205406ca89b6d42198a80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/openlayers6-es5/zipball/aeb19b26c732542dced20e0070a8dbe62bb8940e",
-                "reference": "aeb19b26c732542dced20e0070a8dbe62bb8940e",
+                "url": "https://api.github.com/repos/mapbender/openlayers6-es5/zipball/d126029e2dbd6280abe205406ca89b6d42198a80",
+                "reference": "d126029e2dbd6280abe205406ca89b6d42198a80",
                 "shasum": ""
             },
             "type": "component",
@@ -2379,7 +2379,7 @@
                     "email": "paul.schmidt@wheregroup.com"
                 }
             ],
-            "time": "2020-07-17T08:00:38+00:00"
+            "time": "2020-07-23T08:58:07+00:00"
         },
         {
             "name": "mapbender/owsproxy",
