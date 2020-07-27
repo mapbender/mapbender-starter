@@ -21,6 +21,20 @@ class ComposerBootstrap
         static::clearCache();
     }
 
+    /**
+     * @param $event Event
+     */
+    public static function bootstrapDatabase($event)
+    {
+        static::ensureConfig();
+        $status = null;
+        passthru("php app/console doctrine:schema:create", $status);
+        if ($status === 0) {
+            `php app/console mapbender:database:init -v`;
+            static::resetRootLogin();
+        }
+    }
+
     public static function reimportExampleApps()
     {
         static::importExampleApplications();
