@@ -72,6 +72,9 @@
             "ComposerBootstrap::installAssets",
             "ComponentInstaller\\Installer::postAutoloadDump"
         ],
+        "bootstrap-database": [
+            "ComposerBootstrap::bootstrapDatabase"
+        ],
         "clean": [
             "ComposerBootstrap::clearCache"
         ],
@@ -103,6 +106,9 @@
             "ComposerBootstrap::distribute",
             "ComposerBootstrap::build"
         ]
+    },
+    "scripts-descriptions": {
+        "bootstrap-database": "Reinitializes database schema and contents after connection configuration change"
     },
     "config": {
         "bin-dir": "bin",
