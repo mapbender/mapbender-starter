@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a536bcbd50f3570a70463c672e7926b9",
+    "content-hash": "9cdcb8576d2fa9f5949637623f4702aa",
     "packages": [
         {
             "name": "components/bootstrap",
@@ -2183,16 +2183,16 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v3.2.0-RC3",
+            "version": "3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "cd9d3282f9d64763a9e6050badbac9ba7ba300aa"
+                "reference": "42ace0f3cce1f4025c88c69b40eed49240b82548"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/cd9d3282f9d64763a9e6050badbac9ba7ba300aa",
-                "reference": "cd9d3282f9d64763a9e6050badbac9ba7ba300aa",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/42ace0f3cce1f4025c88c69b40eed49240b82548",
+                "reference": "42ace0f3cce1f4025c88c69b40eed49240b82548",
                 "shasum": ""
             },
             "require": {
@@ -2256,7 +2256,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2020-07-27T09:31:54+00:00"
+            "time": "2020-07-29T14:55:06+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -6294,9 +6294,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "mapbender/mapbender": 5
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
