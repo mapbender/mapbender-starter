@@ -1,3 +1,6 @@
+## v3.2.1
+- Update mapbender/mapbender to [3.2.1](https://github.com/mapbender/mapbender/releases/tag/3.2.1)
+
 ## v3.2.0
 - Update mapbender/mapbender to [3.2.0](https://github.com/mapbender/mapbender/releases/tag/3.2.0)
 - Bump PHP requirement to >= 7.1
