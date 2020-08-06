@@ -1,3 +1,9 @@
+## v3.2.0
+- Update mapbender/mapbender to [3.2.0](https://github.com/mapbender/mapbender/releases/tag/3.2.0)
+- Bump PHP requirement to >= 7.1
+- Ship with Symfony 3.4 LTS by default
+- Drop mapbender/digitizer root requirement (currently incompatible)
+
 ## dev-release/3.0.8 @ 5a4bcc9
 - Update mapbender/fom to [v3.2.13](https://github.com/mapbender/fom/releases/tag/v3.2.13)
 - Update mapbender/owsproxy to [v3.1.6](https://github.com/mapbender/owsproxy3/releases/tag/v3.1.6)
