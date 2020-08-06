@@ -1,5 +1,7 @@
 ## v3.0.8.6-RC1
 - Update mapbender/mapbender to [v3.0.8.6-RC1](https://github.com/mapbender/mapbender/releases/tag/v3.0.8.6-RC1)
+
+## dev-release/3.0.8 @ 5a4bcc9
 - Update mapbender/fom to [v3.2.13](https://github.com/mapbender/fom/releases/tag/v3.2.13)
 - Update mapbender/owsproxy to [v3.1.6](https://github.com/mapbender/owsproxy3/releases/tag/v3.1.6)
 - Update mapbender/coordinates-utility to [1.0.9](https://github.com/mapbender/coordinates-utility/releases/tag/1.0.9)
