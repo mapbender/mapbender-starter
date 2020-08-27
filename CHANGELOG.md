@@ -1,3 +1,9 @@
+## v3.0.8.6-RC2
+- Update mapbender/mapbender to [v3.0.8.6-RC2](https://github.com/mapbender/mapbender/releases/tag/v3.0.8.6-RC2)
+- Fix untranslated ImageExport (and related Button) titles and tooltips in demo applications
+- Fix GpsButton tooltips in demo applications
+- Add `bootstrap-database` composer task; Reinitializes database schema and content after default database configuration changes
+
 ## v3.0.8.6-RC1
 - Update mapbender/mapbender to [v3.0.8.6-RC1](https://github.com/mapbender/mapbender/releases/tag/v3.0.8.6-RC1)
 - Update mapbender/fom to [v3.2.13](https://github.com/mapbender/fom/releases/tag/v3.2.13)
