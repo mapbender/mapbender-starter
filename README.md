@@ -39,24 +39,9 @@ sudo apt-get install php php-cli openssl bzip2 \
 ```
 
 
-### Ubuntu 14.04
-
-14.04 is similar, but requires activation of the "universe" repository and uses versioned package names ("php5-" instead of "php-").
-
-Activate universe repository:
-
-```sh
-sudo add-apt-repository universe
-```
-
-Update package list:
-
-```sh
-sudo apt-get update
-```
-
-Install packages:
-
+### Ubuntu 14.04 (outdated)
+Ubuntu 14.04 uses `php5-` prefixes on packages, has no separate `zip` extension package, and
+names the sqlite3 package `php5-sqlite` (no 3).
 ```sh
 sudo apt-get install php5 php5-cli openssl bzip2 \
     php5-curl php5-gd php5-intl php5-mbstring \
