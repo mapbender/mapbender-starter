@@ -35,7 +35,7 @@ sudo apt-get install php php-cli openssl bzip2 \
     php-curl php-gd php-intl php-mbstring \
     php-zip php-bz2 php-xml php-json \
     php-sqlite3 php-pgsql php-mysql php-ldap \
-    sqlite curl
+    sqlite3 curl
 ```
 
 
