@@ -55,18 +55,14 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap"
         ],
         "post-install-cmd": [
+            "@composer dump-autoload",
             "ComposerBootstrap::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-            "ComposerBootstrap::installAssets",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "ComponentInstaller\\Installer::postAutoloadDump"
+            "@update-assets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
         ],
         "post-update-cmd": [
-            "ComposerBootstrap::clearCache",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-            "ComposerBootstrap::installAssets",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "ComponentInstaller\\Installer::postAutoloadDump"
+            "@post-install-cmd"
         ],
         "update-assets":[
             "ComposerBootstrap::installAssets",
