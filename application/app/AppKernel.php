@@ -34,6 +34,7 @@ class AppKernel extends Mapbender\BaseKernel
 
             // Extra bundles installed by default starter
             new \Mapbender\CoordinatesUtilityBundle\MapbenderCoordinatesUtilityBundle(),
+            new \Mapbender\DataManagerBundle\MapbenderDataManagerBundle(),
             new \Mapbender\DigitizerBundle\MapbenderDigitizerBundle(),
 
             // OWSProxy3 bundles
