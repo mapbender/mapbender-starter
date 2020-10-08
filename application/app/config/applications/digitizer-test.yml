@@ -1,0 +1,909 @@
+parameters:
+    applications:
+        digitizer-test:
+            title: Mapbender Digitze Demo
+            screenshot: ~
+            description: Basic Digitizer testing app
+            published: true
+            template:  Mapbender\CoreBundle\Template\Fullscreen
+            regionProperties:
+              - name: sidepane
+                properties:
+                  name: accordion
+                  label: mb.manager.template.region.accordion.label
+            layersets:
+                main:
+                    mapbender_users:
+                        class: Mapbender\WmsBundle\Entity\WmsInstance
+                        title: Mapbender Users
+                        url: https://wms.wheregroup.com/cgi-bin/mapbender_user.xml
+                        version: 1.3.0
+                        layers:
+                            10: { name: Mapbender_User,    title : User, visible: true, legendurl: https://wms.wheregroup.com/cgi-bin/mapbender_user.xml?version=1.3.0&service=WMS&request=GetLegendGraphic&sld_version=1.1.0&layer=Mapbender_User&format=image/png&STYLE=default }
+                            22: { name: Mapbender_Names,   title : Name, visible: true, queryable: true}
+                        info_format: text/html
+                        visible: true
+                        format: image/png
+                        transparent: true
+                        tiled: false
+                        opacity: 85
+                        basesource: false
+                    osm:
+                        class: Mapbender\WmsBundle\Entity\WmsInstance
+                        title: OSM Demo
+                        url: https://osm-demo.wheregroup.com/service
+                        version: 1.3.0
+                        layers:
+                            30: { name: osm,    title : Germany OSM Demo WhereGroup,  visible: true }
+                        info_format: text/html
+                        visible: true
+                        format: image/png
+                        transparent: true
+                        tiled: true
+                        opacity: 100
+                        basesource: false                 
+                overview:
+                    osm_overview:
+                        class: Mapbender\WmsBundle\Entity\WmsInstance
+                        title: OSM Demo
+                        url: https://osm-demo.wheregroup.com/service
+                        version: 1.3.0
+                        layers:
+                            40: { name: osm,    title : Germany OSM Demo WhereGroup,  visible: true }
+                        tiled: false
+                        format: image/png
+                        transparent: true
+                        visible: true
+                        opacity: 100
+            elements:
+                toolbar:
+                    layertree-button:
+                        title: mb.core.layertree.class.title
+                        tooltip: mb.core.layertree.class.title
+                        class: Mapbender\CoreBundle\Element\Button
+                        label: true
+                        icon: iconLayertree
+                        target: layertreedialog
+                    fi-button:
+                        title: mb.core.featureinfo.class.title
+                        tooltip: mb.core.featureinfo.class.title
+                        class: Mapbender\CoreBundle\Element\Button
+                        icon: iconInfoActive
+                        label: true
+                        target: featureinfo
+                        group: featureinfo
+                    print-button:
+                        title: mb.core.printclient.class.title
+                        tooltip: mb.core.printclient.class.title
+                        class: Mapbender\CoreBundle\Element\Button
+                        label: true
+                        icon: iconPrint
+                        target: printclient
+                    imageexport-button:
+                        title: mb.print.imageexport.class.title
+                        tooltip: mb.print.imageexport.class.title
+                        class: Mapbender\CoreBundle\Element\Button
+                        label: true
+                        icon: iconImageExport
+                        target: imageexport
+                    legend-button:
+                        title: mb.core.legend.class.title
+                        tooltip: mb.core.legend.class.title
+                        class: Mapbender\CoreBundle\Element\Button
+                        label: true
+                        target: legend
+                        icon: iconLegend
+                    wmsloader-button:
+                        title: mb.wms.wmsloader.class.title
+                        tooltip: mb.wms.wmsloader.class.description
+                        class: Mapbender\CoreBundle\Element\Button
+                        label: true
+                        target: wmsloader
+                        icon: iconWms
+                    gps-button:
+                        title: mb.core.gpsposition.class.title
+                        tooltip: mb.core.gpsposition.class.title
+                        class: Mapbender\CoreBundle\Element\GpsPosition
+                        label: true
+                        target: map
+                    linerulerButton:
+                        title: mb.core.ruler.tag.measure
+                        tooltip: mb.core.ruler.tag.line
+                        class: Mapbender\CoreBundle\Element\Button
+                        icon: icon-line-ruler
+                        label: true
+                        target: lineruler
+                        group: rulers
+                    arearulerButton:
+                        title: mb.core.ruler.tag.measure 
+                        tooltip: mb.core.ruler.tag.area
+                        class: Mapbender\CoreBundle\Element\Button
+                        icon: icon-area-ruler
+                        label: true
+                        target: arearuler
+                        group: rulers
+                    about:
+                        title: mb.core.aboutdialog.tag.about
+                        tooltip: mb.core.aboutdialog.tag.about
+                        label: true
+                        class: Mapbender\CoreBundle\Element\AboutDialog
+                    poiButton:
+                        title: mb.core.poi.class.title
+                        tooltip: mb.core.poi.class.description
+                        class: Mapbender\CoreBundle\Element\Button
+                        icon: iconPoi
+                        label: true
+                        target: poi
+                    wmc-editor-button:
+                        title: mb.wmc.wmceditor.class.title
+                        tooltip: mb.wmc.wmceditor.class.title
+                        class: Mapbender\CoreBundle\Element\Button
+                        label: true
+                        icon: iconWmcEditor
+                        target: wmceditor
+                    wmc-loader-button:
+                        title: mb.wmc.wmcloader.class.title
+                        tooltip: mb.wmc.wmcloader.class.title
+                        class: Mapbender\CoreBundle\Element\Button
+                        label: true
+                        icon: iconWmcLoader
+                        target: wmcloader
+                    wmc-list:
+                        title: mb.wmc.wmclist.class.title
+                        tooltip: mb.wmc.wmclist.class.title
+                        class: Mapbender\WmcBundle\Element\WmcList
+                        target: wmcloader                       
+                content:
+                    map:
+                        title: mb.core.map.class.title
+                        class: Mapbender\CoreBundle\Element\Map
+                        layersets: [main]
+                        srs: EPSG:25832
+                        extents:
+                            start: [361000,5619000,371150,5625000]
+                            max: [-500000,4350000,1600000,6850000]
+                        scales: [5000000,1000000,500000,100000,50000,25000,10000,7500,5000,2500,1000,500]
+                        otherSrs: ["EPSG:25833","EPSG:31466","EPSG:31467","EPSG:3857","EPSG:4326"]
+                    zoombar:
+                        class: Mapbender\CoreBundle\Element\ZoomBar
+                        target: map
+                        components: ["pan","history","zoom_box","zoom_max","zoom_slider"]
+                        stepSize: 50
+                        stepByPixel: true
+                        anchor: right-top
+                        draggable: false
+                    legend:
+                        class: Mapbender\CoreBundle\Element\Legend
+                        target: map
+                        title: mb.core.legend.class.title
+                        elementType: dialog
+                        autoOpen: false
+                        displayType: list
+                        showLayerTitle: true
+                        showGroupedLayerTitle: true
+                    featureinfo:
+                        class: Mapbender\CoreBundle\Element\FeatureInfo
+                        title: mb.core.featureinfo.class.title
+                        target: map
+                        deactivateOnClose: false
+                        onlyValid: true
+                        type: dialog
+                        displayType: tabs
+                        autoActivate: false
+                        printResult: true
+                        showOriginal: true
+                        width: 500
+                        height: 500
+                    wmsloader:
+                        title: mb.wms.wmsloader.class.title
+                        class: Mapbender\WmsBundle\Element\WmsLoader
+                        target: map
+                        autoOpen: false
+                        defaultFormat: 'image/png'
+                        defaultInfoFormat: 'text/html'
+                        splitLayers: false
+                        useDeclarative: true                                                
+                    imageexport:
+                        class: Mapbender\PrintBundle\Element\ImageExport
+                        target: map
+                        title: mb.print.imageexport.class.title
+                    printclient:
+                        title: mb.core.printclient.class.title
+                        class: Mapbender\CoreBundle\Element\PrintClient
+                        target: map
+                        templates:
+                            - { template: a4portrait, label: A4 Portrait}
+                            - { template: a4landscape, label: A4 Landscape}
+                            - { template: a3portrait, label: A3 Portrait}
+                            - { template: a3landscape, label: A3 Landscape}
+                        legend_default_behaviour: false
+                        optional_fields:
+                            title:
+                                label: Title              # label of the optional field
+                                options:                  #
+                                    required: true        # true or false
+                    lineruler:
+                        title: mb.core.ruler.tag.line
+                        class: Mapbender\CoreBundle\Element\Ruler
+                        target: map
+                        type: line
+                    arearuler:
+                        title: mb.core.ruler.tag.area
+                        class: Mapbender\CoreBundle\Element\Ruler
+                        target: map
+                        type: area
+                    scalebar:
+                        class: Mapbender\CoreBundle\Element\ScaleBar
+                        target: map
+                        anchor: 'left-bottom'
+                        maxWidth: 200
+                        units: ['km']
+                    layertreedialog:
+                        title: mb.core.layertree.class.title
+                        class: Mapbender\CoreBundle\Element\Layertree
+                        target: map
+                        type: dialog
+                        autoOpen: false
+                        showBaseSource: true
+                        menu: []
+                    overview:
+                        title: mb.core.overview.class.title
+                        class: Mapbender\CoreBundle\Element\Overview
+                        target: map
+                        layerset: overview
+                        width: 200
+                        height: 100
+                        anchor: 'right-bottom'
+                        maximized: true
+                        fixed: false
+                    scaledisplay:
+                        title: mb.core.scaledisplay.class.title
+                        class: Mapbender\CoreBundle\Element\ScaleDisplay
+                        target: map
+                        anchor: left-top
+                        scalePrefix: Scale
+                        unitPrefix: true
+                    poi:
+                        title: mb.core.poi.class.title
+                        class: Mapbender\CoreBundle\Element\POI
+                        target: map
+                        body: 'Please take a look at this POI'
+                        useMailto: false
+                    wmceditor:
+                        title: mb.wmc.wmceditor.class.title
+                        class: Mapbender\WmcBundle\Element\WmcEditor
+                        tooltip: mb.wmc.wmceditor.class.title
+                        target: map
+                    wmcloader:
+                        title: mb.wmc.wmcloadercl.class.title
+                        class: Mapbender\WmcBundle\Element\WmcLoader
+                        tooltip: mb.wmc.wmcloader.class.title
+                        target: map                        
+                        keepSources: null
+                        components:
+                            - wmcidloader
+                            - wmclistloader
+                            - wmcxmlloader
+                        keepExtent: false
+                sidepane:
+                    digitizer:
+                        title: Digitizer
+                        class: Mapbender\DigitizerBundle\Element\Digitizer
+                        target: map
+                        schemes:
+                            poi:
+                                label: 'point digitizing'
+                                featureType:
+                                    connection: digitizer
+                                    table: poi
+                                    uniqueId: gid
+                                    geomType: point
+                                    geomField: geom_25832
+                                    srid: 25832
+                                    filter: 'st_isempty(geom_25832) = false'
+                                openFormAfterEdit: true
+                                zoomScaleDenominator: 2000
+                                allowEditData: true
+                                allowDelete: true
+                                allowDigitize: true
+                                printable: false
+                                toolset:
+                                    -
+                                        type: drawPoint
+                                    -
+                                        type: modifyFeature
+                                    -
+                                        type: moveFeature
+                                    -
+                                        type: selectFeature
+                                    -
+                                        type: removeSelected
+                                popup:
+                                    title: 'point test suite'
+                                    width: 500px
+                                searchType: all
+                                styles:
+                                    default:
+                                        strokeWidth: 2
+                                        strokeColor: "#6633FF" 
+                                        fillColor:   "#6633FF" 
+                                        fillOpacity: 0.3
+                                        strokeOpacity: 0.6
+                                        pointRadius: 4
+                                    select:
+                                        strokeWidth: 3
+                                        strokeColor: "#b000b0" 
+                                        fillColor:   "#FF00ff" 
+                                        fillOpacity: 0.5
+                                        pointRadius: 6  
+                                #clustering:
+                                #      -
+                                #        scale: 10000
+                                #        distance: 60
+                                #      -
+                                #        scale: 2500
+                                #        distance: 40
+                                #      -
+                                #        scale: 1000
+                                #        distance: 20
+                                #      -
+                                #        scale: 500
+                                #        distance: 1
+                                #        disable: true                                
+                                tableFields:
+                                    gid:
+                                        label: Nr.
+                                        width: 20%
+                                    name:
+                                        label: Name
+                                        width: 80%
+                                formItems:
+                                    -
+                                        type: tabs
+                                        children:
+                                            -
+                                                type: form
+                                                title: 'Basic information'
+                                                css:
+                                                    padding: 10px
+                                                children:
+                                                    #-
+                                                    #    type: input
+                                                    #    title: GID
+                                                    #    mandatory: true
+                                                    #    name: gid
+                                                    -
+                                                        type: label
+                                                        title: 'Welcome to the digitize demo. Try the new Mapbender feature!'
+                                                    -
+                                                        type: input
+                                                        title: Name
+                                                        mandatory: true
+                                                        name: name
+                                                        mandatoryText: 'Please give a name to the poi.'
+                                                        infoText: 'Help: Please give a name to the new object.'
+                                                    -
+                                                        type: input
+                                                        title: Title
+                                                        mandatory: false
+                                                        name: title
+                                                    -
+                                                        type: textArea
+                                                        name: abstract
+                                                        title: Abstract
+                                                        placeholder: 'please edit this field'
+                                                    -
+                                                        type: select
+                                                        title: Type
+                                                        name: type
+                                                        mandatory: true
+                                                        mandatoryText: 'Please give a name to the new object.'
+                                                        infoText: 'Help: Please give a name to the new object.'                                                        
+                                                        options:
+                                                            A: A
+                                                            B: B
+                                                            C: C
+                                                            D: D
+                                                            E: E
+                                                    -
+                                                        type: breakLine
+                                            -
+                                                type: form
+                                                title: 'Personal information'
+                                                css:
+                                                    padding: 10px
+                                                children:
+                                                    -
+                                                        type: label
+                                                        title: 'Please give us some information about yourself.'
+                                                    -
+                                                        type: fieldSet
+                                                        children:
+                                                            -
+                                                                type: input
+                                                                title: Firstname
+                                                                name: firstname
+                                                                css:
+                                                                    width: 30%
+                                                            -
+                                                                type: input
+                                                                title: Lastname
+                                                                name: lastname
+                                                                css:
+                                                                    width: 30%
+                                                            -
+                                                                type: input
+                                                                title: E-Mail
+                                                                name: email
+                                                                css:
+                                                                    width: 40%
+                                                    #-
+                                                    #    type: select
+                                                    #    multiple: false
+                                                    #    title: Interests
+                                                    #    name: interests
+                                                    #    options:
+                                                    #        maps: maps
+                                                    #        reading: reading
+                                                    #        swimming: swimming
+                                                    #        dancing: dancing
+                                                    #        beer: beer
+                                                    #        flowers: flowers
+                                                    -
+                                                        type: date
+                                                        title: 'favorite Date'
+                                                        name: date_favorite
+                                                        mandatory: true
+                                                        css:
+                                                            width: 50%
+                                                    -
+                                                        type: checkbox
+                                                        name: public
+                                                        value: true
+                                                        title: 'public (this new object is public)'
+                            line:
+                                label: 'line digitizing'
+                                maxResults: 1500
+                                featureType:
+                                    connection: digitizer
+                                    table: lines
+                                    uniqueId: gid
+                                    geomType: line
+                                    geomField: geom
+                                    srid: 4326
+                                    filter: 'st_isempty(geom) = false'
+                                openFormAfterEdit: true
+                                allowDelete: true
+                                toolset:
+                                    -
+                                        type: drawLine
+                                    -
+                                        type: modifyFeature
+                                    -
+                                        type: moveFeature
+                                    -
+                                        type: selectFeature
+                                    -
+                                        type: removeSelected
+                                popup:
+                                    title: 'line test suite'
+                                    width: 500px
+                                searchType: currentExtent
+                                tableFields:
+                                    gid:
+                                        label: Nr.
+                                        width: 20%
+                                    name:
+                                        label: Name
+                                        width: 80%
+                                formItems:
+                                    -
+                                        type: form
+                                        title: 'Basic information'
+                                        css:
+                                            padding: 10px
+                                        children:
+                                            -
+                                                type: label
+                                                title: 'Welcome to the digitize demo. Try the new Mapbender feature!'
+                                            -
+                                                type: input
+                                                title: Name
+                                                name: name
+                                                mandatory: true
+                                                mandatoryText: 'Please give a name to the new object.'
+                                                infoText: 'Help: Please give a name to the new object.'
+                                            -
+                                                type: select
+                                                title: Type
+                                                name: type
+                                                options:
+                                                    A: A
+                                                    B: B
+                                                    C: C
+                                                    D: D
+                                                    E: E
+                            multiline:
+                                label: 'multiline digitizing'
+                                maxResults: 1500
+                                featureType:
+                                    connection: digitizer
+                                    table: lines_multi
+                                    uniqueId: gid
+                                    geomType: multiline
+                                    geomField: geom_25832
+                                    srid: 25832
+                                    filter: 'st_isempty(geom_25832) = false'
+                                openFormAfterEdit: true
+                                allowDelete: true
+                                inlineSearch: true
+                                printable: false                                
+                                toolset:
+                                    -
+                                        type: drawLine
+                                    -
+                                        type: modifyFeature
+                                    -
+                                        type: moveFeature
+                                    -
+                                        type: selectFeature
+                                    -
+                                        type: removeSelected
+                                popup:
+                                    title: 'multiline test suite'
+                                    width: 500px
+                                searchType: currentExtent
+                                styles:
+                                    default:
+                                        strokeWidth: 2
+                                        strokeOpacity: 0.8
+                                        strokeColor: "#6633FF" 
+                                    select:
+                                        strokeWidth: 4
+                                        strokeColor: "#CC0066" 
+                                tableFields:
+                                    gid:
+                                        label: Nr.
+                                        width: 20%
+                                    name:
+                                        label: Name
+                                        width: 80%
+                                formItems:
+                                    -
+                                        type: form
+                                        title: 'Basic information'
+                                        css:
+                                            padding: 10px
+                                        children:
+                                            -
+                                                type: label
+                                                title: 'Welcome to the digitize demo. Try the new Mapbender3 feature!'
+                                            -
+                                                type: input
+                                                title: Name
+                                                name: name
+                                                mandatory: true
+                                                mandatoryText: 'Please give a name to the new object.'
+                                                infoText: 'Help: Please give a name to the new object.'
+                                            -
+                                                type: select
+                                                title: Type
+                                                name: type
+                                                options:
+                                                    A: A
+                                                    B: B
+                                                    C: C
+                                                    D: D
+                                                    E: E
+                            polygon:
+                                label: 'polygon digitizing'
+                                maxResults: 1500
+                                featureType:
+                                    connection: digitizer
+                                    table: polygons
+                                    uniqueId: gid
+                                    geomType: polygon
+                                    geomField: geom_25832
+                                    srid: 25832
+                                allowDigitize: true
+                                openFormAfterEdit: true
+                                allowDelete: true
+                                toolset:
+                                    -
+                                        type: drawPolygon
+                                    -
+                                        type: drawRectangle
+                                    -
+                                        type: drawDonut
+                                    -
+                                        type: drawEllipse
+                                    -
+                                        type: drawCircle
+                                    -
+                                        type: modifyFeature
+                                    -
+                                        type: moveFeature
+                                    -
+                                        type: selectFeature
+                                    -
+                                        type: removeSelected
+                                popup:
+                                    title: 'polygon test suite'
+                                    width: 500px
+                                searchType: currentExtent
+                                tableFields:
+                                    gid:
+                                        label: Nr.
+                                        width: 20%
+                                    name:
+                                        label: Name
+                                        width: 80%
+                                formItems:
+                                    -
+                                        type: form
+                                        title: 'Basic information'
+                                        css:
+                                            padding: 10px
+                                        children:
+                                            -
+                                                type: label
+                                                title: 'Welcome to the digitize demo. Try the new Mapbender feature!'
+                                            -
+                                                type: input
+                                                title: Name
+                                                mandatory: true
+                                                name: name
+                                                mandatoryText: 'Please give a name to the new object.'
+                                                infoText: 'Help: Please give a name to the new object.'
+                                            -
+                                                type: select
+                                                title: Type
+                                                name: type
+                                                mandatoryText: 'Please give a type to the new object.'
+                                                infoText: 'Help: Please give a type to the new object.'                                                
+                                                options:
+                                                    A: A
+                                                    B: B
+                                                    C: C
+                                                    D: D
+                                                    E: E
+                            multipolygon:
+                                label: 'multipolygon digitizing'
+                                maxResults: 1500
+                                featureType:
+                                    connection: digitizer
+                                    table: polygons_multi
+                                    uniqueId: gid
+                                    geomType: multipolygon
+                                    geomField: geom_25832
+                                    srid: 25832
+                                    filter: 'st_isempty(geom_25832) = false'
+                                openFormAfterEdit: true
+                                allowDelete: false
+                                printable: false                                
+                                toolset:
+                                    -
+                                        type: drawPolygon
+                                    -
+                                        type: drawRectangle
+                                    -
+                                        type: drawDonut
+                                    -
+                                        type: drawEllipse
+                                    -
+                                        type: drawCircle
+                                    -
+                                        type: modifyFeature
+                                    -
+                                        type: moveFeature
+                                    -
+                                        type: selectFeature
+                                    -
+                                        type: removeSelected
+                                popup:
+                                    title: 'multipolygon test suite'
+                                    width: 500px
+                                searchType: currentExtent
+                                tableFields:
+                                    gid:
+                                        label: Nr.
+                                        width: 20%
+                                    name:
+                                        label: Name
+                                        width: 80%
+                                styles:
+                                  default:
+                                      strokeWidth: 2
+                                      strokeColor: '#648296'
+                                      fillColor: '#7b9fb7'
+                                      fillOpacity: 0.7
+                                      fillWidth: 2
+                                      label: ${name}
+                                      fontColor: '#648296'
+                                      fontSize: 12px
+                                      fontWeight: "bold"
+                                  select:
+                                      strokeWidth: 4
+                                      strokeColor: '#435e70'
+                                      strokeOpacity: 1
+                                      fillOpacity: 0.6
+                                      fillColor: '#435e70'
+                                      label: '${name} ${type}'
+                                      fontColor: '#435e70'
+                                      fontSize: 14px
+                                      fontWeight: "bold"
+                                formItems:
+                                    -
+                                        type: form
+                                        title: 'Basic information'
+                                        css:
+                                            padding: 10px
+                                        children:
+                                            -
+                                                type: label
+                                                title: 'Welcome to the digitize demo. Try the new Mapbender3 feature!'
+                                            -
+                                                type: input
+                                                title: Name
+                                                mandatory: true
+                                                name: name
+                                                mandatoryText: 'Please give a name to the new object.'
+                                                infoText: 'Help: Please give a name to the new object.'
+                                            -
+                                                type: select
+                                                title: Type
+                                                name: type
+                                                options:
+                                                    A: A
+                                                    B: B
+                                                    C: C
+                                                    D: D
+                                                    E: E
+
+
+                    layertree:
+                        title: mb.core.layertree.class.title
+                        class: Mapbender\CoreBundle\Element\Layertree
+                        target: map
+                        type: element
+                        autoOpen: false
+                        showBaseSource: true
+                        menu: [opacity,zoomtolayer,metadata]
+
+                    searchrouter:
+                        tooltip: 'Search Router'
+                        target: map
+                        timeoutFactor: 3
+                        width: 700
+                        height: 500
+                        asDialog: false
+                        class: Mapbender\CoreBundle\Element\SearchRouter                        
+                        routes:
+                            1-route:
+                                title: Places
+                                class: Mapbender\CoreBundle\Component\SQLSearchEngine  
+                                class_options:
+                                    connection: geodaten
+                                    relation: brd.qry_gn250_p_ortslage
+                                    attributes:
+                                        - gid
+                                        - name
+                                        - gemeinde
+                                        - hoehe_ger
+                                    geometry_attribute: geom
+                                form:
+                                    name:
+                                        type: text
+                                        options:
+                                            required: false
+                                            label: Name
+                                            attr:
+                                                data-autocomplete: 'on'
+                                        compare: ilike
+                                    gemeinde:
+                                        type: text
+                                        options:
+                                            label: 'Commune'
+                                            required: false
+                                        compare: ilike
+                                results:
+                                    view: table
+                                    count: true
+                                    headers:
+                                        name: Name
+                                        gemeinde: Commune
+                                        hoehe_ger: Height
+                                    callback:
+                                        event: click
+                                        options:
+                                            buffer: 1000
+                                            minScale: null
+                                            maxScale: null
+                                    styleMap:
+                                        default:
+                                            strokeColor: '#8000FF'
+                                            strokeWidth: 1
+                                            strokeOpacity: 1
+                                            fillColor: '#8000FF'
+                                            fillOpacity: 0.8
+                                            fillWidth: 6
+                                        select:
+                                            strokeColor: '#ff00ff'
+                                            strokeWidth: 2
+                                            strokeOpacity: 1
+                                            fillColor: '#ff00ff'
+                                            fillOpacity: 0.6
+                                            fillWidth: 12
+                                        temporary:
+                                            strokeColor: '#00FFFF'
+                                            strokeOpacity: 1
+                                            strokeWidth: 2
+                                            fillColor: '#00FFFF'
+                                            fillWidth: 6
+                                            fillOpacity: 0.6
+
+                    redlining:
+                        title: mb.core.redlining.class.title
+                        class: Mapbender\CoreBundle\Element\Redlining
+                        target: map
+                        geometrytypes:
+                            - point
+                            - line
+                            - polygon
+                            - text
+                            - rectangle
+                        display_type: element
+                        auto_activate: false
+                        deactivate_on_close: false
+                    coordinatesutility:
+                        title: mb.coordinatesutility.class.title
+                        class: Mapbender\CoordinatesUtilityBundle\Element\CoordinatesUtility
+                        type: element
+                        target: map
+                        srsList: []
+                        addMapSrsList: true                        
+                        zoomlevel: 6
+                    html-about-mapbender:
+                        title: 'About Mapbender'
+                        class: Mapbender\CoreBundle\Element\HTMLElement
+                        classes: html-element-inline
+                        content: "<p>Mapbender is an </p><p><a href=\"https://www.osgeo.org/projects/mapbender/\" target=\"_blank\"><img src=\"https://mapbender.org/sites/default/files/osgeo-project-cmyk.png\" alt=\"OSGeo Project\"  title=\"OSGeo Project\" width=\"100px\" /></a></p><p>Find out more about OSGeo at <br/><a href=\"https://www.osgeo.org\" target=\"_blank\">https://www.osgeo.org</a><br/><a href=\"https://www.osgeo.org/projects/mapbender/\" target=\"_blank\">https://www.osgeo.org/projects/mapbender/</a>"
+
+                footer:
+                    activityindicator:
+                        class: Mapbender\CoreBundle\Element\ActivityIndicator
+                        title: mb.core.activityindicator.class.title
+                        activityClass: mb-activity
+                        ajaxActivityClass: mb-activity-ajax
+                        tileActivityClass: mb-activity-tile
+                    coordinates:
+                        class: Mapbender\CoreBundle\Element\CoordinatesDisplay
+                        title: mb.core.coordinates.class.title
+                        target: map
+                        label: false
+                        empty:  "x: - y: -"
+                        prefix: "x: "
+                        separator:  " y: "
+                    srs:
+                        class: Mapbender\CoreBundle\Element\SrsSelector
+                        title: mb.core.srsselector.class.title
+                        tooltip: mb.core.srsselector.class.description
+                        label: false
+                        target: map
+                    scaleselector:
+                        class: Mapbender\CoreBundle\Element\ScaleSelector
+                        title: mb.core.scaleselector.class.title
+                        tooltip: mb.core.scaleselector.class.description
+                        label: false
+                        target: map
+                    copyrightButton:
+                        title: © OpenStreetMap contributors
+                        tooltip: © OpenStreetMap contributors
+                        class: Mapbender\CoreBundle\Element\Button
+                        label: true
+                        click: https://www.openstreetmap.org/copyright
+                    HTML:
+                        title: HTML-powered by Mapbender
+                        class: Mapbender\CoreBundle\Element\HTMLElement
+                        content: '<span style="color: #6FB536; font-weight:bold">powered by Mapbender</span>'
+                        classes: html-element-inline
