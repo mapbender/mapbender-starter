@@ -470,7 +470,7 @@ parameters:
                                     uniqueId: gid
                                     geomType: line
                                     geomField: geom
-                                    srid: 4326
+                                    srid: 25832
                                     filter: 'st_isempty(geom) = false'
                                 openFormAfterEdit: true
                                 allowDelete: true
