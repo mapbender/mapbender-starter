@@ -298,9 +298,9 @@ parameters:
                                     table: poi
                                     uniqueId: gid
                                     geomType: point
-                                    geomField: geom_25832
+                                    geomField: geom
                                     srid: 25832
-                                    filter: 'st_isempty(geom_25832) = false'
+                                    filter: 'st_isempty(geom) = false'
                                 openFormAfterEdit: true
                                 zoomScaleDenominator: 2000
                                 allowEditData: true
@@ -531,9 +531,9 @@ parameters:
                                     table: lines_multi
                                     uniqueId: gid
                                     geomType: multiline
-                                    geomField: geom_25832
+                                    geomField: geom
                                     srid: 25832
-                                    filter: 'st_isempty(geom_25832) = false'
+                                    filter: 'st_isempty(geom) = false'
                                 openFormAfterEdit: true
                                 allowDelete: true
                                 inlineSearch: true
@@ -603,7 +603,7 @@ parameters:
                                     table: polygons
                                     uniqueId: gid
                                     geomType: polygon
-                                    geomField: geom_25832
+                                    geomField: geom
                                     srid: 25832
                                 allowDigitize: true
                                 openFormAfterEdit: true
@@ -675,9 +675,9 @@ parameters:
                                     table: polygons_multi
                                     uniqueId: gid
                                     geomType: multipolygon
-                                    geomField: geom_25832
+                                    geomField: geom
                                     srid: 25832
-                                    filter: 'st_isempty(geom_25832) = false'
+                                    filter: 'st_isempty(geom) = false'
                                 openFormAfterEdit: true
                                 allowDelete: false
                                 printable: false                                
