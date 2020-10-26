@@ -2566,16 +2566,16 @@
         },
         {
             "name": "mapbender/ol4-extensions",
-            "version": "0.0.2",
+            "version": "0.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/ol4-extensions.git",
-                "reference": "3a452016d35c031dfc11b12c5ccc47f93469a3a1"
+                "reference": "f04946be8217d85a92b67c2be7ff6c35af013338"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/ol4-extensions/zipball/3a452016d35c031dfc11b12c5ccc47f93469a3a1",
-                "reference": "3a452016d35c031dfc11b12c5ccc47f93469a3a1",
+                "url": "https://api.github.com/repos/mapbender/ol4-extensions/zipball/f04946be8217d85a92b67c2be7ff6c35af013338",
+                "reference": "f04946be8217d85a92b67c2be7ff6c35af013338",
                 "shasum": ""
             },
             "require": {
@@ -2597,7 +2597,7 @@
                 "OpenLayers",
                 "mapbender"
             ],
-            "time": "2020-10-08T09:01:54+00:00"
+            "time": "2020-10-26T12:08:31+00:00"
         },
         {
             "name": "mapbender/openlayers6-es5",
