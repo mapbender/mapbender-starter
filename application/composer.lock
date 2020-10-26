@@ -6820,6 +6820,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "mapbender/mapbender": 20,
         "mapbender/digitizer": 10
     },
     "prefer-stable": false,

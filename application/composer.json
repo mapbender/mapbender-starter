@@ -42,7 +42,7 @@
 
         "proj4js/proj4js": "^2.4",
         "mapbender/fom": "^3.0.6.0",
-        "mapbender/mapbender": "^3.1",
+        "mapbender/mapbender": "dev-master as 3.2.2-dev",
         "mapbender/owsproxy": "^3.0.6",
 
         "mapbender/coordinates-utility": "^1.1",
@@ -122,7 +122,7 @@
             "mapbender/*": "source"
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
