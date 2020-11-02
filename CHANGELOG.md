@@ -1,3 +1,9 @@
+## v3.2.2
+- Update mapbender/mapbender to [v3.2.2](https://github.com/mapbender/mapbender/releases/tag/v3.2.1)
+- Misc installation instruction fixes
+- Fix autoloading errors in first run of composer update / install
+- Add [Digitizer 1.4](https://github.com/mapbender/mapbender-digitizer.git/releases/tag/1.4)
+
 ## v3.2.1
 - Update mapbender/mapbender to [v3.2.1](https://github.com/mapbender/mapbender/releases/tag/v3.2.1)
 
