@@ -46,7 +46,7 @@
         "mapbender/owsproxy": "^3.0.6",
 
         "mapbender/coordinates-utility": "^1.1",
-        "mapbender/digitizer": "^1.4@beta",
+        "mapbender/digitizer": "^1.4",
         "components/font-awesome": "^4.0",
         "wheregroup/cookieconsent": "^3",
         "components/bootstrap": "^3"
