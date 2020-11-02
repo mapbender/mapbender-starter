@@ -6832,7 +6832,6 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "mapbender/mapbender": 20,
         "mapbender/digitizer": 10
     },
     "prefer-stable": false,
