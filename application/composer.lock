@@ -4,8 +4,63 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9cdcb8576d2fa9f5949637623f4702aa",
+    "content-hash": "70142cd0c3d4ed7eb242105b197b865a",
     "packages": [
+        {
+            "name": "blueimp/jquery-file-upload",
+            "version": "v9.34.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vkhramtsov/jQuery-File-Upload.git",
+                "reference": "6d86a591f9a35bb811befb750dcd2c7da9ac05a2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vkhramtsov/jQuery-File-Upload/zipball/6d86a591f9a35bb811befb750dcd2c7da9ac05a2",
+                "reference": "6d86a591f9a35bb811befb750dcd2c7da9ac05a2",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "server/php/UploadHandler.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Tschan",
+                    "homepage": "https://blueimp.net"
+                }
+            ],
+            "description": "File Upload widget for jQuery.",
+            "homepage": "https://github.com/blueimp/jQuery-File-Upload",
+            "keywords": [
+                "bootstrap",
+                "chunk",
+                "cross-domain",
+                "cross-site",
+                "drag",
+                "drop",
+                "file",
+                "gae",
+                "go",
+                "jquery",
+                "multiple",
+                "php",
+                "preview",
+                "progress",
+                "python",
+                "resume",
+                "selection",
+                "upload",
+                "widget"
+            ],
+            "time": "2019-07-22T13:10:51+00:00"
+        },
         {
             "name": "components/bootstrap",
             "version": "3.4.1",
@@ -2133,6 +2188,161 @@
             "time": "2020-03-18T10:44:55+00:00"
         },
         {
+            "name": "mapbender/data-manager",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mapbender/data-manager.git",
+                "reference": "888637ae0c8dad4b0b8e0deab7a8038bf0ff7b52"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mapbender/data-manager/zipball/888637ae0c8dad4b0b8e0deab7a8038bf0ff7b52",
+                "reference": "888637ae0c8dad4b0b8e0deab7a8038bf0ff7b52",
+                "shasum": ""
+            },
+            "require": {
+                "blueimp/jquery-file-upload": "9.*",
+                "mapbender/data-source": "~0.1.15",
+                "mapbender/vis-ui.js": "^0.1.80 || ~0.2.0",
+                "php": ">=5.3.3"
+            },
+            "conflict": {
+                "mapbender/mapbender": "<3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Mapbender\\DataManagerBundle\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andriy Oblivantsev",
+                    "email": "andriy.oblivantsev@wheregroup.com"
+                }
+            ],
+            "description": "Mapbender data manager",
+            "keywords": [
+                "Data Manager",
+                "data",
+                "mapbender"
+            ],
+            "time": "2020-10-30T09:10:51+00:00"
+        },
+        {
+            "name": "mapbender/data-source",
+            "version": "0.1.19",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mapbender/data-source.git",
+                "reference": "9b66f50b9d35be33c07f4ca6083e56bbb5602faf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mapbender/data-source/zipball/9b66f50b9d35be33c07f4ca6083e56bbb5602faf",
+                "reference": "9b66f50b9d35be33c07f4ca6083e56bbb5602faf",
+                "shasum": ""
+            },
+            "require": {
+                "mapbender/mapbender": ">=3.0.8",
+                "phayes/geophp": "1.2",
+                "php": ">=5.3.3",
+                "zumba/json-serializer": "1.x"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^3.7",
+                "symfony/framework-bundle": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Mapbender\\DataSourceBundle\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andriy Oblivantsev",
+                    "email": "andriy.oblivantsev@wheregroup.com"
+                }
+            ],
+            "description": "Mapbender data source handler",
+            "keywords": [
+                "data",
+                "data source",
+                "mapbender"
+            ],
+            "time": "2020-10-30T10:53:54+00:00"
+        },
+        {
+            "name": "mapbender/digitizer",
+            "version": "1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mapbender/mapbender-digitizer.git",
+                "reference": "e97c6a3b5fc9dc6a1b75a8ca3c48aaeaaf96b72a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/e97c6a3b5fc9dc6a1b75a8ca3c48aaeaaf96b72a",
+                "reference": "e97c6a3b5fc9dc6a1b75a8ca3c48aaeaaf96b72a",
+                "shasum": ""
+            },
+            "require": {
+                "debugteam/bootstrap-colorpicker": "1.x",
+                "mapbender/data-manager": "^1.1",
+                "mapbender/data-source": "~0.0.35 || ~0.1",
+                "mapbender/ol4-extensions": "~0.0.4",
+                "php": ">=5.3.3"
+            },
+            "conflict": {
+                "mapbender/mapbender": "<3.2.1",
+                "mapbender/openlayers6-es5": "<0.3.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-release/1.4": "1.4.x-dev",
+                    "dev-release/1.0": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Mapbender\\DigitizerBundle\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andriy Oblivantsev"
+                },
+                {
+                    "name": "Stefan Winkelmann"
+                },
+                {
+                    "name": "David Patzke"
+                }
+            ],
+            "description": "Mapbender digitizer element",
+            "keywords": [
+                "digitizer",
+                "digitizing",
+                "mapbender"
+            ],
+            "time": "2020-11-02T08:16:02+00:00"
+        },
+        {
             "name": "mapbender/fom",
             "version": "v3.2.14",
             "source": {
@@ -2355,6 +2565,41 @@
             "time": "2020-02-20T14:20:22+00:00"
         },
         {
+            "name": "mapbender/ol4-extensions",
+            "version": "0.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mapbender/ol4-extensions.git",
+                "reference": "3a26fb728b4bdee0adec7a85e6b921742dda61c7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mapbender/ol4-extensions/zipball/3a26fb728b4bdee0adec7a85e6b921742dda61c7",
+                "reference": "3a26fb728b4bdee0adec7a85e6b921742dda61c7",
+                "shasum": ""
+            },
+            "require": {
+                "mapbender/mapbender": "^3.1"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Felix Rauch",
+                    "email": "felix.rauch@wheregroup.com"
+                }
+            ],
+            "description": "Create Extension for Openlayers 4",
+            "keywords": [
+                "OpenLayers",
+                "mapbender"
+            ],
+            "time": "2020-10-28T10:37:30+00:00"
+        },
+        {
             "name": "mapbender/openlayers6-es5",
             "version": "0.3.5",
             "source": {
@@ -2430,6 +2675,125 @@
                 "owsproxy"
             ],
             "time": "2020-02-19T22:47:28+00:00"
+        },
+        {
+            "name": "mapbender/vis-ui.js",
+            "version": "0.2.83",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mapbender/vis-ui.js.git",
+                "reference": "330c6461fef595d3d754f37a9b9a76a75ac530a3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mapbender/vis-ui.js/zipball/330c6461fef595d3d754f37a9b9a76a75ac530a3",
+                "reference": "330c6461fef595d3d754f37a9b9a76a75ac530a3",
+                "shasum": ""
+            },
+            "require": {
+                "components/bootstrap": "3.*",
+                "components/font-awesome": "^3.0 || ^4.0 || ^5.0",
+                "components/jquery": "1.* || 2.*",
+                "components/jqueryui": "1.*",
+                "components/underscore": "1.8.*",
+                "datatables/datatables": "^1.10.16",
+                "debugteam/bootstrap-colorpicker": "1.*",
+                "medialize/jquery-context-menu": "1.*",
+                "robloach/component-installer": "0.2.*",
+                "select2/select2": "^4.0",
+                "wheregroup/jquerydialogextendjs": "2.x"
+            },
+            "conflict": {
+                "mapbender/digitizer": "<1.1.67"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "src/js/utils/*.js",
+                        "src/js/elements/*.js",
+                        "src/js/jquery.form.generator.js"
+                    ],
+                    "styles": [
+                        "src/styles/base.css"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-master": "0.0.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andriy Oblivantsev",
+                    "email": "eslider@gmail.com"
+                }
+            ],
+            "description": "JavaScript UI generator framework based on jQuery UI  and some other elements",
+            "homepage": "https://github.com/eSlider",
+            "keywords": [
+                "assets",
+                "jquery",
+                "vis-ui"
+            ],
+            "time": "2020-03-10T08:24:16+00:00"
+        },
+        {
+            "name": "medialize/jquery-context-menu",
+            "version": "1.6.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/eSlider/jQuery-contextMenu.git",
+                "reference": "c4d7776406848532a2c224c8fcf1b48262f03943"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/eSlider/jQuery-contextMenu/zipball/c4d7776406848532a2c224c8fcf1b48262f03943",
+                "reference": "c4d7776406848532a2c224c8fcf1b48262f03943",
+                "shasum": ""
+            },
+            "require": {
+                "robloach/component-installer": "*"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "src/jquery.ui.position.js",
+                        "src/jquery.contextMenu.js"
+                    ],
+                    "styles": [
+                        "src/jquery.contextMenu.css"
+                    ],
+                    "files": [
+                        "src/images/*.png"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rodney Rehm",
+                    "email": "rodney.rehm@medialize.de"
+                }
+            ],
+            "description": "Full featured context menu handler capable of handling thousands of elements",
+            "homepage": "http://medialize.github.com/jQuery-contextMenu/",
+            "keywords": [
+                "context-menu",
+                "contextmenu",
+                "menu",
+                "navigation",
+                "right-click",
+                "right-click-menu"
+            ],
+            "time": "2015-07-21T12:35:09+00:00"
         },
         {
             "name": "mnsami/composer-custom-directory-installer",
@@ -2722,6 +3086,42 @@
                 "random"
             ],
             "time": "2018-07-02T15:55:56+00:00"
+        },
+        {
+            "name": "phayes/geophp",
+            "version": "1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phayes/geoPHP.git",
+                "reference": "015404e85b602e0df1f91441f8db0f9e98f7e567"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phayes/geoPHP/zipball/015404e85b602e0df1f91441f8db0f9e98f7e567",
+                "reference": "015404e85b602e0df1f91441f8db0f9e98f7e567",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.1.*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "geoPHP.inc"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2 or New-BSD"
+            ],
+            "authors": [
+                {
+                    "name": "Patrick Hayes"
+                }
+            ],
+            "description": "GeoPHP is a open-source native PHP library for doing geometry operations. It is written entirely in PHP and can therefore run on shared hosts. It can read and write a wide variety of formats: WKT (including EWKT), WKB (including EWKB), GeoJSON, KML, GPX, GeoRSS). It works with all Simple-Feature geometries (Point, LineString, Polygon, GeometryCollection etc.) and can be used to get centroids, bounding-boxes, area, and a wide variety of other useful information.",
+            "homepage": "https://github.com/phayes/geoPHP",
+            "time": "2014-12-02T06:11:22+00:00"
         },
         {
             "name": "proj4js/proj4js",
@@ -3118,6 +3518,44 @@
             "description": "Allows installation of Components via Composer.",
             "abandoned": "oomphinc/composer-installers-extender",
             "time": "2015-08-10T12:35:38+00:00"
+        },
+        {
+            "name": "select2/select2",
+            "version": "4.0.13",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/select2/select2.git",
+                "reference": "45f2b83ceed5231afa7b3d5b12b58ad335edd82e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/select2/select2/zipball/45f2b83ceed5231afa7b3d5b12b58ad335edd82e",
+                "reference": "45f2b83ceed5231afa7b3d5b12b58ad335edd82e",
+                "shasum": ""
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "dist/js/select2.js"
+                    ],
+                    "styles": [
+                        "dist/css/select2.css"
+                    ],
+                    "files": [
+                        "dist/js/select2.js",
+                        "dist/js/i18n/*.js",
+                        "dist/css/select2.css"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Select2 is a jQuery based replacement for select boxes.",
+            "homepage": "https://select2.org/",
+            "time": "2020-01-28T05:01:22+00:00"
         },
         {
             "name": "sensio/distribution-bundle",
@@ -4817,6 +5255,39 @@
             "time": "2019-12-16T10:16:54+00:00"
         },
         {
+            "name": "wheregroup/jquerydialogextendjs",
+            "version": "2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/WhereGroup/jquery-dialogextend.git",
+                "reference": "da2fa04c29eebfce0cfca5bf5e4e812b85b5f60e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/WhereGroup/jquery-dialogextend/zipball/da2fa04c29eebfce0cfca5bf5e4e812b85b5f60e",
+                "reference": "da2fa04c29eebfce0cfca5bf5e4e812b85b5f60e",
+                "shasum": ""
+            },
+            "require": {
+                "robloach/component-installer": "0.x"
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "build/*.min.js"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Maximize and Minimize Buttons for UI Dialog",
+            "homepage": "https://github.com/wheregroup/jquery-dialogextend",
+            "time": "2020-07-11T19:31:59+00:00"
+        },
+        {
             "name": "wheregroup/open-sans",
             "version": "1.4.2",
             "source": {
@@ -5049,6 +5520,60 @@
             ],
             "abandoned": "laminas/laminas-eventmanager",
             "time": "2018-04-25T15:33:34+00:00"
+        },
+        {
+            "name": "zumba/json-serializer",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zumba/json-serializer.git",
+                "reference": "61cb3a9458146b2b91e8f7700cee80cad1bf9279"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zumba/json-serializer/zipball/61cb3a9458146b2b91e8f7700cee80cad1bf9279",
+                "reference": "61cb3a9458146b2b91e8f7700cee80cad1bf9279",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "suggest": {
+                "ext-mbstring": "To support unescaped unicode characters in PHP 5.3."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Zumba\\Util": "src/",
+                    "Zumba\\Exception": "src/",
+                    "Zumba\\Util\\Test": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Juan Basso",
+                    "email": "juan.basso@zumba.com"
+                },
+                {
+                    "name": "Zumba Fitness, LLC",
+                    "email": "engineering@zumba.com"
+                }
+            ],
+            "description": "Serialize PHP variables, including objects, in JSON format. Support to unserialize it too.",
+            "homepage": "http://tech.zumba.com",
+            "keywords": [
+                "json",
+                "serialize",
+                "serializer"
+            ],
+            "time": "2014-07-05T20:09:27+00:00"
         }
     ],
     "packages-dev": [
