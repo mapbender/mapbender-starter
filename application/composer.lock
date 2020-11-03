@@ -2015,12 +2015,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "3e6bc1820b80e18ac853887b70a9a549e6c68ed3"
+                "reference": "bf5f2e19f397815cf0c9905929fad95f96bb69d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/3e6bc1820b80e18ac853887b70a9a549e6c68ed3",
-                "reference": "3e6bc1820b80e18ac853887b70a9a549e6c68ed3",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/bf5f2e19f397815cf0c9905929fad95f96bb69d7",
+                "reference": "bf5f2e19f397815cf0c9905929fad95f96bb69d7",
                 "shasum": ""
             },
             "require": {
