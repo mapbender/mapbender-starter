@@ -71,8 +71,6 @@ parameters:
                         target: basesourceswitcher
 
                     gps-button:
-                        title: mb.core.gpsposition.class.title
-                        tooltip: mb.core.gpsposition.class.title
                         class: Mapbender\CoreBundle\Element\GpsPosition
                         label: false
                         target: map
@@ -108,7 +106,6 @@ parameters:
 
                 content:
                     map:
-                        title: mb.core.map.class.title
                         class: Mapbender\CoreBundle\Element\Map
                         layersets: [main]
                         srs: EPSG:25832
@@ -138,7 +135,6 @@ parameters:
 
                     featureinfo:
                         class: Mapbender\CoreBundle\Element\FeatureInfo
-                        title:  mb.core.featureinfo.class.title
                         target: map
                         type: element
                         deactivateOnClose: false
@@ -160,7 +156,6 @@ parameters:
                         classes: html-element-inline
 
                     basesourceswitcher:
-                        title: mb.core.basesourceswitcher.class.title
                         tooltip: mb.core.basesourceswitcher.class.title
                         class: Mapbender\CoreBundle\Element\BaseSourceSwitcher
                         target: map
