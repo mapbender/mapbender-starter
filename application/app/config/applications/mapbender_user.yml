@@ -290,7 +290,6 @@ parameters:
                         tileActivityClass: mb-activity-tile
                     coordinates:
                         class: Mapbender\CoreBundle\Element\CoordinatesDisplay
-                        title: mb.core.coordinates.class.title
                         target: map
                         label: false
                         empty:  "x: - y: -"
