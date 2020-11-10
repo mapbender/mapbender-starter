@@ -248,7 +248,6 @@ parameters:
                     coordinatesutility:
                         title: mb.coordinatesutility.class.title
                         class: Mapbender\CoordinatesUtilityBundle\Element\CoordinatesUtility
-                        type: dialog
                         target: map
                         srsList:
                             -

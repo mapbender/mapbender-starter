@@ -271,7 +271,6 @@ parameters:
                     coordinatesutility:
                         title: mb.coordinatesutility.class.title
                         class: Mapbender\CoordinatesUtilityBundle\Element\CoordinatesUtility
-                        type: element
                         target: map
                         srsList: []
                         addMapSrsList: true                        
