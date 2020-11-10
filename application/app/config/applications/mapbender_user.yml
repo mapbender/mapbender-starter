@@ -157,7 +157,6 @@ parameters:
                         title: mb.core.legend.class.title
                         elementType: dialog
                         autoOpen: false
-                        displayType: list
                         showLayerTitle: true
                         showGroupedLayerTitle: true
                     featureinfo:
