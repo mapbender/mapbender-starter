@@ -10,7 +10,6 @@ parameters:
               - name: sidepane
                 properties:
                   name: accordion
-                  label: mb.manager.template.region.accordion.label
             layersets:
                 main:
                     mapbender_users:
@@ -92,8 +91,6 @@ parameters:
                         target: wmsloader
                         icon: iconWms
                     gps-button:
-                        title: mb.core.gpsposition.class.title
-                        tooltip: mb.core.gpsposition.class.title
                         class: Mapbender\CoreBundle\Element\GpsPosition
                         label: false
                         target: map
@@ -127,7 +124,6 @@ parameters:
                         target: poi
                 content:
                     map:
-                        title: mb.core.map.class.title
                         class: Mapbender\CoreBundle\Element\Map
                         layersets: [main]
                         srs: EPSG:25832
@@ -144,15 +140,12 @@ parameters:
                     legend:
                         class: Mapbender\CoreBundle\Element\Legend
                         target: map
-                        title: mb.core.legend.class.title
                         elementType: dialog
                         autoOpen: false
-                        displayType: list
                         showLayerTitle: true
                         showGroupedLayerTitle: true
                     featureinfo:
                         class: Mapbender\CoreBundle\Element\FeatureInfo
-                        title: mb.core.featureinfo.class.title
                         target: map
                         deactivateOnClose: false
                         onlyValid: true
@@ -163,7 +156,6 @@ parameters:
                         width: 500
                         height: 500
                     wmsloader:
-                        title: mb.wms.wmsloader.class.title
                         class: Mapbender\WmsBundle\Element\WmsLoader
                         target: map
                         autoOpen: false
@@ -173,9 +165,7 @@ parameters:
                     imageexport:
                         class: Mapbender\PrintBundle\Element\ImageExport
                         target: map
-                        title: mb.print.imageexport.class.title
                     printclient:
-                        title: mb.core.printclient.class.title
                         class: Mapbender\CoreBundle\Element\PrintClient
                         target: map
                         templates:
@@ -206,7 +196,6 @@ parameters:
                         maxWidth: 200
                         units: ['km']
                     overview:
-                        title: mb.core.overview.class.title
                         class: Mapbender\CoreBundle\Element\Overview
                         target: map
                         layerset: overview
@@ -216,21 +205,18 @@ parameters:
                         maximized: true
                         fixed: false
                     scaledisplay:
-                        title: mb.core.scaledisplay.class.title
                         class: Mapbender\CoreBundle\Element\ScaleDisplay
                         target: map
                         anchor: right-top
                         scalePrefix: Scale
                         unitPrefix: true
                     poi:
-                        title: mb.core.poi.class.title
                         class: Mapbender\CoreBundle\Element\POI
                         target: map
                         body: 'Please take a look at this POI'
                         useMailto: false
                 sidepane:
                     layertree:
-                        title: mb.core.layertree.class.title
                         class: Mapbender\CoreBundle\Element\Layertree
                         target: map
                         type: element
@@ -238,14 +224,11 @@ parameters:
                         showBaseSource: true
                         menu: [opacity,zoomtolayer,metadata]
                     redlining:
-                        title: mb.core.redlining.class.title
                         class: Mapbender\CoreBundle\Element\Redlining
                         target: map
                         auto_activate: false
                     coordinatesutility:
-                        title: mb.coordinatesutility.class.title
                         class: Mapbender\CoordinatesUtilityBundle\Element\CoordinatesUtility
-                        type: element
                         target: map
                         srsList: []
                         addMapSrsList: true
@@ -259,13 +242,11 @@ parameters:
                 footer:
                     activityindicator:
                         class: Mapbender\CoreBundle\Element\ActivityIndicator
-                        title: mb.core.activityindicator.class.title
                         activityClass: mb-activity
                         ajaxActivityClass: mb-activity-ajax
                         tileActivityClass: mb-activity-tile
                     coordinates:
                         class: Mapbender\CoreBundle\Element\CoordinatesDisplay
-                        title: mb.core.coordinates.class.title
                         target: map
                         label: false
                         empty:  "x: - y: -"
@@ -273,13 +254,11 @@ parameters:
                         separator:  " y: "
                     srs:
                         class: Mapbender\CoreBundle\Element\SrsSelector
-                        title: mb.core.srsselector.class.title
                         tooltip: mb.core.srsselector.class.description
                         label: false
                         target: map
                     scaleselector:
                         class: Mapbender\CoreBundle\Element\ScaleSelector
-                        title: mb.core.scaleselector.class.title
                         tooltip: mb.core.scaleselector.class.description
                         label: false
                         target: map
