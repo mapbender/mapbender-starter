@@ -10,7 +10,6 @@ parameters:
               - name: sidepane
                 properties:
                   name: accordion
-                  label: mb.manager.template.region.accordion.label
             layersets:
                 main:
                     mapbender_users:
