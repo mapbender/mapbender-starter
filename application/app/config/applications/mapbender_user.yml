@@ -164,8 +164,6 @@ parameters:
                         autoActivate: false
                         printResult: true
                         showOriginal: true
-                        width: 500
-                        height: 500
                     wmsloader:
                         class: Mapbender\WmsBundle\Element\WmsLoader
                         target: map
