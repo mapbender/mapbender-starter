@@ -266,9 +266,6 @@ parameters:
                 footer:
                     activityindicator:
                         class: Mapbender\CoreBundle\Element\ActivityIndicator
-                        activityClass: mb-activity
-                        ajaxActivityClass: mb-activity-ajax
-                        tileActivityClass: mb-activity-tile
                     coordinates:
                         class: Mapbender\CoreBundle\Element\CoordinatesDisplay
                         target: map
