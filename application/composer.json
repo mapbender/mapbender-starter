@@ -111,9 +111,6 @@
         "bin-dir": "bin",
         "component-dir": "web/components",
         "component-baseurl": "/components",
-        "platform": {
-            "php": "7.1.30"
-        },
         "archive-dir": "../dist",
         "archive-format": "tar.gz",
         "optimize-autoloader": true,
