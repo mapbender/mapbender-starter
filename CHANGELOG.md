@@ -1,3 +1,11 @@
+## dev-master @ c094676
+- [Demo applications] drop outdated feature info dialog sizing defaults
+- [Demo applications] fix invalid CoordinatesDisplay title
+- [Demo applications] fix Element titles / tooltips not respecting updated Mapbender defaults
+- [Demo applications] prune misc outdated / no longer existant configuration values
+- Fix app/console script dependency on current working directory
+- Drop php platform override hack
+
 ## v3.2.2
 - Update mapbender/mapbender to [v3.2.2](https://github.com/mapbender/mapbender/releases/tag/v3.2.2)
 - Misc installation instruction fixes
