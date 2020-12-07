@@ -4,7 +4,7 @@ Mapbender is a web based geoportal framework.
 
 [Official site](https://mapbender.org/?q=en) | [Live demo](https://demo.mapbender.org/) | [News on Twitter](https://twitter.com/mapbender)
 
-The [official site](http://mapbender.org/?q=en) contains [documentation](http://mapbender.org/?q=en/documentation) and [installation information](https://doc.mapbender.org/en/installation.html) ([also available in German](https://doc.mapbender.org/de/installation.html)).
+For detailed usage information, including installation and integration topics, please see [official documentation](https://mapbender.org/?q=en/documentation) ([also available in German](https://doc.mapbender.org/de/installation.html)).
 
 ## Requirements
 
