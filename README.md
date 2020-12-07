@@ -28,7 +28,7 @@ database.
 
 E.g.
 
-### Ubuntu 20.04 / 18.04 / 16.04
+### Ubuntu / Debian
 
 ```sh
 sudo apt-get install php php-cli openssl bzip2 \
@@ -36,18 +36,6 @@ sudo apt-get install php php-cli openssl bzip2 \
     php-zip php-bz2 php-xml php-json \
     php-sqlite3 php-pgsql php-mysql php-ldap \
     sqlite3 curl
-```
-
-
-### Ubuntu 14.04 (outdated)
-Ubuntu 14.04 uses `php5-` prefixes on packages, has no separate `zip` extension package, and
-names the sqlite3 package `php5-sqlite` (no 3).
-```sh
-sudo apt-get install php5 php5-cli openssl bzip2 \
-    php5-curl php5-gd php5-intl php5-mbstring \
-    php5-xml php5-json \
-    php5-sqlite php5-pgsql php5-mysql php5-ldap \
-    sqlite curl
 ```
 
 ## System configuration
