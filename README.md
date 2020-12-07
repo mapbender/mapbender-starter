@@ -97,7 +97,7 @@ app/console fom:user:resetroot
 
 ## Issues
 
-Please report issues at the [Mapbender repository here at Github](https://github.com/mapbender/mapbender/issues).
+Please report issues [on Github](https://github.com/mapbender/mapbender/issues).
 
 
 ## Other downloads
