@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "70142cd0c3d4ed7eb242105b197b865a",
+    "content-hash": "0584dbb3011ae1d629213b2d6a912bbf",
     "packages": [
         {
             "name": "blueimp/jquery-file-upload",
@@ -1078,6 +1078,7 @@
                 "cache",
                 "caching"
             ],
+            "abandoned": true,
             "time": "2019-11-29T11:22:01+00:00"
         },
         {
@@ -1778,6 +1779,7 @@
                 "reflection",
                 "static"
             ],
+            "abandoned": "roave/better-reflection",
             "time": "2020-03-27T11:06:43+00:00"
         },
         {
@@ -2189,16 +2191,16 @@
         },
         {
             "name": "mapbender/data-manager",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/data-manager.git",
-                "reference": "888637ae0c8dad4b0b8e0deab7a8038bf0ff7b52"
+                "reference": "c3464a265f6a4528792fe1a91d51e4ade2aa38db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/data-manager/zipball/888637ae0c8dad4b0b8e0deab7a8038bf0ff7b52",
-                "reference": "888637ae0c8dad4b0b8e0deab7a8038bf0ff7b52",
+                "url": "https://api.github.com/repos/mapbender/data-manager/zipball/c3464a265f6a4528792fe1a91d51e4ade2aa38db",
+                "reference": "c3464a265f6a4528792fe1a91d51e4ade2aa38db",
                 "shasum": ""
             },
             "require": {
@@ -2232,7 +2234,7 @@
                 "data",
                 "mapbender"
             ],
-            "time": "2020-10-30T09:10:51+00:00"
+            "time": "2020-12-02T12:27:49+00:00"
         },
         {
             "name": "mapbender/data-source",
@@ -2678,16 +2680,16 @@
         },
         {
             "name": "mapbender/vis-ui.js",
-            "version": "0.2.83",
+            "version": "0.2.84",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/vis-ui.js.git",
-                "reference": "330c6461fef595d3d754f37a9b9a76a75ac530a3"
+                "reference": "88a0e7be7bde3185c7cabb042220eda5814fb265"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/vis-ui.js/zipball/330c6461fef595d3d754f37a9b9a76a75ac530a3",
-                "reference": "330c6461fef595d3d754f37a9b9a76a75ac530a3",
+                "url": "https://api.github.com/repos/mapbender/vis-ui.js/zipball/88a0e7be7bde3185c7cabb042220eda5814fb265",
+                "reference": "88a0e7be7bde3185c7cabb042220eda5814fb265",
                 "shasum": ""
             },
             "require": {
@@ -2739,7 +2741,7 @@
                 "jquery",
                 "vis-ui"
             ],
-            "time": "2020-03-10T08:24:16+00:00"
+            "time": "2020-12-04T09:18:04+00:00"
         },
         {
             "name": "medialize/jquery-context-menu",
