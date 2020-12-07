@@ -6830,8 +6830,5 @@
     "platform": {
         "php": ">=7.1.0"
     },
-    "platform-dev": [],
-    "platform-overrides": {
-        "php": "7.1.30"
-    }
+    "platform-dev": []
 }
