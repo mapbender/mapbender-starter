@@ -2,6 +2,8 @@
 
 Mapbender is a web based geoportal framework.
 
+[Official site](https://mapbender.org/?q=en) | [Live demo](https://demo.mapbender.org/) | [News on Twitter](https://twitter.com/mapbender)
+
 The [official site](http://mapbender.org/?q=en) contains [documentation](http://mapbender.org/?q=en/documentation) and [installation information](https://doc.mapbender.org/en/installation.html) ([also available in German](https://doc.mapbender.org/de/installation.html)).
 
 ## Requirements
@@ -115,12 +117,3 @@ Please report issues at the [Mapbender repository here at Github](https://github
 
 Pre-built Tarballs and Zip files (where all subbodules and Symfony bundles are integrated) are available at our [Download page](http://mapbender.org/download).
 
-
-## Mapbender demo & sandbox
-
-Wanna see Mapbender live? A demo installation is available at http://demo.mapbender.org/.
-
-
-## Follow us on Twitter
-
-You can follow Mapbender at [Twitter](https://twitter.com/mapbender).
