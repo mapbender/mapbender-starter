@@ -102,5 +102,5 @@ Please report issues at the [Mapbender repository here at Github](https://github
 
 ## Other downloads
 
-Pre-built Tarballs and Zip files (where all subbodules and Symfony bundles are integrated) are available at our [Download page](http://mapbender.org/download).
+Pre-packaged archives bundling all code dependencies are available at our [download page](https://mapbender.org/en/download).
 
