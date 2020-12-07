@@ -2,13 +2,13 @@
 
 Mapbender is a web based geoportal framework.
 
-The [official site](http://mapbender.org/?q=en) contains [documentation](http://mapbender.org/?q=en/documentation) and [installation information](https://doc.mapbender.org/en/installation.html) ([also available in German](https://doc.mapbender.org/de/installation.html)).
+[Official site](https://mapbender.org/?q=en) | [Live demo](https://demo.mapbender.org/) | [News on Twitter](https://twitter.com/mapbender)
 
-To install Mapbender from this Git-repository, please read the guide of the [Git-based installation](http://doc.mapbender.org/en/book/installation/installation_git.html) ([in German](http://doc.mapbender.org/de/book/installation/installation_git.html)).
+For detailed usage information, including installation and integration topics, please see [official documentation](https://doc.mapbender.org/en/) ([also available in German](https://doc.mapbender.org/de/)).
 
 ## Requirements
 
-At a minimum, Mapbender requires OpenSSL, curl, a PHP 5.4 interpreter, bzip2 decompression and the following php extensions to be installed and enabled:
+Mapbender requires PHP 5.5, OpenSSL, curl, bzip2 decompression and the following php extensions:
 * zip
 * curl
 * gd
@@ -28,7 +28,7 @@ database.
 
 E.g.
 
-### Ubuntu 20.04 / 18.04 / 16.04
+### Ubuntu / Debian
 
 ```sh
 sudo apt-get install php php-cli openssl bzip2 \
@@ -38,22 +38,9 @@ sudo apt-get install php php-cli openssl bzip2 \
     sqlite3 curl
 ```
 
-
-### Ubuntu 14.04 (outdated)
-Ubuntu 14.04 uses `php5-` prefixes on packages, has no separate `zip` extension package, and
-names the sqlite3 package `php5-sqlite` (no 3).
-```sh
-sudo apt-get install php5 php5-cli openssl bzip2 \
-    php5-curl php5-gd php5-intl php5-mbstring \
-    php5-xml php5-json \
-    php5-sqlite php5-pgsql php5-mysql php5-ldap \
-    sqlite curl
-```
-
 ## System configuration
-Make sure your PHP interpreter has explicitly configured temp and uploads directories and that they are writable. In >= PHP5.5,
-there are separate php.ini settings for `sys_temp_dir` and `upload_tmp_dir`.
-PHP <= 5.4 uses the value of `upload_tmp_dir` for both.
+Some portions of Mapbender require correctly configured, writable PHP temporary directories
+`sys_temp_dir` and `upload_tmp_dir`.
 
 Your system most likely has separate php.ini files for cli and web server SAPIs such as mod_php, php-fpm, fcgi etc.
 Make sure to make changes in _all_ php.ini files relevant to your installation.
@@ -108,32 +95,12 @@ From the application directory run:
 app/console fom:user:resetroot
 ```
 
-## Components
-
-Our code is maintained using git and hosted at Github. We split up our code into several parts:
-
-1. mapbender-starter: The starter project you are using right now. This provides a complete application to play with and build upon.
-2. [mapbender](https://github.com/mapbender/mapbender/tree/release/3.0.6): The CoreBundle contains all basic functionality, including base classes and interfaces for the Mapbender API usable by Mapbender and third-party bundles.
-3. [FOM](https://github.com/mapbender/fom/tree/release/3.0.6): User and rights management.
-4. [OWSProxy3](https://github.com/mapbender/owsproxy3/tree/release/3.0.6): OWSProxy3 is a transparent Buzz-based proxy that uses cURL for connection to web resources via/without a proxy server.
-5. mapquery: Mapbender uses MapQuery as its jQuery/OpenLayers wrapper. We maintain our own clone.
-
-
 ## Issues
 
-Please report issues at the [Mapbender repository here at Github](https://github.com/mapbender/mapbender/issues).
+Please report issues [on Github](https://github.com/mapbender/mapbender/issues).
 
 
 ## Other downloads
 
-Pre-built Tarballs and Zip files (where all subbodules and Symfony bundles are integrated) are available at our [Download page](http://mapbender.org/download).
+Pre-packaged archives bundling all code dependencies are available at our [download page](https://mapbender.org/en/download).
 
-
-## Mapbender demo & sandbox
-
-Wanna see Mapbender live? A demo installation is available at http://demo.mapbender.org/.
-
-
-## Follow us on Twitter
-
-You can follow Mapbender at [Twitter](https://twitter.com/mapbender).
