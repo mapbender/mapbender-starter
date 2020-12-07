@@ -1,4 +1,6 @@
-## dev-master @ c094676
+## dev-master @ e5f66d1
+- Update mapbender/vis-ui.js to [0.2.84](https://github.com/mapbender/vis-ui.js/releases/tag/0.2.84) for Digitizer form feedback / image upload fixes
+- Update mapbender/data-manager to [1.1.2](https://github.com/mapbender/data-manager/releases/tag/1.1.2) for Digitizer image upload fixes
 - [Demo applications] drop outdated feature info dialog sizing defaults
 - [Demo applications] fix invalid CoordinatesDisplay title
 - [Demo applications] fix Element titles / tooltips not respecting updated Mapbender defaults
