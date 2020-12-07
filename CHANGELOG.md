@@ -1,4 +1,5 @@
-## dev-master @ b857a25
+## dev-master @ 4c40fb6
+- Update mapbender/digitizer to [1.4.1](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.4.1)
 - Update mapbender/vis-ui.js to [0.2.84](https://github.com/mapbender/vis-ui.js/releases/tag/0.2.84) for Digitizer form feedback / image upload fixes
 - Update mapbender/data-manager to [1.1.3](https://github.com/mapbender/data-manager/releases/tag/1.1.3) for Digitizer image upload / dialog resizing fixes
 - [Demo applications] drop outdated feature info dialog sizing defaults
