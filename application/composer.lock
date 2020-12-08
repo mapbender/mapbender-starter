@@ -2346,16 +2346,16 @@
         },
         {
             "name": "mapbender/fom",
-            "version": "v3.2.14",
+            "version": "v3.2.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/fom.git",
-                "reference": "2d343f6ef4a61e2dca6e86251e0d913c579d91ac"
+                "reference": "b28ecf47c41fb483a6f80fb0fefceaf3fdfae6d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/fom/zipball/2d343f6ef4a61e2dca6e86251e0d913c579d91ac",
-                "reference": "2d343f6ef4a61e2dca6e86251e0d913c579d91ac",
+                "url": "https://api.github.com/repos/mapbender/fom/zipball/b28ecf47c41fb483a6f80fb0fefceaf3fdfae6d7",
+                "reference": "b28ecf47c41fb483a6f80fb0fefceaf3fdfae6d7",
                 "shasum": ""
             },
             "require": {
@@ -2391,7 +2391,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2020-04-17T10:46:50+00:00"
+            "time": "2020-12-08T16:57:24+00:00"
         },
         {
             "name": "mapbender/mapbender",
