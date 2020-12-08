@@ -1,5 +1,5 @@
-## dev-master @ 4c40fb6
-- Update mapbender/digitizer to [1.4.1](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.4.1)
+## dev-master @ ad8f57f
+- Update mapbender/digitizer to [1.4.2](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.4.2)
 - Update mapbender/vis-ui.js to [0.2.84](https://github.com/mapbender/vis-ui.js/releases/tag/0.2.84) for Digitizer form feedback / image upload fixes
 - Update mapbender/data-manager to [1.1.3](https://github.com/mapbender/data-manager/releases/tag/1.1.3) for Digitizer image upload / dialog resizing fixes
 - [Demo applications] drop outdated feature info dialog sizing defaults
@@ -10,6 +10,7 @@
 - Drop php platform override hack
 - Drop deprecated loadClassCache calls in entry scripts (deprecated since Symfony 3.3+, no effect on PHP 7)
 - Drop example usage for deprecated ApcClassLoader
+- Clean up README.md
 
 ## v3.2.2
 - Update mapbender/mapbender to [v3.2.2](https://github.com/mapbender/mapbender/releases/tag/v3.2.2)
