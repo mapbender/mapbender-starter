@@ -2191,16 +2191,16 @@
         },
         {
             "name": "mapbender/data-manager",
-            "version": "1.1.3",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/data-manager.git",
-                "reference": "dffd1c7a5a7e21d522b14b883b5e5d086e84dd41"
+                "reference": "0bf2f23f15ce391ebfa2da8b9b0f30a15352e65a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/data-manager/zipball/dffd1c7a5a7e21d522b14b883b5e5d086e84dd41",
-                "reference": "dffd1c7a5a7e21d522b14b883b5e5d086e84dd41",
+                "url": "https://api.github.com/repos/mapbender/data-manager/zipball/0bf2f23f15ce391ebfa2da8b9b0f30a15352e65a",
+                "reference": "0bf2f23f15ce391ebfa2da8b9b0f30a15352e65a",
                 "shasum": ""
             },
             "require": {
@@ -2234,7 +2234,7 @@
                 "data",
                 "mapbender"
             ],
-            "time": "2020-12-07T10:01:51+00:00"
+            "time": "2020-12-09T15:17:10+00:00"
         },
         {
             "name": "mapbender/data-source",
@@ -2286,21 +2286,21 @@
         },
         {
             "name": "mapbender/digitizer",
-            "version": "1.4.3",
+            "version": "1.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "a1e871ce85353af7cda515d2dbad6f2bbdb774ab"
+                "reference": "a0641088aa205d3e7452eb6ff1fd77439137fba3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/a1e871ce85353af7cda515d2dbad6f2bbdb774ab",
-                "reference": "a1e871ce85353af7cda515d2dbad6f2bbdb774ab",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/a0641088aa205d3e7452eb6ff1fd77439137fba3",
+                "reference": "a0641088aa205d3e7452eb6ff1fd77439137fba3",
                 "shasum": ""
             },
             "require": {
                 "debugteam/bootstrap-colorpicker": "1.x",
-                "mapbender/data-manager": "^1.1",
+                "mapbender/data-manager": "^1.1.4",
                 "mapbender/data-source": "~0.0.35 || ~0.1",
                 "mapbender/ol4-extensions": "~0.0.4",
                 "php": ">=5.3.3"
@@ -2342,7 +2342,7 @@
                 "digitizing",
                 "mapbender"
             ],
-            "time": "2020-12-08T16:43:24+00:00"
+            "time": "2020-12-09T15:28:30+00:00"
         },
         {
             "name": "mapbender/fom",
