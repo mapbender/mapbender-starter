@@ -1,7 +1,7 @@
-## dev-master @ 4351040
-- Update mapbender/digitizer to [1.4.3](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.4.3)
+## dev-master @ c5385f1
+- Update mapbender/digitizer to [1.4.4](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.4.4)
 - Update mapbender/vis-ui.js to [0.2.84](https://github.com/mapbender/vis-ui.js/releases/tag/0.2.84) for Digitizer form feedback / image upload fixes
-- Update mapbender/data-manager to [1.1.3](https://github.com/mapbender/data-manager/releases/tag/1.1.3) for Digitizer image upload / dialog resizing fixes
+- Update mapbender/data-manager to [1.1.4](https://github.com/mapbender/data-manager/releases/tag/1.1.4) for Digitizer image upload / dialog resizing fixes
 - Update mapbender/fom to [v3.2.15](https://github.com/mapbender/fom/releases/tag/v3.2.15)
 - [Demo applications] drop outdated feature info dialog sizing defaults
 - [Demo applications] fix invalid CoordinatesDisplay title
