@@ -196,7 +196,7 @@ parameters:
                         target: map
                         anchor: 'left-bottom'
                         maxWidth: 200
-                        units: ['km']
+                        units: km
                     layertreedialog:
                         class: Mapbender\CoreBundle\Element\Layertree
                         target: map
