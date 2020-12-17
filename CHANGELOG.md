@@ -1,4 +1,4 @@
-## dev-master @ afbfbdf
+## v3.2.3
 - Update mapbender/mapbender to [v3.2.3](https://github.com/mapbender/mapbender/releases/tag/v3.2.3)
 - Update mapbender/digitizer to [1.4.4](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.4.4)
 - Update mapbender/vis-ui.js to [0.2.84](https://github.com/mapbender/vis-ui.js/releases/tag/0.2.84)
