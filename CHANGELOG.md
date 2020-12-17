@@ -1,9 +1,9 @@
-## dev-master @ c5385f1
+## dev-master @ afbfbdf
+- Update mapbender/mapbender to [v3.2.3](https://github.com/mapbender/mapbender/releases/tag/v3.2.3)
 - Update mapbender/digitizer to [1.4.4](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.4.4)
 - Update mapbender/vis-ui.js to [0.2.84](https://github.com/mapbender/vis-ui.js/releases/tag/0.2.84)
 - Update mapbender/data-manager to [1.1.4](https://github.com/mapbender/data-manager/releases/tag/1.1.4)
 - Update mapbender/data-source to [0.1.20](https://github.com/mapbender/data-source/releases/tag/0.1.20)
-- Update mapbender/fom to [v3.2.15](https://github.com/mapbender/fom/releases/tag/v3.2.15)
 - [Demo applications] drop outdated feature info dialog sizing defaults
 - [Demo applications] fix invalid CoordinatesDisplay title
 - [Demo applications] fix Element titles / tooltips not respecting updated Mapbender defaults
