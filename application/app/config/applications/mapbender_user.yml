@@ -220,8 +220,8 @@ parameters:
                         autoOpen: false
                         showBaseSource: true
                         menu: [opacity,zoomtolayer,metadata]
-                    redlining:
-                        class: Mapbender\CoreBundle\Element\Redlining
+                    sketch:
+                        class: Mapbender\CoreBundle\Element\Sketch
                         target: map
                         auto_activate: false
                     coordinatesutility:
