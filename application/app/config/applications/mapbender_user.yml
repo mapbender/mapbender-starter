@@ -152,7 +152,6 @@ parameters:
                         displayType: tabs
                         autoActivate: false
                         printResult: true
-                        showOriginal: true
                     wmsloader:
                         class: Mapbender\WmsBundle\Element\WmsLoader
                         target: map
