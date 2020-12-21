@@ -50,6 +50,9 @@
         "wheregroup/cookieconsent": "^3",
         "components/bootstrap": "^3"
     },
+    "conflict": {
+        "laminas/laminas-eventmanager": ">=3.3.0"
+    },
     "scripts": {
         "build-bootstrap": [
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap"
