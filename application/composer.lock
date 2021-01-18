@@ -2191,16 +2191,16 @@
         },
         {
             "name": "mapbender/data-manager",
-            "version": "1.1.4",
+            "version": "1.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/data-manager.git",
-                "reference": "0bf2f23f15ce391ebfa2da8b9b0f30a15352e65a"
+                "reference": "5c25df3a4743aeae309f8231aef3518f628d6cb3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/data-manager/zipball/0bf2f23f15ce391ebfa2da8b9b0f30a15352e65a",
-                "reference": "0bf2f23f15ce391ebfa2da8b9b0f30a15352e65a",
+                "url": "https://api.github.com/repos/mapbender/data-manager/zipball/5c25df3a4743aeae309f8231aef3518f628d6cb3",
+                "reference": "5c25df3a4743aeae309f8231aef3518f628d6cb3",
                 "shasum": ""
             },
             "require": {
@@ -2234,7 +2234,7 @@
                 "data",
                 "mapbender"
             ],
-            "time": "2020-12-09T15:17:10+00:00"
+            "time": "2021-01-18T13:42:04+00:00"
         },
         {
             "name": "mapbender/data-source",
@@ -3738,6 +3738,7 @@
                 }
             ],
             "description": "A security checker for your composer.lock",
+            "abandoned": "https://github.com/fabpot/local-php-security-checker",
             "time": "2018-12-19T17:14:59+00:00"
         },
         {
