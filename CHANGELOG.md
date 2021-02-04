@@ -1,5 +1,5 @@
-## dev/master @ b15203a
-- Update mapbender/data-manager to [1.1.5](https://github.com/mapbender/data-manager/releases/tag/1.1.5)
+## dev/master @ b36db23
+- Update mapbender/data-manager to [1.1.6](https://github.com/mapbender/data-manager/releases/tag/1.1.6)
 
 ## v3.2.3
 - Update mapbender/mapbender to [v3.2.3](https://github.com/mapbender/mapbender/releases/tag/v3.2.3)
