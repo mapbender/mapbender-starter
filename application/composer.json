@@ -54,15 +54,10 @@
         "laminas/laminas-eventmanager": ">=3.3.0"
     },
     "scripts": {
-        "build-bootstrap": [
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap"
-        ],
         "post-install-cmd": [
             "@composer dump-autoload",
             "ComposerBootstrap::clearCache",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "@update-assets",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile"
         ],
         "post-update-cmd": [
             "@post-install-cmd"
