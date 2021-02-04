@@ -57,7 +57,7 @@
         "post-install-cmd": [
             "@composer dump-autoload",
             "ComposerBootstrap::clearCache",
-            "@update-assets",
+            "@update-assets"
         ],
         "post-update-cmd": [
             "@post-install-cmd"
