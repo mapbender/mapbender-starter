@@ -1,3 +1,6 @@
+## dev/master @ b15203a
+- Update mapbender/data-manager to [1.1.5](https://github.com/mapbender/data-manager/releases/tag/1.1.5)
+
 ## v3.2.3
 - Update mapbender/mapbender to [v3.2.3](https://github.com/mapbender/mapbender/releases/tag/v3.2.3)
 - Update mapbender/digitizer to [1.4.4](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.4.4)
