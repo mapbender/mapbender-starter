@@ -2095,16 +2095,16 @@
         },
         {
             "name": "mapbender/digitizer",
-            "version": "1.4.4",
+            "version": "1.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "a0641088aa205d3e7452eb6ff1fd77439137fba3"
+                "reference": "91ebf93abc053d01a0d52ce11f677178a08d34ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/a0641088aa205d3e7452eb6ff1fd77439137fba3",
-                "reference": "a0641088aa205d3e7452eb6ff1fd77439137fba3",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/91ebf93abc053d01a0d52ce11f677178a08d34ab",
+                "reference": "91ebf93abc053d01a0d52ce11f677178a08d34ab",
                 "shasum": ""
             },
             "require": {
@@ -2151,7 +2151,7 @@
                 "digitizing",
                 "mapbender"
             ],
-            "time": "2020-12-09T15:28:30+00:00"
+            "time": "2021-03-02T12:20:27+00:00"
         },
         {
             "name": "mapbender/mapbender",
@@ -2333,16 +2333,16 @@
         },
         {
             "name": "mapbender/ol4-extensions",
-            "version": "0.0.4",
+            "version": "0.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/ol4-extensions.git",
-                "reference": "3a26fb728b4bdee0adec7a85e6b921742dda61c7"
+                "reference": "e4a020c95812fe2bc7d1343b474e02e6cb29e336"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/ol4-extensions/zipball/3a26fb728b4bdee0adec7a85e6b921742dda61c7",
-                "reference": "3a26fb728b4bdee0adec7a85e6b921742dda61c7",
+                "url": "https://api.github.com/repos/mapbender/ol4-extensions/zipball/e4a020c95812fe2bc7d1343b474e02e6cb29e336",
+                "reference": "e4a020c95812fe2bc7d1343b474e02e6cb29e336",
                 "shasum": ""
             },
             "require": {
@@ -2364,7 +2364,7 @@
                 "OpenLayers",
                 "mapbender"
             ],
-            "time": "2020-10-28T10:37:30+00:00"
+            "time": "2021-03-02T11:47:27+00:00"
         },
         {
             "name": "mapbender/openlayers6-es5",
