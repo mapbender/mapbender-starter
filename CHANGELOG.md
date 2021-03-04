@@ -1,5 +1,10 @@
-## dev/master @ b36db23
-- Update mapbender/data-manager to [1.1.6](https://github.com/mapbender/data-manager/releases/tag/1.1.6)
+## v3.2.4 (WIP)
+- Updated mapbender/mapbender to [v3.2.4](https://github.com/mapbender/mapbender/releases/tag/v3.2.4)
+- Updated mapbender/digitizer to [1.4.5](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.4.5)
+- Updated mapbender/data-manager to [1.1.6](https://github.com/mapbender/data-manager/releases/tag/1.1.6)
+- Updated symfony/symfony to [v3.4.47](https://symfony.com/blog/symfony-3-4-47-released)
+- Removed [abandoned sensio/distribution-bundle](https://packagist.org/packages/sensio/distribution-bundle) and dependencies
+- Removed doctrine/doctrine-migrations-bundle integration (no longer required by Mapbender v3.2.4)
 
 ## v3.2.3
 - Update mapbender/mapbender to [v3.2.3](https://github.com/mapbender/mapbender/releases/tag/v3.2.3)
