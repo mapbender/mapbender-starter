@@ -2290,16 +2290,16 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v3.2.3",
+            "version": "v3.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "5f9593bebdec5a358c7e3744e917377b75adbbd9"
+                "reference": "176729a935262832de40d87d0f12641497d66e84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/5f9593bebdec5a358c7e3744e917377b75adbbd9",
-                "reference": "5f9593bebdec5a358c7e3744e917377b75adbbd9",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/176729a935262832de40d87d0f12641497d66e84",
+                "reference": "176729a935262832de40d87d0f12641497d66e84",
                 "shasum": ""
             },
             "require": {
@@ -2309,7 +2309,6 @@
                 "datatables/datatables": "^1.10.16",
                 "debugteam/bootstrap-colorpicker": "^1",
                 "doctrine/doctrine-fixtures-bundle": "^2.3",
-                "doctrine/doctrine-migrations-bundle": "^1.3",
                 "doctrine/orm": "^2.2.3",
                 "ext-dom": "*",
                 "ext-gd": "*",
@@ -2371,7 +2370,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2020-12-17T11:16:18+00:00"
+            "time": "2021-03-04T09:58:19+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
