@@ -1,3 +1,7 @@
+## dev-master @ 33361cd
+- Updated mapbender/digitizer to [1.4.6](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.4.6)
+- Updated mapbender/data-manager to [1.1.7](https://github.com/mapbender/data-manager/releases/tag/1.1.7)
+
 ## v3.2.4
 - Updated mapbender/mapbender to [v3.2.4](https://github.com/mapbender/mapbender/releases/tag/v3.2.4)
 - Updated mapbender/digitizer to [1.4.5](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.4.5)
