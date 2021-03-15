@@ -2,7 +2,7 @@ parameters:
     applications:
         mapbender_user_ol2:
             title: Mapbender Demo Map OL2
-            screenshot: mapbender_user_ol2.png
+            screenshot: screenshot.png
             description: Fullscreen style, Simple map showing WMS use.
             mapEngineCode: ol2
             published: true

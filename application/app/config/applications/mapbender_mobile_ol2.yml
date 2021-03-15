@@ -2,7 +2,7 @@ parameters:
     applications:
         mapbender_mobile_ol2:
             title: Mapbender mobile OL2
-            screenshot: mapbender_mobile_ol2.png
+            screenshot: screenshot.png
             description: "Mapbender mobile Application"
             mapEngineCode: ol2
             published: true
