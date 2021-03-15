@@ -1,9 +1,9 @@
 parameters:
     applications:
         mapbender_mobile:
-            title: Mapbender mobile
+            title: Mobile demo
             screenshot: screenshot.png
-            description: "Mapbender mobile Application"
+            description: Simple application using mobile template
             published: true
             template:  'Mapbender\MobileBundle\Template\Mobile'
             layersets:

@@ -1,9 +1,9 @@
 parameters:
     applications:
         mapbender_user:
-            title: Mapbender Demo Map
+            title: Demo
             screenshot: screenshot.png
-            description: Fullscreen style, Simple map showing WMS use.
+            description: Full desktop application showing most of the standard Mapbender elements
             published: true
             template:  Mapbender\CoreBundle\Template\Fullscreen
             regionProperties:

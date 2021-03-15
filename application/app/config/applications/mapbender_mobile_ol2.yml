@@ -1,9 +1,9 @@
 parameters:
     applications:
         mapbender_mobile_ol2:
-            title: Mapbender mobile OL2
+            title: OL2 Mobile demo
             screenshot: screenshot.png
-            description: "Mapbender mobile Application"
+            description: Simple application using mobile template, Openlayers 2 version
             mapEngineCode: ol2
             published: true
             template:  'Mapbender\MobileBundle\Template\Mobile'

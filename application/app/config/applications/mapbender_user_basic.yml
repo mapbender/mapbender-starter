@@ -1,9 +1,9 @@
 parameters:
     applications:
         mapbender_user_basic:
-            title: Mapbender Demo Map basic
+            title: Basic demo
             screenshot: screenshot.png
-            description: Fullscreen style, simple buttons, simple map showing WMS use.
+            description: Simple desktop application
             published: true
             template:  Mapbender\CoreBundle\Template\Fullscreen
             custom_css: |

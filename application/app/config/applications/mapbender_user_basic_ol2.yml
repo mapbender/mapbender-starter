@@ -1,9 +1,9 @@
 parameters:
     applications:
         mapbender_user_basic_ol2:
-            title: Mapbender Demo Map basic OL2
+            title: OL2 Basic demo
             screenshot: screenshot.png
-            description: Fullscreen style, simple buttons, simple map showing WMS use.
+            description: Simple desktop application, Openlayers 2 version
             mapEngineCode: ol2
             published: true
             template:  Mapbender\CoreBundle\Template\Fullscreen
