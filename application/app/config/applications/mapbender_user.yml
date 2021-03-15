@@ -255,6 +255,9 @@ parameters:
                         tooltip: mb.core.scaleselector.class.description
                         label: false
                         target: map
+                    as:
+                        class: Mapbender\CoreBundle\Element\ApplicationSwitcher
+                        applications: [mapbender_user, mapbender_user_basic]
                     copyrightButton:
                         title: © OpenStreetMap contributors
                         tooltip: © OpenStreetMap contributors
