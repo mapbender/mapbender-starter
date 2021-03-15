@@ -92,7 +92,6 @@ parameters:
                         icon: icon-legend
                     wmsloader-button:
                         title: mb.wms.wmsloader.class.title
-                        tooltip: mb.wms.wmsloader.class.description
                         class: Mapbender\CoreBundle\Element\Button
                         label: false
                         target: wmsloader
