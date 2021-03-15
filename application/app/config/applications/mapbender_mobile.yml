@@ -103,7 +103,9 @@ parameters:
                         label: false
                         icon: iconAbout
                         target: html-about-mapbender
-
+                    shareUrl:
+                        class: Mapbender\CoreBundle\Element\ShareUrl
+                        label: false
                 content:
                     map:
                         class: Mapbender\CoreBundle\Element\Map

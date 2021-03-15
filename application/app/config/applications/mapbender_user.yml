@@ -121,6 +121,9 @@ parameters:
                         icon: iconPoi
                         label: false
                         target: poi
+                    shareUrl:
+                        class: Mapbender\CoreBundle\Element\ShareUrl
+                        label: false
                 content:
                     map:
                         class: Mapbender\CoreBundle\Element\Map
