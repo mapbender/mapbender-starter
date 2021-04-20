@@ -2095,16 +2095,16 @@
         },
         {
             "name": "mapbender/digitizer",
-            "version": "1.4.6",
+            "version": "1.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "3070934e88b97d0c889098d5359161265459a00a"
+                "reference": "953819cd1c365afedf3b699b89cf5f582f631683"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/3070934e88b97d0c889098d5359161265459a00a",
-                "reference": "3070934e88b97d0c889098d5359161265459a00a",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/953819cd1c365afedf3b699b89cf5f582f631683",
+                "reference": "953819cd1c365afedf3b699b89cf5f582f631683",
                 "shasum": ""
             },
             "require": {
@@ -2151,7 +2151,7 @@
                 "digitizing",
                 "mapbender"
             ],
-            "time": "2021-03-15T07:56:41+00:00"
+            "time": "2021-04-20T08:24:53+00:00"
         },
         {
             "name": "mapbender/mapbender",
