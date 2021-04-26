@@ -1,4 +1,5 @@
-## dev-release/3.0.8 @ 4c362e3
+## dev-release/3.0.8 @ e2740d5
+- Update mapbender/digitizer to [1.1.73](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.1.73)
 - Fix misc outdated links in documentation
 - Fix app/console dependency on current working directory
 - Prune misc outdated configuration values from demo applications
