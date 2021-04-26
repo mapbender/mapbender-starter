@@ -1,3 +1,11 @@
+## dev-release/3.0.8 @ 4c362e3
+- Fix misc outdated links in documentation
+- Fix app/console dependency on current working directory
+- Prune misc outdated configuration values from demo applications
+- Prune misc outdated technical documentation (Ubuntu 14 / PHP 5.4 etc)
+- Add firewall exclusion for Controller delivery of components (see [Mapbender PR#1352](https://github.com/mapbender/mapbender/pull/1352))
+- Drop redunant mapbender/fom root requirement (required by mapbender/mapbender since v3.0.5.4)
+
 ## v3.0.8.6
 - Update mapbender/mapbender to [v3.0.8.6](https://github.com/mapbender/mapbender/releases/tag/v3.0.8.6)
 - Update mapbender/fom to [v3.2.14](https://github.com/mapbender/fom/releases/tag/v3.2.14)
