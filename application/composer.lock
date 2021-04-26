@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "95149c26870edf0742e9531a591966bf",
+    "content-hash": "54fc71d4c09215e671c5574804f5cfb2",
     "packages": [
         {
             "name": "blueimp/jquery-file-upload",
@@ -1026,6 +1026,7 @@
                 "cache",
                 "caching"
             ],
+            "abandoned": true,
             "time": "2018-11-09T06:25:35+00:00"
         },
         {
@@ -1862,16 +1863,16 @@
         },
         {
             "name": "mapbender/digitizer",
-            "version": "1.1.72.1",
+            "version": "1.1.73",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "ef707a4355c2aac23d4d0757d0744f97b4bc618a"
+                "reference": "855ea2ce42dd190e031635eaa750e13f3627ffbe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/ef707a4355c2aac23d4d0757d0744f97b4bc618a",
-                "reference": "ef707a4355c2aac23d4d0757d0744f97b4bc618a",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/855ea2ce42dd190e031635eaa750e13f3627ffbe",
+                "reference": "855ea2ce42dd190e031635eaa750e13f3627ffbe",
                 "shasum": ""
             },
             "require": {
@@ -1916,7 +1917,7 @@
                 "digitizing",
                 "mapbender"
             ],
-            "time": "2019-12-20T09:41:48+00:00"
+            "time": "2020-12-09T14:24:20+00:00"
         },
         {
             "name": "mapbender/fom",
@@ -3014,6 +3015,7 @@
                 }
             ],
             "description": "A security checker for your composer.lock",
+            "abandoned": "https://github.com/fabpot/local-php-security-checker",
             "time": "2018-12-19T17:14:59+00:00"
         },
         {
@@ -4091,6 +4093,7 @@
                 "i18n",
                 "text"
             ],
+            "abandoned": true,
             "time": "2018-12-05T18:34:18+00:00"
         },
         {
