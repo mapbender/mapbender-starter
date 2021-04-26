@@ -1,6 +1,10 @@
-## dev-master @ 33361cd
-- Updated mapbender/digitizer to [1.4.6](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.4.6)
+## dev-master @ b6e0bfb
+- Updated mapbender/digitizer to [1.4.7](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.4.7)
 - Updated mapbender/data-manager to [1.1.7](https://github.com/mapbender/data-manager/releases/tag/1.1.7)
+- Add ShareUrl element to demo applications (see [Mapbender PR#1328](https://github.com/mapbender/mapbender/pull/1328))
+- Add ApplicationSwitcher element to demo applications (see [Mapbender PR#1307](https://github.com/mapbender/mapbender/pull/1307))
+- Update demo application titles and descriptions
+- Fix WmsLoader button tooltips in demo applications
 
 ## v3.2.4
 - Updated mapbender/mapbender to [v3.2.4](https://github.com/mapbender/mapbender/releases/tag/v3.2.4)
