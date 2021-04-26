@@ -46,6 +46,15 @@
 - Ship with Symfony 3.4 LTS by default
 - Drop mapbender/digitizer root requirement (currently incompatible)
 
+## dev-release/3.0.8 @ e2740d5
+- Update mapbender/digitizer to [1.1.73](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.1.73)
+- Fix misc outdated links in documentation
+- Fix app/console dependency on current working directory
+- Prune misc outdated configuration values from demo applications
+- Prune misc outdated technical documentation (Ubuntu 14 / PHP 5.4 etc)
+- Add firewall exclusion for Controller delivery of components (see [Mapbender PR#1352](https://github.com/mapbender/mapbender/pull/1352))
+- Drop redunant mapbender/fom root requirement (required by mapbender/mapbender since v3.0.5.4)
+
 ## v3.0.8.6
 - Update mapbender/mapbender to [v3.0.8.6](https://github.com/mapbender/mapbender/releases/tag/v3.0.8.6)
 - Update mapbender/fom to [v3.2.14](https://github.com/mapbender/fom/releases/tag/v3.2.14)
