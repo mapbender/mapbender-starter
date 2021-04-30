@@ -1,4 +1,4 @@
-## dev-master @ 7e3fa16
+## dev-master @ 116a378
 - Updated mapbender/digitizer to [1.4.7](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.4.7)
 - Updated mapbender/data-manager to [1.1.7](https://github.com/mapbender/data-manager/releases/tag/1.1.7)
 - Add ShareUrl element to demo applications (see [Mapbender PR#1328](https://github.com/mapbender/mapbender/pull/1328))
@@ -6,6 +6,8 @@
 - Update demo application titles and descriptions
 - Fix WmsLoader button tooltips in demo applications
 - Add firewall exclusion for Controller delivery of components (see [Mapbender PR#1352](https://github.com/mapbender/mapbender/pull/1352))
+- Disabled ResetView element (funcionality integrated into ZoomBar "zoom_home" component)
+- Disabled DataManager element (installed as Digitizer dependency; not usually relevant on its own)
 
 ## v3.2.4
 - Updated mapbender/mapbender to [v3.2.4](https://github.com/mapbender/mapbender/releases/tag/v3.2.4)
