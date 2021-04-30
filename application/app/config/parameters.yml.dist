@@ -45,6 +45,12 @@ parameters:
     ows_proxy3_password: ~
     ows_proxy3_noproxy: ~
 
+    mapbender.disabled_elements:
+        - Mapbender\CoreBundle\Element\ResetView
+        # Installed as a collateral Digitizer 1.4 dependency
+        - Mapbender\DataManagerBundle\Element\DataManager
+
+
     # default layer order when creating *new* WMS layerset instances
     # allowed values are either
     # * "standard": Traditional Mapbender behaviour: top-down rendering in GetCapabilities order;
