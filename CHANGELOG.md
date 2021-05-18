@@ -1,6 +1,6 @@
-## dev-master @ 116a378
+## dev-master @ 32da345
 - Updated mapbender/digitizer to [1.4.7](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.4.7)
-- Updated mapbender/data-manager to [1.1.7](https://github.com/mapbender/data-manager/releases/tag/1.1.7)
+- Updated mapbender/data-manager to [1.1.9](https://github.com/mapbender/data-manager/releases/tag/1.1.9)
 - Add ShareUrl element to demo applications (see [Mapbender PR#1328](https://github.com/mapbender/mapbender/pull/1328))
 - Add ApplicationSwitcher element to demo applications (see [Mapbender PR#1307](https://github.com/mapbender/mapbender/pull/1307))
 - Update demo application titles and descriptions
