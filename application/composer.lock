@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e1f8a51b161257fcbbd89f13393d6f7b",
+    "content-hash": "fc438ffe1642634f138b125c50c1a861",
     "packages": [
         {
             "name": "blueimp/jquery-file-upload",
@@ -363,38 +363,6 @@
             "description": "DataTables is a plug-in for the jQuery Javascript library. It is a highly flexible tool, based upon the foundations of progressive enhancement, which will add advanced interaction controls to any HTML table.",
             "homepage": "http://www.datatables.net/",
             "time": "2019-10-01T13:42:32+00:00"
-        },
-        {
-            "name": "debugteam/bootstrap-colorpicker",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/debugteam/bootstrap-colorpicker.git",
-                "reference": "fa95df5744a802284fc1e24c81938c02141b9345"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/debugteam/bootstrap-colorpicker/zipball/fa95df5744a802284fc1e24c81938c02141b9345",
-                "reference": "fa95df5744a802284fc1e24c81938c02141b9345",
-                "shasum": ""
-            },
-            "require": {
-                "components/bootstrap": ">=2",
-                "components/jquery": ">=1.10",
-                "robloach/component-installer": "*"
-            },
-            "type": "component",
-            "extra": {
-                "component": {
-                    "files": [
-                        "img/bootstrap-colorpicker/*.png",
-                        "css/bootstrap-colorpicker.min.css",
-                        "js/bootstrap-colorpicker.min.js"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "time": "2016-08-26T08:15:26+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -2095,27 +2063,26 @@
         },
         {
             "name": "mapbender/digitizer",
-            "version": "1.4.7",
+            "version": "1.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "953819cd1c365afedf3b699b89cf5f582f631683"
+                "reference": "114e1d0f6872d4f938233b0d99146eeaa8a36d6f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/953819cd1c365afedf3b699b89cf5f582f631683",
-                "reference": "953819cd1c365afedf3b699b89cf5f582f631683",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/114e1d0f6872d4f938233b0d99146eeaa8a36d6f",
+                "reference": "114e1d0f6872d4f938233b0d99146eeaa8a36d6f",
                 "shasum": ""
             },
             "require": {
                 "debugteam/bootstrap-colorpicker": "1.x",
                 "mapbender/data-manager": "^1.1.4",
                 "mapbender/data-source": "~0.0.35 || ~0.1",
-                "mapbender/ol4-extensions": "~0.0.4",
                 "php": ">=5.3.3"
             },
             "conflict": {
-                "mapbender/mapbender": "<3.2.1",
+                "mapbender/mapbender": "<3.2.5@RC",
                 "mapbender/openlayers6-es5": "<0.3.5"
             },
             "type": "library",
@@ -2151,20 +2118,20 @@
                 "digitizing",
                 "mapbender"
             ],
-            "time": "2021-04-20T08:24:53+00:00"
+            "time": "2021-05-18T09:43:52+00:00"
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v3.2.4",
+            "version": "v3.2.5-RC1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "176729a935262832de40d87d0f12641497d66e84"
+                "reference": "8fbbf882373122c99f6de85f2bff451b5bba25ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/176729a935262832de40d87d0f12641497d66e84",
-                "reference": "176729a935262832de40d87d0f12641497d66e84",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/8fbbf882373122c99f6de85f2bff451b5bba25ce",
+                "reference": "8fbbf882373122c99f6de85f2bff451b5bba25ce",
                 "shasum": ""
             },
             "require": {
@@ -2177,7 +2144,7 @@
                 "doctrine/orm": "^2.2.3",
                 "ext-dom": "*",
                 "ext-gd": "*",
-                "mapbender/mapbender-icons": "1.x",
+                "mapbender/mapbender-icons": "^1.3",
                 "mapbender/mapquery": "1.x",
                 "mapbender/openlayers6-es5": "^0.3.1 || ^1",
                 "mapbender/owsproxy": "^3.0.6.2",
@@ -2200,7 +2167,7 @@
                 "mapbender/coordinates-utility": "<1.0.9",
                 "mapbender/data-manager": "<1.1",
                 "mapbender/data-source": "<0.1.11",
-                "mapbender/digitizer": "<1.1.68",
+                "mapbender/digitizer": "<1.4.8",
                 "mapbender/vis-ui.js": "<0.1.80",
                 "mapbender/wmts": "*",
                 "wheregroup/jquerydialogextendjs": "<2.1"
@@ -2209,6 +2176,7 @@
                 "mapbender/fom": "3.3"
             },
             "replace": {
+                "debugteam/bootstrap-colorpicker": "1.*",
                 "mapbender/fom": "*"
             },
             "type": "library",
@@ -2235,7 +2203,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2021-03-04T09:58:19+00:00"
+            "time": "2021-05-18T10:46:24+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -2330,41 +2298,6 @@
                 "mapquery"
             ],
             "time": "2020-02-20T14:20:22+00:00"
-        },
-        {
-            "name": "mapbender/ol4-extensions",
-            "version": "0.0.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mapbender/ol4-extensions.git",
-                "reference": "e4a020c95812fe2bc7d1343b474e02e6cb29e336"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/ol4-extensions/zipball/e4a020c95812fe2bc7d1343b474e02e6cb29e336",
-                "reference": "e4a020c95812fe2bc7d1343b474e02e6cb29e336",
-                "shasum": ""
-            },
-            "require": {
-                "mapbender/mapbender": "^3.1"
-            },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Felix Rauch",
-                    "email": "felix.rauch@wheregroup.com"
-                }
-            ],
-            "description": "Create Extension for Openlayers 4",
-            "keywords": [
-                "OpenLayers",
-                "mapbender"
-            ],
-            "time": "2021-03-02T11:47:27+00:00"
         },
         {
             "name": "mapbender/openlayers6-es5",
