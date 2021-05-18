@@ -2000,16 +2000,16 @@
         },
         {
             "name": "mapbender/data-manager",
-            "version": "1.1.7",
+            "version": "1.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/data-manager.git",
-                "reference": "18893ed524f634686c7ecd71664dda127c1c7fe7"
+                "reference": "d25fc55ffb655ff5bd3590c0e45cd24d3bc23ffa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/data-manager/zipball/18893ed524f634686c7ecd71664dda127c1c7fe7",
-                "reference": "18893ed524f634686c7ecd71664dda127c1c7fe7",
+                "url": "https://api.github.com/repos/mapbender/data-manager/zipball/d25fc55ffb655ff5bd3590c0e45cd24d3bc23ffa",
+                "reference": "d25fc55ffb655ff5bd3590c0e45cd24d3bc23ffa",
                 "shasum": ""
             },
             "require": {
@@ -2043,7 +2043,7 @@
                 "data",
                 "mapbender"
             ],
-            "time": "2021-03-12T11:04:43+00:00"
+            "time": "2021-05-18T07:33:30+00:00"
         },
         {
             "name": "mapbender/data-source",
