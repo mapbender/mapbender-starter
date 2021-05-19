@@ -2067,12 +2067,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "114e1d0f6872d4f938233b0d99146eeaa8a36d6f"
+                "reference": "b3023bb5f175bb0dba3129c3df08d701b4ab3df7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/114e1d0f6872d4f938233b0d99146eeaa8a36d6f",
-                "reference": "114e1d0f6872d4f938233b0d99146eeaa8a36d6f",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/b3023bb5f175bb0dba3129c3df08d701b4ab3df7",
+                "reference": "b3023bb5f175bb0dba3129c3df08d701b4ab3df7",
                 "shasum": ""
             },
             "require": {
