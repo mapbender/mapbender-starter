@@ -2126,12 +2126,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "8fbbf882373122c99f6de85f2bff451b5bba25ce"
+                "reference": "281eb6f78a66fe6575c7a89676bef1945b600d33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/8fbbf882373122c99f6de85f2bff451b5bba25ce",
-                "reference": "8fbbf882373122c99f6de85f2bff451b5bba25ce",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/281eb6f78a66fe6575c7a89676bef1945b600d33",
+                "reference": "281eb6f78a66fe6575c7a89676bef1945b600d33",
                 "shasum": ""
             },
             "require": {
@@ -2146,7 +2146,7 @@
                 "ext-gd": "*",
                 "mapbender/mapbender-icons": "^1.3",
                 "mapbender/mapquery": "1.x",
-                "mapbender/openlayers6-es5": "^0.3.1 || ^1",
+                "mapbender/openlayers6-es5": "~0.3 || ^1",
                 "mapbender/owsproxy": "^3.0.6.2",
                 "php": ">=5.4.30",
                 "sensio/generator-bundle": "^2 || ^3",
