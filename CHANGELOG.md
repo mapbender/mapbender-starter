@@ -1,3 +1,8 @@
+## v3.2.5-RC1
+- Updated mapbender/mapbender to [v3.2.5-RC1](https://github.com/mapbender/mapbender/releases/tag/v3.2.5-RC1)
+- Updated mapbender/digitizer to [1.4.8](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.4.8)
+- Updated to [Openlayers v6.4.3](https://github.com/openlayers/openlayers/releases/tag/v6.4.3) (via [mapbender/openlayers6-es5 0.4.3](https://github.com/mapbender/openlayers6-es5/releases/tag/0.4.3))
+
 ## dev-master @ d0c1507
 - Updated mapbender/digitizer to [1.4.7](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.4.7)
 - Updated mapbender/data-manager to [1.1.9](https://github.com/mapbender/data-manager/releases/tag/1.1.9)
