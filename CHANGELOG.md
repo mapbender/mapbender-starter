@@ -1,3 +1,6 @@
+## v3.2.5-RC2
+- Updated mapbender/mapbender to [v3.2.5-RC2](https://github.com/mapbender/mapbender/releases/tag/v3.2.5-RC2)
+
 ## v3.2.5-RC1
 - Updated mapbender/mapbender to [v3.2.5-RC1](https://github.com/mapbender/mapbender/releases/tag/v3.2.5-RC1)
 - Updated mapbender/digitizer to [1.4.8](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.4.8)
