@@ -208,11 +208,8 @@ parameters:
                         class: Mapbender\CoreBundle\Element\Overview
                         target: map
                         layerset: overview
-                        width: 200
-                        height: 100
                         anchor: 'right-bottom'
-                        maximized: true
-                        fixed: false
+                        screenType: desktop
                     coordinatesutility:
                         class: Mapbender\CoordinatesUtilityBundle\Element\CoordinatesUtility
                         target: map
