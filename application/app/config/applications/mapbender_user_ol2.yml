@@ -252,13 +252,9 @@ parameters:
                         separator:  " y: "
                     srs:
                         class: Mapbender\CoreBundle\Element\SrsSelector
-                        tooltip: mb.core.srsselector.class.description
-                        label: false
                         target: map
                     scaleselector:
                         class: Mapbender\CoreBundle\Element\ScaleSelector
-                        tooltip: mb.core.scaleselector.class.description
-                        label: false
                         target: map
                     as:
                         class: Mapbender\CoreBundle\Element\ApplicationSwitcher
