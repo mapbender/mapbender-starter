@@ -6196,7 +6196,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "mapbender/mapbender": 5
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
