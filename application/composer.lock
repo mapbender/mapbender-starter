@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fc438ffe1642634f138b125c50c1a861",
+    "content-hash": "5cc34b0de920a85f971758288d0dbd4a",
     "packages": [
         {
             "name": "blueimp/jquery-file-upload",
@@ -2122,16 +2122,16 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v3.2.5-RC2",
+            "version": "v3.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "e4a8f79884b989a5e3cf198a07e2fbed0389b12f"
+                "reference": "fc2032a618304a4445250114cabac27a5fed3d95"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/e4a8f79884b989a5e3cf198a07e2fbed0389b12f",
-                "reference": "e4a8f79884b989a5e3cf198a07e2fbed0389b12f",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/fc2032a618304a4445250114cabac27a5fed3d95",
+                "reference": "fc2032a618304a4445250114cabac27a5fed3d95",
                 "shasum": ""
             },
             "require": {
@@ -2160,7 +2160,6 @@
                 "wheregroup/codemirror": "5.x",
                 "wheregroup/compass-mixins": "0.x",
                 "wheregroup/doctrine-dbal-shims": "^1",
-                "wheregroup/open-sans": "1.x",
                 "wheregroup/sassc-binaries": "^0.0.1"
             },
             "conflict": {
@@ -2203,7 +2202,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2021-05-21T09:44:20+00:00"
+            "time": "2021-06-08T10:08:32+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -4817,55 +4816,6 @@
             "description": "Maximize and Minimize Buttons for UI Dialog",
             "homepage": "https://github.com/wheregroup/jquery-dialogextend",
             "time": "2020-07-11T19:31:59+00:00"
-        },
-        {
-            "name": "wheregroup/open-sans",
-            "version": "1.4.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/WhereGroup/open-sans.git",
-                "reference": "3ddb115c2a969303d7a049a1be66ca41b0d56c98"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/WhereGroup/open-sans/zipball/3ddb115c2a969303d7a049a1be66ca41b0d56c98",
-                "reference": "3ddb115c2a969303d7a049a1be66ca41b0d56c98",
-                "shasum": ""
-            },
-            "require": {
-                "robloach/component-installer": "0.x"
-            },
-            "type": "component",
-            "extra": {
-                "component": {
-                    "styles": [
-                        "*.css"
-                    ],
-                    "files": [
-                        "fonts/*/*"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Gustavo Henke",
-                    "email": "gustavo@injoin.com.br"
-                },
-                {
-                    "name": "Martin Domke",
-                    "email": "martin.domke@gateprotect.com"
-                }
-            ],
-            "description": "Open Sans @font-face kit",
-            "homepage": "https://github.com/FontFaceKit/open-sans",
-            "keywords": [
-                "font"
-            ],
-            "time": "2017-04-20T09:20:46+00:00"
         },
         {
             "name": "wheregroup/platform-detect",
