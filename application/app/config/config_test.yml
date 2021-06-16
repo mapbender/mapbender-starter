@@ -16,10 +16,10 @@ swiftmailer:
 doctrine:
     dbal:
         driver:   pdo_sqlite
-        path:     %kernel.cache_dir%/%kernel.environment%.sqlite
+        path:     '%kernel.cache_dir%/%kernel.environment%.sqlite'
         memory:   true
         charset:  UTF8
 
     orm:
-        auto_generate_proxy_classes: %kernel.debug%
+        auto_generate_proxy_classes: '%kernel.debug%'
         auto_mapping: true

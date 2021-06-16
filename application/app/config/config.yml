@@ -6,25 +6,25 @@ imports:
 
 framework:
     #esi:             ~
-    translator:      { fallback: %fallback_locale% }
-    secret:          %secret%
+    translator:      { fallback: '%fallback_locale%' }
+    secret:          '%secret%'
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
-        strict_requirements: %kernel.debug%
+        strict_requirements: '%kernel.debug%'
     form:            true
     csrf_protection: true
     validation:      { enable_annotations: true }
     templating:      { engines: ['twig'] } #assets_version: SomeVersionScheme
-    default_locale:  %locale%
+    default_locale:  '%locale%'
     session:
         cookie_httponly: true
-        cookie_secure: %cookie_secure%
-        cookie_lifetime: %cookie_lifetime%
+        cookie_secure: '%cookie_secure%'
+        cookie_lifetime: '%cookie_lifetime%'
 
 
 # Twig Configuration
 twig:
-    strict_variables: %kernel.debug%
+    strict_variables: '%kernel.debug%'
     form_themes:
        - MapbenderCoreBundle:form:fields.html.twig
 
@@ -34,27 +34,27 @@ doctrine:
         default_connection: default
         connections:
             default:
-                driver:   %database_driver%
-                host:     %database_host%
-                port:     %database_port%
-                dbname:   %database_name%
-                path:     %database_path%
-                user:     %database_user%
-                password: %database_password%
+                driver:   '%database_driver%'
+                host:     '%database_host%'
+                port:     '%database_port%'
+                dbname:   '%database_name%'
+                path:     '%database_path%'
+                user:     '%database_user%'
+                password: '%database_password%'
                 persistent: true
                 charset:  UTF8
-                logging: %kernel.debug%
-                profiling: %kernel.debug%
+                logging: '%kernel.debug%'
+                profiling: '%kernel.debug%'
     orm:
-        auto_generate_proxy_classes: %kernel.debug%
+        auto_generate_proxy_classes: '%kernel.debug%'
         auto_mapping: true
 
 # Swiftmailer Configuration
 swiftmailer:
-    transport: %mailer_transport%
-    host:      %mailer_host%
-    username:  %mailer_user%
-    password:  %mailer_password%
+    transport: '%mailer_transport%'
+    host:      '%mailer_host%'
+    username:  '%mailer_user%'
+    password:  '%mailer_password%'
     spool:     { type: memory }
 
 # FOM Manager Configuration
@@ -69,15 +69,15 @@ fom_user:
 
 # see https://github.com/mapbender/owsproxy3/blob/master/CONFIGURATION.md#extension-configuration
 ows_proxy3_core:
-    logging: %ows_proxy3_logging%
-    obfuscate_client_ip: %ows_proxy3_obfuscate_client_ip%
+    logging: '%ows_proxy3_logging%'
+    obfuscate_client_ip: '%ows_proxy3_obfuscate_client_ip%'
     proxy:
-        host: %ows_proxy3_host%
-        port: %ows_proxy3_port%
-        connecttimeout: %ows_proxy3_connecttimeout%
-        timeout: %ows_proxy3_timeout%
-        user: %ows_proxy3_user%
-        password: %ows_proxy3_password%
+        host: '%ows_proxy3_host%'
+        port: '%ows_proxy3_port%'
+        connecttimeout: '%ows_proxy3_connecttimeout%'
+        timeout: '%ows_proxy3_timeout%'
+        user: '%ows_proxy3_user%'
+        password: '%ows_proxy3_password%'
         checkssl: true
-        noproxy: %ows_proxy3_noproxy%
+        noproxy: '%ows_proxy3_noproxy%'
 
