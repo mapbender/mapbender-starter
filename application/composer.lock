@@ -4992,20 +4992,6 @@
             "time": "2014-11-20T16:49:30+00:00"
         },
         {
-            "name": "phantomjs/phantomjs",
-            "version": "1.8.2",
-            "dist": {
-                "type": "tar",
-                "url": "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/phantomjs/phantomjs-1.8.2-linux-x86_64.tar.bz2",
-                "reference": null,
-                "shasum": null
-            },
-            "bin": [
-                "bin/phantomjs"
-            ],
-            "type": "component"
-        },
-        {
             "name": "phpdocumentor/reflection-common",
             "version": "1.0.1",
             "source": {
