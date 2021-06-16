@@ -1,6 +1,7 @@
-## dev-master @ 69298fa
+## dev-master @ 889c436
 - Fix unquoted % references in config (deprecated in Symfony 3.1, error in Symfony 4+)
-- Drop legacy phantomjs root required
+- Drop legacy phantomjs root requirement
+- Drop legacy phpunit-selenium root requirement
 
 ## v3.2.5
 - Updated mapbender/mapbender to [v3.2.5](https://github.com/mapbender/mapbender/releases/tag/v3.2.5)
