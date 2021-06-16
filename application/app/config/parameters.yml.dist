@@ -1,12 +1,12 @@
 parameters:
 ### todo: switch to using dsn urls, see https://www.doctrine-project.org/projects/doctrine-dbal/en/2.9/reference/configuration.html#connecting-using-a-url
 ###       To avoid suprises, a DSN can be constructed here from parts, at least for the shipping default parameters
-###       Connection definition in config.yml should only use url: %database_dsn% though
+###       Connection definition in config.yml should only use url: '%database_dsn%' though
     database_driver:   pdo_sqlite
     database_host:     ~
     database_port:     ~
     database_name:     ~
-    database_path:     %kernel.root_dir%/db/demo.sqlite
+    database_path:     '%kernel.root_dir%/db/demo.sqlite'
     database_user:     ~
     database_password: ~
 
