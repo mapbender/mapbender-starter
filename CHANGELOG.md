@@ -1,9 +1,10 @@
-## dev-master @ df8bdfa
+## dev-master @ 960b18b
 - Update symfony/symfony to [v3.4.49](https://symfony.com/blog/symfony-3-4-49-released)
 - Update symfony/security-acl to [v3.1.1](https://github.com/symfony/security-acl/releases/tag/v3.1.1)
 - Fix unquoted % references in config (deprecated in Symfony 3.1, error in Symfony 4+)
 - Drop legacy phantomjs root requirement
 - Drop legacy phpunit-selenium root requirement
+- Add support for non-fixture application import
 
 ## v3.2.5
 - Updated mapbender/mapbender to [v3.2.5](https://github.com/mapbender/mapbender/releases/tag/v3.2.5)
