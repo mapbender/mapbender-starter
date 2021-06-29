@@ -1,4 +1,6 @@
-## dev-master @ 889c436
+## dev-master @ df8bdfa
+- Update symfony/symfony to [v3.4.49](https://symfony.com/blog/symfony-3-4-49-released)
+- Update symfony/security-acl to [v3.1.1](https://github.com/symfony/security-acl/releases/tag/v3.1.1)
 - Fix unquoted % references in config (deprecated in Symfony 3.1, error in Symfony 4+)
 - Drop legacy phantomjs root requirement
 - Drop legacy phpunit-selenium root requirement
