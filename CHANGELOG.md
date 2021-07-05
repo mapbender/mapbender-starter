@@ -1,4 +1,5 @@
-## dev-master @ 960b18b
+## v3.2.6-RC1
+- Update mapbender/mapbender to [v3.2.6-RC1](https://github.com/mapbender/mapbender/releases/tag/v3.2.6-RC1)
 - Update symfony/symfony to [v3.4.49](https://symfony.com/blog/symfony-3-4-49-released)
 - Update symfony/security-acl to [v3.1.1](https://github.com/symfony/security-acl/releases/tag/v3.1.1)
 - Fix unquoted % references in config (deprecated in Symfony 3.1, error in Symfony 4+)
