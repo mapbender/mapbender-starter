@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8500f341fb6eb528796d73b1757ea1cc",
+    "content-hash": "8493587d3b60a8128974d6092ee5c848",
     "packages": [
         {
             "name": "blueimp/jquery-file-upload",
@@ -2122,16 +2122,16 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v3.2.5",
+            "version": "v3.2.6-RC1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "fc2032a618304a4445250114cabac27a5fed3d95"
+                "reference": "f3c0df9fb1e8b255db1e47a67f9ecdd84e941dba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/fc2032a618304a4445250114cabac27a5fed3d95",
-                "reference": "fc2032a618304a4445250114cabac27a5fed3d95",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/f3c0df9fb1e8b255db1e47a67f9ecdd84e941dba",
+                "reference": "f3c0df9fb1e8b255db1e47a67f9ecdd84e941dba",
                 "shasum": ""
             },
             "require": {
@@ -2154,7 +2154,7 @@
                 "setasign/fpdi": "^2",
                 "symfony/security-acl": "~2.8 || ~3.0",
                 "symfony/swiftmailer-bundle": "^2.3 || ^3",
-                "symfony/symfony": "^2.4|^3",
+                "symfony/symfony": "^3 || ^4",
                 "twig/extensions": "1.x",
                 "wheregroup/assetic-filter-sassc": "^0.0.1",
                 "wheregroup/codemirror": "5.x",
@@ -2202,7 +2202,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2021-06-08T10:08:32+00:00"
+            "time": "2021-07-05T07:46:39+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
