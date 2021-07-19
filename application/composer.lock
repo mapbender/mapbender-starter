@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8500f341fb6eb528796d73b1757ea1cc",
+    "content-hash": "7d887b5bf65d1bd5481e08fd876563af",
     "packages": [
         {
             "name": "blueimp/jquery-file-upload",
@@ -2070,16 +2070,16 @@
         },
         {
             "name": "mapbender/digitizer",
-            "version": "1.4.9",
+            "version": "1.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "027dfc1a7af124f5cc0bc8602a56d47f1c40d829"
+                "reference": "de679c7b7f1da359417ca63cf758a35caafc6f38"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/027dfc1a7af124f5cc0bc8602a56d47f1c40d829",
-                "reference": "027dfc1a7af124f5cc0bc8602a56d47f1c40d829",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/de679c7b7f1da359417ca63cf758a35caafc6f38",
+                "reference": "de679c7b7f1da359417ca63cf758a35caafc6f38",
                 "shasum": ""
             },
             "require": {
@@ -2125,7 +2125,7 @@
                 "digitizing",
                 "mapbender"
             ],
-            "time": "2021-07-19T08:14:04+00:00"
+            "time": "2021-07-19T09:44:50+00:00"
         },
         {
             "name": "mapbender/mapbender",
@@ -2382,60 +2382,6 @@
                 "owsproxy"
             ],
             "time": "2021-05-18T10:25:13+00:00"
-        },
-        {
-            "name": "medialize/jquery-context-menu",
-            "version": "1.6.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/eSlider/jQuery-contextMenu.git",
-                "reference": "c4d7776406848532a2c224c8fcf1b48262f03943"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/eSlider/jQuery-contextMenu/zipball/c4d7776406848532a2c224c8fcf1b48262f03943",
-                "reference": "c4d7776406848532a2c224c8fcf1b48262f03943",
-                "shasum": ""
-            },
-            "require": {
-                "robloach/component-installer": "*"
-            },
-            "type": "component",
-            "extra": {
-                "component": {
-                    "scripts": [
-                        "src/jquery.ui.position.js",
-                        "src/jquery.contextMenu.js"
-                    ],
-                    "styles": [
-                        "src/jquery.contextMenu.css"
-                    ],
-                    "files": [
-                        "src/images/*.png"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Rodney Rehm",
-                    "email": "rodney.rehm@medialize.de"
-                }
-            ],
-            "description": "Full featured context menu handler capable of handling thousands of elements",
-            "homepage": "http://medialize.github.com/jQuery-contextMenu/",
-            "keywords": [
-                "context-menu",
-                "contextmenu",
-                "menu",
-                "navigation",
-                "right-click",
-                "right-click-menu"
-            ],
-            "time": "2015-07-21T12:35:09+00:00"
         },
         {
             "name": "mnsami/composer-custom-directory-installer",
