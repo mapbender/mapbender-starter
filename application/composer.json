@@ -42,6 +42,7 @@
 
         "mapbender/coordinates-utility": "^1.1",
         "mapbender/digitizer": "^1.4",
+        "select2/select2": "^4.0",
         "components/font-awesome": "^4.0",
         "wheregroup/cookieconsent": "^3",
         "components/bootstrap": "^3"
