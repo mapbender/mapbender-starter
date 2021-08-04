@@ -1,4 +1,4 @@
-## dev-master @ d9aa117
+## v3.2.6
 - Update mapbender/mapbender to [v3.2.6](https://github.com/mapbender/mapbender/releases/tag/v3.2.6)
 - Update mapbender/digitizer to [1.4.10](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.4.10) (also see [1.4.9 changes](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.4.9))
 - Update mapbender/data-manager to [1.2.1](https://github.com/mapbender/data-manager/releases/tag/1.2.1)
