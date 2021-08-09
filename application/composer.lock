@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "de447b134b20205bac1c7f4321ad3d93",
+    "content-hash": "319122387332734f7310954a5c06f026",
     "packages": [
         {
             "name": "blueimp/jquery-file-upload",
@@ -1968,21 +1968,21 @@
         },
         {
             "name": "mapbender/data-manager",
-            "version": "1.2.1",
+            "version": "1.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/data-manager.git",
-                "reference": "fdb01b8f5d7359f0baa2af11830e18629d8fc9c7"
+                "reference": "f7dfa4f1b636007a58ed919eae2939ac26788f5d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/data-manager/zipball/fdb01b8f5d7359f0baa2af11830e18629d8fc9c7",
-                "reference": "fdb01b8f5d7359f0baa2af11830e18629d8fc9c7",
+                "url": "https://api.github.com/repos/mapbender/data-manager/zipball/f7dfa4f1b636007a58ed919eae2939ac26788f5d",
+                "reference": "f7dfa4f1b636007a58ed919eae2939ac26788f5d",
                 "shasum": ""
             },
             "require": {
                 "blueimp/jquery-file-upload": "9.*",
-                "mapbender/data-source": "~0.1.17",
+                "mapbender/data-source": "~0.1.24 || ^0.2",
                 "php": ">=5.3.3"
             },
             "conflict": {
@@ -1994,7 +1994,7 @@
                 "branch-alias": {
                     "dev-release/1.0": "1.0.x-dev",
                     "dev-release/1.1": "1.1.x-dev",
-                    "master": "1.2.x-dev"
+                    "dev-master": "1.2.x-dev"
                 }
             },
             "autoload": {
@@ -2018,20 +2018,20 @@
                 "data",
                 "mapbender"
             ],
-            "time": "2021-08-03T08:02:40+00:00"
+            "time": "2021-08-09T13:52:41+00:00"
         },
         {
             "name": "mapbender/data-source",
-            "version": "0.1.23",
+            "version": "0.1.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/data-source.git",
-                "reference": "e633dc6f8c8917448392d982ef3b9e0412e9d85e"
+                "reference": "2d0ea9a3f69c6919996acfd9c9b0ce22eebcc83e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/data-source/zipball/e633dc6f8c8917448392d982ef3b9e0412e9d85e",
-                "reference": "e633dc6f8c8917448392d982ef3b9e0412e9d85e",
+                "url": "https://api.github.com/repos/mapbender/data-source/zipball/2d0ea9a3f69c6919996acfd9c9b0ce22eebcc83e",
+                "reference": "2d0ea9a3f69c6919996acfd9c9b0ce22eebcc83e",
                 "shasum": ""
             },
             "require": {
@@ -2066,37 +2066,37 @@
                 "data source",
                 "mapbender"
             ],
-            "time": "2021-08-05T09:19:31+00:00"
+            "time": "2021-08-09T14:14:47+00:00"
         },
         {
             "name": "mapbender/digitizer",
-            "version": "1.4.10",
+            "version": "1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "de679c7b7f1da359417ca63cf758a35caafc6f38"
+                "reference": "052e40f8beb582dc1f0ec068e6858aad561d42c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/de679c7b7f1da359417ca63cf758a35caafc6f38",
-                "reference": "de679c7b7f1da359417ca63cf758a35caafc6f38",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/052e40f8beb582dc1f0ec068e6858aad561d42c0",
+                "reference": "052e40f8beb582dc1f0ec068e6858aad561d42c0",
                 "shasum": ""
             },
             "require": {
-                "debugteam/bootstrap-colorpicker": "1.x",
-                "mapbender/data-manager": "^1.1.4",
-                "mapbender/data-source": "~0.1.17 || ~0.2",
+                "mapbender/data-manager": "^1.2.2 || ^2",
+                "mapbender/data-source": "~0.1.24 || ^0.2",
+                "mapbender/mapbender": "^3.2.6",
                 "php": ">=5.3.3"
             },
             "conflict": {
-                "mapbender/mapbender": "<3.2.5@RC",
                 "mapbender/openlayers6-es5": "<0.3.5"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
+                    "dev-release/1.0": "1.0.x-dev",
                     "dev-release/1.4": "1.4.x-dev",
-                    "dev-release/1.0": "1.0.x-dev"
+                    "dev-master": "1.5.x-dev"
                 }
             },
             "autoload": {
@@ -2125,7 +2125,7 @@
                 "digitizing",
                 "mapbender"
             ],
-            "time": "2021-07-19T09:44:50+00:00"
+            "time": "2021-08-09T14:12:21+00:00"
         },
         {
             "name": "mapbender/mapbender",
