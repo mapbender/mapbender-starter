@@ -1,13 +1,8 @@
-## dev-master @ 55dee15
+## v3.2.6
+- Update mapbender/mapbender to [v3.2.6](https://github.com/mapbender/mapbender/releases/tag/v3.2.6)
 - Update mapbender/digitizer to [1.5.1](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.5.1))
 - Update mapbender/data-manager to [1.2.3](https://github.com/mapbender/data-manager/releases/tag/1.2.3)
 - Update mapbender/data-source to [0.1.25](https://github.com/mapbender/data-source/releases/tag/0.1.25)
-
-## v3.2.6
-- Update mapbender/mapbender to [v3.2.6](https://github.com/mapbender/mapbender/releases/tag/v3.2.6)
-- Update mapbender/digitizer to [1.4.10](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.4.10) (also see [1.4.9 changes](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.4.9))
-- Update mapbender/data-manager to [1.2.1](https://github.com/mapbender/data-manager/releases/tag/1.2.1)
-- Update mapbender/data-source to [0.1.23](https://github.com/mapbender/data-source/releases/tag/0.1.23)
 - Update symfony/symfony to [v3.4.49](https://symfony.com/blog/symfony-3-4-49-released)
 - Update symfony/security-acl to [v3.1.1](https://github.com/symfony/security-acl/releases/tag/v3.1.1)
 - Fix unquoted % references in config (deprecated in Symfony 3.1, error in Symfony 4+)
