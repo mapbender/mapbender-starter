@@ -1,5 +1,5 @@
 ## dev-master @ 55dee15
-- Update mapbender/digitizer to [1.5.1](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.4.10) (also see [1.4.9 changes](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.5.1))
+- Update mapbender/digitizer to [1.5.1](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.5.1))
 - Update mapbender/data-manager to [1.2.3](https://github.com/mapbender/data-manager/releases/tag/1.2.3)
 - Update mapbender/data-source to [0.1.25](https://github.com/mapbender/data-source/releases/tag/0.1.25)
 
