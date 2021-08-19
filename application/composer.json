@@ -109,7 +109,8 @@
         "optimize-autoloader": true,
         "process-timeout": 600,
         "preferred-install": {
-            "mapbender/*": "source"
+            "mapbender/*": "source",
+            "wheregroup/*": "source"
         }
     },
     "minimum-stability": "dev",
