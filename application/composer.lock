@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "319122387332734f7310954a5c06f026",
+    "content-hash": "38b2de3c9edad3aa6b6ae10cc0168ae4",
     "packages": [
         {
             "name": "blueimp/jquery-file-upload",
@@ -1920,27 +1920,27 @@
         },
         {
             "name": "mapbender/coordinates-utility",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/coordinates-utility.git",
-                "reference": "a1393f70dbabe05480ba1775fd9abd154e3e89b9"
+                "reference": "af2c56fddae0707076f5d74e1921d8cf102f9ed4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/coordinates-utility/zipball/a1393f70dbabe05480ba1775fd9abd154e3e89b9",
-                "reference": "a1393f70dbabe05480ba1775fd9abd154e3e89b9",
+                "url": "https://api.github.com/repos/mapbender/coordinates-utility/zipball/af2c56fddae0707076f5d74e1921d8cf102f9ed4",
+                "reference": "af2c56fddae0707076f5d74e1921d8cf102f9ed4",
                 "shasum": ""
             },
             "require": {
-                "mapbender/mapbender": "^3.1",
+                "mapbender/mapbender": "^3.2.6",
                 "php": ">=5.5.4"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev",
-                    "dev-ol4": "1.1-dev"
+                    "dev-master": "1.2.x-dev",
+                    "dev-release/1.1": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -1964,7 +1964,7 @@
                 "navigate",
                 "search"
             ],
-            "time": "2020-03-18T10:44:55+00:00"
+            "time": "2021-08-09T10:33:20+00:00"
         },
         {
             "name": "mapbender/data-manager",
