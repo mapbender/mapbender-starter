@@ -23,7 +23,7 @@
         "phing/phing": "For executing legacy Phing build tasks (unmaintained)"
     },
     "require": {
-        "php": ">=7.1.0",
+        "php": ">=7.2.0",
         "symfony/symfony": "~3.4.0",
         "twig/twig": "^1.41",
         "twig/extensions": "1.x",
@@ -35,7 +35,7 @@
         "mnsami/composer-custom-directory-installer": "1.0.*",
 
         "proj4js/proj4js": "^2.4",
-        "mapbender/mapbender": "^3.2.4",
+        "mapbender/mapbender": "dev-staging/3.3 as 3.3.99",
         "mapbender/owsproxy": "^3.0.6",
 
         "mapbender/coordinates-utility": "^1.1",
@@ -111,7 +111,7 @@
             "mapbender/*": "source"
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
