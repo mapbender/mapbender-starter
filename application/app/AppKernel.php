@@ -40,7 +40,6 @@ class AppKernel extends Mapbender\BaseKernel
 
             // OWSProxy3 bundles
             new OwsProxy3\CoreBundle\OwsProxy3CoreBundle(),
-            new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
         );
 
         // Symfony 3 only. Only required by starter.
