@@ -26,7 +26,7 @@
         "php": ">=7.2.0",
         "symfony/symfony": "~4.4.0",
         "symfony/acl-bundle": "^2.2",
-        "doctrine/doctrine-bundle": "^1.12 || ^2",
+        "doctrine/doctrine-bundle": "^1.12",
         "twig/twig": "^1.41",
         "twig/extensions": "1.x",
         "symfony/monolog-bundle": "^3",
