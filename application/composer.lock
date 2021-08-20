@@ -2259,12 +2259,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "112cb0193f906850ba434fc59ffd0573c57703ed"
+                "reference": "cdcb76a62487d71317a2f4d6f22fed16a59481c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/112cb0193f906850ba434fc59ffd0573c57703ed",
-                "reference": "112cb0193f906850ba434fc59ffd0573c57703ed",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/cdcb76a62487d71317a2f4d6f22fed16a59481c6",
+                "reference": "cdcb76a62487d71317a2f4d6f22fed16a59481c6",
                 "shasum": ""
             },
             "require": {
@@ -2274,7 +2274,7 @@
                 "components/underscore": "1.x",
                 "datatables/datatables": "^1.10.16",
                 "debugteam/bootstrap-colorpicker": "^1",
-                "doctrine/doctrine-bundle": "^1.12 || ^2",
+                "doctrine/doctrine-bundle": "^1.12",
                 "doctrine/orm": "^2.2.3",
                 "ext-dom": "*",
                 "ext-gd": "*",
