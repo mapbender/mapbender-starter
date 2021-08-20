@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a82b86ebec4792688172d63b149a6b14",
+    "content-hash": "3ae6615867b6c39e16ae85e6df49d599",
     "packages": [
         {
             "name": "assetic/framework",
@@ -2262,12 +2262,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "a95582db7be9b7727ebb7571cc00be6f3deb66f0"
+                "reference": "112cb0193f906850ba434fc59ffd0573c57703ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/a95582db7be9b7727ebb7571cc00be6f3deb66f0",
-                "reference": "a95582db7be9b7727ebb7571cc00be6f3deb66f0",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/112cb0193f906850ba434fc59ffd0573c57703ed",
+                "reference": "112cb0193f906850ba434fc59ffd0573c57703ed",
                 "shasum": ""
             },
             "require": {
@@ -2277,6 +2277,7 @@
                 "components/underscore": "1.x",
                 "datatables/datatables": "^1.10.16",
                 "debugteam/bootstrap-colorpicker": "^1",
+                "doctrine/doctrine-bundle": "^1.12 || ^2",
                 "doctrine/orm": "^2.2.3",
                 "ext-dom": "*",
                 "ext-gd": "*",
@@ -2287,11 +2288,12 @@
                 "php": ">=5.5",
                 "setasign/fpdf": "^1.8",
                 "setasign/fpdi": "^2",
+                "symfony/acl-bundle": "^1 || ^2",
                 "symfony/security-acl": "~2.8 || ~3.0",
                 "symfony/swiftmailer-bundle": "^2.3 || ^3",
                 "symfony/symfony": "^3 || ^4",
                 "twig/extensions": "1.x",
-                "wheregroup/assetic-filter-sassc": "^0.0.1",
+                "wheregroup/assetic-filter-sassc": "^0.0",
                 "wheregroup/codemirror": "5.x",
                 "wheregroup/compass-mixins": "0.x",
                 "wheregroup/doctrine-dbal-shims": "^1",
@@ -4583,20 +4585,21 @@
         },
         {
             "name": "wheregroup/assetic-filter-sassc",
-            "version": "0.0.1",
+            "version": "0.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WhereGroup/assetic-filter-sassc.git",
-                "reference": "6526a4763743c32bbcdd708351f6bcf3fbed41c6"
+                "reference": "b24b3ff4170cc1801d48ade8981e1bfe7284fecd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WhereGroup/assetic-filter-sassc/zipball/6526a4763743c32bbcdd708351f6bcf3fbed41c6",
-                "reference": "6526a4763743c32bbcdd708351f6bcf3fbed41c6",
+                "url": "https://api.github.com/repos/WhereGroup/assetic-filter-sassc/zipball/b24b3ff4170cc1801d48ade8981e1bfe7284fecd",
+                "reference": "b24b3ff4170cc1801d48ade8981e1bfe7284fecd",
                 "shasum": ""
             },
             "require": {
-                "kriswallsmith/assetic": "^1.2"
+                "kriswallsmith/assetic": "^1.2 || ^2",
+                "symfony/process": "^2.8 || ^3 || ^4 || ^5"
             },
             "suggest": {
                 "wheregroup/sassc-binaries": "Precompiled sassc binaries for various platforms"
@@ -4612,7 +4615,7 @@
                 "MIT"
             ],
             "description": "Assetic filter wrapper for sassc",
-            "time": "2019-11-14T11:11:29+00:00"
+            "time": "2021-08-19T21:39:17+00:00"
         },
         {
             "name": "wheregroup/codemirror",
