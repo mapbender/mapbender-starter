@@ -1,5 +1,8 @@
-## dev-master @ 2ad658a
+## dev-master @ c865011
 - Update mapbender/coordinates-utility to [1.2.0](https://github.com/mapbender/coordinates-utility/releases/tag/1.2.0)
+- Replace deprecated security: acl integration with separate symfony/acl-bundle installation
+- Remove outdated root requirements symfony/swiftmailer-bundle, sensio/generator-bundle (packages required by Mapbender in appropriate versions)
+- Remove PHP5.x polyfills
 
 ## v3.2.6
 - Update mapbender/mapbender to [v3.2.6](https://github.com/mapbender/mapbender/releases/tag/v3.2.6)
