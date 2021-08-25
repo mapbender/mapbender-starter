@@ -1,3 +1,13 @@
+## dev-staging/3.3 @ 3de9827
+- Minimum PHP requirement incresed to >= 7.2
+- Update symfony/symony to v4.4.29 (major version update)
+- Update symfony/acl-bundle to v2.2.0 (major version update)
+- Update sensio/framework-extra-bundle to v6.1.5 (major version update)
+- Update phpunit/phpunit to 5.7.27 (major version update)
+- Update twig/twig to v1.44.4
+- Update misc doctrine components
+- Replace abandoned robloach/component-installer for Composer 2 compatibility (see [PR#98](https://github.com/mapbender/mapbender-starter/pull/98))
+
 ## dev-master @ c865011
 - Update mapbender/coordinates-utility to [1.2.0](https://github.com/mapbender/coordinates-utility/releases/tag/1.2.0)
 - Replace deprecated security: acl integration with separate symfony/acl-bundle installation
