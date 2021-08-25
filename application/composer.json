@@ -46,6 +46,9 @@
         "wheregroup/cookieconsent": "^3",
         "components/bootstrap": "^3"
     },
+    "replace": {
+        "robloach/component-installer": "^0.2"
+    },
     "conflict": {
         "laminas/laminas-eventmanager": ">=3.3.0"
     },
@@ -60,7 +63,7 @@
         ],
         "update-assets":[
             "ComposerBootstrap::installAssets",
-            "ComponentInstaller\\Installer::postAutoloadDump"
+            "ComponentMirror::postAutoloadDump"
         ],
         "bootstrap-database": [
             "ComposerBootstrap::bootstrapDatabase"
