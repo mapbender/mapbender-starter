@@ -1,7 +1,7 @@
 # Per default, the application list is the start page. You may change that to fit your project's needs.
 mapbender_start:
     path: "/"
-    defaults: { _controller: MapbenderCoreBundle:Welcome:list}
+    defaults: { _controller: Mapbender\CoreBundle\Controller\WelcomeController::listAction}
 
 mapbender_corebundle:
     resource: "@MapbenderCoreBundle/Controller/"
