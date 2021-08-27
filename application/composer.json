@@ -31,7 +31,7 @@
 
         "components/jquery": "^1.11.2",
 
-        "mnsami/composer-custom-directory-installer": "1.0.*",
+        "mnsami/composer-custom-directory-installer": "^1 || ^2",
 
         "proj4js/proj4js": "^2.4",
         "mapbender/mapbender": "dev-staging/3.3 as 3.3.99",

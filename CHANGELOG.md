@@ -8,8 +8,8 @@
 - Update misc doctrine components
 - Replace abandoned robloach/component-installer for Composer 2 compatibility (see [PR#98](https://github.com/mapbender/mapbender-starter/pull/98))
 
-## dev-master @ 163b6b7
-- Update mapbender/coordinates-utility to [1.2.0](https://github.com/mapbender/coordinates-utility/releases/tag/1.2.0)
+## dev-master @ 82e5d2a
+- Update mapbender/coordinates-utility to [1.2.1](https://github.com/mapbender/coordinates-utility/releases/tag/1.2.1)
 - Update doctrine packages
 - Replace deprecated security: acl integration with separate symfony/acl-bundle installation
 - Remove outdated root requirements symfony/swiftmailer-bundle, sensio/generator-bundle (packages required by Mapbender in appropriate versions)
@@ -17,6 +17,7 @@
 - Update bundled Composer version to [1.10.22](https://github.com/composer/composer/blob/1.10.22/CHANGELOG.md#11022-2021-04-27)
 - Prefer source installation for wheregroup/* packages
 - Add required Symfony 3.4 logout_on_user_change parameter to resolve deprecation / Symfony 4 error
+- Update mnsami/composer-custom-directory-installer to [2.0.0](https://github.com/mnsami/composer-custom-directory-installer/releases/tag/2.0.0)
 
 ## v3.2.6
 - Update mapbender/mapbender to [v3.2.6](https://github.com/mapbender/mapbender/releases/tag/v3.2.6)
