@@ -1,9 +1,10 @@
-## dev-staging/3.3 @ 3de9827
-- Minimum PHP requirement incresed to >= 7.2
+## dev-staging/3.3 @ 5c12726
+- Minimum PHP requirement increased to >= 7.2
 - Update symfony/symony to v4.4.29 (major version update)
 - Update symfony/acl-bundle to v2.2.0 (major version update)
 - Update sensio/framework-extra-bundle to v6.1.5 (major version update)
 - Update phpunit/phpunit to 5.7.27 (major version update)
+- Update bundled Composer version to [2.1.6](https://github.com/composer/composer/blob/2.1.6/CHANGELOG.md#216-2021-08-19)
 - Update twig/twig to v1.44.4
 - Update misc doctrine components
 - Replace abandoned robloach/component-installer for Composer 2 compatibility (see [PR#98](https://github.com/mapbender/mapbender-starter/pull/98))
