@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "63d1b126e9fc836ece5d7d6df3ca904f",
+    "content-hash": "546a07fa4e245ff7af7fa87dfb91ce08",
     "packages": [
         {
             "name": "blueimp/jquery-file-upload",
@@ -2037,16 +2037,16 @@
         },
         {
             "name": "mapbender/coordinates-utility",
-            "version": "1.2.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/coordinates-utility.git",
-                "reference": "af2c56fddae0707076f5d74e1921d8cf102f9ed4"
+                "reference": "91a5c95c2f6a0b147053d99295006b8e149415f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/coordinates-utility/zipball/af2c56fddae0707076f5d74e1921d8cf102f9ed4",
-                "reference": "af2c56fddae0707076f5d74e1921d8cf102f9ed4",
+                "url": "https://api.github.com/repos/mapbender/coordinates-utility/zipball/91a5c95c2f6a0b147053d99295006b8e149415f0",
+                "reference": "91a5c95c2f6a0b147053d99295006b8e149415f0",
                 "shasum": ""
             },
             "require": {
@@ -2063,7 +2063,10 @@
             "autoload": {
                 "psr-4": {
                     "Mapbender\\CoordinatesUtilityBundle\\": "."
-                }
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2081,7 +2084,7 @@
                 "navigate",
                 "search"
             ],
-            "time": "2021-08-09T10:33:20+00:00"
+            "time": "2021-08-27T10:39:11+00:00"
         },
         {
             "name": "mapbender/data-manager",
