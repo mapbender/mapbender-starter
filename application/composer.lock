@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3dc140393a0d2e3980b537a8e2739488",
+    "content-hash": "63d1b126e9fc836ece5d7d6df3ca904f",
     "packages": [
         {
             "name": "blueimp/jquery-file-upload",
@@ -2502,30 +2502,31 @@
         },
         {
             "name": "mnsami/composer-custom-directory-installer",
-            "version": "1.0.4",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mnsami/composer-custom-directory-installer.git",
-                "reference": "a6fce960f28052a8bd1f72c6db4f6da286d84995"
+                "reference": "85f66323978d0b1cb0e6acc7f69b3e7b912f82d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mnsami/composer-custom-directory-installer/zipball/a6fce960f28052a8bd1f72c6db4f6da286d84995",
-                "reference": "a6fce960f28052a8bd1f72c6db4f6da286d84995",
+                "url": "https://api.github.com/repos/mnsami/composer-custom-directory-installer/zipball/85f66323978d0b1cb0e6acc7f69b3e7b912f82d9",
+                "reference": "85f66323978d0b1cb0e6acc7f69b3e7b912f82d9",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.0",
+                "composer-plugin-api": "^1.0 || ^2.0",
                 "php": ">=5.3"
             },
             "type": "composer-plugin",
             "extra": {
                 "class": [
                     "Composer\\CustomDirectoryInstaller\\LibraryPlugin",
-                    "Composer\\CustomDirectoryInstaller\\PearPlugin"
+                    "Composer\\CustomDirectoryInstaller\\PearPlugin",
+                    "Composer\\CustomDirectoryInstaller\\PluginPlugin"
                 ],
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -2549,7 +2550,7 @@
                 "composer-installer",
                 "composer-plugin"
             ],
-            "time": "2015-06-12T13:57:50+00:00"
+            "time": "2020-08-18T11:00:11+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -5945,5 +5946,6 @@
     "platform": {
         "php": ">=7.1.0"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }
