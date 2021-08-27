@@ -96,7 +96,15 @@ class ComponentMirror
         $matchedFiles = array();
         foreach ($patterns as $pattern) {
             // Expand glob
-            $matchedFiles += \iterator_to_array(new \GlobIterator($sourcePath . '/' . $pattern, FilesystemIterator::SKIP_DOTS));
+            $matchedByPattern = \iterator_to_array(new \GlobIterator($sourcePath . '/' . $pattern, FilesystemIterator::SKIP_DOTS));
+            $matchedFiles += $matchedByPattern;
+            foreach ($matchedByPattern as $matchInfo) {
+                /** @var \SplFileInfo $matchInfo */
+                if ($matchInfo->isDir()) {
+                    $subDirIterator = new \RecursiveDirectoryIterator($matchInfo->getRealPath(), FilesystemIterator::SKIP_DOTS);
+                    $matchedFiles += \iterator_to_array(new \RecursiveIteratorIterator($subDirIterator));
+                }
+            }
         }
         // Rewrap as (rewindable) iterator
         return new \ArrayIterator(new \ArrayObject($matchedFiles));
