@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "53e5a69ad135f27fe3f959b2c8b7d67e",
+    "content-hash": "4fabf2ee0cc27152cf82353ffc31069f",
     "packages": [
         {
             "name": "assetic/framework",
@@ -2639,9 +2639,7 @@
             "version": "2.4.3",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/proj4js/proj4js/archive/2.4.3.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/proj4js/proj4js/archive/2.4.3.zip"
             },
             "type": "component",
             "extra": {
@@ -5893,10 +5891,10 @@
     ],
     "aliases": [
         {
-            "alias": "3.3.99",
-            "alias_normalized": "3.3.99.0",
+            "package": "mapbender/mapbender",
             "version": "dev-staging/3.3",
-            "package": "mapbender/mapbender"
+            "alias": "3.3.99",
+            "alias_normalized": "3.3.99.0"
         }
     ],
     "minimum-stability": "dev",
@@ -5908,5 +5906,6 @@
     "platform": {
         "php": ">=7.2.0"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.1.0"
 }
