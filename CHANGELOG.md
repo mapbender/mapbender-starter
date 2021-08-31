@@ -1,5 +1,7 @@
-## dev-staging/3.3 @ 5c12726
+## dev-staging/3.3 @ 5d8833f
 - Minimum PHP requirement increased to >= 7.2
+- Updated mapbender/mapbender to Symfony 4-compatible development version
+- Updated mapbender/owsproxy to [v3.3.0](https://github.com/mapbender/owsproxy3/releases/tag/v3.3.0)
 - Update symfony/symony to v4.4.29 (major version update)
 - Update symfony/acl-bundle to v2.2.0 (major version update)
 - Update sensio/framework-extra-bundle to v6.1.5 (major version update)
