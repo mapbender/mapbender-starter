@@ -69,6 +69,11 @@ class AppKernel extends Mapbender\BaseKernel
         $loader->load(__DIR__.'/config/config_'.$this->getEnvironment().'.yml');
     }
 
+    public function getProjectDir()
+    {
+        return dirname(dirname(__FILE__));
+    }
+
     public function getCacheDir()
     {
         return $this->getProjectDir() . '/app/cache/' . $this->getEnvironment();
