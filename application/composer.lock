@@ -2045,33 +2045,31 @@
         },
         {
             "name": "mapbender/data-manager",
-            "version": "1.2.3",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/data-manager.git",
-                "reference": "f7dfa4f1b636007a58ed919eae2939ac26788f5d"
+                "reference": "90b38a45c49ce596e9a6fe422aac6833bb26c071"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/data-manager/zipball/f7dfa4f1b636007a58ed919eae2939ac26788f5d",
-                "reference": "f7dfa4f1b636007a58ed919eae2939ac26788f5d",
+                "url": "https://api.github.com/repos/mapbender/data-manager/zipball/90b38a45c49ce596e9a6fe422aac6833bb26c071",
+                "reference": "90b38a45c49ce596e9a6fe422aac6833bb26c071",
                 "shasum": ""
             },
             "require": {
                 "blueimp/jquery-file-upload": "9.*",
                 "mapbender/data-source": "~0.1.24 || ^0.2",
+                "mapbender/mapbender": "^3.2.6",
                 "php": ">=5.3.3"
-            },
-            "conflict": {
-                "mapbender/digitizer": "<1.4.6",
-                "mapbender/mapbender": "<3.2"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-release/1.0": "1.0.x-dev",
                     "dev-release/1.1": "1.1.x-dev",
-                    "dev-master": "1.2.x-dev"
+                    "dev-release/1.2": "1.2.x-dev",
+                    "dev-master": "2.0.x-dev"
                 }
             },
             "autoload": {
@@ -2095,33 +2093,36 @@
                 "data",
                 "mapbender"
             ],
-            "time": "2021-08-09T13:52:41+00:00"
+            "time": "2021-09-07T08:02:59+00:00"
         },
         {
             "name": "mapbender/data-source",
-            "version": "0.1.25",
+            "version": "0.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/data-source.git",
-                "reference": "2d0ea9a3f69c6919996acfd9c9b0ce22eebcc83e"
+                "reference": "52fd23568a613ef97f2c5e7f4756e80e21da84ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/data-source/zipball/2d0ea9a3f69c6919996acfd9c9b0ce22eebcc83e",
-                "reference": "2d0ea9a3f69c6919996acfd9c9b0ce22eebcc83e",
+                "url": "https://api.github.com/repos/mapbender/data-source/zipball/52fd23568a613ef97f2c5e7f4756e80e21da84ba",
+                "reference": "52fd23568a613ef97f2c5e7f4756e80e21da84ba",
                 "shasum": ""
             },
             "require": {
-                "mapbender/mapbender": ">=3.0.8",
-                "phayes/geophp": "1.2",
-                "php": ">=5.3.3",
-                "zumba/json-serializer": "1.x"
+                "php": ">=5.3.3"
             },
             "require-dev": {
                 "phpunit/phpunit": "^3.7",
                 "symfony/framework-bundle": "*"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-release/0.1": "0.1.x-dev",
+                    "dev-master": "0.2.x-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Mapbender\\DataSourceBundle\\": "."
@@ -2143,20 +2144,20 @@
                 "data source",
                 "mapbender"
             ],
-            "time": "2021-08-09T14:14:47+00:00"
+            "time": "2021-08-09T15:11:43+00:00"
         },
         {
             "name": "mapbender/digitizer",
-            "version": "1.5.1",
+            "version": "1.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "052e40f8beb582dc1f0ec068e6858aad561d42c0"
+                "reference": "1512184d63258cd07577fd0ae0da0b4046586091"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/052e40f8beb582dc1f0ec068e6858aad561d42c0",
-                "reference": "052e40f8beb582dc1f0ec068e6858aad561d42c0",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/1512184d63258cd07577fd0ae0da0b4046586091",
+                "reference": "1512184d63258cd07577fd0ae0da0b4046586091",
                 "shasum": ""
             },
             "require": {
@@ -2202,7 +2203,7 @@
                 "digitizing",
                 "mapbender"
             ],
-            "time": "2021-08-09T14:12:21+00:00"
+            "time": "2021-09-02T11:49:12+00:00"
         },
         {
             "name": "mapbender/mapbender",
@@ -2599,42 +2600,6 @@
             "time": "2020-07-23T08:35:51+00:00"
         },
         {
-            "name": "phayes/geophp",
-            "version": "1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phayes/geoPHP.git",
-                "reference": "015404e85b602e0df1f91441f8db0f9e98f7e567"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phayes/geoPHP/zipball/015404e85b602e0df1f91441f8db0f9e98f7e567",
-                "reference": "015404e85b602e0df1f91441f8db0f9e98f7e567",
-                "shasum": ""
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.1.*"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "geoPHP.inc"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2 or New-BSD"
-            ],
-            "authors": [
-                {
-                    "name": "Patrick Hayes"
-                }
-            ],
-            "description": "GeoPHP is a open-source native PHP library for doing geometry operations. It is written entirely in PHP and can therefore run on shared hosts. It can read and write a wide variety of formats: WKT (including EWKT), WKB (including EWKB), GeoJSON, KML, GPX, GeoRSS). It works with all Simple-Feature geometries (Point, LineString, Polygon, GeometryCollection etc.) and can be used to get centroids, bounding-boxes, area, and a wide variety of other useful information.",
-            "homepage": "https://github.com/phayes/geoPHP",
-            "time": "2014-12-02T06:11:22+00:00"
-        },
-        {
             "name": "proj4js/proj4js",
             "version": "2.4.3",
             "dist": {
@@ -2835,6 +2800,54 @@
                 "psr-3"
             ],
             "time": "2021-05-03T11:20:27+00:00"
+        },
+        {
+            "name": "psr/simple-cache",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/simple-cache.git",
+                "reference": "408d5eafb83c57f6365a3ca330ff23aa4a5fa39b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/simple-cache/zipball/408d5eafb83c57f6365a3ca330ff23aa4a5fa39b",
+                "reference": "408d5eafb83c57f6365a3ca330ff23aa4a5fa39b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\SimpleCache\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interfaces for simple caching",
+            "keywords": [
+                "cache",
+                "caching",
+                "psr",
+                "psr-16",
+                "simple-cache"
+            ],
+            "time": "2017-10-23T01:57:42+00:00"
         },
         {
             "name": "select2/select2",
@@ -4615,60 +4628,6 @@
                 "scss"
             ],
             "time": "2019-09-20T11:15:35+00:00"
-        },
-        {
-            "name": "zumba/json-serializer",
-            "version": "1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zumba/json-serializer.git",
-                "reference": "61cb3a9458146b2b91e8f7700cee80cad1bf9279"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zumba/json-serializer/zipball/61cb3a9458146b2b91e8f7700cee80cad1bf9279",
-                "reference": "61cb3a9458146b2b91e8f7700cee80cad1bf9279",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.6"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "3.7.*"
-            },
-            "suggest": {
-                "ext-mbstring": "To support unescaped unicode characters in PHP 5.3."
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Zumba\\Util": "src/",
-                    "Zumba\\Exception": "src/",
-                    "Zumba\\Util\\Test": "tests/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Juan Basso",
-                    "email": "juan.basso@zumba.com"
-                },
-                {
-                    "name": "Zumba Fitness, LLC",
-                    "email": "engineering@zumba.com"
-                }
-            ],
-            "description": "Serialize PHP variables, including objects, in JSON format. Support to unserialize it too.",
-            "homepage": "http://tech.zumba.com",
-            "keywords": [
-                "json",
-                "serialize",
-                "serializer"
-            ],
-            "time": "2014-07-05T20:09:27+00:00"
         }
     ],
     "packages-dev": [
