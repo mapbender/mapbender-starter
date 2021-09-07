@@ -2211,12 +2211,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "339e7e9439482b6c683aa52807c9e204ccd5c938"
+                "reference": "0301d783aa582e91309d1e81ebf1c10a9a6fbedd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/339e7e9439482b6c683aa52807c9e204ccd5c938",
-                "reference": "339e7e9439482b6c683aa52807c9e204ccd5c938",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/0301d783aa582e91309d1e81ebf1c10a9a6fbedd",
+                "reference": "0301d783aa582e91309d1e81ebf1c10a9a6fbedd",
                 "shasum": ""
             },
             "require": {
@@ -2227,7 +2227,7 @@
                 "datatables/datatables": "^1.10.16",
                 "debugteam/bootstrap-colorpicker": "^1",
                 "doctrine/doctrine-bundle": "^1.12",
-                "doctrine/orm": "^2.2.3",
+                "doctrine/orm": "^2.5.2",
                 "ext-dom": "*",
                 "ext-gd": "*",
                 "mapbender/mapbender-icons": "^1.3",
@@ -2289,7 +2289,11 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2021-08-23T09:12:44+00:00"
+            "support": {
+                "issues": "https://github.com/mapbender/mapbender/issues",
+                "source": "https://github.com/mapbender/mapbender/tree/v3.3.0RC1"
+            },
+            "time": "2021-09-07T10:01:55+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -2800,54 +2804,6 @@
                 "psr-3"
             ],
             "time": "2021-05-03T11:20:27+00:00"
-        },
-        {
-            "name": "psr/simple-cache",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/simple-cache.git",
-                "reference": "408d5eafb83c57f6365a3ca330ff23aa4a5fa39b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/simple-cache/zipball/408d5eafb83c57f6365a3ca330ff23aa4a5fa39b",
-                "reference": "408d5eafb83c57f6365a3ca330ff23aa4a5fa39b",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\SimpleCache\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
-                }
-            ],
-            "description": "Common interfaces for simple caching",
-            "keywords": [
-                "cache",
-                "caching",
-                "psr",
-                "psr-16",
-                "simple-cache"
-            ],
-            "time": "2017-10-23T01:57:42+00:00"
         },
         {
             "name": "select2/select2",
