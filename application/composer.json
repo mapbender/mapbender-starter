@@ -53,14 +53,16 @@
     "scripts": {
         "post-install-cmd": [
             "@composer dump-autoload",
-            "ComposerBootstrap::clearCache",
-            "@update-assets"
+            "ComposerBootstrap::clearCache"
         ],
         "post-update-cmd": [
             "@post-install-cmd"
         ],
         "update-assets":[
             "ComposerBootstrap::installAssets",
+            "ComponentMirror::postAutoloadDump"
+        ],
+        "post-autoload-dump": [
             "ComponentMirror::postAutoloadDump"
         ],
         "bootstrap-database": [
