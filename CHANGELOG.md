@@ -1,14 +1,15 @@
-## dev-staging/3.3 @ 5d8833f
+## v3.3.0RC1
 - Minimum PHP requirement increased to >= 7.2
-- Updated mapbender/mapbender to Symfony 4-compatible development version
+- Updated mapbender/mapbender to [v3.3.0RC1](https://github.com/mapbender/mapbender/releases/tag/v3.3.0RC1)
 - Updated mapbender/owsproxy to [v3.3.0](https://github.com/mapbender/owsproxy3/releases/tag/v3.3.0)
-- Update symfony/symony to v4.4.29 (major version update)
+- Update symfony/symony to v4.4.30 (major version update)
 - Update symfony/acl-bundle to v2.2.0 (major version update)
-- Update sensio/framework-extra-bundle to v6.1.5 (major version update)
+- Update sensio/framework-extra-bundle to v6.2.0 (major version update)
 - Update phpunit/phpunit to 5.7.27 (major version update)
 - Update bundled Composer version to [2.1.6](https://github.com/composer/composer/blob/2.1.6/CHANGELOG.md#216-2021-08-19)
 - Update twig/twig to v1.44.4
 - Update misc doctrine components
+- Update misc mailing logging and pdf integration components
 - Replace abandoned robloach/component-installer for Composer 2 compatibility (see [PR#98](https://github.com/mapbender/mapbender-starter/pull/98))
 
 ## v3.2.7
