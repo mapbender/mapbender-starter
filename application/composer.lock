@@ -2088,33 +2088,31 @@
         },
         {
             "name": "mapbender/data-manager",
-            "version": "1.2.3",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/data-manager.git",
-                "reference": "f7dfa4f1b636007a58ed919eae2939ac26788f5d"
+                "reference": "7d2330f0334c6c871517ffb71b9dbb05dadd988e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/data-manager/zipball/f7dfa4f1b636007a58ed919eae2939ac26788f5d",
-                "reference": "f7dfa4f1b636007a58ed919eae2939ac26788f5d",
+                "url": "https://api.github.com/repos/mapbender/data-manager/zipball/7d2330f0334c6c871517ffb71b9dbb05dadd988e",
+                "reference": "7d2330f0334c6c871517ffb71b9dbb05dadd988e",
                 "shasum": ""
             },
             "require": {
                 "blueimp/jquery-file-upload": "9.*",
                 "mapbender/data-source": "~0.1.24 || ^0.2",
+                "mapbender/mapbender": "^3.2.6",
                 "php": ">=5.3.3"
-            },
-            "conflict": {
-                "mapbender/digitizer": "<1.4.6",
-                "mapbender/mapbender": "<3.2"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
                     "dev-release/1.0": "1.0.x-dev",
                     "dev-release/1.1": "1.1.x-dev",
-                    "dev-master": "1.2.x-dev"
+                    "dev-release/1.2": "1.2.x-dev",
+                    "dev-master": "2.0.x-dev"
                 }
             },
             "autoload": {
@@ -2138,7 +2136,7 @@
                 "data",
                 "mapbender"
             ],
-            "time": "2021-08-09T13:52:41+00:00"
+            "time": "2021-08-09T14:00:10+00:00"
         },
         {
             "name": "mapbender/data-source",
@@ -2190,16 +2188,16 @@
         },
         {
             "name": "mapbender/digitizer",
-            "version": "1.5.1",
+            "version": "1.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "052e40f8beb582dc1f0ec068e6858aad561d42c0"
+                "reference": "1512184d63258cd07577fd0ae0da0b4046586091"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/052e40f8beb582dc1f0ec068e6858aad561d42c0",
-                "reference": "052e40f8beb582dc1f0ec068e6858aad561d42c0",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/1512184d63258cd07577fd0ae0da0b4046586091",
+                "reference": "1512184d63258cd07577fd0ae0da0b4046586091",
                 "shasum": ""
             },
             "require": {
@@ -2245,7 +2243,7 @@
                 "digitizing",
                 "mapbender"
             ],
-            "time": "2021-08-09T14:12:21+00:00"
+            "time": "2021-09-02T11:49:12+00:00"
         },
         {
             "name": "mapbender/mapbender",
