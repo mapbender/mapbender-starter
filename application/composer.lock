@@ -4617,20 +4617,20 @@
         },
         {
             "name": "wheregroup/assetic-filter-sassc",
-            "version": "0.0.2",
+            "version": "0.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WhereGroup/assetic-filter-sassc.git",
-                "reference": "b24b3ff4170cc1801d48ade8981e1bfe7284fecd"
+                "reference": "3f72b2696b52baed9c9b9dec680bf81fb6879b39"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WhereGroup/assetic-filter-sassc/zipball/b24b3ff4170cc1801d48ade8981e1bfe7284fecd",
-                "reference": "b24b3ff4170cc1801d48ade8981e1bfe7284fecd",
+                "url": "https://api.github.com/repos/WhereGroup/assetic-filter-sassc/zipball/3f72b2696b52baed9c9b9dec680bf81fb6879b39",
+                "reference": "3f72b2696b52baed9c9b9dec680bf81fb6879b39",
                 "shasum": ""
             },
             "require": {
-                "kriswallsmith/assetic": "^1.2 || ^2",
+                "assetic/framework": "^2",
                 "symfony/process": "^2.8 || ^3 || ^4 || ^5"
             },
             "suggest": {
@@ -4647,7 +4647,11 @@
                 "MIT"
             ],
             "description": "Assetic filter wrapper for sassc",
-            "time": "2021-08-19T21:39:17+00:00"
+            "support": {
+                "issues": "https://github.com/WhereGroup/assetic-filter-sassc/issues",
+                "source": "https://github.com/WhereGroup/assetic-filter-sassc/tree/0.0.4"
+            },
+            "time": "2021-09-07T11:30:42+00:00"
         },
         {
             "name": "wheregroup/codemirror",
