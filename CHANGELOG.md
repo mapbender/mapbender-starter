@@ -1,5 +1,10 @@
-## dev-master @ 5c4f54a
+## v3.2.7
+- Update mapbender/mapbender to [v3.2.7](https://github.com/mapbender/mapbender/releases/tag/v3.2.7)
+- Update mapbender/digitizer to [1.5.2](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.5.2)
+- Update mapbender/data-manager to [2.0.2](https://github.com/mapbender/data-manager/releases/tag/2.0.2)
+- Update mapbender/data-source to [0.2.2](https://github.com/mapbender/data-source/releases/tag/0.2.2)
 - Update mapbender/coordinates-utility to [1.2.2](https://github.com/mapbender/coordinates-utility/releases/tag/1.2.2)
+- Updated mapbender/owsproxy to [v3.3.0](https://github.com/mapbender/owsproxy3/releases/tag/v3.3.0)
 - Update doctrine packages
 - Replace deprecated security: acl integration with separate symfony/acl-bundle installation
 - Remove outdated root requirements symfony/swiftmailer-bundle, sensio/generator-bundle (packages required by Mapbender in appropriate versions)
