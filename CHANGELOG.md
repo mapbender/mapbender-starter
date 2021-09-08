@@ -1,3 +1,6 @@
+## dev-staging/3.3 @ 9d9f1ed
+- Allow opening dev environment access to non-local clients (see [PR#99](https://github.com/mapbender/mapbender-starter/pull/99))
+
 ## v3.3.0RC1
 - Minimum PHP requirement increased to >= 7.2
 - Updated mapbender/mapbender to [v3.3.0RC1](https://github.com/mapbender/mapbender/releases/tag/v3.3.0RC1)
