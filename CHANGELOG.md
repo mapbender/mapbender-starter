@@ -12,6 +12,9 @@
 - Update misc mailing logging and pdf integration components
 - Replace abandoned robloach/component-installer for Composer 2 compatibility (see [PR#98](https://github.com/mapbender/mapbender-starter/pull/98))
 
+## dev-release/3.2 @ 74e8b63
+- Allow opening dev environment access to non-local clients (see [PR#99](https://github.com/mapbender/mapbender-starter/pull/99))
+
 ## v3.2.7
 - Update mapbender/mapbender to [v3.2.7](https://github.com/mapbender/mapbender/releases/tag/v3.2.7)
 - Update mapbender/digitizer to [1.5.2](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.5.2)
