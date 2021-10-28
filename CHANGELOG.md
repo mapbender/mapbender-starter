@@ -1,5 +1,6 @@
-## dev-release/3.2 @ 74e8b63
+## dev-release/3.2 @ 286f1b4
 - Allow opening dev environment access to non-local clients (see [PR#99](https://github.com/mapbender/mapbender-starter/pull/99))
+- Update mapbender/data-source to [0.2.3](https://github.com/mapbender/data-source/releases/tag/0.2.3)
 
 ## v3.2.7
 - Update mapbender/mapbender to [v3.2.7](https://github.com/mapbender/mapbender/releases/tag/v3.2.7)
