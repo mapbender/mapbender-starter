@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e1b713ea2ec846c68e9763ff136dfd8f",
+    "content-hash": "656e0ea084850157e1e069b1230fcb1d",
     "packages": [
         {
             "name": "blueimp/jquery-file-upload",
@@ -2023,16 +2023,16 @@
         },
         {
             "name": "mapbender/data-source",
-            "version": "0.2.2",
+            "version": "0.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/data-source.git",
-                "reference": "52fd23568a613ef97f2c5e7f4756e80e21da84ba"
+                "reference": "a8ca20acb607b125660d5ade2691a332cc167987"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/data-source/zipball/52fd23568a613ef97f2c5e7f4756e80e21da84ba",
-                "reference": "52fd23568a613ef97f2c5e7f4756e80e21da84ba",
+                "url": "https://api.github.com/repos/mapbender/data-source/zipball/a8ca20acb607b125660d5ade2691a332cc167987",
+                "reference": "a8ca20acb607b125660d5ade2691a332cc167987",
                 "shasum": ""
             },
             "require": {
@@ -2070,7 +2070,7 @@
                 "data source",
                 "mapbender"
             ],
-            "time": "2021-08-09T15:11:43+00:00"
+            "time": "2021-10-28T08:35:39+00:00"
         },
         {
             "name": "mapbender/digitizer",
