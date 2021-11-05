@@ -1,0 +1,59 @@
+parameters:
+### todo: switch to using dsn urls, see https://www.doctrine-project.org/projects/doctrine-dbal/en/2.9/reference/configuration.html#connecting-using-a-url
+###       To avoid suprises, a DSN can be constructed here from parts, at least for the shipping default parameters
+###       Connection definition in config.yml should only use url: '%database_dsn%' though
+    database_driver:   '%env(string:DATABASE_DRIVER)%'
+    database_host:     '%env(string:DATABASE_HOST)%'
+    database_port:     '%env(string:DATABASE_PORT)%'
+    database_name:     '%env(string:DATABASE_NAME)%'
+    database_path:     '%kernel.root_dir%/db/demo.sqlite'
+    database_user:     '%env(string:DATABASE_USER)%'
+    database_password: '%env(string:DATABASE_PASSWORD)%'
+
+    mailer_transport:  smtp
+    mailer_host:       localhost
+    mailer_user:       ~
+    mailer_password:   ~
+
+    # locale en, de, it, es, ru, nl, pt are available
+    fallback_locale:   en
+    locale:            en
+    secret:            ThisTokenIsNotSoSecretChangeIt
+
+    ## Legacy branding / versioning params.
+    ## This is no longer used for versioning Mapbender and will never be updated
+    ## again for a Mapbender release.
+    ## For BC / continuity, you may still use these variables to brand / version your project.
+    ## For summary information / discussion see https://github.com/mapbender/mapbender/pull/1012
+    ## For full project branding / versioning options, see code comment:
+    ## https://github.com/mapbender/mapbender/blob/42e0f8b9a8031118719fc4881a92f0adab4ebacf/src/Mapbender/CoreBundle/DependencyInjection/Compiler/ProvideBrandingPass.php#L17
+    fom: ~
+
+    # framework : http://symfony.com/doc/2.8/reference/configuration/framework.html#cookie-lifetime
+    cookie_secure: false
+    cookie_lifetime: 3600
+
+# OWSProxy Configuration
+# see https://github.com/mapbender/owsproxy3/blob/master/CONFIGURATION.md#extension-configuration
+    ows_proxy3_logging: false
+    ows_proxy3_obfuscate_client_ip: true
+    ows_proxy3_host: ~
+    ows_proxy3_port: ~
+    ows_proxy3_connecttimeout: 60
+    ows_proxy3_timeout: 90
+    ows_proxy3_user: ~
+    ows_proxy3_password: ~
+    ows_proxy3_noproxy: ~
+
+    mapbender.disabled_elements:
+        - Mapbender\CoreBundle\Element\ResetView
+        # Installed as a collateral Digitizer 1.4 dependency
+        - Mapbender\DataManagerBundle\Element\DataManager
+
+
+    # default layer order when creating *new* WMS layerset instances
+    # allowed values are either
+    # * "standard": Traditional Mapbender behaviour: top-down rendering in GetCapabilities order;
+    #               also the default if this parameter is not defined
+    # * "reverse": bottom-up, for QGIS server, ArcGIS etc
+#     wms.default_layer_order: standard
