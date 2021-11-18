@@ -1,6 +1,7 @@
-## dev-staging/3.3 @ e890140
+## dev-staging/3.3 @ 938137f
 - Update mapbender/data-source to [0.2.3](https://github.com/mapbender/data-source/releases/tag/0.2.3)
 - Allow opening dev environment access to non-local clients (see [PR#99](https://github.com/mapbender/mapbender-starter/pull/99))
+- Remove legacy native system package build integration (nsis / deb / rpm via phing)
 
 ## v3.3.0RC1
 - Minimum PHP requirement increased to >= 7.2
