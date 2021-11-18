@@ -35,7 +35,6 @@
 
         "proj4js/proj4js": "^2.4",
         "mapbender/mapbender": "^3.3@RC",
-        "mapbender/owsproxy": "^3.0.6",
 
         "mapbender/coordinates-utility": "^1.1",
         "mapbender/digitizer": "^1.4",
