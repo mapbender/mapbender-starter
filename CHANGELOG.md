@@ -1,4 +1,5 @@
-## dev-staging/3.3 @ 9d9f1ed
+## dev-staging/3.3 @ e890140
+- Update mapbender/data-source to [0.2.3](https://github.com/mapbender/data-source/releases/tag/0.2.3)
 - Allow opening dev environment access to non-local clients (see [PR#99](https://github.com/mapbender/mapbender-starter/pull/99))
 
 ## v3.3.0RC1
