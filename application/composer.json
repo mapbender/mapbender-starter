@@ -19,9 +19,6 @@
     "require-dev": {
         "phpunit/phpunit": "^5.4"
     },
-    "suggest": {
-        "phing/phing": "For executing legacy Phing build tasks (unmaintained)"
-    },
     "require": {
         "php": ">=7.2.0",
         "symfony/symfony": "~4.4.0",

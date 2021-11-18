@@ -536,7 +536,6 @@ class ComposerBootstrap
                      "vendor/mnsami/composer-custom-directory-installer",
                      "vendor/robloach/component-installer",
 
-                     "vendor/phing",
                      "vendor/phpunit",
                      "vendor/phantomjs",
                      "vendor/predis",
