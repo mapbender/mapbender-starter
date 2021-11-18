@@ -132,21 +132,6 @@
         {
             "type": "package",
             "package": {
-                "name": "phantomjs/phantomjs",
-                "type": "component",
-                "version": "1.8.2",
-                "dist": {
-                    "url": "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/phantomjs/phantomjs-1.8.2-linux-x86_64.tar.bz2",
-                    "type": "tar"
-                },
-                "bin": [
-                    "bin/phantomjs"
-                ]
-            }
-        },
-        {
-            "type": "package",
-            "package": {
                 "name": "proj4js/proj4js",
                 "version": "2.4.3",
                 "type": "component",
