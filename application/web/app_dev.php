@@ -1,7 +1,6 @@
 <?php
 
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Debug\Debug;
 
 // If you don't want to setup permissions the proper way, just uncomment the following PHP line
 // read http://symfony.com/doc/current/book/installation.html#configuration-and-setup for more information
@@ -18,7 +17,7 @@ if (!getenv('MB_EXPOSE_DEV') && (isset($_SERVER['HTTP_CLIENT_IP'])
 }
 
 $loader = require_once(__DIR__ . '/../app/autoload.php');
-Debug::enable();
+\Symfony\Component\ErrorHandler\Debug::enable();
 
 require_once __DIR__.'/../app/AppKernel.php';
 
