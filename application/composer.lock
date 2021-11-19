@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2f933b776019f616b7cbb0b6b10f1575",
+    "content-hash": "662c4ca82f8eb45d369221ebec8e57c3",
     "packages": [
         {
             "name": "assetic/framework",
@@ -2225,16 +2225,16 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v3.3.0RC1",
+            "version": "v3.3.0RC2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "0301d783aa582e91309d1e81ebf1c10a9a6fbedd"
+                "reference": "f4a80ed12c153cc9e9f74ec339ac6493a3238408"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/0301d783aa582e91309d1e81ebf1c10a9a6fbedd",
-                "reference": "0301d783aa582e91309d1e81ebf1c10a9a6fbedd",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/f4a80ed12c153cc9e9f74ec339ac6493a3238408",
+                "reference": "f4a80ed12c153cc9e9f74ec339ac6493a3238408",
                 "shasum": ""
             },
             "require": {
@@ -2243,9 +2243,9 @@
                 "components/jqueryui": "^1",
                 "components/underscore": "1.x",
                 "datatables/datatables": "^1.10.16",
-                "debugteam/bootstrap-colorpicker": "^1",
                 "doctrine/doctrine-bundle": "^1.12",
                 "doctrine/orm": "^2.5.2",
+                "ext-curl": "*",
                 "ext-dom": "*",
                 "ext-gd": "*",
                 "mapbender/mapbender-icons": "^1.3",
@@ -2277,11 +2277,12 @@
                 "wheregroup/jquerydialogextendjs": "<2.1"
             },
             "provide": {
-                "mapbender/fom": "3.3"
+                "mapbender/fom": "3.3",
+                "mapbender/owsproxy": "3.3.99"
             },
             "replace": {
-                "debugteam/bootstrap-colorpicker": "1.*",
-                "mapbender/fom": "*"
+                "mapbender/fom": "*",
+                "mapbender/owsproxy": "3.3.*"
             },
             "type": "library",
             "extra": {
@@ -2289,12 +2290,15 @@
                     "dev-release/3.0.5": "3.0.5.x-dev",
                     "dev-release/3.0.6": "3.0.6.x-dev",
                     "dev-release/3.0.7": "3.0.8.x-dev",
-                    "dev-ol4": "3.1.0.0-dev"
+                    "dev-ol4": "3.1.0.0-dev",
+                    "dev-release/3.2": "3.2.x-dev",
+                    "dev-staging/3.3": "3.3.x-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
                     "Mapbender\\": "src/Mapbender",
+                    "OwsProxy3\\": "src/OwsProxy3",
                     "FOM\\": "src/FOM"
                 }
             },
@@ -2309,9 +2313,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/mapbender/issues",
-                "source": "https://github.com/mapbender/mapbender/tree/v3.3.0RC1"
+                "source": "https://github.com/mapbender/mapbender/tree/v3.3.0RC2"
             },
-            "time": "2021-09-07T10:01:55+00:00"
+            "time": "2021-11-19T10:52:54+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -2440,57 +2444,6 @@
                 }
             ],
             "time": "2021-05-18T11:05:00+00:00"
-        },
-        {
-            "name": "mapbender/owsproxy",
-            "version": "v3.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mapbender/owsproxy3.git",
-                "reference": "8ad9b8b0742b4f54ba74d45a84f9011fce14b743"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/8ad9b8b0742b4f54ba74d45a84f9011fce14b743",
-                "reference": "8ad9b8b0742b4f54ba74d45a84f9011fce14b743",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "php": "^5.4|>=7.0"
-            },
-            "conflict": {
-                "mapbender/mapbender": "<=3.2.6"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-release/3.0.5": "3.0.5.x-dev",
-                    "dev-release/3.0.6": "3.0.6.x-dev",
-                    "dev-release/3.1": "3.1.x-dev",
-                    "dev-release/3.2": "3.1.x-dev",
-                    "dev-master": "3.3.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "OwsProxy3\\": "src/OwsProxy3"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Mapbender3 library",
-            "keywords": [
-                "mapbender",
-                "module",
-                "owsproxy"
-            ],
-            "support": {
-                "source": "https://github.com/mapbender/owsproxy3/tree/v3.3.0"
-            },
-            "time": "2021-08-30T09:08:26+00:00"
         },
         {
             "name": "mnsami/composer-custom-directory-installer",
