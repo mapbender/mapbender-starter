@@ -31,7 +31,7 @@
         "mnsami/composer-custom-directory-installer": "^1 || ^2",
 
         "proj4js/proj4js": "^2.4",
-        "mapbender/mapbender": "^3.3@RC",
+        "mapbender/mapbender": "dev-staging/3.3 as v3.3.0RC2",
 
         "mapbender/coordinates-utility": "^1.1",
         "mapbender/digitizer": "^1.4",

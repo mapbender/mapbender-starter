@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c917ecb449e928e817f40138288768e1",
+    "content-hash": "15cea661f9337e5663605790b44479ab",
     "packages": [
         {
             "name": "assetic/framework",
@@ -2296,7 +2296,7 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v3.3.0RC2",
+            "version": "dev-staging/3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
@@ -6613,10 +6613,17 @@
             "time": "2021-03-09T10:59:23+00:00"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "mapbender/mapbender",
+            "version": "dev-staging/3.3",
+            "alias": "v3.3.0RC2",
+            "alias_normalized": "3.3.0.0-RC2"
+        }
+    ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "mapbender/mapbender": 5
+        "mapbender/mapbender": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
