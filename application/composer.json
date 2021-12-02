@@ -44,7 +44,6 @@
         "robloach/component-installer": "^0.2"
     },
     "conflict": {
-        "laminas/laminas-eventmanager": ">=3.3.0"
     },
     "scripts": {
         "post-install-cmd": [
