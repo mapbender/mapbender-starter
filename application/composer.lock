@@ -2300,12 +2300,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "f4a80ed12c153cc9e9f74ec339ac6493a3238408"
+                "reference": "6f0330ef1d2deace07552f099cc9fb8cbcd6c2b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/f4a80ed12c153cc9e9f74ec339ac6493a3238408",
-                "reference": "f4a80ed12c153cc9e9f74ec339ac6493a3238408",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/6f0330ef1d2deace07552f099cc9fb8cbcd6c2b9",
+                "reference": "6f0330ef1d2deace07552f099cc9fb8cbcd6c2b9",
                 "shasum": ""
             },
             "require": {
@@ -2314,7 +2314,7 @@
                 "components/jqueryui": "^1",
                 "components/underscore": "1.x",
                 "datatables/datatables": "^1.10.16",
-                "doctrine/doctrine-bundle": "^1.12",
+                "doctrine/doctrine-bundle": "^1.12 || ^2",
                 "doctrine/orm": "^2.5.2",
                 "ext-curl": "*",
                 "ext-dom": "*",
@@ -2331,7 +2331,7 @@
                 "symfony/security-acl": "~2.8 || ~3.0",
                 "symfony/swiftmailer-bundle": "^2.3 || ^3",
                 "symfony/symfony": "^3 || ^4",
-                "twig/extensions": "1.x",
+                "twig/twig": "^1.43 || ^2.13",
                 "wheregroup/assetic-filter-sassc": "^0.0",
                 "wheregroup/codemirror": "5.x",
                 "wheregroup/compass-mixins": "0.x",
@@ -2384,9 +2384,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/mapbender/issues",
-                "source": "https://github.com/mapbender/mapbender/tree/v3.3.0RC2"
+                "source": "https://github.com/mapbender/mapbender/tree/staging/3.3"
             },
-            "time": "2021-11-19T10:52:54+00:00"
+            "time": "2021-12-02T09:41:22+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
