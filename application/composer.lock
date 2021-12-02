@@ -1999,16 +1999,16 @@
         },
         {
             "name": "mapbender/coordinates-utility",
-            "version": "1.2.2",
+            "version": "1.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/coordinates-utility.git",
-                "reference": "19527adcd572684e65455fea8ef22634a8185c8c"
+                "reference": "31f7ef1f28513b8ad0e01ef53ae54de0f967ae6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/coordinates-utility/zipball/19527adcd572684e65455fea8ef22634a8185c8c",
-                "reference": "19527adcd572684e65455fea8ef22634a8185c8c",
+                "url": "https://api.github.com/repos/mapbender/coordinates-utility/zipball/31f7ef1f28513b8ad0e01ef53ae54de0f967ae6b",
+                "reference": "31f7ef1f28513b8ad0e01ef53ae54de0f967ae6b",
                 "shasum": ""
             },
             "require": {
@@ -2046,7 +2046,11 @@
                 "navigate",
                 "search"
             ],
-            "time": "2021-09-06T07:59:29+00:00"
+            "support": {
+                "issues": "https://github.com/mapbender/coordinates-utility/issues",
+                "source": "https://github.com/mapbender/coordinates-utility/tree/1.2.3"
+            },
+            "time": "2021-12-02T11:38:20+00:00"
         },
         {
             "name": "mapbender/data-manager",
