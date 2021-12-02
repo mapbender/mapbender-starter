@@ -1,3 +1,10 @@
+## dev-staging/3.3 @ ab0e7dd
+- Update mapbender/data-source to [0.2.4](https://github.com/mapbender/data-source/releases/tag/0.2.4)
+- Update mapbender/coordinates-utility to [1.2.3](https://github.com/mapbender/coordinates-utility/releases/tag/1.2.3)
+- Update symfony/symfony to 4.4.35
+- Update doctrine/dbal to 2.13.6, with dependencies (PHP8 compatibility)
+- Update phpunit/phpunit to 8.5.21 (PHP8 compatibility)
+
 ## v3.3.0RC2
 - Update mapbender/mapbender to [v3.3.0RC2](https://github.com/mapbender/mapbender/releases/tag/v3.3.0RC2)
 - Update mapbender/data-source to [0.2.3](https://github.com/mapbender/data-source/releases/tag/0.2.3)
