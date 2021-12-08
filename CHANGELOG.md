@@ -1,9 +1,11 @@
-## dev-staging/3.3 @ ab0e7dd
+## dev-staging/3.3 @ a4dfe34
+- Update mapbender/data-manager to [2.0.3](https://github.com/mapbender/data-manager/releases/tag/2.0.3)
 - Update mapbender/data-source to [0.2.4](https://github.com/mapbender/data-source/releases/tag/0.2.4)
 - Update mapbender/coordinates-utility to [1.2.3](https://github.com/mapbender/coordinates-utility/releases/tag/1.2.3)
 - Update symfony/symfony to 4.4.35
 - Update doctrine/dbal to 2.13.6, with dependencies (PHP8 compatibility)
 - Update phpunit/phpunit to 8.5.21 (PHP8 compatibility)
+- Update twig/twig to 2.14.8 (major update; see [1.x deprecated features](https://twig.symfony.com/doc/1.x/deprecated.html) for potential project incompatibilities)
 
 ## v3.3.0RC2
 - Update mapbender/mapbender to [v3.3.0RC2](https://github.com/mapbender/mapbender/releases/tag/v3.3.0RC2)
