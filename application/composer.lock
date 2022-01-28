@@ -2314,16 +2314,16 @@
         },
         {
             "name": "mapbender/openlayers6-es5",
-            "version": "0.4.3",
+            "version": "0.4.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/openlayers6-es5.git",
-                "reference": "716fd6fdad5851d629d8f060eb4b531dd3b698c9"
+                "reference": "4462838558fb30e19b6e9c5546a1620ec93f6327"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/openlayers6-es5/zipball/716fd6fdad5851d629d8f060eb4b531dd3b698c9",
-                "reference": "716fd6fdad5851d629d8f060eb4b531dd3b698c9",
+                "url": "https://api.github.com/repos/mapbender/openlayers6-es5/zipball/4462838558fb30e19b6e9c5546a1620ec93f6327",
+                "reference": "4462838558fb30e19b6e9c5546a1620ec93f6327",
                 "shasum": ""
             },
             "type": "component",
@@ -2344,7 +2344,7 @@
                     "email": "paul.schmidt@wheregroup.com"
                 }
             ],
-            "time": "2021-05-18T11:05:00+00:00"
+            "time": "2021-08-06T06:01:18+00:00"
         },
         {
             "name": "mapbender/owsproxy",
