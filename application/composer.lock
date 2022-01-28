@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "656e0ea084850157e1e069b1230fcb1d",
+    "content-hash": "e646f532a3f652a5049ffa0386b5fd75",
     "packages": [
         {
             "name": "blueimp/jquery-file-upload",
@@ -1971,20 +1971,21 @@
         },
         {
             "name": "mapbender/data-manager",
-            "version": "2.0.2",
+            "version": "2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/data-manager.git",
-                "reference": "90b38a45c49ce596e9a6fe422aac6833bb26c071"
+                "reference": "ed8d7129a296147e18739a27efa5fa88af76a1aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/data-manager/zipball/90b38a45c49ce596e9a6fe422aac6833bb26c071",
-                "reference": "90b38a45c49ce596e9a6fe422aac6833bb26c071",
+                "url": "https://api.github.com/repos/mapbender/data-manager/zipball/ed8d7129a296147e18739a27efa5fa88af76a1aa",
+                "reference": "ed8d7129a296147e18739a27efa5fa88af76a1aa",
                 "shasum": ""
             },
             "require": {
                 "blueimp/jquery-file-upload": "9.*",
+                "doctrine/persistence": "^1.3.0 || ^2",
                 "mapbender/data-source": "~0.1.24 || ^0.2",
                 "mapbender/mapbender": "^3.2.6",
                 "php": ">=5.3.3"
@@ -2019,23 +2020,24 @@
                 "data",
                 "mapbender"
             ],
-            "time": "2021-09-07T08:02:59+00:00"
+            "time": "2022-01-28T11:53:03+00:00"
         },
         {
             "name": "mapbender/data-source",
-            "version": "0.2.3",
+            "version": "0.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/data-source.git",
-                "reference": "a8ca20acb607b125660d5ade2691a332cc167987"
+                "reference": "37637cbe9f90de4e90c8799ee149c46864c26aab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/data-source/zipball/a8ca20acb607b125660d5ade2691a332cc167987",
-                "reference": "a8ca20acb607b125660d5ade2691a332cc167987",
+                "url": "https://api.github.com/repos/mapbender/data-source/zipball/37637cbe9f90de4e90c8799ee149c46864c26aab",
+                "reference": "37637cbe9f90de4e90c8799ee149c46864c26aab",
                 "shasum": ""
             },
             "require": {
+                "doctrine/persistence": "^1.3.0 || ^2",
                 "php": ">=5.3.3"
             },
             "require-dev": {
@@ -2070,20 +2072,20 @@
                 "data source",
                 "mapbender"
             ],
-            "time": "2021-10-28T08:35:39+00:00"
+            "time": "2022-01-27T11:35:20+00:00"
         },
         {
             "name": "mapbender/digitizer",
-            "version": "1.5.2",
+            "version": "1.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "1512184d63258cd07577fd0ae0da0b4046586091"
+                "reference": "22c0bab2c21f394e443776955ecdc3c247d66fc9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/1512184d63258cd07577fd0ae0da0b4046586091",
-                "reference": "1512184d63258cd07577fd0ae0da0b4046586091",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/22c0bab2c21f394e443776955ecdc3c247d66fc9",
+                "reference": "22c0bab2c21f394e443776955ecdc3c247d66fc9",
                 "shasum": ""
             },
             "require": {
@@ -2129,20 +2131,20 @@
                 "digitizing",
                 "mapbender"
             ],
-            "time": "2021-09-02T11:49:12+00:00"
+            "time": "2022-01-28T11:56:18+00:00"
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v3.2.8",
+            "version": "v3.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "15bd8e63c2b869e0654df87669fd1f8fdd76cfa4"
+                "reference": "41c65ce638c86f46a7ca0c8dd9abe5276ba1dc4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/15bd8e63c2b869e0654df87669fd1f8fdd76cfa4",
-                "reference": "15bd8e63c2b869e0654df87669fd1f8fdd76cfa4",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/41c65ce638c86f46a7ca0c8dd9abe5276ba1dc4d",
+                "reference": "41c65ce638c86f46a7ca0c8dd9abe5276ba1dc4d",
                 "shasum": ""
             },
             "require": {
@@ -2214,7 +2216,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2021-09-16T09:30:40+00:00"
+            "time": "2022-01-28T13:22:49+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -2312,16 +2314,16 @@
         },
         {
             "name": "mapbender/openlayers6-es5",
-            "version": "0.4.3",
+            "version": "0.4.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/openlayers6-es5.git",
-                "reference": "716fd6fdad5851d629d8f060eb4b531dd3b698c9"
+                "reference": "4462838558fb30e19b6e9c5546a1620ec93f6327"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/openlayers6-es5/zipball/716fd6fdad5851d629d8f060eb4b531dd3b698c9",
-                "reference": "716fd6fdad5851d629d8f060eb4b531dd3b698c9",
+                "url": "https://api.github.com/repos/mapbender/openlayers6-es5/zipball/4462838558fb30e19b6e9c5546a1620ec93f6327",
+                "reference": "4462838558fb30e19b6e9c5546a1620ec93f6327",
                 "shasum": ""
             },
             "type": "component",
@@ -2342,7 +2344,7 @@
                     "email": "paul.schmidt@wheregroup.com"
                 }
             ],
-            "time": "2021-05-18T11:05:00+00:00"
+            "time": "2021-08-06T06:01:18+00:00"
         },
         {
             "name": "mapbender/owsproxy",
@@ -3193,6 +3195,7 @@
                 "mail",
                 "mailer"
             ],
+            "abandoned": "symfony/mailer",
             "time": "2019-11-12T09:31:26+00:00"
         },
         {
