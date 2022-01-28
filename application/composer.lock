@@ -1968,16 +1968,16 @@
         },
         {
             "name": "mapbender/data-manager",
-            "version": "2.0.3",
+            "version": "2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/data-manager.git",
-                "reference": "2a205131ca5d285edcad064701b858526733ca24"
+                "reference": "ed8d7129a296147e18739a27efa5fa88af76a1aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/data-manager/zipball/2a205131ca5d285edcad064701b858526733ca24",
-                "reference": "2a205131ca5d285edcad064701b858526733ca24",
+                "url": "https://api.github.com/repos/mapbender/data-manager/zipball/ed8d7129a296147e18739a27efa5fa88af76a1aa",
+                "reference": "ed8d7129a296147e18739a27efa5fa88af76a1aa",
                 "shasum": ""
             },
             "require": {
@@ -2019,22 +2019,22 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/data-manager/issues",
-                "source": "https://github.com/mapbender/data-manager/tree/2.0.3"
+                "source": "https://github.com/mapbender/data-manager/tree/2.0.4"
             },
-            "time": "2021-12-08T10:45:56+00:00"
+            "time": "2022-01-28T11:53:03+00:00"
         },
         {
             "name": "mapbender/data-source",
-            "version": "0.2.4",
+            "version": "0.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/data-source.git",
-                "reference": "e48c01974a6a7e36122db167edcd05dff96ad3d4"
+                "reference": "37637cbe9f90de4e90c8799ee149c46864c26aab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/data-source/zipball/e48c01974a6a7e36122db167edcd05dff96ad3d4",
-                "reference": "e48c01974a6a7e36122db167edcd05dff96ad3d4",
+                "url": "https://api.github.com/repos/mapbender/data-source/zipball/37637cbe9f90de4e90c8799ee149c46864c26aab",
+                "reference": "37637cbe9f90de4e90c8799ee149c46864c26aab",
                 "shasum": ""
             },
             "require": {
@@ -2075,22 +2075,22 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/data-source/issues",
-                "source": "https://github.com/mapbender/data-source/tree/0.2.4"
+                "source": "https://github.com/mapbender/data-source/tree/0.2.5"
             },
-            "time": "2021-12-02T11:06:35+00:00"
+            "time": "2022-01-27T11:35:20+00:00"
         },
         {
             "name": "mapbender/digitizer",
-            "version": "1.5.2",
+            "version": "1.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "1512184d63258cd07577fd0ae0da0b4046586091"
+                "reference": "22c0bab2c21f394e443776955ecdc3c247d66fc9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/1512184d63258cd07577fd0ae0da0b4046586091",
-                "reference": "1512184d63258cd07577fd0ae0da0b4046586091",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/22c0bab2c21f394e443776955ecdc3c247d66fc9",
+                "reference": "22c0bab2c21f394e443776955ecdc3c247d66fc9",
                 "shasum": ""
             },
             "require": {
@@ -2136,7 +2136,7 @@
                 "digitizing",
                 "mapbender"
             ],
-            "time": "2021-09-02T11:49:12+00:00"
+            "time": "2022-01-28T11:56:18+00:00"
         },
         {
             "name": "mapbender/mapbender",
@@ -2328,16 +2328,16 @@
         },
         {
             "name": "mapbender/openlayers6-es5",
-            "version": "0.4.3",
+            "version": "0.4.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/openlayers6-es5.git",
-                "reference": "716fd6fdad5851d629d8f060eb4b531dd3b698c9"
+                "reference": "4462838558fb30e19b6e9c5546a1620ec93f6327"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/openlayers6-es5/zipball/716fd6fdad5851d629d8f060eb4b531dd3b698c9",
-                "reference": "716fd6fdad5851d629d8f060eb4b531dd3b698c9",
+                "url": "https://api.github.com/repos/mapbender/openlayers6-es5/zipball/4462838558fb30e19b6e9c5546a1620ec93f6327",
+                "reference": "4462838558fb30e19b6e9c5546a1620ec93f6327",
                 "shasum": ""
             },
             "type": "component",
@@ -2358,7 +2358,7 @@
                     "email": "paul.schmidt@wheregroup.com"
                 }
             ],
-            "time": "2021-05-18T11:05:00+00:00"
+            "time": "2021-08-06T06:01:18+00:00"
         },
         {
             "name": "mnsami/composer-custom-directory-installer",
