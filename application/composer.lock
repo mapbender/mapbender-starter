@@ -2136,6 +2136,10 @@
                 "digitizing",
                 "mapbender"
             ],
+            "support": {
+                "issues": "https://github.com/mapbender/mapbender-digitizer/issues",
+                "source": "https://github.com/mapbender/mapbender-digitizer/tree/1.5.3"
+            },
             "time": "2022-01-28T11:56:18+00:00"
         },
         {
@@ -2358,6 +2362,10 @@
                     "email": "paul.schmidt@wheregroup.com"
                 }
             ],
+            "support": {
+                "issues": "https://github.com/mapbender/openlayers6-es5/issues",
+                "source": "https://github.com/mapbender/openlayers6-es5/tree/0.4.3.1"
+            },
             "time": "2021-08-06T06:01:18+00:00"
         },
         {
