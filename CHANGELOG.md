@@ -1,6 +1,8 @@
-## dev-staging/3.3 @ a4dfe34
-- Update mapbender/data-manager to [2.0.3](https://github.com/mapbender/data-manager/releases/tag/2.0.3)
-- Update mapbender/data-source to [0.2.4](https://github.com/mapbender/data-source/releases/tag/0.2.4)
+## dev-staging/3.3 @ d367a12
+- Updated Openlayers 6 delivery package to [0.4.3.1](https://github.com/mapbender/openlayers6-es5/releases/tag/0.4.3.1)
+- Update mapbender/digitizer to [1.5.3](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.5.3)
+- Update mapbender/data-manager to [2.0.4](https://github.com/mapbender/data-manager/releases/tag/2.0.4)
+- Update mapbender/data-source to [0.2.5](https://github.com/mapbender/data-source/releases/tag/0.2.5)
 - Update mapbender/coordinates-utility to [1.2.3](https://github.com/mapbender/coordinates-utility/releases/tag/1.2.3)
 - Update symfony/symfony to 4.4.35
 - Update doctrine/dbal to 2.13.6, with dependencies (PHP8 compatibility)
