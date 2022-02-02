@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c9e6ef58ec2a2b0a4cccb38be23473a1",
+    "content-hash": "acbaa69ac350cd838e68e45763a8f8ea",
     "packages": [
         {
             "name": "assetic/framework",
@@ -2141,16 +2141,16 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "dev-staging/3.3",
+            "version": "v3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "42a8938fdb970acf79357b59973d7e401495864e"
+                "reference": "bb39785e5c242d4973e9c8c8adeeb54a083a7d02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/42a8938fdb970acf79357b59973d7e401495864e",
-                "reference": "42a8938fdb970acf79357b59973d7e401495864e",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/bb39785e5c242d4973e9c8c8adeeb54a083a7d02",
+                "reference": "bb39785e5c242d4973e9c8c8adeeb54a083a7d02",
                 "shasum": ""
             },
             "require": {
@@ -2206,7 +2206,6 @@
                     "dev-release/3.0.5": "3.0.5.x-dev",
                     "dev-release/3.0.6": "3.0.6.x-dev",
                     "dev-release/3.0.7": "3.0.8.x-dev",
-                    "dev-ol4": "3.1.0.0-dev",
                     "dev-release/3.2": "3.2.x-dev",
                     "dev-staging/3.3": "3.3.x-dev"
                 }
@@ -2229,9 +2228,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/mapbender/issues",
-                "source": "https://github.com/mapbender/mapbender/tree/staging/3.3"
+                "source": "https://github.com/mapbender/mapbender/tree/v3.3.0"
             },
-            "time": "2021-12-03T09:16:57+00:00"
+            "time": "2022-02-01T12:58:01+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -6422,18 +6421,9 @@
             "time": "2021-03-09T10:59:23+00:00"
         }
     ],
-    "aliases": [
-        {
-            "package": "mapbender/mapbender",
-            "version": "dev-staging/3.3",
-            "alias": "v3.3.0RC2",
-            "alias_normalized": "3.3.0.0-RC2"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "mapbender/mapbender": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
