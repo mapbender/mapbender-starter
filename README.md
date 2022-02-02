@@ -109,5 +109,5 @@ Pre-packaged archives bundling all code dependencies are available at our [downl
 |Mapbender release line|PHP versions|Bundled Symfony version|Bundled composer version|
 |----|----|----|----|
 |3.0.8 (end of life)|>=5.5, <=7.2|2.8LTS (end of life)|1.6.x|
-|3.2|>=7.1, <=7.4|3.4LTS (end of life)|1.10.x|
-|3.3|>=7.4|4.4LTS|2.1.x|
+|3.2|\>=7.1, <=7.4|3.4LTS (end of life)|1.10.x|
+|3.3|\>=7.4|4.4LTS|2.1.x|
