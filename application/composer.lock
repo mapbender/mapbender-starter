@@ -2348,16 +2348,16 @@
         },
         {
             "name": "mapbender/owsproxy",
-            "version": "v3.3.0",
+            "version": "v3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/owsproxy3.git",
-                "reference": "8ad9b8b0742b4f54ba74d45a84f9011fce14b743"
+                "reference": "89ddf6a421cb415ba3c0d3b4696010b7e876b780"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/8ad9b8b0742b4f54ba74d45a84f9011fce14b743",
-                "reference": "8ad9b8b0742b4f54ba74d45a84f9011fce14b743",
+                "url": "https://api.github.com/repos/mapbender/owsproxy3/zipball/89ddf6a421cb415ba3c0d3b4696010b7e876b780",
+                "reference": "89ddf6a421cb415ba3c0d3b4696010b7e876b780",
                 "shasum": ""
             },
             "require": {
@@ -2392,7 +2392,7 @@
                 "module",
                 "owsproxy"
             ],
-            "time": "2021-08-30T09:08:26+00:00"
+            "time": "2022-01-25T11:00:36+00:00"
         },
         {
             "name": "mnsami/composer-custom-directory-installer",
