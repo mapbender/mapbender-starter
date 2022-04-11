@@ -155,7 +155,6 @@ parameters:
                         classes: html-element-inline
 
                     basesourceswitcher:
-                        tooltip: mb.core.basesourceswitcher.class.title
                         class: Mapbender\CoreBundle\Element\BaseSourceSwitcher
                         target: map
                         instancesets:
