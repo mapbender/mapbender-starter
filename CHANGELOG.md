@@ -1,3 +1,8 @@
+# dev-release/3.2 @ e5d6076
+- Update mapbender/mapbender to [v3.2.10](https://github.com/mapbender/mapbender/releases/tag/v3.2.10)
+- Updated mapbender/owsproxy to [v3.3.1](https://github.com/mapbender/owsproxy3/releases/tag/v3.3.1)
+- Updated mapbender/coordinates-utility to [1.2.6](https://github.com/mapbender/coordinates-utility/releases/tag/1.2.6)
+
 # v3.2.9
 - Update mapbender/mapbender to [v3.2.9](https://github.com/mapbender/mapbender/releases/tag/v3.2.9)
 - Updated Openlayers 6 delivery package to [0.4.3.1](https://github.com/mapbender/openlayers6-es5/releases/tag/0.4.3.1)
