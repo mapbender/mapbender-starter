@@ -2135,16 +2135,16 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v3.2.9",
+            "version": "v3.2.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "41c65ce638c86f46a7ca0c8dd9abe5276ba1dc4d"
+                "reference": "17155d9fee07ac587cf7f26cc0910764bdd7dd7b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/41c65ce638c86f46a7ca0c8dd9abe5276ba1dc4d",
-                "reference": "41c65ce638c86f46a7ca0c8dd9abe5276ba1dc4d",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/17155d9fee07ac587cf7f26cc0910764bdd7dd7b",
+                "reference": "17155d9fee07ac587cf7f26cc0910764bdd7dd7b",
                 "shasum": ""
             },
             "require": {
@@ -2203,8 +2203,8 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Mapbender\\": "src/Mapbender",
-                    "FOM\\": "src/FOM"
+                    "FOM\\": "src/FOM",
+                    "Mapbender\\": "src/Mapbender"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2216,7 +2216,7 @@
                 "mapbender",
                 "module"
             ],
-            "time": "2022-01-28T13:22:49+00:00"
+            "time": "2022-04-11T07:56:00+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -4103,6 +4103,7 @@
             ],
             "description": "Symfony SwiftmailerBundle",
             "homepage": "http://symfony.com",
+            "abandoned": "symfony/mailer",
             "time": "2019-04-18T15:52:54+00:00"
         },
         {
