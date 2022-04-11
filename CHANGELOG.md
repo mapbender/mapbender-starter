@@ -1,6 +1,9 @@
-## dev-master @ 726158a
+## dev-master @ 4616fd9
 - Update mapbender/mapbender to [v3.3.1](https://github.com/mapbender/mapbender/releases/tag/v3.3.1)
 - Update mapbender/coordinates-utility to [1.2.6](https://github.com/mapbender/coordinates-utility/releases/tag/1.2.6)
+- Update symfony/symfony to [v4.4.40](https://symfony.com/blog/symfony-4-4-40-released)
+- Update symfony/security-acl to [v3.3.1](https://github.com/symfony/security-acl/releases/tag/v3.3.1)
+- Update twig/twig to 2.14.13
 
 ## v3.3.0
 - Update mapbender/mapbender to [v3.3.0](https://github.com/mapbender/mapbender/releases/tag/v3.3.0)
