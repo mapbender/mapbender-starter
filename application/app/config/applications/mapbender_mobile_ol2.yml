@@ -64,8 +64,6 @@ parameters:
                         target: layertree
 
                     bss-button:
-                        title: mb.core.basesourceswitcher.class.title
-                        tooltip: mb.core.basesourceswitcher.class.title
                         class: Mapbender\CoreBundle\Element\Button
                         icon: iconLegend
                         label: false

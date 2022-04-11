@@ -56,43 +56,32 @@ parameters:
             elements:
                 toolbar:
                     layertree-button:
-                        title: mb.core.layertree.class.title
-                        tooltip: mb.core.layertree.class.title
                         class: Mapbender\CoreBundle\Element\Button
                         label: false
                         icon: icon-layer-tree
                         target: layertreedialog
                     fi-button:
-                        title: mb.core.featureinfo.class.title
-                        tooltip: mb.core.featureinfo.class.title
                         class: Mapbender\CoreBundle\Element\Button
                         icon: icon-feature-info
                         label: false
                         target: featureinfo
                         group: featureinfo
                     print-button:
-                        title: mb.core.printclient.class.title
-                        tooltip: mb.core.printclient.class.title
                         class: Mapbender\CoreBundle\Element\Button
                         label: false
                         icon: iconPrint
                         target: printclient
                     imageexport-button:
-                        title: mb.print.imageexport.class.title
-                        tooltip: mb.print.imageexport.class.title
                         class: Mapbender\CoreBundle\Element\Button
                         label: false
                         icon: icon-image-export
                         target: imageexport
                     legend-button:
-                        title: mb.core.legend.class.title
-                        tooltip: mb.core.legend.class.title
                         class: Mapbender\CoreBundle\Element\Button
                         label: false
                         target: legend
                         icon: icon-legend
                     wmsloader-button:
-                        title: mb.wms.wmsloader.class.title
                         class: Mapbender\CoreBundle\Element\Button
                         label: false
                         target: wmsloader
@@ -123,8 +112,6 @@ parameters:
                         label: false
                         class: Mapbender\CoreBundle\Element\AboutDialog
                     coordinatesutility-button:
-                        title: mb.coordinatesutility.class.title
-                        tooltip: mb.coordinatesutility.class.title
                         class: Mapbender\CoreBundle\Element\Button
                         icon: iconGpsTarget
                         label: false
