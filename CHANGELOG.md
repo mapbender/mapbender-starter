@@ -1,4 +1,4 @@
-## dev-master @ 4616fd9
+## v3.3.1
 - Update mapbender/mapbender to [v3.3.1](https://github.com/mapbender/mapbender/releases/tag/v3.3.1)
 - Update mapbender/coordinates-utility to [1.2.6](https://github.com/mapbender/coordinates-utility/releases/tag/1.2.6)
 - Update symfony/symfony to [v4.4.40](https://symfony.com/blog/symfony-4-4-40-released)
