@@ -1,3 +1,7 @@
+## dev-master @ 726158a
+- Update mapbender/mapbender to [v3.3.1](https://github.com/mapbender/mapbender/releases/tag/v3.3.1)
+- Update mapbender/coordinates-utility to [1.2.6](https://github.com/mapbender/coordinates-utility/releases/tag/1.2.6)
+
 ## v3.3.0
 - Update mapbender/mapbender to [v3.3.0](https://github.com/mapbender/mapbender/releases/tag/v3.3.0)
 - Updated Openlayers 6 delivery package to [0.4.3.1](https://github.com/mapbender/openlayers6-es5/releases/tag/0.4.3.1)
