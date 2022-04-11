@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "acbaa69ac350cd838e68e45763a8f8ea",
+    "content-hash": "9cff7e42b611fd639da9352029201ad1",
     "packages": [
         {
             "name": "assetic/framework",
@@ -2141,16 +2141,16 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v3.3.0",
+            "version": "v3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "bb39785e5c242d4973e9c8c8adeeb54a083a7d02"
+                "reference": "1c59c7b243bb883dfed4f650b6bcb9366588c817"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/bb39785e5c242d4973e9c8c8adeeb54a083a7d02",
-                "reference": "bb39785e5c242d4973e9c8c8adeeb54a083a7d02",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/1c59c7b243bb883dfed4f650b6bcb9366588c817",
+                "reference": "1c59c7b243bb883dfed4f650b6bcb9366588c817",
                 "shasum": ""
             },
             "require": {
@@ -2207,14 +2207,14 @@
                     "dev-release/3.0.6": "3.0.6.x-dev",
                     "dev-release/3.0.7": "3.0.8.x-dev",
                     "dev-release/3.2": "3.2.x-dev",
-                    "dev-staging/3.3": "3.3.x-dev"
+                    "dev-master": "3.3.x-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
+                    "FOM\\": "src/FOM",
                     "Mapbender\\": "src/Mapbender",
-                    "OwsProxy3\\": "src/OwsProxy3",
-                    "FOM\\": "src/FOM"
+                    "OwsProxy3\\": "src/OwsProxy3"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2228,9 +2228,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/mapbender/issues",
-                "source": "https://github.com/mapbender/mapbender/tree/v3.3.0"
+                "source": "https://github.com/mapbender/mapbender/tree/v3.3.1"
             },
-            "time": "2022-02-01T12:58:01+00:00"
+            "time": "2022-04-11T08:51:18+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
