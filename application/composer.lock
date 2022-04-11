@@ -1910,16 +1910,16 @@
         },
         {
             "name": "mapbender/coordinates-utility",
-            "version": "1.2.3",
+            "version": "1.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/coordinates-utility.git",
-                "reference": "31f7ef1f28513b8ad0e01ef53ae54de0f967ae6b"
+                "reference": "c02cd3f9b92ac2d07ace019ab0369056c395597c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/coordinates-utility/zipball/31f7ef1f28513b8ad0e01ef53ae54de0f967ae6b",
-                "reference": "31f7ef1f28513b8ad0e01ef53ae54de0f967ae6b",
+                "url": "https://api.github.com/repos/mapbender/coordinates-utility/zipball/c02cd3f9b92ac2d07ace019ab0369056c395597c",
+                "reference": "c02cd3f9b92ac2d07ace019ab0369056c395597c",
                 "shasum": ""
             },
             "require": {
@@ -1959,9 +1959,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/coordinates-utility/issues",
-                "source": "https://github.com/mapbender/coordinates-utility/tree/1.2.3"
+                "source": "https://github.com/mapbender/coordinates-utility/tree/1.2.6"
             },
-            "time": "2021-12-02T11:38:20+00:00"
+            "time": "2022-03-31T07:55:12+00:00"
         },
         {
             "name": "mapbender/data-manager",
@@ -4237,6 +4237,7 @@
                     "type": "tidelift"
                 }
             ],
+            "abandoned": "symfony/mailer",
             "time": "2021-01-25T17:31:39+00:00"
         },
         {
