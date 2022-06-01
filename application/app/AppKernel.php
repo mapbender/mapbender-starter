@@ -57,6 +57,19 @@ class AppKernel extends Mapbender\BaseKernel
         return $bundles;
     }
 
+    protected function buildContainer()
+    {
+        $container = parent::buildContainer();
+        $streamEnv = \getenv('MB_LOG_STREAM');
+        if ($streamEnv && $streamEnv !== 'off' && $streamEnv !== 'false') {
+            if ($streamEnv !== 'stdout' && $streamEnv !== 'stderr') {
+                $streamEnv = 'stdout';
+            }
+            $container->setParameter('log_path', "php://{$streamEnv}");
+        }
+        return $container;
+    }
+
     /**
      * Loads the container configuration.
      *
