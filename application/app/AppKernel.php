@@ -74,11 +74,12 @@ class AppKernel extends Mapbender\BaseKernel
 
     public function getCacheDir()
     {
-        return $this->getProjectDir() . '/app/cache/' . $this->getEnvironment();
+        $cacheRoot = \getenv('MB_CACHE_DIR') ?: $this->getProjectDir() . '/app/cache';
+        return \rtrim($cacheRoot, '/\\') . '/' .  $this->getEnvironment();
     }
 
     public function getLogDir()
     {
-        return $this->getProjectDir() . '/app/logs';
+        return \rtrim(\getenv('MB_LOG_DIR') ?: $this->getProjectDir() . '/app/logs', '/\\');
     }
 }
