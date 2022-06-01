@@ -92,18 +92,12 @@ class ComposerBootstrap
      */
     public static function clearCache()
     {
-        $isWindows = static::isWindows();
-        $cachePath = "app/cache";
-        if (!$isWindows) {
-            static::printStatus("Clear cache");
-            foreach (glob($cachePath . "/*/*") as $filePath) {
-                $fileInfo = explode("/", $filePath);
-                $fileName = end($fileInfo);
-                if ($fileName == "sessions") {
-                    continue;
-                }
-                //$filePath = escapeshellarg($filePath);
-                echo `rm -rf $filePath`;
+        $cacheRoot = \getenv('MB_CACHE_DIR') ?: dirname(__FILE__) . '/../app/cache';
+        $fs = new \Symfony\Component\Filesystem\Filesystem(); // NOTE: built into composer phar
+        static::printStatus("Clear cache");
+        foreach (glob($cacheRoot . "/*/*") as $path) {
+            if (\basename($path) !== 'sessions') {
+                $fs->remove($path);
             }
         }
     }
