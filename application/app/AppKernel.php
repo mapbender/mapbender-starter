@@ -57,6 +57,19 @@ class AppKernel extends Mapbender\BaseKernel
         return $bundles;
     }
 
+    protected function buildContainer()
+    {
+        $container = parent::buildContainer();
+        $streamEnv = \getenv('MB_LOG_STREAM');
+        if ($streamEnv && $streamEnv !== 'off' && $streamEnv !== 'false') {
+            if ($streamEnv !== 'stdout' && $streamEnv !== 'stderr') {
+                $streamEnv = 'stdout';
+            }
+            $container->setParameter('log_path', "php://{$streamEnv}");
+        }
+        return $container;
+    }
+
     /**
      * Loads the container configuration.
      *
@@ -74,11 +87,12 @@ class AppKernel extends Mapbender\BaseKernel
 
     public function getCacheDir()
     {
-        return $this->getProjectDir() . '/app/cache/' . $this->getEnvironment();
+        $cacheRoot = \getenv('MB_CACHE_DIR') ?: $this->getProjectDir() . '/app/cache';
+        return \rtrim($cacheRoot, '/\\') . '/' .  $this->getEnvironment();
     }
 
     public function getLogDir()
     {
-        return $this->getProjectDir() . '/app/logs';
+        return \rtrim(\getenv('MB_LOG_DIR') ?: $this->getProjectDir() . '/app/logs', '/\\');
     }
 }
