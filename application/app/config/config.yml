@@ -4,6 +4,9 @@ imports:
 #Uncomment then next line if you have problems using an oracle database with mapbender.
 #   - { resource: oracle.yml }
 
+parameters:
+    log_path: '%kernel.logs_dir%/%kernel.environment%.log'
+
 framework:
     #esi:             ~
     translator:      { fallback: '%fallback_locale%' }
