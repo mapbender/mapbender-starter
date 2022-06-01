@@ -1,3 +1,6 @@
+## dev-master @ d27eb7a
+- Add log and cache configurability via environment variables (see [PR#102](https://github.com/mapbender/mapbender-starter/pull/102))
+
 ## v3.3.1
 - Update mapbender/mapbender to [v3.3.1](https://github.com/mapbender/mapbender/releases/tag/v3.3.1)
 - Update mapbender/coordinates-utility to [1.2.6](https://github.com/mapbender/coordinates-utility/releases/tag/1.2.6)
