@@ -36,6 +36,7 @@
         "select2/select2": "^4.0",
         "components/font-awesome": "^4.0",
         "wheregroup/cookieconsent": "^3",
+        "wheregroup/sassc-binaries": "^0.0.1",
         "components/bootstrap": "^3"
     },
     "replace": {
