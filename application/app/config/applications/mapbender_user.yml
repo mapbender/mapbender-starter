@@ -154,7 +154,7 @@ parameters:
                         class: Mapbender\PrintBundle\Element\ImageExport
                         target: map
                     printclient:
-                        class: Mapbender\CoreBundle\Element\PrintClient
+                        class: Mapbender\PrintBundle\Element\PrintClient
                         target: map
                         templates:
                             - { template: a4portrait, label: A4 Portrait}
