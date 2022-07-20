@@ -2328,16 +2328,16 @@
         },
         {
             "name": "mapbender/openlayers6-es5",
-            "version": "0.4.3.1",
+            "version": "0.14.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/openlayers6-es5.git",
-                "reference": "4462838558fb30e19b6e9c5546a1620ec93f6327"
+                "reference": "810b0dfa4a0981f368f6adad46d35674b2037189"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/openlayers6-es5/zipball/4462838558fb30e19b6e9c5546a1620ec93f6327",
-                "reference": "4462838558fb30e19b6e9c5546a1620ec93f6327",
+                "url": "https://api.github.com/repos/mapbender/openlayers6-es5/zipball/810b0dfa4a0981f368f6adad46d35674b2037189",
+                "reference": "810b0dfa4a0981f368f6adad46d35674b2037189",
                 "shasum": ""
             },
             "type": "component",
@@ -2360,9 +2360,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/openlayers6-es5/issues",
-                "source": "https://github.com/mapbender/openlayers6-es5/tree/0.4.3.1"
+                "source": "https://github.com/mapbender/openlayers6-es5/tree/6.14.1.0"
             },
-            "time": "2021-08-06T06:01:18+00:00"
+            "time": "2022-06-30T10:13:38+00:00"
         },
         {
             "name": "mnsami/composer-custom-directory-installer",
