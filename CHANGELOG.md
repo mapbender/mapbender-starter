@@ -1,5 +1,15 @@
-## dev-master @ d27eb7a
+## dev-rc @ ca012b8
+- Update mapbender/mapbender to [v3.3.2-RC1](https://github.com/mapbender/mapbender/releases/tag/v3.3.2-RC1)
+- Update Symfony to [4.4.45](https://symfony.com/blog/symfony-4-4-45-released)
+- Update Openlayers 6 package to [6.14](https://github.com/openlayers/openlayers/releases/tag/v6.14.0)
+- Update twig/twig to [v2.15.2](https://github.com/twigphp/Twig/blob/v2.15.2/CHANGELOG)
+- Update datatables to [1.10.21](https://cdn.datatables.net/1.10.21/)
+- Update mapbender/data-source to [0.2.6](https://github.com/mapbender/data-source/releases/tag/0.2.6)
+- Update wheregroup/assetic-filter-sassc to [0.0.5](https://github.com/WhereGroup/assetic-filter-sassc/releases/tag/0.0.5)
 - Add log and cache configurability via environment variables (see [PR#102](https://github.com/mapbender/mapbender-starter/pull/102))
+- Demo application updates:
+  - Fix legacy PrintClient namespace usage
+  - Configure mobile demo applications to suppress now expandable layertree for mapbender users source (`allowtoggle: false`)
 
 ## v3.3.1
 - Update mapbender/mapbender to [v3.3.1](https://github.com/mapbender/mapbender/releases/tag/v3.3.1)
