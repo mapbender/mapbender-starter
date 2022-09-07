@@ -1,5 +1,4 @@
-## dev-rc @ ca012b8
-- Update mapbender/mapbender to [v3.3.2-RC1](https://github.com/mapbender/mapbender/releases/tag/v3.3.2-RC1)
+## dev-master @ d3448cf
 - Update Symfony to [4.4.45](https://symfony.com/blog/symfony-4-4-45-released)
 - Update Openlayers 6 package to [6.14](https://github.com/openlayers/openlayers/releases/tag/v6.14.0)
 - Update twig/twig to [v2.15.2](https://github.com/twigphp/Twig/blob/v2.15.2/CHANGELOG)
