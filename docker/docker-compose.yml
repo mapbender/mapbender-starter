@@ -1,0 +1,8 @@
+version: "3.9"  
+services:
+  mapbender:
+    image: ghcr.io/davidpatzke/mapbender-starter:latest
+    env_file:
+      database-env.env
+    ports:
+      - "8000:80"
