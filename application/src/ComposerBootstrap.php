@@ -527,14 +527,7 @@ class ComposerBootstrap
         foreach (array(
                      "vendor/mapbender/documentation",
 
-                     "vendor/mnsami/composer-custom-directory-installer",
-                     "vendor/robloach/component-installer",
-
                      "vendor/phpunit",
-                     "vendor/phantomjs",
-                     "vendor/predis",
-                     "vendor/satooshi/php-coveralls",
-                     "vendor/fabpot/sphinx-php",
 
                      "web/app_test.php",
                      "web/index.php",
