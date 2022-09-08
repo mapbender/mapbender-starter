@@ -1,26 +1,11 @@
 */app/cache
 */app/logs
-*/doc/api
-*/doc/*.html
-*/web/bundles
-*/web/doc
 */web/uploads
-
-application/web/docs/
-
-application/web/xmlschemas/*
-!application/web/xmlschemas/http___www_opengis_net*
-!application/web/xmlschemas/http___www_w3_org*
-!application/web/xmlschemas/WMT_MS_Capabilities_http___www_opengis_net*
 
 !*/web/uploads/mapbender_user
 !*/web/uploads/mapbender_user_basic
-*/web/assets/*.trans
-application/web/assets/.dev-cache
-extra/
 */app/config/parameters.yml
 */app/bootstrap.php.cache
-*/composer.lock
 */vendor
 *.tar.gz
 *.rpm
@@ -35,10 +20,7 @@ testresults
 # Composer asset components
 application/web/components/
 
-application/fom
-application/owsproxy
 application/mapbender
-documentaion/_exts
 
 # Distribution files
 /application/dist/
