@@ -23,4 +23,4 @@ application/web/components/
 application/mapbender
 
 # Distribution files
-/application/dist/
+dist
