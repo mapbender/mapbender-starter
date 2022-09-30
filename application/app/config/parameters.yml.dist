@@ -29,7 +29,7 @@ parameters:
     ## https://github.com/mapbender/mapbender/blob/42e0f8b9a8031118719fc4881a92f0adab4ebacf/src/Mapbender/CoreBundle/DependencyInjection/Compiler/ProvideBrandingPass.php#L17
     fom: ~
 
-    # framework : http://symfony.com/doc/2.8/reference/configuration/framework.html#cookie-lifetime
+    # framework : https://symfony.com/doc/4.4/reference/configuration/framework.html#cookie-lifetime
     cookie_secure: false
     cookie_lifetime: 3600
 
