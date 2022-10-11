@@ -113,6 +113,31 @@ parameters:
                     shareUrl:
                         class: Mapbender\CoreBundle\Element\ShareUrl
                         label: false
+                    simplesearch:
+                        title: mb.core.simplesearch.class.title
+                        class: Mapbender\CoreBundle\Element\SimpleSearch
+                        target: map
+                        # https://github.com/komoot/photon
+                        # https://taginfo.openstreetmap.org/projects/nominatim#tags 
+                        query_url: https://osm-photon-search.wheregroup.com/search/api?limit=20&lat=50.7163&lon=7.1366&osm_tag=!railway&osm_tag=!highway:elevator&osm_tag=!tourism&osm_tag=!amenity
+                        query_key: q
+                        query_format: '%s'
+                        token_regex: '[^a-zA-Z0-9äöüÄÖÜß]'
+                        token_regex_in: '([a-zA-ZäöüÄÖÜß]{3,})'
+                        token_regex_out: '$1*'
+                        collection_path: features
+                        label_attribute:  '${properties.name} ${properties.street} ${properties.housenumber} (${properties.city} ${properties.country})'
+                        geom_attribute: geometry
+                        sourceSrs: 'EPSG:4326'                        
+                        geom_format: GeoJSON
+                        delay: !!float 300
+                        query_ws_replace: null
+                        result:
+                            buffer: !!float 5
+                            minscale: !!float 100
+                            maxscale: !!float 1000
+                            icon_url: '/bundles/mapbendercore/image/pin_red.png'
+                            icon_offset: '-6,-32'                        
                 content:
                     map:
                         class: Mapbender\CoreBundle\Element\Map
