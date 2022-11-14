@@ -2144,16 +2144,16 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v3.3.1",
+            "version": "v3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "6cd2739fca715c9c4caf1f6d9277afbbe648bc56"
+                "reference": "b83b9bb3dd201dab8a5ba2916cbe435b09dbcf48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/6cd2739fca715c9c4caf1f6d9277afbbe648bc56",
-                "reference": "6cd2739fca715c9c4caf1f6d9277afbbe648bc56",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/b83b9bb3dd201dab8a5ba2916cbe435b09dbcf48",
+                "reference": "b83b9bb3dd201dab8a5ba2916cbe435b09dbcf48",
                 "shasum": ""
             },
             "require": {
@@ -2169,7 +2169,7 @@
                 "ext-gd": "*",
                 "mapbender/mapbender-icons": "^1.3",
                 "mapbender/mapquery": "1.x",
-                "mapbender/openlayers6-es5": "~0.3 || ^1",
+                "mapbender/openlayers6-es5": "^0.4.3.2 || ^6.4.3.2",
                 "mapbender/owsproxy": "^3.1.8",
                 "php": ">=5.5",
                 "sensio/framework-extra-bundle": "^3 || ^4 || ^5 || ^6",
@@ -2178,8 +2178,8 @@
                 "symfony/acl-bundle": "^1 || ^2",
                 "symfony/security-acl": "~2.8 || ~3.0",
                 "symfony/swiftmailer-bundle": "^2.3 || ^3",
-                "symfony/symfony": "^3 || ^4",
-                "twig/twig": "^1.43 || ^2.13",
+                "symfony/symfony": "^4.2",
+                "twig/twig": "^2.13",
                 "wheregroup/assetic-filter-sassc": "^0.0",
                 "wheregroup/codemirror": "5.x",
                 "wheregroup/compass-mixins": "0.x",
@@ -2231,9 +2231,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/mapbender/issues",
-                "source": "https://github.com/mapbender/mapbender/tree/v3.3.1"
+                "source": "https://github.com/mapbender/mapbender/tree/v3.3.2"
             },
-            "time": "2022-04-11T13:29:09+00:00"
+            "time": "2022-11-14T14:03:37+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -2331,7 +2331,7 @@
         },
         {
             "name": "mapbender/openlayers6-es5",
-            "version": "0.14.1.0",
+            "version": "6.14.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/openlayers6-es5.git",
