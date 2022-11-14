@@ -1968,16 +1968,16 @@
         },
         {
             "name": "mapbender/data-manager",
-            "version": "2.0.4",
+            "version": "2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/data-manager.git",
-                "reference": "ed8d7129a296147e18739a27efa5fa88af76a1aa"
+                "reference": "7a38f83412cbcf7ab9405e547cfcba9d0417c03d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/data-manager/zipball/ed8d7129a296147e18739a27efa5fa88af76a1aa",
-                "reference": "ed8d7129a296147e18739a27efa5fa88af76a1aa",
+                "url": "https://api.github.com/repos/mapbender/data-manager/zipball/7a38f83412cbcf7ab9405e547cfcba9d0417c03d",
+                "reference": "7a38f83412cbcf7ab9405e547cfcba9d0417c03d",
                 "shasum": ""
             },
             "require": {
@@ -2019,22 +2019,22 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/data-manager/issues",
-                "source": "https://github.com/mapbender/data-manager/tree/2.0.4"
+                "source": "https://github.com/mapbender/data-manager/tree/2.0.7"
             },
-            "time": "2022-01-28T11:53:03+00:00"
+            "time": "2022-11-11T08:52:31+00:00"
         },
         {
             "name": "mapbender/data-source",
-            "version": "0.2.6",
+            "version": "0.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/data-source.git",
-                "reference": "87cde57dd7dd8348a83b1c18aeaef0476926c424"
+                "reference": "5f0ca06190d115104db237d629acaacae6178b33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/data-source/zipball/87cde57dd7dd8348a83b1c18aeaef0476926c424",
-                "reference": "87cde57dd7dd8348a83b1c18aeaef0476926c424",
+                "url": "https://api.github.com/repos/mapbender/data-source/zipball/5f0ca06190d115104db237d629acaacae6178b33",
+                "reference": "5f0ca06190d115104db237d629acaacae6178b33",
                 "shasum": ""
             },
             "require": {
@@ -2075,22 +2075,22 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/data-source/issues",
-                "source": "https://github.com/mapbender/data-source/tree/0.2.6"
+                "source": "https://github.com/mapbender/data-source/tree/0.2.7"
             },
-            "time": "2022-06-14T07:33:25+00:00"
+            "time": "2022-11-11T09:36:46+00:00"
         },
         {
             "name": "mapbender/digitizer",
-            "version": "1.5.3",
+            "version": "1.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "22c0bab2c21f394e443776955ecdc3c247d66fc9"
+                "reference": "aa436078b93296bf85e155c7adc565f32424fc40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/22c0bab2c21f394e443776955ecdc3c247d66fc9",
-                "reference": "22c0bab2c21f394e443776955ecdc3c247d66fc9",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/aa436078b93296bf85e155c7adc565f32424fc40",
+                "reference": "aa436078b93296bf85e155c7adc565f32424fc40",
                 "shasum": ""
             },
             "require": {
@@ -2138,9 +2138,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/mapbender-digitizer/issues",
-                "source": "https://github.com/mapbender/mapbender-digitizer/tree/1.5.3"
+                "source": "https://github.com/mapbender/mapbender-digitizer/tree/1.5.5"
             },
-            "time": "2022-01-28T11:56:18+00:00"
+            "time": "2022-11-10T09:47:46+00:00"
         },
         {
             "name": "mapbender/mapbender",
