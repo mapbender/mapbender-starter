@@ -1,9 +1,12 @@
-## dev-master @ d3448cf
-- Update Symfony to [4.4.45](https://symfony.com/blog/symfony-4-4-45-released)
+## v3.3.2
+- Update mapbender/mapbender to [v3.3.2](https://github.com/mapbender/mapbender/releases/tag/v3.3.2)
+- Update Symfony to [4.4.48](https://symfony.com/blog/symfony-4-4-48-released)
 - Update Openlayers 6 package to [6.14](https://github.com/openlayers/openlayers/releases/tag/v6.14.0)
 - Update twig/twig to [v2.15.2](https://github.com/twigphp/Twig/blob/v2.15.2/CHANGELOG)
 - Update datatables to [1.10.21](https://cdn.datatables.net/1.10.21/)
-- Update mapbender/data-source to [0.2.6](https://github.com/mapbender/data-source/releases/tag/0.2.6)
+- Update mapbender/digitizer to [1.5.5](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.5.5)
+- Update mapbender/data-manager to [2.0.7](https://github.com/mapbender/data-manager/releases/tag/2.0.7)
+- Update mapbender/data-source to [0.2.7](https://github.com/mapbender/data-source/releases/tag/0.2.7)
 - Update wheregroup/assetic-filter-sassc to [0.0.5](https://github.com/WhereGroup/assetic-filter-sassc/releases/tag/0.0.5)
 - Add log and cache configurability via environment variables (see [PR#102](https://github.com/mapbender/mapbender-starter/pull/102))
 - Demo application updates:
