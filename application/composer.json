@@ -109,6 +109,9 @@
         "preferred-install": {
             "mapbender/*": "source",
             "wheregroup/*": "source"
+        },
+        "allow-plugins": {
+            "mnsami/composer-custom-directory-installer": true
         }
     },
     "minimum-stability": "dev",
