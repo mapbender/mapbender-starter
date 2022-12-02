@@ -4730,24 +4730,24 @@
         },
         {
             "name": "wheregroup/doctrine-dbal-shims",
-            "version": "v1.0.1",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WhereGroup/doctrine-dbal-shims.git",
-                "reference": "8c8bc7b87b38a4b627b5a11b1be851de51037c61"
+                "reference": "52ab0f20765ef0638bdab1d31a7c915b70cb89c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WhereGroup/doctrine-dbal-shims/zipball/8c8bc7b87b38a4b627b5a11b1be851de51037c61",
-                "reference": "8c8bc7b87b38a4b627b5a11b1be851de51037c61",
+                "url": "https://api.github.com/repos/WhereGroup/doctrine-dbal-shims/zipball/52ab0f20765ef0638bdab1d31a7c915b70cb89c1",
+                "reference": "52ab0f20765ef0638bdab1d31a7c915b70cb89c1",
                 "shasum": ""
             },
             "require": {
-                "doctrine/dbal": "^2",
-                "php": ">=5.3"
+                "doctrine/dbal": "^2.7 || ^3",
+                "php": ">=5.5"
             },
             "suggest": {
-                "doctrine/dbal-bundle": "To use ShimmedConnectionFactory and compiler passes"
+                "doctrine/dbal-bundle": "To use compiler pass integration"
             },
             "type": "library",
             "autoload": {
@@ -4759,8 +4759,12 @@
             "license": [
                 "MIT"
             ],
-            "description": "Extended DBAL server support on outdated PHP versions",
-            "time": "2019-12-16T10:16:54+00:00"
+            "description": "Doctrine DBAL / ORM convenience for mixed multi-connection setups",
+            "support": {
+                "issues": "https://github.com/WhereGroup/doctrine-dbal-shims/issues",
+                "source": "https://github.com/WhereGroup/doctrine-dbal-shims/tree/v1.1.0"
+            },
+            "time": "2022-11-16T14:15:52+00:00"
         },
         {
             "name": "wheregroup/platform-detect",
