@@ -4346,16 +4346,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v4.4.48",
+            "version": "v4.4.49",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "a23b1f3be1c5a6818481f4fd10792e8400446f65"
+                "reference": "3da1b76795bb874619b46ced70fb33806936169e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/a23b1f3be1c5a6818481f4fd10792e8400446f65",
-                "reference": "a23b1f3be1c5a6818481f4fd10792e8400446f65",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/3da1b76795bb874619b46ced70fb33806936169e",
+                "reference": "3da1b76795bb874619b46ced70fb33806936169e",
                 "shasum": ""
             },
             "require": {
@@ -4533,7 +4533,7 @@
             ],
             "support": {
                 "issues": "https://github.com/symfony/symfony/issues",
-                "source": "https://github.com/symfony/symfony/tree/v4.4.48"
+                "source": "https://github.com/symfony/symfony/tree/v4.4.49"
             },
             "funding": [
                 {
@@ -4549,7 +4549,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-10-28T16:49:35+00:00"
+            "time": "2022-11-28T17:58:55+00:00"
         },
         {
             "name": "twig/twig",
