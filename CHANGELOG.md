@@ -1,3 +1,14 @@
+## dev-master @ 437733f
+- Update mapbender/digitizer to [1.5.6](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.5.6)
+- Update mapbender/data-manager to [2.0.8](https://github.com/mapbender/data-manager/releases/tag/2.0.8)
+- Update mapbender/data-source to [0.2.8](https://github.com/mapbender/data-source/releases/tag/0.2.8)
+- Update symfony/symfony to [4.4.49](https://symfony.com/blog/symfony-4-4-49-released)
+- Update all doctrine components to latest stable versions
+- Update mailer and logging components for improved PHP >=8.1 compatibility
+- Update assetic/framework to [v2.0.2](https://github.com/assetic-php/assetic/releases/tag/v2.0.2) (Opcache fix)
+- Update twig/twig to [v2.15.3](https://github.com/twigphp/Twig/blob/v2.15.3/CHANGELOG)
+- Update FPDF to [1.85](http://www.fpdf.org/phorum/read.php?f=1&i=62622&t=62622) for improved PHP 8.2 support
+
 ## v3.3.2
 - Update mapbender/mapbender to [v3.3.2](https://github.com/mapbender/mapbender/releases/tag/v3.3.2)
 - Update Symfony to [4.4.48](https://symfony.com/blog/symfony-4-4-48-released)
