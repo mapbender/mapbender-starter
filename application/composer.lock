@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "assetic/framework",
-            "version": "v2.0.1",
+            "version": "v2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/assetic-php/assetic.git",
-                "reference": "e25c9c3590b15e086218ad20ed6cc17d26473f2f"
+                "reference": "a39be45abdb2c3b21c68cdc180afc9092566bd3a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/assetic-php/assetic/zipball/e25c9c3590b15e086218ad20ed6cc17d26473f2f",
-                "reference": "e25c9c3590b15e086218ad20ed6cc17d26473f2f",
+                "url": "https://api.github.com/repos/assetic-php/assetic/zipball/a39be45abdb2c3b21c68cdc180afc9092566bd3a",
+                "reference": "a39be45abdb2c3b21c68cdc180afc9092566bd3a",
                 "shasum": ""
             },
             "require": {
@@ -58,13 +58,13 @@
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "Assetic": "src/"
-                },
                 "files": [
                     "src/functions.php",
                     "src/aliasing.php"
-                ]
+                ],
+                "psr-0": {
+                    "Assetic": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -94,7 +94,11 @@
                 "compression",
                 "minification"
             ],
-            "time": "2021-06-30T23:22:21+00:00"
+            "support": {
+                "issues": "https://github.com/assetic-php/assetic/issues",
+                "source": "https://github.com/assetic-php/assetic/tree/v2.0.2"
+            },
+            "time": "2022-01-26T20:52:23+00:00"
         },
         {
             "name": "blueimp/jquery-file-upload",
