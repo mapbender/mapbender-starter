@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8082f9cf5c641d3807ffd16d914085ab",
+    "content-hash": "c069d37d1a18a99c5099e7c5447e12dd",
     "packages": [
         {
             "name": "assetic/framework",
@@ -2089,16 +2089,16 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v3.3.3",
+            "version": "v3.3.4-RC1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "f58fd019c77faaa26b4109594b39381aba24f3a9"
+                "reference": "76c954078acf210243314e55db2c9c612b03fb0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/f58fd019c77faaa26b4109594b39381aba24f3a9",
-                "reference": "f58fd019c77faaa26b4109594b39381aba24f3a9",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/76c954078acf210243314e55db2c9c612b03fb0a",
+                "reference": "76c954078acf210243314e55db2c9c612b03fb0a",
                 "shasum": ""
             },
             "require": {
@@ -2117,7 +2117,7 @@
                 "mapbender/mapquery": "1.x",
                 "mapbender/openlayers6-es5": "^0.4.3.2 || ^6.4.3.2",
                 "mapbender/owsproxy": "^3.1.8",
-                "php": ">=5.5",
+                "php": ">=7.4",
                 "sensio/framework-extra-bundle": "^3 || ^4 || ^5 || ^6",
                 "setasign/fpdf": "^1.8",
                 "setasign/fpdi": "^2",
@@ -2177,9 +2177,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/mapbender/issues",
-                "source": "https://github.com/mapbender/mapbender/tree/v3.3.3"
+                "source": "https://github.com/mapbender/mapbender/tree/v3.3.4-RC1"
             },
-            "time": "2022-12-02T11:47:03+00:00"
+            "time": "2023-04-17T09:41:19+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -6482,5 +6482,5 @@
         "php": ">=7.4.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }
