@@ -172,11 +172,17 @@ parameters:
                         class: Mapbender\CoreBundle\Element\Ruler
                         target: map
                         type: line
+                        strokeColor: '#ff0000'
                     arearuler:
                         title: mb.core.ruler.tag.area
                         class: Mapbender\CoreBundle\Element\Ruler
                         target: map
                         type: area
+                        fillColor: rgba(100, 100, 100, 0.6)
+                        fontColor: '#ffffff'
+                        fontSize: 14
+                        strokeWidth: 4
+                        strokeWidthWhileDrawing: 5
                     scalebar:
                         class: Mapbender\CoreBundle\Element\ScaleBar
                         target: map
