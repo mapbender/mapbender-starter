@@ -172,7 +172,7 @@ parameters:
                         class: Mapbender\CoreBundle\Element\Ruler
                         target: map
                         type: line
-                        strokeColor: 'rgb(16, 101, 93,0.8)'
+                        strokeColor: 'rgba(16, 101, 93, 0.8)'
                     arearuler:
                         title: mb.core.ruler.tag.area
                         class: Mapbender\CoreBundle\Element\Ruler

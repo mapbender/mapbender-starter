@@ -180,7 +180,7 @@ parameters:
                         target: map
                         type: area
                         fillColor: rgba(100, 100, 100, 0.5)
-                        strokeColor: 'rgb(16, 101, 93, 0.8)'
+                        strokeColor: 'rgba(16, 101, 93, 0.8)'
                         fontColor: '#ffffff'
                         fontSize: 14
                     scalebar:
