@@ -4,6 +4,10 @@ Mapbender is a web based geoportal framework.
 
 [Official site](https://mapbender.org/?q=en) | [Live demo](https://demo.mapbender.org/) | [News on Twitter](https://twitter.com/mapbender)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5887014.svg)](https://doi.org/10.5281/zenodo.5887014)
+![Packagist License](https://img.shields.io/packagist/l/mapbender/mapbender)
+
+
 For detailed usage information, including installation and integration topics, please see [official documentation](https://doc.mapbender.org/en/) ([also available in German](https://doc.mapbender.org/de/)).
 
 ## Requirements
@@ -64,6 +68,11 @@ Switch to project directory and run ./bootstrap
 cd mapbender-starter
 ./bootstrap
 ```
+
+> :warning: While mapbender is compatible with PHP 8.2, bootstrap will fail due to outdated 
+> PHP version constraints in a third-party library. A temporary workaround until the next major relase:
+> Install PHP 8.1 alongside your PHP 8.2 installation and in the `bootstrap` file
+> replace the `php` commands at the start of lines 4 to 8 with `/usr/bin/php8.1` (or your custom installation path)
 
 The bootstrap command performs the following required setup tasks for you:
 * installs userland dependencies (via composer)

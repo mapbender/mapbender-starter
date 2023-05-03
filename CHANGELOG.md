@@ -1,7 +1,9 @@
-## v3.3.4-RC2
-- Update mapbender/mapbender to [v3.3.4-RC2](https://github.com/mapbender/mapbender/releases/tag/v3.3.4-RC2)
+## v3.3.4
+- Update mapbender/mapbender to [v3.3.4](https://github.com/mapbender/mapbender/releases/tag/v3.3.4)
 - Update mapbender/digitizer to [1.5.7](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.5.7)
+- Update mapbender/coordinates-utility to [1.2.7](https://github.com/mapbender/coordinates-utility/releases/tag/1.2.7)
 - Update symfony/symfony to [4.4.50](https://symfony.com/blog/symfony-4-4-50-released)
+- Update Openlayers to [7.3](https://github.com/mapbender/openlayers6-es5/releases/tag/7.3.0.0)
 - [Development only] Require PHPUnit 9
 
 ## v3.3.3
