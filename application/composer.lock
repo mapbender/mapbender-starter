@@ -2089,16 +2089,16 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v3.3.4",
+            "version": "v3.3.5-RC1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "65ca476602aca98bc466a5654221f1f08dd3ac40"
+                "reference": "293569f85bc66e39ae2151500068ae3db0bf3d0d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/65ca476602aca98bc466a5654221f1f08dd3ac40",
-                "reference": "65ca476602aca98bc466a5654221f1f08dd3ac40",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/293569f85bc66e39ae2151500068ae3db0bf3d0d",
+                "reference": "293569f85bc66e39ae2151500068ae3db0bf3d0d",
                 "shasum": ""
             },
             "require": {
@@ -2113,6 +2113,7 @@
                 "ext-curl": "*",
                 "ext-dom": "*",
                 "ext-gd": "*",
+                "ext-json": "*",
                 "mapbender/mapbender-icons": "^1.3",
                 "mapbender/mapquery": "1.x",
                 "mapbender/openlayers6-es5": "^0.4.3.2 || ^6.4.3.2 || ^7",
@@ -2177,9 +2178,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/mapbender/issues",
-                "source": "https://github.com/mapbender/mapbender/tree/v3.3.4"
+                "source": "https://github.com/mapbender/mapbender/tree/v3.3.5-RC1"
             },
-            "time": "2023-05-03T08:27:13+00:00"
+            "time": "2023-05-11T16:11:37+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
