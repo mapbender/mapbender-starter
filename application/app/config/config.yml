@@ -12,12 +12,11 @@ framework:
     translator:      { fallback: '%fallback_locale%' }
     secret:          '%secret%'
     router:
-        resource: "%kernel.root_dir%/config/routing.yml"
+        resource: "%kernel.project_dir%/config/routing.yml"
         strict_requirements: '%kernel.debug%'
     form:            true
     csrf_protection: true
     validation:      { enable_annotations: true }
-    templating:      { engines: ['twig'] } #assets_version: SomeVersionScheme
     default_locale:  '%locale%'
     session:
         cookie_httponly: true

@@ -21,7 +21,7 @@
     },
     "require": {
         "php": ">=7.4.0",
-        "symfony/symfony": "~4.4.0",
+        "symfony/symfony": "^5.4",
         "symfony/monolog-bundle": "^3",
         "doctrine/dbal": "^3",
 
@@ -30,7 +30,7 @@
         "mnsami/composer-custom-directory-installer": "^1 || ^2",
 
         "proj4js/proj4js": "^2.4",
-        "mapbender/mapbender": "^3.3.4-RC1",
+        "mapbender/mapbender": "^3.3.4",
 
         "mapbender/coordinates-utility": "^1.1",
         "mapbender/digitizer": "^1.4",
@@ -38,7 +38,8 @@
         "components/font-awesome": "^4.0",
         "wheregroup/cookieconsent": "^3",
         "wheregroup/sassc-binaries": "^0.0.1",
-        "components/bootstrap": "^3"
+        "components/bootstrap": "^3",
+        "symfony/runtime": "^5.4"
     },
     "replace": {
         "robloach/component-installer": "^0.2"
@@ -111,7 +112,8 @@
             "wheregroup/*": "source"
         },
         "allow-plugins": {
-            "mnsami/composer-custom-directory-installer": true
+            "mnsami/composer-custom-directory-installer": true,
+            "symfony/runtime": true
         }
     },
     "minimum-stability": "dev",
