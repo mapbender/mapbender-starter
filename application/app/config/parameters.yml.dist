@@ -10,10 +10,8 @@ parameters:
     database_user:     ~
     database_password: ~
 
-    mailer_transport:  smtp
-    mailer_host:       localhost
-    mailer_user:       ~
-    mailer_password:   ~
+    # Might also use third-party providers like e.g. Mailchimp, see https://symfony.com/doc/current/mailer.html#using-built-in-transports
+    mailer_dsn:        smtp://user:pass@smtp.example.com:25
 
     # locale en, de, it, es, ru, nl, pt are available
     fallback_locale:   en

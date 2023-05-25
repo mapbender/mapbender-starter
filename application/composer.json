@@ -23,7 +23,7 @@
         "php": ">=7.4.0",
         "symfony/symfony": "~4.4.0",
         "symfony/monolog-bundle": "^3",
-        "doctrine/dbal": "^2.7",
+        "doctrine/dbal": "^3",
 
         "components/jquery": "^1.11.2",
 

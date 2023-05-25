@@ -1,6 +1,0 @@
-# configuration for abandoned satooshi/php-coveralls, unmaintained
-# if you want to keep using this, run:
-#   bin/composer require --dev satooshi/php-coveralls
-coverage_clover: ../testresults/clover.xml
-json_path: ../testresults/coveralls.json
-src_dir: mapbender/src/

@@ -16,9 +16,6 @@ class AppKernel extends Mapbender\BaseKernel
     public function registerBundles()
     {
         $bundles = array(
-            // Standard Symfony2 bundles
-            new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
-
             // FoM bundles
             new FOM\CoreBundle\FOMCoreBundle(),
             new FOM\ManagerBundle\FOMManagerBundle(),
