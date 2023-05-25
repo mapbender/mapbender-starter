@@ -27,8 +27,6 @@ security:
             logout:
                 path:   /user/logout
                 target: /
-            # see https://github.com/symfony/symfony/blob/3.4/UPGRADE-3.4.md#securitybundle
-            logout_on_user_change: true
 
     access_control:
         - { path: ^/user/login,    roles: IS_AUTHENTICATED_ANONYMOUSLY }
