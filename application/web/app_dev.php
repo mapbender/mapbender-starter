@@ -1,7 +1,5 @@
 <?php
 
-use Symfony\Component\HttpFoundation\Request;
-
 // If you don't want to setup permissions the proper way, just uncomment the following PHP line
 // read http://symfony.com/doc/current/book/installation.html#configuration-and-setup for more information
 //umask(0000);
@@ -16,13 +14,10 @@ if (!getenv('MB_EXPOSE_DEV') && (isset($_SERVER['HTTP_CLIENT_IP'])
    exit('You are not allowed to access this file. Check '.basename(__FILE__).' for more information.');
 }
 
-$loader = require_once(__DIR__ . '/../app/autoload.php');
-\Symfony\Component\ErrorHandler\Debug::enable();
 
-require_once __DIR__.'/../app/AppKernel.php';
+require_once dirname(__DIR__).'/vendor/autoload_runtime.php';
+require_once dirname(__DIR__).'/app/AppKernel.php';
 
-$kernel = new AppKernel('dev', true);
-$request = Request::createFromGlobals();
-$response = $kernel->handle($request);
-$response->send();
-$kernel->terminate($request, $response);
+return function (array $context) {
+    return new AppKernel($context['APP_ENV'], (bool) $context['APP_DEBUG']);
+};
