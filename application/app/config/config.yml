@@ -12,7 +12,7 @@ framework:
     translator:      { fallback: '%fallback_locale%' }
     secret:          '%secret%'
     router:
-        resource: "%kernel.project_dir%/config/routing.yml"
+        resource: "%kernel.project_dir%/app/config/routing.yml"
         strict_requirements: '%kernel.debug%'
     form:            true
     csrf_protection: true
@@ -24,13 +24,14 @@ framework:
         cookie_lifetime: '%cookie_lifetime%'
     mailer:
         dsn: '%mailer_dsn%'
+    assets:
 
 
 # Twig Configuration
 twig:
     strict_variables: '%kernel.debug%'
     form_themes:
-       - MapbenderCoreBundle:form:fields.html.twig
+       - '@MapbenderCore/form/fields.html.twig'
 
 # Doctrine Configuration
 doctrine:
