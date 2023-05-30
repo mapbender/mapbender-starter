@@ -1,6 +1,5 @@
 #!/usr/bin/env php
 <?php
-
 use Symfony\Bundle\FrameworkBundle\Console\Application;
 
 // if you don't want to setup permissions the proper way, just uncomment the following PHP line
@@ -15,7 +14,6 @@ if (!is_file(dirname(__DIR__).'/vendor/autoload_runtime.php')) {
 }
 
 require_once dirname(__DIR__).'/vendor/autoload_runtime.php';
-require_once __DIR__.'/AppKernel.php';
 
 return function (array $context) {
     $kernel = new AppKernel($context['APP_ENV'], (bool) $context['APP_DEBUG']);

@@ -1,8 +1,12 @@
 <?php
 
-require_once dirname(__DIR__).'/vendor/autoload_runtime.php';
-require_once dirname(__DIR__).'/app/AppKernel.php';
+use Symfony\Component\HttpFoundation\Request;
+$loader = require_once(__DIR__ . '/../app/autoload.php');
 
-return function (array $context) {
-    return new AppKernel('prod', false);
-};
+require_once __DIR__.'/../app/AppKernel.php';
+
+$kernel = new AppKernel('prod', false);
+$request = Request::createFromGlobals();
+$response = $kernel->handle($request);
+$response->send();
+$kernel->terminate($request, $response);
