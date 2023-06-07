@@ -21,10 +21,7 @@
     },
     "require": {
         "php": ">=7.4.0",
-        "symfony/symfony": "^4.4",
 
-
-        "symfony/monolog-bundle": "^3",
         "doctrine/dbal": "^3",
 
         "components/jquery": "^1.11.2",
