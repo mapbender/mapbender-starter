@@ -29,6 +29,7 @@ framework:
 
 # Twig Configuration
 twig:
+    exception_controller: null
     strict_variables: '%kernel.debug%'
     form_themes:
        - '@MapbenderCore/form/fields.html.twig'
