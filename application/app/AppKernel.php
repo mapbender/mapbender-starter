@@ -39,11 +39,6 @@ class AppKernel extends Mapbender\BaseKernel
             new OwsProxy3\CoreBundle\OwsProxy3CoreBundle(),
         );
 
-        // Symfony 3 only. Only required by starter.
-        if (class_exists('\Symfony\Bundle\WebServerBundle\WebServerBundle')) {
-            $bundles[] = new \Symfony\Bundle\WebServerBundle\WebServerBundle();
-        }
-
         // prepend bundles required by Mapbender (including MapbenderCoreBundle)
         $bundles = array_merge(parent::registerBundles(), $bundles);
 
