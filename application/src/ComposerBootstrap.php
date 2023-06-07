@@ -222,9 +222,9 @@ class ComposerBootstrap
     {
         static::printStatus("Import example mapbender applications");
         $fixturePath = 'mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/LoadApplicationData.php';
-        if (@\file_exists(dirname(__FILE__) . "/../{$fixturePath}")) {
+        if (@\file_exists(dirname(__FILE__) . "/../$fixturePath")) {
             // Mapbender <= 3.2.5
-            \passthru("php app/console doctrine:fixtures:load --fixtures={$fixturePath} --append");
+            \passthru("php app/console doctrine:fixtures:load --fixtures=$fixturePath --append");
         } else {
             // Prefer console command on Mapbender >= 3.2.6
             \passthru("php app/console mapbender:application:import " . dirname(__FILE__) . '/../app/config/applications');
@@ -513,7 +513,7 @@ class ComposerBootstrap
 
         // Remove assets
         if(is_dir($assetsPath)){
-            echo `rm -rf "${assetsPath}"`;
+            echo `rm -rf "$assetsPath"`;
         }
         // Copy project files
         echo `cp -rf . $archiveProjectPath`;
@@ -539,14 +539,14 @@ class ComposerBootstrap
         }
 
         // Copy license and readme files
-        echo `find vendor/ -type f -iname "license*" | xargs -I'{}' cp --parents '{}' "${archiveProjectPath}"`;
-        echo `find vendor/ -type f -iname "readme*" | xargs -I'{}' cp --parents '{}' "${archiveProjectPath}"`;
+        echo `find vendor/ -type f -iname "license*" | xargs -I'{}' cp --parents '{}' "$archiveProjectPath"`;
+        echo `find vendor/ -type f -iname "readme*" | xargs -I'{}' cp --parents '{}' "$archiveProjectPath"`;
 
         // Copy project info files
-        echo `cp ../LICENSE "${archiveProjectPath}/"`;
-        echo `cp ../README.md "${archiveProjectPath}/"`;
-        echo `cp ../CONTRIBUTING.md "${archiveProjectPath}/"`;
-        echo `cp ../CHANGELOG.md "${archiveProjectPath}/"`;
+        echo `cp ../LICENSE "$archiveProjectPath/"`;
+        echo `cp ../README.md "$archiveProjectPath/"`;
+        echo `cp ../CONTRIBUTING.md "$archiveProjectPath/"`;
+        echo `cp ../CHANGELOG.md "$archiveProjectPath/"`;
 
         echo "Distributed to: $archiveProjectPath\n";
     }
@@ -586,18 +586,18 @@ class ComposerBootstrap
 
         switch ($archiveFormat) {
             case "zip":
-                echo `cd {$fullArchivePath};zip -r -q -9 ${archiveFileName}.zip $archiveFileName/`;
+                echo `cd {$fullArchivePath};zip -r -q -9 $archiveFileName.zip $archiveFileName/`;
                 break;
             case "exe":
-                echo `cd {$fullArchivePath};zip -r -q -9 ${archiveFileName}.zip $archiveFileName/`;
+                echo `cd {$fullArchivePath};zip -r -q -9 $archiveFileName.zip $archiveFileName/`;
                 `cd $archivePath; wget ftp://ftp.info-zip.org/pub/infozip/win32/unz552xn.exe`;
-                `cd $archivePath; cat unz552xn.exe ${archiveFileName}.zip > ${archiveFileName}.exe`;
+                `cd $archivePath; cat unz552xn.exe $archiveFileName.zip > $archiveFileName.exe`;
                 break;
 
             case "tar.gz":
             default:
-                echo `cd {$fullArchivePath};tar c $archiveFileName/ | gzip --best > ${archiveFileName}.tar.gz`;
+                echo `cd {$fullArchivePath};tar c $archiveFileName/ | gzip --best > $archiveFileName.tar.gz`;
         }
-        echo `du -h "{$fullArchivePath}/${archiveFileName}.${archiveFormat}"`;
+        echo `du -h "{$fullArchivePath}/$archiveFileName.$archiveFormat"`;
     }
 }
