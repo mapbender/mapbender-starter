@@ -1,5 +1,5 @@
-## v3.3.5-RC1
-- Update mapbender/mapbender to [v3.3.5-RC1](https://github.com/mapbender/mapbender/releases/tag/v3.3.5-RC1)
+## v3.3.5-RC2
+- Update mapbender/mapbender to [v3.3.5-RC2](https://github.com/mapbender/mapbender/releases/tag/v3.3.5-RC2)
 - 
 ## v3.3.4
 - Update mapbender/mapbender to [v3.3.4](https://github.com/mapbender/mapbender/releases/tag/v3.3.4)

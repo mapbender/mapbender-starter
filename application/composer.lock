@@ -2089,16 +2089,16 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v3.3.5-RC1",
+            "version": "v3.3.5-RC2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "293569f85bc66e39ae2151500068ae3db0bf3d0d"
+                "reference": "7d66b0a82bed838cf31ece13d5be5642308baaad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/293569f85bc66e39ae2151500068ae3db0bf3d0d",
-                "reference": "293569f85bc66e39ae2151500068ae3db0bf3d0d",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/7d66b0a82bed838cf31ece13d5be5642308baaad",
+                "reference": "7d66b0a82bed838cf31ece13d5be5642308baaad",
                 "shasum": ""
             },
             "require": {
@@ -2122,6 +2122,7 @@
                 "sensio/framework-extra-bundle": "^3 || ^4 || ^5 || ^6",
                 "setasign/fpdf": "^1.8",
                 "setasign/fpdi": "^2",
+                "shuchkin/simplexlsxgen": "^1.3",
                 "symfony/acl-bundle": "^1 || ^2",
                 "symfony/security-acl": "~2.8 || ~3.0",
                 "symfony/swiftmailer-bundle": "^2.3 || ^3",
@@ -2178,9 +2179,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/mapbender/issues",
-                "source": "https://github.com/mapbender/mapbender/tree/v3.3.5-RC1"
+                "source": "https://github.com/mapbender/mapbender/tree/v3.3.5-RC2"
             },
-            "time": "2023-05-11T16:11:37+00:00"
+            "time": "2023-06-26T11:00:16+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -2898,6 +2899,59 @@
                 }
             ],
             "time": "2021-02-11T11:37:01+00:00"
+        },
+        {
+            "name": "shuchkin/simplexlsxgen",
+            "version": "1.3.15",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/shuchkin/simplexlsxgen.git",
+                "reference": "c78750ffe71b3a15da8f75385c8c7ff443c75253"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/shuchkin/simplexlsxgen/zipball/c78750ffe71b3a15da8f75385c8c7ff443c75253",
+                "reference": "c78750ffe71b3a15da8f75385c8c7ff443c75253",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "ext-zlib": "*",
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/SimpleXLSXGen.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergey Shuchkin (SMSPILOT)",
+                    "email": "sergey.shuchkin@gmail.com",
+                    "homepage": "https://shuchkin.ru/"
+                }
+            ],
+            "description": "Export data to Excel XLSx file. PHP XLSX generator.",
+            "homepage": "https://github.com/shuchkin/simplexlsxgen",
+            "keywords": [
+                "backend",
+                "creator",
+                "excel",
+                "generator",
+                "php",
+                "writer",
+                "xlsx"
+            ],
+            "support": {
+                "issues": "https://github.com/shuchkin/simplexlsxgen/issues",
+                "source": "https://github.com/shuchkin/simplexlsxgen/tree/1.3.15"
+            },
+            "time": "2023-04-19T08:27:21+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
