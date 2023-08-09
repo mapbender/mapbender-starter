@@ -37,7 +37,8 @@
         "components/font-awesome": "^4.0",
         "wheregroup/cookieconsent": "^3",
         "wheregroup/sassc-binaries": "^0.0.1",
-        "components/bootstrap": "^3"
+        "components/bootstrap": "^3",
+        "symfony/flex": "*"
     },
     "replace": {
         "robloach/component-installer": "^0.2"
@@ -92,7 +93,11 @@
         "build": [
             "ComposerBootstrap::distribute",
             "ComposerBootstrap::build"
-        ]
+        ],
+        "auto-scripts": {
+            "cache:clear": "symfony-cmd",
+            "assets:install %PUBLIC_DIR%": "symfony-cmd"
+        }
     },
     "scripts-descriptions": {
         "bootstrap-database": "Reinitializes database schema and contents after connection configuration change"
@@ -109,9 +114,11 @@
             "mapbender/*": "source",
             "wheregroup/*": "source"
         },
+        "sort-packages": true,
         "allow-plugins": {
             "mnsami/composer-custom-directory-installer": true,
-            "symfony/runtime": true
+            "symfony/runtime": true,
+            "symfony/flex": true
         }
     },
     "minimum-stability": "dev",
@@ -126,6 +133,9 @@
             "mapbender/": ["mapbender/mapbender"],
             "vendor/igosuki/compass-mixins": ["wheregroup/compass-mixins"],
             "web/components/datatables/": ["datatables/datatables"]
+        },
+        "symfony": {
+            "allow-contrib": true
         }
     },
     "repositories": [
