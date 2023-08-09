@@ -90,7 +90,7 @@ in printing), but it allows some quick testing before you set up a production-gr
 The server is started like this:
 ```sh
 cd application
-app/console server:run
+bin/console server:run
 ```
 
 The URL is shown in the output:
@@ -101,7 +101,7 @@ Server running on http://localhost:8000
 ## Changing root account password
 From the application directory run:
 ```sh
-app/console fom:user:resetroot
+bin/console fom:user:resetroot
 ```
 
 ## Issues

@@ -1,11 +1,11 @@
-*/app/cache
-*/app/logs
+*/var/cache
+*/var/logs
 */web/uploads
 
 !*/web/uploads/mapbender_user
 !*/web/uploads/mapbender_user_basic
 */app/config/parameters.yml
-*/app/bootstrap.php.cache
+*/var/bootstrap.php.cache
 */vendor
 *.tar.gz
 *.rpm

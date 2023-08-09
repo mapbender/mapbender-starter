@@ -28,7 +28,7 @@ class ComposerBootstrap
     {
         static::ensureConfig();
         $status = null;
-        passthru("php app/console doctrine:schema:create", $status);
+        passthru("php bin/console doctrine:schema:create", $status);
         if ($status === 0) {
             `php app/console mapbender:database:init -v`;
             static::resetRootLogin();
@@ -92,7 +92,7 @@ class ComposerBootstrap
      */
     public static function clearCache()
     {
-        $cacheRoot = \getenv('MB_CACHE_DIR') ?: dirname(__FILE__) . '/../app/cache';
+        $cacheRoot = \getenv('MB_CACHE_DIR') ?: dirname(__FILE__) . '/../var/cache';
         $fs = new \Symfony\Component\Filesystem\Filesystem(); // NOTE: built into composer phar
         static::printStatus("Clear cache");
         foreach (glob($cacheRoot . "/*/*") as $path) {
@@ -143,8 +143,8 @@ class ComposerBootstrap
         if (!static::isWindows()) {
             static::printStatus("Enable write cache, logs and upload for user and user group");
 
-            echo `chmod -R ug+wX app/cache`;
-            echo `chmod -R ug+wX app/logs`;
+            echo `chmod -R ug+wX var/cache`;
+            echo `chmod -R ug+wX var/logs`;
             echo `chmod -R ug+wX web/uploads`;
         }
     }
@@ -532,8 +532,8 @@ class ComposerBootstrap
                      "web/app_test.php",
                      "web/index.php",
 
-                     "app/cache/*",
-                     "app/logs/*",
+                     "var/cache/*",
+                     "var/logs/*",
                  ) as $path) {
             echo `rm -rf $archiveProjectPath/{$path}`;
         }
