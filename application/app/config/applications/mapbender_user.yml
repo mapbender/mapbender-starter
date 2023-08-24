@@ -76,7 +76,7 @@ parameters:
                 overview:
                     osm_overview:
                         class: Mapbender\WmsBundle\Entity\WmsInstance
-                        title: 2o OSM Demo
+                        title: OSM Demo
                         url: https://osm-demo.wheregroup.com/service
                         version: 1.3.0
                         layers:
@@ -135,7 +135,7 @@ parameters:
                         class: Mapbender\CoreBundle\Element\Button
                         label: true
                         target: legend
-                        icon: iconLegend                                          
+                        icon: iconLegend
                     wmsloader-button:
                         class: Mapbender\CoreBundle\Element\Button
                         label: true
@@ -181,7 +181,7 @@ parameters:
                         label: true
                     simplesearch:
                         title: mb.core.simplesearch.class.title
-                        placeholder: 'Addresse eintragen...'
+                        placeholder: 'Adresse eintragen...'
                         class: Mapbender\CoreBundle\Element\SimpleSearch
                         target: map
                         query_url: 'http://geodaten.metropoleruhr.de/suche?wt=json&indent=true&rows=10'                        
@@ -355,7 +355,7 @@ parameters:
                         target: map
                         srsList: []
                         addMapSrsList: true
-                        zoomlevel: 6               
+                        zoomlevel: 6
                     html-about-mapbender:
                         title: 'Über Mapbender'
                         class: Mapbender\CoreBundle\Element\HTMLElement
@@ -379,13 +379,13 @@ parameters:
                         target: map
                     applicationswitcher:
                         class: Mapbender\CoreBundle\Element\ApplicationSwitcher
-                        applications: [mapbender_user, mapbender_user_basic]                      
+                        applications: [mapbender_user, mapbender_user_basic]
                     copyrightButton:
                         title: © OpenStreetMap contributors
                         tooltip: © OpenStreetMap contributors
                         class: Mapbender\CoreBundle\Element\Button
                         label: true
-                        click: https://www.openstreetmap.org/copyright                       
+                        click: https://www.openstreetmap.org/copyright
                     HTML:
                         title: HTML-powered by Mapbender
                         class: Mapbender\CoreBundle\Element\HTMLElement
