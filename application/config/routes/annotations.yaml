@@ -1,7 +1,24 @@
-controllers:
-    resource: ../../src/Controller/
+mapbender_start:
+    path: "/"
+    defaults: { _controller: Mapbender\CoreBundle\Controller\WelcomeController::listAction}
+
+mapbender_corebundle:
+    resource: "@MapbenderCoreBundle/Controller/"
     type: annotation
 
-kernel:
-    resource: ../../src/Kernel.php
+mapbender_managerbundle:
+    resource: "@MapbenderManagerBundle/Controller/"
+    type: annotation
+
+mapbender_coordinatesutilitybundle:
+    resource: "@MapbenderCoordinatesUtilityBundle/Controller/"
+    type: annotation
+
+fom_userbundle:
+    resource: "@FOMUserBundle/Controller"
+    type: annotation
+
+ows_corebundle:
+    resource: "@OwsProxy3CoreBundle/Controller/"
+    prefix: "/owsproxy"
     type: annotation

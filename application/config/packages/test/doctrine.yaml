@@ -1,4 +1,10 @@
 doctrine:
     dbal:
-        # "TEST_TOKEN" is typically set by ParaTest
-        dbname: 'main_test%env(default::TEST_TOKEN)%'
+        driver:   pdo_sqlite
+        path:     '%kernel.cache_dir%/%kernel.environment%.sqlite'
+        memory:   true
+        charset:  UTF8
+
+    orm:
+        auto_generate_proxy_classes: '%kernel.debug%'
+        auto_mapping: true

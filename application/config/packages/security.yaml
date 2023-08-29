@@ -2,13 +2,31 @@ security:
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
         users_in_memory: { memory: null }
+        main:
+            entity:
+                class: FOM\UserBundle\Entity\User
+                property: username
+
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
+        login:
+            pattern:  ^/user/login$
+            security: false
         main:
             anonymous: lazy
             provider: users_in_memory
+        secured_area:
+            pattern:    ^/
+            anonymous: ~
+            form_login:
+                check_path: /user/login/check
+                login_path: /user/login
+                csrf_token_generator: security.csrf.token_manager
+            logout:
+                path:   /user/logout
+                target: /
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#firewalls-authentication
@@ -19,5 +37,7 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-        # - { path: ^/admin, roles: ROLE_ADMIN }
-        # - { path: ^/profile, roles: ROLE_USER }
+        - { path: ^/user/login,    roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/manager,       roles: ROLE_USER }
+    encoders:
+        FOM\UserBundle\Entity\User: sha512
