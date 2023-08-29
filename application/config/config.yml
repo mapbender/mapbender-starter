@@ -51,6 +51,18 @@ doctrine:
                 charset:  UTF8
                 logging: '%kernel.debug%'
                 profiling: '%kernel.debug%'
+            geodata_db:
+                driver:   '%database2_driver%'
+                host:     '%database2_host%'
+                port:     '%database2_port%'
+                dbname:   '%database2_name%'
+                path:     '%database2_path%'
+                user:     '%database2_user%'
+                password: '%database2_password%'
+                persistent: true
+                charset:  UTF8
+                logging: '%kernel.debug%'
+                profiling: '%kernel.debug%'
     orm:
         auto_generate_proxy_classes: '%kernel.debug%'
         auto_mapping: true

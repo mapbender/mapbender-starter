@@ -1,6 +1,5 @@
 <?php
 
-
 /**
  * Partial reimplementation of (abandoned, Composer 2 incompatible) robloach/component-installer package
  * @see https://packagist.org/packages/robloach/component-installer

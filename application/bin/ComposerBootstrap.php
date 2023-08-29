@@ -1,9 +1,7 @@
 <?php
+
 use Composer\Script\Event;
 
-/**
- * Class ScriptHandler
- */
 class ComposerBootstrap
 {
     /**
@@ -30,7 +28,7 @@ class ComposerBootstrap
         $status = null;
         passthru("php bin/console doctrine:schema:create", $status);
         if ($status === 0) {
-            `php app/console mapbender:database:init -v`;
+            `php bin/console mapbender:database:init -v`;
             static::resetRootLogin();
         }
     }
@@ -180,9 +178,9 @@ class ComposerBootstrap
      */
     protected static function resetRootLogin($userName = "root", $password = "root", $userEmail = "root@localhost")
     {
-        $userName  = escapeshellarg($userName);
+        $userName = escapeshellarg($userName);
         $userEmail = escapeshellarg($userEmail);
-        $password  = escapeshellarg($password);
+        $password = escapeshellarg($password);
 
         static::printStatus("Reset user password");
 
@@ -473,25 +471,25 @@ class ComposerBootstrap
     public static function distribute($e)
     {
         /** @var \Composer\Package\RootPackage $package */
-        $package         = $e->getComposer()->getPackage();
-        $config          = $package->getConfig();
-        $archiveName     = current(array_slice(explode("/", $package->getName()), -1));
-        $archiveFormat   = $config["archive-format"];
-        $archivePath     = $config["archive-dir"];
+        $package = $e->getComposer()->getPackage();
+        $config = $package->getConfig();
+        $archiveName = current(array_slice(explode("/", $package->getName()), -1));
+        $archiveFormat = $config["archive-format"];
+        $archivePath = $config["archive-dir"];
         $archiveVersion = static::getVersion('git', 'v');
 
         // Overwrite archive format, name and version if given
         $arguments = $e->getArguments();
 
-        if(isset($arguments[0]) ){
+        if (isset($arguments[0])) {
             $archiveFormat = $arguments[0];
         }
 
-        if(isset($arguments[1]) ){
+        if (isset($arguments[1])) {
             $archiveName = $arguments[1];
         }
 
-        if(isset($arguments[2]) ){
+        if (isset($arguments[2])) {
             $archiveVersion = $arguments[2];
         }
 
@@ -507,12 +505,12 @@ class ComposerBootstrap
             static::installSymLinkAssets();
         }
 
-        $fullArchivePath    = realpath($archivePath);
+        $fullArchivePath = realpath($archivePath);
         $archiveProjectPath = "$fullArchivePath/$archiveFileName";
-        $assetsPath         = $archiveProjectPath . "/web/bundles";
+        $assetsPath = $archiveProjectPath . "/web/bundles";
 
         // Remove assets
-        if(is_dir($assetsPath)){
+        if (is_dir($assetsPath)) {
             echo `rm -rf "$assetsPath"`;
         }
         // Copy project files
@@ -558,25 +556,25 @@ class ComposerBootstrap
     public static function build($e)
     {
         /** @var \Composer\Package\RootPackage $package */
-        $package         = $e->getComposer()->getPackage();
-        $config          = $package->getConfig();
-        $archiveName     = current(array_slice(explode("/", $package->getName()), -1));
-        $archiveFormat   = $config["archive-format"];
-        $archivePath     = $config["archive-dir"];
+        $package = $e->getComposer()->getPackage();
+        $config = $package->getConfig();
+        $archiveName = current(array_slice(explode("/", $package->getName()), -1));
+        $archiveFormat = $config["archive-format"];
+        $archivePath = $config["archive-dir"];
         $archiveVersion = static::getVersion('git', 'v');
 
         // Overwrite archive format, name and version if given
         $arguments = $e->getArguments();
 
-        if(isset($arguments[0]) ){
+        if (isset($arguments[0])) {
             $archiveFormat = $arguments[0];
         }
 
-        if(isset($arguments[1]) ){
+        if (isset($arguments[1])) {
             $archiveName = $arguments[1];
         }
 
-        if(isset($arguments[2]) ){
+        if (isset($arguments[2])) {
             $archiveVersion = $arguments[2];
         }
 
