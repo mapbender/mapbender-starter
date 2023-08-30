@@ -122,7 +122,7 @@ class ComposerBootstrap
      */
     public static function installHardCopyAssets()
     {
-        echo `php app/console assets:install web`;
+        echo `php app/console assets:install public`;
     }
 
     /**
@@ -130,7 +130,7 @@ class ComposerBootstrap
      */
     public static function installSymLinkAssets()
     {
-        echo `php app/console assets:install web --symlink --relative `;
+        echo `php app/console assets:install public --symlink --relative `;
     }
 
     /**
@@ -143,7 +143,7 @@ class ComposerBootstrap
 
             echo `chmod -R ug+wX var/cache`;
             echo `chmod -R ug+wX var/logs`;
-            echo `chmod -R ug+wX web/uploads`;
+            echo `chmod -R ug+wX public/uploads`;
         }
     }
 
@@ -507,7 +507,7 @@ class ComposerBootstrap
 
         $fullArchivePath = realpath($archivePath);
         $archiveProjectPath = "$fullArchivePath/$archiveFileName";
-        $assetsPath = $archiveProjectPath . "/web/bundles";
+        $assetsPath = $archiveProjectPath . "/public/bundles";
 
         // Remove assets
         if (is_dir($assetsPath)) {
@@ -524,12 +524,8 @@ class ComposerBootstrap
 
         foreach (array(
                      "vendor/mapbender/documentation",
-
                      "vendor/phpunit",
-
-                     "web/app_test.php",
-                     "web/index.php",
-
+                     "public/index.php",
                      "var/cache/*",
                      "var/logs/*",
                  ) as $path) {
