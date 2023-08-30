@@ -19,11 +19,10 @@ security:
             security: false
         secured_area:
             pattern:    ^/
-            anonymous: ~
             form_login:
                 check_path: /user/login/check
                 login_path: /user/login
-                csrf_token_generator: security.csrf.token_manager
+                enable_csrf: true
             logout:
                 path:   /user/logout
                 target: /
