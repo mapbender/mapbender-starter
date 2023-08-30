@@ -21,4 +21,5 @@ return [
     Mapbender\ManagerBundle\MapbenderManagerBundle::class => ['all' => true],
     Mapbender\PrintBundle\MapbenderPrintBundle::class => ['all' => true],
     Mapbender\MobileBundle\MapbenderMobileBundle::class => ['all' => true],
+    Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle::class => ['all' => true],
 ];
