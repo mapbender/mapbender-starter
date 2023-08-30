@@ -7,3 +7,7 @@ twig:
     exception_controller: null
     form_themes:
        - '@MapbenderCore/form/fields.html.twig'
+
+when@test:
+    twig:
+        strict_variables: true
