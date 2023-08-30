@@ -1,5 +1,7 @@
 twig:
     default_path: '%kernel.project_dir%/templates'
+    paths:
+        '%kernel.project_dir%/mapbender/src/Mapbender/CoreBundle': MapbenderCoreBundle
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
     exception_controller: null
