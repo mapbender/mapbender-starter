@@ -23,7 +23,6 @@ doctrine:
         naming_strategy: doctrine.orm.naming_strategy.default
         auto_mapping: true
 
-
 # Should be used when Oracle Server default environment does not match the Doctrine requirements.
 # The following environment variables are required for the Doctrine default date format:
 # NLS_TIME_FORMAT="HH24:MI:SS"
@@ -37,3 +36,28 @@ doctrine:
 #    class: Doctrine\DBAL\Event\Listeners\OracleSessionInit
 #    tags:
 #     - { name: doctrine.event_listener, event: postConnect }
+
+when@test:
+    doctrine:
+        dbal:
+            # "TEST_TOKEN" is typically set by ParaTest
+            dbname_suffix: '_test%env(default::TEST_TOKEN)%'
+
+when@prod:
+    doctrine:
+        orm:
+            proxy_dir: '%kernel.build_dir%/doctrine/orm/Proxies'
+            query_cache_driver:
+                type: pool
+                pool: doctrine.system_cache_pool
+            result_cache_driver:
+                type: pool
+                pool: doctrine.result_cache_pool
+
+    framework:
+        cache:
+            pools:
+                doctrine.result_cache_pool:
+                    adapter: cache.app
+                doctrine.system_cache_pool:
+                    adapter: cache.system
