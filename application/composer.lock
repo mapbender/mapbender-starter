@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "12f6ad739129f06e5239c204bb6c28a4",
+    "content-hash": "da4e9a0327f269943e71265c64377a9e",
     "packages": [
         {
             "name": "assetic/framework",
@@ -1692,12 +1692,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "a0c803383c850bc827f0ebed5c0a7528f6539739"
+                "reference": "1d0bf0552e53f0f6d87e754313cbf931050de41b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/a0c803383c850bc827f0ebed5c0a7528f6539739",
-                "reference": "a0c803383c850bc827f0ebed5c0a7528f6539739",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/1d0bf0552e53f0f6d87e754313cbf931050de41b",
+                "reference": "1d0bf0552e53f0f6d87e754313cbf931050de41b",
                 "shasum": ""
             },
             "require": {
@@ -1727,6 +1727,7 @@
                 "symfony/debug-bundle": "^5.4",
                 "symfony/dependency-injection": "^5.4",
                 "symfony/doctrine-bridge": "^5.4",
+                "symfony/dotenv": "^5.4",
                 "symfony/error-handler": "^5.4",
                 "symfony/event-dispatcher": "^5.4",
                 "symfony/filesystem": "^5.4",
@@ -1743,6 +1744,7 @@
                 "symfony/monolog-bundle": "^3",
                 "symfony/options-resolver": "^5.4",
                 "symfony/routing": "^5.4",
+                "symfony/runtime": "^5.4",
                 "symfony/security-acl": "~3.0",
                 "symfony/security-bundle": "^5.4",
                 "symfony/security-core": "^5.4",
@@ -1783,9 +1785,6 @@
                 "mapbender/fom": "*",
                 "mapbender/owsproxy": "3.3.*"
             },
-            "require-dev": {
-                "symfony/dotenv": "^5.4"
-            },
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1816,7 +1815,7 @@
                 "issues": "https://github.com/mapbender/mapbender/issues",
                 "source": "https://github.com/mapbender/mapbender/tree/work/remove-deprecations"
             },
-            "time": "2023-08-30T10:47:19+00:00"
+            "time": "2023-08-30T11:49:48+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
