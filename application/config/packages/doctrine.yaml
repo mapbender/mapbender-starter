@@ -1,7 +1,5 @@
 doctrine:
     dbal:
-        url: '%env(resolve:DATABASE_URL)%'
-
         default_connection: default
         connections:
             default:
@@ -16,18 +14,6 @@ doctrine:
                 charset:  UTF8
                 logging: '%kernel.debug%'
                 profiling: '%kernel.debug%'
-            geodata_db:
-                driver:   '%database2_driver%'
-                host:     '%database2_host%'
-                port:     '%database2_port%'
-                dbname:   '%database2_name%'
-                path:     '%database2_path%'
-                user:     '%database2_user%'
-                password: '%database2_password%'
-                persistent: true
-                charset:  UTF8
-                logging: '%kernel.debug%'
-                profiling: '%kernel.debug%'
 
         # IMPORTANT: You MUST configure your server version,
         # either here or in the DATABASE_URL env var (see .env file)
@@ -36,3 +22,18 @@ doctrine:
         auto_generate_proxy_classes: '%kernel.debug%'
         naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
         auto_mapping: true
+
+
+# Should be used when Oracle Server default environment does not match the Doctrine requirements.
+# The following environment variables are required for the Doctrine default date format:
+# NLS_TIME_FORMAT="HH24:MI:SS"
+# NLS_DATE_FORMAT="YYYY-MM-DD HH24:MI:SS"
+# NLS_TIMESTAMP_FORMAT="YYYY-MM-DD HH24:MI:SS"
+# NLS_TIMESTAMP_TZ_FORMAT="YYYY-MM-DD HH24:MI:SS TZH:TZM
+# See http://www.doctrine-project.org/api/dbal/2.0/class-Doctrine.DBAL.Event.Listeners.OracleSessionInit.html
+
+#services:
+#  oracle.session.listener:
+#    class: Doctrine\DBAL\Event\Listeners\OracleSessionInit
+#    tags:
+#     - { name: doctrine.event_listener, event: postConnect }

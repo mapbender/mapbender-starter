@@ -1,7 +1,6 @@
 security:
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
-        users_in_memory: { memory: null }
         main:
             entity:
                 class: FOM\UserBundle\Entity\User
@@ -9,14 +8,11 @@ security:
 
     firewalls:
         dev:
-            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            pattern: ^/(_(profiler|wdt)|css|images|js|components)/
             security: false
         login:
             pattern:  ^/user/login$
             security: false
-        main:
-            anonymous: lazy
-            provider: users_in_memory
         secured_area:
             pattern:    ^/
             anonymous: ~

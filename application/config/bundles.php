@@ -31,7 +31,7 @@ return [
     Mapbender\MobileBundle\MapbenderMobileBundle::class => ['all' => true],
 
     // Mapbender extensions
-    //Mapbender\CoordinatesUtilityBundle\MapbenderCoordinatesUtilityBundle::class => ['all' => true],
+    Mapbender\CoordinatesUtilityBundle\MapbenderCoordinatesUtilityBundle::class => ['all' => true],
     //Mapbender\DataManagerBundle\MapbenderDataManagerBundle::class => ['all' => true],
     //Mapbender\DataSourceBundle\MapbenderDataSourceBundle::class => ['all' => true],
     //Mapbender\DigitizerBundle\MapbenderDigitizerBundle::class => ['all' => true],

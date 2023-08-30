@@ -1,18 +1,3 @@
-imports:
-    - { resource: parameters.yml }
-#Uncomment then next line if you have problems using an oracle database with mapbender.
-#   - { resource: oracle.yml }
-
-# FOM Manager Configuration
-fom_manager:
-    route_prefix: /manager
-
-# see https://github.com/mapbender/fom/blob/master/src/FOM/UserBundle/CONFIGURATION.md#extension-configuration
-fom_user:
-    selfregister: false
-    reset_password: true
-    max_reset_time: 1
-
 # see https://github.com/mapbender/owsproxy3/blob/master/CONFIGURATION.md#extension-configuration
 ows_proxy3_core:
     logging: '%ows_proxy3_logging%'
@@ -26,4 +11,3 @@ ows_proxy3_core:
         password: '%ows_proxy3_password%'
         checkssl: true
         noproxy: '%ows_proxy3_noproxy%'
-
