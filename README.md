@@ -12,7 +12,7 @@ For detailed usage information, including installation and integration topics, p
 
 ## Requirements
 
-Mapbender requires PHP 7.4, OpenSSL, curl, bzip2 decompression and the following php extensions:
+Mapbender requires PHP 8.0, OpenSSL, curl, bzip2 decompression and the following php extensions:
 * zip
 * curl
 * gd
@@ -69,11 +69,6 @@ cd mapbender-starter
 ./bootstrap
 ```
 
-> :warning: While mapbender is compatible with PHP 8.2, bootstrap will fail due to outdated 
-> PHP version constraints in a third-party library. A temporary workaround until the next major relase:
-> Install PHP 8.1 alongside your PHP 8.2 installation and in the `bootstrap` file
-> replace the `php` commands at the start of lines 4 to 8 with `/usr/bin/php8.1` (or your custom installation path)
-
 The bootstrap command performs the following required setup tasks for you:
 * installs userland dependencies (via composer)
 * creates a parameters.yml by copying the bundled parameters.yml.dist
@@ -115,8 +110,9 @@ Pre-packaged archives bundling all code dependencies are available at our [downl
 
 ## Other versions
 
-|Mapbender release line|PHP versions|Bundled Symfony version|Bundled composer version|
-|----|----|----|----|
-|3.0.8 (end of life)|>=5.5, <=7.2|2.8LTS (end of life)|1.6.x|
-|3.2|\>=7.1, <=7.4|3.4LTS (end of life)|1.10.x|
-|3.3|\>=7.4|4.4LTS|2.1.x|
+| Mapbender release line | PHP versions  | Bundled Symfony version |Bundled composer version|
+|------------------------|---------------|-------------------------|----|
+| 3.0.8 (end of life)    | >=5.5, <=7.2  | 2.8LTS (end of life)    |1.6.x|
+| 3.2                    | \>=7.1, <=7.4 | 3.4LTS (end of life)    |1.10.x|
+| 3.3                    | \>=7.4        | 4.4LTS                  |2.1.x|
+| 4.0                    | \>=8.0        | 5.4LTS                  |2.1.x|
