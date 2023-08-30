@@ -3,14 +3,11 @@ parameters:
         mapbender_user:
             title: Mapbender Demo
             screenshot: screenshot.png
-            description: Full desktop demo application, showing all default Mapbender elements
+            description: Mapbender demo application showing many elements in action
             published: true
             persistentView: false
             template:  Mapbender\CoreBundle\Template\Fullscreen
-            custom_css: |
-              .toolBar.top {
-                border-bottom: 3px solid #009ee0;
-              }            
+            custom_css: ~
             regionProperties:
               - name: sidepane
                 properties:
@@ -334,7 +331,6 @@ parameters:
                         allowAnonymousSave: false 
                         showDate: true        
                     sketch:
-                        title: Skizzen Tool
                         class: Mapbender\CoreBundle\Element\Sketch
                         target: map
                         geometrytypes:
@@ -350,14 +346,12 @@ parameters:
                         colors: ["#FFFFFF","#cf003d","#ccd22a","#00837e","#009ee0","#000000"]
                         allow_custom_color: false       
                     coordinatesutility:
-                        title: Koordinaten Utility
                         class: Mapbender\CoordinatesUtilityBundle\Element\CoordinatesUtility
                         target: map
                         srsList: []
                         addMapSrsList: true
                         zoomlevel: 6
                     html-about-mapbender:
-                        title: 'Über Mapbender'
                         class: Mapbender\CoreBundle\Element\HTMLElement
                         classes: html-element-inline
                         content: "<p><b>Anwendungstitel:</b><br> {{ application.title }}</p><br><p>Mapbender is part of </p><p><a href=\"https://www.osgeo.org/projects/mapbender/\" target=\"_blank\"><img src=\"https://www.osgeo.org/wp-content/themes/roots/assets/img/logo-osgeo.svg\" alt=\"OSGeo Project\"  title=\"OSGeo Project\" width=\"100px\" /></a></p><p><br>Find out more about OSGeo at: <br/><a href=\"https://www.osgeo.org\" target=\"_blank\">https://www.osgeo.org</a><br/><a href=\"https://www.osgeo.org/projects/mapbender/\" target=\"_blank\">https://www.osgeo.org/projects/mapbender/</a>"
@@ -392,7 +386,5 @@ parameters:
                         content: '<span style="color: #009ee0; font-weight:bold">powered by Mapbender</span>'
                         classes: html-element-inline
                     about:
-                        title: mb.core.aboutdialog.tag.about
-                        tooltip: mb.core.aboutdialog.tag.about
                         label: false
                         class: Mapbender\CoreBundle\Element\AboutDialog   
