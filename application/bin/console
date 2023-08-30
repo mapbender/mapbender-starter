@@ -1,6 +1,7 @@
 #!/usr/bin/env php
 <?php
 
+use App\Kernel;
 use Symfony\Bundle\FrameworkBundle\Console\Application;
 
 if (!is_file(dirname(__DIR__).'/vendor/autoload_runtime.php')) {
@@ -9,15 +10,8 @@ if (!is_file(dirname(__DIR__).'/vendor/autoload_runtime.php')) {
 
 require_once dirname(__DIR__).'/vendor/autoload_runtime.php';
 
-$kernelClass = $_ENV['KERNEL_CLASS'];
-if (!$kernelClass) {
-    throw new Exception("KERNEL_CLASS environment variable not found. Please add the FQCN of your Kernel class to your .env file");
-}
-if (!class_exists($kernelClass)) {
-    throw new Exception("KERNEL_CLASS environment variable does not refer to an existing class. Check the spelling and make sure composer autoload is setup correctly.");
-}
+return function (array $context) {
+    $kernel = new Kernel($context['APP_ENV'], (bool) $context['APP_DEBUG']);
 
-return function (array $context) use ($kernelClass) {
-    $kernel = new $kernelClass($context['APP_ENV'], (bool) $context['APP_DEBUG']);
     return new Application($kernel);
 };
