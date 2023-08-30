@@ -27,18 +27,6 @@
             "src/Repository/.gitignore"
         ]
     },
-    "mapbender/coordinates-utility": {
-        "version": "1.2.7"
-    },
-    "mapbender/data-manager": {
-        "version": "2.0.8"
-    },
-    "mapbender/data-source": {
-        "version": "0.2.8"
-    },
-    "mapbender/digitizer": {
-        "version": "1.5.7"
-    },
     "phpunit/phpunit": {
         "version": "9.6",
         "recipe": {
