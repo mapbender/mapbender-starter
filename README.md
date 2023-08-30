@@ -1,4 +1,4 @@
-![Mapbender](./application/app/Resources/public/image/Mapbender-logo.png)
+![Mapbender](./application/web/image/Mapbender-logo.png)
 
 Mapbender is a web based geoportal framework.
 
@@ -77,7 +77,7 @@ cd mapbender-starter
 The bootstrap command performs the following required setup tasks for you:
 * installs userland dependencies (via composer)
 * creates a parameters.yml by copying the bundled parameters.yml.dist
-* performs the necessary database setup (as an sqlite file in `application/app/db/demo.sqlite`)
+* performs the necessary database setup (as an sqlite file in `application/var/db/demo.sqlite`)
 * creates a root account with a default password `root` (which you should change later)
 
 The full setup processes is only needed once. If you invoke it again, nothing of consequence will happen.
