@@ -157,7 +157,8 @@ parameters:
                     gps-button:
                         class: Mapbender\CoreBundle\Element\GpsPosition
                         label: true
-                        target: map                              
+                        target: map
+                        screenType: mobile                              
                     poiButton:
                         class: Mapbender\CoreBundle\Element\Button
                         icon: iconPoi
@@ -168,6 +169,7 @@ parameters:
                         label: true
                         icon: iconPrint
                         target: printclient
+                        screenType: desktop
                     imageexport-button:
                         class: Mapbender\CoreBundle\Element\Button
                         label: true
@@ -176,6 +178,11 @@ parameters:
                     shareUrl:
                         class: Mapbender\CoreBundle\Element\ShareUrl
                         label: true
+                    copyrightButton:
+                        class: Mapbender\CoreBundle\Element\Button
+                        icon: iconCopyright
+                        label: true
+                        target: copyright
                     simplesearch:
                         title: mb.core.simplesearch.class.title
                         placeholder: 'Adresse eintragen...'
@@ -244,10 +251,14 @@ parameters:
                         class: Mapbender\PrintBundle\Element\PrintClient
                         target: map
                         templates:
-                            - { template: a4portrait, label: A4 Portrait}
                             - { template: a4landscape, label: A4 Landscape}
-                            - { template: a3portrait, label: A3 Portrait}
+                            - { template: a4_landscape_offical, label: A4 Landscape Official}
+                            - { template: a4portrait, label: A4 Portrait}
+                            - { template: a4_portrait_offical, label: A4 Portrait Official}
                             - { template: a3landscape, label: A3 Landscape}
+                            - { template: a3_landscape_offical, label: A3 Landscape Official}
+                            - { template: a3portrait, label: A3 Portrait}
+                            - { template: a3_portrait_offical, label: A3 Portrait Official}
                         legend_default_behaviour: false
                         optional_fields:
                             title:
@@ -271,12 +282,6 @@ parameters:
                         fontSize: 14
                         strokeWidth: 4
                         strokeWidthWhileDrawing: 3
-                    scalebar:
-                        class: Mapbender\CoreBundle\Element\ScaleBar
-                        target: map
-                        anchor: 'left-bottom'
-                        maxWidth: 200
-                        units: km
                     overview:
                         class: Mapbender\CoreBundle\Element\Overview
                         target: map
@@ -285,6 +290,12 @@ parameters:
                         width: 300
                         height: 150
                         screenType: desktop
+                    scalebar:
+                        class: Mapbender\CoreBundle\Element\ScaleBar
+                        target: map
+                        anchor: 'right-bottom'
+                        maxWidth: 200
+                        units: km                        
                     scaledisplay:
                         class: Mapbender\CoreBundle\Element\ScaleDisplay
                         target: map
@@ -296,6 +307,13 @@ parameters:
                         target: map
                         body: 'Bitte werfen Sie einen Blick auf diesen POI'
                         useMailto: false
+                    copyright:
+                        class: Mapbender\CoreBundle\Element\Copyright
+                        title: Copyright
+                        popupWidth: 500
+                        popupHeight: auto
+                        content: "Welcome to the Mapbender Demo."
+                        autoOpen: true
                 sidepane:
                     layertree:
                         class: Mapbender\CoreBundle\Element\Layertree
