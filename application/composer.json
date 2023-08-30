@@ -128,7 +128,7 @@
         "installer-paths":{
             "mapbender/": ["mapbender/mapbender"],
             "vendor/igosuki/compass-mixins": ["wheregroup/compass-mixins"],
-            "web/components/datatables/": ["datatables/datatables"]
+            "public/components/datatables/": ["datatables/datatables"]
         },
         "symfony": {
             "allow-contrib": true,
