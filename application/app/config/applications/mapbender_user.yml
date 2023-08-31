@@ -234,7 +234,7 @@ parameters:
                     map:
                         class: Mapbender\CoreBundle\Element\Map
                         layersets: [Themen,Hintergrundthemen]
-                        srs: 'EPSG:3857'
+                        srs: EPSG:3857
                         extents:
                             start: [772933.16,6566826.23,806786.66,6582317.62]
                             max: [-15538711.096309232,-20037508.34278924,18807214.096747715,20037508.34278924]
@@ -370,7 +370,7 @@ parameters:
                         publicEntries: ro
                         privateEntries: true
                         allowAnonymousSave: false 
-                        showDate: true        
+                        showDate: true
                     sketch:
                         class: Mapbender\CoreBundle\Element\Sketch
                         target: map
@@ -428,5 +428,7 @@ parameters:
                         content: '<span style="color: #009ee0; font-weight:bold">powered by Mapbender</span>'
                         classes: html-element-inline
                     about:
+                        title: mb.core.aboutdialog.tag.about
+                        tooltip: mb.core.aboutdialog.tag.about
                         label: false
-                        class: Mapbender\CoreBundle\Element\AboutDialog   
+                        class: Mapbender\CoreBundle\Element\AboutDialog
