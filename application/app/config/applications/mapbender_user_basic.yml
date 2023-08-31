@@ -1,44 +1,88 @@
 parameters:
     applications:
         mapbender_user_basic:
-            title: Basic demo
+            title: Mapbender Basic Demo
             screenshot: screenshot.png
-            description: Simple desktop application
+            description: Mapbender demo application with no sidepane, floating search and custom css showing many elements in action
             published: true
+            persistentView: false
             template:  Mapbender\CoreBundle\Template\Fullscreen
             custom_css: |
               .toolBar.top {
-                border-bottom: 2px solid #C52B45;
+                border-bottom: 3px solid #009ee0;
               }
             layersets:
-                main:
+                Themen:
                     mapbender_users:
                         class: Mapbender\WmsBundle\Entity\WmsInstance
                         title: Mapbender Users
                         url: https://wms.wheregroup.com/cgi-bin/mapbender_user.xml
                         version: 1.3.0
                         layers:
-                            10: { name: Mapbender_User,    title : User, visible: true, legendurl: https://wms.wheregroup.com/cgi-bin/mapbender_user.xml?version=1.3.0&service=WMS&request=GetLegendGraphic&sld_version=1.1.0&layer=Mapbender_User&format=image/png&STYLE=default }
-                            22: { name: Mapbender_Names,   title : Name, visible: true, queryable: true}
+                            4: { name: Mapbender_User,    title : User, visible: true, legendurl: https://wms.wheregroup.com/cgi-bin/mapbender_user.xml?version=1.3.0&service=WMS&request=GetLegendGraphic&sld_version=1.1.0&layer=Mapbender_User&format=image/png&STYLE=default }
+                            5: { name: Mapbender_Names,   title : Name, visible: true, queryable: true}
                         info_format: text/html
                         visible: true
                         format: image/png
                         transparent: true
                         tiled: false
-                        opacity: 85
+                        opacity: 100
+                        isBaseSource: false
+                    overlay:
+                        class: Mapbender\WmsBundle\Entity\WmsInstance
+                        title: NW Overlay DOP
+                        url: https://www.wms.nrw.de/geobasis/wms_nw_dop_overlay
+                        version: 1.3.0
+                        layers:
+                            6: { name: WMS_NW_DOP_OVERLAY,    title : Overlay DOP}
+                        tiled: false
+                        format: image/png
+                        transparent: true
+                        visible: false
+                        opacity: 100
+                        isBaseSource: false
+                Hintergrundthemen:                        
+                    dop:
+                        class: Mapbender\WmsBundle\Entity\WmsInstance
+                        title: NW DOP
+                        url: https://www.wms.nrw.de/geobasis/wms_nw_dop
+                        version: 1.3.0
+                        layers:
+                            3: { name: nw_dop_rgb,    title : WMS NW DOP RGB,  visible: true }
+                        tiled: true
+                        format: image/png
+                        transparent: true
+                        visible: false
+                        opacity: 100
+                        isBaseSource: true
+                    tpo:
+                        class: Mapbender\WmsBundle\Entity\WmsInstance
+                        title: TopPlusOpen Light
+                        url: https://sgx.geodatenzentrum.de/wms_topplus_open
+                        version: 1.3.0
+                        layers:
+                            2: { name: web_light,    title : TopPlusOpen Light,  visible: true }
+                        info_format: text/html
+                        visible: false
+                        format: image/png
+                        transparent: true
+                        tiled: true
+                        opacity: 100
+                        isBaseSource: true                        
                     osm:
                         class: Mapbender\WmsBundle\Entity\WmsInstance
                         title: OSM Demo
                         url: https://osm-demo.wheregroup.com/service
                         version: 1.3.0
                         layers:
-                            30: { name: osm,    title : OSM Demo WhereGroup,  visible: true }
+                            1: { name: osm,    title : OSM Demo WhereGroup,  visible: true }
                         info_format: text/html
                         visible: true
                         format: image/png
                         transparent: true
                         tiled: true
                         opacity: 100
+                        isBaseSource: true
                 overview:
                     osm_overview:
                         class: Mapbender\WmsBundle\Entity\WmsInstance
@@ -46,14 +90,60 @@ parameters:
                         url: https://osm-demo.wheregroup.com/service
                         version: 1.3.0
                         layers:
-                            40: { name: osm,    title : OSM Demo WhereGroup,  visible: true }
+                            7: { name: osm,    title : OSM Demo WhereGroup,  visible: true }
                         tiled: false
                         format: image/png
                         transparent: true
                         visible: true
                         opacity: 100
+                        isBaseSource: false                       
             elements:
                 toolbar:
+                    basesourceswitcher:
+                        title: mb.core.basesourceswitcher.class.title
+                        tooltip: mb.core.basesourceswitcher.class.title
+                        class: Mapbender\CoreBundle\Element\BaseSourceSwitcher
+                        display: group
+                        target: map
+                        instancesets:
+                            1-basesourceswitcher:
+                                title: OSM
+                                group: Karten
+                                instances:
+                                    - osm
+                            2-basesourceswitcher:
+                                title: OSM + Overlay (NRW)
+                                group: Karten
+                                instances: [osm, overlay]
+                            3-basesourceswitcher:
+                                title: TopPlusOpen
+                                group: Karten
+                                instances:
+                                    - tpo
+                            4-basesourceswitcher:
+                                title: TopPlusOpen + Overlay (NRW)
+                                group: Karten
+                                instances: [tpo, overlay]                                                                                                 
+                            5-basesourceswitcher:
+                                title: DOP (NRW)
+                                group: Luftbilder
+                                instances:
+                                    - dop
+                            6-basesourceswitcher:
+                                title: DOP + Overlay (NRW)
+                                group: Luftbilder
+                                instances:
+                                    - dop
+                                    - overlay
+                            7-basesourceswitcher:
+                                title: Overlay (NRW)
+                                group: Luftbilder
+                                instances:
+                                    - overlay                                   
+                            8-basesourceswitcher:
+                                title: 'kein Hintergrund'
+                                group: null
+                                instances: []
                     layertree-button:
                         class: Mapbender\CoreBundle\Element\Button
                         label: false
@@ -65,16 +155,6 @@ parameters:
                         label: false
                         target: featureinfo
                         group: featureinfo
-                    print-button:
-                        class: Mapbender\CoreBundle\Element\Button
-                        label: false
-                        icon: iconPrint
-                        target: printclient
-                    imageexport-button:
-                        class: Mapbender\CoreBundle\Element\Button
-                        label: false
-                        icon: icon-image-export
-                        target: imageexport
                     legend-button:
                         class: Mapbender\CoreBundle\Element\Button
                         label: false
@@ -85,11 +165,12 @@ parameters:
                         label: false
                         target: wmsloader
                         icon: iconWms
-                    gps-button:
-                        class: Mapbender\CoreBundle\Element\GpsPosition
+                    sketch-button:
+                        class: Mapbender\CoreBundle\Element\Button
                         label: false
-                        target: map
-                    linerulerButton:
+                        target: sketch
+                        icon: icon-edit
+                    lineruler-button:
                         title: mb.core.ruler.tag.measure
                         tooltip: mb.core.ruler.tag.line
                         class: Mapbender\CoreBundle\Element\Button
@@ -97,7 +178,7 @@ parameters:
                         label: false
                         target: lineruler
                         group: rulers
-                    arearulerButton:
+                    arearuler-button:
                         title: mb.core.ruler.tag.measure
                         tooltip: mb.core.ruler.tag.area
                         class: Mapbender\CoreBundle\Element\Button
@@ -105,34 +186,80 @@ parameters:
                         label: false
                         target: arearuler
                         group: rulers
-                    about:
-                        title: mb.core.aboutdialog.tag.about
-                        tooltip: mb.core.aboutdialog.tag.about
+                    gps-button:
+                        class: Mapbender\CoreBundle\Element\GpsPosition
                         label: false
-                        class: Mapbender\CoreBundle\Element\AboutDialog
+                        target: map
+                        screenType: mobile
+                    poi-button:
+                        class: Mapbender\CoreBundle\Element\Button
+                        icon: iconPoi
+                        label: false
+                        target: poi
                     coordinatesutility-button:
                         class: Mapbender\CoreBundle\Element\Button
                         icon: iconGpsTarget
                         label: false
                         target: coordinatesutility
+                    print-button:
+                        class: Mapbender\CoreBundle\Element\Button
+                        label: false
+                        icon: iconPrint
+                        target: printclient
+                        screenType: desktop
+                    imageexport-button:
+                        class: Mapbender\CoreBundle\Element\Button
+                        label: false
+                        icon: icon-image-export
+                        target: imageexport
                     shareUrl:
                         class: Mapbender\CoreBundle\Element\ShareUrl
                         label: false
+                    copyright-button:
+                        class: Mapbender\CoreBundle\Element\Button
+                        icon: iconCopyright
+                        label: false
+                        target: copyright
                 content:
                     map:
                         class: Mapbender\CoreBundle\Element\Map
-                        layersets: [main]
-                        srs: EPSG:25832
+                        layersets: [Themen,Hintergrundthemen]
+                        srs: EPSG:3857
                         extents:
-                            start: [361000,5619000,371150,5625000]
-                            max: [251000,5400000,475000,5850000]
-                        scales: [500000,250000,125000,75000,50000,25000,10000,7500,5000,2500,1000,500]
-                        otherSrs: ["EPSG:25833","EPSG:31466","EPSG:31467","EPSG:3857","EPSG:4326"]
+                            start: [772933.16,6566826.23,806786.66,6582317.62]
+                            max: [-15538711.096309232,-20037508.34278924,18807214.096747715,20037508.34278924]
+                        scales: [20000000,10000000,5000000,1000000,500000,100000,50000,25000,10000,7500,5000,2500,1000,500]
+                        otherSrs: ["EPSG:25832","EPSG:25833","EPSG:31466","EPSG:31467","EPSG:4326"]
                     zoombar:
                         class: Mapbender\CoreBundle\Element\ZoomBar
                         target: map
                         anchor: right-top
                         draggable: false
+                    simplesearch:
+                        title: mb.core.simplesearch.class.title
+                        placeholder: 'Where2go?'
+                        class: Mapbender\CoreBundle\Element\SimpleSearch
+                        target: map
+                        anchor: left-bottom
+                        query_url: https://osm-photon-search.wheregroup.com/search/api?limit=20&lat=50.7163&lon=7.1366&osm_tag=!railway&osm_tag=!highway:elevator&osm_tag=!tourism&osm_tag=!amenity
+                        query_key: q
+                        query_format: '%s'
+                        token_regex: '[^a-zA-Z0-9äöüÄÖÜß]'
+                        token_regex_in: '([a-zA-ZäöüÄÖÜß]{3,})'
+                        token_regex_out: '$1*'
+                        collection_path: features
+                        label_attribute:  '${properties.name} ${properties.street} ${properties.housenumber} ${properties.city} ${properties.country}'
+                        geom_attribute: geometry
+                        sourceSrs: 'EPSG:4326'                        
+                        geom_format: GeoJSON
+                        delay: 300
+                        query_ws_replace: null
+                        result:
+                            buffer: ~
+                            minscale: 500
+                            maxscale: 5000
+                            icon_url: '/bundles/mapbendercore/image/pin_red.png'
+                            icon_offset: '-6,-32'
                     legend:
                         class: Mapbender\CoreBundle\Element\Legend
                         target: map
@@ -162,10 +289,14 @@ parameters:
                         class: Mapbender\PrintBundle\Element\PrintClient
                         target: map
                         templates:
-                            - { template: a4portrait, label: A4 Portrait}
                             - { template: a4landscape, label: A4 Landscape}
-                            - { template: a3portrait, label: A3 Portrait}
+                            - { template: a4_landscape_offical, label: A4 Landscape Official}
+                            - { template: a4portrait, label: A4 Portrait}
+                            - { template: a4_portrait_offical, label: A4 Portrait Official}
                             - { template: a3landscape, label: A3 Landscape}
+                            - { template: a3_landscape_offical, label: A3 Landscape Official}
+                            - { template: a3portrait, label: A3 Portrait}
+                            - { template: a3_portrait_offical, label: A3 Portrait Official}
                         legend_default_behaviour: false
                         optional_fields: ~
                     lineruler:
@@ -173,56 +304,107 @@ parameters:
                         class: Mapbender\CoreBundle\Element\Ruler
                         target: map
                         type: line
-                        strokeColor: '#0000ff'
+                        strokeColor: 'rgba(0, 158, 224, 1)'
                     arearuler:
                         title: mb.core.ruler.tag.area
                         class: Mapbender\CoreBundle\Element\Ruler
                         target: map
                         type: area
-                        fillColor: rgba(100, 100, 100, 0.5)
-                        strokeColor: 'rgba(16, 101, 93, 0.8)'
+                        fillColor: rgba(0, 158, 224, 0.5)
+                        strokeColor: 'rgba(204, 210, 42, 1)'
                         fontColor: '#ffffff'
                         fontSize: 14
+                        strokeWidth: 4
+                        strokeWidthWhileDrawing: 3
+                    overview:
+                        class: Mapbender\CoreBundle\Element\Overview
+                        target: map
+                        layerset: overview
+                        anchor: 'right-bottom'
+                        width: 300
+                        height: 150
+                        screenType: desktop
                     scalebar:
                         class: Mapbender\CoreBundle\Element\ScaleBar
                         target: map
-                        anchor: 'left-bottom'
+                        anchor: 'right-bottom'
                         maxWidth: 200
                         units: km
+                    poi:
+                        class: Mapbender\CoreBundle\Element\POI
+                        target: map
+                        body: 'Bitte werfen Sie einen Blick auf diesen POI'
+                        useMailto: false
+                    copyright:
+                        class: Mapbender\CoreBundle\Element\Copyright
+                        title: Copyright
+                        popupWidth: 700
+                        popupHeight: auto
+                        content: "<p>Welcome to the Mapbender Demo.</p><p>Please be aware that we utilize data sourced from the following publishers:</p><p><ul><li><a href=http://www.openstreetmap.org>OpenStreetMap,</a></li><li><a href=http://www.bkg.bund.de>© Bundesamt für Kartographie und Geodäsie (2023)</a>, with datasets from <a href=https://sgx.geodatenzentrum.de/web_public/gdz/datenquellen/Datenquellen_TopPlusOpen.html>TopPlusOpen,</a></li><li><a href=https://www.bezreg-koeln.nrw.de/geobasis-nrw>Geobasis NRW.</a></li></ul></p><p>These datasets are made available under the following licenses:</p><ul><li>Open Database License for OpenStreetMap (<a href=https://opendatacommons.org/licenses/odbl/>ODbL</a>)</li><li>Datenlizenz Deutschland - Namensnennung - Version 2.0 for TOPPlusOpen (<a href=https://www.govdata.de/dl-de/by-2-0>DL-DE-BY-2.0</a>)</li><li>Datenlizenz Deutschland – Zero – Version 2.0 for Geobasis NRW (<a href=https://www.govdata.de/dl-de/zero-2-0>DL-DE-ZERO-2-0</a>)</li></ul>"
+                        autoOpen: false
                     layertreedialog:
                         class: Mapbender\CoreBundle\Element\Layertree
                         target: map
                         type: dialog
                         autoOpen: false
                         showBaseSource: true
-                        menu: []
-                    overview:
-                        class: Mapbender\CoreBundle\Element\Overview
-                        target: map
-                        layerset: overview
-                        anchor: 'right-bottom'
-                        screenType: desktop
+                        layerRemove: true
+                        menu: [opacity,zoomtolayer,metadata,removelayer]
+                        hideNotToggleable: true
+                        hideSelect: true
+                        hideInfo: false
+                        useTheme: true
+                        themes:
+                            -
+                                id: Themen
+                                title: 'Themen'
+                                useTheme: true
+                                opened: true
+                                sourceVisibility: false
+                                allSelected: false                        
+                            -
+                                id: Hintergrundthemen
+                                title: 'Hintergrundthemen'
+                                useTheme: true
+                                opened: true
+                                sourceVisibility: false
+                                allSelected: false
                     coordinatesutility:
                         class: Mapbender\CoordinatesUtilityBundle\Element\CoordinatesUtility
                         target: map
                         srsList:
                             -
                                 name: 'EPSG:31466'
-                                title: '31466'
+                                title: 'DHDN / 3-degree Gauss-Kruger zone 2'
                             -
-                                name: 'EPSG:31468'
-                                title: '31468'
+                                name: 'EPSG:31467'
+                                title: 'DHDN / 3-degree Gauss-Kruger zone 3'
                             -
                                 name: 'EPSG:25832'
-                                title: '25832'
+                                title: 'ETRS 89 / UTM zone 32N'
                             -
                                 name: 'EPSG:25833'
-                                title: '25833'
+                                title: 'ETRS 89 / UTM zone 33N'
                             -
                                 name: 'EPSG:4326'
-                                title: '4326'
+                                title: 'WGS 84'
                         addMapSrsList: true
                         zoomlevel: 6
+                    sketch:
+                        class: Mapbender\CoreBundle\Element\Sketch
+                        target: map
+                        geometrytypes:
+                            - point
+                            - line
+                            - polygon
+                            - text
+                            - rectangle
+                            - circle
+                        display_type: dialog
+                        auto_activate: false
+                        deactivate_on_close: true
+                        colors: ["#FFFFFF","#cf003d","#ccd22a","#00837e","#009ee0","#000000"]
+                        allow_custom_color: false
                 footer:
                     activityindicator:
                         class: Mapbender\CoreBundle\Element\ActivityIndicator
@@ -233,23 +415,28 @@ parameters:
                         empty:  "x: - y: -"
                         prefix: "x: "
                         separator:  " y: "
-                    srs:
-                        class: Mapbender\CoreBundle\Element\SrsSelector
-                        target: map
                     scaleselector:
                         class: Mapbender\CoreBundle\Element\ScaleSelector
                         target: map
-                    as:
+                    srs:
+                        class: Mapbender\CoreBundle\Element\SrsSelector
+                        target: map
+                    applicationswitcher:
                         class: Mapbender\CoreBundle\Element\ApplicationSwitcher
                         applications: [mapbender_user, mapbender_user_basic]
-                    copyrightButton:
+                    OSM-badge:
                         title: © OpenStreetMap contributors
                         tooltip: © OpenStreetMap contributors
                         class: Mapbender\CoreBundle\Element\Button
-                        label: true
+                        label: false
                         click: https://www.openstreetmap.org/copyright
                     HTML:
-                        title: HTML
+                        title: HTML-powered by Mapbender
                         class: Mapbender\CoreBundle\Element\HTMLElement
-                        content: '<span style="color: #6FB536; font-weight:bold" >powered by Mapbender</span>'
+                        content: '<span style="color: #009ee0; font-weight:bold">powered by Mapbender</span>'
                         classes: html-element-inline
+                    about:
+                        title: mb.core.aboutdialog.tag.about
+                        tooltip: mb.core.aboutdialog.tag.about
+                        label: false
+                        class: Mapbender\CoreBundle\Element\AboutDialog
