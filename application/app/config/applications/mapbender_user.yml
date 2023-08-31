@@ -20,8 +20,8 @@ parameters:
                         url: https://wms.wheregroup.com/cgi-bin/mapbender_user.xml
                         version: 1.3.0
                         layers:
-                            10: { name: Mapbender_User,    title : User, visible: true, legendurl: https://wms.wheregroup.com/cgi-bin/mapbender_user.xml?version=1.3.0&service=WMS&request=GetLegendGraphic&sld_version=1.1.0&layer=Mapbender_User&format=image/png&STYLE=default }
-                            22: { name: Mapbender_Names,   title : Name, visible: true, queryable: true}
+                            4: { name: Mapbender_User,    title : User, visible: true, legendurl: https://wms.wheregroup.com/cgi-bin/mapbender_user.xml?version=1.3.0&service=WMS&request=GetLegendGraphic&sld_version=1.1.0&layer=Mapbender_User&format=image/png&STYLE=default }
+                            5: { name: Mapbender_Names,   title : Name, visible: true, queryable: true}
                         info_format: text/html
                         visible: true
                         format: image/png
@@ -31,38 +31,52 @@ parameters:
                         isBaseSource: false
                     overlay:
                         class: Mapbender\WmsBundle\Entity\WmsInstance
-                        title: NW Overlay für DOP
+                        title: NW Overlay DOP
                         url: https://www.wms.nrw.de/geobasis/wms_nw_dop_overlay
                         version: 1.3.0
                         layers:
-                            1: { name: WMS_NW_DOP_OVERLAY,    title : Overlay für DOP}
+                            6: { name: WMS_NW_DOP_OVERLAY,    title : Overlay DOP}
                         tiled: false
                         format: image/png
                         transparent: true
                         visible: false
                         opacity: 100
                         isBaseSource: false
-                Hintergrundthema:                        
+                Hintergrundthemen:                        
                     dop:
                         class: Mapbender\WmsBundle\Entity\WmsInstance
                         title: NW DOP
                         url: https://www.wms.nrw.de/geobasis/wms_nw_dop
                         version: 1.3.0
                         layers:
-                            1: { name: nw_dop_rgb,    title : WMS NW DOP RGB,  visible: true }
+                            3: { name: nw_dop_rgb,    title : WMS NW DOP RGB,  visible: true }
                         tiled: true
                         format: image/png
                         transparent: true
                         visible: false
                         opacity: 100
                         isBaseSource: true
+                    tpo:
+                        class: Mapbender\WmsBundle\Entity\WmsInstance
+                        title: TopPlusOpen Light
+                        url: https://sgx.geodatenzentrum.de/wms_topplus_open
+                        version: 1.3.0
+                        layers:
+                            2: { name: web_light,    title : TopPlusOpen Light,  visible: true }
+                        info_format: text/html
+                        visible: false
+                        format: image/png
+                        transparent: true
+                        tiled: true
+                        opacity: 100
+                        isBaseSource: true                        
                     osm:
                         class: Mapbender\WmsBundle\Entity\WmsInstance
                         title: OSM Demo
                         url: https://osm-demo.wheregroup.com/service
                         version: 1.3.0
                         layers:
-                            30: { name: osm,    title : OSM Demo WhereGroup,  visible: true }
+                            1: { name: osm,    title : OSM Demo WhereGroup,  visible: true }
                         info_format: text/html
                         visible: true
                         format: image/png
@@ -77,7 +91,7 @@ parameters:
                         url: https://osm-demo.wheregroup.com/service
                         version: 1.3.0
                         layers:
-                            40: { name: osm,    title : OSM Demo WhereGroup,  visible: true }
+                            7: { name: osm,    title : OSM Demo WhereGroup,  visible: true }
                         tiled: false
                         format: image/png
                         transparent: true
@@ -99,26 +113,35 @@ parameters:
                                 instances:
                                     - osm
                             2-basesourceswitcher:
-                                title: OSM + Overlay
+                                title: OSM + Overlay (NRW)
                                 group: Karten
-                                instances: [osm, overlay]                                
+                                instances: [osm, overlay]
                             3-basesourceswitcher:
-                                title: DOP
-                                group: Luftbilder
+                                title: TopPlusOpen
+                                group: Karten
                                 instances:
-                                    - dop
+                                    - tpo
                             4-basesourceswitcher:
-                                title: DOP + Overlay
+                                title: TopPlusOpen + Overlay (NRW)
+                                group: Karten
+                                instances: [tpo, overlay]                                                                                                 
+                            5-basesourceswitcher:
+                                title: DOP (NRW)
+                                group: Luftbilder
+                                instances:
+                                    - dop
+                            6-basesourceswitcher:
+                                title: DOP + Overlay (NRW)
                                 group: Luftbilder
                                 instances:
                                     - dop
                                     - overlay
-                            5-basesourceswitcher:
-                                title: nur Overlay
+                            7-basesourceswitcher:
+                                title: Overlay (NRW)
                                 group: Luftbilder
                                 instances:
-                                    - overlay
-                            6-basesourceswitcher:
+                                    - overlay                                   
+                            8-basesourceswitcher:
                                 title: 'kein Hintergrund'
                                 group: null
                                 instances: []                    
@@ -138,7 +161,7 @@ parameters:
                         label: true
                         target: wmsloader
                         icon: iconWms
-                    linerulerButton:
+                    lineruler-button:
                         title: mb.core.ruler.tag.measure
                         tooltip: mb.core.ruler.tag.line
                         class: Mapbender\CoreBundle\Element\Button
@@ -146,7 +169,7 @@ parameters:
                         label: true
                         target: lineruler
                         group: rulers
-                    arearulerButton:
+                    arearuler-button:
                         title: mb.core.ruler.tag.measure
                         tooltip: mb.core.ruler.tag.area
                         class: Mapbender\CoreBundle\Element\Button
@@ -159,7 +182,7 @@ parameters:
                         label: true
                         target: map
                         screenType: mobile                              
-                    poiButton:
+                    poi-button:
                         class: Mapbender\CoreBundle\Element\Button
                         icon: iconPoi
                         label: true
@@ -178,45 +201,45 @@ parameters:
                     shareUrl:
                         class: Mapbender\CoreBundle\Element\ShareUrl
                         label: true
-                    copyrightButton:
+                    copyright-button:
                         class: Mapbender\CoreBundle\Element\Button
                         icon: iconCopyright
                         label: true
                         target: copyright
                     simplesearch:
                         title: mb.core.simplesearch.class.title
-                        placeholder: 'Adresse eintragen...'
+                        placeholder: 'Where2go?'
                         class: Mapbender\CoreBundle\Element\SimpleSearch
                         target: map
-                        query_url: 'http://geodaten.metropoleruhr.de/suche?wt=json&indent=true&rows=10'                        
+                        query_url: https://osm-photon-search.wheregroup.com/search/api?limit=20&lat=50.7163&lon=7.1366&osm_tag=!railway&osm_tag=!highway:elevator&osm_tag=!tourism&osm_tag=!amenity
                         query_key: q
                         query_format: '%s'
                         token_regex: '[^a-zA-Z0-9äöüÄÖÜß]'
                         token_regex_in: '([a-zA-ZäöüÄÖÜß]{3,})'
                         token_regex_out: '$1*'
-                        collection_path: response.docs
-                        label_attribute: text
-                        geom_attribute: utm32
-                        sourceSrs: 'EPSG:25832'                        
-                        geom_format: WKT
+                        collection_path: features
+                        label_attribute:  '${properties.name} ${properties.street} ${properties.housenumber} ${properties.city} ${properties.country}'
+                        geom_attribute: geometry
+                        sourceSrs: 'EPSG:4326'                        
+                        geom_format: GeoJSON
                         delay: 300
                         query_ws_replace: null
                         result:
-                            buffer: 5
-                            minscale: 100
-                            maxscale: 1000
+                            buffer: ~
+                            minscale: 500
+                            maxscale: 5000
                             icon_url: '/bundles/mapbendercore/image/pin_red.png'
                             icon_offset: '-6,-32'
                 content:
                     map:
                         class: Mapbender\CoreBundle\Element\Map
-                        layersets: [Themen,Hintergrundthema]
-                        srs: EPSG:25832
+                        layersets: [Themen,Hintergrundthemen]
+                        srs: 'EPSG:3857'
                         extents:
-                            start: [361000,5619000,371150,5625000]
-                            max: [-500000,4350000,1600000,6850000]
-                        scales: [5000000,1000000,500000,100000,50000,25000,10000,7500,5000,2500,1000,500]
-                        otherSrs: ["EPSG:25833","EPSG:31466","EPSG:31467","EPSG:3857","EPSG:4326"]
+                            start: [772933.16,6566826.23,806786.66,6582317.62]
+                            max: [-15538711.096309232,-20037508.34278924,18807214.096747715,20037508.34278924]
+                        scales: [20000000,10000000,5000000,1000000,500000,100000,50000,25000,10000,7500,5000,2500,1000,500]
+                        otherSrs: ["EPSG:25832","EPSG:25833","EPSG:31466","EPSG:31467","EPSG:4326"]
                     zoombar:
                         class: Mapbender\CoreBundle\Element\ZoomBar
                         target: map
@@ -310,10 +333,10 @@ parameters:
                     copyright:
                         class: Mapbender\CoreBundle\Element\Copyright
                         title: Copyright
-                        popupWidth: 500
+                        popupWidth: 700
                         popupHeight: auto
-                        content: "Welcome to the Mapbender Demo."
-                        autoOpen: true
+                        content: "<p>Welcome to the Mapbender Demo.</p><p>Please be aware that we utilize data sourced from the following publishers:</p><p><ul><li><a href=http://www.openstreetmap.org>OpenStreetMap,</a></li><li><a href=http://www.bkg.bund.de>© Bundesamt für Kartographie und Geodäsie (2023)</a>, with datasets from <a href=https://sgx.geodatenzentrum.de/web_public/gdz/datenquellen/Datenquellen_TopPlusOpen.html>TopPlusOpen,</a></li><li><a href=https://www.bezreg-koeln.nrw.de/geobasis-nrw>Geobasis NRW.</a></li></ul></p><p>These datasets are made available under the following licenses:</p><ul><li>Open Database License for OpenStreetMap (<a href=https://opendatacommons.org/licenses/odbl/>ODbL</a>)</li><li>Datenlizenz Deutschland - Namensnennung - Version 2.0 for TOPPlusOpen (<a href=https://www.govdata.de/dl-de/by-2-0>DL-DE-BY-2.0</a>)</li><li>Datenlizenz Deutschland – Zero – Version 2.0 for Geobasis NRW (<a href=https://www.govdata.de/dl-de/zero-2-0>DL-DE-ZERO-2-0</a>)</li></ul>"
+                        autoOpen: false
                 sidepane:
                     layertree:
                         class: Mapbender\CoreBundle\Element\Layertree
@@ -336,8 +359,8 @@ parameters:
                                 sourceVisibility: false
                                 allSelected: false                        
                             -
-                                id: Hintergrundthema
-                                title: 'Hintergrundthema'
+                                id: Hintergrundthemen
+                                title: 'Hintergrundthemen'
                                 useTheme: true
                                 opened: true
                                 sourceVisibility: false
@@ -372,7 +395,8 @@ parameters:
                     html-about-mapbender:
                         class: Mapbender\CoreBundle\Element\HTMLElement
                         classes: html-element-inline
-                        content: "<p><b>Anwendungstitel:</b><br> {{ application.title }}</p><br><p>Mapbender is part of </p><p><a href=\"https://www.osgeo.org/projects/mapbender/\" target=\"_blank\"><img src=\"https://www.osgeo.org/wp-content/themes/roots/assets/img/logo-osgeo.svg\" alt=\"OSGeo Project\"  title=\"OSGeo Project\" width=\"100px\" /></a></p><p><br>Find out more about OSGeo at: <br/><a href=\"https://www.osgeo.org\" target=\"_blank\">https://www.osgeo.org</a><br/><a href=\"https://www.osgeo.org/projects/mapbender/\" target=\"_blank\">https://www.osgeo.org/projects/mapbender/</a>"
+                        title: About Mapbender
+                        content: "<p><b>App-Name:</b><br><br> {{ application.title }}</p><br><p>Mapbender is part of </p><p><a href=\"https://www.osgeo.org/projects/mapbender/\" target=\"_blank\"><img src=\"https://www.osgeo.org/wp-content/themes/roots/assets/img/logo-osgeo.svg\" alt=\"OSGeo Project\"  title=\"OSGeo Project\" width=\"100px\" /></a></p><p><br>Find out more about OSGeo at: <br/><a href=\"https://www.osgeo.org\" target=\"_blank\">https://www.osgeo.org</a><br/><a href=\"https://www.osgeo.org/projects/mapbender/\" target=\"_blank\">https://www.osgeo.org/projects/mapbender/</a>"
                 footer:
                     activityindicator:
                         class: Mapbender\CoreBundle\Element\ActivityIndicator
@@ -392,7 +416,7 @@ parameters:
                     applicationswitcher:
                         class: Mapbender\CoreBundle\Element\ApplicationSwitcher
                         applications: [mapbender_user, mapbender_user_basic]
-                    copyrightButton:
+                    OSM-badge:
                         title: © OpenStreetMap contributors
                         tooltip: © OpenStreetMap contributors
                         class: Mapbender\CoreBundle\Element\Button
