@@ -330,6 +330,12 @@ parameters:
                         anchor: 'right-bottom'
                         maxWidth: 200
                         units: km
+                    scaledisplay:
+                        class: Mapbender\CoreBundle\Element\ScaleDisplay
+                        target: map
+                        anchor: right-top
+                        scalePrefix: Scale
+                        unitPrefix: true 
                     poi:
                         class: Mapbender\CoreBundle\Element\POI
                         target: map
