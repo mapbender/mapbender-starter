@@ -33,7 +33,6 @@ class AppKernel extends Mapbender\BaseKernel
             new Mapbender\MobileBundle\MapbenderMobileBundle(),
 
             // Extra bundles installed by default starter
-            new \Mapbender\CoordinatesUtilityBundle\MapbenderCoordinatesUtilityBundle(),
             new \Mapbender\DataSourceBundle\MapbenderDataSourceBundle(),
             new \Mapbender\DataManagerBundle\MapbenderDataManagerBundle(),
             new \Mapbender\DigitizerBundle\MapbenderDigitizerBundle(),
