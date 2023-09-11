@@ -38,7 +38,7 @@
         "components/font-awesome": "^4.0",
         "wheregroup/cookieconsent": "^3",
         "wheregroup/sassc-binaries": "^0.0.1",
-        "components/bootstrap": "^3"
+        "twbs/bootstrap": "^5.0"
     },
     "replace": {
         "robloach/component-installer": "^0.2"
@@ -125,7 +125,8 @@
         "installer-paths":{
             "mapbender/": ["mapbender/mapbender"],
             "vendor/igosuki/compass-mixins": ["wheregroup/compass-mixins"],
-            "web/components/datatables/": ["datatables/datatables"]
+            "web/components/datatables/": ["datatables/datatables"],
+            "web/components/bootstrap/": ["twbs/bootstrap"]
         }
     },
     "repositories": [
