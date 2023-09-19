@@ -4,7 +4,7 @@ application/public/uploads
 
 !application/public/uploads/mapbender_user
 !application/public/uploads/mapbender_user_basic
-*/app/config/parameters.yml
+*/config/parameters.yml
 */var/bootstrap.php.cache
 */vendor
 *.tar.gz

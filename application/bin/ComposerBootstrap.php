@@ -101,7 +101,7 @@ class ComposerBootstrap
     }
 
     /**
-     * Installs bundle assets into a given dierectory (for details s. Symfony app/console assets:install).
+     * Installs bundle assets into a given dierectory (for details s. Symfony bin/console assets:install).
      */
     public static function installAssets()
     {
@@ -118,19 +118,19 @@ class ComposerBootstrap
     }
 
     /**
-     * Installs bundle assets into a given dierectory (for details s. Symfony app/console assets:install).
+     * Installs bundle assets into a given dierectory (for details s. Symfony bin/console assets:install).
      */
     public static function installHardCopyAssets()
     {
-        echo `php app/console assets:install public`;
+        echo `php bin/console assets:install public`;
     }
 
     /**
-     * Installs bundle assets into a given dierectory (for details s. Symfony app/console assets:install).
+     * Installs bundle assets into a given dierectory (for details s. Symfony bin/console assets:install).
      */
     public static function installSymLinkAssets()
     {
-        echo `php app/console assets:install public --symlink --relative `;
+        echo `php bin/console assets:install public --symlink --relative `;
     }
 
     /**
@@ -154,7 +154,7 @@ class ComposerBootstrap
     {
         static::printStatus("Drop database");
 
-        echo `php app/console doctrine:database:drop --force`;
+        echo `php bin/console doctrine:database:drop --force`;
     }
 
     /**
@@ -164,9 +164,9 @@ class ComposerBootstrap
     {
         static::printStatus("Create and prepare database");
 
-        echo `php app/console doctrine:database:create`;
-        echo `php app/console doctrine:schema:create`;
-        //echo `php app/console doctrine:schema:update --force`;
+        echo `php bin/console doctrine:database:create`;
+        echo `php bin/console doctrine:schema:create`;
+        //echo `php bin/console doctrine:schema:update --force`;
     }
 
     /**
@@ -184,7 +184,7 @@ class ComposerBootstrap
 
         static::printStatus("Reset user password");
 
-        `php app/console fom:user:resetroot --username $userName --password $password --email $userEmail --silent`;
+        `php bin/console fom:user:resetroot --username $userName --password $password --email $userEmail --silent`;
 
         static::printStatus("ATTENTION");
         echo "User $userName account password is: $password. Don't forget to change it!\n";
@@ -210,7 +210,7 @@ class ComposerBootstrap
     public static function updateEpsgCodes()
     {
         static::printStatus("Update EPSG codes");
-        echo `php app/console mapbender:database:init -v`;
+        echo `php bin/console mapbender:database:init -v`;
     }
 
     /**
@@ -222,10 +222,10 @@ class ComposerBootstrap
         $fixturePath = 'mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/LoadApplicationData.php';
         if (@\file_exists(dirname(__FILE__) . "/../$fixturePath")) {
             // Mapbender <= 3.2.5
-            \passthru("php app/console doctrine:fixtures:load --fixtures=$fixturePath --append");
+            \passthru("php bin/console doctrine:fixtures:load --fixtures=$fixturePath --append");
         } else {
             // Prefer console command on Mapbender >= 3.2.6
-            \passthru("php app/console mapbender:application:import " . dirname(__FILE__) . '/../app/config/applications');
+            \passthru("php bin/console mapbender:application:import " . dirname(__FILE__) . '/../bin/config/applications');
         }
     }
 
@@ -450,7 +450,7 @@ class ComposerBootstrap
      */
     protected static function getParametersPath()
     {
-        return static::getSymfonyRootPath() . '/app/config/parameters.yml';
+        return static::getSymfonyRootPath() . '/bin/config/parameters.yml';
     }
 
     /**
