@@ -1,4 +1,4 @@
-![Mapbender](./application/app/Resources/public/image/Mapbender-logo.png)
+![Mapbender](application/public/image/Mapbender-logo.png)
 
 Mapbender is a web based geoportal framework.
 
@@ -12,7 +12,7 @@ For detailed usage information, including installation and integration topics, p
 
 ## Requirements
 
-Mapbender requires PHP 7.4, OpenSSL, curl, bzip2 decompression and the following php extensions:
+Mapbender requires PHP 8.0, OpenSSL, curl, bzip2 decompression and the following php extensions:
 * zip
 * curl
 * gd
@@ -69,39 +69,38 @@ cd mapbender-starter
 ./bootstrap
 ```
 
-> :warning: While mapbender is compatible with PHP 8.2, bootstrap will fail due to outdated 
-> PHP version constraints in a third-party library. A temporary workaround until the next major relase:
-> Install PHP 8.1 alongside your PHP 8.2 installation and in the `bootstrap` file
-> replace the `php` commands at the start of lines 4 to 8 with `/usr/bin/php8.1` (or your custom installation path)
-
 The bootstrap command performs the following required setup tasks for you:
 * installs userland dependencies (via composer)
 * creates a parameters.yml by copying the bundled parameters.yml.dist
-* performs the necessary database setup (as an sqlite file in `application/app/db/demo.sqlite`)
+* performs the necessary database setup (as an sqlite file in `application/var/db/demo.sqlite`)
 * creates a root account with a default password `root` (which you should change later)
 
 The full setup processes is only needed once. If you invoke it again, nothing of consequence will happen.
 
 ## Built-in server
-You can test your freshly bootstrapped Mapbender installation using a built-in development server.
+You can test your freshly bootstrapped Mapbender installation using symfony's development server.
 This is not production quality, and has some known issues processing external requests (such as
 in printing), but it allows some quick testing before you set up a production-grade web server.
 
-The server is started like this:
+To run the server you need to install the [Symfony CLI](https://symfony.com/download) first.
+
+Then, the server is started like this:
 ```sh
 cd application
-app/console server:run
+symfony server:start --no-tls
 ```
 
 The URL is shown in the output:
 ```sh
-Server running on http://localhost:8000
+ [OK] Web server listening                                                                                              
+      The Web server is using PHP CLI 8.2.10                                                                            
+      http://127.0.0.1:8001      
 ```
 
 ## Changing root account password
 From the application directory run:
 ```sh
-app/console fom:user:resetroot
+bin/console fom:user:resetroot
 ```
 
 ## Issues
@@ -115,8 +114,9 @@ Pre-packaged archives bundling all code dependencies are available at our [downl
 
 ## Other versions
 
-|Mapbender release line|PHP versions|Bundled Symfony version|Bundled composer version|
-|----|----|----|----|
-|3.0.8 (end of life)|>=5.5, <=7.2|2.8LTS (end of life)|1.6.x|
-|3.2|\>=7.1, <=7.4|3.4LTS (end of life)|1.10.x|
-|3.3|\>=7.4|4.4LTS|2.1.x|
+| Mapbender release line | PHP versions  | Bundled Symfony version |Bundled composer version|
+|------------------------|---------------|-------------------------|----|
+| 3.0.8 (end of life)    | >=5.5, <=7.2  | 2.8LTS (end of life)    |1.6.x|
+| 3.2  (end of life)     | \>=7.1, <=7.4 | 3.4LTS (end of life)    |1.10.x|
+| 3.3                    | \>=7.4        | 4.4LTS (end of life)    |2.1.x|
+| 4.0                    | \>=8.0        | 5.4LTS                  |2.1.x|
