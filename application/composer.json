@@ -32,13 +32,11 @@
         "proj4js/proj4js": "^2.4",
         "mapbender/mapbender": "^3.3.4-RC1",
 
-        "mapbender/coordinates-utility": "^1.1",
         "mapbender/digitizer": "^1.4",
         "select2/select2": "^4.0",
         "components/font-awesome": "^4.0",
         "wheregroup/cookieconsent": "^3",
-        "wheregroup/sassc-binaries": "^0.0.1",
-        "components/bootstrap": "^3"
+        "wheregroup/sassc-binaries": "^0.0.1"
     },
     "replace": {
         "robloach/component-installer": "^0.2"

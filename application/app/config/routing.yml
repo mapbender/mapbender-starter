@@ -11,10 +11,6 @@ mapbender_managerbundle:
     resource: "@MapbenderManagerBundle/Controller/"
     type: annotation
 
-mapbender_coordinatesutilitybundle:
-    resource: "@MapbenderCoordinatesUtilityBundle/Controller/"
-    type: annotation
-
 fom_userbundle:
     resource: "@FOMUserBundle/Controller"
     type: annotation

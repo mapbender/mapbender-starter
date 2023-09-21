@@ -156,74 +156,6 @@
             "time": "2019-07-22T13:10:51+00:00"
         },
         {
-            "name": "components/bootstrap",
-            "version": "3.4.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/components/bootstrap.git",
-                "reference": "427f4d414fc6ae8385aee02b7efc8e391eb141ad"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/components/bootstrap/zipball/427f4d414fc6ae8385aee02b7efc8e391eb141ad",
-                "reference": "427f4d414fc6ae8385aee02b7efc8e391eb141ad",
-                "shasum": ""
-            },
-            "require": {
-                "components/jquery": "1.9.1 - 3"
-            },
-            "suggest": {
-                "components/bootstrap-default": "Provide a theme for Bootstrap as components/bootstrap only provides the CSS as file assets"
-            },
-            "type": "component",
-            "extra": {
-                "component": {
-                    "scripts": [
-                        "js/bootstrap.js"
-                    ],
-                    "files": [
-                        "js/*.js",
-                        "css/*.css",
-                        "css/*.map",
-                        "fonts/*",
-                        "less/mixins/*.less",
-                        "less/*.less"
-                    ],
-                    "shim": {
-                        "deps": [
-                            "jquery"
-                        ]
-                    }
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jacob Thornton",
-                    "email": "jacobthornton@gmail.com"
-                },
-                {
-                    "name": "Mark Otto",
-                    "email": "markdotto@gmail.com"
-                }
-            ],
-            "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
-            "homepage": "http://getbootstrap.com",
-            "keywords": [
-                "css",
-                "framework",
-                "front-end",
-                "less",
-                "mobile-first",
-                "responsive",
-                "web"
-            ],
-            "time": "2019-05-08T19:36:29+00:00"
-        },
-        {
             "name": "components/font-awesome",
             "version": "4.7.0",
             "source": {
@@ -1855,61 +1787,6 @@
             "time": "2022-11-21T01:32:31+00:00"
         },
         {
-            "name": "mapbender/coordinates-utility",
-            "version": "1.2.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mapbender/coordinates-utility.git",
-                "reference": "7fdb6dea5c0d834f6d775f109e22a9bb75902741"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/coordinates-utility/zipball/7fdb6dea5c0d834f6d775f109e22a9bb75902741",
-                "reference": "7fdb6dea5c0d834f6d775f109e22a9bb75902741",
-                "shasum": ""
-            },
-            "require": {
-                "mapbender/mapbender": "^3.2.6",
-                "php": ">=5.5.4"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.2.x-dev",
-                    "dev-release/1.1": "1.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Mapbender\\CoordinatesUtilityBundle\\": "."
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Svitlana Aliferova"
-                }
-            ],
-            "description": "Transform coordinates in different SRS. Navigate to coordinates on the map.",
-            "keywords": [
-                "coordinates",
-                "mapbender",
-                "navigate",
-                "search"
-            ],
-            "support": {
-                "issues": "https://github.com/mapbender/coordinates-utility/issues",
-                "source": "https://github.com/mapbender/coordinates-utility/tree/1.2.7"
-            },
-            "time": "2023-04-27T14:00:42+00:00"
-        },
-        {
             "name": "mapbender/data-manager",
             "version": "2.0.8",
             "source": {
@@ -2103,7 +1980,6 @@
             },
             "require": {
                 "assetic/framework": "^2.0",
-                "components/bootstrap": "^3 || ^4",
                 "components/jqueryui": "^1",
                 "components/underscore": "1.x",
                 "datatables/datatables": "^1.10.16",
@@ -2135,7 +2011,6 @@
                 "wheregroup/sassc-binaries": "^0.0.1"
             },
             "conflict": {
-                "mapbender/coordinates-utility": "<1.0.9",
                 "mapbender/data-manager": "<1.1",
                 "mapbender/data-source": "<0.1.11",
                 "mapbender/digitizer": "<1.4.8",
