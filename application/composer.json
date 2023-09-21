@@ -24,7 +24,6 @@
     },
     "require": {
         "php": ">=8.0",
-        "components/bootstrap": "^3",
         "components/font-awesome": "^4.0",
         "components/jquery": "^1.11.2",
         "doctrine/dbal": "^3",
