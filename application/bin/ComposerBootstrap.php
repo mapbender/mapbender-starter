@@ -142,7 +142,7 @@ class ComposerBootstrap
             static::printStatus("Enable write cache, logs and upload for user and user group");
 
             echo `chmod -R ug+wX var/cache`;
-            echo `chmod -R ug+wX var/logs`;
+            echo `chmod -R ug+wX var/log`;
             echo `chmod -R ug+wX public/uploads`;
         }
     }
@@ -158,7 +158,7 @@ class ComposerBootstrap
     }
 
     /**
-     * Crate database, schema and force update
+     * Create database, schema and force update
      */
     public static function createDatabase()
     {
@@ -527,7 +527,7 @@ class ComposerBootstrap
                      "vendor/phpunit",
                      "public/index.php",
                      "var/cache/*",
-                     "var/logs/*",
+                     "var/log/*",
                  ) as $path) {
             echo `rm -rf $archiveProjectPath/{$path}`;
         }

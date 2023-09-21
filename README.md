@@ -78,19 +78,23 @@ The bootstrap command performs the following required setup tasks for you:
 The full setup processes is only needed once. If you invoke it again, nothing of consequence will happen.
 
 ## Built-in server
-You can test your freshly bootstrapped Mapbender installation using a built-in development server.
+You can test your freshly bootstrapped Mapbender installation using symfony's development server.
 This is not production quality, and has some known issues processing external requests (such as
 in printing), but it allows some quick testing before you set up a production-grade web server.
 
-The server is started like this:
+To run the server you need to install the [Symfony CLI](https://symfony.com/download) first.
+
+Then, the server is started like this:
 ```sh
 cd application
-bin/console server:run
+symfony server:start --no-tls
 ```
 
 The URL is shown in the output:
 ```sh
-Server running on http://localhost:8000
+ [OK] Web server listening                                                                                              
+      The Web server is using PHP CLI 8.2.10                                                                            
+      http://127.0.0.1:8001      
 ```
 
 ## Changing root account password
