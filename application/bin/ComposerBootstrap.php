@@ -450,7 +450,7 @@ class ComposerBootstrap
      */
     protected static function getParametersPath()
     {
-        return static::getSymfonyRootPath() . '/bin/config/parameters.yml';
+        return static::getSymfonyRootPath() . '/config/parameters.yml';
     }
 
     /**

@@ -43,14 +43,20 @@
     "scripts": {
         "post-install-cmd": [
             "@composer dump-autoload",
-            "ComposerBootstrap::clearCache"
+            "ComposerBootstrap::clearCache",
+            "@copy-bootstrap"
         ],
         "post-update-cmd": [
             "@post-install-cmd"
         ],
+        "copy-bootstrap": [
+            "rm -rf public/components/bootstrap",
+            "cp -R vendor/twbs/bootstrap/dist public/components/bootstrap"
+        ],
         "update-assets":[
             "ComposerBootstrap::installAssets",
-            "ComponentMirror::postAutoloadDump"
+            "ComponentMirror::postAutoloadDump",
+            "@copy-bootstrap"
         ],
         "post-autoload-dump": [
             "ComponentMirror::postAutoloadDump"
@@ -77,10 +83,12 @@
             "ComposerBootstrap::rebuildDatabase"
         ],
         "install-hard-copy-assets": [
-            "ComposerBootstrap::installHardCopyAssets"
+            "ComposerBootstrap::installHardCopyAssets",
+            "@copy-bootstrap"
         ],
         "install-sym-link-assets": [
-            "ComposerBootstrap::installSymLinkAssets"
+            "ComposerBootstrap::installSymLinkAssets",
+            "@copy-bootstrap"
         ],
         "dist":[
             "ComposerBootstrap::distribute"
