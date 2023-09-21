@@ -225,7 +225,7 @@ class ComposerBootstrap
             \passthru("php bin/console doctrine:fixtures:load --fixtures=$fixturePath --append");
         } else {
             // Prefer console command on Mapbender >= 3.2.6
-            \passthru("php bin/console mapbender:application:import " . dirname(__FILE__) . '/../bin/config/applications');
+            \passthru("php bin/console mapbender:application:import " . dirname(__FILE__) . '/../config/applications');
         }
     }
 
