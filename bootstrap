@@ -7,6 +7,6 @@ php bin/console assets:install --symlink --relative
 php bin/console mapbender:database:init -v
 php bin/composer run post-install-cmd
 echo Bootstrap finished!
-echo If you want to run the builtin development server, install Symfony CLI (https://symfony.com/download) then run:
+echo If you want to run the builtin development server, install Symfony CLI from https://symfony.com/download then run:
 echo ' cd application'
 echo ' symfony server:start --no-tls'

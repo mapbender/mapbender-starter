@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "40eba4daa01e97e6ad6556fcf83a8ce2",
+    "content-hash": "bf400c618e1713378e5114497d92102c",
     "packages": [
         {
             "name": "assetic/framework",
@@ -1631,16 +1631,16 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "dev-work/remove-deprecations",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "7c1d1fdbf639255d7b21d83443ca6da4f0c69d82"
+                "reference": "06229677ee10eb390195f6c42a4fe96fd7030c61"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/7c1d1fdbf639255d7b21d83443ca6da4f0c69d82",
-                "reference": "7c1d1fdbf639255d7b21d83443ca6da4f0c69d82",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/06229677ee10eb390195f6c42a4fe96fd7030c61",
+                "reference": "06229677ee10eb390195f6c42a4fe96fd7030c61",
                 "shasum": ""
             },
             "require": {
@@ -1763,9 +1763,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/mapbender/issues",
-                "source": "https://github.com/mapbender/mapbender/tree/work/remove-deprecations"
+                "source": "https://github.com/mapbender/mapbender/tree/develop"
             },
-            "time": "2023-09-21T14:49:48+00:00"
+            "time": "2023-09-21T16:31:59+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -10135,7 +10135,7 @@
     "aliases": [
         {
             "package": "mapbender/mapbender",
-            "version": "dev-work/remove-deprecations",
+            "version": "dev-develop",
             "alias": "v4.0-dev",
             "alias_normalized": "4.0.0.0-dev"
         }
