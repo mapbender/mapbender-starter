@@ -25,6 +25,9 @@
             "src/Repository/.gitignore"
         ]
     },
+    "mapbender/digitizer": {
+        "version": "dev-work/symfony-update"
+    },
     "phpunit/phpunit": {
         "version": "9.6",
         "recipe": {
