@@ -25,6 +25,9 @@
             "src/Repository/.gitignore"
         ]
     },
+    "mapbender/digitizer": {
+        "version": "dev-develop"
+    },
     "phpunit/phpunit": {
         "version": "9.6",
         "recipe": {

@@ -28,6 +28,7 @@
         "components/jquery": "^1.11.2",
         "doctrine/dbal": "^3",
         "mapbender/mapbender": "dev-develop as v4.0-dev",
+        "mapbender/digitizer": "dev-develop as v2.0-dev",
         "mnsami/composer-custom-directory-installer": "^1 || ^2",
         "proj4js/proj4js": "^2.4",
         "select2/select2": "^4.0",
