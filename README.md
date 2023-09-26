@@ -97,6 +97,21 @@ The URL is shown in the output:
       http://127.0.0.1:8001      
 ```
 
+## Environments
+Two environments are available:
+
+- `dev` shows full error messages including stack traces in the browser and enables the symfony debug console and profiler. 
+  Also, caching is disabled.
+- `prod` enables caching and shows only generic error messages. Error messages are written to logfiles.
+
+The environment can be set via the APP_ENV environment variable. The default is `dev`. Make sure to change this when deploying
+your application in the internet. The value can be changed in several ways:
+
+- by editing `APP_ENV` in the `.env` file
+- by adding a `.env.local` file and overriding the value there
+- by explicitly setting it when starting the local webserver: `APP_ENV=prod symfony server:start --no-tls`
+- by setting an environment variable in your Apache2 vHost configuration: `SetEnv APP_ENV prod`
+
 ## Changing root account password
 From the application directory run:
 ```sh
