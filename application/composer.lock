@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bf400c618e1713378e5114497d92102c",
+    "content-hash": "c7e3c8c7f92cdc12988f6f54b7205177",
     "packages": [
         {
             "name": "assetic/framework",
@@ -99,6 +99,65 @@
                 "source": "https://github.com/assetic-php/assetic/tree/v2.0.2"
             },
             "time": "2022-01-26T20:52:23+00:00"
+        },
+        {
+            "name": "blueimp/jquery-file-upload",
+            "version": "v9.34.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vkhramtsov/jQuery-File-Upload.git",
+                "reference": "6d86a591f9a35bb811befb750dcd2c7da9ac05a2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vkhramtsov/jQuery-File-Upload/zipball/6d86a591f9a35bb811befb750dcd2c7da9ac05a2",
+                "reference": "6d86a591f9a35bb811befb750dcd2c7da9ac05a2",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "server/php/UploadHandler.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Tschan",
+                    "homepage": "https://blueimp.net"
+                }
+            ],
+            "description": "File Upload widget for jQuery.",
+            "homepage": "https://github.com/blueimp/jQuery-File-Upload",
+            "keywords": [
+                "bootstrap",
+                "chunk",
+                "cross-domain",
+                "cross-site",
+                "drag",
+                "drop",
+                "file",
+                "gae",
+                "go",
+                "jquery",
+                "multiple",
+                "php",
+                "preview",
+                "progress",
+                "python",
+                "resume",
+                "selection",
+                "upload",
+                "widget"
+            ],
+            "support": {
+                "forum": "https://groups.google.com/forum/#!forum/jquery-fileupload",
+                "source": "https://github.com/vkhramtsov/jQuery-File-Upload/tree/v9.34.0"
+            },
+            "time": "2019-07-22T13:10:51+00:00"
         },
         {
             "name": "components/font-awesome",
@@ -1628,6 +1687,81 @@
                 }
             ],
             "time": "2023-01-14T14:17:03+00:00"
+        },
+        {
+            "name": "mapbender/digitizer",
+            "version": "dev-work/symfony-update",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mapbender/mapbender-digitizer.git",
+                "reference": "04af393f6f91f8e28b93b15362f3fc2295dbcc53"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/04af393f6f91f8e28b93b15362f3fc2295dbcc53",
+                "reference": "04af393f6f91f8e28b93b15362f3fc2295dbcc53",
+                "shasum": ""
+            },
+            "require": {
+                "blueimp/jquery-file-upload": "9.*",
+                "doctrine/dbal": "^2.11 || ^3",
+                "doctrine/persistence": "^2 || ^3",
+                "mapbender/mapbender": "^3.2.6 || ^4",
+                "php": ">=8.0"
+            },
+            "conflict": {
+                "mapbender/openlayers6-es5": "<0.3.5"
+            },
+            "provide": {
+                "mapbender/data-manager": "3.0",
+                "mapbender/data-source": "1.0"
+            },
+            "replace": {
+                "mapbender/data-manager": "2.*",
+                "mapbender/data-source": "1.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-release/1.0": "1.0.x-dev",
+                    "dev-release/1.4": "1.4.x-dev",
+                    "dev-master": "1.5.x-dev",
+                    "dev-staging/1.6": "1.6.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Mapbender\\DigitizerBundle\\": "src/Mapbender/DigitizerBundle",
+                    "Mapbender\\DataSourceBundle\\": "src/Mapbender/DataSourceBundle",
+                    "Mapbender\\DataManagerBundle\\": "src/Mapbender/DataManagerBundle"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andriy Oblivantsev"
+                },
+                {
+                    "name": "Stefan Winkelmann"
+                },
+                {
+                    "name": "David Patzke"
+                }
+            ],
+            "description": "Mapbender digitizer element",
+            "keywords": [
+                "digitizer",
+                "digitizing",
+                "mapbender"
+            ],
+            "support": {
+                "issues": "https://github.com/mapbender/mapbender-digitizer/issues",
+                "source": "https://github.com/mapbender/mapbender-digitizer/tree/work/symfony-update"
+            },
+            "time": "2023-09-25T16:32:17+00:00"
         },
         {
             "name": "mapbender/mapbender",
@@ -10134,6 +10268,12 @@
     ],
     "aliases": [
         {
+            "package": "mapbender/digitizer",
+            "version": "dev-work/symfony-update",
+            "alias": "v2.0-dev",
+            "alias_normalized": "2.0.0.0-dev"
+        },
+        {
             "package": "mapbender/mapbender",
             "version": "dev-develop",
             "alias": "v4.0-dev",
@@ -10142,7 +10282,8 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "mapbender/mapbender": 20
+        "mapbender/mapbender": 20,
+        "mapbender/digitizer": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
