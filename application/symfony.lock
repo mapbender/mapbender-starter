@@ -26,7 +26,7 @@
         ]
     },
     "mapbender/digitizer": {
-        "version": "dev-work/symfony-update"
+        "version": "dev-develop"
     },
     "phpunit/phpunit": {
         "version": "9.6",
