@@ -1,6 +1,14 @@
+## next major release (v4.0)
+- PHP 8.2 now fully supported, minimum required PHP version is now 8.0
+- Update mapbender/mapbender to [v4.0](https://github.com/mapbender/mapbender/blob/develop/CHANGELOG.md) ([upgrade instructions](https://github.com/mapbender/mapbender/blob/develop/UPGRADING.md))
+- Symfony and third-party libraries like Bootstrap and Twig updated, [see mapbender core changelog for details](https://github.com/mapbender/mapbender/blob/develop/CHANGELOG.md)
+- Update bundled composer version to [2.6.3](https://github.com/composer/composer/releases/tag/2.6.3)
+- Removed OpenLayers 2 support (deprecated since v3.2). All applications that were still using the legacy engine will
+  automatically use the recent OpenLayers 7 implementation ([PR#1483](https://github.com/mapbender/mapbender/pull/1483))
+
 ## v3.3.5
 - Update mapbender/mapbender to [v3.3.5](https://github.com/mapbender/mapbender/releases/tag/v3.3.5)
-- 
+
 ## v3.3.4
 - Update mapbender/mapbender to [v3.3.4](https://github.com/mapbender/mapbender/releases/tag/v3.3.4)
 - Update mapbender/digitizer to [1.5.7](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.5.7)
