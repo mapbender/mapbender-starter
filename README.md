@@ -71,7 +71,7 @@ cd mapbender-starter
 
 The bootstrap command performs the following required setup tasks for you:
 * installs userland dependencies (via composer)
-* creates a parameters.yml by copying the bundled parameters.yml.dist
+* creates a parameters.yaml by copying the bundled parameters.yml.dist
 * performs the necessary database setup (as an sqlite file in `application/var/db/demo.sqlite`)
 * creates a root account with a default password `root` (which you should change later)
 
