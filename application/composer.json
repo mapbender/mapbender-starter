@@ -25,10 +25,9 @@
     "require": {
         "php": ">=8.0",
         "components/font-awesome": "^4.0",
-        "components/jquery": "^1.11.2",
         "doctrine/dbal": "^3",
-        "mapbender/mapbender": "dev-develop as v4.0-dev",
         "mapbender/digitizer": "dev-develop as v2.0-dev",
+        "mapbender/mapbender": "dev-develop as v4.0-dev",
         "mnsami/composer-custom-directory-installer": "^1 || ^2",
         "proj4js/proj4js": "^2.4",
         "select2/select2": "^4.0",
@@ -45,7 +44,8 @@
         "post-install-cmd": [
             "@composer dump-autoload",
             "ComposerBootstrap::clearCache",
-            "@copy-bootstrap"
+            "@copy-bootstrap",
+            "@copy-jqueryui"
         ],
         "post-update-cmd": [
             "@post-install-cmd"
@@ -54,10 +54,15 @@
             "rm -rf public/components/bootstrap",
             "cp -R vendor/twbs/bootstrap/dist public/components/bootstrap"
         ],
+        "copy-jqueryui": [
+            "rm -rf public/components/jquery-ui",
+            "cp -R vendor/jquery/jquery-ui/dist public/components/jquery-ui"
+        ],
         "update-assets":[
             "ComposerBootstrap::installAssets",
             "ComponentMirror::postAutoloadDump",
-            "@copy-bootstrap"
+            "@copy-bootstrap",
+            "@copy-jqueryui"
         ],
         "post-autoload-dump": [
             "ComponentMirror::postAutoloadDump"
@@ -85,11 +90,13 @@
         ],
         "install-hard-copy-assets": [
             "ComposerBootstrap::installHardCopyAssets",
-            "@copy-bootstrap"
+            "@copy-bootstrap",
+            "@copy-jqueryui"
         ],
         "install-sym-link-assets": [
             "ComposerBootstrap::installSymLinkAssets",
-            "@copy-bootstrap"
+            "@copy-bootstrap",
+            "@copy-jqueryui"
         ],
         "dist":[
             "ComposerBootstrap::distribute"

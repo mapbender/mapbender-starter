@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bd4f2a7107de123c8ff3b4a7003fa01b",
+    "content-hash": "4b9546aa4833b0750e1195ebba8c3718",
     "packages": [
         {
             "name": "assetic/framework",
@@ -200,16 +200,16 @@
         },
         {
             "name": "components/jquery",
-            "version": "1.12.4",
+            "version": "v3.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/components/jquery.git",
-                "reference": "5dd7297d7603e11e53bdcca2a71074d92de37b8f"
+                "reference": "8edc7785239bb8c2ad2b83302b856a1d61de60e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/components/jquery/zipball/5dd7297d7603e11e53bdcca2a71074d92de37b8f",
-                "reference": "5dd7297d7603e11e53bdcca2a71074d92de37b8f",
+                "url": "https://api.github.com/repos/components/jquery/zipball/8edc7785239bb8c2ad2b83302b856a1d61de60e7",
+                "reference": "8edc7785239bb8c2ad2b83302b856a1d61de60e7",
                 "shasum": ""
             },
             "type": "component",
@@ -221,8 +221,9 @@
                     "files": [
                         "jquery.min.js",
                         "jquery.min.map",
-                        "jquery-migrate.js",
-                        "jquery-migrate.min.js"
+                        "jquery.slim.js",
+                        "jquery.slim.min.js",
+                        "jquery.slim.min.map"
                     ]
                 }
             },
@@ -232,8 +233,7 @@
             ],
             "authors": [
                 {
-                    "name": "John Resig",
-                    "email": "jeresig@gmail.com"
+                    "name": "JS Foundation and other contributors"
                 }
             ],
             "description": "jQuery JavaScript Library",
@@ -241,100 +241,11 @@
             "support": {
                 "forum": "http://forum.jquery.com",
                 "irc": "irc://irc.freenode.org/jquery",
-                "issues": "http://bugs.jquery.com",
+                "issues": "https://github.com/jquery/jquery/issues",
                 "source": "https://github.com/jquery/jquery",
                 "wiki": "http://docs.jquery.com/"
             },
-            "time": "2016-05-25T06:50:04+00:00"
-        },
-        {
-            "name": "components/jqueryui",
-            "version": "1.12.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/components/jqueryui.git",
-                "reference": "44ecf3794cc56b65954cc19737234a3119d036cc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/components/jqueryui/zipball/44ecf3794cc56b65954cc19737234a3119d036cc",
-                "reference": "44ecf3794cc56b65954cc19737234a3119d036cc",
-                "shasum": ""
-            },
-            "require": {
-                "components/jquery": ">=1.6"
-            },
-            "type": "component",
-            "extra": {
-                "component": {
-                    "name": "jquery-ui",
-                    "scripts": [
-                        "jquery-ui.js"
-                    ],
-                    "files": [
-                        "ui/**",
-                        "themes/**",
-                        "jquery-ui.min.js"
-                    ],
-                    "shim": {
-                        "deps": [
-                            "jquery"
-                        ],
-                        "exports": "jQuery"
-                    }
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "jQuery UI Team",
-                    "homepage": "http://jqueryui.com/about"
-                },
-                {
-                    "name": "Joern Zaefferer",
-                    "email": "joern.zaefferer@gmail.com",
-                    "homepage": "http://bassistance.de"
-                },
-                {
-                    "name": "Scott Gonzalez",
-                    "email": "scott.gonzalez@gmail.com",
-                    "homepage": "http://scottgonzalez.com"
-                },
-                {
-                    "name": "Kris Borchers",
-                    "email": "kris.borchers@gmail.com",
-                    "homepage": "http://krisborchers.com"
-                },
-                {
-                    "name": "Mike Sherov",
-                    "email": "mike.sherov@gmail.com",
-                    "homepage": "http://mike.sherov.com"
-                },
-                {
-                    "name": "TJ VanToll",
-                    "email": "tj.vantoll@gmail.com",
-                    "homepage": "http://tjvantoll.com"
-                },
-                {
-                    "name": "Corey Frang",
-                    "email": "gnarf37@gmail.com",
-                    "homepage": "http://gnarf.net"
-                },
-                {
-                    "name": "Felix Nagel",
-                    "email": "info@felixnagel.com",
-                    "homepage": "http://www.felixnagel.com"
-                }
-            ],
-            "description": "jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you're building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice.",
-            "support": {
-                "issues": "https://github.com/components/jqueryui/issues",
-                "source": "https://github.com/components/jqueryui/tree/master"
-            },
-            "time": "2016-09-16T05:47:55+00:00"
+            "time": "2023-09-22T01:43:46+00:00"
         },
         {
             "name": "components/underscore",
@@ -1689,6 +1600,16 @@
             "time": "2023-01-14T14:17:03+00:00"
         },
         {
+            "name": "jquery/jquery-ui",
+            "version": "1.13.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jquery/jquery-ui",
+                "reference": "1.13.2"
+            },
+            "type": "library"
+        },
+        {
             "name": "mapbender/digitizer",
             "version": "dev-develop",
             "source": {
@@ -1769,17 +1690,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "a3f4991c831c8fc2f3c2641e8b8b5ff4c052da9b"
+                "reference": "0e2c46b744e4f5edfc98e7984ee9bda8de667ea1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/a3f4991c831c8fc2f3c2641e8b8b5ff4c052da9b",
-                "reference": "a3f4991c831c8fc2f3c2641e8b8b5ff4c052da9b",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/0e2c46b744e4f5edfc98e7984ee9bda8de667ea1",
+                "reference": "0e2c46b744e4f5edfc98e7984ee9bda8de667ea1",
                 "shasum": ""
             },
             "require": {
                 "assetic/framework": "^2.0",
-                "components/jqueryui": "^1",
+                "components/jquery": "^3.7.1",
                 "components/underscore": "1.x",
                 "datatables/datatables": "^1.10.16",
                 "doctrine/dbal": "^3",
@@ -1790,6 +1711,7 @@
                 "ext-gd": "*",
                 "ext-json": "*",
                 "ext-zip": "*",
+                "jquery/jquery-ui": "^1.13.2",
                 "mapbender/mapbender-icons": "^1.3",
                 "mapbender/openlayers6-es5": "^0.4.3.2 || ^6.4.3.2 || ^7",
                 "mapbender/owsproxy": "^3.1.8",
@@ -1899,7 +1821,7 @@
                 "issues": "https://github.com/mapbender/mapbender/issues",
                 "source": "https://github.com/mapbender/mapbender/tree/develop"
             },
-            "time": "2023-09-21T16:40:22+00:00"
+            "time": "2023-10-25T07:53:38+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -10282,8 +10204,8 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "mapbender/mapbender": 20,
-        "mapbender/digitizer": 20
+        "mapbender/digitizer": 20,
+        "mapbender/mapbender": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
@@ -10291,5 +10213,5 @@
         "php": ">=8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.2.0"
 }
