@@ -596,7 +596,7 @@ bin/phpunit -c app vendor/mapbender/digitizer/Mapbender/DigitizerBundle/Tests/Fe
 [SCSS]: http://sass-lang.com/guide "SCSS"
 [CSS]: http://www.w3schools.com/css/css_intro.asp "CSS"
 [TWIG]: http://twig.sensiolabs.org/ "TWIG"
-[parameters.yml]: http://symfony.com/doc/current/best_practices/configuration.html "Symfony configuratioN"
+[parameters.yaml]: http://symfony.com/doc/current/best_practices/configuration.html "Symfony configuratioN"
 [pull-request]: https://help.github.com/articles/creating-a-pull-request/ "Pull requests"
 [Resolve git conflicts]: https://help.github.com/articles/resolving-a-merge-conflict-on-github/ "Resolve git conflicts"
 [branch]: https://help.github.com/articles/about-branches/ "Branching"
