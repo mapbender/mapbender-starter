@@ -214,7 +214,7 @@ class ComposerBootstrap
     }
 
     /**
-     * Import example applications from "app/config/mapbender.yml" file
+     * Import example applications from "app/config/mapbender.yaml" file
      */
     public static function importExampleApplications()
     {
@@ -450,7 +450,7 @@ class ComposerBootstrap
      */
     protected static function getParametersPath()
     {
-        return static::getSymfonyRootPath() . '/config/parameters.yml';
+        return static::getSymfonyRootPath() . '/config/parameters.yaml';
     }
 
     /**
