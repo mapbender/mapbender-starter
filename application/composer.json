@@ -169,6 +169,18 @@
                     }
                 }
             }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "jquery/jquery-ui",
+                "version": "1.13.2",
+                "source": {
+                    "url": "https://github.com/jquery/jquery-ui",
+                    "type": "git",
+                    "reference": "1.13.2"
+                }
+            }
         }
     ]
 }
