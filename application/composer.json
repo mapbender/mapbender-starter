@@ -24,7 +24,7 @@
     },
     "require": {
         "php": ">=8.0",
-        "components/font-awesome": "^4.0",
+        "components/font-awesome": "^6.0",
         "doctrine/dbal": "^3",
         "mapbender/digitizer": "dev-develop as v2.0-dev",
         "mapbender/mapbender": "dev-develop as v4.0-dev",
