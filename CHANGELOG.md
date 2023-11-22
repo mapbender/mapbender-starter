@@ -3,7 +3,7 @@
 - Update mapbender/mapbender to [v4.0](https://github.com/mapbender/mapbender/blob/develop/CHANGELOG.md). 
   Directory structure and configuration has changed, refer to the mapbender core repository for ([upgrade instructions](https://github.com/mapbender/mapbender/blob/develop/UPGRADING.md))
 - [Coordinates utitlity](https://github.com/mapbender/coordinates-utility) has been integrated in mapbender-core, separate dependency no longer needed
-- Symfony and third-party libraries like Bootstrap and Twig updated, [see mapbender core changelog for details](https://github.com/mapbender/mapbender/blob/develop/CHANGELOG.md)
+- Symfony and third-party libraries like Bootstrap, Twig and FontAwesome updated, [see mapbender core changelog for details](https://github.com/mapbender/mapbender/blob/develop/CHANGELOG.md)
 - Update bundled composer version to [2.6.3](https://github.com/composer/composer/releases/tag/2.6.3)
 - Removed OpenLayers 2 support (deprecated since v3.2). All applications that were still using the legacy engine will
   automatically use the recent OpenLayers 7 implementation ([PR#1483](https://github.com/mapbender/mapbender/pull/1483))
