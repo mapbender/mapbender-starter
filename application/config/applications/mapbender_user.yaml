@@ -120,40 +120,40 @@ parameters:
                         instancesets:
                             1-basesourceswitcher:
                                 title: OSM
-                                group: Base map
+                                group: mb.demoapps.baseMaps
                                 instances:
                                     - osm
                             2-basesourceswitcher:
                                 title: OSM + Overlay (NRW)
-                                group: Base map
+                                group: mb.demoapps.baseMaps
                                 instances: [osm, overlay]
                             3-basesourceswitcher:
                                 title: TopPlusOpen
-                                group: Base map
+                                group: mb.demoapps.baseMaps
                                 instances:
                                     - tpo
                             4-basesourceswitcher:
                                 title: TopPlusOpen + Overlay (NRW)
-                                group: Base map
+                                group: mb.demoapps.baseMaps
                                 instances: [tpo, overlay]
                             5-basesourceswitcher:
                                 title: DOP (NRW)
-                                group: Aerial view
+                                group: mb.demoapps.aerialView
                                 instances:
                                     - dop
                             6-basesourceswitcher:
                                 title: DOP + Overlay (NRW)
-                                group: Aerial view
+                                group: mb.demoapps.aerialView
                                 instances:
                                     - dop
                                     - overlay
                             7-basesourceswitcher:
                                 title: Overlay (NRW)
-                                group: Aerial view
+                                group: mb.demoapps.aerialView
                                 instances:
                                     - overlay
                             8-basesourceswitcher:
-                                title: 'No background'
+                                title: mb.demoapps.noBackground
                                 group: null
                                 instances: []
                     fi-button:
@@ -219,7 +219,7 @@ parameters:
                         target: copyright
                     simplesearch:
                         title: mb.core.simplesearch.class.title
-                        placeholder: 'Search location'
+                        placeholder: mb.demoapps.search
                         class: Mapbender\CoreBundle\Element\SimpleSearch
                         target: map
                         query_url: https://osm-photon-search.wheregroup.com/search/api?limit=20&lat=50.7163&lon=7.1366&osm_tag=!railway&osm_tag=!highway:elevator&osm_tag=!tourism&osm_tag=!amenity
@@ -339,7 +339,7 @@ parameters:
                     poi:
                         class: Mapbender\CoreBundle\Element\POI
                         target: map
-                        body: 'Please take a look at this POI'
+                        body: mb.demoapps.poi
                         useMailto: false
                     copyright:
                         class: Mapbender\CoreBundle\Element\Copyright
@@ -364,14 +364,14 @@ parameters:
                         themes:
                             -
                                 id: themes
-                                title: 'Themes'
+                                title: mb.demoapps.themes
                                 useTheme: true
                                 opened: true
                                 sourceVisibility: false
                                 allSelected: false
                             -
                                 id: background themes
-                                title: 'Background themes'
+                                title: mb.demoapps.backgroundThemes
                                 useTheme: true
                                 opened: true
                                 sourceVisibility: false
@@ -406,7 +406,7 @@ parameters:
                     html-about-mapbender:
                         class: Mapbender\CoreBundle\Element\HTMLElement
                         classes: html-element-inline
-                        title: About Mapbender
+                        title: mb.demoapps.about
                         content: "<p><b>Application name:</b><br><br> {{ application.title }}</p><br><p>Mapbender is part of </p><p><a href=\"https://www.osgeo.org/projects/mapbender/\" target=\"_blank\"><img src=\"https://www.osgeo.org/wp-content/themes/roots/assets/img/logo-osgeo.svg\" alt=\"OSGeo Project\"  title=\"OSGeo Project\" width=\"100px\" /></a></p><p><br>Find out more about OSGeo at: <br/><a href=\"https://www.osgeo.org\" target=\"_blank\">https://www.osgeo.org</a><br/><a href=\"https://www.osgeo.org/projects/mapbender/\" target=\"_blank\">https://www.osgeo.org/projects/mapbender/</a>"
                 footer:
                     activityindicator:

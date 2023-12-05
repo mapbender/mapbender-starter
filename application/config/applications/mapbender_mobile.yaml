@@ -56,7 +56,7 @@ parameters:
                 footer:
                     # button parameters: action,activate,deactivate are ignored for elements at mobilePane
                     layertree-button:
-                        title: Themes
+                        title: mb.demoapps.themes
                         tooltip: Themes
                         class: Mapbender\CoreBundle\Element\ControlButton
                         label: false
@@ -125,7 +125,7 @@ parameters:
 
                 mobilePane:
                     layertree:
-                        title: Themes
+                        title: mb.demoapps.themes
                         class: Mapbender\CoreBundle\Element\Layertree
                         target: map
                         type: element
