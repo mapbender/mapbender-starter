@@ -14,31 +14,26 @@
         "user-list":    "https://lists.osgeo.org/pipermail/mapbender_users/"
     },
     "autoload": {
-        "psr-4": { "": "src/" }
+        "psr-4": {
+            "": "bin/",
+            "App\\": "src/"
+        }
     },
     "require-dev": {
         "phpunit/phpunit": "^9"
     },
     "require": {
-        "php": ">=7.4.0",
-        "symfony/symfony": "~4.4.0",
-        "symfony/monolog-bundle": "^3",
-        "doctrine/dbal": "^2.7",
-
-        "components/jquery": "^1.11.2",
-
+        "php": ">=8.0",
+        "components/font-awesome": "^6.0",
+        "doctrine/dbal": "^3",
+        "mapbender/digitizer": "dev-develop as v2.0-dev",
+        "mapbender/mapbender": "dev-develop as v4.0-dev",
         "mnsami/composer-custom-directory-installer": "^1 || ^2",
-
         "proj4js/proj4js": "^2.4",
-        "mapbender/mapbender": "^3.3.4-RC1",
-
-        "mapbender/coordinates-utility": "^1.1",
-        "mapbender/digitizer": "^1.4",
         "select2/select2": "^4.0",
-        "components/font-awesome": "^4.0",
+        "symfony/flex": "*",
         "wheregroup/cookieconsent": "^3",
-        "wheregroup/sassc-binaries": "^0.0.1",
-        "components/bootstrap": "^3"
+        "wheregroup/sassc-binaries": "^0.0.1"
     },
     "replace": {
         "robloach/component-installer": "^0.2"
@@ -48,14 +43,26 @@
     "scripts": {
         "post-install-cmd": [
             "@composer dump-autoload",
-            "ComposerBootstrap::clearCache"
+            "ComposerBootstrap::clearCache",
+            "@copy-bootstrap",
+            "@copy-jqueryui"
         ],
         "post-update-cmd": [
             "@post-install-cmd"
         ],
+        "copy-bootstrap": [
+            "rm -rf public/components/bootstrap",
+            "cp -R vendor/twbs/bootstrap/dist public/components/bootstrap"
+        ],
+        "copy-jqueryui": [
+            "rm -rf public/components/jquery-ui",
+            "cp -R vendor/jquery/jquery-ui/dist public/components/jquery-ui"
+        ],
         "update-assets":[
             "ComposerBootstrap::installAssets",
-            "ComponentMirror::postAutoloadDump"
+            "ComponentMirror::postAutoloadDump",
+            "@copy-bootstrap",
+            "@copy-jqueryui"
         ],
         "post-autoload-dump": [
             "ComponentMirror::postAutoloadDump"
@@ -82,10 +89,14 @@
             "ComposerBootstrap::rebuildDatabase"
         ],
         "install-hard-copy-assets": [
-            "ComposerBootstrap::installHardCopyAssets"
+            "ComposerBootstrap::installHardCopyAssets",
+            "@copy-bootstrap",
+            "@copy-jqueryui"
         ],
         "install-sym-link-assets": [
-            "ComposerBootstrap::installSymLinkAssets"
+            "ComposerBootstrap::installSymLinkAssets",
+            "@copy-bootstrap",
+            "@copy-jqueryui"
         ],
         "dist":[
             "ComposerBootstrap::distribute"
@@ -93,14 +104,18 @@
         "build": [
             "ComposerBootstrap::distribute",
             "ComposerBootstrap::build"
-        ]
+        ],
+        "auto-scripts": {
+            "cache:clear": "symfony-cmd",
+            "assets:install %PUBLIC_DIR%": "symfony-cmd"
+        }
     },
     "scripts-descriptions": {
         "bootstrap-database": "Reinitializes database schema and contents after connection configuration change"
     },
     "config": {
         "bin-dir": "bin",
-        "component-dir": "web/components",
+        "component-dir": "public/components",
         "component-baseurl": "/components",
         "archive-dir": "../dist",
         "archive-format": "tar.gz",
@@ -110,22 +125,29 @@
             "mapbender/*": "source",
             "wheregroup/*": "source"
         },
+        "sort-packages": true,
         "allow-plugins": {
-            "mnsami/composer-custom-directory-installer": true
+            "mnsami/composer-custom-directory-installer": true,
+            "symfony/runtime": true,
+            "symfony/flex": true
         }
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "extra": {
         "symfony-app-dir": "app",
-        "symfony-web-dir": "web",
-        "public-dir": "web",
+        "symfony-web-dir": "public",
+        "public-dir": "public",
         "ATTENTION": "Symlinks creating under MS Windows works only if composer runs with admin permissions",
         "symfony-assets-install": "symlink",
         "installer-paths":{
             "mapbender/": ["mapbender/mapbender"],
             "vendor/igosuki/compass-mixins": ["wheregroup/compass-mixins"],
-            "web/components/datatables/": ["datatables/datatables"]
+            "public/components/datatables/": ["datatables/datatables"]
+        },
+        "symfony": {
+            "allow-contrib": true,
+            "require": "5.4.*"
         }
     },
     "repositories": [
@@ -145,6 +167,18 @@
                             "dist/*.js"
                         ]
                     }
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "jquery/jquery-ui",
+                "version": "1.13.2",
+                "source": {
+                    "url": "https://github.com/jquery/jquery-ui",
+                    "type": "git",
+                    "reference": "1.13.2"
                 }
             }
         }

@@ -1,0 +1,36 @@
+# This file is the entry point to configure your own services.
+# Files in the packages/ subdirectory configure your dependencies.
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
+parameters:
+    log_path: '%kernel.logs_dir%/%kernel.environment%.log'
+    mapbender.disabled_elements:
+        - Mapbender\CoreBundle\Element\ResetView
+        # Installed as a collateral Digitizer 1.4 dependency
+        - Mapbender\DataManagerBundle\Element\DataManager
+    # default layer order when creating *new* WMS layerset instances
+    # allowed values are either
+    # * "standard": Traditional Mapbender behaviour: top-down rendering in GetCapabilities order;
+    #               also the default if this parameter is not defined
+    # * "reverse": bottom-up, for QGIS server, ArcGIS etc
+    # wms.default_layer_order: standard
+
+
+services:
+    # default configuration for services in *this* file
+    _defaults:
+        autowire: false      # Automatically injects dependencies in your services.
+        autoconfigure: false # Automatically registers your services as commands, event subscribers, etc.
+
+    # makes classes in src/ available to be used as services
+    # this creates a service per class whose id is the fully-qualified class name
+    App\:
+        resource: '../src/'
+        exclude:
+            - '../src/DependencyInjection/'
+            - '../src/Entity/'
+            - '../src/Kernel.php'
+
+    # add more service definitions when explicit configuration is needed
+    # please note that last definitions always *replace* previous ones

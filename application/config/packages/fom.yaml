@@ -1,0 +1,11 @@
+# FOM Manager Configuration
+fom_manager:
+    route_prefix: /manager
+
+# see https://github.com/mapbender/fom/blob/master/src/FOM/UserBundle/CONFIGURATION.md#extension-configuration
+fom_user:
+    selfregister: false
+    reset_password: true
+    max_reset_time: 1
+    mail_from_address: ~
+    mail_from_name: ~

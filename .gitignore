@@ -1,11 +1,8 @@
-*/app/cache
-*/app/logs
-*/web/uploads
+application/public/uploads
 
-!*/web/uploads/mapbender_user
-!*/web/uploads/mapbender_user_basic
-*/app/config/parameters.yml
-*/app/bootstrap.php.cache
+!application/public/uploads/mapbender_user
+!application/public/uploads/mapbender_user_basic
+*/config/parameters.yaml
 */vendor
 *.tar.gz
 *.rpm
@@ -18,9 +15,11 @@ testresults
 .idea/
 
 # Composer asset components
-application/web/components/
+application/public/components/
 
 application/mapbender
 
 # Distribution files
 dist
+
+.phpunit.result.cache

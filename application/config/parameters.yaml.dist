@@ -1,0 +1,35 @@
+parameters:
+    ### todo: switch to using dsn urls, see https://www.doctrine-project.org/projects/doctrine-dbal/en/2.9/reference/configuration.html#connecting-using-a-url
+    ###       To avoid suprises, a DSN can be constructed here from parts, at least for the shipping default parameters
+    ###       Connection definition in config.yaml should only use url: '%database_dsn%' though
+    database_driver:   pdo_sqlite
+    database_host:     ~
+    database_port:     ~
+    database_name:     ~
+    database_path:     '%kernel.project_dir%/var/db/demo.sqlite'
+    database_user:     ~
+    database_password: ~
+
+    # Might also use third-party providers like e.g. Mailchimp, see https://symfony.com/doc/current/mailer.html#using-built-in-transports
+    mailer_dsn:        smtp://user:pass@smtp.example.com:25
+
+    # locale en, de, it, es, ru, nl, pt are available
+    fallback_locale:   en
+    locale:            en
+    secret:            ThisTokenIsNotSoSecretChangeIt
+
+    # framework : https://symfony.com/doc/4.4/reference/configuration/framework.html#cookie-lifetime
+    cookie_secure: false
+    cookie_lifetime: 3600
+
+    # OWSProxy Configuration
+    # see https://github.com/mapbender/owsproxy3/blob/master/CONFIGURATION.md#extension-configuration
+    ows_proxy3_logging: false
+    ows_proxy3_obfuscate_client_ip: true
+    ows_proxy3_host: ~
+    ows_proxy3_port: ~
+    ows_proxy3_connecttimeout: 60
+    ows_proxy3_timeout: 90
+    ows_proxy3_user: ~
+    ows_proxy3_password: ~
+    ows_proxy3_noproxy: ~

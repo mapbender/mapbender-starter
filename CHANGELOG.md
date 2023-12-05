@@ -11,7 +11,7 @@
 
 ## v3.3.5
 - Update mapbender/mapbender to [v3.3.5](https://github.com/mapbender/mapbender/releases/tag/v3.3.5)
-  
+
 ## v3.3.4
 - Update mapbender/mapbender to [v3.3.4](https://github.com/mapbender/mapbender/releases/tag/v3.3.4)
 - Update mapbender/digitizer to [1.5.7](https://github.com/mapbender/mapbender-digitizer/releases/tag/1.5.7)
