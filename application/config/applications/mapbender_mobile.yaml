@@ -58,13 +58,13 @@ parameters:
                     layertree-button:
                         title: Themes
                         tooltip: Themes
-                        class: Mapbender\CoreBundle\Element\Button
+                        class: Mapbender\CoreBundle\Element\ControlButton
                         label: false
                         icon: iconLayertree
                         target: layertree
 
                     bss-button:
-                        class: Mapbender\CoreBundle\Element\Button
+                        class: Mapbender\CoreBundle\Element\ControlButton
                         icon: iconLegend
                         label: false
                         target: basesourceswitcher
@@ -82,7 +82,7 @@ parameters:
                     imprint-button:
                         title: Imprint
                         tooltip: Imprint
-                        class: Mapbender\CoreBundle\Element\Button
+                        class: Mapbender\CoreBundle\Element\ControlButton
                         label: false
                         icon: iconInfoActive
                         target: imprint
@@ -90,7 +90,7 @@ parameters:
                     help-button:
                         title: mb.core.aboutdialog.tag.help
                         tooltip: mb.core.aboutdialog.tag.help
-                        class: Mapbender\CoreBundle\Element\Button
+                        class: Mapbender\CoreBundle\Element\ControlButton
                         label: false
                         icon: iconHelp
                         target: help
@@ -98,7 +98,7 @@ parameters:
                     about-mapbender-button:
                         title: mb.core.aboutdialog.tag.about
                         tooltip: mb.core.aboutdialog.tag.about
-                        class: Mapbender\CoreBundle\Element\Button
+                        class: Mapbender\CoreBundle\Element\ControlButton
                         label: false
                         icon: iconAbout
                         target: html-about-mapbender

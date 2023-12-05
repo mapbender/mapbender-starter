@@ -53,7 +53,7 @@ parameters:
                         visible: false
                         opacity: 100
                         isBaseSource: false
-                background themes:                        
+                background themes:
                     dop:
                         class: Mapbender\WmsBundle\Entity\WmsInstance
                         title: NW DOP
@@ -80,7 +80,7 @@ parameters:
                         transparent: true
                         tiled: true
                         opacity: 100
-                        isBaseSource: true                        
+                        isBaseSource: true
                     osm:
                         class: Mapbender\WmsBundle\Entity\WmsInstance
                         title: OSM Demo
@@ -108,7 +108,7 @@ parameters:
                         transparent: true
                         visible: true
                         opacity: 100
-                        isBaseSource: false                       
+                        isBaseSource: false
             elements:
                 toolbar:
                     basesourceswitcher:
@@ -135,7 +135,7 @@ parameters:
                             4-basesourceswitcher:
                                 title: TopPlusOpen + Overlay (NRW)
                                 group: Base map
-                                instances: [tpo, overlay]                                                                                                 
+                                instances: [tpo, overlay]
                             5-basesourceswitcher:
                                 title: DOP (NRW)
                                 group: Aerial view
@@ -151,31 +151,31 @@ parameters:
                                 title: Overlay (NRW)
                                 group: Aerial view
                                 instances:
-                                    - overlay                                   
+                                    - overlay
                             8-basesourceswitcher:
                                 title: 'No background'
                                 group: null
-                                instances: []                    
+                                instances: []
                     fi-button:
-                        class: Mapbender\CoreBundle\Element\Button
+                        class: Mapbender\CoreBundle\Element\ControlButton
                         icon: iconInfoActive
                         label: true
                         target: featureinfo
                         group: featureinfo
                     legend-button:
-                        class: Mapbender\CoreBundle\Element\Button
+                        class: Mapbender\CoreBundle\Element\ControlButton
                         label: true
                         target: legend
                         icon: iconLegend
                     wmsloader-button:
-                        class: Mapbender\CoreBundle\Element\Button
+                        class: Mapbender\CoreBundle\Element\ControlButton
                         label: true
                         target: wmsloader
                         icon: iconWms
                     lineruler-button:
                         title: mb.core.ruler.tag.measure
                         tooltip: mb.core.ruler.tag.line
-                        class: Mapbender\CoreBundle\Element\Button
+                        class: Mapbender\CoreBundle\Element\ControlButton
                         icon: icon-line-ruler
                         label: true
                         target: lineruler
@@ -183,7 +183,7 @@ parameters:
                     arearuler-button:
                         title: mb.core.ruler.tag.measure
                         tooltip: mb.core.ruler.tag.area
-                        class: Mapbender\CoreBundle\Element\Button
+                        class: Mapbender\CoreBundle\Element\ControlButton
                         icon: icon-area-ruler
                         label: true
                         target: arearuler
@@ -192,28 +192,28 @@ parameters:
                         class: Mapbender\CoreBundle\Element\GpsPosition
                         label: true
                         target: map
-                        screenType: mobile                              
+                        screenType: mobile
                     poi-button:
-                        class: Mapbender\CoreBundle\Element\Button
+                        class: Mapbender\CoreBundle\Element\ControlButton
                         icon: iconPoi
                         label: true
                         target: poi
                     print-button:
-                        class: Mapbender\CoreBundle\Element\Button
+                        class: Mapbender\CoreBundle\Element\ControlButton
                         label: true
                         icon: iconPrint
                         target: printclient
                         screenType: desktop
                     imageexport-button:
-                        class: Mapbender\CoreBundle\Element\Button
+                        class: Mapbender\CoreBundle\Element\ControlButton
                         label: true
                         icon: iconImageExport
-                        target: imageexport                        
+                        target: imageexport
                     shareUrl:
                         class: Mapbender\CoreBundle\Element\ShareUrl
                         label: true
                     copyright-button:
-                        class: Mapbender\CoreBundle\Element\Button
+                        class: Mapbender\CoreBundle\Element\ControlButton
                         icon: iconCopyright
                         label: true
                         target: copyright
@@ -231,7 +231,7 @@ parameters:
                         collection_path: features
                         label_attribute:  '${properties.name} ${properties.street} ${properties.housenumber} ${properties.city} ${properties.country}'
                         geom_attribute: geometry
-                        sourceSrs: 'EPSG:4326'                        
+                        sourceSrs: 'EPSG:4326'
                         geom_format: GeoJSON
                         delay: 300
                         query_ws_replace: null
@@ -329,7 +329,7 @@ parameters:
                         target: map
                         anchor: 'right-bottom'
                         maxWidth: 200
-                        units: km                        
+                        units: km
                     scaledisplay:
                         class: Mapbender\CoreBundle\Element\ScaleDisplay
                         target: map
@@ -368,19 +368,19 @@ parameters:
                                 useTheme: true
                                 opened: true
                                 sourceVisibility: false
-                                allSelected: false                        
+                                allSelected: false
                             -
                                 id: background themes
                                 title: 'Background themes'
                                 useTheme: true
                                 opened: true
                                 sourceVisibility: false
-                                allSelected: false                                                          
+                                allSelected: false
                     viewmanager:
                         class: Mapbender\CoreBundle\Element\ViewManager
                         publicEntries: ro
                         privateEntries: true
-                        allowAnonymousSave: false 
+                        allowAnonymousSave: false
                         showDate: true
                     sketch:
                         class: Mapbender\CoreBundle\Element\Sketch
@@ -396,7 +396,7 @@ parameters:
                         auto_activate: false
                         deactivate_on_close: false
                         colors: ["#FFFFFF","#cf003d","#ccd22a","#00837e","#009ee0","#000000"]
-                        allow_custom_color: false       
+                        allow_custom_color: false
                     coordinatesutility:
                         class: Mapbender\CoordinatesUtilityBundle\Element\CoordinatesUtility
                         target: map
@@ -430,7 +430,7 @@ parameters:
                     OSM-badge:
                         title: © OpenStreetMap contributors
                         tooltip: © OpenStreetMap contributors
-                        class: Mapbender\CoreBundle\Element\Button
+                        class: Mapbender\CoreBundle\Element\ControlButton
                         label: true
                         click: https://www.openstreetmap.org/copyright
                     HTML:
