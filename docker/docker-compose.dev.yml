@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  mapbender:
+    volumes:
+      - ../:/var/www/html
+    environment:
+      - APP_ENV=dev
+      - XDEBUG_MODE=debug
+      - xdebug.start_with_request = yes
+      - RUN_BOOTSTRAP=true
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "8080:80" # Apache port
+      #- "9003:9003" # Xdebug port
+    user: ${UID}:${GID}
+
+  db:
+    ports:
+      - "54321:5432" # PostGIS port
