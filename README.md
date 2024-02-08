@@ -72,6 +72,7 @@ cd mapbender-starter
 The bootstrap command performs the following required setup tasks for you:
 * installs userland dependencies (via composer)
 * creates a parameters.yaml by copying the bundled parameters.yml.dist
+* creates a .env.local file by copying the bundled .env.local.dist
 * performs the necessary database setup (as an sqlite file in `application/var/db/demo.sqlite`)
 * creates a root account with a default password `root` (which you should change later)
 
@@ -108,9 +109,12 @@ The environment can be set via the APP_ENV environment variable. The default is 
 your application in the internet. The value can be changed in several ways:
 
 - by editing `APP_ENV` in the `.env` file
-- by adding a `.env.local` file and overriding the value there
+- by overriding the value in a `.env.local` file
 - by explicitly setting it when starting the local webserver: `APP_ENV=prod symfony server:start --no-tls`
 - by setting an environment variable in your Apache2 vHost configuration: `SetEnv APP_ENV prod`
+
+The `index_dev.php` file allows direct access to the dev environment. It can only be accessed from local 
+ip addresses by default for security reasons.
 
 ## Changing root account password
 From the application directory run:
