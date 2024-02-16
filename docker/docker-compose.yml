@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  mapbender:
+    build: ../
+    depends_on:
+      - db
+    environment:
+      - APP_ENV=prod
+
+  db:
+    image: postgis/postgis
+    environment:
+      POSTGRES_DB: project_db
+      POSTGRES_USER: project_user
+      POSTGRES_PASSWORD: project_password

@@ -24,3 +24,5 @@ application/mapbender
 
 # Distribution files
 dist
+
+.env

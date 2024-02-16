@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  mapbender:
+    #image:
+    environment:
+      - APP_ENV=prod
+      - XDEBUG_MODE=off
+    ports:
+      - "80:80" # Apache port
