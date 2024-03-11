@@ -1,15 +1,14 @@
 {
-    "name": "wheregroup/mapbender3-starter",
+    "name": "wheregroup/mapbender-starter",
     "description": "Mapbender",
     "type": "project",
     "license": "MIT",
-    "homepage": "http://www.mapbender.org",
+    "homepage": "https://www.mapbender.org",
     "support": {
         "email":        "mapbender@osgeo.org",
         "issues":       "https://github.com/mapbender/mapbender/issues",
         "source":       "https://github.com/mapbender/mapbender-starter",
-        "docs":         "http://doc.mapbender.org/",
-        "forum":        "http://osgeo-org.1560.x6.nabble.com/Mapbender-f4217602.html",
+        "docs":         "https://doc.mapbender.org/",
         "twitter":      "https://twitter.com/mapbender",
         "user-list":    "https://lists.osgeo.org/pipermail/mapbender_users/"
     },
