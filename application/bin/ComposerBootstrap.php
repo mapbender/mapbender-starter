@@ -531,7 +531,6 @@ class ComposerBootstrap
 
         foreach (array(
                      "vendor/mapbender/documentation",
-                     "vendor/phpunit",
                      "public/index.php",
                      "var/cache/*",
                      "var/log/*",
@@ -550,6 +549,7 @@ class ComposerBootstrap
         echo `cp ../CHANGELOG.md "$archiveProjectPath/"`;
 
         echo "Distributed to: $archiveProjectPath\n";
+        echo "CAUTION: The generated build contains all your database passwords. Do not publicly distribute the generated file. \n\n";
     }
 
     /**
