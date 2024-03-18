@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fcbb238c0e94eb8796137fb84c8647dd",
+    "content-hash": "7865c57a3fab79d6d19ec664ee3a8435",
     "packages": [
         {
             "name": "assetic/framework",
@@ -1801,16 +1801,16 @@
         },
         {
             "name": "mapbender/openlayers6-es5",
-            "version": "7.3.0.0",
+            "version": "7.5.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/openlayers6-es5.git",
-                "reference": "473eb1068dc7a11a4abc18abb13cb10be57e8f0a"
+                "reference": "8468188c44cb5607d7cd3b08b8346a0fc50ae42b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/openlayers6-es5/zipball/473eb1068dc7a11a4abc18abb13cb10be57e8f0a",
-                "reference": "473eb1068dc7a11a4abc18abb13cb10be57e8f0a",
+                "url": "https://api.github.com/repos/mapbender/openlayers6-es5/zipball/8468188c44cb5607d7cd3b08b8346a0fc50ae42b",
+                "reference": "8468188c44cb5607d7cd3b08b8346a0fc50ae42b",
                 "shasum": ""
             },
             "type": "component",
@@ -1833,9 +1833,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/openlayers6-es5/issues",
-                "source": "https://github.com/mapbender/openlayers6-es5/tree/7.3.0.0"
+                "source": "https://github.com/mapbender/openlayers6-es5/tree/7.5.2.0"
             },
-            "time": "2023-04-20T08:29:58+00:00"
+            "time": "2024-03-18T15:08:41+00:00"
         },
         {
             "name": "mnsami/composer-custom-directory-installer",
