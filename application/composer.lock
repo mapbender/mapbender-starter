@@ -1801,16 +1801,16 @@
         },
         {
             "name": "mapbender/openlayers6-es5",
-            "version": "7.5.2.0",
+            "version": "7.5.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/openlayers6-es5.git",
-                "reference": "8468188c44cb5607d7cd3b08b8346a0fc50ae42b"
+                "reference": "da24a5c02053d3b0ff0417a455b7c01d8acdf8a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/openlayers6-es5/zipball/8468188c44cb5607d7cd3b08b8346a0fc50ae42b",
-                "reference": "8468188c44cb5607d7cd3b08b8346a0fc50ae42b",
+                "url": "https://api.github.com/repos/mapbender/openlayers6-es5/zipball/da24a5c02053d3b0ff0417a455b7c01d8acdf8a4",
+                "reference": "da24a5c02053d3b0ff0417a455b7c01d8acdf8a4",
                 "shasum": ""
             },
             "type": "component",
@@ -1833,9 +1833,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/openlayers6-es5/issues",
-                "source": "https://github.com/mapbender/openlayers6-es5/tree/7.5.2.0"
+                "source": "https://github.com/mapbender/openlayers6-es5/tree/7.5.2.1"
             },
-            "time": "2024-03-18T15:08:41+00:00"
+            "time": "2024-04-02T07:46:59+00:00"
         },
         {
             "name": "mnsami/composer-custom-directory-installer",
