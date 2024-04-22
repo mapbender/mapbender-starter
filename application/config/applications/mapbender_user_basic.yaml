@@ -105,6 +105,11 @@ parameters:
                         label: false
                         target: arearuler
                         group: rulers
+                    dataupload-button:
+                        class: Mapbender\CoreBundle\Element\Button
+                        icon: iconDataUpload
+                        label: false
+                        target: dataupload
                     about:
                         title: mb.core.aboutdialog.tag.about
                         tooltip: mb.core.aboutdialog.tag.about
@@ -223,6 +228,11 @@ parameters:
                                 title: '4326'
                         addMapSrsList: true
                         zoomlevel: 6
+                    dataupload:
+                        class: Mapbender\CoreBundle\Element\DataUpload
+                        target: map
+                        maxFileSize: 10
+                        helpText: mb.core.dataupload.admin.helpText
                 footer:
                     activityindicator:
                         class: Mapbender\CoreBundle\Element\ActivityIndicator

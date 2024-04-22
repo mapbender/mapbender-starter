@@ -224,6 +224,11 @@ parameters:
                         srsList: []
                         addMapSrsList: true
                         zoomlevel: 6
+                    dataupload:
+                        class: Mapbender\CoreBundle\Element\DataUpload
+                        target: map
+                        maxFileSize: 10
+                        helpText: mb.core.dataupload.admin.helpText
                     html-about-mapbender:
                         title: 'About Mapbender'
                         class: Mapbender\CoreBundle\Element\HTMLElement
