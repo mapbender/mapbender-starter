@@ -1,3 +1,0 @@
-framework:
-    mailer:
-        disable_delivery: true
