@@ -219,7 +219,7 @@ parameters:
                         target: map
                         auto_activate: false
                     coordinatesutility:
-                        class: Mapbender\CoordinatesUtilityBundle\Element\CoordinatesUtility
+                        class: Mapbender\CoreBundle\Element\CoordinatesUtility
                         target: map
                         srsList: []
                         addMapSrsList: true
