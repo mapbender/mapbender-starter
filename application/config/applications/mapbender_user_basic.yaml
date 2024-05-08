@@ -395,7 +395,7 @@ parameters:
                         scalePrefix: Scale
                         unitPrefix: true
                     coordinatesutility:
-                        class: Mapbender\CoordinatesUtilityBundle\Element\CoordinatesUtility
+                        class: Mapbender\CoreBundle\Element\CoordinatesUtility
                         target: map
                         srsList:
                             -

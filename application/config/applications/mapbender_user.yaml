@@ -398,7 +398,7 @@ parameters:
                         colors: ["#FFFFFF","#cf003d","#ccd22a","#00837e","#009ee0","#000000"]
                         allow_custom_color: false
                     coordinatesutility:
-                        class: Mapbender\CoordinatesUtilityBundle\Element\CoordinatesUtility
+                        class: Mapbender\CoreBundle\Element\CoordinatesUtility
                         target: map
                         srsList: []
                         addMapSrsList: true

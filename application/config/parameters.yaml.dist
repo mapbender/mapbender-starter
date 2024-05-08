@@ -1,26 +1,18 @@
+# Documentation: https://docs.mapbender.org/current/en/customization/yaml.html#parameters-yaml
+# Databases and mailer settings are no longer configured here. Use the .env file
+# Also see config/packages/fom.yaml for user-management-specific configuration
+
 parameters:
-    ### todo: switch to using dsn urls, see https://www.doctrine-project.org/projects/doctrine-dbal/en/2.9/reference/configuration.html#connecting-using-a-url
-    ###       To avoid suprises, a DSN can be constructed here from parts, at least for the shipping default parameters
-    ###       Connection definition in config.yaml should only use url: '%database_dsn%' though
-    database_driver:   pdo_sqlite
-    database_host:     ~
-    database_port:     ~
-    database_name:     ~
-    database_path:     '%kernel.project_dir%/var/db/demo.sqlite'
-    database_user:     ~
-    database_password: ~
-
-    # Might also use third-party providers like e.g. Mailchimp, see https://symfony.com/doc/current/mailer.html#using-built-in-transports
-    mailer_dsn:        smtp://user:pass@smtp.example.com:25
-
-    # locale en, de, it, es, ru, nl, pt are available
+    # locale en, de, es, fr, it, nl, pt, ru, tr, uk are available
     fallback_locale:   en
     locale:            en
-    secret:            ThisTokenIsNotSoSecretChangeIt
+    # uncomment this if you don't want the language to automatically adapt to the browser language
+    # mapbender.automatic_locale: false
 
-    # framework : https://symfony.com/doc/4.4/reference/configuration/framework.html#cookie-lifetime
+    # framework : https://symfony.com/doc/6.4/reference/configuration/framework.html#cookie-lifetime
     cookie_secure: false
     cookie_lifetime: 3600
+    log_path: '%kernel.logs_dir%/%kernel.environment%.log'
 
     # OWSProxy Configuration
     # see https://github.com/mapbender/owsproxy3/blob/master/CONFIGURATION.md#extension-configuration
@@ -33,3 +25,27 @@ parameters:
     ows_proxy3_user: ~
     ows_proxy3_password: ~
     ows_proxy3_noproxy: ~
+
+    # Custom Branding
+    # branding.project_name: Geoportal powered by Mapbender
+    # branding.logo: ./bundles/mapbendercore/image/OSGeo_project.png
+    # branding.login_backdrop: https://mapbender.org/fileadmin/mapbender/resources/images/startseite/mapbender-stadt-markierungen.jpg
+    # branding.login_backdrop_hq: https://mapbender.org/fileadmin/mapbender/resources/images/startseite/mapbender-stadt-markierungen.jpg
+    # branding.splashscreen_image: bundles/mapbendercore/image/OSGeo_project.png
+    # mapbender.sitelinks:
+    #    - link: https://mapbender.org/
+    #      text: Mapbender.org
+    #    - link: https://mapbender.org/en/showcase/
+    #      text: Gallery
+
+
+    # disabled elements are not available throughout the application
+    # mapbender.disabled_elements:
+    #     - Mapbender\CoreBundle\Element\ResetView
+
+    # default layer order when creating *new* WMS layerset instances
+    # allowed values are either
+    # * "standard": Traditional Mapbender behaviour: top-down rendering in GetCapabilities order;
+    #               also the default if this parameter is not defined
+    # * "reverse": bottom-up, for QGIS server, ArcGIS etc
+    # wms.default_layer_order: standard

@@ -1,7 +1,6 @@
 <?php
 
 return [
-    Symfony\Bundle\AclBundle\AclBundle::class => ['all' => true],
     Symfony\Bundle\DebugBundle\DebugBundle::class => ['dev' => true],
     Symfony\Bundle\FrameworkBundle\FrameworkBundle::class => ['all' => true],
     Symfony\Bundle\MonologBundle\MonologBundle::class => ['all' => true],
@@ -25,4 +24,5 @@ return [
     Mapbender\DigitizerBundle\MapbenderDigitizerBundle::class => ['all' => true],
     Mapbender\DataSourceBundle\MapbenderDataSourceBundle::class => ['all' => true],
     Mapbender\DataManagerBundle\MapbenderDataManagerBundle::class => ['all' => true],
+    DAMA\DoctrineTestBundle\DAMADoctrineTestBundle::class => ['test' => true],
 ];

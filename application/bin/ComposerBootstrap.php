@@ -40,18 +40,20 @@ class ComposerBootstrap
     }
 
     /**
-     * @return bool true if config file needed to be created
+     * @return bool true if a config file needed to be created
      */
-    protected static function ensureConfig()
+    protected static function ensureConfig(): bool
     {
-        $configPath = static::getParametersPath();
+        $files = [static::getParametersPath(), static::getLocalEnvFilePath()];
 
-        if (!file_exists($configPath)) {
-            copy("{$configPath}.dist", $configPath);
-            return true;
-        } else {
-            return false;
+        $fileCreated = false;
+        foreach ($files as $file) {
+            if (!file_exists($file)) {
+                copy("{$file}.dist", $file);
+                $fileCreated = true;
+            }
         }
+        return $fileCreated;
     }
 
     /**
@@ -453,6 +455,11 @@ class ComposerBootstrap
         return static::getSymfonyRootPath() . '/config/parameters.yaml';
     }
 
+    protected static function getLocalEnvFilePath()
+    {
+        return static::getSymfonyRootPath() . '/.env.local';
+    }
+
     /**
      * @return string
      */
@@ -524,7 +531,6 @@ class ComposerBootstrap
 
         foreach (array(
                      "vendor/mapbender/documentation",
-                     "vendor/phpunit",
                      "public/index.php",
                      "var/cache/*",
                      "var/log/*",
@@ -543,6 +549,7 @@ class ComposerBootstrap
         echo `cp ../CHANGELOG.md "$archiveProjectPath/"`;
 
         echo "Distributed to: $archiveProjectPath\n";
+        echo "CAUTION: The generated build contains all your database passwords. Do not publicly distribute the generated file. \n\n";
     }
 
     /**
