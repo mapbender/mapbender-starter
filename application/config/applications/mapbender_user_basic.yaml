@@ -9,7 +9,7 @@ parameters:
             template:  Mapbender\CoreBundle\Template\Fullscreen
             custom_css: |
                 .toolBar.top {
-                border-bottom: 3px solid #009ee0;
+                border-bottom: 1px solid #009ee0;
                 }
                 .popup {
                 border-color: white;
@@ -211,6 +211,11 @@ parameters:
                         icon: iconGpsTarget
                         label: false
                         target: coordinatesutility
+                    dataupload-button:
+                        class: Mapbender\CoreBundle\Element\ControlButton
+                        icon: iconDataUpload
+                        label: false
+                        target: dataupload
                     print-button:
                         class: Mapbender\CoreBundle\Element\ControlButton
                         label: false
@@ -230,6 +235,7 @@ parameters:
                         icon: iconCopyright
                         label: false
                         target: copyright
+
                 content:
                     map:
                         class: Mapbender\CoreBundle\Element\Map
@@ -421,6 +427,11 @@ parameters:
                         popupHeight: auto
                         content: "<p>Welcome to the Mapbender Demo.</p><p>Please be aware that we utilize data sourced from the following publishers:</p><p><ul><li><a href=http://www.openstreetmap.org>OpenStreetMap,</a></li><li><a href=http://www.bkg.bund.de>© Bundesamt für Kartographie und Geodäsie (2023)</a>, with datasets from <a href=https://sgx.geodatenzentrum.de/web_public/gdz/datenquellen/Datenquellen_TopPlusOpen.html>TopPlusOpen,</a></li><li><a href=https://www.bezreg-koeln.nrw.de/geobasis-nrw>Geobasis NRW.</a></li></ul></p><p>These datasets are made available under the following licenses:</p><ul><li>Open Database License for OpenStreetMap (<a href=https://opendatacommons.org/licenses/odbl/>ODbL</a>)</li><li>Datenlizenz Deutschland - Namensnennung - Version 2.0 for TOPPlusOpen (<a href=https://www.govdata.de/dl-de/by-2-0>DL-DE-BY-2.0</a>)</li><li>Datenlizenz Deutschland – Zero – Version 2.0 for Geobasis NRW (<a href=https://www.govdata.de/dl-de/zero-2-0>DL-DE-ZERO-2-0</a>)</li></ul>"
                         autoOpen: false
+                    dataupload:
+                        class: Mapbender\CoreBundle\Element\DataUpload
+                        target: map
+                        maxFileSize: 10
+                        helpText: mb.core.dataupload.admin.helpText
                 footer:
                     activityindicator:
                         class: Mapbender\CoreBundle\Element\ActivityIndicator
