@@ -66,9 +66,6 @@
             "config/packages/sensio_framework_extra.yaml"
         ]
     },
-    "symfony/acl-bundle": {
-        "version": "v2.3.0"
-    },
     "symfony/console": {
         "version": "5.4",
         "recipe": {

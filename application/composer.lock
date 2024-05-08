@@ -1639,12 +1639,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "dc8ae102789147a6b0779080c630c2ad579c706b"
+                "reference": "014cc24b8d1c981bc78f29d2d57c122555ee97f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/dc8ae102789147a6b0779080c630c2ad579c706b",
-                "reference": "dc8ae102789147a6b0779080c630c2ad579c706b",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/014cc24b8d1c981bc78f29d2d57c122555ee97f9",
+                "reference": "014cc24b8d1c981bc78f29d2d57c122555ee97f9",
                 "shasum": ""
             },
             "require": {
@@ -1663,12 +1663,11 @@
                 "mapbender/mapbender-icons": "^1.3",
                 "mapbender/openlayers6-es5": "^0.4.3.2 || ^6.4.3.2 || ^7",
                 "mapbender/owsproxy": "^3.1.8",
-                "php": ">=8.0",
+                "php": ">=8.1",
                 "sensio/framework-extra-bundle": "^6.2",
                 "setasign/fpdf": "^1.8",
                 "setasign/fpdi": "^2",
                 "shuchkin/simplexlsxgen": "^1.3",
-                "symfony/acl-bundle": "^2",
                 "symfony/asset": "^5.4",
                 "symfony/config": "^5.4",
                 "symfony/console": "^5.4",
@@ -1769,7 +1768,7 @@
                 "issues": "https://github.com/mapbender/mapbender/issues",
                 "source": "https://github.com/mapbender/mapbender/tree/develop"
             },
-            "time": "2024-04-30T09:12:17+00:00"
+            "time": "2024-05-08T15:40:39+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -2567,90 +2566,6 @@
                 "source": "https://github.com/shuchkin/simplexlsxgen/tree/1.4.11"
             },
             "time": "2024-02-07T10:26:09+00:00"
-        },
-        {
-            "name": "symfony/acl-bundle",
-            "version": "v2.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/acl-bundle.git",
-                "reference": "4c946922f9cf49a99ebddb18edd9a347fc4de96f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/acl-bundle/zipball/4c946922f9cf49a99ebddb18edd9a347fc4de96f",
-                "reference": "4c946922f9cf49a99ebddb18edd9a347fc4de96f",
-                "shasum": ""
-            },
-            "require": {
-                "ext-xml": "*",
-                "php": ">=7.2.9",
-                "symfony/dependency-injection": "^4.4|^5.0|^6.0|^7.0",
-                "symfony/http-kernel": "^4.4|^5.0|^6.0|^7.0",
-                "symfony/security-acl": "^3.0",
-                "symfony/security-bundle": "^4.4|^5.0|^6.0|^7.0"
-            },
-            "conflict": {
-                "doctrine/dbal": "<2.13.1|~3.0.0"
-            },
-            "require-dev": {
-                "doctrine/dbal": "^2.13.1|^3.1",
-                "doctrine/doctrine-bundle": "^1.6.12|^2.0",
-                "doctrine/orm": "^2.7.3",
-                "symfony/console": "^4.4|^5.0|^6.0|^7.0",
-                "symfony/framework-bundle": "^4.4|^5.0|^6.0|^7.0",
-                "symfony/phpunit-bridge": "^5.0|^6.0|^7.0",
-                "symfony/yaml": "^4.4|^5.0|^6.0|^7.0"
-            },
-            "suggest": {
-                "doctrine/doctrine-bundle": "To use the default dbal configuration"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Bundle\\AclBundle\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony AclBundle",
-            "homepage": "https://symfony.com",
-            "support": {
-                "issues": "https://github.com/symfony/acl-bundle/issues",
-                "source": "https://github.com/symfony/acl-bundle/tree/v2.4.0"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2024-04-24T07:19:02+00:00"
         },
         {
             "name": "symfony/asset",
@@ -3660,16 +3575,16 @@
         },
         {
             "name": "symfony/event-dispatcher-contracts",
-            "version": "v3.4.2",
+            "version": "v3.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher-contracts.git",
-                "reference": "4e64b49bf370ade88e567de29465762e316e4224"
+                "reference": "8f93aec25d41b72493c6ddff14e916177c9efc50"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/4e64b49bf370ade88e567de29465762e316e4224",
-                "reference": "4e64b49bf370ade88e567de29465762e316e4224",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/8f93aec25d41b72493c6ddff14e916177c9efc50",
+                "reference": "8f93aec25d41b72493c6ddff14e916177c9efc50",
                 "shasum": ""
             },
             "require": {
@@ -3679,7 +3594,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "3.4-dev"
+                    "dev-main": "3.5-dev"
                 },
                 "thanks": {
                     "name": "symfony/contracts",
@@ -3716,7 +3631,7 @@
                 "standards"
             ],
             "support": {
-                "source": "https://github.com/symfony/event-dispatcher-contracts/tree/v3.4.2"
+                "source": "https://github.com/symfony/event-dispatcher-contracts/tree/v3.5.0"
             },
             "funding": [
                 {
@@ -3732,7 +3647,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-01-23T14:51:35+00:00"
+            "time": "2024-04-18T09:32:20+00:00"
         },
         {
             "name": "symfony/filesystem",
