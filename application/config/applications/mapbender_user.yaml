@@ -378,9 +378,9 @@ parameters:
                                 allSelected: false
                     viewmanager:
                         class: Mapbender\CoreBundle\Element\ViewManager
-                        publicEntries: ro
+                        publicEntries: rw
                         privateEntries: true
-                        allowAnonymousSave: false
+                        allowAnonymousSave: true
                         showDate: true
                     sketch:
                         class: Mapbender\CoreBundle\Element\Sketch
@@ -403,6 +403,11 @@ parameters:
                         srsList: []
                         addMapSrsList: true
                         zoomlevel: 6
+                    dataupload:
+                        class: Mapbender\CoreBundle\Element\DataUpload
+                        target: map
+                        maxFileSize: 10
+                        helpText: mb.core.dataupload.admin.helpText
                     html-about-mapbender:
                         class: Mapbender\CoreBundle\Element\HTMLElement
                         classes: html-element-inline
