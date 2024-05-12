@@ -20,7 +20,6 @@ return [
     Mapbender\ManagerBundle\MapbenderManagerBundle::class => ['all' => true],
     Mapbender\PrintBundle\MapbenderPrintBundle::class => ['all' => true],
     Mapbender\MobileBundle\MapbenderMobileBundle::class => ['all' => true],
-    Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle::class => ['all' => true],
     Mapbender\DigitizerBundle\MapbenderDigitizerBundle::class => ['all' => true],
     Mapbender\DataSourceBundle\MapbenderDataSourceBundle::class => ['all' => true],
     Mapbender\DataManagerBundle\MapbenderDataManagerBundle::class => ['all' => true],
