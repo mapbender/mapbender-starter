@@ -4,17 +4,17 @@ mapbender_start:
 
 mapbender_corebundle:
     resource: "@MapbenderCoreBundle/Controller/"
-    type: attribute
+    type: annotation
 
 mapbender_managerbundle:
     resource: "@MapbenderManagerBundle/Controller/"
-    type: attribute
+    type: annotation
 
 fom_userbundle:
-    resource: "@FOMUserBundle/Controller"
-    type: attribute
+    resource: "@FOMUserBundle/Controller/"
+    type: annotation
 
 ows_corebundle:
     resource: "@OwsProxy3CoreBundle/Controller/"
     prefix: "/owsproxy"
-    type: attribute
+    type: annotation
