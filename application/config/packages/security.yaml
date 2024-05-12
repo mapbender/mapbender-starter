@@ -1,5 +1,4 @@
 security:
-    enable_authenticator_manager: true
     # https://symfony.com/doc/current/security.html#registering-the-user-hashing-passwords
 
     # https://symfony.com/doc/current/security.html#loading-the-user-the-user-provider
