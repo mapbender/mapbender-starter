@@ -1,20 +1,20 @@
 mapbender_start:
     path: "/"
-    defaults: { _controller: Mapbender\CoreBundle\Controller\WelcomeController::listAction}
+    defaults: { _controller: Mapbender\CoreBundle\Controller\WelcomeController::list}
 
 mapbender_corebundle:
     resource: "@MapbenderCoreBundle/Controller/"
-    type: annotation
+    type: attribute
 
 mapbender_managerbundle:
     resource: "@MapbenderManagerBundle/Controller/"
-    type: annotation
+    type: attribute
 
 fom_userbundle:
     resource: "@FOMUserBundle/Controller"
-    type: annotation
+    type: attribute
 
 ows_corebundle:
     resource: "@OwsProxy3CoreBundle/Controller/"
     prefix: "/owsproxy"
-    type: annotation
+    type: attribute
