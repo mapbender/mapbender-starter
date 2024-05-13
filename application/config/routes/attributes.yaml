@@ -19,6 +19,6 @@ fom_userbundle:
 ows_corebundle:
     resource:
       path: "@OwsProxy3CoreBundle/Controller/"
-      namespace: \OwsProxy3CoreBundle\Controller
+      namespace: \OwsProxy3\CoreBundle\Controller
     prefix: "/owsproxy"
     type: attribute
