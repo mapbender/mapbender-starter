@@ -1485,12 +1485,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "ac669bd9be3a517455d36e2a2829f850ef994541"
+                "reference": "b6802d7dcc00ab80f07ac22c196459ebc6fbdabc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/ac669bd9be3a517455d36e2a2829f850ef994541",
-                "reference": "ac669bd9be3a517455d36e2a2829f850ef994541",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/b6802d7dcc00ab80f07ac22c196459ebc6fbdabc",
+                "reference": "b6802d7dcc00ab80f07ac22c196459ebc6fbdabc",
                 "shasum": ""
             },
             "require": {
@@ -1552,7 +1552,7 @@
                 "issues": "https://github.com/mapbender/mapbender-digitizer/issues",
                 "source": "https://github.com/mapbender/mapbender-digitizer/tree/work/symfony-6-update"
             },
-            "time": "2024-05-12T15:16:11+00:00"
+            "time": "2024-05-12T21:46:04+00:00"
         },
         {
             "name": "mapbender/mapbender",
@@ -1560,12 +1560,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "054b9fcd684cb693d31bca43e1aead062a52a855"
+                "reference": "3139df6c2be116d28bc8c4d14236cc720e7a519c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/054b9fcd684cb693d31bca43e1aead062a52a855",
-                "reference": "054b9fcd684cb693d31bca43e1aead062a52a855",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/3139df6c2be116d28bc8c4d14236cc720e7a519c",
+                "reference": "3139df6c2be116d28bc8c4d14236cc720e7a519c",
                 "shasum": ""
             },
             "require": {
@@ -1686,7 +1686,7 @@
                 "issues": "https://github.com/mapbender/mapbender/issues",
                 "source": "https://github.com/mapbender/mapbender/tree/work/symfony-6-update"
             },
-            "time": "2024-05-13T16:40:23+00:00"
+            "time": "2024-05-13T18:50:38+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
