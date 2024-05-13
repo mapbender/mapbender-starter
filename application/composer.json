@@ -36,7 +36,7 @@
         "proj4js/proj4js": "^2.4",
         "select2/select2": "^4.0",
         "symfony/flex": "*",
-        "wheregroup/cookieconsent": "^3",
+        "wheregroup/cookieconsent": "^3"
     },
     "replace": {
         "robloach/component-installer": "^0.2"
