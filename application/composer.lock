@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "010b38076e04439706b2c901b6d0a632",
+    "content-hash": "a8bb29797d5deba318aec5edc02c071c",
     "packages": [
         {
             "name": "assetic/framework",
@@ -1560,12 +1560,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "af038d2a30ce8764e75bff7091d39232b8544b98"
+                "reference": "054b9fcd684cb693d31bca43e1aead062a52a855"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/af038d2a30ce8764e75bff7091d39232b8544b98",
-                "reference": "af038d2a30ce8764e75bff7091d39232b8544b98",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/054b9fcd684cb693d31bca43e1aead062a52a855",
+                "reference": "054b9fcd684cb693d31bca43e1aead062a52a855",
                 "shasum": ""
             },
             "require": {
@@ -1585,6 +1585,7 @@
                 "mapbender/openlayers6-es5": "^0.4.3.2 || ^6.4.3.2 || ^7",
                 "mapbender/owsproxy": "^3.1.8",
                 "php": ">=8.1",
+                "scssphp/scssphp": "^1.12",
                 "setasign/fpdf": "^1.8",
                 "setasign/fpdi": "^2",
                 "shuchkin/simplexlsxgen": "^1.3",
@@ -1628,11 +1629,9 @@
                 "symfony/yaml": "^6.4",
                 "twbs/bootstrap": "^5.0",
                 "twig/twig": "^3.6",
-                "wheregroup/assetic-filter-sassc": "^0.0",
                 "wheregroup/codemirror": "5.x",
                 "wheregroup/compass-mixins": "0.x",
-                "wheregroup/doctrine-dbal-shims": "^1",
-                "wheregroup/sassc-binaries": "^0.0.1"
+                "wheregroup/doctrine-dbal-shims": "^1"
             },
             "conflict": {
                 "mapbender/coordinates-utility": "<1.0.9",
@@ -1687,7 +1686,7 @@
                 "issues": "https://github.com/mapbender/mapbender/issues",
                 "source": "https://github.com/mapbender/mapbender/tree/work/symfony-6-update"
             },
-            "time": "2024-05-12T20:03:36+00:00"
+            "time": "2024-05-13T16:40:23+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -7868,43 +7867,6 @@
             "time": "2024-05-12T06:16:18+00:00"
         },
         {
-            "name": "wheregroup/assetic-filter-sassc",
-            "version": "0.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/WhereGroup/assetic-filter-sassc.git",
-                "reference": "6526a4763743c32bbcdd708351f6bcf3fbed41c6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/WhereGroup/assetic-filter-sassc/zipball/6526a4763743c32bbcdd708351f6bcf3fbed41c6",
-                "reference": "6526a4763743c32bbcdd708351f6bcf3fbed41c6",
-                "shasum": ""
-            },
-            "require": {
-                "kriswallsmith/assetic": "^1.2"
-            },
-            "suggest": {
-                "wheregroup/sassc-binaries": "Precompiled sassc binaries for various platforms"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Wheregroup\\AsseticFilterSassc\\": "lib"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Assetic filter wrapper for sassc",
-            "support": {
-                "issues": "https://github.com/WhereGroup/assetic-filter-sassc/issues",
-                "source": "https://github.com/WhereGroup/assetic-filter-sassc/tree/0.0.1"
-            },
-            "time": "2019-11-14T11:11:29+00:00"
-        },
-        {
             "name": "wheregroup/codemirror",
             "version": "5.47.1",
             "source": {
@@ -8069,89 +8031,6 @@
                 "source": "https://github.com/WhereGroup/doctrine-dbal-shims/tree/v1.1.0"
             },
             "time": "2022-11-16T14:15:52+00:00"
-        },
-        {
-            "name": "wheregroup/platform-detect",
-            "version": "0.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/WhereGroup/platform-detect.git",
-                "reference": "23a66c65eedb8ba5c84ab3f73d4dece6d925b003"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/WhereGroup/platform-detect/zipball/23a66c65eedb8ba5c84ab3f73d4dece6d925b003",
-                "reference": "23a66c65eedb8ba5c84ab3f73d4dece6d925b003",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.8|~5.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Wheregroup\\PlatformDetect\\": "lib"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Platform detection for PHP",
-            "support": {
-                "issues": "https://github.com/WhereGroup/platform-detect/issues",
-                "source": "https://github.com/WhereGroup/platform-detect/tree/0.0.1"
-            },
-            "time": "2019-09-20T09:21:44+00:00"
-        },
-        {
-            "name": "wheregroup/sassc-binaries",
-            "version": "0.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/WhereGroup/sassc-binaries.git",
-                "reference": "fdb8fbb907683ba51d70e08e7cdc3eb73bfc3253"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/WhereGroup/sassc-binaries/zipball/fdb8fbb907683ba51d70e08e7cdc3eb73bfc3253",
-                "reference": "fdb8fbb907683ba51d70e08e7cdc3eb73bfc3253",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.1",
-                "wheregroup/platform-detect": "~0.0 || ^1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Wheregroup\\SasscBinaries\\": "lib"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Andriy Oblivantsev",
-                    "email": "eslider@gmail.com",
-                    "homepage": "https://github.com/eSlider"
-                }
-            ],
-            "description": "Precompiled sassc binaries for multiple platforms",
-            "keywords": [
-                "compiler",
-                "sassc",
-                "scss"
-            ],
-            "support": {
-                "source": "https://github.com/WhereGroup/sassc-binaries/tree/0.0.1"
-            },
-            "time": "2019-09-20T11:15:35+00:00"
         }
     ],
     "packages-dev": [
