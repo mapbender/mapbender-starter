@@ -34,7 +34,7 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-        - { path: ^/user/login,    roles: PUBLIC_ACESS }
+        - { path: ^/user/login,    roles: PUBLIC_ACCESS }
         - { path: ^/manager,       roles: ROLE_USER }
     password_hashers:
         FOM\UserBundle\Entity\User: sha512
