@@ -1560,12 +1560,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "3139df6c2be116d28bc8c4d14236cc720e7a519c"
+                "reference": "2758ab02130e4db84d48bfb0f77b10dd45e9081a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/3139df6c2be116d28bc8c4d14236cc720e7a519c",
-                "reference": "3139df6c2be116d28bc8c4d14236cc720e7a519c",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/2758ab02130e4db84d48bfb0f77b10dd45e9081a",
+                "reference": "2758ab02130e4db84d48bfb0f77b10dd45e9081a",
                 "shasum": ""
             },
             "require": {
@@ -1582,7 +1582,7 @@
                 "ext-zip": "*",
                 "jquery/jquery-ui": "^1.13.2",
                 "mapbender/mapbender-icons": "^1.3",
-                "mapbender/openlayers6-es5": "^0.4.3.2 || ^6.4.3.2 || ^7",
+                "mapbender/openlayers6-es5": "^9",
                 "mapbender/owsproxy": "^3.1.8",
                 "php": ">=8.1",
                 "scssphp/scssphp": "^1.12",
@@ -1686,7 +1686,7 @@
                 "issues": "https://github.com/mapbender/mapbender/issues",
                 "source": "https://github.com/mapbender/mapbender/tree/work/symfony-6-update"
             },
-            "time": "2024-05-13T18:50:38+00:00"
+            "time": "2024-05-14T11:23:24+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -1734,16 +1734,16 @@
         },
         {
             "name": "mapbender/openlayers6-es5",
-            "version": "7.5.2.1",
+            "version": "9.1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/openlayers6-es5.git",
-                "reference": "da24a5c02053d3b0ff0417a455b7c01d8acdf8a4"
+                "reference": "3745b6b8a132f9aec104e74a108f111df23eeee4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/openlayers6-es5/zipball/da24a5c02053d3b0ff0417a455b7c01d8acdf8a4",
-                "reference": "da24a5c02053d3b0ff0417a455b7c01d8acdf8a4",
+                "url": "https://api.github.com/repos/mapbender/openlayers6-es5/zipball/3745b6b8a132f9aec104e74a108f111df23eeee4",
+                "reference": "3745b6b8a132f9aec104e74a108f111df23eeee4",
                 "shasum": ""
             },
             "type": "component",
@@ -1766,9 +1766,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/openlayers6-es5/issues",
-                "source": "https://github.com/mapbender/openlayers6-es5/tree/7.5.2.1"
+                "source": "https://github.com/mapbender/openlayers6-es5/tree/9.1.0.0"
             },
-            "time": "2024-04-02T07:46:59+00:00"
+            "time": "2024-05-14T11:21:09+00:00"
         },
         {
             "name": "mnsami/composer-custom-directory-installer",
@@ -7789,16 +7789,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v3.10.1",
+            "version": "v3.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "3af5ab2e52279e5e23dc192b1a26db3b8cffa4e7"
+                "reference": "7aaed0b8311a557cc8c4047a71fd03153a00e755"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/3af5ab2e52279e5e23dc192b1a26db3b8cffa4e7",
-                "reference": "3af5ab2e52279e5e23dc192b1a26db3b8cffa4e7",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/7aaed0b8311a557cc8c4047a71fd03153a00e755",
+                "reference": "7aaed0b8311a557cc8c4047a71fd03153a00e755",
                 "shasum": ""
             },
             "require": {
@@ -7852,7 +7852,7 @@
             ],
             "support": {
                 "issues": "https://github.com/twigphp/Twig/issues",
-                "source": "https://github.com/twigphp/Twig/tree/v3.10.1"
+                "source": "https://github.com/twigphp/Twig/tree/v3.10.2"
             },
             "funding": [
                 {
@@ -7864,7 +7864,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-05-12T06:16:18+00:00"
+            "time": "2024-05-14T06:04:16+00:00"
         },
         {
             "name": "wheregroup/codemirror",
