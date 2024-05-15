@@ -1560,12 +1560,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "2758ab02130e4db84d48bfb0f77b10dd45e9081a"
+                "reference": "e705d12d98b552fbd5d9fd806689fa7cdf2beb64"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/2758ab02130e4db84d48bfb0f77b10dd45e9081a",
-                "reference": "2758ab02130e4db84d48bfb0f77b10dd45e9081a",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/e705d12d98b552fbd5d9fd806689fa7cdf2beb64",
+                "reference": "e705d12d98b552fbd5d9fd806689fa7cdf2beb64",
                 "shasum": ""
             },
             "require": {
@@ -1631,7 +1631,7 @@
                 "twig/twig": "^3.6",
                 "wheregroup/codemirror": "5.x",
                 "wheregroup/compass-mixins": "0.x",
-                "wheregroup/doctrine-dbal-shims": "^1"
+                "wheregroup/doctrine-dbal-shims": "^1.2"
             },
             "conflict": {
                 "mapbender/coordinates-utility": "<1.0.9",
@@ -1686,7 +1686,7 @@
                 "issues": "https://github.com/mapbender/mapbender/issues",
                 "source": "https://github.com/mapbender/mapbender/tree/work/symfony-6-update"
             },
-            "time": "2024-05-14T11:23:24+00:00"
+            "time": "2024-05-15T09:36:30+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -7996,21 +7996,21 @@
         },
         {
             "name": "wheregroup/doctrine-dbal-shims",
-            "version": "v1.1.0",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WhereGroup/doctrine-dbal-shims.git",
-                "reference": "52ab0f20765ef0638bdab1d31a7c915b70cb89c1"
+                "reference": "63dce45db9ba9436895e8b39f1d6816ff14d8c9c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WhereGroup/doctrine-dbal-shims/zipball/52ab0f20765ef0638bdab1d31a7c915b70cb89c1",
-                "reference": "52ab0f20765ef0638bdab1d31a7c915b70cb89c1",
+                "url": "https://api.github.com/repos/WhereGroup/doctrine-dbal-shims/zipball/63dce45db9ba9436895e8b39f1d6816ff14d8c9c",
+                "reference": "63dce45db9ba9436895e8b39f1d6816ff14d8c9c",
                 "shasum": ""
             },
             "require": {
-                "doctrine/dbal": "^2.7 || ^3",
-                "php": ">=5.5"
+                "doctrine/dbal": "^3.2",
+                "php": ">=8.1"
             },
             "suggest": {
                 "doctrine/dbal-bundle": "To use compiler pass integration"
@@ -8028,9 +8028,9 @@
             "description": "Doctrine DBAL / ORM convenience for mixed multi-connection setups",
             "support": {
                 "issues": "https://github.com/WhereGroup/doctrine-dbal-shims/issues",
-                "source": "https://github.com/WhereGroup/doctrine-dbal-shims/tree/v1.1.0"
+                "source": "https://github.com/WhereGroup/doctrine-dbal-shims/tree/v1.2.0"
             },
-            "time": "2022-11-16T14:15:52+00:00"
+            "time": "2024-05-15T08:55:01+00:00"
         }
     ],
     "packages-dev": [
