@@ -6,6 +6,30 @@ parameters:
             description: Simple application using mobile template
             published: true
             template:  'Mapbender\MobileBundle\Template\Mobile'
+            custom_css: |
+                .toolBar.bottom {
+                border-top: 2px solid #0066BA;
+                }
+                .toolBar {
+                  color: #0066BA;
+                }
+                mobilePane .contentTitle {
+                  flex: 0;
+                  font-size: 142%;
+                  border-bottom: solid 2px #0066BA;
+                }
+                .popup {
+                border-color: #EEE9E9;
+                border: 1px #EEE9E9;
+                border-radius: 10px;
+                }
+
+                .popupHead {
+                border-bottom: solid 1px #747577;
+                margin: 0 20px 20px 20px;
+                padding: 20px 0 10px 0;
+                }
+
             layersets:
                 main:
                     mapbender_users:
@@ -60,12 +84,12 @@ parameters:
                         tooltip: Themes
                         class: Mapbender\CoreBundle\Element\ControlButton
                         label: false
-                        icon: iconLayertree
+                        icon: icon-layer-tree
                         target: layertree
 
                     bss-button:
                         class: Mapbender\CoreBundle\Element\ControlButton
-                        icon: iconLegend
+                        icon: iconMap
                         label: false
                         target: basesourceswitcher
 
@@ -78,6 +102,12 @@ parameters:
                         follow: false
                         centerOnFirstPosition: true
                         zoomToAccuracyOnFirstPosition: true
+
+                    legend-button:
+                        class: Mapbender\CoreBundle\Element\ControlButton
+                        label: false
+                        icon: iconLegend
+                        target: legend
 
                     imprint-button:
                         title: Imprint
@@ -142,16 +172,36 @@ parameters:
                         displayType: tabs
                         onlyValid: true
 
+                    legend:
+                        class: Mapbender\CoreBundle\Element\Legend
+                        target: map
+                        elementType: dialog
+                        autoOpen: false
+                        showLayerTitle: true
+                        showGroupedLayerTitle: true
+
                     imprint:
                         title: Imprint
                         class: Mapbender\CoreBundle\Element\HTMLElement
-                        content: '<div style="color: #009ee0; font-weight:bold" >powered by Mapbender. Read more about Mapbender at the <a href="https://www.mapbender.org" target="_blank">Mapbender Project Page</a>.</div>'
+                        content: "<div style=\"color:#009ee0; font-weight:normal\" >powered by Mapbender.
+                        Read more about Mapbender at the <a href=\"https://www.mapbender.org\" target=\"_blank\">Mapbender Project Page</a>.
+                        </div>
+                        <p><a href=\"https://mapbender.org\" target=\"_blank\">
+                        <img src=\"../image/Mapbender-logo.png\" alt=\"Mapbender\"  title=\"Mapbender\" width=\"200px\" /></p>https://mapbender.org</a>
+                        </p>
+                        </p>"
                         classes: html-element-inline
 
                     help:
                         title: mb.core.aboutdialog.tag.help
                         class: Mapbender\CoreBundle\Element\HTMLElement
-                        content: 'Enjoy the new Mapbender mobile Template. Please note that not all elements can be used in the mobile application. <div style="color: #009ee0; font-weight:bold">Find out more about the Mapbender mobile in the <a href="https://doc.mapbender.org/en/customization/mapbender_templates.html" target="_blank">Template Documentation</a>.</div>'
+                        content: "<p>Enjoy the Mapbender mobile Template.
+                        Please note that not all elements can be used in the mobile application.</p>
+                        <p>Please check the documentation</p>
+                        <p><a href=\"https://doc.mapbender.org\" target=\"_blank\">
+                        <img src=\"../image/Mapbender-logo.png\" alt=\"Mapbender\"  title=\"Mapbender\" width=\"200px\" /></p>
+                        https://doc.mapbender.org</a>
+                        </p>"
                         classes: html-element-inline
 
                     basesourceswitcher:
@@ -171,4 +221,16 @@ parameters:
                         title: mb.core.aboutdialog.tag.about
                         class: Mapbender\CoreBundle\Element\HTMLElement
                         classes: html-element-inline
-                        content: "<p>Mapbender is an OSGeo Project. Find out more about OSGeo at <br/><a href=\"https://www.osgeo.org\" target=\"_blank\">https://www.osgeo.org</a><br/><a href=\"https://www.osgeo.org/projects/mapbender/\" target=\"_blank\">https://www.osgeo.org/projects/mapbender/</a></p>"
+                        content:  "<p>Learn more about Mapbender </p>
+                        <p><a href=\"https://mapbender.org\" target=\"_blank\">
+                        <img src=\"../image/Mapbender-logo.png\" alt=\"Mapbender\"  title=\"Mapbender\" width=\"200px\" /></p>https://mapbender.org</a>
+                        </p>
+                        <p>Mapbender is an</p>
+                        <p><a href=\"https://www.osgeo.org/projects/mapbender/\" target=\"_blank\">
+                        <p>
+                        <img src=\"../bundles/mapbendercore/image/OSGeo_project.png\" alt=\"OSGeo Project\"  title=\"OSGeo Project\" width=\"150px\" /></a>
+                        </p>
+                        <p>
+                        <a href=\"https://www.osgeo.org\" target=\"_blank\">https://www.osgeo.org</a>
+                        </p>
+                        </p>"

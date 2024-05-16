@@ -12,8 +12,8 @@ parameters:
                 border-bottom: 1px solid #009ee0;
                 }
                 .popup {
-                border-color: white;
-                border: 1px white;
+                border-color: #EEE9E9;
+                border: 1px #EEE9E9;
                 border-radius: 10px;
                 }
                 .popupHead {
@@ -136,23 +136,23 @@ parameters:
                                 instances: [tpo, overlay]
                             5-basesourceswitcher:
                                 title: DOP (NRW)
-                                group: mb.demoapps.aerialView
+                                group: mb.demoapps.baseMaps
                                 instances:
                                     - dop
                             6-basesourceswitcher:
                                 title: DOP + Overlay (NRW)
-                                group: mb.demoapps.aerialView
+                                group: mb.demoapps.baseMaps
                                 instances:
                                     - dop
                                     - overlay
                             7-basesourceswitcher:
                                 title: Overlay (NRW)
-                                group: mb.demoapps.aerialView
+                                group: mb.demoapps.baseMaps
                                 instances:
                                     - overlay
                             8-basesourceswitcher:
                                 title: mb.demoapps.noBackground
-                                group: null
+                                group: mb.demoapps.baseMaps
                                 instances: []
                     layertree-button:
                         class: Mapbender\CoreBundle\Element\ControlButton
@@ -230,11 +230,6 @@ parameters:
                     shareUrl:
                         class: Mapbender\CoreBundle\Element\ShareUrl
                         label: false
-                    copyright-button:
-                        class: Mapbender\CoreBundle\Element\ControlButton
-                        icon: iconCopyright
-                        label: false
-                        target: copyright
 
                 content:
                     map:
@@ -246,17 +241,12 @@ parameters:
                             max: [-20037508.34278924,-20037508.34278924,20037508.34278924,20037508.34278924]
                         scales: [50000000,25000000,10000000,5000000,1000000,500000,100000,50000,25000,10000,7500,5000,2500,1000,500]
                         otherSrs: ["EPSG:25832","EPSG:25833","EPSG:31466","EPSG:31467","EPSG:4326"]
-                    zoombar:
-                        class: Mapbender\CoreBundle\Element\ZoomBar
-                        target: map
-                        anchor: right-top
-                        draggable: false
                     simplesearch:
                         title: mb.core.simplesearch.class.title
                         placeholder: mb.demoapps.search
                         class: Mapbender\CoreBundle\Element\SimpleSearch
                         target: map
-                        anchor: left-bottom
+                        anchor: right-top
                         query_url: https://osm-photon-search.wheregroup.com/search/api?limit=20&lat=50.7163&lon=7.1366&osm_tag=!railway&osm_tag=!highway:elevator&osm_tag=!tourism&osm_tag=!amenity
                         query_key: q
                         query_format: '%s'
@@ -276,6 +266,12 @@ parameters:
                             maxscale: 5000
                             icon_url: '/bundles/mapbendercore/image/pin_red.png'
                             icon_offset: '-6,-32'
+                    zoombar:
+                        class: Mapbender\CoreBundle\Element\ZoomBar
+                        target: map
+                        components: ["rotation", "zoom_in_out", "zoom_max","zoom_home"]
+                        anchor: right-top
+                        draggable: false
                     layertreedialog:
                         class: Mapbender\CoreBundle\Element\Layertree
                         target: map
@@ -335,10 +331,9 @@ parameters:
                             - text
                             - rectangle
                             - circle
-                        display_type: dialog
                         auto_activate: false
                         deactivate_on_close: true
-                        colors: ["#FFFFFF","#cf003d","#ccd22a","#00837e","#009ee0","#000000"]
+                        colors: ["#009ee0","#cf003d","#ffff33","#00837e","#ff7f00","#e7298a","#984ea3"]
                         allow_custom_color: false
                     imageexport:
                         class: Mapbender\PrintBundle\Element\ImageExport
@@ -357,22 +352,23 @@ parameters:
                             - { template: a3_portrait_offical, label: A3 Portrait Official}
                         legend_default_behaviour: false
                         optional_fields: ~
+                        screenType: desktop
                     lineruler:
                         title: mb.core.ruler.tag.line
                         class: Mapbender\CoreBundle\Element\Ruler
                         target: map
                         type: line
-                        strokeColor: 'rgba(0, 158, 224, 1)'
+                        strokeColor: 'rgba(51,153,204, 1)'
                     arearuler:
                         title: mb.core.ruler.tag.area
                         class: Mapbender\CoreBundle\Element\Ruler
                         target: map
                         type: area
-                        fillColor: rgba(0, 158, 224, 0.5)
-                        strokeColor: 'rgba(204, 210, 42, 1)'
+                        fillColor: 'rgba(254, 254, 254, 0.2)'
+                        strokeColor: 'rgba(51,153,204, 1)'
                         fontColor: '#ffffff'
                         fontSize: 14
-                        strokeWidth: 4
+                        strokeWidth: 2
                         strokeWidthWhileDrawing: 3
                     overview:
                         class: Mapbender\CoreBundle\Element\Overview
@@ -388,12 +384,14 @@ parameters:
                         anchor: 'right-bottom'
                         maxWidth: 200
                         units: km
+                        screenType: desktop
                     scaledisplay:
                         class: Mapbender\CoreBundle\Element\ScaleDisplay
                         target: map
                         anchor: right-top
                         scalePrefix: Scale
                         unitPrefix: true
+                        screenType: desktop
                     coordinatesutility:
                         class: Mapbender\CoreBundle\Element\CoordinatesUtility
                         target: map
@@ -425,7 +423,19 @@ parameters:
                         title: Copyright
                         popupWidth: 700
                         popupHeight: auto
-                        content: "<p>Welcome to the Mapbender Demo.</p><p>Please be aware that we utilize data sourced from the following publishers:</p><p><ul><li><a href=http://www.openstreetmap.org>OpenStreetMap,</a></li><li><a href=http://www.bkg.bund.de>© Bundesamt für Kartographie und Geodäsie (2023)</a>, with datasets from <a href=https://sgx.geodatenzentrum.de/web_public/gdz/datenquellen/Datenquellen_TopPlusOpen.html>TopPlusOpen,</a></li><li><a href=https://www.bezreg-koeln.nrw.de/geobasis-nrw>Geobasis NRW.</a></li></ul></p><p>These datasets are made available under the following licenses:</p><ul><li>Open Database License for OpenStreetMap (<a href=https://opendatacommons.org/licenses/odbl/>ODbL</a>)</li><li>Datenlizenz Deutschland - Namensnennung - Version 2.0 for TOPPlusOpen (<a href=https://www.govdata.de/dl-de/by-2-0>DL-DE-BY-2.0</a>)</li><li>Datenlizenz Deutschland – Zero – Version 2.0 for Geobasis NRW (<a href=https://www.govdata.de/dl-de/zero-2-0>DL-DE-ZERO-2-0</a>)</li></ul>"
+                        content:  "<p>Learn more about Mapbender </p>
+                        <p><a href=\"https://mapbender.org\" target=\"_blank\">
+                        <img src=\"../image/Mapbender-logo.png\" alt=\"Mapbender\"  title=\"Mapbender\" width=\"200px\" /></p>https://mapbender.org</a>
+                        </p>
+                        <p>Mapbender is an</p>
+                        <p><a href=\"https://www.osgeo.org/projects/mapbender/\" target=\"_blank\">
+                        <p>
+                        <img src=\"../bundles/mapbendercore/image/OSGeo_project.png\" alt=\"OSGeo Project\"  title=\"OSGeo Project\" width=\"150px\" /></a>
+                        </p>
+                        <p>
+                        <a href=\"https://www.osgeo.org\" target=\"_blank\">https://www.osgeo.org</a>
+                        </p>
+                        </p>"
                         autoOpen: false
                     dataupload:
                         class: Mapbender\CoreBundle\Element\DataUpload
@@ -442,26 +452,35 @@ parameters:
                         empty:  "x: - y: -"
                         prefix: "x: "
                         separator:  " y: "
+                        numDigits: 0
                     scaleselector:
                         class: Mapbender\CoreBundle\Element\ScaleSelector
                         target: map
                     srs:
                         class: Mapbender\CoreBundle\Element\SrsSelector
                         target: map
+                        screenType: desktop
                     applicationswitcher:
                         class: Mapbender\CoreBundle\Element\ApplicationSwitcher
                         applications: [mapbender_user, mapbender_user_basic]
+                        screenType: desktop
                     OSM-badge:
                         title: © OpenStreetMap contributors
                         tooltip: © OpenStreetMap contributors
-                        class: Mapbender\CoreBundle\Element\ControlButton
-                        label: false
+                        class: Mapbender\CoreBundle\Element\LinkButton
+                        label: true
                         click: https://www.openstreetmap.org/copyright
-                    HTML:
+                    copyright-button:
+                        class: Mapbender\CoreBundle\Element\ControlButton
+                        icon: iconCopyright
+                        label: false
+                        target: copyright
+                    html-powered-by:
                         title: HTML-powered by Mapbender
                         class: Mapbender\CoreBundle\Element\HTMLElement
-                        content: '<span style="color: #009ee0; font-weight:bold">powered by Mapbender</span>'
+                        content: '<span style="color: #009ee0;">powered by Mapbender</span>'
                         classes: html-element-inline
+                        screenType: desktop
                     about:
                         title: mb.core.aboutdialog.tag.about
                         tooltip: mb.core.aboutdialog.tag.about
