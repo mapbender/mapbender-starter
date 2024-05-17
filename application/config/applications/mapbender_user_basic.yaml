@@ -21,6 +21,10 @@ parameters:
                 margin: 0 20px 20px 20px;
                 padding: 20px 0 10px 0;
                 }
+                .btn-light{
+                 --bs-btn-border-color: #b9BABC;
+                }
+
             layersets:
                 themes:
                     selected: true
