@@ -9,8 +9,7 @@ parameters:
             template:  Mapbender\CoreBundle\Template\Fullscreen
             custom_css: |
                 .popup {
-                border-color: #EEE9E9;
-                border: 1px #EEE9E9;
+                border: solid 1px #EEE9E9;
                 border-radius: 10px;
                 }
 

@@ -12,12 +12,11 @@ parameters:
                 border-bottom: 1px solid #009ee0;
                 }
                 .popup {
-                border-color: #EEE9E9;
-                border: 1px #EEE9E9;
+                border: solid 1px #b9BABC;
                 border-radius: 10px;
                 }
                 .popupHead {
-                border-bottom: solid 1px #747577;
+                border-bottom: solid 1px #b9BABC;
                 margin: 0 20px 20px 20px;
                 padding: 20px 0 10px 0;
                 }
