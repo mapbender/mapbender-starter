@@ -23,6 +23,7 @@ parameters:
                 }
             layersets:
                 themes:
+                    selected: true
                     mapbender_users:
                         class: Mapbender\WmsBundle\Entity\WmsInstance
                         title: Mapbender Users
@@ -32,46 +33,61 @@ parameters:
                             4: { name: Mapbender_User,    title : User, visible: true, legendurl: https://wms.wheregroup.com/cgi-bin/mapbender_user.xml?version=1.3.0&service=WMS&request=GetLegendGraphic&sld_version=1.1.0&layer=Mapbender_User&format=image/png&STYLE=default }
                             5: { name: Mapbender_Names,   title : Name, visible: true, queryable: true}
                         info_format: text/html
+                        visible: false
+                        format: image/png
+                        transparent: true
+                        tiled: false
+                        opacity: 100
+                        isBaseSource: false
+                    fossgis:
+                        class: Mapbender\WmsBundle\Entity\WmsInstance
+                        title: FOSSGIS
+                        url: https://wms.wheregroup.com/cgi-bin/fossgis.xml
+                        version: 1.3.0
+                        layers:
+                            6: { name: FOSSGIS,    title : FOSSGIS Konferenz, visible: true, queryable: true, legendurl: https://wms.wheregroup.com/cgi-bin/fossgis.xml?version=1.3.0&service=WMS&request=GetLegendGraphic&sld_version=1.1.0&layer=fossgis&format=image/png&STYLE=default }
+                        info_format: text/html
                         visible: true
                         format: image/png
                         transparent: true
                         tiled: false
                         opacity: 100
                         isBaseSource: false
-                    overlay:
-                        class: Mapbender\WmsBundle\Entity\WmsInstance
-                        title: NW Overlay DOP
-                        url: https://www.wms.nrw.de/geobasis/wms_nw_dop_overlay
-                        version: 1.3.0
-                        layers:
-                            6: { name: WMS_NW_DOP_OVERLAY,    title : Overlay DOP}
-                        tiled: false
-                        format: image/png
-                        transparent: true
-                        visible: false
-                        opacity: 100
-                        isBaseSource: false
+                    # overlay:
+                    #     class: Mapbender\WmsBundle\Entity\WmsInstance
+                    #     title: NW Overlay DOP
+                    #     url: https://www.wms.nrw.de/geobasis/wms_nw_dop_overlay
+                    #     version: 1.3.0
+                    #     layers:
+                    #         7: { name: WMS_NW_DOP_OVERLAY,    title : Overlay DOP}
+                    #     tiled: false
+                    #     format: image/png
+                    #     transparent: true
+                    #     visible: false
+                    #     opacity: 100
+                    #     isBaseSource: false
                 background themes:
-                    dop:
-                        class: Mapbender\WmsBundle\Entity\WmsInstance
-                        title: NW DOP
-                        url: https://www.wms.nrw.de/geobasis/wms_nw_dop
-                        version: 1.3.0
-                        layers:
-                            3: { name: nw_dop_rgb,    title : WMS NW DOP RGB,  visible: true }
-                        tiled: true
-                        format: image/png
-                        transparent: true
-                        visible: false
-                        opacity: 100
-                        isBaseSource: true
+                    selected: true
+                    # dop:
+                    #     class: Mapbender\WmsBundle\Entity\WmsInstance
+                    #     title: NW DOP
+                    #     url: https://www.wms.nrw.de/geobasis/wms_nw_dop
+                    #     version: 1.3.0
+                    #     layers:
+                    #         10: { name: nw_dop_rgb,    title : WMS NW DOP RGB,  visible: true }
+                    #     tiled: true
+                    #     format: image/png
+                    #     transparent: true
+                    #     visible: false
+                    #     opacity: 100
+                    #     isBaseSource: true
                     tpo:
                         class: Mapbender\WmsBundle\Entity\WmsInstance
                         title: TopPlusOpen Light
                         url: https://sgx.geodatenzentrum.de/wms_topplus_open
                         version: 1.3.0
                         layers:
-                            2: { name: web_light,    title : TopPlusOpen Light,  visible: true }
+                            11: { name: web_light,    title : TopPlusOpen Light,  visible: true }
                         info_format: text/html
                         visible: false
                         format: image/png
@@ -85,22 +101,37 @@ parameters:
                         url: https://osm-demo.wheregroup.com/service
                         version: 1.3.0
                         layers:
-                            1: { name: osm,    title : OSM Demo WhereGroup,  visible: true }
+                            12: { name: osm,    title : OSM Demo WhereGroup,  visible: true }
                         info_format: text/html
                         visible: true
                         format: image/png
                         transparent: true
                         tiled: true
-                        opacity: 100
+                        opacity: 60
+                        isBaseSource: true
+                    osm-greyscale:
+                        class: Mapbender\WmsBundle\Entity\WmsInstance
+                        title: OSM Demo
+                        url: https://osm-demo.wheregroup.com/service
+                        version: 1.3.0
+                        layers:
+                            13: { name:  osm-grey,    title : OSM Demo WhereGroup (greyscale),  visible: true }
+                        info_format: text/html
+                        visible: false
+                        format: image/png
+                        transparent: true
+                        tiled: true
+                        opacity: 80
                         isBaseSource: true
                 overview:
+                    selected: true
                     osm_overview:
                         class: Mapbender\WmsBundle\Entity\WmsInstance
                         title: OSM Demo
                         url: https://osm-demo.wheregroup.com/service
                         version: 1.3.0
                         layers:
-                            7: { name: osm,    title : OSM Demo WhereGroup,  visible: true }
+                            20: { name: osm,    title : OSM Demo WhereGroup,  visible: true }
                         tiled: false
                         format: image/png
                         transparent: true
@@ -122,34 +153,35 @@ parameters:
                                 instances:
                                     - osm
                             2-basesourceswitcher:
-                                title: OSM + Overlay (NRW)
+                                title: OSM (greyscale)
                                 group: mb.demoapps.baseMaps
-                                instances: [osm, overlay]
+                                instances:
+                                    - osm-greyscale
                             3-basesourceswitcher:
                                 title: TopPlusOpen
                                 group: mb.demoapps.baseMaps
                                 instances:
                                     - tpo
-                            4-basesourceswitcher:
-                                title: TopPlusOpen + Overlay (NRW)
-                                group: mb.demoapps.baseMaps
-                                instances: [tpo, overlay]
-                            5-basesourceswitcher:
-                                title: DOP (NRW)
-                                group: mb.demoapps.baseMaps
-                                instances:
-                                    - dop
-                            6-basesourceswitcher:
-                                title: DOP + Overlay (NRW)
-                                group: mb.demoapps.baseMaps
-                                instances:
-                                    - dop
-                                    - overlay
-                            7-basesourceswitcher:
-                                title: Overlay (NRW)
-                                group: mb.demoapps.baseMaps
-                                instances:
-                                    - overlay
+                            # 4-basesourceswitcher:
+                            #     title: TopPlusOpen + Overlay (NRW)
+                            #     group: mb.demoapps.baseMaps
+                            #     instances: [tpo, overlay]
+                            # 5-basesourceswitcher:
+                            #     title: DOP (NRW)
+                            #     group: mb.demoapps.baseMaps
+                            #     instances:
+                            #         - dop
+                            # 6-basesourceswitcher:
+                            #     title: DOP + Overlay (NRW)
+                            #     group: mb.demoapps.baseMaps
+                            #     instances:
+                            #         - dop
+                            #         - overlay
+                            # 7-basesourceswitcher:
+                            #     title: Overlay (NRW)
+                            #     group: mb.demoapps.baseMaps
+                            #     instances:
+                            #         - overlay
                             8-basesourceswitcher:
                                 title: mb.demoapps.noBackground
                                 group: mb.demoapps.baseMaps
@@ -237,9 +269,10 @@ parameters:
                         layersets: [themes,background themes]
                         srs: EPSG:3857
                         extents:
-                            start: [772933.16,6566826.23,806786.66,6582317.62]
+                            start: [34384.65,5623672.86,2601107.71,7807351.79]
+                            #start: [772933.16,6566826.23,806786.66,6582317.62]
                             max: [-20037508.34278924,-20037508.34278924,20037508.34278924,20037508.34278924]
-                        scales: [50000000,25000000,10000000,5000000,1000000,500000,100000,50000,25000,10000,7500,5000,2500,1000,500]
+                        scales: [100000000,75000000,50000000,25000000,10000000,5000000,1000000,500000,100000,50000,25000,10000,7500,5000,2500,1000,500]
                         otherSrs: ["EPSG:25832","EPSG:25833","EPSG:31466","EPSG:31467","EPSG:4326"]
                     simplesearch:
                         title: mb.core.simplesearch.class.title
@@ -279,7 +312,7 @@ parameters:
                         autoOpen: false
                         showBaseSource: true
                         layerRemove: true
-                        menu: [opacity,zoomtolayer,metadata,removelayer]
+                        menu: [opacity,zoomtolayer,metadata,layerremove]
                         hideNotToggleable: true
                         hideSelect: true
                         hideInfo: false
