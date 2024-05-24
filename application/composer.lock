@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a8bb29797d5deba318aec5edc02c071c",
+    "content-hash": "52329fab5b89834041888549266baa6f",
     "packages": [
         {
             "name": "assetic/framework",
@@ -1481,16 +1481,16 @@
         },
         {
             "name": "mapbender/digitizer",
-            "version": "dev-work/symfony-6-update",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "b6802d7dcc00ab80f07ac22c196459ebc6fbdabc"
+                "reference": "c07a7bcb1525aa4dbe2c463dd26cbef27c793aac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/b6802d7dcc00ab80f07ac22c196459ebc6fbdabc",
-                "reference": "b6802d7dcc00ab80f07ac22c196459ebc6fbdabc",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/c07a7bcb1525aa4dbe2c463dd26cbef27c793aac",
+                "reference": "c07a7bcb1525aa4dbe2c463dd26cbef27c793aac",
                 "shasum": ""
             },
             "require": {
@@ -1550,22 +1550,22 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/mapbender-digitizer/issues",
-                "source": "https://github.com/mapbender/mapbender-digitizer/tree/work/symfony-6-update"
+                "source": "https://github.com/mapbender/mapbender-digitizer/tree/develop"
             },
-            "time": "2024-05-12T21:46:04+00:00"
+            "time": "2024-05-15T11:24:34+00:00"
         },
         {
             "name": "mapbender/mapbender",
-            "version": "dev-work/symfony-6-update",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "e705d12d98b552fbd5d9fd806689fa7cdf2beb64"
+                "reference": "330648fe670fe0a138a4472fc84262273a812f65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/e705d12d98b552fbd5d9fd806689fa7cdf2beb64",
-                "reference": "e705d12d98b552fbd5d9fd806689fa7cdf2beb64",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/330648fe670fe0a138a4472fc84262273a812f65",
+                "reference": "330648fe670fe0a138a4472fc84262273a812f65",
                 "shasum": ""
             },
             "require": {
@@ -1684,9 +1684,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/mapbender/issues",
-                "source": "https://github.com/mapbender/mapbender/tree/work/symfony-6-update"
+                "source": "https://github.com/mapbender/mapbender/tree/develop"
             },
-            "time": "2024-05-15T09:36:30+00:00"
+            "time": "2024-05-15T11:24:16+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -9930,13 +9930,13 @@
     "aliases": [
         {
             "package": "mapbender/digitizer",
-            "version": "dev-work/symfony-6-update",
+            "version": "dev-develop",
             "alias": "v2.0-dev",
             "alias_normalized": "2.0.0.0-dev"
         },
         {
             "package": "mapbender/mapbender",
-            "version": "dev-work/symfony-6-update",
+            "version": "dev-develop",
             "alias": "v4.0-dev",
             "alias_normalized": "4.0.0.0-dev"
         }
