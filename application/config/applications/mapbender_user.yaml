@@ -7,24 +7,14 @@ parameters:
             published: true
             persistentView: false
             template:  Mapbender\CoreBundle\Template\Fullscreen
-            custom_css: |
-                .popup {
-                border-color: white;
-                border: 1px white;
-                border-radius: 10px;
-                }
-
-                .popupHead {
-                border-bottom: solid 1px #747577;
-                margin: 0 20px 20px 20px;
-                padding: 20px 0 10px 0;
-                }
+            custom_css: ~
             regionProperties:
               - name: sidepane
                 properties:
                   name: accordion
             layersets:
                 themes:
+                    selected: true
                     mapbender_users:
                         class: Mapbender\WmsBundle\Entity\WmsInstance
                         title: Mapbender Users
@@ -40,54 +30,46 @@ parameters:
                         tiled: false
                         opacity: 100
                         isBaseSource: false
-                    overlay:
+                        toggle: true
+                    fossgis:
                         class: Mapbender\WmsBundle\Entity\WmsInstance
-                        title: NW Overlay DOP
-                        url: https://www.wms.nrw.de/geobasis/wms_nw_dop_overlay
+                        title: FOSSGIS Konferenzen
+                        url: https://wms.wheregroup.com/cgi-bin/fossgis.xml
                         version: 1.3.0
                         layers:
-                            6: { name: WMS_NW_DOP_OVERLAY,    title : Overlay DOP}
-                        tiled: false
+                            6: { name: FOSSGIS, title : FOSSGIS Konferenz-Standorte, visible: true, queryable: true, legendurl: https://wms.wheregroup.com/cgi-bin/fossgis.xml?version=1.3.0&service=WMS&request=GetLegendGraphic&sld_version=1.1.0&layer=fossgis&format=image/png&STYLE=default }
+                        info_format: text/html
+                        visible: true
                         format: image/png
                         transparent: true
-                        visible: false
+                        tiled: false
                         opacity: 100
                         isBaseSource: false
-                background themes:
-                    dop:
+                        toggle: false
+                    foss4g:
                         class: Mapbender\WmsBundle\Entity\WmsInstance
-                        title: NW DOP
-                        url: https://www.wms.nrw.de/geobasis/wms_nw_dop
+                        title: FOSS4G Conferences
+                        url: https://wms.wheregroup.com/cgi-bin/foss4g.xml
                         version: 1.3.0
                         layers:
-                            3: { name: nw_dop_rgb,    title : WMS NW DOP RGB,  visible: true }
-                        tiled: true
-                        format: image/png
-                        transparent: true
-                        visible: false
-                        opacity: 100
-                        isBaseSource: true
-                    tpo:
-                        class: Mapbender\WmsBundle\Entity\WmsInstance
-                        title: TopPlusOpen Light
-                        url: https://sgx.geodatenzentrum.de/wms_topplus_open
-                        version: 1.3.0
-                        layers:
-                            2: { name: web_light,    title : TopPlusOpen Light,  visible: true }
+                            6: { name: FOSS4G, title : FOSS4G Conference Locations, visible: true, queryable: true, legendurl: https://wms.wheregroup.com/cgi-bin/foss4g.xml?version=1.3.0&service=WMS&request=GetLegendGraphic&sld_version=1.1.0&layer=foss4g&format=image/png&STYLE=default }
                         info_format: text/html
                         visible: false
                         format: image/png
                         transparent: true
-                        tiled: true
+                        tiled: false
                         opacity: 100
-                        isBaseSource: true
+                        isBaseSource: false
+                        toggle: false
+                background themes:
+                    selected: true
                     osm:
                         class: Mapbender\WmsBundle\Entity\WmsInstance
                         title: OSM Demo
                         url: https://osm-demo.wheregroup.com/service
                         version: 1.3.0
                         layers:
-                            1: { name: osm,    title : OSM Demo WhereGroup,  visible: true }
+                            12: { name: osm,    title : OSM Demo WhereGroup,  visible: true }
                         info_format: text/html
                         visible: true
                         format: image/png
@@ -95,14 +77,43 @@ parameters:
                         tiled: true
                         opacity: 100
                         isBaseSource: true
-                overview:
-                    osm_overview:
+                    osm-opaque:
                         class: Mapbender\WmsBundle\Entity\WmsInstance
                         title: OSM Demo
                         url: https://osm-demo.wheregroup.com/service
                         version: 1.3.0
                         layers:
-                            7: { name: osm,    title : OSM Demo WhereGroup,  visible: true }
+                            12: { name: osm,    title : OSM Demo WhereGroup,  visible: true }
+                        info_format: text/html
+                        visible: true
+                        format: image/png
+                        transparent: true
+                        tiled: true
+                        opacity: 60
+                        isBaseSource: true
+                    osm-greyscale:
+                        class: Mapbender\WmsBundle\Entity\WmsInstance
+                        title: OSM Demo
+                        url: https://osm-demo.wheregroup.com/service
+                        version: 1.3.0
+                        layers:
+                            13: { name:  osm-grey,    title : OSM Demo WhereGroup (greyscale),  visible: true }
+                        info_format: text/html
+                        visible: false
+                        format: image/png
+                        transparent: true
+                        tiled: true
+                        opacity: 100
+                        isBaseSource: true
+                overview:
+                    selected: true
+                    osm-overview:
+                        class: Mapbender\WmsBundle\Entity\WmsInstance
+                        title: OSM Demo
+                        url: https://osm-demo.wheregroup.com/service
+                        version: 1.3.0
+                        layers:
+                            21: { name: osm,    title : OSM Demo WhereGroup,  visible: true }
                         tiled: false
                         format: image/png
                         transparent: true
@@ -119,40 +130,21 @@ parameters:
                         target: map
                         instancesets:
                             1-basesourceswitcher:
-                                title: OSM
+                                title: OSM (color)
                                 group: mb.demoapps.baseMaps
                                 instances:
                                     - osm
                             2-basesourceswitcher:
-                                title: OSM + Overlay (NRW)
+                                title: OSM (greyscale)
                                 group: mb.demoapps.baseMaps
-                                instances: [osm, overlay]
+                                instances:
+                                    - osm-greyscale
                             3-basesourceswitcher:
-                                title: TopPlusOpen
+                                title: OSM (opaque)
                                 group: mb.demoapps.baseMaps
                                 instances:
-                                    - tpo
+                                    - osm-opaque
                             4-basesourceswitcher:
-                                title: TopPlusOpen + Overlay (NRW)
-                                group: mb.demoapps.baseMaps
-                                instances: [tpo, overlay]
-                            5-basesourceswitcher:
-                                title: DOP (NRW)
-                                group: mb.demoapps.aerialView
-                                instances:
-                                    - dop
-                            6-basesourceswitcher:
-                                title: DOP + Overlay (NRW)
-                                group: mb.demoapps.aerialView
-                                instances:
-                                    - dop
-                                    - overlay
-                            7-basesourceswitcher:
-                                title: Overlay (NRW)
-                                group: mb.demoapps.aerialView
-                                instances:
-                                    - overlay
-                            8-basesourceswitcher:
                                 title: mb.demoapps.noBackground
                                 group: null
                                 instances: []
@@ -172,22 +164,6 @@ parameters:
                         label: true
                         target: wmsloader
                         icon: iconWms
-                    lineruler-button:
-                        title: mb.core.ruler.tag.measure
-                        tooltip: mb.core.ruler.tag.line
-                        class: Mapbender\CoreBundle\Element\ControlButton
-                        icon: icon-line-ruler
-                        label: true
-                        target: lineruler
-                        group: rulers
-                    arearuler-button:
-                        title: mb.core.ruler.tag.measure
-                        tooltip: mb.core.ruler.tag.area
-                        class: Mapbender\CoreBundle\Element\ControlButton
-                        icon: icon-area-ruler
-                        label: true
-                        target: arearuler
-                        group: rulers
                     gps-button:
                         class: Mapbender\CoreBundle\Element\GpsPosition
                         label: true
@@ -212,11 +188,6 @@ parameters:
                     shareUrl:
                         class: Mapbender\CoreBundle\Element\ShareUrl
                         label: true
-                    copyright-button:
-                        class: Mapbender\CoreBundle\Element\ControlButton
-                        icon: iconCopyright
-                        label: true
-                        target: copyright
                     simplesearch:
                         title: mb.core.simplesearch.class.title
                         placeholder: mb.demoapps.search
@@ -241,6 +212,7 @@ parameters:
                             maxscale: 5000
                             icon_url: '/bundles/mapbendercore/image/pin_red.png'
                             icon_offset: '-6,-32'
+                        screenType: desktop
                 content:
                     map:
                         class: Mapbender\CoreBundle\Element\Map
@@ -269,8 +241,21 @@ parameters:
                         deactivateOnClose: false
                         onlyValid: true
                         displayType: tabs
-                        autoActivate: false
+                        autoActivate: true
                         printResult: true
+                        maxCount: 100
+                        showOriginal: true
+                        width: 500
+                        height: 500
+                        highlighting: true
+                        fillColorDefault: '#ffff00'
+                        strokeColorDefault: '#ff00ff'
+                        opacityDefault: 25
+                        strokeWidthDefault: 3
+                        fillColorHover: '#00ffff'
+                        strokeColorHover: '#0000ff'
+                        opacityHover: 50
+                        strokeWidthHover: 5
                     wmsloader:
                         class: Mapbender\WmsBundle\Element\WmsLoader
                         target: map
@@ -299,29 +284,12 @@ parameters:
                                 label: Title              # label of the optional field
                                 options:                  #
                                     required: true        # true or false
-                    lineruler:
-                        title: mb.core.ruler.tag.line
-                        class: Mapbender\CoreBundle\Element\Ruler
-                        target: map
-                        type: line
-                        strokeColor: 'rgba(0, 158, 224, 1)'
-                    arearuler:
-                        title: mb.core.ruler.tag.area
-                        class: Mapbender\CoreBundle\Element\Ruler
-                        target: map
-                        type: area
-                        fillColor: rgba(0, 158, 224, 0.5)
-                        strokeColor: 'rgba(204, 210, 42, 1)'
-                        fontColor: '#ffffff'
-                        fontSize: 14
-                        strokeWidth: 4
-                        strokeWidthWhileDrawing: 3
                     overview:
                         class: Mapbender\CoreBundle\Element\Overview
                         target: map
                         layerset: overview
                         anchor: 'right-bottom'
-                        width: 300
+                        width: 200
                         height: 150
                         screenType: desktop
                     scalebar:
@@ -330,33 +298,28 @@ parameters:
                         anchor: 'right-bottom'
                         maxWidth: 200
                         units: km
+                        screenType: desktop
                     scaledisplay:
                         class: Mapbender\CoreBundle\Element\ScaleDisplay
                         target: map
                         anchor: right-top
                         scalePrefix: Scale
                         unitPrefix: true
+                        screenType: desktop
                     poi:
                         class: Mapbender\CoreBundle\Element\POI
                         target: map
                         body: mb.demoapps.poi
                         useMailto: false
-                    copyright:
-                        class: Mapbender\CoreBundle\Element\Copyright
-                        title: Copyright
-                        popupWidth: 700
-                        popupHeight: auto
-                        content: "<p>Welcome to the Mapbender Demo.</p><p>Please be aware that we utilize data sourced from the following publishers:</p><p><ul><li><a href=http://www.openstreetmap.org>OpenStreetMap,</a></li><li><a href=http://www.bkg.bund.de>© Bundesamt für Kartographie und Geodäsie (2023)</a>, with datasets from <a href=https://sgx.geodatenzentrum.de/web_public/gdz/datenquellen/Datenquellen_TopPlusOpen.html>TopPlusOpen,</a></li><li><a href=https://www.bezreg-koeln.nrw.de/geobasis-nrw>Geobasis NRW.</a></li></ul></p><p>These datasets are made available under the following licenses:</p><ul><li>Open Database License for OpenStreetMap (<a href=https://opendatacommons.org/licenses/odbl/>ODbL</a>)</li><li>Datenlizenz Deutschland - Namensnennung - Version 2.0 for TOPPlusOpen (<a href=https://www.govdata.de/dl-de/by-2-0>DL-DE-BY-2.0</a>)</li><li>Datenlizenz Deutschland – Zero – Version 2.0 for Geobasis NRW (<a href=https://www.govdata.de/dl-de/zero-2-0>DL-DE-ZERO-2-0</a>)</li></ul>"
-                        autoOpen: false
                 sidepane:
                     layertree:
                         class: Mapbender\CoreBundle\Element\Layertree
                         target: map
                         type: element
                         autoOpen: false
-                        showBaseSource: true
+                        showBaseSource: false
                         layerRemove: true
-                        menu: [opacity,zoomtolayer,metadata,removelayer]
+                        menu: [opacity,zoomtolayer,metadata,layerremove]
                         hideNotToggleable: true
                         hideSelect: true
                         hideInfo: false
@@ -376,12 +339,16 @@ parameters:
                                 opened: true
                                 sourceVisibility: false
                                 allSelected: false
-                    viewmanager:
-                        class: Mapbender\CoreBundle\Element\ViewManager
-                        publicEntries: rw
-                        privateEntries: true
-                        allowAnonymousSave: true
-                        showDate: true
+                    ruler:
+                        class: Mapbender\CoreBundle\Element\Ruler
+                        target: map
+                        type: both
+                        fillColor: 'rgba(254, 254, 254, 0.2)'
+                        strokeColor: 'rgba(51,153,204, 1)'
+                        fontColor: 'rgba(51,153,204, 1)'
+                        fontSize: 14
+                        strokeWidth: 2
+                        strokeWidthWhileDrawing: 3
                     sketch:
                         class: Mapbender\CoreBundle\Element\Sketch
                         target: map
@@ -392,11 +359,10 @@ parameters:
                             - text
                             - rectangle
                             - circle
-                        display_type: element
                         auto_activate: false
                         deactivate_on_close: false
-                        colors: ["#FFFFFF","#cf003d","#ccd22a","#00837e","#009ee0","#000000"]
-                        allow_custom_color: false
+                        colors: ["#009ee0","#cf003d","#ffff33","#00837e","#ff7f00"]"#e7298a","#984ea3"
+                        allow_custom_color: true
                     coordinatesutility:
                         class: Mapbender\CoreBundle\Element\CoordinatesUtility
                         target: map
@@ -408,11 +374,29 @@ parameters:
                         target: map
                         maxFileSize: 10
                         helpText: mb.core.dataupload.admin.helpText
+                    viewmanager:
+                        class: Mapbender\CoreBundle\Element\ViewManager
+                        publicEntries: rw
+                        privateEntries: true
+                        allowAnonymousSave: true
+                        showDate: true
                     html-about-mapbender:
                         class: Mapbender\CoreBundle\Element\HTMLElement
                         classes: html-element-inline
                         title: mb.demoapps.about
-                        content: "<p><b>Application name:</b><br><br> {{ application.title }}</p><br><p>Mapbender is part of </p><p><a href=\"https://www.osgeo.org/projects/mapbender/\" target=\"_blank\"><img src=\"https://www.osgeo.org/wp-content/themes/roots/assets/img/logo-osgeo.svg\" alt=\"OSGeo Project\"  title=\"OSGeo Project\" width=\"100px\" /></a></p><p><br>Find out more about OSGeo at: <br/><a href=\"https://www.osgeo.org\" target=\"_blank\">https://www.osgeo.org</a><br/><a href=\"https://www.osgeo.org/projects/mapbender/\" target=\"_blank\">https://www.osgeo.org/projects/mapbender/</a>"
+                        content: "<p>Learn more about Mapbender </p>
+                        <p><a href=\"https://mapbender.org\" target=\"_blank\">
+                        <img src=\"../image/Mapbender-logo.png\" alt=\"Mapbender\"  title=\"Mapbender\" width=\"200px\" /></p>https://mapbender.org</a>
+                        </p>
+                        <p>Mapbender is an</p>
+                        <p><a href=\"https://www.osgeo.org/projects/mapbender/\" target=\"_blank\">
+                        <p>
+                        <img src=\"../bundles/mapbendercore/image/OSGeo_project.png\" alt=\"OSGeo Project\"  title=\"OSGeo Project\" width=\"150px\" /></a>
+                        </p>
+                        <p>
+                        <a href=\"https://www.osgeo.org\" target=\"_blank\">https://www.osgeo.org</a>
+                        </p>
+                        </p>"
                 footer:
                     activityindicator:
                         class: Mapbender\CoreBundle\Element\ActivityIndicator
@@ -423,26 +407,31 @@ parameters:
                         empty:  "x: - y: -"
                         prefix: "x: "
                         separator:  " y: "
+                        numDigits: 2
                     scaleselector:
                         class: Mapbender\CoreBundle\Element\ScaleSelector
                         target: map
+                        #screenType: desktop
                     srs:
                         class: Mapbender\CoreBundle\Element\SrsSelector
                         target: map
+                        screenType: desktop
                     applicationswitcher:
                         class: Mapbender\CoreBundle\Element\ApplicationSwitcher
                         applications: [mapbender_user, mapbender_user_basic]
+                        screenType: desktop
                     OSM-badge:
                         title: © OpenStreetMap contributors
                         tooltip: © OpenStreetMap contributors
-                        class: Mapbender\CoreBundle\Element\ControlButton
+                        class: Mapbender\CoreBundle\Element\LinkButton
                         label: true
                         click: https://www.openstreetmap.org/copyright
-                    HTML:
+                    html-powered-by:
                         title: HTML-powered by Mapbender
                         class: Mapbender\CoreBundle\Element\HTMLElement
-                        content: '<span style="color: #009ee0; font-weight:bold">powered by Mapbender</span>'
+                        content: '<span style="color:#009ee0;">powered by Mapbender</span>'
                         classes: html-element-inline
+                        screenType: desktop
                     about:
                         title: mb.core.aboutdialog.tag.about
                         tooltip: mb.core.aboutdialog.tag.about
