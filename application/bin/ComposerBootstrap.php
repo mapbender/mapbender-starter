@@ -531,7 +531,6 @@ class ComposerBootstrap
 
         foreach (array(
                      "vendor/mapbender/documentation",
-                     "public/index.php",
                      "var/cache/*",
                      "var/log/*",
                  ) as $path) {
