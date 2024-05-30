@@ -1,0 +1,27 @@
+services:
+  mapbender:
+    build:
+      context: ../
+    ports:
+      - 80:8080
+    environment:
+      MAPBENDER_DATABASE_URL: "pgsql://pguser:pgpass@db:5432/postgres"
+    depends_on:
+      db:
+        condition: service_healthy
+  db:
+    image: postgis/postgis:14-3.4
+    restart: always
+    ports:
+      - 55432:5432
+    #volumes:
+    #  - ./volumes/db/data:/var/lib/postgresql/data:rw
+    environment:
+      POSTGRES_USER: pguser
+      POSTGRES_PASSWORD: pgpass
+      POSTGRES_DB: postgres
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U pguser -d postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
