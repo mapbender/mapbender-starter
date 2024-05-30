@@ -10,6 +10,7 @@ Mapbender is a web based geoportal framework.
 
 For detailed usage information, including installation and integration topics, please see [official documentation](https://doc.mapbender.org/en/) ([also available in German](https://doc.mapbender.org/de/)).
 
+
 ## Requirements
 
 Mapbender requires PHP 8.1, OpenSSL, curl, bzip2 decompression and the following php extensions:
@@ -121,6 +122,54 @@ From the application directory run:
 ```sh
 bin/console fom:user:resetroot
 ```
+
+## Docker
+
+Run this command to start a local mapbender instance in a docker container using an internal sqlite database.
+
+```bash
+docker run mapbender/mapbender
+```
+
+### external database 
+
+To run a Mapbender docker container configured to use an external database we will use the MAPBENDER_DATABASE_URL environment variable.
+
+1.  Create the docker network
+    `docker network create -d bridge mapbender`
+
+2.  Start the database
+    `docker run --name db --network mapbender -p 55432:5432 -e POSTGRES_USER=pguser -e POSTGRES_PASSWORD=pgpass -e POSTGRES_DB=postgres postgis/postgis:14-3.4`
+
+3.  Start mapbender
+    `docker run --name mapbender --network mapbender -p 80:8080 -e MAPBENDER_DATABASE_URL="pgsql://pguser:pgpass@db:5432/postgres" mapbender/mapbender`
+
+4.  Create Mapbender database tables
+    `docker exec mapbender php application/bin/console doctrine:schema:update --force`
+
+5.  Initialize Mapbender database
+    `docker exec mapbender php application/bin/console mapbender:database:init -v`
+
+### docker/docker-compose.pgsql.yml
+
+If you have connected the mapbender container to an external database that does not have the required tables yet, like the setup started by the following command:
+
+```bash
+docker compose -f docker-compose.pgsql.yml up -d
+```
+
+You can initialize the database after the mapbender container has started.
+
+```bash
+docker compose -f docker-compose.pgsql.yml exec mapbender php application/bin/console doctrine:schema:update --force
+```
+
+And after that initialize the mapbender database.
+
+```bash
+docker compose -f docker-compose.pgsql.yml exec mapbender php application/bin/console mapbender:database:init -v
+```
+
 
 ## Issues
 
