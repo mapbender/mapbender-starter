@@ -133,28 +133,40 @@ docker run -p 80:8080 mapbender/mapbender
 
 If you want Mapbender to stay up and running in background add the `-d` option.
 
-### ENV variables
+### Port 8080
 
-You can use environment variables to adjust the configuration of a docker container.
-E.g. the variable `MAPBENDER_DATABASE_URL` is used to setup another database as shown in the next example.
+The container is accepting HTTP requests on port `8080` by default.
+
+### Env variables
+
+You can use environment variables to adjust the configuration of the Mapbender docker container.
+
+- `APP_ENV` Symfony app environment. (`prod`, `dev`, `test`)
+- `MAILER_DSN` Smpt server configuration. (`smtp://user:pass@smtp.example.com:25`)
+- `MAPBENDER_DATABASE_URL` configure Mapbender to connect to another database as shown in the upcoming example. (find examples at [https://symfony.com/doc/current/doctrine.html#configuring-the-database](https://symfony.com/doc/current/doctrine.html#configuring-the-database))
 
 ### external database 
 
 To run a Mapbender docker container configured to use an external database use the `MAPBENDER_DATABASE_URL` environment variable.
 
 1.  Create the docker network
+
     `docker network create -d bridge mapbender`
 
 2.  Start the PostGIS database
+
     `docker run --name db --network mapbender -p 55432:5432 -e POSTGRES_USER=pguser -e POSTGRES_PASSWORD=pgpass -e POSTGRES_DB=postgres postgis/postgis:14-3.4`
 
 3.  Start Mapbender
+
     `docker run --name mapbender --network mapbender -p 80:8080 -e MAPBENDER_DATABASE_URL="pgsql://pguser:pgpass@db:5432/postgres" mapbender/mapbender`
 
 4.  Create Mapbender database schema
+
     `docker exec mapbender php application/bin/console doctrine:schema:create`
 
 5.  Initialize Mapbender database
+
     `docker exec mapbender php application/bin/console mapbender:database:init -v`
 
 ### docker/docker-compose.pgsql.yml
