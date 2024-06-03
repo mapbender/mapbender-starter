@@ -142,7 +142,7 @@ The container is accepting HTTP requests on port `8080` by default.
 You can use environment variables to adjust the configuration of the Mapbender docker container.
 
 - `APP_ENV` Symfony app environment. (`prod`, `dev`, `test`)
-- `MAILER_DSN` Smpt server configuration. (`smtp://user:pass@smtp.example.com:25`)
+- `MAILER_DSN` Smtp server configuration. (`smtp://user:pass@smtp.example.com:25`)
 - `MAPBENDER_DATABASE_URL` configure Mapbender to connect to another database as shown in the upcoming example. (find examples at [https://symfony.com/doc/current/doctrine.html#configuring-the-database](https://symfony.com/doc/current/doctrine.html#configuring-the-database))
 
 ### external database 
