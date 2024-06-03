@@ -34,5 +34,5 @@ jobs:
         platforms: linux/amd64
         push: true
         tags: |
-          wheregroup/mapbender:latest
-          wheregroup/mapbender:${{ github.ref_name }}
+          mapbender/mapbender:latest
+          mapbender/mapbender:${{ github.ref_name }}
