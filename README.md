@@ -125,13 +125,13 @@ bin/console fom:user:resetroot
 
 ## Docker
 
-Run this command to start a local mapbender instance in a docker container using an internal sqlite database.
+Run this command to start a local Mapbender instance in a docker container using an internal SQLite database.
 
 ```bash
 docker run -p 80:8080 mapbender/mapbender
 ```
 
-If you want mapbender to stay up and running in background add the `-d` option.
+If you want Mapbender to stay up and running in background add the `-d` option.
 
 ### ENV variables
 
@@ -140,43 +140,42 @@ E.g. the variable `MAPBENDER_DATABASE_URL` is used to setup another database as 
 
 ### external database 
 
-To run a Mapbender docker container configured to use an external database we will use the MAPBENDER_DATABASE_URL environment variable.
+To run a Mapbender docker container configured to use an external database use the `MAPBENDER_DATABASE_URL` environment variable.
 
 1.  Create the docker network
     `docker network create -d bridge mapbender`
 
-2.  Start the database
+2.  Start the PostGIS database
     `docker run --name db --network mapbender -p 55432:5432 -e POSTGRES_USER=pguser -e POSTGRES_PASSWORD=pgpass -e POSTGRES_DB=postgres postgis/postgis:14-3.4`
 
-3.  Start mapbender
+3.  Start Mapbender
     `docker run --name mapbender --network mapbender -p 80:8080 -e MAPBENDER_DATABASE_URL="pgsql://pguser:pgpass@db:5432/postgres" mapbender/mapbender`
 
-4.  Create Mapbender database tables
-    `docker exec mapbender php application/bin/console doctrine:schema:update --force`
+4.  Create Mapbender database schema
+    `docker exec mapbender php application/bin/console doctrine:schema:create`
 
 5.  Initialize Mapbender database
     `docker exec mapbender php application/bin/console mapbender:database:init -v`
 
 ### docker/docker-compose.pgsql.yml
 
-If you have connected the mapbender container to an external database that does not have the required tables yet, like the setup started by the following command:
+If the Mapbender container is configured to connect to an external database that does not have the required schema yet, the schema must be created first. Start our demo setup using the following command to start a Mapbender instance connected to an empty PostgreSQL database:
 
 ```bash
 docker compose -f docker-compose.pgsql.yml up -d
 ```
 
-You can initialize the database after the mapbender container has started.
+You can initialize the database after the Mapbender container has started.
 
 ```bash
 docker compose -f docker-compose.pgsql.yml exec mapbender php application/bin/console doctrine:schema:update --force
 ```
 
-And after that initialize the mapbender database.
+And after that initialize the Mapbender database.
 
 ```bash
 docker compose -f docker-compose.pgsql.yml exec mapbender php application/bin/console mapbender:database:init -v
 ```
-
 
 ## Issues
 
