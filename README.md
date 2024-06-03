@@ -128,8 +128,15 @@ bin/console fom:user:resetroot
 Run this command to start a local mapbender instance in a docker container using an internal sqlite database.
 
 ```bash
-docker run mapbender/mapbender
+docker run -p 80:8080 mapbender/mapbender
 ```
+
+If you want mapbender to stay up and running in background add the `-d` option.
+
+### ENV variables
+
+You can use environment variables to adjust the configuration of a docker container.
+E.g. the variable `MAPBENDER_DATABASE_URL` is used to setup another database as shown in the next example.
 
 ### external database 
 
