@@ -10,6 +10,7 @@ Mapbender is a web based geoportal framework.
 
 For detailed usage information, including installation and integration topics, please see [official documentation](https://doc.mapbender.org/en/) ([also available in German](https://doc.mapbender.org/de/)).
 
+
 ## Requirements
 
 Mapbender requires PHP 8.1, OpenSSL, curl, bzip2 decompression and the following php extensions:
@@ -20,7 +21,6 @@ Mapbender requires PHP 8.1, OpenSSL, curl, bzip2 decompression and the following
 * mbstring
 * bz2
 * xml
-* json
 * sqlite3
 * ldap
 
@@ -37,7 +37,7 @@ E.g.
 ```sh
 sudo apt-get install php php-cli openssl bzip2 \
     php-curl php-gd php-intl php-mbstring \
-    php-zip php-bz2 php-xml php-json \
+    php-zip php-bz2 php-xml \
     php-sqlite3 php-pgsql php-mysql php-ldap \
     sqlite3 curl
 ```
@@ -120,6 +120,72 @@ ip addresses by default for security reasons.
 From the application directory run:
 ```sh
 bin/console fom:user:resetroot
+```
+
+## Docker
+
+Run this command to start a local Mapbender instance in a docker container using an internal SQLite database.
+
+```bash
+docker run -p 80:8080 mapbender/mapbender
+```
+
+If you want Mapbender to stay up and running in background add the `-d` option.
+
+### Port 8080
+
+The container is accepting HTTP requests on port `8080` by default.
+
+### Env variables
+
+You can use environment variables to adjust the configuration of the Mapbender docker container.
+
+- `APP_ENV` Symfony app environment. (`prod`, `dev`, `test`)
+- `MAILER_DSN` Smtp server configuration. (`smtp://user:pass@smtp.example.com:25`)
+- `MAPBENDER_DATABASE_URL` configure Mapbender to connect to another database as shown in the upcoming example. (find examples at [https://symfony.com/doc/current/doctrine.html#configuring-the-database](https://symfony.com/doc/current/doctrine.html#configuring-the-database))
+
+### external database 
+
+To run a Mapbender docker container configured to use an external database use the `MAPBENDER_DATABASE_URL` environment variable.
+
+1.  Create the docker network
+
+    `docker network create -d bridge mapbender`
+
+2.  Start the PostGIS database
+
+    `docker run --name db --network mapbender -p 55432:5432 -e POSTGRES_USER=pguser -e POSTGRES_PASSWORD=pgpass -e POSTGRES_DB=postgres postgis/postgis:14-3.4`
+
+3.  Start Mapbender
+
+    `docker run --name mapbender --network mapbender -p 80:8080 -e MAPBENDER_DATABASE_URL="pgsql://pguser:pgpass@db:5432/postgres" mapbender/mapbender`
+
+4.  Create Mapbender database schema
+
+    `docker exec mapbender php application/bin/console doctrine:schema:create --force`
+
+5.  Initialize Mapbender database
+
+    `docker exec mapbender php application/bin/console mapbender:database:init -v`
+
+### docker/docker-compose.pgsql.yml
+
+If the Mapbender container is configured to connect to an external database that does not have the required schema yet, the schema must be created first. Start our demo setup using the following command to start a Mapbender instance connected to an empty PostgreSQL database:
+
+```bash
+docker compose -f docker-compose.pgsql.yml up -d
+```
+
+You can initialize the database after the Mapbender container has started.
+
+```bash
+docker compose -f docker-compose.pgsql.yml exec mapbender php application/bin/console doctrine:schema:update --force
+```
+
+And after that initialize the Mapbender database.
+
+```bash
+docker compose -f docker-compose.pgsql.yml exec mapbender php application/bin/console mapbender:database:init -v
 ```
 
 ## Issues
