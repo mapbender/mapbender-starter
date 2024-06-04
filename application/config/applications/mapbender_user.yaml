@@ -7,11 +7,28 @@ parameters:
             published: true
             persistentView: false
             template:  Mapbender\CoreBundle\Template\Fullscreen
-            custom_css: ~
+            custom_css: null
             regionProperties:
+              - name: toolbar
+                properties:
+                    item_alignment": right  # left/right/center
+                    screenType: all         # desktop/mobile/all
+                    generate_button_menu: false # true/false
+                    menu_label: NULL # NULL or text
               - name: sidepane
                 properties:
-                  name: accordion
+                    name: accordion # tabs (for button) / accordion / NULL
+                    align: left # right/left
+                    closed: false # true/false
+                    screenType: all # all/desktop/mobile
+                    width: "300px"
+                    resizable: true
+              - name: footer
+                properties:
+                    item_alignment": right # right/left/center
+                    screenType: all # all/desktop/mobile
+                    generate_button_menu: false # true/false
+                    menu_label: NULL # NULL or text
             layersets:
                 themes:
                     selected: true
@@ -77,7 +94,7 @@ parameters:
                         tiled: true
                         opacity: 100
                         isBaseSource: true
-                    osm-transparent:
+                    osm-opaque:
                         class: Mapbender\WmsBundle\Entity\WmsInstance
                         title: OSM Demo
                         url: https://osm-demo.wheregroup.com/service
@@ -85,7 +102,7 @@ parameters:
                         layers:
                             12: { name: osm,    title : OSM Demo WhereGroup,  visible: true }
                         info_format: text/html
-                        visible: true
+                        visible: false
                         format: image/png
                         transparent: true
                         tiled: true
@@ -140,10 +157,10 @@ parameters:
                                 instances:
                                     - osm-greyscale
                             3-basesourceswitcher:
-                                title: OSM (transparent)
+                                title: OSM (opaque)
                                 group: mb.demoapps.baseMaps
                                 instances:
-                                    - osm-transparent
+                                    - osm-opaque
                             4-basesourceswitcher:
                                 title: mb.demoapps.noBackground
                                 group: null
