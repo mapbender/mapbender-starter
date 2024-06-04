@@ -21,7 +21,6 @@ Mapbender requires PHP 8.1, OpenSSL, curl, bzip2 decompression and the following
 * mbstring
 * bz2
 * xml
-* json
 * sqlite3
 * ldap
 
@@ -38,7 +37,7 @@ E.g.
 ```sh
 sudo apt-get install php php-cli openssl bzip2 \
     php-curl php-gd php-intl php-mbstring \
-    php-zip php-bz2 php-xml php-json \
+    php-zip php-bz2 php-xml \
     php-sqlite3 php-pgsql php-mysql php-ldap \
     sqlite3 curl
 ```
@@ -163,7 +162,7 @@ To run a Mapbender docker container configured to use an external database use t
 
 4.  Create Mapbender database schema
 
-    `docker exec mapbender php application/bin/console doctrine:schema:create`
+    `docker exec mapbender php application/bin/console doctrine:schema:create --force`
 
 5.  Initialize Mapbender database
 

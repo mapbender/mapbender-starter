@@ -3,9 +3,9 @@ name: Build and push release Docker image
 on:
   push:
     branches:
-      - "develop-docker"
-#    tags:
-#      - "v*"
+      - "master"
+    tags:
+      - "v*"
 
 jobs:
   build:
