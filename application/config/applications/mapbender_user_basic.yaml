@@ -96,7 +96,7 @@ parameters:
                         tiled: true
                         opacity: 100
                         isBaseSource: true
-                    osm-opaque:
+                    osm-transparent:
                         class: Mapbender\WmsBundle\Entity\WmsInstance
                         title: OSM Demo
                         url: https://osm-demo.wheregroup.com/service
@@ -159,10 +159,10 @@ parameters:
                                 instances:
                                     - osm-greyscale
                             3-basesourceswitcher:
-                                title: OSM (opaque)
+                                title: OSM (transparent)
                                 group: mb.demoapps.baseMaps
                                 instances:
-                                    - osm-opaque
+                                    - osm-transparent
                             4-basesourceswitcher:
                                 title: mb.demoapps.noBackground
                                 group: mb.demoapps.baseMaps

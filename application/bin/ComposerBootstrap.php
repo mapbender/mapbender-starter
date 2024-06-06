@@ -221,14 +221,7 @@ class ComposerBootstrap
     public static function importExampleApplications()
     {
         static::printStatus("Import example mapbender applications");
-        $fixturePath = 'mapbender/src/Mapbender/CoreBundle/DataFixtures/ORM/Application/LoadApplicationData.php';
-        if (@\file_exists(dirname(__FILE__) . "/../$fixturePath")) {
-            // Mapbender <= 3.2.5
-            \passthru("php bin/console doctrine:fixtures:load --fixtures=$fixturePath --append");
-        } else {
-            // Prefer console command on Mapbender >= 3.2.6
-            \passthru("php bin/console mapbender:application:import " . dirname(__FILE__) . '/../config/applications');
-        }
+        \passthru("php bin/console mapbender:application:import " . dirname(__FILE__) . '/../config/applications');
     }
 
     /**
