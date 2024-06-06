@@ -1,60 +1,70 @@
 parameters:
     applications:
         mapbender_mobile:
-            title: Mobile demo
+            title: Mapbender Mobile Demo
             screenshot: screenshot.png
-            description: Simple application using mobile template
+            description: Mapbender application using mobile template
             published: true
             template:  'Mapbender\MobileBundle\Template\Mobile'
-            custom_css: |
-                .toolBar.bottom {
-                border-top: 2px solid #0066BA;
-                }
-                .toolBar {
-                  color: #0066BA;
-                }
-                mobilePane .contentTitle {
-                  flex: 0;
-                  font-size: 142%;
-                  border-bottom: solid 2px #0066BA;
-                }
-                .popup {
-                border-color: #EEE9E9;
-                border: 1px #EEE9E9;
-                border-radius: 10px;
-                }
-
-                .popupHead {
-                border-bottom: solid 1px #747577;
-                margin: 0 20px 20px 20px;
-                padding: 20px 0 10px 0;
-                }
-
+            custom_css: null
             layersets:
-                main:
+                themes:
+                    selected: true
                     mapbender_users:
                         class: Mapbender\WmsBundle\Entity\WmsInstance
                         title: Mapbender Users
                         url: https://wms.wheregroup.com/cgi-bin/mapbender_user.xml
                         version: 1.3.0
                         layers:
-                            10: { name: Mapbender_User,    title : User, visible: true, legendurl: https://wms.wheregroup.com/cgi-bin/mapbender_user.xml?version=1.3.0&service=WMS&request=GetLegendGraphic&sld_version=1.1.0&layer=Mapbender_User&format=image/png&STYLE=default }
-                            22: { name: Mapbender_Names,   title : Name, visible: true, queryable: true}
+                            4: { name: Mapbender_User,    title : User, visible: true, legendurl: https://wms.wheregroup.com/cgi-bin/mapbender_user.xml?version=1.3.0&service=WMS&request=GetLegendGraphic&sld_version=1.1.0&layer=Mapbender_User&format=image/png&STYLE=default }
+                            5: { name: Mapbender_Names,   title : Name, visible: true, queryable: true}
                         info_format: text/html
-                        allowtoggle: false
                         visible: true
                         format: image/png
                         transparent: true
                         tiled: false
                         opacity: 100
                         isBaseSource: false
+                        toggle: true
+                    fossgis:
+                        class: Mapbender\WmsBundle\Entity\WmsInstance
+                        title: FOSSGIS Konferenzen
+                        url: https://wms.wheregroup.com/cgi-bin/fossgis.xml
+                        version: 1.3.0
+                        layers:
+                            6: { name: FOSSGIS, title : FOSSGIS Konferenz-Standorte, visible: true, queryable: true, legendurl: https://wms.wheregroup.com/cgi-bin/fossgis.xml?version=1.3.0&service=WMS&request=GetLegendGraphic&sld_version=1.1.0&layer=fossgis&format=image/png&STYLE=default }
+                        info_format: text/html
+                        visible: true
+                        format: image/png
+                        transparent: true
+                        tiled: false
+                        opacity: 100
+                        isBaseSource: false
+                        toggle: false
+                    foss4g:
+                        class: Mapbender\WmsBundle\Entity\WmsInstance
+                        title: FOSS4G Conferences
+                        url: https://wms.wheregroup.com/cgi-bin/foss4g.xml
+                        version: 1.3.0
+                        layers:
+                            6: { name: FOSS4G, title : FOSS4G Conference Locations, visible: true, queryable: true, legendurl: https://wms.wheregroup.com/cgi-bin/foss4g.xml?version=1.3.0&service=WMS&request=GetLegendGraphic&sld_version=1.1.0&layer=foss4g&format=image/png&STYLE=default }
+                        info_format: text/html
+                        visible: false
+                        format: image/png
+                        transparent: true
+                        tiled: false
+                        opacity: 100
+                        isBaseSource: false
+                        toggle: false
+                background themes:
+                    selected: true
                     osm:
                         class: Mapbender\WmsBundle\Entity\WmsInstance
                         title: OSM Demo
                         url: https://osm-demo.wheregroup.com/service
                         version: 1.3.0
                         layers:
-                            30: { name: osm,    title : OSM Demo WhereGroup,  visible: true }
+                            12: { name: osm,    title : OSM Demo WhereGroup,  visible: true }
                         info_format: text/html
                         visible: true
                         format: image/png
@@ -62,19 +72,33 @@ parameters:
                         tiled: true
                         opacity: 100
                         isBaseSource: true
-                    osm_2:
+                    osm-transparent:
                         class: Mapbender\WmsBundle\Entity\WmsInstance
-                        title: OSM Demo (with Opacity)
+                        title: OSM Demo
                         url: https://osm-demo.wheregroup.com/service
                         version: 1.3.0
                         layers:
-                            30: { name: osm,    title : OSM Demo WhereGroup,  visible: true }
+                            12: { name: osm,    title : OSM Demo WhereGroup,  visible: true }
                         info_format: text/html
                         visible: false
                         format: image/png
                         transparent: true
-                        tiled: false
-                        opacity: 30
+                        tiled: true
+                        opacity: 60
+                        isBaseSource: true
+                    osm-greyscale:
+                        class: Mapbender\WmsBundle\Entity\WmsInstance
+                        title: OSM Demo
+                        url: https://osm-demo.wheregroup.com/service
+                        version: 1.3.0
+                        layers:
+                            13: { name:  osm-grey,    title : OSM Demo WhereGroup (greyscale),  visible: true }
+                        info_format: text/html
+                        visible: false
+                        format: image/png
+                        transparent: true
+                        tiled: true
+                        opacity: 100
                         isBaseSource: true
             elements:
                 footer:
@@ -124,6 +148,7 @@ parameters:
                         label: false
                         icon: iconHelp
                         target: help
+                        screenType: desktop
 
                     about-mapbender-button:
                         title: mb.core.aboutdialog.tag.about
@@ -139,17 +164,44 @@ parameters:
                 content:
                     map:
                         class: Mapbender\CoreBundle\Element\Map
-                        layersets: [main]
+                        layersets: [themes,background themes]
                         srs: EPSG:3857
                         extents:
                             start: [772933.16,6566826.23,806786.66,6582317.62]
                             max: [-20037508.34278924,-20037508.34278924,20037508.34278924,20037508.34278924]
                         scales: [50000000,25000000,10000000,5000000,1000000,500000,100000,50000,25000,10000,7500,5000,2500,1000,500]
                         otherSrs: ["EPSG:25832","EPSG:25833","EPSG:31466","EPSG:31467","EPSG:4326"]
+
+                    simplesearch:
+                        title: mb.core.simplesearch.class.title
+                        placeholder: mb.demoapps.search
+                        class: Mapbender\CoreBundle\Element\SimpleSearch
+                        target: map
+                        anchor: right-top
+                        query_url: https://osm-photon-search.wheregroup.com/search/api?limit=20&lat=50.7163&lon=7.1366&osm_tag=!railway&osm_tag=!highway:elevator&osm_tag=!tourism&osm_tag=!amenity
+                        query_key: q
+                        query_format: '%s'
+                        token_regex: '[^a-zA-Z0-9äöüÄÖÜß]'
+                        token_regex_in: '([a-zA-ZäöüÄÖÜß]{3,})'
+                        token_regex_out: '$1*'
+                        collection_path: features
+                        label_attribute:  '${properties.name} ${properties.street} ${properties.housenumber} ${properties.city} ${properties.country}'
+                        geom_attribute: geometry
+                        sourceSrs: 'EPSG:4326'
+                        geom_format: GeoJSON
+                        delay: 300
+                        query_ws_replace: null
+                        result:
+                            buffer: ~
+                            minscale: 500
+                            maxscale: 5000
+                            icon_url: '/bundles/mapbendercore/image/pin_red.png'
+                            icon_offset: '-6,-32'
+
                     zoombar:
                         class: Mapbender\CoreBundle\Element\ZoomBar
                         target: map
-                        components: ["rotation", "zoom_in_out", "zoom_max"]
+                        components: ["zoom_in_out", "zoom_max","zoom_home"]
                         anchor: right-bottom
                         draggable: false
 
@@ -203,19 +255,33 @@ parameters:
                         https://doc.mapbender.org</a>
                         </p>"
                         classes: html-element-inline
+                        screenType: desktop
 
                     basesourceswitcher:
+                        title: mb.core.basesourceswitcher.class.title
+                        tooltip: mb.core.basesourceswitcher.class.title
                         class: Mapbender\CoreBundle\Element\BaseSourceSwitcher
                         target: map
                         instancesets:
-                            is1:
-                                title: "OSM Demo (with opacity)"
-                                group: ~
-                                instances: [osm_2]
-                            is2:
-                                title: "OSM Demo"
-                                group: ~
-                                instances: [osm]
+                            1-basesourceswitcher:
+                                title: OSM (color)
+                                group: null
+                                instances:
+                                    - osm
+                            2-basesourceswitcher:
+                                title: OSM (greyscale)
+                                group: null
+                                instances:
+                                    - osm-greyscale
+                            3-basesourceswitcher:
+                                title: OSM (transparent)
+                                group: null
+                                instances:
+                                    - osm-transparent
+                            4-basesourceswitcher:
+                                title: mb.demoapps.noBackground
+                                group: null
+                                instances: []
 
                     html-about-mapbender:
                         title: mb.core.aboutdialog.tag.about

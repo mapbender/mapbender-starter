@@ -7,19 +7,28 @@ parameters:
             published: true
             persistentView: false
             template:  Mapbender\CoreBundle\Template\Fullscreen
-            custom_css: |
-                .toolBar.top {
-                    border-bottom: 1px solid #009ee0;
-                }
-                .popup {
-                    border: solid 1px #b9BABC;
-                    border-radius: 10px;
-                }
-                .popupHead {
-                    border-bottom: solid 1px #b9BABC;
-                    margin: 0 20px 20px 20px;
-                    padding: 20px 0 10px 0;
-                }
+            custom_css: null
+            regionProperties:
+              - name: toolbar
+                properties:
+                    item_alignment": right  # left/right/center
+                    screenType: all         # desktop/mobile/all
+                    generate_button_menu: false # true/false
+                    menu_label: NULL # NULL or text
+              - name: sidepane
+                properties:
+                    name: accordion # tabs (for button) / accordion / NULL
+                    align: left # right/left
+                    closed: false # true/false
+                    screenType: all # all/desktop/mobile
+                    width: "300px"
+                    resizable: true
+              - name: footer
+                properties:
+                    item_alignment": right # right/left/center
+                    screenType: all # all/desktop/mobile
+                    generate_button_menu: false # true/false
+                    menu_label: NULL # NULL or text
             layersets:
                 themes:
                     selected: true
