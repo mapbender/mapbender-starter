@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "52329fab5b89834041888549266baa6f",
+    "content-hash": "cf8020511072cba1426851fe51c6c35e",
     "packages": [
         {
             "name": "assetic/framework",
@@ -1485,12 +1485,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "c07a7bcb1525aa4dbe2c463dd26cbef27c793aac"
+                "reference": "379db2c12a8917de65dd02640a42720d65853a93"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/c07a7bcb1525aa4dbe2c463dd26cbef27c793aac",
-                "reference": "c07a7bcb1525aa4dbe2c463dd26cbef27c793aac",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/379db2c12a8917de65dd02640a42720d65853a93",
+                "reference": "379db2c12a8917de65dd02640a42720d65853a93",
                 "shasum": ""
             },
             "require": {
@@ -1552,7 +1552,7 @@
                 "issues": "https://github.com/mapbender/mapbender-digitizer/issues",
                 "source": "https://github.com/mapbender/mapbender-digitizer/tree/develop"
             },
-            "time": "2024-05-15T11:24:34+00:00"
+            "time": "2024-06-06T16:22:02+00:00"
         },
         {
             "name": "mapbender/mapbender",
@@ -1560,12 +1560,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "8a769dfb7aeeac4d9e7e7e78559e63f7b4c65baf"
+                "reference": "75ac68bb9b218d58822d619f1c0679e8b3088367"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/8a769dfb7aeeac4d9e7e7e78559e63f7b4c65baf",
-                "reference": "8a769dfb7aeeac4d9e7e7e78559e63f7b4c65baf",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/75ac68bb9b218d58822d619f1c0679e8b3088367",
+                "reference": "75ac68bb9b218d58822d619f1c0679e8b3088367",
                 "shasum": ""
             },
             "require": {
@@ -1630,7 +1630,6 @@
                 "twbs/bootstrap": "^5.0",
                 "twig/twig": "^3.6",
                 "wheregroup/codemirror": "5.x",
-                "wheregroup/compass-mixins": "0.x",
                 "wheregroup/doctrine-dbal-shims": "^1.2"
             },
             "conflict": {
@@ -1686,7 +1685,7 @@
                 "issues": "https://github.com/mapbender/mapbender/issues",
                 "source": "https://github.com/mapbender/mapbender/tree/develop"
             },
-            "time": "2024-05-24T09:49:47+00:00"
+            "time": "2024-06-06T17:00:40+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -7917,41 +7916,6 @@
                 "source": "https://github.com/WhereGroup/CodeMirror/tree/master"
             },
             "time": "2019-06-04T05:47:28+00:00"
-        },
-        {
-            "name": "wheregroup/compass-mixins",
-            "version": "0.12.10",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/WhereGroup/compass-mixins.git",
-                "reference": "f023d953f8aad4e6223b14bed296703ab631ca2c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/WhereGroup/compass-mixins/zipball/f023d953f8aad4e6223b14bed296703ab631ca2c",
-                "reference": "f023d953f8aad4e6223b14bed296703ab631ca2c",
-                "shasum": ""
-            },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Guillaume Balaine",
-                    "email": "igosuki@gmail.com"
-                },
-                {
-                    "name": "Michael Heillein"
-                }
-            ],
-            "description": "Compass stylesheets",
-            "homepage": "https://github.com/Igosuki/compass-mixins",
-            "support": {
-                "source": "https://github.com/WhereGroup/compass-mixins/tree/master"
-            },
-            "time": "2017-04-20T08:22:51+00:00"
         },
         {
             "name": "wheregroup/cookieconsent",

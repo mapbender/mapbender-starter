@@ -144,7 +144,6 @@
         "symfony-assets-install": "symlink",
         "installer-paths":{
             "mapbender/": ["mapbender/mapbender"],
-            "vendor/igosuki/compass-mixins": ["wheregroup/compass-mixins"],
             "public/components/datatables/": ["datatables/datatables"]
         },
         "symfony": {
