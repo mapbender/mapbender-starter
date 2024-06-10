@@ -1,13 +1,24 @@
 parameters:
     applications:
         mapbender_user_basic:
-            title: Mapbender Basic Demo
+            title: Mapbender Demo Basic
             screenshot: screenshot.png
             description: Mapbender demo application with no sidepane, floating search and custom css showing many elements in action
             published: true
             persistentView: false
             template:  Mapbender\CoreBundle\Template\Fullscreen
-            custom_css: null
+            custom_css: |
+                .toolBar.top {
+                    border-bottom: 3px solid #279ddc;
+                }
+                .popup {
+                    border-radius: 10px;
+                }
+                .popupHead {
+                    border-bottom: solid 1px #b9BABC;
+                    margin: 0 20px 20px 20px;
+                    padding: 20px 0 10px 0;
+                }
             regionProperties:
               - name: toolbar
                 properties:
