@@ -4,7 +4,6 @@ ENV APACHE_DOCUMENT_ROOT /var/mapbender/application/public
 
 RUN apt-get update && apt-get install -y \
         libpq-dev \
-        git \
         vim \
         unzip \
         openssl \
