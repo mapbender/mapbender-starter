@@ -42,4 +42,6 @@ COPY --chown=www-data:www-data . /var/mapbender/
 # required to create a complete mapbender application container image including all dependencies
 RUN ./bootstrap
 
+EXPOSE 8080
+
 CMD ["apache2-foreground"]
