@@ -1,11 +1,9 @@
-FROM php:8.3-apache
+FROM php:8.3-apache as base-container
 
 ENV APACHE_DOCUMENT_ROOT /var/mapbender/application/public
 
 RUN apt-get update && apt-get install -y \
         libpq-dev \
-        git \
-        vim \
         unzip \
         openssl \
         bzip2 \
@@ -20,7 +18,8 @@ RUN apt-get update && apt-get install -y \
         libsqlite3-dev \
         libldap2-dev \
         libonig-dev \
-        postgresql-client
+        postgresql-client \
+        && rm -rf /var/lib/apt/lists/*
 
 RUN docker-php-ext-install pdo_pgsql
 RUN docker-php-ext-install curl gd intl mbstring zip bz2 xml pdo_sqlite ldap
@@ -34,13 +33,27 @@ RUN a2enmod rewrite remoteip
 
 RUN chown www-data:www-data -R /var/www
 
-USER www-data
-
 WORKDIR /var/mapbender/
+
+EXPOSE 8080
 
 COPY --chown=www-data:www-data . /var/mapbender/
 
+FROM base-container as build-container
+
+RUN apt-get update && apt-get install -y \
+        git \
+        && rm -rf /var/lib/apt/lists/*
+
+USER www-data
 # required to create a complete mapbender application container image including all dependencies
 RUN ./bootstrap
+
+
+FROM base-container
+
+USER www-data
+
+COPY --from=build-container --chown=www-data:www-data /var/mapbender /var/mapbender
 
 CMD ["apache2-foreground"]
