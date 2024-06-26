@@ -30,6 +30,8 @@ parameters:
                     generate_button_menu: false # true/false
                     menu_label: NULL # NULL or text
             layersets:
+                main:
+                    selected: true
                 themes:
                     selected: true
                     mapbender_users:
@@ -233,7 +235,7 @@ parameters:
                 content:
                     map:
                         class: Mapbender\CoreBundle\Element\Map
-                        layersets: [themes,background themes]
+                        layersets: [themes,main,background themes]
                         srs: EPSG:3857
                         extents:
                             start: [772933.16,6566826.23,806786.66,6582317.62]
