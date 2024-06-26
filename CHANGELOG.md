@@ -1,8 +1,8 @@
-## next major release (v4.0)
+## v4.0.0
 - PHP 8.2 and 8.3 now fully supported, minimum required PHP version is now 8.1
-- Update mapbender/mapbender to [v4.0](https://github.com/mapbender/mapbender/blob/develop/CHANGELOG.md). 
-  Directory structure and configuration has changed, refer to the mapbender core repository for ([upgrade instructions](https://github.com/mapbender/mapbender/blob/develop/UPGRADING.md))
-- Update mapbender/mapbender-digitizer to [v1.6](https://github.com/mapbender/mapbender-digitizer/blob/develop/CHANGELOG.md).
+- Update mapbender/mapbender to [v4.0](https://github.com/mapbender/mapbender/blob/v4.0.0/CHANGELOG.md). 
+  Directory structure and configuration has changed, refer to the mapbender core repository for ([upgrade instructions](https://github.com/mapbender/mapbender/blob/v4.0.0/docs/UPGRADING.md))
+- Update mapbender/mapbender-digitizer to [v2.0](https://github.com/mapbender/mapbender-digitizer/blob/2.0.0/CHANGELOG.md).
 - [Coordinates utility](https://github.com/mapbender/coordinates-utility) has been integrated in mapbender-core, separate dependency no longer needed
 - Symfony and third-party libraries like Bootstrap, Twig and FontAwesome updated, [see mapbender core changelog for details](https://github.com/mapbender/mapbender/blob/develop/CHANGELOG.md)
 - Update PHPUnit framework to version 10 ([PR#122](https://github.com/mapbender/mapbender-starter/pull/122))
