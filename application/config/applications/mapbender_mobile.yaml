@@ -140,6 +140,7 @@ parameters:
                         label: false
                         icon: iconInfoActive
                         target: imprint
+                        screenType: desktop
 
                     help-button:
                         title: mb.core.aboutdialog.tag.help
@@ -243,6 +244,7 @@ parameters:
                         </p>
                         </p>"
                         classes: html-element-inline
+                        screenType: desktop
 
                     help:
                         title: mb.core.aboutdialog.tag.help
