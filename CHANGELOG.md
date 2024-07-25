@@ -1,3 +1,7 @@
+## next bugfix release (4.0.1)
+- [Docker] Support ARM64 architecture ([PR#130](https://github.com/mapbender/mapbender-starter/pull/130))
+- Ignore deprecation notices in production logs ([PR#131](https://github.com/mapbender/mapbender-starter/pull/131))
+
 ## v4.0.0
 - PHP 8.2 and 8.3 now fully supported, minimum required PHP version is now 8.1
 - Update mapbender/mapbender to [v4.0](https://github.com/mapbender/mapbender/blob/v4.0.0/CHANGELOG.md). 
