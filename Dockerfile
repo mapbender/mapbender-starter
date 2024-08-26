@@ -22,6 +22,7 @@ RUN apt-get update && apt-get install -y \
         && rm -rf /var/lib/apt/lists/*
 
 RUN docker-php-ext-install pdo_pgsql
+RUN docker-php-ext-configure gd --with-jpeg --with-freetype
 RUN docker-php-ext-install curl gd intl mbstring zip bz2 xml pdo_sqlite ldap
 RUN docker-php-ext-install opcache
 
