@@ -28,6 +28,7 @@ RUN docker-php-ext-install opcache
 
 RUN rm /etc/apache2/sites-enabled/*
 COPY ./docker/mapbender_apache.conf /etc/apache2/sites-enabled/
+COPY ./docker/php.ini /usr/local/etc/php/php.ini
 
 RUN sed -ri -e 's!80!8080!g' /etc/apache2/ports.conf
 RUN a2enmod rewrite remoteip
