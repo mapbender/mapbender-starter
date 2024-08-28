@@ -22,11 +22,13 @@ RUN apt-get update && apt-get install -y \
         && rm -rf /var/lib/apt/lists/*
 
 RUN docker-php-ext-install pdo_pgsql
+RUN docker-php-ext-configure gd --with-jpeg --with-freetype
 RUN docker-php-ext-install curl gd intl mbstring zip bz2 xml pdo_sqlite ldap
 RUN docker-php-ext-install opcache
 
 RUN rm /etc/apache2/sites-enabled/*
 COPY ./docker/mapbender_apache.conf /etc/apache2/sites-enabled/
+COPY ./docker/php.ini /usr/local/etc/php/php.ini
 
 RUN sed -ri -e 's!80!8080!g' /etc/apache2/ports.conf
 RUN a2enmod rewrite remoteip
