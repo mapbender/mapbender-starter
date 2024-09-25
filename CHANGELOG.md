@@ -1,4 +1,8 @@
-## 4.0.1
+## v4.0.2
+- Update mapbender/mapbender to [v4.0.2](https://github.com/mapbender/mapbender/blob/v4.0.2/CHANGELOG.md).
+- Update mapbender/digitizer to [v2.0.1](https://github.com/mapbender/mapbender-digitizer/blob/2.0.1/CHANGELOG.md).
+
+## v4.0.1
 - Update mapbender/mapbender to [v4.0.1](https://github.com/mapbender/mapbender/blob/v4.0.1/CHANGELOG.md).
 - [Docker] Support ARM64 architecture ([PR#130](https://github.com/mapbender/mapbender-starter/pull/130))
 - [Docker] Add JPEG support and modify php.ini ([PR#132](https://github.com/mapbender/mapbender-starter/pull/132))
