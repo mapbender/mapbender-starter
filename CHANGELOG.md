@@ -1,3 +1,7 @@
+## v4.0.3
+- Update mapbender/mapbender to [v4.0.3](https://github.com/mapbender/mapbender/blob/v4.0.3/CHANGELOG.md).
+- Update mapbender/digitizer to [v2.0.2](https://github.com/mapbender/mapbender-digitizer/blob/2.0.2/CHANGELOG.md).
+
 ## v4.0.2
 - Update mapbender/mapbender to [v4.0.2](https://github.com/mapbender/mapbender/blob/v4.0.2/CHANGELOG.md).
 - Update mapbender/digitizer to [v2.0.1](https://github.com/mapbender/mapbender-digitizer/blob/2.0.1/CHANGELOG.md).
