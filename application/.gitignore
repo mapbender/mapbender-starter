@@ -17,3 +17,7 @@ var/*
 .phpunit.result.cache
 .phpunit.cache
 ###< phpunit/phpunit ###
+
+###> lexik/jwt-authentication-bundle ###
+/config/jwt/*.pem
+###< lexik/jwt-authentication-bundle ###

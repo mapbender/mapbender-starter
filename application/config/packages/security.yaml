@@ -15,6 +15,20 @@ security:
         login:
             pattern:  ^/user/login$
             security: false
+
+        jwt_login:
+          pattern: ^/api/login_check
+          stateless: true
+          json_login:
+            check_path: /api/login_check # or api_login_check as defined in config/routes.yaml
+            success_handler: lexik_jwt_authentication.handler.authentication_success
+            failure_handler: lexik_jwt_authentication.handler.authentication_failure
+
+        api:
+          pattern: ^/api
+          stateless: true
+          jwt: ~
+
         secured_area:
             pattern:    ^/
             form_login:
@@ -36,6 +50,8 @@ security:
     access_control:
         - { path: ^/user/login,    roles: PUBLIC_ACCESS }
         - { path: ^/manager,       roles: ROLE_USER }
+        - { path: ^/api/login_check,     roles: PUBLIC_ACCESS }
+        - { path: ^/api,           roles: IS_AUTHENTICATED_FULLY }
     password_hashers:
         FOM\UserBundle\Entity\User: sha512
 

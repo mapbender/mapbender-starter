@@ -22,3 +22,8 @@ ows_corebundle:
       namespace: \OwsProxy3\CoreBundle\Controller
     prefix: "/owsproxy"
     type: attribute
+
+
+api_login_check:
+    path: /api/login_check
+    methods: [POST]
