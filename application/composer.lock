@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1c497c1f215225291fea1dbe432e4ce7",
+    "content-hash": "30a41358e102e1f75442d37ef3bb742c",
     "packages": [
         {
             "name": "assetic/framework",
@@ -1817,16 +1817,16 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v4.0.2",
+            "version": "dev-feature/mbapi",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "8681dd6d058604d24168e1d99a2b8c9c76fa5fff"
+                "reference": "50c60b9960813fa41b4d1b7066c112713e041183"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/8681dd6d058604d24168e1d99a2b8c9c76fa5fff",
-                "reference": "8681dd6d058604d24168e1d99a2b8c9c76fa5fff",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/50c60b9960813fa41b4d1b7066c112713e041183",
+                "reference": "50c60b9960813fa41b4d1b7066c112713e041183",
                 "shasum": ""
             },
             "require": {
@@ -1941,9 +1941,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/mapbender/issues",
-                "source": "https://github.com/mapbender/mapbender/tree/v4.0.2"
+                "source": "https://github.com/mapbender/mapbender/tree/feature/mbapi"
             },
-            "time": "2024-09-25T11:53:00+00:00"
+            "time": "2024-11-04T13:11:31+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -10354,9 +10354,18 @@
             "time": "2024-03-03T12:36:25+00:00"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "mapbender/mapbender",
+            "version": "dev-feature/mbapi",
+            "alias": "4.0.0",
+            "alias_normalized": "4.0.0.0"
+        }
+    ],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "mapbender/mapbender": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

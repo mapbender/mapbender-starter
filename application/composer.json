@@ -31,7 +31,7 @@
         "doctrine/dbal": "^3",
         "lexik/jwt-authentication-bundle": "^2.21",
         "mapbender/digitizer": "^2",
-        "mapbender/mapbender": "^4",
+        "mapbender/mapbender": "dev-feature/mbapi as 4.0.0",
         "mnsami/composer-custom-directory-installer": "^1 || ^2",
         "proj4js/proj4js": "^2.4",
         "select2/select2": "^4.0",
