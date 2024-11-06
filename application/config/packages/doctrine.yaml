@@ -4,8 +4,6 @@ doctrine:
         connections:
             default:
                 url: '%env(resolve:MAPBENDER_DATABASE_URL)%'
-            geodata_db:
-              url: '%env(resolve:GEOBASIS_DB_DATABASE_URL)%'
                 # IMPORTANT: You MUST configure your server version,
                 # either here or in the DATABASE_URL env var (see .env file)
                 # server_version: '16'
