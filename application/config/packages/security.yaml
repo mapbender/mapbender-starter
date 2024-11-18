@@ -22,7 +22,7 @@ security:
           json_login:
             check_path: /api/login_check # or api_login_check as defined in config/routes.yaml
             success_handler: lexik_jwt_authentication.handler.authentication_success
-            failure_handler: lexik_jwt_authentication.handler.authentication_failure
+            failure_handler: mapbender.api.handler.authentication_failure
 
         api:
           pattern: ^/api
