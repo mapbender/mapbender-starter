@@ -2,7 +2,7 @@
 
 Mapbender is a web based geoportal framework.
 
-[Official site](https://mapbender.org/?q=en) | [Live demo](https://demo.mapbender.org/) | [News on Twitter](https://twitter.com/mapbender)
+[Official site](https://mapbender.org/?q=en) | [Live demo](https://demo.mapbender.org/) | [News on Fosstodon](https://fosstodon.org/@mapbender)
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5887014.svg)](https://doi.org/10.5281/zenodo.5887014)
 ![Packagist License](https://img.shields.io/packagist/l/mapbender/mapbender)

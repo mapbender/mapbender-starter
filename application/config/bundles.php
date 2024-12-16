@@ -23,6 +23,7 @@ return [
     Mapbender\DigitizerBundle\MapbenderDigitizerBundle::class => ['all' => true],
     Mapbender\DataSourceBundle\MapbenderDataSourceBundle::class => ['all' => true],
     Mapbender\DataManagerBundle\MapbenderDataManagerBundle::class => ['all' => true],
+    Mapbender\RoutingBundle\MapbenderRoutingBundle::class => ['all' => true],
     DAMA\DoctrineTestBundle\DAMADoctrineTestBundle::class => ['test' => true],
     Lexik\Bundle\JWTAuthenticationBundle\LexikJWTAuthenticationBundle::class => ['all' => true],
 ];
