@@ -8,13 +8,6 @@ doctrine:
                 # either here or in the DATABASE_URL env var (see .env file)
                 # server_version: '16'
 
-                persistent: true
-                charset:  UTF8
-                logging: '%kernel.debug%'
-                profiling: '%kernel.debug%'
-                profiling_collect_backtrace: '%kernel.debug%'
-                use_savepoints: true
-
             # add other connections here
     orm:
         auto_generate_proxy_classes: '%kernel.debug%'

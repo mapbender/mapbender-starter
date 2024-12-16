@@ -5,6 +5,10 @@ php bin/composer install -o --no-scripts --no-suggest
 php bin/composer init-example
 php bin/console assets:install --symlink --relative
 php bin/console mapbender:database:init -v
+if ! grep -q "JWT_PASSPHRASE=" .env.local; then
+    echo "JWT_PASSPHRASE='$(openssl rand -base64 32)'" >> .env.local
+fi
+php bin/console lexik:jwt:generate-keypair
 php bin/composer run post-install-cmd
 echo Bootstrap finished!
 echo If you want to run the builtin development server, install Symfony CLI from https://symfony.com/download then run:
