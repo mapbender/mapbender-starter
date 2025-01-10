@@ -13,7 +13,7 @@ For detailed usage information, including installation and integration topics, p
 
 ## Requirements
 
-Mapbender requires PHP 8.1, OpenSSL, curl, bzip2 decompression and the following php extensions:
+Mapbender requires PHP 8.2, OpenSSL, curl, bzip2 decompression and the following php extensions:
 * zip
 * curl
 * gd
@@ -22,7 +22,7 @@ Mapbender requires PHP 8.1, OpenSSL, curl, bzip2 decompression and the following
 * bz2
 * xml
 * sqlite3
-* ldap
+* ldap (when LDAP is used)
 
 You may have to install and enable further extensions at your own discretion if you
 want to use specific database systems.
@@ -205,3 +205,4 @@ Pre-packaged archives bundling all code dependencies are available at our [downl
 | 3.2  (end of life)     | \>=7.1, <=7.4 | 3.4LTS (end of life)    | 1.10.x                   |
 | 3.3                    | \>=7.4        | 4.4LTS (end of life)    | 2.1.x                    |
 | 4.0                    | \>=8.1        | 6.4LTS                  | 2.6.x                    |
+| 4.1                    | \>=8.2        | 6.4LTS                  | 2.6.x                    |
