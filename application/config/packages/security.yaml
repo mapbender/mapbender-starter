@@ -25,7 +25,7 @@ security:
             failure_handler: mapbender.api.handler.authentication_failure
 
         api:
-          pattern: ^/api
+          pattern: ^/api(?!/doc$)
           stateless: true
           jwt: ~
 

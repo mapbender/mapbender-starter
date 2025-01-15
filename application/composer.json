@@ -33,6 +33,7 @@
         "mapbender/digitizer": "^2",
         "mapbender/mapbender": "^4",
         "mnsami/composer-custom-directory-installer": "^1 || ^2",
+        "nelmio/api-doc-bundle": "^4.34",
         "proj4js/proj4js": "^2.4",
         "select2/select2": "^4.0",
         "symfony/flex": "*",
