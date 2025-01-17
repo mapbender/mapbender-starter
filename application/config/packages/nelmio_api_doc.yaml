@@ -18,6 +18,8 @@ nelmio_api_doc:
               description: "Endpoints related to WMS"
             - name: "application"
               description: "Endpoints related to applications"
+            - name: "file-upload"
+              description: "Endpoints for handling file uploads"
             - name: "test"
               description: "Endpoints for testing purposes"
 
