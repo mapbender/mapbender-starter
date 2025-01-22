@@ -6,6 +6,8 @@ Mapbender is a web based geoportal framework.
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5887014.svg)](https://doi.org/10.5281/zenodo.5887014)
 ![Packagist License](https://img.shields.io/packagist/l/mapbender/mapbender)
+![Packagist Downloads Total](https://img.shields.io/packagist/dt/mapbender%2Fmapbender.svg)
+![Packagist Downloads Monthly](https://img.shields.io/packagist/dm/mapbender%2Fmapbender.svg)
 
 
 For detailed usage information, including installation and integration topics, please see [official documentation](https://doc.mapbender.org/en/) ([also available in German](https://doc.mapbender.org/de/)).
