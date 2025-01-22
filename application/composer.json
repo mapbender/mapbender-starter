@@ -29,7 +29,7 @@
         "php": ">=8.1",
         "components/font-awesome": "^6.0",
         "doctrine/dbal": "^3",
-        "lexik/jwt-authentication-bundle": "^3.1",
+        "lexik/jwt-authentication-bundle": "^2",
         "mapbender/digitizer": "^2",
         "mapbender/mapbender": "^4",
         "mnsami/composer-custom-directory-installer": "^1 || ^2",
