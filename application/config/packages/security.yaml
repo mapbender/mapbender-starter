@@ -51,6 +51,7 @@ security:
         - { path: ^/user/login,    roles: PUBLIC_ACCESS }
         - { path: ^/manager,       roles: ROLE_USER }
         - { path: ^/api/login_check,     roles: PUBLIC_ACCESS }
+        - { path: ^/api/doc,       roles: PUBLIC_ACCESS }
         - { path: ^/api,           roles: IS_AUTHENTICATED_FULLY }
     password_hashers:
         FOM\UserBundle\Entity\User: sha512
