@@ -13,7 +13,7 @@ For detailed usage information, including installation and integration topics, p
 
 ## Requirements
 
-Mapbender requires PHP 8.1, OpenSSL, curl, bzip2 decompression and the following php extensions:
+Mapbender requires PHP 8.1 up to 8.4, OpenSSL, curl, bzip2 decompression and the following php extensions:
 * zip
 * curl
 * gd
@@ -23,6 +23,9 @@ Mapbender requires PHP 8.1, OpenSSL, curl, bzip2 decompression and the following
 * xml
 * sqlite3
 * ldap
+
+:warning: The composer lock file is compatible with PHP 8.2 through PHP 8.4. When using PHP 8.1, make sure
+to execute `bin/composer update` to ensure compatibility.
 
 You may have to install and enable further extensions at your own discretion if you
 want to use specific database systems.
