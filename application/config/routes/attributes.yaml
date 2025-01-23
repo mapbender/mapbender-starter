@@ -23,6 +23,11 @@ ows_corebundle:
     prefix: "/owsproxy"
     type: attribute
 
+mapbender_apibundle:
+  resource:
+    path: "@MapbenderApiBundle/Controller/"
+    namespace: \Mapbender\ApiBundle\Controller
+  type: attribute
 
 api_login_check:
     path: /api/login_check

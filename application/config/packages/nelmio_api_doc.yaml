@@ -1,0 +1,36 @@
+nelmio_api_doc:
+    documentation:
+        info:
+            title: Mapbender API
+            description: |
+              Only authorized users have access to this API.
+
+              A JWT (JSON Web Token) must be obtained by sending a username and password via the '/api/login_check' endpoint.
+
+              This page can be used to test the API. To enable testing, click the 'Authorize' button and provide the obtained JWT.
+            version: 1.0.0
+
+        # Configure tags here to define a specific order
+        tags:
+            - name: "login"
+              description: "Endpoint for user authentication and obtaining a token"
+            - name: "wms"
+              description: "Endpoints related to WMS"
+            - name: "application"
+              description: "Endpoints related to applications"
+            - name: "file-upload"
+              description: "Endpoints for handling file uploads"
+            - name: "test"
+              description: "Endpoints for testing purposes"
+
+        components:
+            securitySchemes:
+                Bearer:
+                  type: http
+                  scheme: bearer
+                  bearerFormat: JWT
+        security:
+          - Bearer: []
+    areas: # to filter documented areas
+        path_patterns:
+            - ^/api(?!/doc$) # Accepts routes under /api except /api/doc
