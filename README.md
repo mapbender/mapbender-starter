@@ -24,7 +24,8 @@ Mapbender requires PHP 8.1 up to 8.4, OpenSSL, curl, bzip2 decompression and the
 * bz2
 * xml
 * sqlite3
-* ldap
+* sodium
+* ldap (if ldap extension is used)
 
 :warning: The composer lock file is compatible with PHP 8.2 through PHP 8.4. When using PHP 8.1, make sure
 to execute `bin/composer update` to ensure compatibility.
@@ -210,3 +211,4 @@ Pre-packaged archives bundling all code dependencies are available at our [downl
 | 3.2  (end of life)     | \>=7.1, <=7.4 | 3.4LTS (end of life)    | 1.10.x                   |
 | 3.3                    | \>=7.4        | 4.4LTS (end of life)    | 2.1.x                    |
 | 4.0                    | \>=8.1        | 6.4LTS                  | 2.6.x                    |
+| 4.1                    | \>=8.1        | 6.4LTS                  | 2.8.x                    |
