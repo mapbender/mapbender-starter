@@ -407,14 +407,18 @@ parameters:
                         <p><a href=\"https://mapbender.org\" target=\"_blank\">
                         <img src=\"../image/Mapbender-logo.png\" alt=\"Mapbender\"  title=\"Mapbender\" width=\"200px\" /></p>https://mapbender.org</a>
                         </p>
+                        <p>                        
+                        <ul><li>&#8594; add <a href=\"#\" mb-action=\"source.add.wms\" mb-layer-merge=\"0\" mb-wms-merge=\"0\" mb-wms-layers=\"all\" mb-url=\"https://wms.wheregroup.com/cgi-bin/mapbender_user.xml??VERSION=1.3.0&REQUEST=GetCapabilities&SERVICE=WMS\" mb-infoformat=\"text/html\">WMS Mapbender Users</a></li>
+                        </ul>   
+                        </p>
                         <p>Mapbender is an</p>
-                        <p><a href=\"https://www.osgeo.org/projects/mapbender/\" target=\"_blank\">
+                        <p><a href=\"https://www.osgeo.org/projects/mapbender/\" target=\"_blank\">                     
+                        </p>
                         <p>
                         <img src=\"../bundles/mapbendercore/image/OSGeo_project.png\" alt=\"OSGeo Project\"  title=\"OSGeo Project\" width=\"150px\" /></a>
                         </p>
                         <p>
                         <a href=\"https://www.osgeo.org\" target=\"_blank\">https://www.osgeo.org</a>
-                        </p>
                         </p>"
                 footer:
                     activityindicator:
