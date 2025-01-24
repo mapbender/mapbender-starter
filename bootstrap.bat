@@ -9,6 +9,8 @@ if errorlevel 1 (
 )
 php bin/console lexik:jwt:generate-keypair
 php bin/composer run post-install-cmd
+php bin/composer run copy-bootstrap-windows
+php bin/composer run copy-jqueryui-windows
 echo Bootstrap finished!
 echo If you want to run the builtin development server, install Symfony CLI from https://symfony.com/download then run:
 echo cd application

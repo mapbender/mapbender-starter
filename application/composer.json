@@ -58,9 +58,17 @@
             "rm -rf public/components/bootstrap",
             "cp -R vendor/twbs/bootstrap/dist public/components/bootstrap"
         ],
+        "copy-bootstrap-windows": [
+            "if exist public\\components\\bootstrap rmdir /s /q public\\components\\bootstrap",
+            "xcopy vendor\\twbs\\bootstrap\\dist public\\components\\bootstrap /e /i /q /y"
+        ],
         "copy-jqueryui": [
             "rm -rf public/components/jquery-ui",
             "cp -R vendor/jquery/jquery-ui/dist public/components/jquery-ui"
+        ],
+        "copy-jqueryui-windows": [
+            "if exist public\\components\\jquery-ui rmdir /s /q public\\components\\jquery-ui",
+            "xcopy vendor\\jquery\\jquery-ui\\dist public\\components\\jquery-ui /e /i /q /y"
         ],
         "update-assets":[
             "ComposerBootstrap::installAssets",
