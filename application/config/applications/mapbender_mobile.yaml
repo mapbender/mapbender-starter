@@ -133,6 +133,12 @@ parameters:
                         icon: iconLegend
                         target: legend
 
+                    routing-button:
+                        class: Mapbender\CoreBundle\Element\ControlButton
+                        label: false
+                        icon: iconRouting
+                        target: routing
+
                     imprint-button:
                         title: Imprint
                         tooltip: Imprint
@@ -233,6 +239,59 @@ parameters:
                         showLayerTitle: true
                         showGroupedLayerTitle: true
 
+                    routing:
+                        class: Mapbender\RoutingBundle\Element\Routing
+                        target: map
+                        type: element
+                        title: Routing
+                        advancedSettings: true
+                        autoSubmit: true
+                        allowIntermediatePoints: true
+                        useSearch: true
+                        useReverseGeocoding: false
+                        buffer: 150
+                        infoText: '{start} → {destination} </br> {length} will take {time}'
+                        routingDriver: osrm
+                        routingStyles:
+                            lineColor: 'rgba(66,134,244,1)'
+                            lineWidth: 3.0
+                            lineOpacity: 1
+                            startIcon:
+                              imagePath: /bundles/mapbenderrouting/image/start.png
+                              imageSize: null
+                              imageOffset: null
+                            intermediateIcon:
+                              imagePath: /bundles/mapbenderrouting/image/intermediate.png
+                              imageSize: null
+                              imageOffset: null
+                            destinationIcon:
+                              imagePath: /bundles/mapbenderrouting/image/destination.png
+                              imageSize: null
+                              imageOffset: null
+                        routingConfig:
+                            osrm:
+                              url: 'https://routing.openstreetmap.de/routed-%profile'
+                              service: route
+                              version: v1
+                              transportationMode: [car, bike, foot]
+                              steps: 'true'
+                              attribution: "Daten © <a href=\"https://www.openstreetmap.org/copyright\" class=\"link-primary\">OpenStreetMap</a>-Mitwirkende (<a href=\"https://opendatacommons.org/licenses/odbl/index.html\" class=\"link-primary\">ODbL</a>), <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\" class=\"link-primary\">CC-BY-SA</a>, <a href=\"https://openstreetmap.org/fixthemap\" class=\"link-primary\">mitmachen/Fehler melden</a>"
+                        searchConfig:
+                            driver: solr
+                            solr:
+                              url: 'https://osm-photon-search.wheregroup.com/search/api?limit=20&lat=50.7163&lon=7.1366&osm_tag=!railway&osm_tag=!highway:elevator&osm_tag=!tourism&osm_tag=!amenity'
+                              query_key: q
+                              query_format: '%s'
+                              collection_path: features
+                              label_attribute: '${properties.name} ${properties.street} ${properties.housenumber} ${properties.city} ${properties.country}'
+                              geom_attribute: geometry
+                              geom_format: GeoJSON
+                              geom_proj: 'EPSG:4326'
+                              query_ws_replace: ''
+                              token_regex: '[^a-zA-Z0-9äöüÄÖÜß]'
+                              token_regex_in: '([a-zA-ZäöüÄÖÜß]{3,})'
+                              token_regex_out: '$1*'
+                              delay: 300.0
                     imprint:
                         title: Imprint
                         class: Mapbender\CoreBundle\Element\HTMLElement
