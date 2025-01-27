@@ -117,7 +117,7 @@ parameters:
                         layers:
                             12: { name: osm,    title : OSM Demo WhereGroup,  visible: true }
                         info_format: text/html
-                        visible: true
+                        visible: false
                         format: image/png
                         transparent: true
                         tiled: true
@@ -139,13 +139,13 @@ parameters:
                         isBaseSource: true
                 overview:
                     selected: true
-                    osm_overview:
+                    osm-overview:
                         class: Mapbender\WmsBundle\Entity\WmsInstance
                         title: OSM Demo
                         url: https://osm-demo.wheregroup.com/service
                         version: 1.3.0
                         layers:
-                            20: { name: osm,    title : OSM Demo WhereGroup,  visible: true }
+                            21: { name: osm,    title : OSM Demo WhereGroup,  visible: true }
                         tiled: false
                         format: image/png
                         transparent: true
@@ -237,6 +237,7 @@ parameters:
                         icon: iconGpsTarget
                         label: false
                         target: coordinatesutility
+                        screenType: desktop
                     dataupload-button:
                         class: Mapbender\CoreBundle\Element\ControlButton
                         icon: iconDataUpload
@@ -247,12 +248,13 @@ parameters:
                         label: false
                         icon: iconPrint
                         target: printclient
-                        screenType: desktop
+
                     imageexport-button:
                         class: Mapbender\CoreBundle\Element\ControlButton
                         label: false
                         icon: icon-image-export
                         target: imageexport
+
                     shareUrl:
                         class: Mapbender\CoreBundle\Element\ShareUrl
                         label: false
@@ -399,7 +401,6 @@ parameters:
                             - { template: a3_portrait_offical, label: A3 Portrait Official}
                         legend_default_behaviour: false
                         optional_fields: ~
-                        screenType: desktop
                     lineruler:
                         title: mb.core.ruler.tag.line
                         class: Mapbender\CoreBundle\Element\Ruler
@@ -474,14 +475,18 @@ parameters:
                         <p><a href=\"https://mapbender.org\" target=\"_blank\">
                         <img src=\"../image/Mapbender-logo.png\" alt=\"Mapbender\"  title=\"Mapbender\" width=\"200px\" /></p>https://mapbender.org</a>
                         </p>
+                        <p>                        
+                        <ul><li>&#8594; add <a href=\"#\" mb-action=\"source.add.wms\" mb-layer-merge=\"0\" mb-wms-merge=\"0\" mb-wms-layers=\"all\" mb-url=\"https://wms.wheregroup.com/cgi-bin/mapbender_user.xml??VERSION=1.3.0&REQUEST=GetCapabilities&SERVICE=WMS\" mb-infoformat=\"text/html\">WMS Mapbender Users</a></li>
+                        </ul>   
+                        </p>
                         <p>Mapbender is an</p>
                         <p><a href=\"https://www.osgeo.org/projects/mapbender/\" target=\"_blank\">
+                        </p>
                         <p>
                         <img src=\"../bundles/mapbendercore/image/OSGeo_project.png\" alt=\"OSGeo Project\"  title=\"OSGeo Project\" width=\"150px\" /></a>
                         </p>
                         <p>
                         <a href=\"https://www.osgeo.org\" target=\"_blank\">https://www.osgeo.org</a>
-                        </p>
                         </p>"
                         autoOpen: false
                     dataupload:
@@ -500,9 +505,11 @@ parameters:
                         prefix: "x: "
                         separator:  " y: "
                         numDigits: 0
+                        screenType: desktop
                     scaleselector:
                         class: Mapbender\CoreBundle\Element\ScaleSelector
                         target: map
+                        screenType: desktop
                     srs:
                         class: Mapbender\CoreBundle\Element\SrsSelector
                         target: map
@@ -525,7 +532,7 @@ parameters:
                     html-powered-by:
                         title: HTML-powered by Mapbender
                         class: Mapbender\CoreBundle\Element\HTMLElement
-                        content: '<span style="color: #009ee0;">powered by Mapbender</span>'
+                        content: '<span style="color:#009ee0;">powered by Mapbender</span>'
                         classes: html-element-inline
                         screenType: desktop
                     about:

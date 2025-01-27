@@ -198,7 +198,6 @@ parameters:
                         label: true
                         icon: iconPrint
                         target: printclient
-                        screenType: desktop
                     imageexport-button:
                         class: Mapbender\CoreBundle\Element\ControlButton
                         label: true
@@ -231,7 +230,6 @@ parameters:
                             maxscale: 5000
                             icon_url: '/bundles/mapbendercore/image/pin_red.png'
                             icon_offset: '-6,-32'
-                        screenType: desktop
                 content:
                     map:
                         class: Mapbender\CoreBundle\Element\Map
@@ -368,6 +366,7 @@ parameters:
                         fontSize: 14
                         strokeWidth: 2
                         strokeWidthWhileDrawing: 3
+                        screenType: desktop
                     sketch:
                         class: Mapbender\CoreBundle\Element\Sketch
                         target: map
@@ -382,23 +381,27 @@ parameters:
                         deactivate_on_close: false
                         colors: ["#009ee0","#cf003d","#ffff33","#00837e","#ff7f00"]"#e7298a","#984ea3"
                         allow_custom_color: true
+                        screenType: desktop
                     coordinatesutility:
                         class: Mapbender\CoreBundle\Element\CoordinatesUtility
                         target: map
                         srsList: []
                         addMapSrsList: true
                         zoomlevel: 6
+                        screenType: desktop
                     dataupload:
                         class: Mapbender\CoreBundle\Element\DataUpload
                         target: map
                         maxFileSize: 10
                         helpText: mb.core.dataupload.admin.helpText
+                        screenType: desktop
                     viewmanager:
                         class: Mapbender\CoreBundle\Element\ViewManager
                         publicEntries: rw
                         privateEntries: true
                         allowAnonymousSave: true
                         showDate: true
+                        screenType: desktop
                     routing:
                         class: Mapbender\RoutingBundle\Element\Routing
                         target: map
@@ -465,7 +468,7 @@ parameters:
                         </ul>   
                         </p>
                         <p>Mapbender is an</p>
-                        <p><a href=\"https://www.osgeo.org/projects/mapbender/\" target=\"_blank\">                     
+                        <p><a href=\"https://www.osgeo.org/projects/mapbender/\" target=\"_blank\">
                         </p>
                         <p>
                         <img src=\"../bundles/mapbendercore/image/OSGeo_project.png\" alt=\"OSGeo Project\"  title=\"OSGeo Project\" width=\"150px\" /></a>
@@ -476,6 +479,7 @@ parameters:
                 footer:
                     activityindicator:
                         class: Mapbender\CoreBundle\Element\ActivityIndicator
+                        screenType: desktop
                     coordinates:
                         class: Mapbender\CoreBundle\Element\CoordinatesDisplay
                         target: map
@@ -484,10 +488,11 @@ parameters:
                         prefix: "x: "
                         separator:  " y: "
                         numDigits: 2
+                        screenType: desktop
                     scaleselector:
                         class: Mapbender\CoreBundle\Element\ScaleSelector
                         target: map
-                        #screenType: desktop
+                        screenType: desktop
                     srs:
                         class: Mapbender\CoreBundle\Element\SrsSelector
                         target: map
@@ -513,3 +518,4 @@ parameters:
                         tooltip: mb.core.aboutdialog.tag.about
                         label: false
                         class: Mapbender\CoreBundle\Element\AboutDialog
+                        screenType: desktop
