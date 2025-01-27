@@ -412,7 +412,7 @@ parameters:
                         allowIntermediatePoints: true
                         useSearch: true
                         useReverseGeocoding: false
-                        buffer: 0.0
+                        buffer: 150
                         infoText: '{start} → {destination} </br> {length} will take {time}'
                         routingDriver: osrm
                         routingStyles:
