@@ -379,7 +379,7 @@ parameters:
                             - circle
                         auto_activate: false
                         deactivate_on_close: false
-                        colors: ["#009ee0","#cf003d","#ffff33","#00837e","#ff7f00"]"#e7298a","#984ea3"
+                        colors: ["#009ee0","#cf003d","#ffff33","#00837e","#ff7f00"]
                         allow_custom_color: true
                         screenType: desktop
                     coordinatesutility:
@@ -413,7 +413,7 @@ parameters:
                         useSearch: true
                         useReverseGeocoding: false
                         buffer: 150
-                        infoText: '{start} → {destination} </br> {length} will take {time}'
+                        infoText: '{start} → {destination} </br> {length} / {time}'
                         routingDriver: osrm
                         routingStyles:
                             lineColor: 'rgba(66,134,244,1)'

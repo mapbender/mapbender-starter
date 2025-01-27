@@ -250,7 +250,7 @@ parameters:
                         useSearch: true
                         useReverseGeocoding: false
                         buffer: 150
-                        infoText: '{start} → {destination} </br> {length} will take {time}'
+                        infoText: '{start} → {destination} </br> {length} / {time}'
                         routingDriver: osrm
                         routingStyles:
                             lineColor: 'rgba(66,134,244,1)'
