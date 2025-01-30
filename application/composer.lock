@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "134902953d89415030d739b7eee5be2d",
+    "content-hash": "d2ff12a1b56e8897a8ee22966a492440",
     "packages": [
         {
             "name": "assetic/framework",
@@ -1732,16 +1732,16 @@
         },
         {
             "name": "mapbender/digitizer",
-            "version": "2.0.2",
+            "version": "2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "9167a4ed7ba96f4753a7d9f8fd2b2e9a05125090"
+                "reference": "3c29dce3fd321311a2d8ed8cddcfb0f3eaeb0c6e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/9167a4ed7ba96f4753a7d9f8fd2b2e9a05125090",
-                "reference": "9167a4ed7ba96f4753a7d9f8fd2b2e9a05125090",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/3c29dce3fd321311a2d8ed8cddcfb0f3eaeb0c6e",
+                "reference": "3c29dce3fd321311a2d8ed8cddcfb0f3eaeb0c6e",
                 "shasum": ""
             },
             "require": {
@@ -1807,22 +1807,22 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/mapbender-digitizer/issues",
-                "source": "https://github.com/mapbender/mapbender-digitizer/tree/2.0.2"
+                "source": "https://github.com/mapbender/mapbender-digitizer/tree/2.0.3"
             },
-            "time": "2024-10-09T09:00:50+00:00"
+            "time": "2025-01-30T13:30:27+00:00"
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v4.0.3",
+            "version": "v4.1.0-RC1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "7b2ada9a97ef681d96280d08836d510179e69d2b"
+                "reference": "2b260ae7616f6af15c35aeb709982375f46178fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/7b2ada9a97ef681d96280d08836d510179e69d2b",
-                "reference": "7b2ada9a97ef681d96280d08836d510179e69d2b",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/2b260ae7616f6af15c35aeb709982375f46178fa",
+                "reference": "2b260ae7616f6af15c35aeb709982375f46178fa",
                 "shasum": ""
             },
             "require": {
@@ -1937,9 +1937,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/mapbender/issues",
-                "source": "https://github.com/mapbender/mapbender/tree/v4.0.3"
+                "source": "https://github.com/mapbender/mapbender/tree/v4.1.0-RC1"
             },
-            "time": "2024-10-28T10:20:46+00:00"
+            "time": "2025-01-30T13:25:13+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
