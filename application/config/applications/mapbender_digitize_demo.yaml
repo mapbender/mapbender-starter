@@ -66,7 +66,7 @@ parameters:
                     fi-button:
                         title: mb.core.featureinfo.class.title
                         tooltip: mb.core.featureinfo.class.title
-                        class: Mapbender\CoreBundle\Element\Button
+                        class: Mapbender\CoreBundle\Element\ControlButton
                         icon: iconInfoActive
                         label: true
                         target: featureinfo
@@ -74,35 +74,35 @@ parameters:
                     print-button:
                         title: mb.core.printclient.class.title
                         tooltip: mb.core.printclient.class.title
-                        class: Mapbender\CoreBundle\Element\Button
+                        class: Mapbender\CoreBundle\Element\ControlButton
                         label: false
                         icon: iconPrint
                         target: printclient
                     imageexport-button:
                         title: mb.print.imageexport.class.title
                         tooltip: mb.print.imageexport.class.title
-                        class: Mapbender\CoreBundle\Element\Button
+                        class: Mapbender\CoreBundle\Element\ControlButton
                         label: false
                         icon: iconImageExport
                         target: imageexport
                     legend-button:
                         title: mb.core.legend.class.title
                         tooltip: mb.core.legend.class.title
-                        class: Mapbender\CoreBundle\Element\Button
+                        class: Mapbender\CoreBundle\Element\ControlButton
                         label: false
                         target: legend
                         icon: iconLegend
                     wmsloader-button:
                         title: mb.wms.wmsloader.class.title
                         tooltip: mb.wms.wmsloader.class.description
-                        class: Mapbender\CoreBundle\Element\Button
+                        class: Mapbender\CoreBundle\Element\ControlButton
                         label: false
                         target: wmsloader
                         icon: iconWms
                     linerulerButton:
                         title: mb.core.ruler.tag.measure
                         tooltip: mb.core.ruler.tag.line
-                        class: Mapbender\CoreBundle\Element\Button
+                        class: Mapbender\CoreBundle\Element\ControlButton
                         icon: icon-line-ruler
                         label: false
                         target: lineruler
@@ -110,7 +110,7 @@ parameters:
                     arearulerButton:
                         title: mb.core.ruler.tag.measure
                         tooltip: mb.core.ruler.tag.area
-                        class: Mapbender\CoreBundle\Element\Button
+                        class: Mapbender\CoreBundle\Element\ControlButton
                         icon: icon-area-ruler
                         label: false
                         target: arearuler
@@ -119,7 +119,7 @@ parameters:
                     poiButton:
                         title: mb.core.poi.class.title
                         tooltip: mb.core.poi.class.description
-                        class: Mapbender\CoreBundle\Element\Button
+                        class: Mapbender\CoreBundle\Element\ControlButton
                         icon: iconPoi
                         label: false
                         target: poi
@@ -994,14 +994,14 @@ parameters:
                     imprintButton:
                         title: Imprint & Contact
                         tooltip: Imprint & Contact
-                        class: Mapbender\CoreBundle\Element\Button
+                        class: Mapbender\CoreBundle\Element\LinkButton
                         label: true
                         click: https://mapbender.org/en/contact/
 
                     privacyButton:
                         title: Privacy-Policy
                         tooltip: Privacy-Policy
-                        class: Mapbender\CoreBundle\Element\Button
+                        class: Mapbender\CoreBundle\Element\LinkButton
                         label: true
                         click: http://mapbender.org/en/privacy-policy
 
@@ -1040,7 +1040,7 @@ parameters:
                     copyrightButton:
                         title: © OpenStreetMap contributors
                         tooltip: © OpenStreetMap contributors
-                        class: Mapbender\CoreBundle\Element\Button
+                        class: Mapbender\CoreBundle\Element\ControlButton
                         label: true
                         click: https://www.openstreetmap.org/copyright
                         
