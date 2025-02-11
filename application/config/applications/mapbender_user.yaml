@@ -336,7 +336,7 @@ parameters:
                         autoOpen: false
                         showBaseSource: false
                         layerRemove: true
-                        menu: [opacity,zoomtolayer,metadata,layerremove]
+                        menu: [opacity,zoomtolayer,metadata,layerremove,select_style]
                         hideNotToggleable: true
                         hideSelect: true
                         hideInfo: false
