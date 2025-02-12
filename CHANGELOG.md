@@ -1,7 +1,7 @@
-## v4.1.0-RC1
-- Add RoutingBundle and ApiBundle for new mapbender functionality (see [mapbender library changelog](https://github.com/mapbender/mapbender/blob/v4.1.0-RC1/CHANGELOG.md))
+## v4.1.0
+- Add RoutingBundle and ApiBundle for new mapbender functionality (see [mapbender library changelog](https://github.com/mapbender/mapbender/blob/v4.1.0/CHANGELOG.md))
 - Fix problems when installing frontend dependencies in windows ([see commit](https://github.com/mapbender/mapbender-starter/commit/211ba8aa8a0edadb26d11318df77a47bf6620521))
-- Update mapbender/mapbender to [v4.1.0-RC1](https://github.com/mapbender/mapbender/blob/v4.1.0-RC1/CHANGELOG.md).
+- Update mapbender/mapbender to [v4.1.0](https://github.com/mapbender/mapbender/blob/v4.1.0/CHANGELOG.md).
 - Update mapbender/digitizer to [v2.0.3](https://github.com/mapbender/mapbender-digitizer/blob/2.0.3/CHANGELOG.md).
 
 ## v4.0.3
