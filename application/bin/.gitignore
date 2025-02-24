@@ -1,4 +1,5 @@
 *
 !composer
+!console
 !phpunit
 !*.php
