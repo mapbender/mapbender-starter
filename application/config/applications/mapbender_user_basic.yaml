@@ -474,17 +474,17 @@ parameters:
                         content: "<p>Learn more about Mapbender</p>
                            <a href=\"https://mapbender.org\" target=\"_blank\">
                              <p>
-                             	<img src=\"../image/Mapbender-logo.png\" alt=\"Mapbender\"  title=\"Mapbender\" width=\"200px\" /><br>https://mapbender.org
+                             	<img src=\"../image/Mapbender-logo.png\" alt=\"Mapbender\"  title=\"Mapbender\" width=\"200\"><br>https://mapbender.org
                              </p>
                            </a>
                            <ul>
-                           	<li>&#8594; add <a href=\"#\" data-mb-action=\"source.add.wms\" data-mb-layer-merge=\"0\" data-mb-wms-merge=\"0\" data-mb-wms-layers=\"all\" data-mb-url=\"https://wms.wheregroup.com/cgi-bin/mapbender_user.xml??VERSION=1.3.0&amp;REQUEST=GetCapabilities&amp;SERVICE=WMS\" data-mb-infoformat=\"text/html\">WMS Mapbender Users</a></li>
+                           	<li>&#8594; add <a href=\"#\" data-mb-action=\"source.add.wms\" data-mb-layer-merge=\"0\" data-mb-wms-merge=\"0\" data-mb-url=\"https://wms.wheregroup.com/cgi-bin/mapbender_user.xml?VERSION=1.3.0&amp;REQUEST=GetCapabilities&amp;SERVICE=WMS\" data-mb-infoformat=\"text/html\">WMS Mapbender Users</a></li>
                            </ul>
                            <p></p>
                            <p>Mapbender is an</p>
                            <a href=\"https://www.osgeo.org/projects/mapbender/\" target=\"_blank\">
                              <p>
-                               <img src=\"../bundles/mapbendercore/image/OSGeo_project.png\" alt=\"OSGeo Project\"  title=\"OSGeo Project\" width=\"150px\" />
+                               <img src=\"../bundles/mapbendercore/image/OSGeo_project.png\" alt=\"OSGeo Project\"  title=\"OSGeo Project\" width=\"150\">
                              </p>
                            </a>
                            <p>
