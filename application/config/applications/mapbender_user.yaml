@@ -419,20 +419,20 @@ parameters:
                             lineColor: 'rgba(66,134,244,1)'
                             lineWidth: 3.0
                             lineOpacity: 1
-                            startIcon: 
+                            startIcon:
                               imagePath: /bundles/mapbenderrouting/image/start.png
                               imageSize: null
                               imageOffset: null
-                            intermediateIcon: 
+                            intermediateIcon:
                               imagePath: /bundles/mapbenderrouting/image/intermediate.png
-                              imageSize: null 
+                              imageSize: null
                               imageOffset: null
-                            destinationIcon: 
+                            destinationIcon:
                               imagePath: /bundles/mapbenderrouting/image/destination.png
                               imageSize: null
                               imageOffset: null
                         routingConfig:
-                            osrm: 
+                            osrm:
                               url: 'https://routing.openstreetmap.de/routed-%profile'
                               service: route
                               version: v1
@@ -441,7 +441,7 @@ parameters:
                               attribution: "Daten © <a href=\"https://www.openstreetmap.org/copyright\" class=\"link-primary\">OpenStreetMap</a>-Mitwirkende (<a href=\"https://opendatacommons.org/licenses/odbl/index.html\" class=\"link-primary\">ODbL</a>), <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\" class=\"link-primary\">CC-BY-SA</a>, <a href=\"https://openstreetmap.org/fixthemap\" class=\"link-primary\">mitmachen/Fehler melden</a>"
                         searchConfig:
                             driver: solr
-                            solr: 
+                            solr:
                               url: 'https://osm-photon-search.wheregroup.com/search/api?limit=20&lat=50.7163&lon=7.1366&osm_tag=!railway&osm_tag=!highway:elevator&osm_tag=!tourism&osm_tag=!amenity'
                               query_key: q
                               query_format: '%s'
@@ -454,28 +454,30 @@ parameters:
                               token_regex: '[^a-zA-Z0-9äöüÄÖÜß]'
                               token_regex_in: '([a-zA-ZäöüÄÖÜß]{3,})'
                               token_regex_out: '$1*'
-                              delay: 300.0 
+                              delay: 300.0
                     html-about-mapbender:
                         class: Mapbender\CoreBundle\Element\HTMLElement
                         classes: html-element-inline
                         title: mb.demoapps.about
-                        content: "<p>Learn more about Mapbender </p>
-                        <p><a href=\"https://mapbender.org\" target=\"_blank\">
-                        <img src=\"../image/Mapbender-logo.png\" alt=\"Mapbender\"  title=\"Mapbender\" width=\"200px\" /></p>https://mapbender.org</a>
-                        </p>
-                        <p>                        
-                        <ul><li>&#8594; add <a href=\"#\" mb-action=\"source.add.wms\" mb-layer-merge=\"0\" mb-wms-merge=\"0\" mb-wms-layers=\"all\" mb-url=\"https://wms.wheregroup.com/cgi-bin/mapbender_user.xml??VERSION=1.3.0&REQUEST=GetCapabilities&SERVICE=WMS\" mb-infoformat=\"text/html\">WMS Mapbender Users</a></li>
-                        </ul>   
-                        </p>
-                        <p>Mapbender is an</p>
-                        <p><a href=\"https://www.osgeo.org/projects/mapbender/\" target=\"_blank\">
-                        </p>
-                        <p>
-                        <img src=\"../bundles/mapbendercore/image/OSGeo_project.png\" alt=\"OSGeo Project\"  title=\"OSGeo Project\" width=\"150px\" /></a>
-                        </p>
-                        <p>
-                        <a href=\"https://www.osgeo.org\" target=\"_blank\">https://www.osgeo.org</a>
-                        </p>"
+                        content: "<p>Learn more about Mapbender</p>
+                           <a href=\"https://mapbender.org\" target=\"_blank\">
+                             <p>
+                             	<img src=\"../image/Mapbender-logo.png\" alt=\"Mapbender\"  title=\"Mapbender\" width=\"200\"><br>https://mapbender.org
+                             </p>
+                           </a>
+                           <ul>
+                           	<li>&#8594; add <a href=\"#\" data-mb-action=\"source.add.wms\" data-mb-layer-merge=\"0\" data-mb-wms-merge=\"0\" data-mb-url=\"https://wms.wheregroup.com/cgi-bin/mapbender_user.xml?VERSION=1.3.0&amp;REQUEST=GetCapabilities&amp;SERVICE=WMS\" data-mb-infoformat=\"text/html\">WMS Mapbender Users</a></li>
+                           </ul>
+                           <p></p>
+                           <p>Mapbender is an</p>
+                           <a href=\"https://www.osgeo.org/projects/mapbender/\" target=\"_blank\">
+                             <p>
+                               <img src=\"../bundles/mapbendercore/image/OSGeo_project.png\" alt=\"OSGeo Project\"  title=\"OSGeo Project\" width=\"150\">
+                             </p>
+                           </a>
+                           <p>
+                             <a href=\"https://www.osgeo.org\" target=\"_blank\">https://www.osgeo.org</a>
+                           </p>"
                 footer:
                     activityindicator:
                         class: Mapbender\CoreBundle\Element\ActivityIndicator
