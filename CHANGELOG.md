@@ -1,3 +1,6 @@
+## v4.1.2
+- Update mapbender/mapbender to [v4.1.2](https://github.com/mapbender/mapbender/blob/v4.1.2/CHANGELOG.md).
+
 ## v4.1.1
 - Update mapbender/mapbender to [v4.1.1](https://github.com/mapbender/mapbender/blob/v4.1.1/CHANGELOG.md).
 
