@@ -1,3 +1,7 @@
+## v4.1.3
+-[Docker], [API]: Authorization token was not forwarded from Apache to PHP in docker image ([PR#153](https://github.com/mapbender/mapbender-starter/pull/153))
+- Update mapbender/mapbender to [v4.1.3](https://github.com/mapbender/mapbender/blob/v4.1.3/CHANGELOG.md).
+
 ## v4.1.2
 - Update mapbender/mapbender to [v4.1.2](https://github.com/mapbender/mapbender/blob/v4.1.2/CHANGELOG.md).
 
