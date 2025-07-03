@@ -149,6 +149,7 @@ You can use environment variables to adjust the configuration of the Mapbender d
 - `APP_ENV` Symfony app environment. (`prod`, `dev`, `test`)
 - `MAILER_DSN` Smtp server configuration. (`smtp://user:pass@smtp.example.com:25`)
 - `MAPBENDER_DATABASE_URL` configure Mapbender to connect to another database as shown in the upcoming example. (find examples at [https://symfony.com/doc/current/doctrine.html#configuring-the-database](https://symfony.com/doc/current/doctrine.html#configuring-the-database))
+- `API_UPLOAD_DIR` Path for API file uploads. (default: `/var/mapbender/application/uploads/`)
 
 ### external database 
 

@@ -13,6 +13,7 @@ parameters:
     cookie_secure: false
     cookie_lifetime: 3600
     log_path: '%kernel.logs_dir%/%kernel.environment%.log'
+    api_upload_dir: '%env(API_UPLOAD_DIR)%'
 
     # OWSProxy Configuration
     # see https://github.com/mapbender/owsproxy3/blob/master/CONFIGURATION.md#extension-configuration
