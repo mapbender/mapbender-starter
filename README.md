@@ -30,6 +30,8 @@ Mapbender requires PHP 8.1 up to 8.4, OpenSSL, curl, bzip2 decompression and the
 :warning: The composer lock file is compatible with PHP 8.2 through PHP 8.4. When using PHP 8.1, make sure
 to execute `bin/composer update` to ensure compatibility.
 
+:warning: If you use Vector Tiles, you also need to have NodeJS and puppeteer installed globally.
+
 You may have to install and enable further extensions at your own discretion if you
 want to use specific database systems.
 
@@ -46,6 +48,11 @@ sudo apt-get install php php-cli openssl bzip2 \
     php-zip php-bz2 php-xml \
     php-sqlite3 php-pgsql php-mysql php-ldap \
     sqlite3 curl
+    
+# for vector tiles print, for node js installation see https://nodejs.org/en/download
+# installation should be done as the web server user
+npm install -g puppeteer
+puppeteer browsers install
 ```
 
 ## System configuration
