@@ -11,7 +11,7 @@ parameters:
                 themes:
                     selected: true
                     mapbender_users:
-                        class: Mapbender\WmsBundle\Entity\WmsInstance
+                        type: wms
                         title: Mapbender Users
                         url: https://wms.wheregroup.com/cgi-bin/mapbender_user.xml
                         version: 1.3.0
@@ -27,7 +27,7 @@ parameters:
                         isBaseSource: false
                         toggle: true
                     fossgis:
-                        class: Mapbender\WmsBundle\Entity\WmsInstance
+                        type: wms
                         title: FOSSGIS Konferenzen
                         url: https://wms.wheregroup.com/cgi-bin/fossgis.xml
                         version: 1.3.0
@@ -42,7 +42,7 @@ parameters:
                         isBaseSource: false
                         toggle: false
                     foss4g:
-                        class: Mapbender\WmsBundle\Entity\WmsInstance
+                        type: wms
                         title: FOSS4G Conferences
                         url: https://wms.wheregroup.com/cgi-bin/foss4g.xml
                         version: 1.3.0
@@ -59,7 +59,7 @@ parameters:
                 background themes:
                     selected: true
                     osm:
-                        class: Mapbender\WmsBundle\Entity\WmsInstance
+                        type: wms
                         title: OSM Demo
                         url: https://osm-demo.wheregroup.com/service
                         version: 1.3.0
@@ -73,7 +73,7 @@ parameters:
                         opacity: 100
                         isBaseSource: true
                     osm-transparent:
-                        class: Mapbender\WmsBundle\Entity\WmsInstance
+                        type: wms
                         title: OSM Demo
                         url: https://osm-demo.wheregroup.com/service
                         version: 1.3.0
@@ -87,7 +87,7 @@ parameters:
                         opacity: 60
                         isBaseSource: true
                     osm-greyscale:
-                        class: Mapbender\WmsBundle\Entity\WmsInstance
+                        type: wms
                         title: OSM Demo
                         url: https://osm-demo.wheregroup.com/service
                         version: 1.3.0
