@@ -52,8 +52,8 @@ parameters:
 
 
     # activates the queued print mode
-    # read more at https://doc.mapbender.org/en/
-    # mapbender.print.queueable: true elements/export/printclient.html#queued-print
+    # read more at https://doc.mapbender.org/en/elements/export/printclient.html#queued-print
+    # mapbender.print.queueable: true 
 
     # specifies an absolute path for the generated PDF files
     # default is [your mapbender installation]/web/prints
