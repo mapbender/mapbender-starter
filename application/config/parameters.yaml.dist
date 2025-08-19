@@ -49,3 +49,17 @@ parameters:
     #               also the default if this parameter is not defined
     # * "reverse": bottom-up, for QGIS server, ArcGIS etc
     # wms.default_layer_order: standard
+
+
+    # activates the queued print mode
+    # read more at https://doc.mapbender.org/en/
+    # mapbender.print.queueable: true elements/export/printclient.html#queued-print
+
+    # specifies an absolute path for the generated PDF files
+    # default is [your mapbender installation]/web/prints
+    # mapbender.print.queue.storage_dir: "/dat/example-installation/prints"
+
+
+    # specifies the upload directory for the Mapbender API.
+    # read more at https://doc.mapbender.org/en/customization/api.html
+    # api_upload_dir: /data/qgis_server_projects/
