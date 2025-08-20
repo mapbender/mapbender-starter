@@ -124,6 +124,69 @@ parameters:
                         tiled: true
                         opacity: 100
                         isBaseSource: true
+                    osm-wmts:
+                        type: wmts
+                        title: OpenStreetMap (OSM) Demo WhereGroup WMTS
+                        isBaseSource: true
+                        opacity: 100
+                        url: https://osm-demo.wheregroup.com/wmts/1.0.0/WMTSCapabilities.xml
+                        selected: false
+                        allowSelected: true
+                        toggle: false
+                        allowToggle: true
+                        layers:
+                            osm:
+                              title: OpenStreetMap (color)
+                              active: true # if false, the layer is ignored (default: true)
+                              selected: true # initial state of the layer. (default: true)
+                              allowSelected: true # can the user change state in the layertree? If selected and allowSelected are both false, the layer is ignored. (default: true)
+                            osm-grey:
+                              title: OpenStreetMap (greyscale)
+                              active: false # if false, the layer is ignored (default: true)
+                              selected: true # initial state of the layer. (default: true)
+                              allowSelected: true # can the user change state in the layertree? If selected and allowSelected are both false, the layer is ignored. (default: true)
+
+                    osm_fiord_color_vector_tiles:
+                        type: vector_tiles
+                        title: OSM Fiord Color Vector Tiles WhereGroup Demo
+                        jsonUrl: https://wms.wheregroup.com/tileserver/style/osm-fiord-color.json
+                        # jsonUrl: https://wms.wheregroup.com/tileserver/style/osm-bright.json
+                        ## All configuration from here onwards is optional
+                        isBaseSource: true
+                        allowSelected: true
+                        # bbox: [7.6,47.9,7.8,48.1]
+                        selected: false
+                        opacity: 100
+                        #minScale: 0
+                        #maxScale: 50000000
+                        featureInfo: false
+                        featureInfoAllowToggle: false
+                        featureInfoTitle: ${name} (${klasse})
+                        hideIfNoTitle: true
+                        propertyMap:
+                          - klasse
+                          - name
+                    osm_liberty_vector_tiles:
+                        type: vector_tiles
+                        title: OSM Liberty Vector Tiles WhereGroup Demo
+                        jsonUrl: https://wms.wheregroup.com/tileserver/style/osm-liberty.json
+                        # jsonUrl: https://wms.wheregroup.com/tileserver/style/osm-bright.json
+                        ## All configuration from here onwards is optional
+                        isBaseSource: true
+                        allowSelected: true
+                        # bbox: [7.6,47.9,7.8,48.1]
+                        selected: false
+                        #opacity: 100
+                        #minScale: 0
+                        #maxScale: 50000000
+                        featureInfo: false
+                        featureInfoAllowToggle: true
+                        featureInfoTitle: ${name} (${klasse})
+                        hideIfNoTitle: false
+                        #propertyMap:
+                        #  - klasse
+                        #  - name
+                        #  - mvt:layer: Layername
                 overview:
                     selected: true
                     osm-overview:
@@ -164,9 +227,24 @@ parameters:
                                 instances:
                                     - osm-transparent
                             4-basesourceswitcher:
+                                title: OSM WMTS (color)
+                                group: mb.demoapps.baseMaps
+                                instances:
+                                    - osm-wmts
+                            5-basesourceswitcher:
+                                title: OSM Liberty Vector Tiles
+                                group: mb.demoapps.baseMaps
+                                instances:
+                                    - osm_liberty_vector_tiles
+                            6-basesourceswitcher:
+                                title: OSM Fiord Color Vector Tiles
+                                group: mb.demoapps.baseMaps
+                                instances:
+                                    - osm_fiord_color_vector_tiles
+                            7-basesourceswitcher:
                                 title: mb.demoapps.noBackground
                                 group: null
-                                instances: []
+                                instances: []                               
                     fi-button:
                         class: Mapbender\CoreBundle\Element\ControlButton
                         icon: iconInfoActive
@@ -410,6 +488,7 @@ parameters:
                         advancedSettings: true
                         autoSubmit: true
                         allowIntermediatePoints: true
+                        allowExport: true
                         useSearch: true
                         useReverseGeocoding: false
                         buffer: 150
@@ -437,7 +516,8 @@ parameters:
                               service: route
                               version: v1
                               transportationMode: [car, bike, foot]
-                              steps: 'true'
+                              steps: 'false'
+
                               attribution: "Daten © <a href=\"https://www.openstreetmap.org/copyright\" class=\"link-primary\">OpenStreetMap</a>-Mitwirkende (<a href=\"https://opendatacommons.org/licenses/odbl/index.html\" class=\"link-primary\">ODbL</a>), <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\" class=\"link-primary\">CC-BY-SA</a>, <a href=\"https://openstreetmap.org/fixthemap\" class=\"link-primary\">mitmachen/Fehler melden</a>"
                         searchConfig:
                             driver: solr
@@ -503,6 +583,12 @@ parameters:
                         class: Mapbender\CoreBundle\Element\ApplicationSwitcher
                         applications: [mapbender_user, mapbender_user_basic]
                         screenType: desktop
+                    OpenMapTiles-badge:
+                        title: © OpenMapTiles
+                        tooltip: © OpenMapTiles
+                        class: Mapbender\CoreBundle\Element\LinkButton
+                        label: true
+                        click: https://openmaptiles.org/
                     OSM-badge:
                         title: © OpenStreetMap contributors
                         tooltip: © OpenStreetMap contributors
