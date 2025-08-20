@@ -1,6 +1,7 @@
-FROM php:8.3-apache as base-container
+FROM php:8.3-apache AS base-container
 
-ENV APACHE_DOCUMENT_ROOT /var/mapbender/application/public
+ENV APACHE_DOCUMENT_ROOT=/var/mapbender/application/public
+ENV API_UPLOAD_DIR=/var/mapbender/application/uploads/
 
 RUN apt-get update && apt-get install -y \
         libpq-dev \
