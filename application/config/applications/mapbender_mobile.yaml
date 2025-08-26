@@ -100,84 +100,6 @@ parameters:
                         tiled: true
                         opacity: 100
                         isBaseSource: true
-                    osm-wmts:
-                        type: wmts
-                        title: OpenStreetMap (OSM) Demo WhereGroup WMTS
-                        isBaseSource: true
-                        opacity: 100
-                        url: https://osm-demo.wheregroup.com/wmts/1.0.0/WMTSCapabilities.xml
-                        selected: false
-                        allowSelected: true
-                        toggle: false
-                        allowToggle: true
-                        layers:
-                            osm:
-                              title: OpenStreetMap (color)
-                              active: true # if false, the layer is ignored (default: true)
-                              selected: true # initial state of the layer. (default: true)
-                              allowSelected: true # can the user change state in the layertree? If selected and allowSelected are both false, the layer is ignored. (default: true)
-                            osm-grey:
-                              title: OpenStreetMap (greyscale)
-                              active: false # if false, the layer is ignored (default: true)
-                              selected: true # initial state of the layer. (default: true)
-                              allowSelected: true # can the user change state in the layertree? If selected and allowSelected are both false, the layer is ignored. (default: true)
-
-                    osm_fiord_color_vector_tiles:
-                        type: vector_tiles
-                        title: OSM Fiord Color Vector Tiles WhereGroup Demo
-                        jsonUrl: https://wms.wheregroup.com/tileserver/style/osm-fiord-color.json
-                        # jsonUrl: https://wms.wheregroup.com/tileserver/style/osm-bright.json
-                        ## All configuration from here onwards is optional
-                        isBaseSource: true
-                        allowSelected: true
-                        # bbox: [7.6,47.9,7.8,48.1]
-                        selected: false
-                        opacity: 100
-                        #minScale: 0
-                        #maxScale: 50000000
-                        featureInfo: false
-                        featureInfoAllowToggle: false
-                        featureInfoTitle: ${name} (${klasse})
-                        hideIfNoTitle: true
-                        propertyMap:
-                          - klasse
-                          - name
-                    osm_liberty_vector_tiles:
-                        type: vector_tiles
-                        title: OSM Liberty Vector Tiles WhereGroup Demo
-                        jsonUrl: https://wms.wheregroup.com/tileserver/style/osm-liberty.json
-                        # jsonUrl: https://wms.wheregroup.com/tileserver/style/osm-bright.json
-                        ## All configuration from here onwards is optional
-                        isBaseSource: true
-                        allowSelected: true
-                        # bbox: [7.6,47.9,7.8,48.1]
-                        selected: false
-                        #opacity: 100
-                        #minScale: 0
-                        #maxScale: 50000000
-                        featureInfo: false
-                        featureInfoAllowToggle: true
-                        featureInfoTitle: ${name} (${klasse})
-                        hideIfNoTitle: false
-                        #propertyMap:
-                        #  - klasse
-                        #  - name
-                        #  - mvt:layer: Layername
-                overview:
-                    selected: true
-                    osm-overview:
-                        type: wms
-                        title: OSM Demo
-                        url: https://osm-demo.wheregroup.com/service
-                        version: 1.3.0
-                        layers:
-                            21: { name: osm,    title : OSM Demo WhereGroup,  visible: true }
-                        tiled: false
-                        format: image/png
-                        transparent: true
-                        visible: true
-                        opacity: 100
-                        isBaseSource: false
             elements:
                 footer:
                     # button parameters: action,activate,deactivate are ignored for elements at mobilePane
@@ -327,8 +249,8 @@ parameters:
                           <p>
                             <img src=\"../image/Mapbender-logo.png\" alt=\"Mapbender\"  title=\"Mapbender\" width=\"200\">
                           </p>
-                          <p>https://mapbender.org</p></a>
-                        <a href=\"https://openmaptiles.org/\" target=\"_blank\">© OpenMapTiles</a> <a href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\">© OpenStreetMap</a> contributors"
+                          <p>https://mapbender.org</p>
+                        </a>"
                         classes: html-element-inline
                         screenType: desktop
 
@@ -369,24 +291,10 @@ parameters:
                                 instances:
                                     - osm-transparent
                             4-basesourceswitcher:
-                                title: OSM WMTS (color)
-                                group: null
-                                instances:
-                                    - osm-wmts
-                            5-basesourceswitcher:
-                                title: OSM Liberty Vector Tiles
-                                group: null
-                                instances:
-                                    - osm_liberty_vector_tiles
-                            6-basesourceswitcher:
-                                title: OSM Fiord Color Vector Tiles 
-                                group: null
-                                instances:
-                                    - osm_fiord_color_vector_tiles
-                            7-basesourceswitcher:
                                 title: mb.demoapps.noBackground
                                 group: null
                                 instances: []
+
                     html-about-mapbender:
                         title: mb.core.aboutdialog.tag.about
                         class: Mapbender\CoreBundle\Element\HTMLElement
