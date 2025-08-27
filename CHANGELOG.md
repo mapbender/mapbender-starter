@@ -1,4 +1,4 @@
-## v4.2.0-RC1
+## v4.2.0
 - Update mapbender/mapbender to [v4.2.0-RC1](https://github.com/mapbender/mapbender/blob/v4.2.0-RC1/CHANGELOG.md).
 - Update mapbender/digitizer to [2.0.5](https://github.com/mapbender/mapbender-digitizer/blob/2.0.5/CHANGELOG.md).
 - Added new VectorTilesBundle to use Mapbox VectorTile Sources ([PR#155](https://github.com/mapbender/mapbender-starter/pull/155), [mapbender library changelog](https://github.com/mapbender/mapbender/blob/v4.2.0-RC1/CHANGELOG.md))
