@@ -244,7 +244,7 @@ parameters:
                             7-basesourceswitcher:
                                 title: mb.demoapps.noBackground
                                 group: null
-                                instances: []                               
+                                instances: []
                     fi-button:
                         class: Mapbender\CoreBundle\Element\ControlButton
                         icon: iconInfoActive
@@ -419,6 +419,7 @@ parameters:
                         hideSelect: true
                         hideInfo: false
                         useTheme: true
+                        showFilter: true
                         themes:
                             -
                                 id: themes
