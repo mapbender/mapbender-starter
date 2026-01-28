@@ -154,7 +154,8 @@
         "symfony-assets-install": "symlink",
         "installer-paths":{
             "mapbender/": ["mapbender/mapbender"],
-            "public/components/datatables/": ["datatables/datatables"]
+            "public/components/datatables/core": ["datatables.net/datatables.net"],
+            "public/components/datatables/bootstrap5": ["datatables.net/datatables.net-bs5"]
         },
         "symfony": {
             "allow-contrib": true,

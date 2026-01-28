@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9128dce42e124f3b6eb57f7bfc060b97",
+    "content-hash": "6100ec192f96da89982c508a48e87015",
     "packages": [
         {
             "name": "assetic/framework",
@@ -243,31 +243,90 @@
             "time": "2023-09-22T01:43:46+00:00"
         },
         {
-            "name": "datatables/datatables",
-            "version": "1.10.21",
+            "name": "datatables.net/datatables.net",
+            "version": "2.3.6",
             "source": {
                 "type": "git",
-                "url": "https://github.com/DataTables/DataTables.git",
-                "reference": "83e59694a105225ff889ddfa0d723a3ab24fda78"
+                "url": "https://github.com/DataTables/Dist-DataTables.git",
+                "reference": "c111486c7a5c114748406791226ec0214d75024f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DataTables/DataTables/zipball/83e59694a105225ff889ddfa0d723a3ab24fda78",
-                "reference": "83e59694a105225ff889ddfa0d723a3ab24fda78",
+                "url": "https://api.github.com/repos/DataTables/Dist-DataTables/zipball/c111486c7a5c114748406791226ec0214d75024f",
+                "reference": "c111486c7a5c114748406791226ec0214d75024f",
                 "shasum": ""
+            },
+            "require": {
+                "components/jquery": ">=1.7"
             },
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
-            "description": "DataTables is a plug-in for the jQuery Javascript library. It is a highly flexible tool, based upon the foundations of progressive enhancement, which will add advanced interaction controls to any HTML table.",
+            "authors": [
+                {
+                    "name": "SpryMedia",
+                    "homepage": "https://datatables.net"
+                }
+            ],
+            "description": "DataTables is a plug-in for the jQuery Javascript library. It is a highly flexible tool, based upon the foundations of progressive enhancement, which will add advanced interaction controls to any HTML table. This is jQuery DataTables",
             "homepage": "http://www.datatables.net/",
+            "keywords": [
+                "datatables",
+                "jquery",
+                "table"
+            ],
             "support": {
                 "forum": "https://datatables.net/forums",
-                "source": "https://github.com/DataTables/DataTablesSrc/"
+                "source": "https://github.com/DataTables/Dist-DataTables"
             },
-            "time": "2020-05-21T10:08:44+00:00"
+            "time": "2025-12-23T12:30:41+00:00"
+        },
+        {
+            "name": "datatables.net/datatables.net-bs5",
+            "version": "2.3.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DataTables/Dist-DataTables-Bootstrap5.git",
+                "reference": "60c9a1a4285f49401e26d5fe1518e7a9eb7f4c8c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DataTables/Dist-DataTables-Bootstrap5/zipball/60c9a1a4285f49401e26d5fe1518e7a9eb7f4c8c",
+                "reference": "60c9a1a4285f49401e26d5fe1518e7a9eb7f4c8c",
+                "shasum": ""
+            },
+            "require": {
+                "datatables.net/datatables.net": ">=1.12.1",
+                "twbs/bootstrap": "5.*"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "SpryMedia",
+                    "homepage": "https://datatables.net"
+                }
+            ],
+            "description": "DataTables is a plug-in for the jQuery Javascript library. It is a highly flexible tool, based upon the foundations of progressive enhancement, which will add advanced interaction controls to any HTML table. This is DataTables with styling for [Bootstrap5](https://getbootstrap.com/)",
+            "homepage": "http://www.datatables.net/",
+            "keywords": [
+                "bootstrap",
+                "bootstrap5",
+                "datatables",
+                "jquery",
+                "table"
+            ],
+            "support": {
+                "forum": "https://datatables.net/forums",
+                "issues": "https://github.com/DataTables/Dist-DataTables-Bootstrap5/issues",
+                "source": "https://github.com/DataTables/Dist-DataTables-Bootstrap5"
+            },
+            "time": "2025-12-23T12:32:25+00:00"
         },
         {
             "name": "doctrine/cache",
@@ -1818,22 +1877,22 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v4.2.4",
+            "version": "dev-work/dependency-updates",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "0f59f7ffba3bcb231efa94af98d9633f434ed585"
+                "reference": "9181bd116c06f224cd58bf9562e8f4a11653777f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/0f59f7ffba3bcb231efa94af98d9633f434ed585",
-                "reference": "0f59f7ffba3bcb231efa94af98d9633f434ed585",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/9181bd116c06f224cd58bf9562e8f4a11653777f",
+                "reference": "9181bd116c06f224cd58bf9562e8f4a11653777f",
                 "shasum": ""
             },
             "require": {
                 "assetic/framework": "^3.1",
                 "components/jquery": "^3.7.1",
-                "datatables/datatables": "^1.10.16",
+                "datatables.net/datatables.net-bs5": "^2.3",
                 "doctrine/dbal": "^3",
                 "doctrine/doctrine-bundle": "^2",
                 "doctrine/orm": "^2.15",
@@ -1842,7 +1901,7 @@
                 "ext-gd": "*",
                 "ext-json": "*",
                 "ext-zip": "*",
-                "jquery/jquery-ui": "^1.13.2",
+                "jquery/jquery-ui": "^1.14.1",
                 "mapbender/mapbender-icons": "^1.3",
                 "mapbender/openlayers6-es5": "^10",
                 "php": ">=8.1",
@@ -1909,20 +1968,6 @@
                 "mapbender/owsproxy": "3.3.*"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.3.x-dev",
-                    "dev-release/3.2": "3.2.x-dev",
-                    "dev-release/3.0.5": "3.0.5.x-dev",
-                    "dev-release/3.0.6": "3.0.6.x-dev",
-                    "dev-release/3.0.7": "3.0.8.x-dev"
-                },
-                "installer-paths": {
-                    "web/components/bootstrap/": [
-                        "twbs/bootstrap"
-                    ]
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "FOM\\": "src/FOM",
@@ -1941,9 +1986,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/mapbender/issues",
-                "source": "https://github.com/mapbender/mapbender/tree/v4.2.4"
+                "source": "https://github.com/mapbender/mapbender/tree/work/dependency-updates"
             },
-            "time": "2025-12-02T10:18:35+00:00"
+            "time": "2026-01-28T11:47:12+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -11144,9 +11189,18 @@
             "time": "2025-11-17T20:03:58+00:00"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "mapbender/mapbender",
+            "version": "dev-work/dependency-updates",
+            "alias": "4.2.5",
+            "alias_normalized": "4.2.5.0"
+        }
+    ],
     "minimum-stability": "dev",
-    "stability-flags": {},
+    "stability-flags": {
+        "mapbender/mapbender": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
