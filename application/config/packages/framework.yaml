@@ -9,7 +9,7 @@ framework:
     # Remove or comment this section to explicitly disable session support.
     session:
         handler_id: null
-        cookie_samesite: lax
+        cookie_samesite: strict
         cookie_httponly: true
         cookie_secure: '%cookie_secure%'
         cookie_lifetime: '%cookie_lifetime%'

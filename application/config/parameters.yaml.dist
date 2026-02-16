@@ -10,7 +10,7 @@ parameters:
     # mapbender.automatic_locale: false
 
     # framework : https://symfony.com/doc/6.4/reference/configuration/framework.html#cookie-lifetime
-    cookie_secure: false
+    cookie_secure: true
     cookie_lifetime: 3600
     log_path: '%kernel.logs_dir%/%kernel.environment%.log'
 
