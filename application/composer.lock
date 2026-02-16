@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f96cc71889352155387632d8fc3421b0",
+    "content-hash": "36717a9796a85bc6585b9ed4b404500d",
     "packages": [
         {
             "name": "assetic/framework",
@@ -1739,16 +1739,16 @@
         },
         {
             "name": "mapbender/digitizer",
-            "version": "2.0.5",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "02615bb42fd91241ab96a25aec54838f9eea328f"
+                "reference": "d57a1cd60abeb6d511bdb195f98c0ba5f6e390d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/02615bb42fd91241ab96a25aec54838f9eea328f",
-                "reference": "02615bb42fd91241ab96a25aec54838f9eea328f",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/d57a1cd60abeb6d511bdb195f98c0ba5f6e390d9",
+                "reference": "d57a1cd60abeb6d511bdb195f98c0ba5f6e390d9",
                 "shasum": ""
             },
             "require": {
@@ -1772,7 +1772,6 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.5.x-dev",
                     "dev-release/1.0": "1.0.x-dev",
                     "dev-release/1.4": "1.4.x-dev",
                     "dev-staging/1.6": "1.6.x-dev"
@@ -1814,22 +1813,22 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/mapbender-digitizer/issues",
-                "source": "https://github.com/mapbender/mapbender-digitizer/tree/2.0.5"
+                "source": "https://github.com/mapbender/mapbender-digitizer/tree/develop"
             },
-            "time": "2025-08-20T12:50:40+00:00"
+            "time": "2026-02-04T09:55:22+00:00"
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v4.2.1",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "680beb8660ff313066c3de079ca9ed47b8c77e71"
+                "reference": "d65f1d8813676ad9a054c1795a8852357ad3e066"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/680beb8660ff313066c3de079ca9ed47b8c77e71",
-                "reference": "680beb8660ff313066c3de079ca9ed47b8c77e71",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/d65f1d8813676ad9a054c1795a8852357ad3e066",
+                "reference": "d65f1d8813676ad9a054c1795a8852357ad3e066",
                 "shasum": ""
             },
             "require": {
@@ -1943,9 +1942,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/mapbender/issues",
-                "source": "https://github.com/mapbender/mapbender/tree/v4.2.1"
+                "source": "https://github.com/mapbender/mapbender/tree/develop"
             },
-            "time": "2025-09-04T08:40:47+00:00"
+            "time": "2026-02-09T11:09:28+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -11099,9 +11098,19 @@
             "time": "2024-03-03T12:36:25+00:00"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "mapbender/mapbender",
+            "version": "dev-develop",
+            "alias": "4.9.9",
+            "alias_normalized": "4.9.9.0"
+        }
+    ],
     "minimum-stability": "dev",
-    "stability-flags": {},
+    "stability-flags": {
+        "mapbender/digitizer": 20,
+        "mapbender/mapbender": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
