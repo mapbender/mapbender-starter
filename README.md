@@ -176,7 +176,7 @@ To run a Mapbender docker container configured to use an external database use t
 
 4.  Create Mapbender database schema
 
-    `docker exec mapbender php application/bin/console doctrine:schema:create --force`
+    `docker exec mapbender php application/bin/console doctrine:schema:create`
 
 5.  Initialize Mapbender database
 
@@ -217,6 +217,6 @@ Pre-packaged archives bundling all code dependencies are available at our [downl
 |------------------------|---------------|-------------------------|--------------------------|
 | 3.0.8 (end of life)    | >=5.5, <=7.2  | 2.8LTS (end of life)    | 1.6.x                    |
 | 3.2  (end of life)     | \>=7.1, <=7.4 | 3.4LTS (end of life)    | 1.10.x                   |
-| 3.3                    | \>=7.4        | 4.4LTS (end of life)    | 2.1.x                    |
+| 3.3   (end of life)    | \>=7.4        | 4.4LTS (end of life)    | 2.1.x                    |
 | 4.0                    | \>=8.1        | 6.4LTS                  | 2.6.x                    |
 | 4.1                    | \>=8.1        | 6.4LTS                  | 2.8.x                    |
