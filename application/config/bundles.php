@@ -25,6 +25,7 @@ return [
     Mapbender\RoutingBundle\MapbenderRoutingBundle::class => ['all' => true],
     Mapbender\VectorTilesBundle\MapbenderVectorTilesBundle::class => ['all' => true],
     Mapbender\ApiBundle\MapbenderApiBundle::class => ['all' => true],
+    Mapbender\OgcApiFeaturesBundle\MapbenderOgcApiFeaturesBundle::class => ['all' => true],
     DAMA\DoctrineTestBundle\DAMADoctrineTestBundle::class => ['test' => true],
     Lexik\Bundle\JWTAuthenticationBundle\LexikJWTAuthenticationBundle::class => ['all' => true],
     Nelmio\ApiDocBundle\NelmioApiDocBundle::class => ['all' => true],
