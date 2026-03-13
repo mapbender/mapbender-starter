@@ -19,7 +19,7 @@ contents:
     - php-8.3-config
     - php-8.3-apache
 
-    # ── PHP extensions (slim baseline — pulled in by mapbender APK) ──
+    # ── PHP extensions (slim baseline — SQLite only, no PostgreSQL/LDAP/bz2) ──
     - php-8.3-pdo
     - php-8.3-pdo-config
     - php-8.3-pdo_sqlite
@@ -59,14 +59,6 @@ contents:
     - php-8.3-phar
     - php-8.3-phar-config
 
-    # ── Full image extras (not in slim) ──
-    - php-8.3-pdo_pgsql
-    - php-8.3-pdo_pgsql-config
-    - php-8.3-ldap
-    - php-8.3-ldap-config
-    - php-8.3-bz2
-    - php-8.3-bz2-config
-
     # ── The mapbender APK built by Melange ──
     - mapbender
 
@@ -82,11 +74,10 @@ accounts:
       shell: /sbin/nologin
   run-as: 33
 
-# Environment variables matching the original Dockerfile
+# Environment variables
 environment:
   APACHE_DOCUMENT_ROOT: /var/mapbender/application/public
   API_UPLOAD_DIR: /var/mapbender/application/uploads/
-  # Equivalent to the original mod_prefork + Apache env
   APACHE_RUN_USER: www-data
   APACHE_RUN_GROUP: www-data
 

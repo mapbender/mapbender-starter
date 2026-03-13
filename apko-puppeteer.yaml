@@ -19,11 +19,9 @@ contents:
     - php-8.3-config
     - php-8.3-apache
 
-    # ── PHP extensions (runtime .so files) ──
+    # ── PHP extensions (slim baseline — pulled in by mapbender APK) ──
     - php-8.3-pdo
     - php-8.3-pdo-config
-    - php-8.3-pdo_pgsql
-    - php-8.3-pdo_pgsql-config
     - php-8.3-pdo_sqlite
     - php-8.3-pdo_sqlite-config
     - php-8.3-curl
@@ -36,8 +34,6 @@ contents:
     - php-8.3-mbstring-config
     - php-8.3-zip
     - php-8.3-zip-config
-    - php-8.3-bz2
-    - php-8.3-bz2-config
     - php-8.3-xml
     - php-8.3-xml-config
     - php-8.3-simplexml
@@ -46,8 +42,6 @@ contents:
     - php-8.3-xmlreader-config
     - php-8.3-xmlwriter
     - php-8.3-xmlwriter-config
-    - php-8.3-ldap
-    - php-8.3-ldap-config
     - php-8.3-opcache
     - php-8.3-opcache-config
     - php-8.3-openssl
@@ -65,14 +59,40 @@ contents:
     - php-8.3-phar
     - php-8.3-phar-config
 
+    # ── Full image extras (not in slim) ──
+    - php-8.3-pdo_pgsql
+    - php-8.3-pdo_pgsql-config
+    - php-8.3-ldap
+    - php-8.3-ldap-config
+    - php-8.3-bz2
+    - php-8.3-bz2-config
+
     # ── The mapbender APK built by Melange ──
     - mapbender
 
-    # ── Puppeteer: Node.js + Chromium + puppeteer module ──
+    # ── Puppeteer: Node.js + Chrome for Testing + minimal system libs ──
     - mapbender-puppeteer
     - nodejs-22
-    - chromium
     - font-liberation
+    # Minimal system libs required by Chrome for Testing
+    - libx11
+    - libxcomposite
+    - libxdamage
+    - libxext
+    - libxfixes
+    - libxrandr
+    - alsa-lib
+    - at-spi2-core
+    - cairo
+    - cups-libs
+    - dbus-libs
+    - libexpat1
+    - mesa-gbm
+    - libnspr
+    - libnss
+    - pango
+    - libxcb
+    - libxkbcommon
 
 # Accounts: non-root user for runtime
 accounts:
@@ -94,8 +114,8 @@ environment:
   APACHE_RUN_GROUP: www-data
   MB_PUPPETEER_NO_SANDBOX: "true"
   NODE_PATH: /usr/local/lib/node_modules
-  # Tell puppeteer to use system-installed Chromium
-  PUPPETEER_EXECUTABLE_PATH: /usr/bin/chromium-browser
+  PUPPETEER_CACHE_DIR: /opt/puppeteer-cache
+  PUPPETEER_EXECUTABLE_PATH: /usr/local/bin/chrome-headless-shell
 
 # Working directory
 work-dir: /var/mapbender

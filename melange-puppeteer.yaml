@@ -2,14 +2,32 @@ package:
   name: mapbender-puppeteer
   version: 4.2.5
   epoch: 0
-  description: "Puppeteer (Node.js + Chromium) for Mapbender vector tile printing"
+  description: "Puppeteer (Node.js + Chrome for Testing) for Mapbender vector tile printing"
   copyright:
     - license: MIT
   dependencies:
     runtime:
       - nodejs-22
-      - chromium
       - font-liberation
+      # Minimal system libs required by Chrome for Testing
+      - libx11
+      - libxcomposite
+      - libxdamage
+      - libxext
+      - libxfixes
+      - libxrandr
+      - alsa-lib
+      - at-spi2-core
+      - cairo
+      - cups-libs
+      - dbus-libs
+      - libexpat1
+      - mesa-gbm
+      - libnspr
+      - libnss
+      - pango
+      - libxcb
+      - libxkbcommon
 
 environment:
   contents:
@@ -25,32 +43,41 @@ environment:
       - npm
 
 pipeline:
-  # Step 1: Install puppeteer globally via npm (skip Chromium download — we use Wolfi's chromium package)
+  # Step 1: Install puppeteer globally and download Chrome for Testing
   - runs: |
       set -ex
       export HOME=/tmp/puppeteer-build
       mkdir -p "$HOME"
 
-      # Tell puppeteer to skip downloading Chromium (we use the system-installed one)
-      export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
-      export PUPPETEER_SKIP_DOWNLOAD=true
+      # Install puppeteer — skip default Chrome download, then fetch only chrome-headless-shell
+      PUPPETEER_SKIP_DOWNLOAD=true npm install -g puppeteer
+      npx -y @puppeteer/browsers install chrome-headless-shell@stable --path "$HOME/.cache/puppeteer"
 
-      npm install -g puppeteer
+      dest="${{targets.destdir}}"
 
       # Copy the global node_modules into the package
-      dest="${{targets.destdir}}"
       mkdir -p "$dest/usr/local/lib/node_modules"
       cp -a /usr/local/lib/node_modules/puppeteer "$dest/usr/local/lib/node_modules/puppeteer"
 
-      # Create a puppeteer config that points to the system Chromium.
-      # This is critical because Symfony's Process class replaces the entire env,
-      # so PUPPETEER_EXECUTABLE_PATH is lost. The config file in the application
-      # directory (the cwd when print-vectortile.js runs) ensures puppeteer
-      # always finds the browser regardless of environment.
+      # Copy only chrome-headless-shell (not full Chrome)
+      mkdir -p "$dest/opt/puppeteer-cache"
+      cp -a "$HOME/.cache/puppeteer/chrome-headless-shell" "$dest/opt/puppeteer-cache/"
+
+      # Find the chrome-headless-shell binary and record its path
+      HEADLESS_BIN=$(find "$dest/opt/puppeteer-cache" -name "chrome-headless-shell" -type f | head -1)
+      # Strip the destdir prefix to get the runtime path
+      HEADLESS_RUNTIME_PATH="${HEADLESS_BIN#$dest}"
+      echo "chrome-headless-shell binary at: $HEADLESS_RUNTIME_PATH"
+      mkdir -p "$dest/usr/local/bin"
+      ln -sf "$HEADLESS_RUNTIME_PATH" "$dest/usr/local/bin/chrome-headless-shell"
+
+      # Create a puppeteer config that tells puppeteer where the cache is.
+      # The cacheDirectory is critical because Symfony Process may not pass
+      # all env vars through to the node child process.
       mkdir -p "$dest/var/mapbender/application"
       printf '%s\n' \
         "module.exports = {" \
-        "  executablePath: '/usr/bin/chromium-browser'," \
+        "  cacheDirectory: '/opt/puppeteer-cache'," \
         "};" \
         > "$dest/var/mapbender/application/.puppeteerrc.cjs"
 

@@ -8,9 +8,10 @@
 #   ./build-wolfi-image.sh [target]
 #
 # Targets:
-#   mapbender            Build the base mapbender image (default)
+#   mapbender-slim       Build the slim mapbender image (SQLite only, no PostgreSQL/LDAP)
+#   mapbender            Build the full mapbender image (PostgreSQL + LDAP + bz2)
 #   mapbender-puppeteer  Build the mapbender image with Puppeteer (Node.js + Chromium)
-#   all                  Build both images
+#   all                  Build all images
 #
 set -euo pipefail
 
@@ -50,6 +51,28 @@ build_puppeteer_apk() {
       --signing-key melange.rsa \
       --out-dir /work/packages \
       --source-dir /work
+}
+
+assemble_slim() {
+  echo "==> Assembling mapbender-slim OCI image with Apko..."
+  docker run --rm \
+    -v "$WORKDIR:/work" \
+    -w /work \
+    cgr.dev/chainguard/apko build apko-slim.yaml \
+      "mapbender-slim-wolfi:latest" \
+      /work/mapbender-slim-wolfi.tar \
+      --keyring-append /work/melange.rsa.pub \
+      --repository-append /work/packages \
+      --arch x86_64
+
+  echo "==> Loading mapbender-slim image into Docker..."
+  docker load < "$WORKDIR/mapbender-slim-wolfi.tar"
+
+  echo ""
+  echo "    Image: mapbender-slim-wolfi:latest"
+  echo "    Test:  docker run --rm --entrypoint /usr/bin/php mapbender-slim-wolfi:latest-amd64 ./application/bin/console mapbender:config:check"
+  echo "    Run:   docker run -p 8080:8080 mapbender-slim-wolfi:latest-amd64"
+  echo ""
 }
 
 assemble_mapbender() {
@@ -97,6 +120,10 @@ assemble_puppeteer() {
 }
 
 case "$TARGET" in
+  mapbender-slim)
+    build_mapbender_apk
+    assemble_slim
+    ;;
   mapbender)
     build_mapbender_apk
     assemble_mapbender
@@ -109,12 +136,13 @@ case "$TARGET" in
   all)
     build_mapbender_apk
     build_puppeteer_apk
+    assemble_slim
     assemble_mapbender
     assemble_puppeteer
     ;;
   *)
     echo "Unknown target: $TARGET"
-    echo "Usage: $0 [mapbender|mapbender-puppeteer|all]"
+    echo "Usage: $0 [mapbender-slim|mapbender|mapbender-puppeteer|all]"
     exit 1
     ;;
 esac
