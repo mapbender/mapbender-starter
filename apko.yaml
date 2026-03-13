@@ -1,0 +1,150 @@
+contents:
+  repositories:
+    - https://packages.wolfi.dev/os
+  keyring:
+    - https://packages.wolfi.dev/os/wolfi-signing.rsa.pub
+  packages:
+    # ── Wolfi base ──
+    - wolfi-baselayout
+    - ca-certificates-bundle
+    - tzdata
+    - busybox
+
+    # ── Apache httpd ──
+    - apache2
+    - apache2-config
+
+    # ── PHP 8.3 core + mod_php ──
+    - php-8.3
+    - php-8.3-config
+    - php-8.3-apache
+
+    # ── PHP extensions (runtime .so files) ──
+    - php-8.3-pdo
+    - php-8.3-pdo-config
+    - php-8.3-pdo_pgsql
+    - php-8.3-pdo_pgsql-config
+    - php-8.3-pdo_sqlite
+    - php-8.3-pdo_sqlite-config
+    - php-8.3-curl
+    - php-8.3-curl-config
+    - php-8.3-gd
+    - php-8.3-gd-config
+    - php-8.3-intl
+    - php-8.3-intl-config
+    - php-8.3-mbstring
+    - php-8.3-mbstring-config
+    - php-8.3-zip
+    - php-8.3-zip-config
+    - php-8.3-bz2
+    - php-8.3-bz2-config
+    - php-8.3-xml
+    - php-8.3-xml-config
+    - php-8.3-simplexml
+    - php-8.3-simplexml-config
+    - php-8.3-xmlreader
+    - php-8.3-xmlreader-config
+    - php-8.3-xmlwriter
+    - php-8.3-xmlwriter-config
+    - php-8.3-ldap
+    - php-8.3-ldap-config
+    - php-8.3-opcache
+    - php-8.3-opcache-config
+    - php-8.3-openssl
+    - php-8.3-openssl-config
+    - php-8.3-sodium
+    - php-8.3-sodium-config
+    - php-8.3-ctype
+    - php-8.3-ctype-config
+    - php-8.3-dom
+    - php-8.3-dom-config
+    - php-8.3-fileinfo
+    - php-8.3-fileinfo-config
+    - php-8.3-iconv
+    - php-8.3-iconv-config
+    - php-8.3-phar
+    - php-8.3-phar-config
+
+    # ── The mapbender APK built by Melange ──
+    - mapbender
+
+# Accounts: non-root user for runtime
+accounts:
+  groups:
+    - groupname: www-data
+      gid: 33
+  users:
+    - username: www-data
+      uid: 33
+      gid: 33
+      shell: /sbin/nologin
+  run-as: 33
+
+# Environment variables matching the original Dockerfile
+environment:
+  APACHE_DOCUMENT_ROOT: /var/mapbender/application/public
+  API_UPLOAD_DIR: /var/mapbender/application/uploads/
+  # Equivalent to the original mod_prefork + Apache env
+  APACHE_RUN_USER: www-data
+  APACHE_RUN_GROUP: www-data
+
+# Working directory
+work-dir: /var/mapbender
+
+# Entrypoint & CMD
+entrypoint:
+  command: /usr/local/bin/docker-entrypoint.sh
+cmd: -D FOREGROUND -f /etc/apache2/httpd.conf
+
+# Paths that need to be owned by www-data at runtime
+paths:
+  - path: /var/mapbender/application/var
+    type: directory
+    uid: 33
+    gid: 33
+    permissions: 0o755
+  - path: /var/mapbender/application/var/cache
+    type: directory
+    uid: 33
+    gid: 33
+    permissions: 0o755
+  - path: /var/mapbender/application/var/log
+    type: directory
+    uid: 33
+    gid: 33
+    permissions: 0o755
+  - path: /var/mapbender/application/var/db
+    type: directory
+    uid: 33
+    gid: 33
+    permissions: 0o755
+  - path: /var/mapbender/application/public/uploads
+    type: directory
+    uid: 33
+    gid: 33
+    permissions: 0o755
+  - path: /var/log/apache2
+    type: directory
+    uid: 33
+    gid: 33
+    permissions: 0o755
+  - path: /etc/apache2
+    type: directory
+    uid: 33
+    gid: 33
+    permissions: 0o755
+    recursive: true
+  - path: /run/apache2
+    type: directory
+    uid: 33
+    gid: 33
+    permissions: 0o755
+  - path: /tmp
+    type: directory
+    uid: 33
+    gid: 33
+    permissions: 0o1777
+
+archs:
+  - x86_64
+  - aarch64

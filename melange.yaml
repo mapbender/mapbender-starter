@@ -1,0 +1,231 @@
+package:
+  name: mapbender
+  version: 4.2.5
+  epoch: 0
+  description: "Mapbender geoportal framework application"
+  copyright:
+    - license: MIT
+  dependencies:
+    runtime:
+      # PHP core + Apache mod_php
+      - php-8.3
+      - php-8.3-apache
+      # PHP extensions required by Mapbender
+      - php-8.3-pdo
+      - php-8.3-pdo_pgsql
+      - php-8.3-pdo_sqlite
+      - php-8.3-curl
+      - php-8.3-gd
+      - php-8.3-intl
+      - php-8.3-mbstring
+      - php-8.3-zip
+      - php-8.3-bz2
+      - php-8.3-xml
+      - php-8.3-simplexml
+      - php-8.3-xmlreader
+      - php-8.3-xmlwriter
+      - php-8.3-ldap
+      - php-8.3-opcache
+      - php-8.3-openssl
+      - php-8.3-sodium
+      - php-8.3-ctype
+      - php-8.3-dom
+      - php-8.3-fileinfo
+      - php-8.3-iconv
+      - php-8.3-phar
+      # PHP extension configs (enable .ini files)
+      - php-8.3-pdo-config
+      - php-8.3-pdo_pgsql-config
+      - php-8.3-pdo_sqlite-config
+      - php-8.3-curl-config
+      - php-8.3-gd-config
+      - php-8.3-intl-config
+      - php-8.3-mbstring-config
+      - php-8.3-zip-config
+      - php-8.3-bz2-config
+      - php-8.3-xml-config
+      - php-8.3-simplexml-config
+      - php-8.3-xmlreader-config
+      - php-8.3-xmlwriter-config
+      - php-8.3-ldap-config
+      - php-8.3-opcache-config
+      - php-8.3-openssl-config
+      - php-8.3-sodium-config
+      - php-8.3-ctype-config
+      - php-8.3-dom-config
+      - php-8.3-fileinfo-config
+      - php-8.3-iconv-config
+      - php-8.3-phar-config
+      # Apache httpd
+      - apache2
+      - apache2-config
+
+environment:
+  contents:
+    repositories:
+      - https://packages.wolfi.dev/os
+    keyring:
+      - https://packages.wolfi.dev/os/wolfi-signing.rsa.pub
+    packages:
+      # Build tools
+      - busybox
+      - ca-certificates-bundle
+      - wolfi-base
+      - git
+      - curl
+      - unzip
+      - openssl
+      # PHP + composer for build
+      - php-8.3
+      - php-8.3-phar
+      - php-8.3-phar-config
+      - php-8.3-curl
+      - php-8.3-curl-config
+      - php-8.3-openssl
+      - php-8.3-openssl-config
+      - php-8.3-mbstring
+      - php-8.3-mbstring-config
+      - php-8.3-iconv
+      - php-8.3-iconv-config
+      - php-8.3-dom
+      - php-8.3-dom-config
+      - php-8.3-xml
+      - php-8.3-xml-config
+      - php-8.3-simplexml
+      - php-8.3-simplexml-config
+      - php-8.3-xmlwriter
+      - php-8.3-xmlwriter-config
+      - php-8.3-xmlreader
+      - php-8.3-xmlreader-config
+      - php-8.3-ctype
+      - php-8.3-ctype-config
+      - php-8.3-fileinfo
+      - php-8.3-fileinfo-config
+      - php-8.3-zip
+      - php-8.3-zip-config
+      - php-8.3-pdo
+      - php-8.3-pdo-config
+      - php-8.3-pdo_sqlite
+      - php-8.3-pdo_sqlite-config
+      - php-8.3-sodium
+      - php-8.3-sodium-config
+      - php-8.3-intl
+      - php-8.3-intl-config
+      - php-8.3-gd
+      - php-8.3-gd-config
+      - php-8.3-bz2
+      - php-8.3-bz2-config
+      - php-8.3-pdo_pgsql
+      - php-8.3-pdo_pgsql-config
+      - php-8.3-ldap
+      - php-8.3-ldap-config
+      - php-8.3-opcache
+      - php-8.3-opcache-config
+      - composer
+
+pipeline:
+  # Step 1: Copy the entire mapbender-starter source tree
+  - runs: |
+      set -ex
+      mkdir -p "${{targets.destdir}}/var/mapbender"
+      # Copy project files (excluding build artifacts)
+      for item in bootstrap bootstrap.bat build.properties application docker \
+                  CHANGELOG.md CONTRIBUTING.md LICENSE README.md; do
+        if [ -e "$item" ]; then
+          cp -a "$item" "${{targets.destdir}}/var/mapbender/$item"
+        fi
+      done
+
+  # Step 2: Run composer install (the bootstrap script)
+  - runs: |
+      set -ex
+      export HOME=/tmp/build-home
+      mkdir -p "$HOME"
+
+      cd "${{targets.destdir}}/var/mapbender"
+
+      # Remove stale lock and run composer install
+      rm -f application/composer.lock
+      cd application
+      php bin/composer install -o --no-scripts --no-suggest
+      php bin/composer init-example
+      php bin/console assets:install --symlink --relative
+      php bin/console mapbender:database:init -v
+
+      # Generate JWT keypair
+      if ! grep -q "JWT_PASSPHRASE=" .env.local 2>/dev/null; then
+        echo "JWT_PASSPHRASE='$(openssl rand -base64 32)'" >> .env.local
+      fi
+      php bin/console lexik:jwt:generate-keypair
+
+      php bin/composer run post-install-cmd
+      cd ..
+
+  # Step 3: Replace VectorTilesBundle files with patched versions
+  - runs: |
+      set -ex
+      cd "${{targets.destdir}}/var/mapbender"
+      curl -fsSL https://raw.githubusercontent.com/mapbender/mapbender/b762f26fa0439aa9a5c4e1a620f36718fd5845ce/src/Mapbender/VectorTilesBundle/Component/VectorTilesRenderer.php \
+        -o application/mapbender/src/Mapbender/VectorTilesBundle/Component/VectorTilesRenderer.php
+      curl -fsSL https://raw.githubusercontent.com/mapbender/mapbender/b762f26fa0439aa9a5c4e1a620f36718fd5845ce/src/Mapbender/VectorTilesBundle/Resources/js/print-vectortile.js \
+        -o application/mapbender/src/Mapbender/VectorTilesBundle/Resources/js/print-vectortile.js
+
+  # Step 4: Install Apache & PHP configuration files
+  - runs: |
+      set -ex
+      dest="${{targets.destdir}}"
+
+      # Custom php.ini overrides (placed in scan dir to avoid conflicting with php-8.3-config)
+      install -Dm644 docker/php.ini "$dest/etc/php/conf.d/99-mapbender.ini"
+
+      # Apache vhost configuration
+      install -Dm644 docker/mapbender_apache.conf "$dest/etc/apache2/conf.d/mapbender.conf"
+
+      # Enable required Apache modules + PHP module config
+      mkdir -p "$dest/etc/apache2/conf.d"
+      printf '%s\n' \
+        'LoadModule rewrite_module usr/lib/apache2/modules/mod_rewrite.so' \
+        'LoadModule remoteip_module usr/lib/apache2/modules/mod_remoteip.so' \
+        'LoadModule php_module usr/lib/apache2/modules/libphp.so' \
+        'Include etc/apache2/extra/php_module.conf' \
+        > "$dest/etc/apache2/conf.d/mapbender-modules.conf"
+
+      # Override default listen port to 8080, suppress ServerName warning, and redirect logs
+      printf '%s\n' \
+        'Listen 8080' \
+        'ServerName localhost' \
+        'ErrorLog /dev/stderr' \
+        'TransferLog /dev/stdout' \
+        > "$dest/etc/apache2/conf.d/listen-8080.conf"
+
+      # Create entrypoint script that patches httpd.conf at startup and launches Apache
+      mkdir -p "$dest/usr/local/bin"
+      printf '#!/bin/sh\n' > "$dest/usr/local/bin/docker-entrypoint.sh"
+      printf 'sed -i "s/^Listen 80$/#Listen 80/" /etc/apache2/httpd.conf\n' >> "$dest/usr/local/bin/docker-entrypoint.sh"
+      printf 'grep -q "IncludeOptional etc/apache2/conf.d/" /etc/apache2/httpd.conf || echo "IncludeOptional etc/apache2/conf.d/*.conf" >> /etc/apache2/httpd.conf\n' >> "$dest/usr/local/bin/docker-entrypoint.sh"
+      printf 'exec /usr/bin/httpd "$@"\n' >> "$dest/usr/local/bin/docker-entrypoint.sh"
+      chmod 755 "$dest/usr/local/bin/docker-entrypoint.sh"
+
+      # Create necessary runtime directories
+      mkdir -p "$dest/var/mapbender/application/var/cache"
+      mkdir -p "$dest/var/mapbender/application/var/log"
+      mkdir -p "$dest/var/mapbender/application/var/db"
+      mkdir -p "$dest/tmp"
+
+      # Clean up build artifacts not needed at runtime
+      rm -rf "$dest/var/mapbender/application/vendor/*/test"
+      rm -rf "$dest/var/mapbender/application/vendor/*/tests"
+      rm -rf "$dest/var/mapbender/application/vendor/*/Tests"
+      rm -rf "$dest/var/mapbender/application/vendor/*/*/.git"
+      find "$dest/var/mapbender" -name ".git" -type d -exec rm -rf {} + 2>/dev/null || true
+      find "$dest/var/mapbender" -name "*.md" -not -name "README.md" -delete 2>/dev/null || true
+
+  # Step 5: Set ownership to www-data (uid:gid 33:33) for all application files
+  - runs: |
+      set -ex
+      # Remove Symfony cache generated during build — it will be regenerated at runtime by www-data
+      rm -rf "${{targets.destdir}}/var/mapbender/application/var/cache/prod"
+      rm -rf "${{targets.destdir}}/var/mapbender/application/var/cache/dev"
+      # Ensure the writable directories exist and are owned by www-data
+      chown -R 33:33 "${{targets.destdir}}/var/mapbender"
+      chown -R 33:33 "${{targets.destdir}}/tmp"

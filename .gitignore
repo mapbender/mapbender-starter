@@ -23,3 +23,13 @@ application/mapbender
 dist
 
 .phpunit.result.cache
+
+# Melange / Apko build artifacts
+melange.rsa
+melange.rsa.pub
+packages/
+mapbender-wolfi.tar
+sbom-*.spdx.json
+
+# Distroless build files
+docker/distroless-fs/
