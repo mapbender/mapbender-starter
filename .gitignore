@@ -29,6 +29,7 @@ melange.rsa
 melange.rsa.pub
 packages/
 mapbender-wolfi.tar
+mapbender-puppeteer-wolfi.tar
 sbom-*.spdx.json
 
 # Distroless build files

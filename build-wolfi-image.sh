@@ -5,58 +5,118 @@
 # Uses melange and apko via their official Docker images.
 #
 # Usage:
-#   ./build-wolfi-image.sh [image-name:tag]
+#   ./build-wolfi-image.sh [target]
+#
+# Targets:
+#   mapbender            Build the base mapbender image (default)
+#   mapbender-puppeteer  Build the mapbender image with Puppeteer (Node.js + Chromium)
+#   all                  Build both images
 #
 set -euo pipefail
 
-IMAGE_NAME="${1:-mapbender-wolfi:latest}"
+TARGET="${1:-all}"
 WORKDIR="$(cd "$(dirname "$0")" && pwd)"
 PACKAGES_DIR="$WORKDIR/packages"
 
-echo "==> Cleaning previous build artifacts..."
-rm -rf "$PACKAGES_DIR"
-mkdir -p "$PACKAGES_DIR"
+build_mapbender_apk() {
+  echo "==> Cleaning previous build artifacts..."
+  rm -rf "$PACKAGES_DIR"
+  mkdir -p "$PACKAGES_DIR"
 
-# ─── Step 1: Generate a temporary signing key for Melange ───
-echo "==> Generating Melange signing key..."
-docker run --rm \
-  -v "$WORKDIR:/work" \
-  -w /work \
-  cgr.dev/chainguard/melange keygen
+  echo "==> Generating Melange signing key..."
+  docker run --rm \
+    -v "$WORKDIR:/work" \
+    -w /work \
+    cgr.dev/chainguard/melange keygen
 
-# ─── Step 2: Build the mapbender APK with Melange ───
-echo "==> Building mapbender APK with Melange..."
-docker run --rm --privileged \
-  -v "$WORKDIR:/work" \
-  -w /work \
-  cgr.dev/chainguard/melange build melange.yaml \
-    --arch x86_64 \
-    --signing-key melange.rsa \
-    --out-dir /work/packages \
-    --source-dir /work
+  echo "==> Building mapbender APK with Melange..."
+  docker run --rm --privileged \
+    -v "$WORKDIR:/work" \
+    -w /work \
+    cgr.dev/chainguard/melange build melange.yaml \
+      --arch x86_64 \
+      --signing-key melange.rsa \
+      --out-dir /work/packages \
+      --source-dir /work
+}
 
-# ─── Step 3: Assemble the OCI image with Apko ───
-echo "==> Assembling OCI image with Apko..."
-docker run --rm \
-  -v "$WORKDIR:/work" \
-  -w /work \
-  cgr.dev/chainguard/apko build apko.yaml \
-    "$IMAGE_NAME" \
-    /work/mapbender-wolfi.tar \
-    --keyring-append /work/melange.rsa.pub \
-    --repository-append /work/packages \
-    --arch x86_64
+build_puppeteer_apk() {
+  echo "==> Building mapbender-puppeteer APK with Melange..."
+  docker run --rm --privileged \
+    -v "$WORKDIR:/work" \
+    -w /work \
+    cgr.dev/chainguard/melange build melange-puppeteer.yaml \
+      --arch x86_64 \
+      --signing-key melange.rsa \
+      --out-dir /work/packages \
+      --source-dir /work
+}
 
-# ─── Step 4: Load into Docker ───
-echo "==> Loading image into Docker..."
-docker load < "$WORKDIR/mapbender-wolfi.tar"
+assemble_mapbender() {
+  echo "==> Assembling mapbender OCI image with Apko..."
+  docker run --rm \
+    -v "$WORKDIR:/work" \
+    -w /work \
+    cgr.dev/chainguard/apko build apko.yaml \
+      "mapbender-wolfi:latest" \
+      /work/mapbender-wolfi.tar \
+      --keyring-append /work/melange.rsa.pub \
+      --repository-append /work/packages \
+      --arch x86_64
 
-echo ""
+  echo "==> Loading mapbender image into Docker..."
+  docker load < "$WORKDIR/mapbender-wolfi.tar"
+
+  echo ""
+  echo "    Image: mapbender-wolfi:latest"
+  echo "    Test:  docker run --rm --entrypoint /usr/bin/php mapbender-wolfi:latest-amd64 ./application/bin/console mapbender:config:check"
+  echo "    Run:   docker run -p 8080:8080 mapbender-wolfi:latest-amd64"
+  echo ""
+}
+
+assemble_puppeteer() {
+  echo "==> Assembling mapbender-puppeteer OCI image with Apko..."
+  docker run --rm \
+    -v "$WORKDIR:/work" \
+    -w /work \
+    cgr.dev/chainguard/apko build apko-puppeteer.yaml \
+      "mapbender-puppeteer-wolfi:latest" \
+      /work/mapbender-puppeteer-wolfi.tar \
+      --keyring-append /work/melange.rsa.pub \
+      --repository-append /work/packages \
+      --arch x86_64
+
+  echo "==> Loading mapbender-puppeteer image into Docker..."
+  docker load < "$WORKDIR/mapbender-puppeteer-wolfi.tar"
+
+  echo ""
+  echo "    Image: mapbender-puppeteer-wolfi:latest"
+  echo "    Test:  docker run --rm --entrypoint /usr/bin/php mapbender-puppeteer-wolfi:latest-amd64 ./application/bin/console mapbender:config:check"
+  echo "    Run:   docker run -p 8080:8080 -e MB_PUPPETEER_NO_SANDBOX=true mapbender-puppeteer-wolfi:latest-amd64"
+  echo ""
+}
+
+case "$TARGET" in
+  mapbender)
+    build_mapbender_apk
+    assemble_mapbender
+    ;;
+  mapbender-puppeteer)
+    build_mapbender_apk
+    build_puppeteer_apk
+    assemble_puppeteer
+    ;;
+  all)
+    build_mapbender_apk
+    build_puppeteer_apk
+    assemble_mapbender
+    assemble_puppeteer
+    ;;
+  *)
+    echo "Unknown target: $TARGET"
+    echo "Usage: $0 [mapbender|mapbender-puppeteer|all]"
+    exit 1
+    ;;
+esac
+
 echo "==> Build complete!"
-echo "    Image: $IMAGE_NAME"
-echo ""
-echo "    Test with:"
-echo "      docker run --rm $IMAGE_NAME /usr/bin/php ./application/bin/console mapbender:config:check"
-echo ""
-echo "    Run with:"
-echo "      docker run -p 8080:8080 $IMAGE_NAME"
