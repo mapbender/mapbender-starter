@@ -25,13 +25,13 @@ dist
 .phpunit.result.cache
 
 # Melange / Apko build artifacts
-melange.rsa
-melange.rsa.pub
-packages/
-mapbender-wolfi.tar
-mapbender-slim-wolfi.tar
-mapbender-puppeteer-wolfi.tar
-sbom-*.spdx.json
+docker/apko/melange.rsa
+docker/apko/melange.rsa.pub
+docker/apko/packages/
+docker/apko/mapbender-wolfi.tar
+docker/apko/mapbender-slim-wolfi.tar
+docker/apko/mapbender-puppeteer-wolfi.tar
+docker/apko/sbom-*.spdx.json
 
 # Distroless build files
 docker/distroless-fs/
