@@ -35,3 +35,5 @@ docker/apko/sbom-*.spdx.json
 
 # Distroless build files
 docker/distroless-fs/
+sbom-index.spdx.json
+sbom-x86_64.spdx.json

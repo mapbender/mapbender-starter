@@ -10,26 +10,21 @@ package:
       # PHP core + Apache mod_php
       - php-8.3
       - php-8.3-apache
-      # PHP extensions required by Mapbender (slim baseline)
+      # PHP extensions — absolute minimum for Mapbender to boot and serve
       - php-8.3-pdo
       - php-8.3-pdo_sqlite
       - php-8.3-curl
       - php-8.3-gd
       - php-8.3-intl
       - php-8.3-mbstring
-      - php-8.3-zip
       - php-8.3-xml
       - php-8.3-simplexml
-      - php-8.3-xmlreader
-      - php-8.3-xmlwriter
-      - php-8.3-opcache
+      - php-8.3-zip
       - php-8.3-openssl
-      - php-8.3-sodium
       - php-8.3-ctype
       - php-8.3-dom
       - php-8.3-fileinfo
       - php-8.3-iconv
-      - php-8.3-phar
       # PHP extension configs (enable .ini files)
       - php-8.3-pdo-config
       - php-8.3-pdo_sqlite-config
@@ -37,19 +32,14 @@ package:
       - php-8.3-gd-config
       - php-8.3-intl-config
       - php-8.3-mbstring-config
-      - php-8.3-zip-config
       - php-8.3-xml-config
       - php-8.3-simplexml-config
-      - php-8.3-xmlreader-config
-      - php-8.3-xmlwriter-config
-      - php-8.3-opcache-config
+      - php-8.3-zip-config
       - php-8.3-openssl-config
-      - php-8.3-sodium-config
       - php-8.3-ctype-config
       - php-8.3-dom-config
       - php-8.3-fileinfo-config
       - php-8.3-iconv-config
-      - php-8.3-phar-config
       # Apache httpd
       - apache2
       - apache2-config
