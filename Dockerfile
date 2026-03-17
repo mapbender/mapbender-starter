@@ -1,5 +1,5 @@
 # Stage: compile PHP extensions with dev dependencies
-FROM php:8.3-apache AS php-ext-builder
+FROM php:8.4-apache AS php-ext-builder
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
         libpq-dev \
@@ -67,14 +67,7 @@ RUN apt-get update && apt-get install -y \
 USER www-data
 # required to create a complete mapbender application container image including all dependencies
 RUN git config --global --add safe.directory /var/mapbender
-RUN rm application/composer.lock && ./bootstrap
-
-# Replace VectorTilesBundle files with patched versions
-RUN curl -fsSL https://raw.githubusercontent.com/mapbender/mapbender/b762f26fa0439aa9a5c4e1a620f36718fd5845ce/src/Mapbender/VectorTilesBundle/Component/VectorTilesRenderer.php \
-        -o application/mapbender/src/Mapbender/VectorTilesBundle/Component/VectorTilesRenderer.php \
-    && curl -fsSL https://raw.githubusercontent.com/mapbender/mapbender/b762f26fa0439aa9a5c4e1a620f36718fd5845ce/src/Mapbender/VectorTilesBundle/Resources/js/print-vectortile.js \
-        -o application/mapbender/src/Mapbender/VectorTilesBundle/Resources/js/print-vectortile.js
-
+RUN ./bootstrap
 
 FROM base-container AS mapbender
 
