@@ -1,24 +1,10 @@
-application/public/uploads
-
-!application/public/uploads/mapbender_user
-!application/public/uploads/mapbender_user_basic
-*/config/parameters.yaml
 */vendor
 *.tar.gz
 *.rpm
 *.deb
-local.properties
-/nbproject/private/
-testresults
 
 # IDEA Project Files
 .idea/
-
-# Composer asset components
-application/public/components/
-
-application/mapbender
-
 # Distribution files
 dist
 
@@ -26,7 +12,3 @@ dist
 
 # Git
 .git
-
-# Docker build helpers (config files are COPYed explicitly)
-docker/distroless-fs
-
