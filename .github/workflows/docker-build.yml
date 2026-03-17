@@ -9,6 +9,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        include:
+          - target: mapbender
+            tags: |
+              mapbender/mapbender:latest
+              mapbender/mapbender:${{ github.ref_name }}
+          - target: mapbender-puppeteer
+            tags: |
+              mapbender/mapbender-puppeteer:latest
+              mapbender/mapbender-puppeteer:${{ github.ref_name }}
+
     steps:
     - name: Checkout
       uses: actions/checkout@v4
@@ -25,12 +37,11 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-    - name: Build and push Docker image
+    - name: Build and push Docker image (${{ matrix.target }})
       uses: docker/build-push-action@v5
       with:
         context: .
+        target: ${{ matrix.target }}
         platforms: linux/amd64,linux/arm64
         push: true
-        tags: |
-          mapbender/mapbender:latest
-          mapbender/mapbender:${{ github.ref_name }}
+        tags: ${{ matrix.tags }}
