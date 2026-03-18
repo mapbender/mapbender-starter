@@ -1,0 +1,14 @@
+*/vendor
+*.tar.gz
+*.rpm
+*.deb
+
+# IDEA Project Files
+.idea/
+# Distribution files
+dist
+
+.phpunit.result.cache
+
+# Git
+.git
