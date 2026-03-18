@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f96cc71889352155387632d8fc3421b0",
+    "content-hash": "b2f75f6663a0ae9f2fe8912c019c4a0d",
     "packages": [
         {
             "name": "assetic/framework",
@@ -1820,16 +1820,16 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v4.2.1",
+            "version": "dev-feature/ogc-api-datasource-styling",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "680beb8660ff313066c3de079ca9ed47b8c77e71"
+                "reference": "634bfc5c8cd6871bec45730e4311771ad8b13179"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/680beb8660ff313066c3de079ca9ed47b8c77e71",
-                "reference": "680beb8660ff313066c3de079ca9ed47b8c77e71",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/634bfc5c8cd6871bec45730e4311771ad8b13179",
+                "reference": "634bfc5c8cd6871bec45730e4311771ad8b13179",
                 "shasum": ""
             },
             "require": {
@@ -1943,9 +1943,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/mapbender/issues",
-                "source": "https://github.com/mapbender/mapbender/tree/v4.2.1"
+                "source": "https://github.com/mapbender/mapbender/tree/feature/ogc-api-datasource-styling"
             },
-            "time": "2025-09-04T08:40:47+00:00"
+            "time": "2026-03-18T14:26:48+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -1993,16 +1993,16 @@
         },
         {
             "name": "mapbender/openlayers6-es5",
-            "version": "10.6.1.2",
+            "version": "10.8.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/openlayers6-es5.git",
-                "reference": "2013b9c5c86766529dc372b4cb891a177fabd26e"
+                "reference": "3d4c164241cd9cfad36c40a98ca99439cd15996b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/openlayers6-es5/zipball/2013b9c5c86766529dc372b4cb891a177fabd26e",
-                "reference": "2013b9c5c86766529dc372b4cb891a177fabd26e",
+                "url": "https://api.github.com/repos/mapbender/openlayers6-es5/zipball/3d4c164241cd9cfad36c40a98ca99439cd15996b",
+                "reference": "3d4c164241cd9cfad36c40a98ca99439cd15996b",
                 "shasum": ""
             },
             "type": "component",
@@ -2025,9 +2025,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/openlayers6-es5/issues",
-                "source": "https://github.com/mapbender/openlayers6-es5/tree/10.6.1.2"
+                "source": "https://github.com/mapbender/openlayers6-es5/tree/10.8.0.0"
             },
-            "time": "2025-07-14T13:30:59+00:00"
+            "time": "2026-03-18T14:06:14+00:00"
         },
         {
             "name": "mnsami/composer-custom-directory-installer",
@@ -11099,7 +11099,20 @@
             "time": "2024-03-03T12:36:25+00:00"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "mapbender/digitizer",
+            "version": "dev-develop",
+            "alias": "2.9.9",
+            "alias_normalized": "2.9.9.0"
+        },
+        {
+            "package": "mapbender/mapbender",
+            "version": "dev-feature/ogc-api-datasource-styling",
+            "alias": "4.9.9",
+            "alias_normalized": "4.9.9.0"
+        }
+    ],
     "minimum-stability": "dev",
     "stability-flags": {},
     "prefer-stable": true,
