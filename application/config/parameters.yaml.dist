@@ -63,3 +63,11 @@ parameters:
     # specifies the upload directory for the Mapbender API.
     # read more at https://doc.mapbender.org/en/customization/api.html
     api_upload_dir: '%env(resolve:API_UPLOAD_DIR)%'
+
+    # default regular expression for input fields in search/data manager/digitizer.
+    # can be overridden per search field in the element configuration (`pattern`)
+    # or per data manager field in the form field configuration (`attr.pattern`).
+    # default value is '.*', allowing all characters, uncomment the lines below
+    # to restrict input to letters, digits, underscores, hyphens and whitespace.
+    # mapbender.search.default_regex: '^[\p{L}0-9_\-\s]*$'
+    # mapbender.data_manager.default_regex: '^[\p{L}0-9_\-\s]*$'
