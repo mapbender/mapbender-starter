@@ -1,3 +1,7 @@
+## next minor release
+- set default session handling to use file storage for more reliable session durations ([PR#162](https://github.com/mapbender/mapbender-starter/pull/162))
+- set session cookie to default to secure and set samesite to strict ([PR#162](https://github.com/mapbender/mapbender-starter/pull/162))
+
 ## v4.2.4
 - Update mapbender/mapbender to [v4.2.4](https://github.com/mapbender/mapbender/blob/v4.2.4/CHANGELOG.md).
 
