@@ -1,3 +1,6 @@
+## v5.0.0
+- Add OgcApiFeatureBundle to [v5.0.0](https://github.com/mapbender/mapbender-starter/pull/165).
+
 ## v4.2.4
 - Update mapbender/mapbender to [v4.2.4](https://github.com/mapbender/mapbender/blob/v4.2.4/CHANGELOG.md).
 
