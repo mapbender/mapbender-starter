@@ -406,6 +406,14 @@ parameters:
                         target: map
                         body: mb.demoapps.poi
                         useMailto: false
+                    copyright-info:
+                        class: Mapbender\CoreBundle\Element\Copyright
+                        autoOpen: true
+                        content: 'You are using Mapbender. We hope you enjoy the software.'
+                        dontShowAgain: true
+                        dontShowAgainLabel: mb.core.copyright.admin.dontShowAgainDefaultLabel
+                        popupWidth: 200
+                        popupHeight: 200
                 sidepane:
                     layertree:
                         class: Mapbender\CoreBundle\Element\Layertree
