@@ -1,6 +1,9 @@
-## next minor release
-- set default session handling to use file storage for more reliable session durations ([PR#162](https://github.com/mapbender/mapbender-starter/pull/162))
-- set session cookie to default to secure and set samesite to strict ([PR#162](https://github.com/mapbender/mapbender-starter/pull/162))
+## v4.2.5
+- Update mapbender/mapbender to [v4.2.5](https://github.com/mapbender/mapbender/blob/v4.2.5/CHANGELOG.md).
+- Update mapbender/digitizer to [2.0.6](https://github.com/mapbender/mapbender-digitizer/blob/2.0.6/CHANGELOG.md).
+- Update Openlayers to [10.8](https://github.com/openlayers/openlayers/releases/tag/v10.8.0)
+- Set default session handling to use file storage for more reliable session durations ([PR#162](https://github.com/mapbender/mapbender-starter/pull/162))
+- Set session cookie to default to secure and set samesite to strict ([PR#162](https://github.com/mapbender/mapbender-starter/pull/162))
 
 ## v4.2.4
 - Update mapbender/mapbender to [v4.2.4](https://github.com/mapbender/mapbender/blob/v4.2.4/CHANGELOG.md).
