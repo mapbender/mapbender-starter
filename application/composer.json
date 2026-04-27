@@ -49,6 +49,7 @@
             "@composer dump-autoload",
             "ComposerBootstrap::clearCache",
             "@copy-bootstrap",
+            "@copy-jquery",
             "@copy-jqueryui"
         ],
         "post-update-cmd": [
@@ -62,6 +63,14 @@
             "if exist public\\components\\bootstrap rmdir /s /q public\\components\\bootstrap",
             "xcopy vendor\\twbs\\bootstrap\\dist public\\components\\bootstrap /e /i /q /y"
         ],
+        "copy-jquery": [
+            "rm -rf public/components/jquery",
+            "cp -R vendor/npm-asset/jquery/dist public/components/jquery"
+        ],
+        "copy-jquery-windows": [
+            "if exist public\\components\\jquery rmdir /s /q public\\components\\jquery",
+            "xcopy vendor\\npm-asset\\jquery\\dist public\\components\\jquery /e /i /q /y"
+        ],
         "copy-jqueryui": [
             "rm -rf public/components/jquery-ui",
             "cp -R vendor/jquery/jquery-ui/dist public/components/jquery-ui"
@@ -74,6 +83,7 @@
             "ComposerBootstrap::installAssets",
             "ComponentMirror::postAutoloadDump",
             "@copy-bootstrap",
+            "@copy-jquery",
             "@copy-jqueryui"
         ],
         "post-autoload-dump": [
@@ -103,11 +113,13 @@
         "install-hard-copy-assets": [
             "ComposerBootstrap::installHardCopyAssets",
             "@copy-bootstrap",
+            "@copy-jquery",
             "@copy-jqueryui"
         ],
         "install-sym-link-assets": [
             "ComposerBootstrap::installSymLinkAssets",
             "@copy-bootstrap",
+            "@copy-jquery",
             "@copy-jqueryui"
         ],
         "dist":[
@@ -193,6 +205,10 @@
                     "reference": "1.14.1"
                 }
             }
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         }
     ]
 }
