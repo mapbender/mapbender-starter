@@ -5,7 +5,7 @@ services:
     ports:
       - 80:8080
     environment:
-      MAPBENDER_DATABASE_URL: "pgsql://pguser:pgpass@db:5432/postgres"
+      MAPBENDER_DATABASE_URL: "pgsql://pguser:pgpass@db:5432/mapbender"
     depends_on:
       db:
         condition: service_healthy

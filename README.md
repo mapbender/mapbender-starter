@@ -168,33 +168,44 @@ To run a Mapbender docker container configured to use an external database use t
 
 2.  Start the PostGIS database
 
-    `docker run --name db --network mapbender -p 55432:5432 -e POSTGRES_USER=pguser -e POSTGRES_PASSWORD=pgpass -e POSTGRES_DB=postgres postgis/postgis:14-3.4`
+    `docker run -d --name db --network mapbender -p 55432:5432 -e POSTGRES_USER=pguser -e POSTGRES_PASSWORD=pgpass -e POSTGRES_DB=postgres postgis/postgis:14-3.4`
 
 3.  Start Mapbender
 
-    `docker run --name mapbender --network mapbender -p 80:8080 -e MAPBENDER_DATABASE_URL="pgsql://pguser:pgpass@db:5432/postgres" mapbender/mapbender`
+    `docker run -d --name mapbender --network mapbender -p 80:8080 -e MAPBENDER_DATABASE_URL="pgsql://pguser:pgpass@db:5432/mapbender" mapbender/mapbender`
 
-4.  Create Mapbender database schema
+4.  Create Mapbender database
+
+    `docker exec mapbender php application/bin/console doctrine:database:create`
+
+5.  Create Mapbender database schema
 
     `docker exec mapbender php application/bin/console doctrine:schema:create`
 
-5.  Initialize Mapbender database
+6.  Initialize Mapbender database
 
     `docker exec mapbender php application/bin/console mapbender:database:init -v`
 
-6.  Create the Mapbender administration user
+7.  Create the Mapbender administration user
 
-    `docker exec mapbender php application/bin/console fom:user:resetroot`    
+    `docker exec -it mapbender php application/bin/console fom:user:resetroot`    
 
 ### docker/docker-compose.pgsql.yml
 
 If the Mapbender container is configured to connect to an external database that does not have the required schema yet, the schema must be created first. Start our demo setup using the following command to start a Mapbender instance connected to an empty PostgreSQL database:
 
 ```bash
-docker compose -f docker-compose.pgsql.yml up -d
+cd docker
+docker compose -f docker-compose.pgsql.yml up -d --build
 ```
 
 You can initialize the database after the Mapbender container has started.
+
+```bash
+docker compose -f docker-compose.pgsql.yml exec mapbender php application/bin/console doctrine:database:create
+```
+
+Then create the database schema.
 
 ```bash
 docker compose -f docker-compose.pgsql.yml exec mapbender php application/bin/console doctrine:schema:update --complete --force
