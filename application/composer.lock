@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "75b80adc1de3e94bdb23d7cf08cd7a00",
+    "content-hash": "4c9de6d737ebda3b3514a060507824f7",
     "packages": [
         {
             "name": "assetic/framework",
@@ -96,65 +96,6 @@
             "time": "2026-04-23T03:30:22+00:00"
         },
         {
-            "name": "blueimp/jquery-file-upload",
-            "version": "v9.34.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/vkhramtsov/jQuery-File-Upload.git",
-                "reference": "6d86a591f9a35bb811befb750dcd2c7da9ac05a2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/vkhramtsov/jQuery-File-Upload/zipball/6d86a591f9a35bb811befb750dcd2c7da9ac05a2",
-                "reference": "6d86a591f9a35bb811befb750dcd2c7da9ac05a2",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "server/php/UploadHandler.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sebastian Tschan",
-                    "homepage": "https://blueimp.net"
-                }
-            ],
-            "description": "File Upload widget for jQuery.",
-            "homepage": "https://github.com/blueimp/jQuery-File-Upload",
-            "keywords": [
-                "bootstrap",
-                "chunk",
-                "cross-domain",
-                "cross-site",
-                "drag",
-                "drop",
-                "file",
-                "gae",
-                "go",
-                "jquery",
-                "multiple",
-                "php",
-                "preview",
-                "progress",
-                "python",
-                "resume",
-                "selection",
-                "upload",
-                "widget"
-            ],
-            "support": {
-                "forum": "https://groups.google.com/forum/#!forum/jquery-fileupload",
-                "source": "https://github.com/vkhramtsov/jQuery-File-Upload/tree/v9.34.0"
-            },
-            "time": "2019-07-22T13:10:51+00:00"
-        },
-        {
             "name": "components/font-awesome",
             "version": "6.5.2",
             "source": {
@@ -194,55 +135,6 @@
             "time": "2024-04-08T15:15:22+00:00"
         },
         {
-            "name": "components/jquery",
-            "version": "v3.7.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/components/jquery.git",
-                "reference": "8edc7785239bb8c2ad2b83302b856a1d61de60e7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/components/jquery/zipball/8edc7785239bb8c2ad2b83302b856a1d61de60e7",
-                "reference": "8edc7785239bb8c2ad2b83302b856a1d61de60e7",
-                "shasum": ""
-            },
-            "type": "component",
-            "extra": {
-                "component": {
-                    "files": [
-                        "jquery.min.js",
-                        "jquery.min.map",
-                        "jquery.slim.js",
-                        "jquery.slim.min.js",
-                        "jquery.slim.min.map"
-                    ],
-                    "scripts": [
-                        "jquery.js"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "JS Foundation and other contributors"
-                }
-            ],
-            "description": "jQuery JavaScript Library",
-            "homepage": "http://jquery.com",
-            "support": {
-                "forum": "http://forum.jquery.com",
-                "irc": "irc://irc.freenode.org/jquery",
-                "issues": "https://github.com/jquery/jquery/issues",
-                "source": "https://github.com/jquery/jquery",
-                "wiki": "http://docs.jquery.com/"
-            },
-            "time": "2023-09-22T01:43:46+00:00"
-        },
-        {
             "name": "datatables.net/datatables.net",
             "version": "2.3.8",
             "source": {
@@ -257,7 +149,7 @@
                 "shasum": ""
             },
             "require": {
-                "components/jquery": ">=1.7"
+                "npm-asset/jquery": ">=4.0"
             },
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
@@ -1810,9 +1702,9 @@
                 "shasum": ""
             },
             "require": {
-                "blueimp/jquery-file-upload": "9.*",
                 "doctrine/dbal": "^2.11 || ^3",
                 "doctrine/persistence": "^2 || ^3",
+                "mapbender/jquery-file-upload": "1.*",
                 "mapbender/mapbender": "^4",
                 "php": ">=8.1"
             },
@@ -1876,6 +1768,69 @@
             "time": "2026-04-28T12:37:42+00:00"
         },
         {
+            "name": "mapbender/jquery-file-upload",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mapbender/jQuery-File-Upload.git",
+                "reference": "83e8cb8c45dff0627b2fd0bbafda18cd36e96567"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mapbender/jQuery-File-Upload/zipball/83e8cb8c45dff0627b2fd0bbafda18cd36e96567",
+                "reference": "83e8cb8c45dff0627b2fd0bbafda18cd36e96567",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev",
+                    "dev-main": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "server/php/UploadHandler.php"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Tschan",
+                    "homepage": "https://blueimp.net"
+                },
+                {
+                    "name": "Mapbender Team",
+                    "homepage": "https://mapbender.org"
+                }
+            ],
+            "description": "File Upload widget for jQuery (Mapbender fork).",
+            "homepage": "https://github.com/mapbender/jquery-file-upload",
+            "keywords": [
+                "file",
+                "jquery",
+                "mapbender",
+                "upload",
+                "widget"
+            ],
+            "support": {
+                "source": "https://github.com/mapbender/jQuery-File-Upload/tree/master"
+            },
+            "funding": [
+                {
+                    "type": "github",
+                    "url": "https://github.com/blueimp"
+                }
+            ],
+            "time": "2026-05-04T09:20:46+00:00"
+        },
+        {
             "name": "mapbender/mapbender",
             "version": "dev-develop",
             "source": {
@@ -1891,7 +1846,6 @@
             },
             "require": {
                 "assetic/framework": "^3.1",
-                "components/jquery": "^3.7.1",
                 "datatables.net/datatables.net-bs5": "^2.3",
                 "doctrine/dbal": "^3",
                 "doctrine/doctrine-bundle": "^2",
@@ -1904,6 +1858,7 @@
                 "jquery/jquery-ui": "^1.14.1",
                 "mapbender/mapbender-icons": "^1.3",
                 "mapbender/openlayers6-es5": "^10",
+                "npm-asset/jquery": "^4.0.0",
                 "php": ">=8.1",
                 "scssphp/scssphp": "^1.12",
                 "setasign/fpdf": "^1.8",
@@ -2474,6 +2429,18 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/v5.7.0"
             },
             "time": "2025-12-06T11:56:16+00:00"
+        },
+        {
+            "name": "npm-asset/jquery",
+            "version": "4.0.0",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/jquery/-/jquery-4.0.0.tgz"
+            },
+            "type": "npm-asset",
+            "license": [
+                "MIT"
+            ]
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -11208,6 +11175,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "mapbender/digitizer": 20,
+        "mapbender/jquery-file-upload": 20,
         "mapbender/mapbender": 20
     },
     "prefer-stable": true,
