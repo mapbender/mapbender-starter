@@ -210,7 +210,6 @@ parameters:
                         tooltip: mb.core.basesourceswitcher.class.title
                         class: Mapbender\CoreBundle\Element\BaseSourceSwitcher
                         display: group
-
                         instancesets:
                             1-basesourceswitcher:
                                 title: OSM (color)
@@ -265,7 +264,6 @@ parameters:
                     gps-button:
                         class: Mapbender\CoreBundle\Element\GpsPosition
                         label: true
-
                         screenType: mobile
                     poi-button:
                         class: Mapbender\CoreBundle\Element\ControlButton
@@ -286,9 +284,9 @@ parameters:
                         class: Mapbender\CoreBundle\Element\ShareUrl
                         label: true
                     copyright-button:
-                      class: Mapbender\CoreBundle\Element\ControlButton
-                      label: true
-                      target: copyright
+                        class: Mapbender\CoreBundle\Element\ControlButton
+                        label: true
+                        target: copyright
                     interactivehelp-button:
                         class: Mapbender\CoreBundle\Element\ControlButton
                         label: true
@@ -297,7 +295,6 @@ parameters:
                         title: mb.core.simplesearch.class.title
                         placeholder: mb.demoapps.search
                         class: Mapbender\CoreBundle\Element\SimpleSearch
-
                         query_url: https://osm-photon-search.wheregroup.com/search/api?limit=20&lat=50.7163&lon=7.1366&osm_tag=!railway&osm_tag=!highway:elevator&osm_tag=!tourism&osm_tag=!amenity
                         query_key: q
                         query_format: '%s'
@@ -329,19 +326,16 @@ parameters:
                         otherSrs: ["EPSG:25832","EPSG:25833","EPSG:31466","EPSG:31467","EPSG:4326"]
                     zoombar:
                         class: Mapbender\CoreBundle\Element\ZoomBar
-
                         anchor: right-top
                         draggable: false
                     legend:
                         class: Mapbender\CoreBundle\Element\Legend
-
                         elementType: dialog
                         autoOpen: false
                         showLayerTitle: true
                         showGroupedLayerTitle: true
                     featureinfo:
                         class: Mapbender\CoreBundle\Element\FeatureInfo
-
                         deactivateOnClose: false
                         onlyValid: true
                         displayType: tabs
@@ -362,17 +356,14 @@ parameters:
                         strokeWidthHover: 5
                     wmsloader:
                         class: Mapbender\WmsBundle\Element\WmsLoader
-
                         autoOpen: false
                         defaultFormat: 'image/png'
                         defaultInfoFormat: 'text/html'
                         splitLayers: false
                     imageexport:
                         class: Mapbender\PrintBundle\Element\ImageExport
-
                     printclient:
                         class: Mapbender\PrintBundle\Element\PrintClient
-
                         templates:
                             - { template: a4landscape, label: A4 Landscape}
                             - { template: a4_landscape_offical, label: A4 Landscape Official}
@@ -390,7 +381,6 @@ parameters:
                                     required: true        # true or false
                     overview:
                         class: Mapbender\CoreBundle\Element\Overview
-
                         layerset: overview
                         anchor: 'right-bottom'
                         width: 200
@@ -398,14 +388,12 @@ parameters:
                         screenType: desktop
                     scalebar:
                         class: Mapbender\CoreBundle\Element\ScaleBar
-
                         anchor: 'right-bottom'
                         maxWidth: 200
                         units: km
                         screenType: desktop
                     scaledisplay:
                         class: Mapbender\CoreBundle\Element\ScaleDisplay
-
                         anchor: right-top
                         scalePrefix: Scale
                         unitPrefix: true
@@ -414,7 +402,6 @@ parameters:
                         class: Mapbender\CoreBundle\Element\POI
                         body: mb.demoapps.poi
                         useMailto: false
-
                     interactivehelp:
                         class: Mapbender\CoreBundle\Element\InteractiveHelp
                         screenType: desktop
@@ -478,17 +465,14 @@ parameters:
                             - title: mb.interactivehelp.wmsloader.title
                               description: mb.interactivehelp.wmsloader.description
                               type: Mapbender\WmsBundle\Element\WmsLoader
-
                     copyright:
                         class: Mapbender\CoreBundle\Element\Copyright
                         autoOpen: true
                         screenType: desktop
                         content: 'We hope you like the Mapbender User Application. Use and modify it as you like.'
                         popupWidth: 300
-                        #popupHeight: 100
                         dontShowAgain: true
                         dontShowAgainLabel:  mb.core.copyright.admin.dontShowAgainDefaultLabel
-
                 sidepane:
                     simplesearch:
                         title: mb.core.simplesearch.class.title
@@ -542,7 +526,6 @@ parameters:
                                 opened: true
                                 sourceVisibility: false
                                 allSelected: false
-
                     ruler:
                         class: Mapbender\CoreBundle\Element\Ruler
                         type: both
@@ -553,7 +536,6 @@ parameters:
                         strokeWidth: 2
                         strokeWidthWhileDrawing: 3
                         screenType: desktop
-
                     sketch:
                         class: Mapbender\CoreBundle\Element\Sketch
                         geometrytypes:
@@ -568,22 +550,17 @@ parameters:
                         colors: ["#009ee0","#cf003d","#ffff33","#00837e","#ff7f00"]
                         allow_custom_color: true
                         screenType: desktop
-
                     coordinatesutility:
                         class: Mapbender\CoreBundle\Element\CoordinatesUtility
-
                         srsList: []
                         addMapSrsList: true
                         zoomlevel: 6
                         screenType: desktop
-
                     dataupload:
                         class: Mapbender\CoreBundle\Element\DataUpload
-
                         maxFileSize: 10
                         helpText: mb.core.dataupload.admin.helpText
                         screenType: desktop
-
                     applicationswitcher-sidepane:
                         class: Mapbender\CoreBundle\Element\ApplicationSwitcher
                         screenType: desktop
@@ -623,7 +600,6 @@ parameters:
                               imgUrl: 'https://www.fossgis.de/mediawiki/images/d/d3/FOSSGIS_Logo_RGB_100x45mm_600dpi.png'
                               description: Link to FOSSGIS e.V.
                               group: 'Link external Website'
-
                     viewmanager:
                         class: Mapbender\CoreBundle\Element\ViewManager
                         publicEntries: rw
@@ -631,10 +607,8 @@ parameters:
                         allowAnonymousSave: true
                         showDate: true
                         screenType: desktop
-
                     routing:
                         class: Mapbender\RoutingBundle\Element\Routing
-
                         type: element
                         title: Routing
                         advancedSettings: true
@@ -739,7 +713,6 @@ parameters:
                         screenType: desktop
                     coordinates:
                         class: Mapbender\CoreBundle\Element\CoordinatesDisplay
-
                         label: false
                         empty:  "x: - y: -"
                         prefix: "x: "
@@ -748,11 +721,9 @@ parameters:
                         screenType: desktop
                     scaleselector:
                         class: Mapbender\CoreBundle\Element\ScaleSelector
-
                         screenType: desktop
                     srs:
                         class: Mapbender\CoreBundle\Element\SrsSelector
-
                         screenType: desktop
                     applicationswitcher:
                         class: Mapbender\CoreBundle\Element\ApplicationSwitcher
@@ -776,9 +747,6 @@ parameters:
                         content: '<span style="color:#009ee0;">powered by Mapbender</span>'
                         classes: html-element-inline
                         screenType: desktop
-
-
-
                     about:
                         title: mb.core.aboutdialog.tag.about
                         label: false
