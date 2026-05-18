@@ -146,7 +146,6 @@ parameters:
                               active: false # if false, the layer is ignored (default: true)
                               selected: true # initial state of the layer. (default: true)
                               allowSelected: true # can the user change state in the layertree? If selected and allowSelected are both false, the layer is ignored. (default: true)
-
                     osm_fiord_color_vector_tiles:
                         type: vector_tiles
                         title: OSM Fiord Color Vector Tiles WhereGroup Demo
