@@ -405,7 +405,7 @@ parameters:
                     interactivehelp:
                         class: Mapbender\CoreBundle\Element\InteractiveHelp
                         screenType: desktop
-                        autopen: true
+                        autoOpen: true
                         configuration:
                           intro:
                             title: mb.interactivehelp.intro.title
@@ -660,7 +660,6 @@ parameters:
                               token_regex_in: '([a-zA-ZäöüÄÖÜß]{3,})'
                               token_regex_out: '$1*'
                               delay: 300.0
-
                     batchprintclient:
                         class: Mapbender\PrintBundle\Element\BatchPrintClient
                         templates:
@@ -682,7 +681,6 @@ parameters:
                             label: Title              # label of the optional field
                             options:                  #
                               required: true        # true or false
-
                     html-about-mapbender:
                         class: Mapbender\CoreBundle\Element\HTMLElement
                         classes: html-element-inline
