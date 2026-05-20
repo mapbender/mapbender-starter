@@ -19,19 +19,19 @@
         }
     },
     "require-dev": {
-        "dama/doctrine-test-bundle": "^7.3",
-        "phpunit/phpunit": "^10",
-        "symfony/browser-kit": "^6.4",
-        "symfony/debug-bundle": "^6.4",
-        "symfony/web-profiler-bundle": "^6.4"
+        "dama/doctrine-test-bundle": "^8.6",
+        "phpunit/phpunit": "^11.5",
+        "symfony/browser-kit": "^7.4",
+        "symfony/debug-bundle": "^7.4",
+        "symfony/web-profiler-bundle": "^7.4"
     },
     "require": {
-        "php": ">=8.1",
+        "php": ">=8.2",
         "components/font-awesome": "^6.0",
-        "doctrine/dbal": "^3",
+        "doctrine/dbal": "^4.4",
         "lexik/jwt-authentication-bundle": "^2",
-        "mapbender/digitizer": "dev-develop as 2.9.9",
-        "mapbender/mapbender": "dev-develop as 4.9.9",
+        "mapbender/digitizer": "dev-feature/symfony-doctrine-upgrade as 2.9.9",
+        "mapbender/mapbender": "dev-feature/symfony7-upgrade as 4.9.9",
         "mnsami/composer-custom-directory-installer": "^1 || ^2",
         "nelmio/api-doc-bundle": "^4.34",
         "proj4js/proj4js": "^2.4",
@@ -171,7 +171,7 @@
         },
         "symfony": {
             "allow-contrib": true,
-            "require": "6.4.*"
+            "require": "7.4.*"
         }
     },
     "repositories": [
