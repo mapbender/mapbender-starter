@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4c9de6d737ebda3b3514a060507824f7",
+    "content-hash": "46bb451cc8bbc251b18b1a998ca51435",
     "packages": [
         {
             "name": "assetic/framework",
@@ -1773,12 +1773,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/jQuery-File-Upload.git",
-                "reference": "83e8cb8c45dff0627b2fd0bbafda18cd36e96567"
+                "reference": "25d6c8a59b072cad109448603d81b5a34425cd9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/jQuery-File-Upload/zipball/83e8cb8c45dff0627b2fd0bbafda18cd36e96567",
-                "reference": "83e8cb8c45dff0627b2fd0bbafda18cd36e96567",
+                "url": "https://api.github.com/repos/mapbender/jQuery-File-Upload/zipball/25d6c8a59b072cad109448603d81b5a34425cd9b",
+                "reference": "25d6c8a59b072cad109448603d81b5a34425cd9b",
                 "shasum": ""
             },
             "require": {
@@ -3068,16 +3068,16 @@
         },
         {
             "name": "select2/select2",
-            "version": "4.0.13",
+            "version": "4.1.0-rc.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/select2/select2.git",
-                "reference": "45f2b83ceed5231afa7b3d5b12b58ad335edd82e"
+                "reference": "9ce61fd297fd2922fe771debea8b24dfd219a49a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/select2/select2/zipball/45f2b83ceed5231afa7b3d5b12b58ad335edd82e",
-                "reference": "45f2b83ceed5231afa7b3d5b12b58ad335edd82e",
+                "url": "https://api.github.com/repos/select2/select2/zipball/9ce61fd297fd2922fe771debea8b24dfd219a49a",
+                "reference": "9ce61fd297fd2922fe771debea8b24dfd219a49a",
                 "shasum": ""
             },
             "type": "component",
@@ -3104,9 +3104,19 @@
             "homepage": "https://select2.org/",
             "support": {
                 "issues": "https://github.com/select2/select2/issues",
-                "source": "https://github.com/select2/select2/tree/4.0.13"
+                "source": "https://github.com/select2/select2/tree/4.1.0-rc.0"
             },
-            "time": "2020-01-28T05:01:22+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/kevin-brown",
+                    "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/select2",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2021-01-23T04:36:25+00:00"
         },
         {
             "name": "setasign/fpdf",
