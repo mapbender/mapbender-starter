@@ -35,7 +35,7 @@
         "mnsami/composer-custom-directory-installer": "^1 || ^2",
         "nelmio/api-doc-bundle": "^4.34",
         "proj4js/proj4js": "^2.4",
-        "select2/select2": "^4.0",
+        "select2/select2": "^4.1",
         "symfony/flex": "*",
         "wheregroup/cookieconsent": "^3"
     },
