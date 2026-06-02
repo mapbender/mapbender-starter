@@ -1627,12 +1627,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "711aeda17fc8d2983010793b2330ee372ebfb346"
+                "reference": "15dea606f33fe7c362319faae26a012505b804a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/711aeda17fc8d2983010793b2330ee372ebfb346",
-                "reference": "711aeda17fc8d2983010793b2330ee372ebfb346",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/15dea606f33fe7c362319faae26a012505b804a7",
+                "reference": "15dea606f33fe7c362319faae26a012505b804a7",
                 "shasum": ""
             },
             "require": {
@@ -1733,7 +1733,7 @@
                 "issues": "https://github.com/mapbender/mapbender/issues",
                 "source": "https://github.com/mapbender/mapbender/tree/feature/symfony7-upgrade"
             },
-            "time": "2026-06-01T12:39:21+00:00"
+            "time": "2026-06-02T06:09:37+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
