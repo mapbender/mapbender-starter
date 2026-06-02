@@ -1485,12 +1485,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "0bf5b1ce2119b715ec591d28fb2193553af5245e"
+                "reference": "f818d035071d48b220f7e1c6ce0a039467c719c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/0bf5b1ce2119b715ec591d28fb2193553af5245e",
-                "reference": "0bf5b1ce2119b715ec591d28fb2193553af5245e",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/f818d035071d48b220f7e1c6ce0a039467c719c0",
+                "reference": "f818d035071d48b220f7e1c6ce0a039467c719c0",
                 "shasum": ""
             },
             "require": {
@@ -1557,7 +1557,7 @@
                 "issues": "https://github.com/mapbender/mapbender-digitizer/issues",
                 "source": "https://github.com/mapbender/mapbender-digitizer/tree/feature/symfony-doctrine-upgrade"
             },
-            "time": "2026-05-21T08:10:52+00:00"
+            "time": "2026-06-02T08:00:20+00:00"
         },
         {
             "name": "mapbender/jquery-file-upload",
