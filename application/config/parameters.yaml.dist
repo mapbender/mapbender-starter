@@ -71,3 +71,7 @@ parameters:
     # to restrict input to letters, digits, underscores, hyphens and whitespace.
     # mapbender.search.default_regex: '^[\p{L}0-9_\-\s]*$'
     # mapbender.data_manager.default_regex: '^[\p{L}0-9_\-\s]*$'
+
+    # sandbox iframe attribute in the feature info dialog,
+    # see https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox for options
+    # mapbender.featureinfo.iframe_sandbox_params: 'allow-scripts allow-popups allow-popups-to-escape-sandbox allow-downloads'
