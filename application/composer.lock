@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ed8226fa3b7344d93ea3b9c47d50bb18",
+    "content-hash": "613dc04d6d2589ebc2fd6b0e62ec873f",
     "packages": [
         {
             "name": "assetic/framework",
-            "version": "v3.1.5",
+            "version": "v3.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/assetic-php/assetic.git",
-                "reference": "0dc41d117ac679dc21f46b7022d393ef02b3f781"
+                "reference": "3ce34db050d7db9defce189f3284efda4a2f2b0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/assetic-php/assetic/zipball/0dc41d117ac679dc21f46b7022d393ef02b3f781",
-                "reference": "0dc41d117ac679dc21f46b7022d393ef02b3f781",
+                "url": "https://api.github.com/repos/assetic-php/assetic/zipball/3ce34db050d7db9defce189f3284efda4a2f2b0b",
+                "reference": "3ce34db050d7db9defce189f3284efda4a2f2b0b",
                 "shasum": ""
             },
             "require": {
@@ -91,9 +91,9 @@
             ],
             "support": {
                 "issues": "https://github.com/assetic-php/assetic/issues",
-                "source": "https://github.com/assetic-php/assetic/tree/v3.1.5"
+                "source": "https://github.com/assetic-php/assetic/tree/v3.1.6"
             },
-            "time": "2026-04-23T03:30:22+00:00"
+            "time": "2026-06-04T23:41:59+00:00"
         },
         {
             "name": "components/font-awesome",
@@ -462,16 +462,16 @@
         },
         {
             "name": "doctrine/doctrine-bundle",
-            "version": "2.18.2",
+            "version": "2.18.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineBundle.git",
-                "reference": "0ff098b29b8b3c68307c8987dcaed7fd829c6546"
+                "reference": "241d61f6bbc77275d5a9f95d514241c058bf2d0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/0ff098b29b8b3c68307c8987dcaed7fd829c6546",
-                "reference": "0ff098b29b8b3c68307c8987dcaed7fd829c6546",
+                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/241d61f6bbc77275d5a9f95d514241c058bf2d0a",
+                "reference": "241d61f6bbc77275d5a9f95d514241c058bf2d0a",
                 "shasum": ""
             },
             "require": {
@@ -508,6 +508,7 @@
                 "psr/log": "^1.1.4 || ^2.0 || ^3.0",
                 "symfony/doctrine-messenger": "^6.4 || ^7.0",
                 "symfony/expression-language": "^6.4 || ^7.0",
+                "symfony/http-kernel": "^6.4 || ^7.0",
                 "symfony/messenger": "^6.4 || ^7.0",
                 "symfony/property-info": "^6.4 || ^7.0",
                 "symfony/security-bundle": "^6.4 || ^7.0",
@@ -563,7 +564,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/DoctrineBundle/issues",
-                "source": "https://github.com/doctrine/DoctrineBundle/tree/2.18.2"
+                "source": "https://github.com/doctrine/DoctrineBundle/tree/2.18.3"
             },
             "funding": [
                 {
@@ -579,7 +580,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-12-20T21:35:32+00:00"
+            "time": "2026-06-08T08:22:50+00:00"
         },
         {
             "name": "doctrine/event-manager",
@@ -1481,16 +1482,16 @@
         },
         {
             "name": "mapbender/digitizer",
-            "version": "dev-feature/symfony-doctrine-upgrade",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "f818d035071d48b220f7e1c6ce0a039467c719c0"
+                "reference": "1e4b5c20e9af4dbe92770a58203a20c06550e745"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/f818d035071d48b220f7e1c6ce0a039467c719c0",
-                "reference": "f818d035071d48b220f7e1c6ce0a039467c719c0",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/1e4b5c20e9af4dbe92770a58203a20c06550e745",
+                "reference": "1e4b5c20e9af4dbe92770a58203a20c06550e745",
                 "shasum": ""
             },
             "require": {
@@ -1555,9 +1556,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/mapbender-digitizer/issues",
-                "source": "https://github.com/mapbender/mapbender-digitizer/tree/feature/symfony-doctrine-upgrade"
+                "source": "https://github.com/mapbender/mapbender-digitizer/tree/develop"
             },
-            "time": "2026-06-02T08:00:20+00:00"
+            "time": "2026-06-16T10:24:05+00:00"
         },
         {
             "name": "mapbender/jquery-file-upload",
@@ -1623,16 +1624,16 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "dev-feature/symfony7-upgrade",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "15dea606f33fe7c362319faae26a012505b804a7"
+                "reference": "dbca55ccccddb42d113a03d31dfa9bf41aaad413"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/15dea606f33fe7c362319faae26a012505b804a7",
-                "reference": "15dea606f33fe7c362319faae26a012505b804a7",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/dbca55ccccddb42d113a03d31dfa9bf41aaad413",
+                "reference": "dbca55ccccddb42d113a03d31dfa9bf41aaad413",
                 "shasum": ""
             },
             "require": {
@@ -1731,9 +1732,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/mapbender/issues",
-                "source": "https://github.com/mapbender/mapbender/tree/feature/symfony7-upgrade"
+                "source": "https://github.com/mapbender/mapbender/tree/develop"
             },
-            "time": "2026-06-02T06:09:37+00:00"
+            "time": "2026-06-16T10:17:27+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -2877,16 +2878,16 @@
         },
         {
             "name": "select2/select2",
-            "version": "4.1.0-rc.0",
+            "version": "4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/select2/select2.git",
-                "reference": "9ce61fd297fd2922fe771debea8b24dfd219a49a"
+                "reference": "13bad6eb9b212e8566dc467fb8b20c6d72f4bfa3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/select2/select2/zipball/9ce61fd297fd2922fe771debea8b24dfd219a49a",
-                "reference": "9ce61fd297fd2922fe771debea8b24dfd219a49a",
+                "url": "https://api.github.com/repos/select2/select2/zipball/13bad6eb9b212e8566dc467fb8b20c6d72f4bfa3",
+                "reference": "13bad6eb9b212e8566dc467fb8b20c6d72f4bfa3",
                 "shasum": ""
             },
             "type": "component",
@@ -2913,7 +2914,7 @@
             "homepage": "https://select2.org/",
             "support": {
                 "issues": "https://github.com/select2/select2/issues",
-                "source": "https://github.com/select2/select2/tree/4.1.0-rc.0"
+                "source": "https://github.com/select2/select2/tree/4.1.0"
             },
             "funding": [
                 {
@@ -2925,7 +2926,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2021-01-23T04:36:25+00:00"
+            "time": "2026-05-26T20:03:12+00:00"
         },
         {
             "name": "setasign/fpdf",
@@ -2975,16 +2976,16 @@
         },
         {
             "name": "setasign/fpdi",
-            "version": "v2.6.7",
+            "version": "v2.6.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Setasign/FPDI.git",
-                "reference": "388c51e69982a3fc16698710b763e8107a49f510"
+                "reference": "881945be29a4996ad3d008eb18ddc01fa3df890c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Setasign/FPDI/zipball/388c51e69982a3fc16698710b763e8107a49f510",
-                "reference": "388c51e69982a3fc16698710b763e8107a49f510",
+                "url": "https://api.github.com/repos/Setasign/FPDI/zipball/881945be29a4996ad3d008eb18ddc01fa3df890c",
+                "reference": "881945be29a4996ad3d008eb18ddc01fa3df890c",
                 "shasum": ""
             },
             "require": {
@@ -2996,7 +2997,7 @@
             },
             "require-dev": {
                 "phpunit/phpunit": "^8.5.52",
-                "setasign/fpdf": "~1.8.6",
+                "setasign/fpdf": "^1.9.0",
                 "setasign/tfpdf": "~1.33",
                 "squizlabs/php_codesniffer": "^3.5",
                 "tecnickcom/tcpdf": "^6.8"
@@ -3035,7 +3036,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Setasign/FPDI/issues",
-                "source": "https://github.com/Setasign/FPDI/tree/v2.6.7"
+                "source": "https://github.com/Setasign/FPDI/tree/v2.6.8"
             },
             "funding": [
                 {
@@ -3043,7 +3044,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-05-13T10:16:22+00:00"
+            "time": "2026-06-11T10:37:24+00:00"
         },
         {
             "name": "shuchkin/simplexlsxgen",
@@ -6134,16 +6135,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.38.1",
+            "version": "v1.38.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "14c5439eec4ccff081ac14eca2dc57feb2a66d92"
+                "reference": "d3d318bad5e7a1bfbd026009c8bfb8d8f99ae6b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/14c5439eec4ccff081ac14eca2dc57feb2a66d92",
-                "reference": "14c5439eec4ccff081ac14eca2dc57feb2a66d92",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/d3d318bad5e7a1bfbd026009c8bfb8d8f99ae6b6",
+                "reference": "d3d318bad5e7a1bfbd026009c8bfb8d8f99ae6b6",
                 "shasum": ""
             },
             "require": {
@@ -6195,7 +6196,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.38.1"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.38.2"
             },
             "funding": [
                 {
@@ -6215,7 +6216,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-05-26T12:51:13+00:00"
+            "time": "2026-05-27T06:59:30+00:00"
         },
         {
             "name": "symfony/polyfill-php56",
@@ -6287,16 +6288,16 @@
         },
         {
             "name": "symfony/polyfill-php83",
-            "version": "v1.38.1",
+            "version": "v1.38.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php83.git",
-                "reference": "8339098cae28673c15cce00d80734af0453054e2"
+                "reference": "796a26abb75ce49f3a84433cd81bf1009d73d5f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php83/zipball/8339098cae28673c15cce00d80734af0453054e2",
-                "reference": "8339098cae28673c15cce00d80734af0453054e2",
+                "url": "https://api.github.com/repos/symfony/polyfill-php83/zipball/796a26abb75ce49f3a84433cd81bf1009d73d5f8",
+                "reference": "796a26abb75ce49f3a84433cd81bf1009d73d5f8",
                 "shasum": ""
             },
             "require": {
@@ -6343,7 +6344,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php83/tree/v1.38.1"
+                "source": "https://github.com/symfony/polyfill-php83/tree/v1.38.2"
             },
             "funding": [
                 {
@@ -6363,7 +6364,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-05-26T12:51:13+00:00"
+            "time": "2026-05-27T06:51:48+00:00"
         },
         {
             "name": "symfony/polyfill-php84",
@@ -8932,16 +8933,16 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "2.4.0",
+            "version": "2.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozarts/assert.git",
-                "reference": "9007ea6f45ecf352a9422b36644e4bfc039b9155"
+                "reference": "2ccb7c2e821038c03a3e6e1700c570c158c55f70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozarts/assert/zipball/9007ea6f45ecf352a9422b36644e4bfc039b9155",
-                "reference": "9007ea6f45ecf352a9422b36644e4bfc039b9155",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/2ccb7c2e821038c03a3e6e1700c570c158c55f70",
+                "reference": "2ccb7c2e821038c03a3e6e1700c570c158c55f70",
                 "shasum": ""
             },
             "require": {
@@ -8992,9 +8993,9 @@
             ],
             "support": {
                 "issues": "https://github.com/webmozarts/assert/issues",
-                "source": "https://github.com/webmozarts/assert/tree/2.4.0"
+                "source": "https://github.com/webmozarts/assert/tree/2.4.1"
             },
-            "time": "2026-05-20T13:07:01+00:00"
+            "time": "2026-06-15T15:31:57+00:00"
         },
         {
             "name": "wheregroup/codemirror",
@@ -11193,13 +11194,13 @@
     "aliases": [
         {
             "package": "mapbender/digitizer",
-            "version": "dev-feature/symfony-doctrine-upgrade",
+            "version": "dev-develop",
             "alias": "2.9.9",
             "alias_normalized": "2.9.9.0"
         },
         {
             "package": "mapbender/mapbender",
-            "version": "dev-feature/symfony7-upgrade",
+            "version": "dev-develop",
             "alias": "4.9.9",
             "alias_normalized": "4.9.9.0"
         }
