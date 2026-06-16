@@ -1,6 +1,11 @@
 ## v5.0.0
 - Add OgcApiFeatureBundle to [v5.0.0](https://github.com/mapbender/mapbender-starter/pull/165).
 
+## v4.2.6
+- Update mapbender/mapbender to [v4.2.6](https://github.com/mapbender/mapbender/blob/v4.2.6/CHANGELOG.md).
+- Update mapbender/digitizer to [2.0.9](https://github.com/mapbender/mapbender-digitizer/blob/2.0.9/CHANGELOG.md).
+- Update README docker instruction ([PR#169](https://github.com/mapbender/mapbender-starter/pull/169))
+
 ## v4.2.5
 - Update mapbender/mapbender to [v4.2.5](https://github.com/mapbender/mapbender/blob/v4.2.5/CHANGELOG.md).
 - Update mapbender/digitizer to [2.0.6](https://github.com/mapbender/mapbender-digitizer/blob/2.0.6/CHANGELOG.md).
