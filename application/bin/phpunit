@@ -119,4 +119,4 @@ if (PHP_VERSION_ID < 80000) {
     }
 }
 
-return include __DIR__ . '/..'.'/vendor/phpunit/phpunit/phpunit';
+require dirname(__DIR__).'/vendor/phpunit/phpunit/phpunit';

@@ -208,7 +208,7 @@ docker compose -f docker-compose.pgsql.yml exec mapbender php application/bin/co
 Then create the database schema.
 
 ```bash
-docker compose -f docker-compose.pgsql.yml exec mapbender php application/bin/console doctrine:schema:update --complete --force
+docker compose -f docker-compose.pgsql.yml exec mapbender php application/bin/console doctrine:schema:update --force
 ```
 
 And after that initialize the Mapbender database.
