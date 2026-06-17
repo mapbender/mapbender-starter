@@ -569,7 +569,7 @@ parameters:
                             mapbender_user_basic:
                               title: 'Mapbender User Basic'
                               url: null
-                              imgUrl: null
+                              img_url: null
                             mapbender_user_with_zoom:
                               title: 'external: open with zoom'
                               url: 'https://schulung.foss.academy/mapbender/application/mapbender_user?#%%zoom%%@%%lat%%/%%lon%%r%%rotation%%@EPSG:%%srs%%'
@@ -578,25 +578,25 @@ parameters:
                             external_dz_nrw:
                               title: 'www.dz.nrw.de with srs scale center_x and center_y'
                               url: 'https://www.dz.nrw.de/?lang=de&vm=3D&srs=%%srs%%&cam=%%center_x%%,%%center_y%%,%%scale%%,360,65,55'
-                              imgUrl: null
+                              img_url: null
                               description: Digitaler Zwilling NRW
                               group: 'External'
                             external_osm:
                               title: 'OSM with lon & lat'
                               url: 'https://www.openstreetmap.org/?#map=19/%%lon%%/%%lat%%'
-                              imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg'
+                              img_url: 'https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg'
                               description: OpenStreetMap
                               group: 'External'
                             link_mapbender:
                               title: 'mapbender.org'
                               url: 'https://mapbender.org'
-                              imgUrl: 'https://doc.mapbender.org/_images/mapbender_logo_font.png' #'https://mapbender.org/fileadmin/mapbender/resources/images/startseite/mapbender-stadt-markierungen.jpg'
+                              img_url: 'https://doc.mapbender.org/_images/mapbender_logo_font.png' #'https://mapbender.org/fileadmin/mapbender/resources/images/startseite/mapbender-stadt-markierungen.jpg'
                               description: Mapbender Documentation
                               group: 'Link external Website'
                             link_fossgis:
                               title: 'fossgis.de'
                               url: 'https://fossgis.de'
-                              imgUrl: 'https://www.fossgis.de/mediawiki/images/d/d3/FOSSGIS_Logo_RGB_100x45mm_600dpi.png'
+                              img_url: 'https://www.fossgis.de/mediawiki/images/d/d3/FOSSGIS_Logo_RGB_100x45mm_600dpi.png'
                               description: Link to FOSSGIS e.V.
                               group: 'Link external Website'
                     viewmanager:
