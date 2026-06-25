@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "assetic/framework",
-            "version": "v3.1.6",
+            "version": "v3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/assetic-php/assetic.git",
-                "reference": "3ce34db050d7db9defce189f3284efda4a2f2b0b"
+                "reference": "eacd5b0aa9ebfc00b69bc0ecaf418947a2623622"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/assetic-php/assetic/zipball/3ce34db050d7db9defce189f3284efda4a2f2b0b",
-                "reference": "3ce34db050d7db9defce189f3284efda4a2f2b0b",
+                "url": "https://api.github.com/repos/assetic-php/assetic/zipball/eacd5b0aa9ebfc00b69bc0ecaf418947a2623622",
+                "reference": "eacd5b0aa9ebfc00b69bc0ecaf418947a2623622",
                 "shasum": ""
             },
             "require": {
@@ -39,7 +39,7 @@
                 "ptachoire/cssembed": "^1.0",
                 "scssphp/scssphp": "^1.0",
                 "symfony/phpunit-bridge": "^3.4 || ^4.0 || ^5.0 || ^6.0 || ^7.0",
-                "twig/twig": "^2.11",
+                "twig/twig": "^2.11 || ^3.0",
                 "wikimedia/less.php": "^3.0 || ^5.0",
                 "wikimedia/minify": "^2.2"
             },
@@ -91,9 +91,9 @@
             ],
             "support": {
                 "issues": "https://github.com/assetic-php/assetic/issues",
-                "source": "https://github.com/assetic-php/assetic/tree/v3.1.6"
+                "source": "https://github.com/assetic-php/assetic/tree/v3.2.0"
             },
-            "time": "2026-06-04T23:41:59+00:00"
+            "time": "2026-06-20T07:07:13+00:00"
         },
         {
             "name": "components/font-awesome",
@@ -1486,12 +1486,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "1e4b5c20e9af4dbe92770a58203a20c06550e745"
+                "reference": "c341fdbca911885ae658d8b04e5643dd081009da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/1e4b5c20e9af4dbe92770a58203a20c06550e745",
-                "reference": "1e4b5c20e9af4dbe92770a58203a20c06550e745",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/c341fdbca911885ae658d8b04e5643dd081009da",
+                "reference": "c341fdbca911885ae658d8b04e5643dd081009da",
                 "shasum": ""
             },
             "require": {
@@ -1558,7 +1558,7 @@
                 "issues": "https://github.com/mapbender/mapbender-digitizer/issues",
                 "source": "https://github.com/mapbender/mapbender-digitizer/tree/develop"
             },
-            "time": "2026-06-16T10:24:05+00:00"
+            "time": "2026-06-25T15:28:20+00:00"
         },
         {
             "name": "mapbender/jquery-file-upload",
@@ -1628,12 +1628,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "dbca55ccccddb42d113a03d31dfa9bf41aaad413"
+                "reference": "3e55a1d0c4944d34a039ad83d03d95107532ae59"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/dbca55ccccddb42d113a03d31dfa9bf41aaad413",
-                "reference": "dbca55ccccddb42d113a03d31dfa9bf41aaad413",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/3e55a1d0c4944d34a039ad83d03d95107532ae59",
+                "reference": "3e55a1d0c4944d34a039ad83d03d95107532ae59",
                 "shasum": ""
             },
             "require": {
@@ -1734,7 +1734,7 @@
                 "issues": "https://github.com/mapbender/mapbender/issues",
                 "source": "https://github.com/mapbender/mapbender/tree/develop"
             },
-            "time": "2026-06-16T10:17:27+00:00"
+            "time": "2026-06-25T16:11:23+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -9257,16 +9257,16 @@
         },
         {
             "name": "masterminds/html5",
-            "version": "2.10.0",
+            "version": "2.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Masterminds/html5-php.git",
-                "reference": "fcf91eb64359852f00d921887b219479b4f21251"
+                "reference": "fd5018f6815fff903946d0564977b44ce8010e29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Masterminds/html5-php/zipball/fcf91eb64359852f00d921887b219479b4f21251",
-                "reference": "fcf91eb64359852f00d921887b219479b4f21251",
+                "url": "https://api.github.com/repos/Masterminds/html5-php/zipball/fd5018f6815fff903946d0564977b44ce8010e29",
+                "reference": "fd5018f6815fff903946d0564977b44ce8010e29",
                 "shasum": ""
             },
             "require": {
@@ -9274,7 +9274,7 @@
                 "php": ">=5.3.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8.35 || ^5.7.21 || ^6 || ^7 || ^8 || ^9"
+                "phpunit/phpunit": "^4.8.35 || ^5.7.21 || ^6 || ^7 || ^8 || ^9 || ^10"
             },
             "type": "library",
             "extra": {
@@ -9318,9 +9318,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Masterminds/html5-php/issues",
-                "source": "https://github.com/Masterminds/html5-php/tree/2.10.0"
+                "source": "https://github.com/Masterminds/html5-php/tree/2.10.1"
             },
-            "time": "2025-07-25T09:04:22+00:00"
+            "time": "2026-06-23T18:43:15+00:00"
         },
         {
             "name": "myclabs/deep-copy",
