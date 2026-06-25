@@ -1782,16 +1782,16 @@
         },
         {
             "name": "mapbender/openlayers6-es5",
-            "version": "10.8.0.0",
+            "version": "10.9.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/openlayers6-es5.git",
-                "reference": "3d4c164241cd9cfad36c40a98ca99439cd15996b"
+                "reference": "77c66ac7aebf1fe0cf8c5272bb4f42dc314ca31f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/openlayers6-es5/zipball/3d4c164241cd9cfad36c40a98ca99439cd15996b",
-                "reference": "3d4c164241cd9cfad36c40a98ca99439cd15996b",
+                "url": "https://api.github.com/repos/mapbender/openlayers6-es5/zipball/77c66ac7aebf1fe0cf8c5272bb4f42dc314ca31f",
+                "reference": "77c66ac7aebf1fe0cf8c5272bb4f42dc314ca31f",
                 "shasum": ""
             },
             "type": "component",
@@ -1814,9 +1814,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/openlayers6-es5/issues",
-                "source": "https://github.com/mapbender/openlayers6-es5/tree/10.8.0.0"
+                "source": "https://github.com/mapbender/openlayers6-es5/tree/10.9.0.0"
             },
-            "time": "2026-03-18T14:06:14+00:00"
+            "time": "2026-06-25T16:50:41+00:00"
         },
         {
             "name": "mnsami/composer-custom-directory-installer",
@@ -11216,5 +11216,5 @@
         "php": ">=8.2"
     },
     "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }
