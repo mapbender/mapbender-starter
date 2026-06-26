@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "613dc04d6d2589ebc2fd6b0e62ec873f",
+    "content-hash": "1895541578cadc993e97b34a74a0be42",
     "packages": [
         {
             "name": "assetic/framework",
@@ -1482,23 +1482,23 @@
         },
         {
             "name": "mapbender/digitizer",
-            "version": "dev-develop",
+            "version": "3.0.0-RC2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "c341fdbca911885ae658d8b04e5643dd081009da"
+                "reference": "bf99f5b38e2b49450cae735d5f03c86aa1c62a33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/c341fdbca911885ae658d8b04e5643dd081009da",
-                "reference": "c341fdbca911885ae658d8b04e5643dd081009da",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/bf99f5b38e2b49450cae735d5f03c86aa1c62a33",
+                "reference": "bf99f5b38e2b49450cae735d5f03c86aa1c62a33",
                 "shasum": ""
             },
             "require": {
                 "doctrine/dbal": "^2.11 || ^3 || ^4",
                 "doctrine/persistence": "^2 || ^3 || ^4",
                 "mapbender/jquery-file-upload": "1.*",
-                "mapbender/mapbender": "^4",
+                "mapbender/mapbender": "^5",
                 "php": ">=8.1"
             },
             "conflict": {
@@ -1556,9 +1556,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/mapbender-digitizer/issues",
-                "source": "https://github.com/mapbender/mapbender-digitizer/tree/develop"
+                "source": "https://github.com/mapbender/mapbender-digitizer/tree/3.0.0-RC2"
             },
-            "time": "2026-06-25T15:28:20+00:00"
+            "time": "2026-06-26T09:28:13+00:00"
         },
         {
             "name": "mapbender/jquery-file-upload",
@@ -1624,16 +1624,16 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "dev-develop",
+            "version": "v5.0.0-RC1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "3e55a1d0c4944d34a039ad83d03d95107532ae59"
+                "reference": "b42f86b06ed4dea883182cf506a5bba25df88116"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/3e55a1d0c4944d34a039ad83d03d95107532ae59",
-                "reference": "3e55a1d0c4944d34a039ad83d03d95107532ae59",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/b42f86b06ed4dea883182cf506a5bba25df88116",
+                "reference": "b42f86b06ed4dea883182cf506a5bba25df88116",
                 "shasum": ""
             },
             "require": {
@@ -1732,9 +1732,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/mapbender/issues",
-                "source": "https://github.com/mapbender/mapbender/tree/develop"
+                "source": "https://github.com/mapbender/mapbender/tree/v5.0.0-RC1"
             },
-            "time": "2026-06-25T16:11:23+00:00"
+            "time": "2026-06-26T09:15:28+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -11191,25 +11191,9 @@
             "time": "2025-11-17T20:03:58+00:00"
         }
     ],
-    "aliases": [
-        {
-            "package": "mapbender/digitizer",
-            "version": "dev-develop",
-            "alias": "2.9.9",
-            "alias_normalized": "2.9.9.0"
-        },
-        {
-            "package": "mapbender/mapbender",
-            "version": "dev-develop",
-            "alias": "4.9.9",
-            "alias_normalized": "4.9.9.0"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "mapbender/digitizer": 20,
-        "mapbender/mapbender": 20
-    },
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

@@ -1,5 +1,10 @@
-## v5.0.0
+## v5.0.0-RC1
+- Minimum required PHP version is now 8.2
+- Updated Symfony to version 7.4, refer to the mapbender core repository for ([upgrade instructions](https://github.com/mapbender/mapbender/blob/v5.0.0-RC1/docs/UPGRADING.md))
+- Update mapbender/mapbender to [v5.0.0-RC1](https://github.com/mapbender/mapbender/blob/v5.0.0-RC1/CHANGELOG.md).
+- Update mapbender/digitizer to [3.0.0-RC1](https://github.com/mapbender/mapbender-digitizer/blob/3.0.0-RC1/CHANGELOG.md).
 - Add OgcApiFeatureBundle to [v5.0.0](https://github.com/mapbender/mapbender-starter/pull/165).
+- Update Openlayers to [10.9](https://github.com/openlayers/openlayers/releases/tag/v10.9.0)
 
 ## v4.2.6
 - Update mapbender/mapbender to [v4.2.6](https://github.com/mapbender/mapbender/blob/v4.2.6/CHANGELOG.md).
