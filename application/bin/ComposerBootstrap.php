@@ -2,16 +2,17 @@
 
 use Composer\Script\Event;
 
+/**
+ * PHP file for the scripts called in the scripts section of composer.json
+ * for IDE support, execute `composer require --dev composer/composer`
+ */
 class ComposerBootstrap
 {
-    /**
-     * @param $event Event
-     */
-    public static function checkConfiguration($event)
+    public static function checkConfiguration(Event $event)
     {
         if (static::ensureConfig()) {
             static::createDatabase();
-            static::resetRootLogin();
+            static::resetRootLogin($event);
             static::importExampleApplications();
             static::updateEpsgCodes();
         }
@@ -19,17 +20,14 @@ class ComposerBootstrap
         static::clearCache();
     }
 
-    /**
-     * @param $event Event
-     */
-    public static function bootstrapDatabase($event)
+    public static function bootstrapDatabase(Event $event)
     {
         static::ensureConfig();
         $status = null;
         passthru("php bin/console doctrine:schema:create", $status);
         if ($status === 0) {
             `php bin/console mapbender:database:init -v`;
-            static::resetRootLogin();
+            static::resetRootLogin($event);
         }
     }
 
@@ -59,15 +57,13 @@ class ComposerBootstrap
     /**
      * Rebuild database.
      * Needs for tests
-     *
-     * @param $event
      */
-    public static function rebuildDatabase($event)
+    public static function rebuildDatabase(Event $event)
     {
         static::ensureConfig();
         static::dropDatabase();
         static::createDatabase();
-        static::resetRootLogin();
+        static::resetRootLogin($event);
         static::importExampleApplications();
         static::updateEpsgCodes();
         //static::clearCache();
@@ -171,25 +167,23 @@ class ComposerBootstrap
         //echo `php bin/console doctrine:schema:update --force`;
     }
 
-    /**
-     * Reset root user login
-     *
-     * @param string $userName
-     * @param string $password
-     * @param string $userEmail
-     */
-    protected static function resetRootLogin($userName = "root", $password = "root", $userEmail = "root@localhost")
+    protected static function resetRootLogin(Event $event)
     {
-        $userName = escapeshellarg($userName);
-        $userEmail = escapeshellarg($userEmail);
-        $password = escapeshellarg($password);
+        $userName = "root";
+        $userEmail = "root@localhost";
 
         static::printStatus("Reset user password");
 
-        `php bin/console fom:user:resetroot --username $userName --password $password --email $userEmail --silent`;
+        $command = "php bin/console fom:user:resetroot --username $userName --email $userEmail";
 
-        static::printStatus("ATTENTION");
-        echo "User $userName account password is: $password. Don't forget to change it!\n";
+        $flags = $event->getFlags();
+        foreach(['--generate-password', '--no-interaction'] as $flagToForward) {
+            if (isset($flags["script-alias-input"]) && str_contains($flags["script-alias-input"], $flagToForward)) {
+                $command .= " $flagToForward";
+            }
+        }
+
+        echo `$command`;
     }
 
     /**
