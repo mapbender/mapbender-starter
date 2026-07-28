@@ -1,6 +1,6 @@
 cd application
 php bin/composer install -o --no-scripts --no-suggest
-php bin/composer init-example
+php bin/composer init-example %*
 php bin/console assets:install
 php bin/console mapbender:database:init -v
 findstr /B /C:"JWT_PASSPHRASE=" .env.local >nul 2>&1

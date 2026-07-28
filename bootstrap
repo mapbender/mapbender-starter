@@ -2,7 +2,7 @@
 
 cd application
 php bin/composer install -o --no-scripts --no-suggest
-php bin/composer init-example
+php bin/composer init-example $@
 php bin/console assets:install --symlink --relative
 php bin/console mapbender:database:init -v
 if ! grep -q "JWT_PASSPHRASE=" .env.local; then
