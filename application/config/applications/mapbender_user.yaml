@@ -408,7 +408,7 @@ parameters:
                         useMailto: false
                     interactivehelp:
                         class: Mapbender\CoreBundle\Element\InteractiveHelp
-                        screenType: NULL
+                        screenType: all
                         autoOpen: true
                         configuration:
                           intro:
@@ -472,7 +472,7 @@ parameters:
                     copyright:
                         class: Mapbender\CoreBundle\Element\Copyright
                         autoOpen: true
-                        screenType: NULL
+                        screenType: all
                         content: 'We hope you like the Mapbender User Application. Use and modify it as you like.'
                         popupWidth: 300
                         dontShowAgain: true
@@ -482,7 +482,7 @@ parameters:
                         class: Mapbender\CoreBundle\Element\HTMLElement
                         content: '<span style="color:#009ee0;">powered by Mapbender</span>'
                         label: true
-                        screenType: NULL
+                        screenType: all
                         openInline: true
                         position: lower-right
                 sidepane:
@@ -511,7 +511,7 @@ parameters:
                             maxscale: 5000
                             icon_url: '/bundles/mapbendercore/image/pin_red.png'
                             icon_offset: '-6,-32'
-                        screenType: NULL
+                        screenType: all
                     layertree:
                         class: Mapbender\CoreBundle\Element\Layertree
                         type: element
@@ -524,7 +524,7 @@ parameters:
                         hideInfo: false
                         useTheme: true
                         showFilter: true
-                        screenType: NULL
+                        screenType: all
                         themes:
                             -
                                 id: themes
@@ -549,7 +549,7 @@ parameters:
                         fontSize: 14
                         strokeWidth: 2
                         strokeWidthWhileDrawing: 3
-                        screenType: NULL
+                        screenType: all
                     sketch:
                         class: Mapbender\CoreBundle\Element\Sketch
                         geometrytypes:
@@ -563,21 +563,21 @@ parameters:
                         deactivate_on_close: false
                         colors: ["#009ee0","#cf003d","#ffff33","#00837e","#ff7f00"]
                         allow_custom_color: true
-                        screenType: NULL
+                        screenType: all
                     coordinatesutility:
                         class: Mapbender\CoreBundle\Element\CoordinatesUtility
                         srsList: []
                         addMapSrsList: true
                         zoomlevel: 6
-                        screenType: NULL
+                        screenType: all
                     dataupload:
                         class: Mapbender\CoreBundle\Element\DataUpload
                         maxFileSize: 10
                         helpText: mb.core.dataupload.admin.helpText
-                        screenType: NULL
+                        screenType: all
                     applicationswitcher-sidepane:
                         class: Mapbender\CoreBundle\Element\ApplicationSwitcher
-                        screenType: NULL
+                        screenType: all
                         open_in_new_tab: false   # false/true
                         applications:
                             mapbender_user: # switch to another application
@@ -633,12 +633,12 @@ parameters:
                         privateEntries: true
                         allowAnonymousSave: true
                         showDate: true
-                        screenType: NULL
+                        screenType: all
                     routing:
                         class: Mapbender\RoutingBundle\Element\Routing
                         type: element
                         title: Routing
-                        screenType: NULL
+                        screenType: all
                         advancedSettings: true
                         autoSubmit: true
                         allowIntermediatePoints: true
@@ -714,8 +714,10 @@ parameters:
                         class: Mapbender\CoreBundle\Element\HTMLElement
                         classes: html-element-inline
                         title: mb.demoapps.about
+                        screenType: all
                         openInline: false
                         anchor: right-bottom
+                        icon: iconHelp
                         content: "<p>Learn more about Mapbender</p>
                            <a href=\"https://mapbender.org\" target=\"_blank\">
                              <p>
@@ -735,11 +737,11 @@ parameters:
                            <p>
                              <a href=\"https://www.osgeo.org\" target=\"_blank\">https://www.osgeo.org</a>
                            </p>"
-                        screenType: NULL
+
                 footer:
                     activityindicator:
                         class: Mapbender\CoreBundle\Element\ActivityIndicator
-                        screenType: NULL
+                        screenType: all
                     coordinates:
                         class: Mapbender\CoreBundle\Element\CoordinatesDisplay
                         label: false
@@ -764,15 +766,29 @@ parameters:
                         class: Mapbender\CoreBundle\Element\LinkButton
                         label: true
                         click: https://openmaptiles.org/
+                        screenType: all
                     OSM-badge:
                         title: © OpenStreetMap contributors
                         tooltip: © OpenStreetMap contributors
                         class: Mapbender\CoreBundle\Element\LinkButton
                         label: true
                         click: https://www.openstreetmap.org/copyright
+                        screenType: all
+                    copyright-button:
+                        class: Mapbender\CoreBundle\Element\ControlButton
+                        icon: iconCopyright
+                        label: false
+                        target: copyright
+                        screenType: all
+                    html-powered-by:
+                        title: HTML-powered by Mapbender
+                        class: Mapbender\CoreBundle\Element\HTMLElement
+                        content: '<span style="color:var(--button-background);font-weight:600;">powered by Mapbender</span>'
+                        classes: html-element-inline
+                        screenType: desktop
                     about:
                         title: mb.core.aboutdialog.tag.about
-                        label: true
+                        label: false
                         class: Mapbender\CoreBundle\Element\AboutDialog
                         screenType: desktop
 

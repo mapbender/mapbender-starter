@@ -389,6 +389,7 @@ parameters:
                         otherSrs: ["EPSG:25832","EPSG:25833","EPSG:31466","EPSG:31467","EPSG:4326"]
                     simplesearch:
                         title: mb.core.simplesearch.class.title
+                        screenType: all
                         placeholder: mb.demoapps.search
                         class: Mapbender\CoreBundle\Element\SimpleSearch
                         anchor: right-top
@@ -569,7 +570,7 @@ parameters:
                         useMailto: false
                     interactivehelp:
                         class: Mapbender\CoreBundle\Element\InteractiveHelp
-                        screenType: NULL
+                        screenType: all
                         autoOpen: false
                         configuration:
                           intro:
@@ -634,12 +635,12 @@ parameters:
                         class: Mapbender\CoreBundle\Element\DataUpload
                         maxFileSize: 10
                         helpText: mb.core.dataupload.admin.helpText
-                        screenType: NULL
+                        screenType: all
                     html-about-mapbender:
                         class: Mapbender\CoreBundle\Element\HTMLElement
                         classes: html-element-inline
                         title: mb.demoapps.about
-                        screenType: NULL
+                        screenType: all
                         openInline: false
                         content: "<p>Learn more about Mapbender</p>
                            <a href=\"https://mapbender.org\" target=\"_blank\">
@@ -660,10 +661,28 @@ parameters:
                            <p>
                              <a href=\"https://www.osgeo.org\" target=\"_blank\">https://www.osgeo.org</a>
                            </p>"
-                    applicationswitcher:
-                        class: Mapbender\CoreBundle\Element\ApplicationSwitcher
-                        applications: [mapbender_user, mapbender_user_basic]
-                        screenType: NULL
+                    html-OpenMapTiles-badge:
+                        class: Mapbender\CoreBundle\Element\HTMLElement
+                        classes: html-element-inline
+                        screenType: mobile
+                        openInline: true
+                        anchor: right-bottom
+                        content: "<a href=\"https://openmaptiles.org/\" target=\"_blank\">
+                             © OpenMapTiles
+                           </a>"
+                        title: © OpenMapTiles
+                        tooltip: © OpenMapTiles
+                    html-OSM-badge:
+                        class: Mapbender\CoreBundle\Element\HTMLElement
+                        classes: html-element-inline
+                        screenType: mobile
+                        openInline: true
+                        anchor: right-bottom
+                        content: "<a href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\">
+                             © OpenStreetMap contributors
+                           </a>"
+                        title: © OpenStreetMap contributors
+                        tooltip: © OpenStreetMap contributors
                 footer:
                     activityindicator:
                         class: Mapbender\CoreBundle\Element\ActivityIndicator
@@ -688,24 +707,26 @@ parameters:
                         class: Mapbender\CoreBundle\Element\LinkButton
                         label: true
                         click: https://openmaptiles.org/
+                        screenType: desktop
                     OSM-badge:
                         title: © OpenStreetMap contributors
                         tooltip: © OpenStreetMap contributors
                         class: Mapbender\CoreBundle\Element\LinkButton
                         label: true
                         click: https://www.openstreetmap.org/copyright
+                        screenType: desktop
                     copyright-button:
                         class: Mapbender\CoreBundle\Element\ControlButton
                         icon: iconCopyright
                         label: false
                         target: copyright
-                        screenType: NULL
+                        screenType: all
                     html-powered-by:
                         title: HTML-powered by Mapbender
                         class: Mapbender\CoreBundle\Element\HTMLElement
-                        content: '<span style="color:#009ee0;">powered by Mapbender</span>'
+                        content: '<span style="color:var(--button-background);font-weight:600;">powered by Mapbender</span>'
                         classes: html-element-inline
-                        screenType: desktop
+                        screenType: all
                     about:
                         title: mb.core.aboutdialog.tag.about
                         tooltip: mb.core.aboutdialog.tag.about
