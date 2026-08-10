@@ -13,13 +13,13 @@ parameters:
                 properties:
                     item_alignment": right  # left/right/center
                     screenType: all         # desktop/mobile/all
-                    generate_button_menu: false # true/false
+                    generate_button_menu: only_mobile # true/false no yes only_desktop only_mobile
                     menu_label: NULL # NULL or text
               - name: sidepane
                 properties:
                     name: list # tabs (for button) / accordion / list / NULL
                     align: left # right/left
-                    closed: false # true/false
+                    closed: false # true/false no yes only_desktop only_mobile
                     screenType: all # all/desktop/mobile
                     width: "300px"
                     resizable: true
@@ -27,7 +27,7 @@ parameters:
                 properties:
                     item_alignment": right # right/left/center
                     screenType: all # all/desktop/mobile
-                    generate_button_menu: false # true/false
+                    generate_button_menu: false # true/false no yes only_desktop only_mobile
                     menu_label: NULL # NULL or text
             layersets:
                 main:
@@ -51,6 +51,8 @@ parameters:
                         isBaseSource: false
                         toggle: true
                         #refreshInterval: 5
+                conferences:
+                    selected: true
                     fossgis:
                         type: wms
                         title: FOSSGIS Konferenzen
@@ -286,12 +288,15 @@ parameters:
                         class: Mapbender\CoreBundle\Element\ControlButton
                         label: true
                         target: copyright
+                        icon: iconCopyright
                     interactivehelp-button:
                         class: Mapbender\CoreBundle\Element\ControlButton
                         label: true
                         target: interactivehelp
+                        icon: iconBookOpen
                     simplesearch-toolbar:
                         title: mb.core.simplesearch.class.title
+                        screenType: desktop
                         placeholder: mb.demoapps.search
                         class: Mapbender\CoreBundle\Element\SimpleSearch
                         query_url: https://osm-photon-search.wheregroup.com/search/api?limit=20&lat=50.7163&lon=7.1366&osm_tag=!railway&osm_tag=!highway:elevator&osm_tag=!tourism&osm_tag=!amenity
@@ -316,7 +321,7 @@ parameters:
                 content:
                     map:
                         class: Mapbender\CoreBundle\Element\Map
-                        layersets: [themes,main,background themes]
+                        layersets: [themes,conferences,main,background themes]
                         srs: EPSG:3857
                         extents:
                             start: [772933.16,6566826.23,806786.66,6582317.62]
@@ -403,7 +408,7 @@ parameters:
                         useMailto: false
                     interactivehelp:
                         class: Mapbender\CoreBundle\Element\InteractiveHelp
-                        screenType: desktop
+                        screenType: NULL
                         autoOpen: true
                         configuration:
                           intro:
@@ -467,11 +472,19 @@ parameters:
                     copyright:
                         class: Mapbender\CoreBundle\Element\Copyright
                         autoOpen: true
-                        screenType: desktop
+                        screenType: NULL
                         content: 'We hope you like the Mapbender User Application. Use and modify it as you like.'
                         popupWidth: 300
                         dontShowAgain: true
                         dontShowAgainLabel:  mb.core.copyright.admin.dontShowAgainDefaultLabel
+                    html-powered-by:
+                        title: HTML-powered by Mapbender
+                        class: Mapbender\CoreBundle\Element\HTMLElement
+                        content: '<span style="color:#009ee0;">powered by Mapbender</span>'
+                        label: true
+                        screenType: NULL
+                        openInline: true
+                        position: lower-right
                 sidepane:
                     simplesearch:
                         title: mb.core.simplesearch.class.title
@@ -498,6 +511,7 @@ parameters:
                             maxscale: 5000
                             icon_url: '/bundles/mapbendercore/image/pin_red.png'
                             icon_offset: '-6,-32'
+                        screenType: NULL
                     layertree:
                         class: Mapbender\CoreBundle\Element\Layertree
                         type: element
@@ -510,6 +524,7 @@ parameters:
                         hideInfo: false
                         useTheme: true
                         showFilter: true
+                        screenType: NULL
                         themes:
                             -
                                 id: themes
@@ -534,7 +549,7 @@ parameters:
                         fontSize: 14
                         strokeWidth: 2
                         strokeWidthWhileDrawing: 3
-                        screenType: desktop
+                        screenType: NULL
                     sketch:
                         class: Mapbender\CoreBundle\Element\Sketch
                         geometrytypes:
@@ -548,22 +563,22 @@ parameters:
                         deactivate_on_close: false
                         colors: ["#009ee0","#cf003d","#ffff33","#00837e","#ff7f00"]
                         allow_custom_color: true
-                        screenType: desktop
+                        screenType: NULL
                     coordinatesutility:
                         class: Mapbender\CoreBundle\Element\CoordinatesUtility
                         srsList: []
                         addMapSrsList: true
                         zoomlevel: 6
-                        screenType: desktop
+                        screenType: NULL
                     dataupload:
                         class: Mapbender\CoreBundle\Element\DataUpload
                         maxFileSize: 10
                         helpText: mb.core.dataupload.admin.helpText
-                        screenType: desktop
+                        screenType: NULL
                     applicationswitcher-sidepane:
                         class: Mapbender\CoreBundle\Element\ApplicationSwitcher
-                        screenType: desktop
-                        open_in_new_tab: true   # false/true
+                        screenType: NULL
+                        open_in_new_tab: false   # false/true
                         applications:
                             mapbender_user: # switch to another application
                             mapbender_user_basic:
@@ -599,17 +614,31 @@ parameters:
                               img_url: 'https://www.fossgis.de/mediawiki/images/d/d3/FOSSGIS_Logo_RGB_100x45mm_600dpi.png'
                               description: Link to FOSSGIS e.V.
                               group: 'Link external Website'
+                            mapbender_user_wms:
+                              title: 'WMS Mapbender User'
+                              description: 'Click to load the WMS'
+                              url: null
+                              img_url: 'https://placehold.co/100'
+                              group: mb.interactivehelp.wmsloader.title
+                              add_wms:
+                                mb_wms_layers: 'Mapbender_User,Mapbender_Names'
+                                mb_layer_merge: 0
+                                mb_wms_merge: 1
+                                mb_url: 'https://wms.wheregroup.com/cgi-bin/mapbender_user.xml'
+                                mb_infoformat: text/html
+                                mb_add_vendor_specific: bplan=123
                     viewmanager:
                         class: Mapbender\CoreBundle\Element\ViewManager
                         publicEntries: rw
                         privateEntries: true
                         allowAnonymousSave: true
                         showDate: true
-                        screenType: desktop
+                        screenType: NULL
                     routing:
                         class: Mapbender\RoutingBundle\Element\Routing
                         type: element
                         title: Routing
+                        screenType: NULL
                         advancedSettings: true
                         autoSubmit: true
                         allowIntermediatePoints: true
@@ -680,11 +709,13 @@ parameters:
                             label: Title              # label of the optional field
                             options:                  #
                               required: true        # true or false
+                        screenType: desktop
                     html-about-mapbender:
                         class: Mapbender\CoreBundle\Element\HTMLElement
                         classes: html-element-inline
                         title: mb.demoapps.about
                         openInline: false
+                        anchor: right-bottom
                         content: "<p>Learn more about Mapbender</p>
                            <a href=\"https://mapbender.org\" target=\"_blank\">
                              <p>
@@ -704,10 +735,11 @@ parameters:
                            <p>
                              <a href=\"https://www.osgeo.org\" target=\"_blank\">https://www.osgeo.org</a>
                            </p>"
+                        screenType: NULL
                 footer:
                     activityindicator:
                         class: Mapbender\CoreBundle\Element\ActivityIndicator
-                        screenType: desktop
+                        screenType: NULL
                     coordinates:
                         class: Mapbender\CoreBundle\Element\CoordinatesDisplay
                         label: false
@@ -738,15 +770,9 @@ parameters:
                         class: Mapbender\CoreBundle\Element\LinkButton
                         label: true
                         click: https://www.openstreetmap.org/copyright
-                    html-powered-by:
-                        title: HTML-powered by Mapbender
-                        class: Mapbender\CoreBundle\Element\HTMLElement
-                        content: '<span style="color:#009ee0;">powered by Mapbender</span>'
-                        classes: html-element-inline
-                        screenType: desktop
                     about:
                         title: mb.core.aboutdialog.tag.about
-                        label: false
+                        label: true
                         class: Mapbender\CoreBundle\Element\AboutDialog
                         screenType: desktop
 
