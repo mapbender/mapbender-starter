@@ -700,7 +700,6 @@ parameters:
                     srs:
                         class: Mapbender\CoreBundle\Element\SrsSelector
                         screenType: desktop
-
                     OpenMapTiles-badge:
                         title: © OpenMapTiles
                         tooltip: © OpenMapTiles
