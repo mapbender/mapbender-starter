@@ -10,7 +10,7 @@ parameters:
             custom_css: |
                 :root {
                     --font-family: Ubuntu, Open Sans, Calluna Sans, Gill Sans MT, Calibri, Trebuchet MS, sans-serif;
-                    --primary: #0087b9; 
+                    --primary: #0087b9;
                     --button-background: #cad400;
                     --toolbar-background: #fff;
                     --toolbar-border-color: #cad400;
@@ -35,10 +35,10 @@ parameters:
                 }
                 .popup {
                     border-radius: 10px;
-                    border-color: var(--button-background); 
-                }	
+                    border-color: var(--button-background);
+                }
                 .popupHead {
-                    border-bottom: solid 2px var(--button-background); 
+                    border-bottom: solid 2px var(--button-background);
                     margin: 0 20px 20px 20px;
                     padding: 20px 0 10px 0;
                 }
@@ -103,6 +103,28 @@ parameters:
                         #refreshInterval: 5
                 conferences:
                     selected: true
+                    fossgis_ogc_api_features:
+                        type: ogc_api_features
+                        title: FOSSGIS Konferenzen (via OGC API - Features)
+                        jsonUrl: https://wms.wheregroup.com/cgi-bin/mapserv/ogcapidemo/ogcapi
+                        layers:
+                            111:
+                                collectionId: fossgis
+                                title: FOSSGIS Konferenz-Standorte
+                                tooltipPropertyMap:
+                                    - location: Standort
+                                    - year: Jahr
+                                    - country: Land
+                                tooltipTemplate: <b>${name}</b><br>${location}
+                                hoverStyle:
+                                    strokeColor: rgba(255,0,255,1)
+                                    strokeWidth: 20
+                                    fillColor: rgba(255,0,255,0.2)
+                                visible: true
+                                selected: true
+                                allowSelected: true
+                                toggle: true
+                                allowToggle: true
                     fossgis:
                         type: wms
                         title: FOSSGIS Konferenzen
