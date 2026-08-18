@@ -63,13 +63,13 @@ parameters:
                 properties:
                     item_alignment": right  # left/right/center
                     screenType: all         # desktop/mobile/all
-                    generate_button_menu: only_mobile # true/false no yes only_desktop only_mobile
+                    generate_button_menu: only_mobile # no/yes/only_desktop/only_mobile
                     menu_label: NULL # NULL or text
               - name: sidepane
                 properties:
                     name: accordion # tabs (for button) / accordion / list / NULL
                     align: left # right/left
-                    closed: true # true/false no yes only_desktop only_mobile
+                    closed: yes # no/yes/only_desktop/only_mobile
                     screenType: all # all/desktop/mobile
                     width: "300px"
                     resizable: true
@@ -77,7 +77,7 @@ parameters:
                 properties:
                     item_alignment": right # right/left/center
                     screenType: all # all/desktop/mobile
-                    generate_button_menu: false # true/false no yes only_desktop only_mobile
+                    generate_button_menu: no # no/yes/only_desktop/only_mobile
                     menu_label: NULL # NULL or text
             layersets:
                 main:

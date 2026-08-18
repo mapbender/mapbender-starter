@@ -13,13 +13,13 @@ parameters:
                 properties:
                     item_alignment": right  # left/right/center
                     screenType: all         # desktop/mobile/all
-                    generate_button_menu: only_mobile # true/false no yes only_desktop only_mobile
+                    generate_button_menu: only_mobile # no/yes/only_desktop/only_mobile
                     menu_label: NULL # NULL or text
               - name: sidepane
                 properties:
                     name: list # tabs (for button) / accordion / list / NULL
                     align: left # right/left
-                    closed: false # true/false no yes only_desktop only_mobile
+                    closed: no # no/yes/only_desktop/only_mobile
                     screenType: all # all/desktop/mobile
                     width: "300px"
                     resizable: true
@@ -27,7 +27,7 @@ parameters:
                 properties:
                     item_alignment": right # right/left/center
                     screenType: all # all/desktop/mobile
-                    generate_button_menu: false # true/false no yes only_desktop only_mobile
+                    generate_button_menu: no # no/yes/only_desktop/only_mobile
                     menu_label: NULL # NULL or text
             layersets:
                 main:
@@ -498,7 +498,7 @@ parameters:
                         content: 'We hope you like the Mapbender User Application. Use and modify it as you like.'
                         popupWidth: 300
                         dontShowAgain: true
-                        dontShowAgainLabel:  mb.core.copyright.admin.dontShowAgainDefaultLabel
+                        dontShowAgainLabel: mb.core.htmlelement.admin.dontShowAgainDefaultLabel
                     html-powered-by:
                         title: HTML-powered by Mapbender
                         class: Mapbender\CoreBundle\Element\HTMLElement
