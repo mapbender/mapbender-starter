@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1895541578cadc993e97b34a74a0be42",
+    "content-hash": "db9f4bdfcfaf6fbcd683bb5af7792769",
     "packages": [
         {
             "name": "assetic/framework",
@@ -1485,16 +1485,16 @@
         },
         {
             "name": "mapbender/digitizer",
-            "version": "3.0.0-RC2",
+            "version": "3.0.0-RC3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "bf99f5b38e2b49450cae735d5f03c86aa1c62a33"
+                "reference": "aaec85e55d8d15b8689f3800f906f58e9767e871"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/bf99f5b38e2b49450cae735d5f03c86aa1c62a33",
-                "reference": "bf99f5b38e2b49450cae735d5f03c86aa1c62a33",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/aaec85e55d8d15b8689f3800f906f58e9767e871",
+                "reference": "aaec85e55d8d15b8689f3800f906f58e9767e871",
                 "shasum": ""
             },
             "require": {
@@ -1559,9 +1559,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/mapbender-digitizer/issues",
-                "source": "https://github.com/mapbender/mapbender-digitizer/tree/3.0.0-RC2"
+                "source": "https://github.com/mapbender/mapbender-digitizer/tree/3.0.0-RC3"
             },
-            "time": "2026-06-26T09:28:13+00:00"
+            "time": "2026-08-20T15:44:25+00:00"
         },
         {
             "name": "mapbender/jquery-file-upload",
@@ -1627,21 +1627,22 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v5.0.0-RC1",
+            "version": "v5.0.0-RC2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "b42f86b06ed4dea883182cf506a5bba25df88116"
+                "reference": "00f4c7e90c3e7a3f3b7ce907872e51d19716f3c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/b42f86b06ed4dea883182cf506a5bba25df88116",
-                "reference": "b42f86b06ed4dea883182cf506a5bba25df88116",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/00f4c7e90c3e7a3f3b7ce907872e51d19716f3c2",
+                "reference": "00f4c7e90c3e7a3f3b7ce907872e51d19716f3c2",
                 "shasum": ""
             },
             "require": {
                 "assetic/framework": "^3.1",
-                "datatables.net/datatables.net-bs5": "^2.3",
+                "datatables.net/datatables.net": "^2.3.8",
+                "datatables.net/datatables.net-bs5": "^2.3.8",
                 "doctrine/dbal": "^4.4",
                 "doctrine/doctrine-bundle": "^2",
                 "doctrine/orm": "^3.6",
@@ -1735,9 +1736,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/mapbender/issues",
-                "source": "https://github.com/mapbender/mapbender/tree/v5.0.0-RC1"
+                "source": "https://github.com/mapbender/mapbender/tree/v5.0.0-RC2"
             },
-            "time": "2026-06-26T09:15:28+00:00"
+            "time": "2026-08-20T15:46:39+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
