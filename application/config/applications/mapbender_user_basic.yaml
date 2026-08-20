@@ -288,7 +288,6 @@ parameters:
                         title: mb.core.basesourceswitcher.class.title
                         tooltip: mb.core.basesourceswitcher.class.title
                         class: Mapbender\CoreBundle\Element\BaseSourceSwitcher
-                        display: group
                         instancesets:
                             1-basesourceswitcher:
                                 title: OSM (color)
@@ -409,37 +408,37 @@ parameters:
                         class: Mapbender\CoreBundle\Element\Map
                         layersets: [themes,conferences,main,background themes]
                         srs: EPSG:3857
-                        extents:
-                            start: [34384.65,5623672.86,2601107.71,7807351.79]
-                            #start: [772933.16,6566826.23,806786.66,6582317.62]
-                            max: [-20037508.34278924,-20037508.34278924,20037508.34278924,20037508.34278924]
+                        extent_start: [34384.65,5623672.86,2601107.71,7807351.79]
+                        extent_max: [-20037508.34278924,-20037508.34278924,20037508.34278924,20037508.34278924]
                         scales: [100000000,75000000,50000000,25000000,10000000,5000000,1000000,500000,100000,50000,25000,10000,7500,5000,2500,1000,500]
                         otherSrs: ["EPSG:25832","EPSG:25833","EPSG:31466","EPSG:31467","EPSG:4326"]
                     simplesearch:
                         title: mb.core.simplesearch.class.title
                         screenType: all
-                        placeholder: mb.demoapps.search
                         class: Mapbender\CoreBundle\Element\SimpleSearch
                         anchor: right-top
-                        query_url: https://osm-photon-search.wheregroup.com/search/api?limit=20&lat=50.7163&lon=7.1366&osm_tag=!railway&osm_tag=!highway:elevator&osm_tag=!tourism&osm_tag=!amenity
-                        query_key: q
-                        query_format: '%s'
-                        token_regex: '[^a-zA-Z0-9äöüÄÖÜß]'
-                        token_regex_in: '([a-zA-ZäöüÄÖÜß]{3,})'
-                        token_regex_out: '$1*'
-                        collection_path: features
-                        label_attribute:  '${properties.name} ${properties.street} ${properties.housenumber} ${properties.city} ${properties.country}'
-                        geom_attribute: geometry
-                        sourceSrs: 'EPSG:4326'
-                        geom_format: GeoJSON
-                        delay: 300
-                        query_ws_replace: null
-                        result:
-                            buffer: ~
-                            minscale: 500
-                            maxscale: 5000
-                            icon_url: '/bundles/mapbendercore/image/pin_red.png'
-                            icon_offset: '-6,-32'
+                        configurations:
+                            0:
+                                placeholder: mb.demoapps.search
+                                query_url: https://osm-photon-search.wheregroup.com/search/api?limit=20&lat=50.7163&lon=7.1366&osm_tag=!railway&osm_tag=!highway:elevator&osm_tag=!tourism&osm_tag=!amenity
+                                query_key: q
+                                query_format: '%s'
+                                token_regex: '[^a-zA-Z0-9äöüÄÖÜß]'
+                                token_regex_in: '([a-zA-ZäöüÄÖÜß]{3,})'
+                                token_regex_out: '$1*'
+                                collection_path: features
+                                label_attribute:  '${properties.name} ${properties.street} ${properties.housenumber} ${properties.city} ${properties.country}'
+                                geom_attribute: geometry
+                                sourceSrs: 'EPSG:4326'
+                                geom_format: GeoJSON
+                                delay: 300
+                                query_ws_replace: null
+                                result:
+                                    buffer: ~
+                                    minscale: 500
+                                    maxscale: 5000
+                                    icon_url: '/bundles/mapbendercore/image/pin_red.png'
+                                    icon_offset: '-6,-32'
                     zoombar:
                         class: Mapbender\CoreBundle\Element\ZoomBar
                         components: ["rotation", "zoom_in_out", "zoom_max","zoom_home"]
@@ -447,13 +446,9 @@ parameters:
                         draggable: false
                     layertreedialog:
                         class: Mapbender\CoreBundle\Element\Layertree
-                        type: dialog
                         autoOpen: false
                         showBaseSource: false
-                        layerRemove: true
                         menu: [opacity,zoomtolayer,metadata,layerremove]
-                        hideNotToggleable: true
-                        hideSelect: true
                         hideInfo: false
                         useTheme: true
                         themes:
@@ -480,7 +475,6 @@ parameters:
                                 allSelected: false
                     legend:
                         class: Mapbender\CoreBundle\Element\Legend
-                        elementType: dialog
                         autoOpen: false
                         showLayerTitle: true
                         showGroupedLayerTitle: true
@@ -492,17 +486,14 @@ parameters:
                         autoActivate: false
                         printResult: true
                         maxCount: 100
-                        showOriginal: true
                         width: 500
                         height: 500
                         highlighting: true
-                        fillColorDefault: '#ffff00'
-                        strokeColorDefault: '#ff00ff'
-                        opacityDefault: 25
+                        fillColorDefault: rgba(255, 255, 0, 0.25)
+                        strokeColorDefault: rgba(255, 0, 255, 0.25)
                         strokeWidthDefault: 3
-                        fillColorHover: '#00ffff'
-                        strokeColorHover: '#0000ff'
-                        opacityHover: 50
+                        fillColorHover: rgba(0, 255, 255, 0.5)
+                        strokeColorHover: rgba(0, 255, 0, 0.5)
                         strokeWidthHover: 5
                     wmsloader:
                         class: Mapbender\WmsBundle\Element\WmsLoader
@@ -516,10 +507,9 @@ parameters:
                             - point
                             - line
                             - polygon
-                            - text
                             - rectangle
                             - circle
-                        auto_activate: false
+                        autoOpen: false
                         deactivate_on_close: true
                         colors: ["#009ee0","#cf003d","#ffff33","#00837e","#ff7f00","#e7298a","#984ea3"]
                         allow_custom_color: false
@@ -601,7 +591,7 @@ parameters:
                         class: Mapbender\CoreBundle\Element\InteractiveHelp
                         screenType: all
                         autoOpen: false
-                        configuration:
+                        tour:
                           intro:
                             title: mb.interactivehelp.intro.title
                             description: mb.interactivehelp.intro.description
@@ -700,7 +690,6 @@ parameters:
                              © OpenMapTiles
                            </a>"
                         title: © OpenMapTiles
-                        tooltip: © OpenMapTiles
                     html-OSM-badge:
                         class: Mapbender\CoreBundle\Element\HTMLElement
                         classes: html-element-inline
@@ -711,7 +700,6 @@ parameters:
                              © OpenStreetMap contributors
                            </a>"
                         title: © OpenStreetMap contributors
-                        tooltip: © OpenStreetMap contributors
                 footer:
                     activityindicator:
                         class: Mapbender\CoreBundle\Element\ActivityIndicator
@@ -728,7 +716,9 @@ parameters:
                         screenType: desktop
                     applicationswitcher:
                         class: Mapbender\CoreBundle\Element\ApplicationSwitcher
-                        applications: [mapbender_user, mapbender_user_basic]
+                        applications:
+                            mapbender_user:
+                            mapbender_user_basic:
                         screenType: desktop
                     srs:
                         class: Mapbender\CoreBundle\Element\SrsSelector
