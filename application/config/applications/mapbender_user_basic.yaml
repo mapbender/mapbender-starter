@@ -116,6 +116,12 @@ parameters:
                                     - year: Jahr
                                     - country: Land
                                 tooltipTemplate: <b>${name}</b><br>${location}
+                                featureInfoPropertyMap:
+                                    - location: Standort
+                                    - year: Jahr
+                                    - country: Land
+                                info: true
+                                allowInfo: true
                                 hoverStyle:
                                     strokeColor: rgba(255,0,255,1)
                                     strokeWidth: 20
@@ -443,7 +449,7 @@ parameters:
                         class: Mapbender\CoreBundle\Element\Layertree
                         type: dialog
                         autoOpen: false
-                        showBaseSource: true
+                        showBaseSource: false
                         layerRemove: true
                         menu: [opacity,zoomtolayer,metadata,layerremove]
                         hideNotToggleable: true
@@ -528,6 +534,7 @@ parameters:
                             - { template: a4_portrait_offical, label: A4 Portrait Official}
                             - { template: a3landscape, label: A3 Landscape}
                             - { template: a3_landscape_offical, label: A3 Landscape Official}
+                            - { template: a3_landscape_offical_overview, label: A3 Landscape Official with Overview}
                             - { template: a3portrait, label: A3 Portrait}
                             - { template: a3_portrait_offical, label: A3 Portrait Official}
                         legend_default_behaviour: false

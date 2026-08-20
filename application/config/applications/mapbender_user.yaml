@@ -66,6 +66,12 @@ parameters:
                                     - year: Jahr
                                     - country: Land
                                 tooltipTemplate: <b>${name}</b><br>${location}
+                                featureInfoPropertyMap:
+                                    - location: Standort
+                                    - year: Jahr
+                                    - country: Land
+                                info: true
+                                allowInfo: true
                                 hoverStyle:
                                     strokeColor: rgba(255,0,255,1)
                                     strokeWidth: 20
@@ -397,6 +403,7 @@ parameters:
                             - { template: a4_portrait_offical, label: A4 Portrait Official}
                             - { template: a3landscape, label: A3 Landscape}
                             - { template: a3_landscape_offical, label: A3 Landscape Official}
+                            - { template: a3_landscape_offical_overview, label: A3 Landscape Official with Overview}
                             - { template: a3portrait, label: A3 Portrait}
                             - { template: a3_portrait_offical, label: A3 Portrait Official}
                         legend_default_behaviour: false
@@ -492,21 +499,24 @@ parameters:
                               description: mb.interactivehelp.wmsloader.description
                               type: Mapbender\WmsBundle\Element\WmsLoader
                     copyright:
-                        class: Mapbender\CoreBundle\Element\Copyright
-                        autoOpen: true
+                        title: Copyright
+                        class: Mapbender\CoreBundle\Element\HTMLElement
+                        autoOpen: false
                         screenType: all
-                        content: 'We hope you like the Mapbender User Application. Use and modify it as you like.'
+                        content: 'We hope you like the Mapbender User Application.
+                        Read our <a href="https://github.com/mapbender/mapbender-starter/blob/master/LICENSE" target="_blank">License</a>.'
                         popupWidth: 300
                         dontShowAgain: true
                         dontShowAgainLabel: mb.core.htmlelement.admin.dontShowAgainDefaultLabel
+                        openInline: false
+                        position: lower-right
                     html-powered-by:
-                        title: HTML-powered by Mapbender
+                        title: powered by Mapbender
                         class: Mapbender\CoreBundle\Element\HTMLElement
                         content: '<span style="color:#009ee0;">powered by Mapbender</span>'
-                        label: true
                         screenType: all
                         openInline: true
-                        position: lower-right
+                        anchor: right-bottom
                 sidepane:
                     simplesearch:
                         title: mb.core.simplesearch.class.title
@@ -607,19 +617,14 @@ parameters:
                               title: 'Mapbender User Basic'
                               url: null
                               img_url: null
-                            mapbender_user_with_zoom:
-                              title: 'external: open with zoom'
-                              url: 'https://schulung.foss.academy/mapbender/application/mapbender_user?#%%zoom%%@%%lat%%/%%lon%%r%%rotation%%@EPSG:%%srs%%'
-                              description: External application with zoom and rotation
-                              group: 'External'
                             external_dz_nrw:
-                              title: 'www.dz.nrw.de with srs scale center_x and center_y'
+                              title: 'Digitaler Zwilling NRW'
                               url: 'https://www.dz.nrw.de/?lang=de&vm=3D&srs=%%srs%%&cam=%%center_x%%,%%center_y%%,%%scale%%,360,65,55'
                               img_url: null
                               description: Digitaler Zwilling NRW
                               group: 'External'
                             external_osm:
-                              title: 'OSM with lon & lat'
+                              title: 'OpenStreetMap'
                               url: 'https://www.openstreetmap.org/?#map=19/%%lon%%/%%lat%%'
                               img_url: 'https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg'
                               description: OpenStreetMap
@@ -631,7 +636,7 @@ parameters:
                               description: Mapbender Documentation
                               group: 'Link external Website'
                             link_fossgis:
-                              title: 'fossgis.de'
+                              title: 'FOSSGIS e.V.'
                               url: 'https://fossgis.de'
                               img_url: 'https://www.fossgis.de/mediawiki/images/d/d3/FOSSGIS_Logo_RGB_100x45mm_600dpi.png'
                               description: Link to FOSSGIS e.V.
@@ -640,12 +645,12 @@ parameters:
                               title: 'WMS Mapbender User'
                               description: 'Click to load the WMS'
                               url: null
-                              img_url: 'https://placehold.co/100'
-                              group: mb.interactivehelp.wmsloader.title
+                              img_url: null
+                              group: WMS Service
                               add_wms:
                                 mb_wms_layers: 'Mapbender_User,Mapbender_Names'
                                 mb_layer_merge: 0
-                                mb_wms_merge: 1
+                                mb_wms_merge: 0
                                 mb_url: 'https://wms.wheregroup.com/cgi-bin/mapbender_user.xml'
                                 mb_infoformat: text/html
                                 mb_add_vendor_specific: bplan=123
@@ -738,7 +743,6 @@ parameters:
                         title: mb.demoapps.about
                         screenType: all
                         openInline: false
-                        anchor: right-bottom
                         icon: iconHelp
                         content: "<p>Learn more about Mapbender</p>
                            <a href=\"https://mapbender.org\" target=\"_blank\">
@@ -796,16 +800,10 @@ parameters:
                         label: true
                         click: https://www.openstreetmap.org/copyright
                         screenType: all
-                    copyright-button:
-                        class: Mapbender\CoreBundle\Element\ControlButton
-                        icon: iconCopyright
-                        label: false
-                        target: copyright
-                        screenType: all
                     html-powered-by:
                         title: HTML-powered by Mapbender
                         class: Mapbender\CoreBundle\Element\HTMLElement
-                        content: '<span style="color:var(--button-background);font-weight:600;">powered by Mapbender</span>'
+                        content: '<span style="color:var(--button-background);font-weight:600;"><a href="https://mapbender.org" target="_blank">powered by Mapbender</a></span>'
                         classes: html-element-inline
                         screenType: desktop
                     about:
