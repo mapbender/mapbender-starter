@@ -435,14 +435,12 @@ parameters:
                         title: Copyright
                         class: Mapbender\CoreBundle\Element\HTMLElement
                         autoOpen: false
-                        screenType: all
                         content: 'We hope you like the Mapbender User Application.
                         Read our <a href="https://github.com/mapbender/mapbender-starter/blob/master/LICENSE" target="_blank">License</a>.'
                         popupWidth: 300
                         dontShowAgain: true
                         dontShowAgainLabel: mb.core.htmlelement.admin.dontShowAgainDefaultLabel
                         openInline: false
-                        anchor: lower-right
                     interactivehelp:
                         class: Mapbender\CoreBundle\Element\InteractiveHelp
                         screenType: all
@@ -512,7 +510,6 @@ parameters:
                         content: '<span style="color:#009ee0;">powered by Mapbender</span>'
                         screenType: all
                         openInline: true
-                        anchor: right-bottom
                 sidepane:
                     simplesearch:
                         title: mb.core.simplesearch.class.title
