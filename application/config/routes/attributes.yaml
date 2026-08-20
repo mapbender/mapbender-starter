@@ -24,10 +24,16 @@ ows_corebundle:
     type: attribute
 
 mapbender_apibundle:
-  resource:
-    path: "@MapbenderApiBundle/Controller/"
-    namespace: \Mapbender\ApiBundle\Controller
-  type: attribute
+    resource:
+        path: "@MapbenderApiBundle/Controller/"
+        namespace: \Mapbender\ApiBundle\Controller
+    type: attribute
+
+mapbender_ogcapifeaturesbundle:
+    resource:
+      path: "@MapbenderOgcApiFeaturesBundle/Controller/"
+      namespace: \Mapbender\OgcApiFeaturesBundle\Controller
+    type: attribute
 
 api_login_check:
     path: /api/login_check

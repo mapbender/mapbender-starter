@@ -13,13 +13,13 @@ parameters:
                 properties:
                     item_alignment": right  # left/right/center
                     screenType: all         # desktop/mobile/all
-                    generate_button_menu: false # true/false
+                    generate_button_menu: only_mobile # no/yes/only_desktop/only_mobile
                     menu_label: NULL # NULL or text
               - name: sidepane
                 properties:
                     name: list # tabs (for button) / accordion / list / NULL
                     align: left # right/left
-                    closed: false # true/false
+                    closed: no # no/yes/only_desktop/only_mobile
                     screenType: all # all/desktop/mobile
                     width: "300px"
                     resizable: true
@@ -27,7 +27,7 @@ parameters:
                 properties:
                     item_alignment": right # right/left/center
                     screenType: all # all/desktop/mobile
-                    generate_button_menu: false # true/false
+                    generate_button_menu: no # no/yes/only_desktop/only_mobile
                     menu_label: NULL # NULL or text
             layersets:
                 main:
@@ -51,6 +51,36 @@ parameters:
                         isBaseSource: false
                         toggle: true
                         #refreshInterval: 5
+                conferences:
+                    selected: true
+                    fossgis_ogc_api_features:
+                        type: ogc_api_features
+                        title: FOSSGIS Konferenzen (via OGC API - Features)
+                        jsonUrl: https://wms.wheregroup.com/cgi-bin/mapserv/ogcapidemo/ogcapi
+                        layers:
+                            111:
+                                collectionId: fossgis
+                                title: FOSSGIS Konferenz-Standorte
+                                tooltipPropertyMap:
+                                    - location: Standort
+                                    - year: Jahr
+                                    - country: Land
+                                tooltipTemplate: <b>${name}</b><br>${location}
+                                featureInfoPropertyMap:
+                                    - location: Standort
+                                    - year: Jahr
+                                    - country: Land
+                                info: true
+                                allowInfo: true
+                                hoverStyle:
+                                    strokeColor: rgba(255,0,255,1)
+                                    strokeWidth: 20
+                                    fillColor: rgba(255,0,255,0.2)
+                                visible: true
+                                selected: true
+                                allowSelected: true
+                                toggle: true
+                                allowToggle: true
                     fossgis:
                         type: wms
                         title: FOSSGIS Konferenzen
@@ -208,7 +238,6 @@ parameters:
                         title: mb.core.basesourceswitcher.class.title
                         tooltip: mb.core.basesourceswitcher.class.title
                         class: Mapbender\CoreBundle\Element\BaseSourceSwitcher
-                        display: group
                         instancesets:
                             1-basesourceswitcher:
                                 title: OSM (color)
@@ -286,41 +315,45 @@ parameters:
                         class: Mapbender\CoreBundle\Element\ControlButton
                         label: true
                         target: copyright
+                        icon: iconCopyright
                     interactivehelp-button:
                         class: Mapbender\CoreBundle\Element\ControlButton
                         label: true
                         target: interactivehelp
+                        icon: iconBookOpen
                     simplesearch-toolbar:
                         title: mb.core.simplesearch.class.title
-                        placeholder: mb.demoapps.search
+                        screenType: desktop
                         class: Mapbender\CoreBundle\Element\SimpleSearch
-                        query_url: https://osm-photon-search.wheregroup.com/search/api?limit=20&lat=50.7163&lon=7.1366&osm_tag=!railway&osm_tag=!highway:elevator&osm_tag=!tourism&osm_tag=!amenity
-                        query_key: q
-                        query_format: '%s'
-                        token_regex: '[^a-zA-Z0-9äöüÄÖÜß]'
-                        token_regex_in: '([a-zA-ZäöüÄÖÜß]{3,})'
-                        token_regex_out: '$1*'
-                        collection_path: features
-                        label_attribute:  '${properties.name} ${properties.street} ${properties.housenumber} ${properties.city} ${properties.country}'
-                        geom_attribute: geometry
-                        sourceSrs: 'EPSG:4326'
-                        geom_format: GeoJSON
-                        delay: 300
-                        query_ws_replace: null
-                        result:
-                            buffer: ~
-                            minscale: 500
-                            maxscale: 5000
-                            icon_url: '/bundles/mapbendercore/image/pin_red.png'
-                            icon_offset: '-6,-32'
+                        configurations:
+                            0:
+                                placeholder: mb.demoapps.search
+                                query_url: https://osm-photon-search.wheregroup.com/search/api?limit=20&lat=50.7163&lon=7.1366&osm_tag=!railway&osm_tag=!highway:elevator&osm_tag=!tourism&osm_tag=!amenity
+                                query_key: q
+                                query_format: '%s'
+                                token_regex: '[^a-zA-Z0-9äöüÄÖÜß]'
+                                token_regex_in: '([a-zA-ZäöüÄÖÜß]{3,})'
+                                token_regex_out: '$1*'
+                                collection_path: features
+                                label_attribute:  '${properties.name} ${properties.street} ${properties.housenumber} ${properties.city} ${properties.country}'
+                                geom_attribute: geometry
+                                sourceSrs: 'EPSG:4326'
+                                geom_format: GeoJSON
+                                delay: 300
+                                query_ws_replace: null
+                                result:
+                                    buffer: ~
+                                    minscale: 500
+                                    maxscale: 5000
+                                    icon_url: '/bundles/mapbendercore/image/pin_red.png'
+                                    icon_offset: '-6,-32'
                 content:
                     map:
                         class: Mapbender\CoreBundle\Element\Map
-                        layersets: [themes,main,background themes]
+                        layersets: [themes,conferences,main,background themes]
                         srs: EPSG:3857
-                        extents:
-                            start: [772933.16,6566826.23,806786.66,6582317.62]
-                            max: [-20037508.34278924,-20037508.34278924,20037508.34278924,20037508.34278924]
+                        extent_start: [772933.16,6566826.23,806786.66,6582317.62]
+                        extent_max: [-20037508.34278924,-20037508.34278924,20037508.34278924,20037508.34278924]
                         scales: [50000000,25000000,10000000,5000000,1000000,500000,100000,50000,25000,10000,7500,5000,2500,1000,500]
                         otherSrs: ["EPSG:25832","EPSG:25833","EPSG:31466","EPSG:31467","EPSG:4326"]
                     zoombar:
@@ -329,7 +362,6 @@ parameters:
                         draggable: false
                     legend:
                         class: Mapbender\CoreBundle\Element\Legend
-                        elementType: dialog
                         autoOpen: false
                         showLayerTitle: true
                         showGroupedLayerTitle: true
@@ -341,17 +373,14 @@ parameters:
                         autoActivate: true
                         printResult: true
                         maxCount: 100
-                        showOriginal: true
                         width: 500
                         height: 500
                         highlighting: true
-                        fillColorDefault: '#ffff00'
-                        strokeColorDefault: '#ff00ff'
-                        opacityDefault: 25
+                        fillColorDefault: rgba(255, 255, 0, 0.25)
+                        strokeColorDefault: rgba(255, 0, 255, 0.25)
                         strokeWidthDefault: 3
-                        fillColorHover: '#00ffff'
-                        strokeColorHover: '#0000ff'
-                        opacityHover: 50
+                        fillColorHover: rgba(0, 255, 255, 0.5)
+                        strokeColorHover: rgba(0, 255, 0, 0.5)
                         strokeWidthHover: 5
                     wmsloader:
                         class: Mapbender\WmsBundle\Element\WmsLoader
@@ -370,6 +399,7 @@ parameters:
                             - { template: a4_portrait_offical, label: A4 Portrait Official}
                             - { template: a3landscape, label: A3 Landscape}
                             - { template: a3_landscape_offical, label: A3 Landscape Official}
+                            - { template: a3_landscape_offical_overview, label: A3 Landscape Official with Overview}
                             - { template: a3portrait, label: A3 Portrait}
                             - { template: a3_portrait_offical, label: A3 Portrait Official}
                         legend_default_behaviour: false
@@ -401,11 +431,21 @@ parameters:
                         class: Mapbender\CoreBundle\Element\POI
                         body: mb.demoapps.poi
                         useMailto: false
+                    copyright:
+                        title: Copyright
+                        class: Mapbender\CoreBundle\Element\HTMLElement
+                        autoOpen: false
+                        content: 'We hope you like the Mapbender User Application.
+                        Read our <a href="https://github.com/mapbender/mapbender-starter/blob/master/LICENSE" target="_blank">License</a>.'
+                        popupWidth: 300
+                        dontShowAgain: true
+                        dontShowAgainLabel: mb.core.htmlelement.admin.dontShowAgainDefaultLabel
+                        openInline: false
                     interactivehelp:
                         class: Mapbender\CoreBundle\Element\InteractiveHelp
-                        screenType: desktop
+                        screenType: all
                         autoOpen: true
-                        configuration:
+                        tour:
                           intro:
                             title: mb.interactivehelp.intro.title
                             description: mb.interactivehelp.intro.description
@@ -464,52 +504,50 @@ parameters:
                             - title: mb.interactivehelp.wmsloader.title
                               description: mb.interactivehelp.wmsloader.description
                               type: Mapbender\WmsBundle\Element\WmsLoader
-                    copyright:
-                        class: Mapbender\CoreBundle\Element\Copyright
-                        autoOpen: true
-                        screenType: desktop
-                        content: 'We hope you like the Mapbender User Application. Use and modify it as you like.'
-                        popupWidth: 300
-                        dontShowAgain: true
-                        dontShowAgainLabel:  mb.core.copyright.admin.dontShowAgainDefaultLabel
+                    html-powered-by:
+                        title: powered by Mapbender
+                        class: Mapbender\CoreBundle\Element\HTMLElement
+                        content: '<span style="color:#009ee0;">powered by Mapbender</span>'
+                        screenType: all
+                        openInline: true
                 sidepane:
                     simplesearch:
                         title: mb.core.simplesearch.class.title
                         openInline: true
-                        element_icon: iconPrint
-                        placeholder: mb.demoapps.search
                         class: Mapbender\CoreBundle\Element\SimpleSearch
-                        query_url: https://osm-photon-search.wheregroup.com/search/api?limit=20&lat=50.7163&lon=7.1366&osm_tag=!railway&osm_tag=!highway:elevator&osm_tag=!tourism&osm_tag=!amenity
-                        query_key: q
-                        query_format: '%s'
-                        token_regex: '[^a-zA-Z0-9äöüÄÖÜß]'
-                        token_regex_in: '([a-zA-ZäöüÄÖÜß]{3,})'
-                        token_regex_out: '$1*'
-                        collection_path: features
-                        label_attribute:  '${properties.name} ${properties.street} ${properties.housenumber} ${properties.city} ${properties.country}'
-                        geom_attribute: geometry
-                        sourceSrs: 'EPSG:4326'
-                        geom_format: GeoJSON
-                        delay: 300
-                        query_ws_replace: null
-                        result:
-                            buffer: ~
-                            minscale: 500
-                            maxscale: 5000
-                            icon_url: '/bundles/mapbendercore/image/pin_red.png'
-                            icon_offset: '-6,-32'
+                        element_icon: iconPrint
+                        configurations:
+                            0:
+                                placeholder: mb.demoapps.search
+                                query_url: https://osm-photon-search.wheregroup.com/search/api?limit=20&lat=50.7163&lon=7.1366&osm_tag=!railway&osm_tag=!highway:elevator&osm_tag=!tourism&osm_tag=!amenity
+                                query_key: q
+                                query_format: '%s'
+                                token_regex: '[^a-zA-Z0-9äöüÄÖÜß]'
+                                token_regex_in: '([a-zA-ZäöüÄÖÜß]{3,})'
+                                token_regex_out: '$1*'
+                                collection_path: features
+                                label_attribute:  '${properties.name} ${properties.street} ${properties.housenumber} ${properties.city} ${properties.country}'
+                                geom_attribute: geometry
+                                sourceSrs: 'EPSG:4326'
+                                geom_format: GeoJSON
+                                delay: 300
+                                query_ws_replace: null
+                                result:
+                                    buffer: ~
+                                    minscale: 500
+                                    maxscale: 5000
+                                    icon_url: '/bundles/mapbendercore/image/pin_red.png'
+                                    icon_offset: '-6,-32'
+                        screenType: all
                     layertree:
                         class: Mapbender\CoreBundle\Element\Layertree
-                        type: element
                         autoOpen: false
                         showBaseSource: false
-                        layerRemove: true
                         menu: [opacity,zoomtolayer,metadata,layerremove,select_style]
-                        hideNotToggleable: true
-                        hideSelect: true
                         hideInfo: false
                         useTheme: true
                         showFilter: true
+                        screenType: all
                         themes:
                             -
                                 id: themes
@@ -534,55 +572,49 @@ parameters:
                         fontSize: 14
                         strokeWidth: 2
                         strokeWidthWhileDrawing: 3
-                        screenType: desktop
+                        screenType: all
                     sketch:
                         class: Mapbender\CoreBundle\Element\Sketch
                         geometrytypes:
                             - point
                             - line
                             - polygon
-                            - text
                             - rectangle
                             - circle
-                        auto_activate: false
+                        autoOpen: false
                         deactivate_on_close: false
                         colors: ["#009ee0","#cf003d","#ffff33","#00837e","#ff7f00"]
                         allow_custom_color: true
-                        screenType: desktop
+                        screenType: all
                     coordinatesutility:
                         class: Mapbender\CoreBundle\Element\CoordinatesUtility
                         srsList: []
                         addMapSrsList: true
                         zoomlevel: 6
-                        screenType: desktop
+                        screenType: all
                     dataupload:
                         class: Mapbender\CoreBundle\Element\DataUpload
                         maxFileSize: 10
                         helpText: mb.core.dataupload.admin.helpText
-                        screenType: desktop
+                        screenType: all
                     applicationswitcher-sidepane:
                         class: Mapbender\CoreBundle\Element\ApplicationSwitcher
-                        screenType: desktop
-                        open_in_new_tab: true   # false/true
+                        screenType: all
+                        open_in_new_tab: false   # false/true
                         applications:
                             mapbender_user: # switch to another application
                             mapbender_user_basic:
-                              title: 'Mapbender User Basic'
+                              title: 'Mapbender Demo Basic'
                               url: null
                               img_url: null
-                            mapbender_user_with_zoom:
-                              title: 'external: open with zoom'
-                              url: 'https://schulung.foss.academy/mapbender/application/mapbender_user?#%%zoom%%@%%lat%%/%%lon%%r%%rotation%%@EPSG:%%srs%%'
-                              description: External application with zoom and rotation
-                              group: 'External'
                             external_dz_nrw:
-                              title: 'www.dz.nrw.de with srs scale center_x and center_y'
+                              title: 'Digitaler Zwilling NRW'
                               url: 'https://www.dz.nrw.de/?lang=de&vm=3D&srs=%%srs%%&cam=%%center_x%%,%%center_y%%,%%scale%%,360,65,55'
                               img_url: null
                               description: Digitaler Zwilling NRW
                               group: 'External'
                             external_osm:
-                              title: 'OSM with lon & lat'
+                              title: 'OpenStreetMap'
                               url: 'https://www.openstreetmap.org/?#map=19/%%lon%%/%%lat%%'
                               img_url: 'https://upload.wikimedia.org/wikipedia/commons/b/b0/Openstreetmap_logo.svg'
                               description: OpenStreetMap
@@ -594,22 +626,35 @@ parameters:
                               description: Mapbender Documentation
                               group: 'Link external Website'
                             link_fossgis:
-                              title: 'fossgis.de'
+                              title: 'FOSSGIS e.V.'
                               url: 'https://fossgis.de'
                               img_url: 'https://www.fossgis.de/mediawiki/images/d/d3/FOSSGIS_Logo_RGB_100x45mm_600dpi.png'
                               description: Link to FOSSGIS e.V.
                               group: 'Link external Website'
+                            mapbender_user_wms:
+                              title: 'WMS Mapbender User'
+                              description: 'Click to load the WMS'
+                              url: null
+                              img_url: null
+                              group: WMS Service
+                              add_wms:
+                                mb_wms_layers: 'Mapbender_User,Mapbender_Names'
+                                mb_layer_merge: 0
+                                mb_wms_merge: 0
+                                mb_url: 'https://wms.wheregroup.com/cgi-bin/mapbender_user.xml'
+                                mb_infoformat: text/html
+                                mb_add_vendor_specific: bplan=123
                     viewmanager:
                         class: Mapbender\CoreBundle\Element\ViewManager
                         publicEntries: rw
                         privateEntries: true
                         allowAnonymousSave: true
                         showDate: true
-                        screenType: desktop
+                        screenType: all
                     routing:
                         class: Mapbender\RoutingBundle\Element\Routing
-                        type: element
                         title: Routing
+                        screenType: all
                         advancedSettings: true
                         autoSubmit: true
                         allowIntermediatePoints: true
@@ -680,11 +725,14 @@ parameters:
                             label: Title              # label of the optional field
                             options:                  #
                               required: true        # true or false
+                        screenType: desktop
                     html-about-mapbender:
                         class: Mapbender\CoreBundle\Element\HTMLElement
                         classes: html-element-inline
                         title: mb.demoapps.about
+                        screenType: all
                         openInline: false
+                        element_icon: iconHelp
                         content: "<p>Learn more about Mapbender</p>
                            <a href=\"https://mapbender.org\" target=\"_blank\">
                              <p>
@@ -704,10 +752,11 @@ parameters:
                            <p>
                              <a href=\"https://www.osgeo.org\" target=\"_blank\">https://www.osgeo.org</a>
                            </p>"
+
                 footer:
                     activityindicator:
                         class: Mapbender\CoreBundle\Element\ActivityIndicator
-                        screenType: desktop
+                        screenType: all
                     coordinates:
                         class: Mapbender\CoreBundle\Element\CoordinatesDisplay
                         label: false
@@ -722,26 +771,24 @@ parameters:
                     srs:
                         class: Mapbender\CoreBundle\Element\SrsSelector
                         screenType: desktop
-                    applicationswitcher:
-                        class: Mapbender\CoreBundle\Element\ApplicationSwitcher
-                        applications: [mapbender_user, mapbender_user_basic]
-                        screenType: desktop
                     OpenMapTiles-badge:
                         title: © OpenMapTiles
                         tooltip: © OpenMapTiles
                         class: Mapbender\CoreBundle\Element\LinkButton
                         label: true
                         click: https://openmaptiles.org/
+                        screenType: all
                     OSM-badge:
                         title: © OpenStreetMap contributors
                         tooltip: © OpenStreetMap contributors
                         class: Mapbender\CoreBundle\Element\LinkButton
                         label: true
                         click: https://www.openstreetmap.org/copyright
+                        screenType: all
                     html-powered-by:
                         title: HTML-powered by Mapbender
                         class: Mapbender\CoreBundle\Element\HTMLElement
-                        content: '<span style="color:#009ee0;">powered by Mapbender</span>'
+                        content: '<span style="color:var(--button-background);font-weight:600;"><a href="https://mapbender.org" target="_blank">powered by Mapbender</a></span>'
                         classes: html-element-inline
                         screenType: desktop
                     about:
