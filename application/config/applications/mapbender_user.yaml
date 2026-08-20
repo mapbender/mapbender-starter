@@ -614,7 +614,7 @@ parameters:
                         applications:
                             mapbender_user: # switch to another application
                             mapbender_user_basic:
-                              title: 'Mapbender User Basic'
+                              title: 'Mapbender Demo Basic'
                               url: null
                               img_url: null
                             external_dz_nrw:
@@ -781,10 +781,6 @@ parameters:
                         screenType: desktop
                     srs:
                         class: Mapbender\CoreBundle\Element\SrsSelector
-                        screenType: desktop
-                    applicationswitcher:
-                        class: Mapbender\CoreBundle\Element\ApplicationSwitcher
-                        applications: [mapbender_user, mapbender_user_basic]
                         screenType: desktop
                     OpenMapTiles-badge:
                         title: © OpenMapTiles

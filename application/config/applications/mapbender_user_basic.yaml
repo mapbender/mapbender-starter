@@ -726,6 +726,10 @@ parameters:
                     scaleselector:
                         class: Mapbender\CoreBundle\Element\ScaleSelector
                         screenType: desktop
+                    applicationswitcher:
+                        class: Mapbender\CoreBundle\Element\ApplicationSwitcher
+                        applications: [mapbender_user, mapbender_user_basic]
+                        screenType: desktop
                     srs:
                         class: Mapbender\CoreBundle\Element\SrsSelector
                         screenType: desktop
