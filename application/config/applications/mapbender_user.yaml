@@ -298,11 +298,6 @@ parameters:
                         icon: iconPoi
                         label: true
                         target: poi
-                    print-button:
-                        class: Mapbender\CoreBundle\Element\ControlButton
-                        label: true
-                        icon: iconPrint
-                        target: printclient
                     imageexport-button:
                         class: Mapbender\CoreBundle\Element\ControlButton
                         label: true
@@ -390,24 +385,6 @@ parameters:
                         splitLayers: false
                     imageexport:
                         class: Mapbender\PrintBundle\Element\ImageExport
-                    printclient:
-                        class: Mapbender\PrintBundle\Element\PrintClient
-                        templates:
-                            - { template: a4landscape, label: A4 Landscape}
-                            - { template: a4_landscape_offical, label: A4 Landscape Official}
-                            - { template: a4portrait, label: A4 Portrait}
-                            - { template: a4_portrait_offical, label: A4 Portrait Official}
-                            - { template: a3landscape, label: A3 Landscape}
-                            - { template: a3_landscape_offical, label: A3 Landscape Official}
-                            - { template: a3_landscape_offical_overview, label: A3 Landscape Official with Overview}
-                            - { template: a3portrait, label: A3 Portrait}
-                            - { template: a3_portrait_offical, label: A3 Portrait Official}
-                        legend_default_behaviour: false
-                        optional_fields:
-                            title:
-                                label: Title              # label of the optional field
-                                options:                  #
-                                    required: true        # true or false
                     overview:
                         class: Mapbender\CoreBundle\Element\Overview
                         layerset: overview
@@ -704,6 +681,24 @@ parameters:
                               token_regex_in: '([a-zA-ZäöüÄÖÜß]{3,})'
                               token_regex_out: '$1*'
                               delay: 300.0
+                    printclient:
+                        class: Mapbender\PrintBundle\Element\PrintClient
+                        templates:
+                            - { template: a4landscape, label: A4 Landscape}
+                            - { template: a4_landscape_offical, label: A4 Landscape Official}
+                            - { template: a4portrait, label: A4 Portrait}
+                            - { template: a4_portrait_offical, label: A4 Portrait Official}
+                            - { template: a3landscape, label: A3 Landscape}
+                            - { template: a3_landscape_offical, label: A3 Landscape Official}
+                            - { template: a3_landscape_offical_overview, label: A3 Landscape Official with Overview}
+                            - { template: a3portrait, label: A3 Portrait}
+                            - { template: a3_portrait_offical, label: A3 Portrait Official}
+                        legend_default_behaviour: false
+                        optional_fields:
+                            title:
+                                label: Title              # label of the optional field
+                                options:                  #
+                                    required: true        # true or false
                     batchprintclient:
                         class: Mapbender\PrintBundle\Element\BatchPrintClient
                         templates:
