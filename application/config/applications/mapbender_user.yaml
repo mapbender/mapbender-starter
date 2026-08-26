@@ -415,7 +415,7 @@ parameters:
                         content: 'We hope you like the Mapbender User Application.
                         Read our <a href="https://github.com/mapbender/mapbender-starter/blob/master/LICENSE" target="_blank">License</a>.'
                         popupWidth: 300
-                        dontShowAgain: true
+                        dontShowAgain: false
                         dontShowAgainLabel: mb.core.htmlelement.admin.dontShowAgainDefaultLabel
                         openInline: false
                     interactivehelp:
