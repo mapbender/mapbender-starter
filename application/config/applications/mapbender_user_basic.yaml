@@ -8,10 +8,10 @@ parameters:
             persistentView: false
             template:  Mapbender\CoreBundle\Template\Fullscreen
             custom_css: |
-                @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+                @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
                 :root {
-                    --font-family: "IM Fell English SC", serif;
+                    --font-family: "Playfair Display", serif;
                     --primary: #0087b9;
                     --text-color: #0087b9;
                     --button-background: rgb(207, 0, 61);
@@ -26,7 +26,7 @@ parameters:
                   font-size: 0.8em;
                 }
                 .mb-element-zoombar .rotation {
-                    line-height: 60px;
+                    line-height: 56px;
                 }
                 .toolBar.top {
                     border-bottom: 2 solid;
