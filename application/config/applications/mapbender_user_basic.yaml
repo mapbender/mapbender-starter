@@ -9,14 +9,22 @@ parameters:
             template:  Mapbender\CoreBundle\Template\Fullscreen
             custom_css: |
                 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-
+                @import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Carlito:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
                 :root {
-                    --font-family: "Playfair Display", serif;
+                    --font-family: Carlito, "Playfair Display", serif;
                     --primary: #0087b9;
+                    --primary-dark: #ccd03f;
                     --text-color: #0087b9;
-                    --button-background: rgb(207, 0, 61);
+                    --font-weight: bold;
+                    --font-style: italic;
+                    --button-background: rgba(86, 94, 101,0.6);
+                    --button-border: rgba(86, 94, 101,0.6);
+                    --button-hover-background: rgba(86, 94, 101,0.8);
+                    --button-hover-border: rgba(86, 94, 101,0.8);
+                    --bs-btn-hover-bg: var(--button-hover-background);
+                    --bs-btn-hover-border-color: var(--button-hover-border);
                     --toolbar-border-color: #E0DFD9;
-                    --background-color: #fffef8;
+                    --background-color: #fff;
                     --font-size: 14px;
                     --bs-border-radius-sm: 1rem;
                     --panel-border-color: #E0DFD9;
@@ -29,8 +37,12 @@ parameters:
                     line-height: 56px;
                 }
                 .toolBar.top {
-                    border-bottom: 2 solid;
-                    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+                    border-bottom: 1px solid var(--primary);
+                    box-shadow: 0 0.1rem 0.5rem var(--button-background);
+                }
+                .toolBar.bottom {
+                    border-top: 1px solid var(--primary);
+                    box-shadow: 0 0.1rem 0.5rem var(--button-background);
                 }
                 .toolBar .mb-button.toolBarItemActive {
                   background-color: var(--button-background);
@@ -40,9 +52,27 @@ parameters:
                     border-color: var(--button-background);
                 }
                 .popupHead {
-                    border-bottom: solid 2px var(--button-background);
-                    margin: 0 20px 20px 20px;
+                    border-bottom: solid 1px var(--button-background);
+                    margin: 0px 20px 20px 20px;
                     padding: 20px 0 10px 0;
+                }
+
+                .toolBar .menu-wrapper .btn:hover {
+                    background-color: var(--menu-hover-color);
+                    border-color: var(--menu-hover-color);
+                }
+
+                .logoContainer .project-name {
+                  font-size: 1.6rem;
+                  font-family: Ubuntu;
+                  font-style: normal;
+                  font-weight: 400;
+                }
+
+                .powered-by-mapbender {
+                    color: var(--primary-dark);
+                    font-weight: 800;
+                    font-size: 1.2rem
                 }
 
             regionProperties:
@@ -385,6 +415,11 @@ parameters:
                     shareUrl:
                         class: Mapbender\CoreBundle\Element\ShareUrl
                         label: false
+                    interactivehelp-button:
+                        class: Mapbender\CoreBundle\Element\ControlButton
+                        label: false
+                        icon: iconBookOpen
+                        target: interactivehelp
                     html-about-mapbender-button:
                         class: Mapbender\CoreBundle\Element\ControlButton
                         label: false
@@ -733,7 +768,7 @@ parameters:
                     html-powered-by:
                         title: HTML-powered by Mapbender
                         class: Mapbender\CoreBundle\Element\HTMLElement
-                        content: '<span style="color:var(--button-background);font-weight:600;">powered by Mapbender</span>'
+                        content: '<div class="powered-by-mapbender">powered by Mapbender</div>'
                         classes: html-element-inline
                         screenType: all
                     about:
