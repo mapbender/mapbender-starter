@@ -298,11 +298,6 @@ parameters:
                         icon: iconPoi
                         label: true
                         target: poi
-                    print-button:
-                        class: Mapbender\CoreBundle\Element\ControlButton
-                        label: true
-                        icon: iconPrint
-                        target: printclient
                     imageexport-button:
                         class: Mapbender\CoreBundle\Element\ControlButton
                         label: true
@@ -390,24 +385,6 @@ parameters:
                         splitLayers: false
                     imageexport:
                         class: Mapbender\PrintBundle\Element\ImageExport
-                    printclient:
-                        class: Mapbender\PrintBundle\Element\PrintClient
-                        templates:
-                            - { template: a4landscape, label: A4 Landscape}
-                            - { template: a4_landscape_offical, label: A4 Landscape Official}
-                            - { template: a4portrait, label: A4 Portrait}
-                            - { template: a4_portrait_offical, label: A4 Portrait Official}
-                            - { template: a3landscape, label: A3 Landscape}
-                            - { template: a3_landscape_offical, label: A3 Landscape Official}
-                            - { template: a3_landscape_offical_overview, label: A3 Landscape Official with Overview}
-                            - { template: a3portrait, label: A3 Portrait}
-                            - { template: a3_portrait_offical, label: A3 Portrait Official}
-                        legend_default_behaviour: false
-                        optional_fields:
-                            title:
-                                label: Title              # label of the optional field
-                                options:                  #
-                                    required: true        # true or false
                     overview:
                         class: Mapbender\CoreBundle\Element\Overview
                         layerset: overview
@@ -438,7 +415,7 @@ parameters:
                         content: 'We hope you like the Mapbender User Application.
                         Read our <a href="https://github.com/mapbender/mapbender-starter/blob/master/LICENSE" target="_blank">License</a>.'
                         popupWidth: 300
-                        dontShowAgain: true
+                        dontShowAgain: false
                         dontShowAgainLabel: mb.core.htmlelement.admin.dontShowAgainDefaultLabel
                         openInline: false
                     interactivehelp:
@@ -610,7 +587,7 @@ parameters:
                             external_dz_nrw:
                               title: 'Digitaler Zwilling NRW'
                               url: 'https://www.dz.nrw.de/?lang=de&vm=3D&srs=%%srs%%&cam=%%center_x%%,%%center_y%%,%%scale%%,360,65,55'
-                              img_url: null
+                              img_url: 'https://www.geoportal.nrw/images/logo_geoportal_clipped.svg'
                               description: Digitaler Zwilling NRW
                               group: 'External'
                             external_osm:
@@ -628,14 +605,13 @@ parameters:
                             link_fossgis:
                               title: 'FOSSGIS e.V.'
                               url: 'https://fossgis.de'
-                              img_url: 'https://www.fossgis.de/mediawiki/images/d/d3/FOSSGIS_Logo_RGB_100x45mm_600dpi.png'
+                              img_url: 'https://files.fossgis.de/Koordinierungsstelle/FOSSGIS_Logo_RGB-238-127-0.svg'
                               description: Link to FOSSGIS e.V.
                               group: 'Link external Website'
                             mapbender_user_wms:
                               title: 'WMS Mapbender User'
                               description: 'Click to load the WMS'
-                              url: null
-                              img_url: null
+                              img_url: 'https://wms.wheregroup.com/cgi-bin/mapbender_user.xml?version=1.3.0&service=WMS&request=GetLegendGraphic&sld_version=1.1.0&layer=Mapbender_User&format=image/png&STYLE=default'
                               group: WMS Service
                               add_wms:
                                 mb_wms_layers: 'Mapbender_User,Mapbender_Names'
@@ -704,6 +680,24 @@ parameters:
                               token_regex_in: '([a-zA-ZäöüÄÖÜß]{3,})'
                               token_regex_out: '$1*'
                               delay: 300.0
+                    printclient:
+                        class: Mapbender\PrintBundle\Element\PrintClient
+                        templates:
+                            - { template: a4landscape, label: A4 Landscape}
+                            - { template: a4_landscape_offical, label: A4 Landscape Official}
+                            - { template: a4portrait, label: A4 Portrait}
+                            - { template: a4_portrait_offical, label: A4 Portrait Official}
+                            - { template: a3landscape, label: A3 Landscape}
+                            - { template: a3_landscape_offical, label: A3 Landscape Official}
+                            - { template: a3_landscape_offical_overview, label: A3 Landscape Official with Overview}
+                            - { template: a3portrait, label: A3 Portrait}
+                            - { template: a3_portrait_offical, label: A3 Portrait Official}
+                        legend_default_behaviour: false
+                        optional_fields:
+                            title:
+                                label: Title              # label of the optional field
+                                options:                  #
+                                    required: true        # true or false
                     batchprintclient:
                         class: Mapbender\PrintBundle\Element\BatchPrintClient
                         templates:

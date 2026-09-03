@@ -8,27 +8,42 @@ parameters:
             persistentView: false
             template:  Mapbender\CoreBundle\Template\Fullscreen
             custom_css: |
+
+                @import url('https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700display=swap');
+
                 :root {
-                    --font-family: Ubuntu, Open Sans, Calluna Sans, Gill Sans MT, Calibri, Trebuchet MS, sans-serif;
+                    --font-family: Carlito, Ubuntu, serif, "Open Sans", "Calluna Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
                     --primary: #0087b9;
-                    --button-background: #cad400;
-                    --toolbar-background: #fff;
-                    --toolbar-border-color: #cad400;
+                    --primary-dark: #ccd03f;
                     --text-color: #0087b9;
+                    --font-weight: bold;
+                    --font-style: italic;
+                    --button-background: rgba(86, 94, 101,0.6);
+                    --button-border: rgba(86, 94, 101,0.6);
+                    --button-hover-background: rgba(86, 94, 101,0.8);
+                    --button-hover-border: rgba(86, 94, 101,0.8);
+                    --bs-btn-hover-bg: var(--button-hover-background);
+                    --bs-btn-hover-border-color: var(--button-hover-border);
+                    --toolbar-border-color: #E0DFD9;
+                    --background-color: #fff;
                     --font-size: 14px;
                     --bs-border-radius-sm: 1rem;
-                    --toolbar-top-background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.9));
-                    --toolbar-bottom-background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.9));
-                    --panel-border-color: #cad400;
+                    --panel-border-color: #E0DFD9;
                     --bs-secondary-color: #0087b9;
-                    --bs-body-color: #0087b9;
                 }
                 .-fn-toggle-selected i, .-fn-toggle-dimension i {
                   font-size: 0.8em;
                 }
+                .mb-element-zoombar .rotation {
+                    line-height: 56px;
+                }
                 .toolBar.top {
-                    border-bottom: 2 solid;
-                    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+                    border-bottom: 1px solid var(--primary);
+                    box-shadow: 0 0.1rem 0.5rem var(--button-background);
+                }
+                .toolBar.bottom {
+                    border-top: 1px solid var(--primary);
+                    box-shadow: 0 0.1rem 0.5rem var(--button-background);
                 }
                 .toolBar .mb-button.toolBarItemActive {
                   background-color: var(--button-background);
@@ -38,24 +53,27 @@ parameters:
                     border-color: var(--button-background);
                 }
                 .popupHead {
-                    border-bottom: solid 2px var(--button-background);
-                    margin: 0 20px 20px 20px;
+                    border-bottom: solid 1px var(--button-background);
+                    margin: 0px 20px 20px 20px;
                     padding: 20px 0 10px 0;
                 }
-                .btn-primary {
-                  --bs-btn-bg: var(--button-background);
-                  --bs-btn-border-color: var(--button-background);
+
+                .toolBar .menu-wrapper .btn:hover {
+                    background-color: var(--menu-hover-color);
+                    border-color: var(--menu-hover-color);
                 }
-                .mb-3 {
-                  margin-bottom: 0.2rem !important;
+
+                .logoContainer .project-name {
+                  font-size: 1.6rem;
+                  font-family: Ubuntu;
+                  font-style: normal;
+                  font-weight: 400;
                 }
-                .me-1 {
-                  margin-right: .2rem !important;
-                }
-                .mb-element-basesourceswitcher.toolBarItem .basesourcegroup, .mb-element-basesourceswitcher.toolBarItem .basesourcesetswitch {
-                  background-color: color-mix(in srgb, var(--button-background), var(--button-background) 60%);
-                  transition: all 0.2s ease-in-out;
-                  border: solid 1px var(--panel-border-color);
+
+                .powered-by-mapbender {
+                    color: var(--primary-dark);
+                    font-weight: 800;
+                    font-size: 1.2rem
                 }
 
             regionProperties:
@@ -171,7 +189,7 @@ parameters:
                         layers:
                             12: { name: osm,    title : OSM Demo WhereGroup,  visible: true }
                         info_format: text/html
-                        visible: true
+                        visible: false
                         format: image/png
                         transparent: true
                         tiled: true
@@ -199,7 +217,7 @@ parameters:
                         layers:
                             13: { name:  osm-grey,    title : OSM Demo WhereGroup (greyscale),  visible: true }
                         info_format: text/html
-                        visible: false
+                        visible: true
                         format: image/png
                         transparent: true
                         tiled: true
@@ -275,7 +293,7 @@ parameters:
                         url: https://osm-demo.wheregroup.com/service
                         version: 1.3.0
                         layers:
-                            21: { name: osm,    title : OSM Demo WhereGroup,  visible: true }
+                            13: { name: osm-grey,    title: OSM Demo WhereGroup (greyscale),  visible: true }
                         tiled: false
                         format: image/png
                         transparent: true
@@ -326,11 +344,11 @@ parameters:
                     layertree-button:
                         class: Mapbender\CoreBundle\Element\ControlButton
                         label: false
-                        icon: icon-layer-tree
+                        icon: iconBarsStaggered #icon-layer-tree
                         target: layertreedialog
                     fi-button:
                         class: Mapbender\CoreBundle\Element\ControlButton
-                        icon: icon-feature-info
+                        icon: icon-about
                         label: false
                         target: featureinfo
                         group: featureinfo
@@ -338,7 +356,7 @@ parameters:
                         class: Mapbender\CoreBundle\Element\ControlButton
                         label: false
                         target: legend
-                        icon: icon-legend
+                        icon: iconList
                     wmsloader-button:
                         class: Mapbender\CoreBundle\Element\ControlButton
                         label: false
@@ -371,12 +389,12 @@ parameters:
                         screenType: mobile
                     poi-button:
                         class: Mapbender\CoreBundle\Element\ControlButton
-                        icon: iconPoi
+                        icon: iconMapPin
                         label: false
                         target: poi
                     coordinatesutility-button:
                         class: Mapbender\CoreBundle\Element\ControlButton
-                        icon: iconGpsTarget
+                        icon: iconMapWithPin
                         label: false
                         target: coordinatesutility
                         screenType: desktop
@@ -398,6 +416,11 @@ parameters:
                     shareUrl:
                         class: Mapbender\CoreBundle\Element\ShareUrl
                         label: false
+                    interactivehelp-button:
+                        class: Mapbender\CoreBundle\Element\ControlButton
+                        label: false
+                        icon: iconBookOpen
+                        target: interactivehelp
                     html-about-mapbender-button:
                         class: Mapbender\CoreBundle\Element\ControlButton
                         label: false
@@ -746,7 +769,7 @@ parameters:
                     html-powered-by:
                         title: HTML-powered by Mapbender
                         class: Mapbender\CoreBundle\Element\HTMLElement
-                        content: '<span style="color:var(--button-background);font-weight:600;">powered by Mapbender</span>'
+                        content: '<div class="powered-by-mapbender"><a href="https://mapbender.org/" target="_blank">powered by Mapbender</a></div>'
                         classes: html-element-inline
                         screenType: all
                     about:
