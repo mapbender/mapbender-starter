@@ -322,6 +322,7 @@ parameters:
                         class: Mapbender\CoreBundle\Element\SimpleSearch
                         configurations:
                             0:
+                                title: mb.core.simplesearch.class.title
                                 placeholder: mb.demoapps.search
                                 query_url: https://osm-photon-search.wheregroup.com/search/api?limit=20&lat=50.7163&lon=7.1366&osm_tag=!railway&osm_tag=!highway:elevator&osm_tag=!tourism&osm_tag=!amenity
                                 query_key: q
@@ -494,6 +495,7 @@ parameters:
                         element_icon: iconSearch
                         configurations:
                             0:
+                                title: mb.core.simplesearch.class.title
                                 placeholder: mb.demoapps.search
                                 query_url: https://osm-photon-search.wheregroup.com/search/api?limit=20&lat=50.7163&lon=7.1366&osm_tag=!railway&osm_tag=!highway:elevator&osm_tag=!tourism&osm_tag=!amenity
                                 query_key: q
