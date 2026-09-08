@@ -322,6 +322,7 @@ parameters:
                         class: Mapbender\CoreBundle\Element\SimpleSearch
                         configurations:
                             0:
+                                title: mb.core.simplesearch.class.title
                                 placeholder: mb.demoapps.search
                                 query_url: https://osm-photon-search.wheregroup.com/search/api?limit=20&lat=50.7163&lon=7.1366&osm_tag=!railway&osm_tag=!highway:elevator&osm_tag=!tourism&osm_tag=!amenity
                                 query_key: q
@@ -336,12 +337,11 @@ parameters:
                                 geom_format: GeoJSON
                                 delay: 300
                                 query_ws_replace: null
-                                result:
-                                    buffer: ~
-                                    minscale: 500
-                                    maxscale: 5000
-                                    icon_url: '/bundles/mapbendercore/image/pin_red.png'
-                                    icon_offset: '-6,-32'
+                                result_buffer: ~
+                                result_minscale: 500
+                                result_maxscale: 5000
+                                result_icon_url: '/bundles/mapbendercore/image/map-pin.png'
+                                result_icon_offset: '-16,-52'
                 content:
                     map:
                         class: Mapbender\CoreBundle\Element\Map
@@ -492,9 +492,10 @@ parameters:
                         title: mb.core.simplesearch.class.title
                         openInline: true
                         class: Mapbender\CoreBundle\Element\SimpleSearch
-                        element_icon: iconPrint
+                        element_icon: iconSearch
                         configurations:
                             0:
+                                title: mb.core.simplesearch.class.title
                                 placeholder: mb.demoapps.search
                                 query_url: https://osm-photon-search.wheregroup.com/search/api?limit=20&lat=50.7163&lon=7.1366&osm_tag=!railway&osm_tag=!highway:elevator&osm_tag=!tourism&osm_tag=!amenity
                                 query_key: q
@@ -509,12 +510,11 @@ parameters:
                                 geom_format: GeoJSON
                                 delay: 300
                                 query_ws_replace: null
-                                result:
-                                    buffer: ~
-                                    minscale: 500
-                                    maxscale: 5000
-                                    icon_url: '/bundles/mapbendercore/image/pin_red.png'
-                                    icon_offset: '-6,-32'
+                                result_buffer: ~
+                                result_minscale: 500
+                                result_maxscale: 5000
+                                result_icon_url: '/bundles/mapbendercore/image/map-pin.png'
+                                result_icon_offset: '-16,-52'
                         screenType: all
                     layertree:
                         class: Mapbender\CoreBundle\Element\Layertree
