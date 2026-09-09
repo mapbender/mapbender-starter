@@ -15,7 +15,7 @@ For detailed usage information, including installation and integration topics, p
 
 ## Requirements
 
-Mapbender requires PHP 8.1 up to 8.4, OpenSSL, curl, bzip2 decompression and the following php extensions:
+Mapbender requires PHP 8.2 up to 8.4, OpenSSL, curl, bzip2 decompression and the following php extensions:
 * zip
 * curl
 * gd
@@ -27,8 +27,8 @@ Mapbender requires PHP 8.1 up to 8.4, OpenSSL, curl, bzip2 decompression and the
 * sodium
 * ldap (if ldap extension is used)
 
-:warning: The composer lock file is compatible with PHP 8.2 through PHP 8.4. When using PHP 8.1, make sure
-to execute `bin/composer update` to ensure compatibility.
+:warning: If you are still using PHP 8.1, you can use the Mapbender 4.x release line, which will 
+still receive bug fixes and security fixes until September 2027.
 
 :warning: If you use Vector Tiles, you also need to have NodeJS and puppeteer installed globally.
 

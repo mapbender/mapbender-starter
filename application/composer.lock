@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "db9f4bdfcfaf6fbcd683bb5af7792769",
+    "content-hash": "0790f655f69e6acf87957a5421a5bea9",
     "packages": [
         {
             "name": "assetic/framework",
@@ -462,16 +462,16 @@
         },
         {
             "name": "doctrine/doctrine-bundle",
-            "version": "2.19.0",
+            "version": "2.19.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineBundle.git",
-                "reference": "07b90f707b82981097731c419f546e7ba97fba3c"
+                "reference": "72b53688c30451a7c65addd50b2167d31459724a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/07b90f707b82981097731c419f546e7ba97fba3c",
-                "reference": "07b90f707b82981097731c419f546e7ba97fba3c",
+                "url": "https://api.github.com/repos/doctrine/DoctrineBundle/zipball/72b53688c30451a7c65addd50b2167d31459724a",
+                "reference": "72b53688c30451a7c65addd50b2167d31459724a",
                 "shasum": ""
             },
             "require": {
@@ -566,7 +566,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/DoctrineBundle/issues",
-                "source": "https://github.com/doctrine/DoctrineBundle/tree/2.19.0"
+                "source": "https://github.com/doctrine/DoctrineBundle/tree/2.19.1"
             },
             "funding": [
                 {
@@ -582,7 +582,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-07-23T14:52:05+00:00"
+            "time": "2026-09-08T11:48:41+00:00"
         },
         {
             "name": "doctrine/event-manager",
@@ -1486,16 +1486,16 @@
         },
         {
             "name": "mapbender/digitizer",
-            "version": "3.0.0-RC3",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender-digitizer.git",
-                "reference": "aaec85e55d8d15b8689f3800f906f58e9767e871"
+                "reference": "30816de724f0a5eb5ff938a5625bede053c141c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/aaec85e55d8d15b8689f3800f906f58e9767e871",
-                "reference": "aaec85e55d8d15b8689f3800f906f58e9767e871",
+                "url": "https://api.github.com/repos/mapbender/mapbender-digitizer/zipball/30816de724f0a5eb5ff938a5625bede053c141c7",
+                "reference": "30816de724f0a5eb5ff938a5625bede053c141c7",
                 "shasum": ""
             },
             "require": {
@@ -1560,9 +1560,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/mapbender-digitizer/issues",
-                "source": "https://github.com/mapbender/mapbender-digitizer/tree/3.0.0-RC3"
+                "source": "https://github.com/mapbender/mapbender-digitizer/tree/3.0.0"
             },
-            "time": "2026-08-20T15:44:25+00:00"
+            "time": "2026-09-09T12:15:43+00:00"
         },
         {
             "name": "mapbender/jquery-file-upload",
@@ -1628,16 +1628,16 @@
         },
         {
             "name": "mapbender/mapbender",
-            "version": "v5.0.0-RC2",
+            "version": "v5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mapbender/mapbender.git",
-                "reference": "00f4c7e90c3e7a3f3b7ce907872e51d19716f3c2"
+                "reference": "bf926e3669f6fcba874e823f2f886b3023518168"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/00f4c7e90c3e7a3f3b7ce907872e51d19716f3c2",
-                "reference": "00f4c7e90c3e7a3f3b7ce907872e51d19716f3c2",
+                "url": "https://api.github.com/repos/mapbender/mapbender/zipball/bf926e3669f6fcba874e823f2f886b3023518168",
+                "reference": "bf926e3669f6fcba874e823f2f886b3023518168",
                 "shasum": ""
             },
             "require": {
@@ -1737,9 +1737,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mapbender/mapbender/issues",
-                "source": "https://github.com/mapbender/mapbender/tree/v5.0.0-RC2"
+                "source": "https://github.com/mapbender/mapbender/tree/v5.0.0"
             },
-            "time": "2026-08-20T15:46:39+00:00"
+            "time": "2026-09-09T12:35:12+00:00"
         },
         {
             "name": "mapbender/mapbender-icons",
@@ -1897,16 +1897,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "3.11.0",
+            "version": "3.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "147f303310f06334f03f409e49d7ad1e275ff05a"
+                "reference": "72c534fc0ab181ef52d92a68382318631e301608"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/147f303310f06334f03f409e49d7ad1e275ff05a",
-                "reference": "147f303310f06334f03f409e49d7ad1e275ff05a",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/72c534fc0ab181ef52d92a68382318631e301608",
+                "reference": "72c534fc0ab181ef52d92a68382318631e301608",
                 "shasum": ""
             },
             "require": {
@@ -1932,6 +1932,7 @@
                 "phpstan/phpstan-strict-rules": "^2",
                 "phpunit/phpunit": "^10.5.17 || ^11.0.7",
                 "predis/predis": "^1.1 || ^2",
+                "psr/clock": "^1.0",
                 "rollbar/rollbar": "^4.0",
                 "ruflin/elastica": "^7 || ^8",
                 "symfony/mailer": "^5.4 || ^6",
@@ -1950,6 +1951,7 @@
                 "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
                 "mongodb/mongodb": "Allow sending log messages to a MongoDB server (via library)",
                 "php-amqplib/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib",
+                "psr/clock": "Required to pass a clock to the Logger and control the timestamp of log records",
                 "rollbar/rollbar": "Allow sending log messages to Rollbar",
                 "ruflin/elastica": "Allow sending log messages to an Elastic Search server"
             },
@@ -1984,7 +1986,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Seldaek/monolog/issues",
-                "source": "https://github.com/Seldaek/monolog/tree/3.11.0"
+                "source": "https://github.com/Seldaek/monolog/tree/3.12.0"
             },
             "funding": [
                 {
@@ -1996,7 +1998,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-09-02T12:39:56+00:00"
+            "time": "2026-09-09T08:34:20+00:00"
         },
         {
             "name": "namshi/jose",

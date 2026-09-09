@@ -1,8 +1,8 @@
-## v5.0.0-RC2
+## v5.0.0
 - Minimum required PHP version is now 8.2
-- Updated Symfony to version 7.4, refer to the mapbender core repository for ([upgrade instructions](https://github.com/mapbender/mapbender/blob/v5.0.0-RC1/docs/UPGRADING.md))
-- Update mapbender/mapbender to [v5.0.0-RC2](https://github.com/mapbender/mapbender/blob/v5.0.0-RC2/CHANGELOG.md).
-- Update mapbender/digitizer to [3.0.0-RC3](https://github.com/mapbender/mapbender-digitizer/blob/3.0.0-RC3/CHANGELOG.md).
+- Updated Symfony to version 7.4, refer to the mapbender core repository for ([upgrade instructions](https://github.com/mapbender/mapbender/blob/v5.0.0/docs/UPGRADING.md))
+- Update mapbender/mapbender to [v5.0.0](https://github.com/mapbender/mapbender/blob/v5.0.0/CHANGELOG.md).
+- Update mapbender/digitizer to [3.0.0](https://github.com/mapbender/mapbender-digitizer/blob/3.0.0/CHANGELOG.md).
 - Update Openlayers to [10.10](https://github.com/openlayers/openlayers/releases/tag/v10.10.0)
 - Add OgcApiFeatureBundle to [v5.0.0](https://github.com/mapbender/mapbender-starter/pull/165).
 - Ask for password instead of defaulting to root in bootstrap script ([PR#173](https://github.com/mapbender/mapbender-starter/pull/173))
