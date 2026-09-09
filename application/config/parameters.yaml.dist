@@ -60,8 +60,8 @@ parameters:
     # mapbender.print.queueable: true
 
     # specifies an absolute path for the generated PDF files
-    # default is [your mapbender installation]/web/prints
-    # mapbender.print.queue.storage_dir: "/dat/example-installation/prints"
+    # default is [your mapbender installation]/var/prints
+    # mapbender.print.queue.storage_dir: "/data/example-installation/prints"
 
 
     # specifies the upload directory for the Mapbender API.

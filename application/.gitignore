@@ -9,6 +9,7 @@ var/*
 !/var/cache/
 !/var/db/
 !/var/log/
+!/var/prints/.gitkeep
 /vendor/
 ###< symfony/framework-bundle ###
 
