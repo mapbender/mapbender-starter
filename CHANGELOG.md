@@ -8,6 +8,9 @@
 - Ask for password instead of defaulting to root in bootstrap script ([PR#173](https://github.com/mapbender/mapbender-starter/pull/173))
 - Improve demo applications ([PR#175](https://github.com/mapbender/mapbender-starter/pull/175))
 
+## v4.2.7
+- Update mapbender/mapbender to [v4.2.7](https://github.com/mapbender/mapbender/blob/v4.2.7/CHANGELOG.md).
+
 ## v4.2.6
 - Update mapbender/mapbender to [v4.2.6](https://github.com/mapbender/mapbender/blob/v4.2.6/CHANGELOG.md).
 - Update mapbender/digitizer to [2.0.9](https://github.com/mapbender/mapbender-digitizer/blob/2.0.9/CHANGELOG.md).
