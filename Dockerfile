@@ -48,7 +48,8 @@ COPY ./docker/mapbender_apache.conf /etc/apache2/sites-enabled/
 COPY ./docker/php.ini /usr/local/etc/php/php.ini
 
 RUN sed -ri -e 's!80!8080!g' /etc/apache2/ports.conf
-RUN a2enmod rewrite remoteip
+RUN a2enmod rewrite remoteip && a2dismod mpm_event mpm_worker
+RUN chown -R www-data:www-data /etc/apache2/mods-enabled /var/run/apache2 /var/log/apache2
 
 RUN chown www-data:www-data -R /var/www
 
@@ -75,7 +76,7 @@ USER www-data
 
 COPY --from=build-container --chown=www-data:www-data /var/mapbender /var/mapbender
 
-CMD ["apache2-foreground"]
+CMD ["sh", "-c", "a2dismod mpm_event mpm_worker && apache2-foreground"]
 
 FROM base-container AS mapbender-puppeteer-build
 
@@ -86,6 +87,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 RUN npm install -g puppeteer
 RUN chown www-data:www-data -R /usr/local/lib/node_modules/
+RUN chown -R www-data:www-data /etc/apache2/mods-enabled /var/run/apache2 /var/log/apache2
 
 USER www-data
 
@@ -106,8 +108,10 @@ RUN mkdir -p /var/mapbender/node_modules && ln -sf /usr/local/lib/node_modules/p
 
 ENV NODE_PATH=/usr/local/lib/node_modules
 
+RUN chown -R www-data:www-data /etc/apache2/mods-enabled /var/run/apache2 /var/log/apache2
+
 USER www-data
 
 COPY --from=build-container --chown=www-data:www-data /var/mapbender /var/mapbender
 
-CMD ["apache2-foreground"]
+CMD ["sh", "-c", "a2dismod mpm_event mpm_worker && apache2-foreground"]
