@@ -1,3 +1,6 @@
+## v5.0.1
+- Update mapbender/mapbender to [v5.0.1](https://github.com/mapbender/mapbender/blob/v5.0.1/CHANGELOG.md).
+
 ## v5.0.0
 - Minimum required PHP version is now 8.2
 - Updated Symfony to version 7.4, refer to the mapbender core repository for ([upgrade instructions](https://github.com/mapbender/mapbender/blob/v5.0.0/docs/UPGRADING.md))
