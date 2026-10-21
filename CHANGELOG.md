@@ -1,4 +1,8 @@
-## v5.0.1
+## v5.0.2
+- Update mapbender/mapbender to [v5.0.2](https://github.com/mapbender/mapbender/blob/v5.0.2/CHANGELOG.md).
+- [Docker] Update bundled PHP version to patched version 8.4.27 
+
+- ## v5.0.1
 - Update mapbender/mapbender to [v5.0.1](https://github.com/mapbender/mapbender/blob/v5.0.1/CHANGELOG.md).
 
 ## v5.0.0
