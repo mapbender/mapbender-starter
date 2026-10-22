@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title></title>
+
+
+    <link rel="icon" href="images/favicon.png" />
+</head>
+<style>
+    body {
+        background-color: #005988;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        color: white;
+    }
+    .contentWrapper {
+        padding: 0 5%;
+        position: relative;
+        margin: 0;
+        border: 0;
+        outline: 0;
+        vertical-align: baseline;
+        background: transparent;
+        max-width: 450px;
+        top: 220px;
+
+    }
+    .errorCode {
+        font-size: 45px;
+        color: rgb(234, 234, 14);
+    }
+
+    .button {
+        color: white;
+        background-color: transparent;
+
+
+        transition: color .2s linear, border-color .2s linear;
+        font-size: 14px;
+        text-transform: uppercase;
+        text-decoration: none;
+        border: 2px solid white;
+        border-radius: 99px;
+        padding: 8px 30px 9px;
+    }
+
+    .buttonContainer {
+        margin-top: 45px;
+        #overflow: hidden;
+    }
+
+    .errorText {
+        font-size: 36px;
+        line-height: 46px;
+    }
+    .header {
+    font-size: 45px;
+        padding: 0 5%;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    }
+    a {
+        margin-right: 5px;
+    }
+</style>
+<body>
+{% block header %}
+    <header><span class="header">{{ fom.server_name }} {{ fom.server_version }}</span>
+
+    </header>
+{% endblock %}
+
+<div class="contentWrapper">
+{% block error %}
+    <span class="errorCode">{{ status_code }}</span>
+    <div class="errorText">
+     {% block error_text %} {{ status_text }}  {% endblock %}
+
+    </div>
+    <hr>
+{% endblock %}
+
+{% block information %}
+    <span class="errorSubText">
+    You may want to head back to the Welcome page.
+    {%   if  fom.server_admin  is defined %}
+        If you think something is broken, contact an Admin.
+    {% endif %}
+    </span>
+{% endblock %}
+
+{% block buttons %}
+    <div class="buttonContainer">
+        <a href="  {{ path('mapbender_core_welcome_list')  }}" class="button">Go back </a>
+        {%   if  fom.server_admin  is defined %}
+            <a href='mailto:{{ fom.server_admin }}?subject=I think something is broken in your application&body=Hi, %0D%0A I think this page should work/exist {{ app.request.uri }} but I got an {{ status_code }} error' class="button">Contact an Admin</a>
+        {% endif %}
+    </div>
+{% endblock %}
+
+</div>
+</body>
+</html>
