@@ -239,5 +239,5 @@ Pre-packaged archives bundling all code dependencies are available at our [downl
 | 3.3 (end of life)      | \>=7.4       | 4.4LTS (end of life)    | 2.1.x                    |
 | 4.0 (end of life)      | \>=8.1       | 6.4LTS                  | 2.6.x                    |
 | 4.1 (end of life)      | \>=8.1       | 6.4LTS                  | 2.8.x                    |
-| 4.2                    | \>=8.1       | 6.4LTS                  | 2.8.x                    |
-| 5.0                    | \>=8.2       | 7.4LTS                  | 2.10.x                   |
+| 4.2                    | \>=8.1       | 6.4LTS                  | 2.8.x - 2.11.x           |
+| 5.0                    | \>=8.2       | 7.4LTS                  | 2.10.x - 2.11.x     |
