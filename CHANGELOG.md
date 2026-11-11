@@ -1,3 +1,6 @@
+## next bugfix release
+- Update bundled composer to version 2.11
+
 ## v5.0.2
 - Update mapbender/mapbender to [v5.0.2](https://github.com/mapbender/mapbender/blob/v5.0.2/CHANGELOG.md).
 - [Docker] Update bundled PHP version to patched version 8.4.27 
